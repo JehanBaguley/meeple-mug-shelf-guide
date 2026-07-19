@@ -163,8 +163,8 @@
     <div class="rowlabel" style="margin-top:10px;margin-bottom:6px"><strong>Play style</strong></div>
     <div class="genrow">
       <button class="wt on" data-ps="any" aria-pressed="true">Any</button>
-      <button class="wt" data-ps="coop" aria-pressed="false">Co&#8209;op</button>
-      <button class="wt" data-ps="comp" aria-pressed="false">Competitive</button>
+      <button class="wt" data-ps="coop" aria-pressed="false">Co&#8209;op<small></small></button>
+      <button class="wt" data-ps="comp" aria-pressed="false">Competitive<small></small></button>
     </div>
     <div class="rowlabel" style="margin-top:12px;margin-bottom:6px"><strong>Genre</strong><span class="readout mono" id="genreSum">any</span></div>
     <div class="mseg" role="group" aria-label="Genre match mode" style="margin-bottom:7px">
@@ -258,7 +258,9 @@ function catSlugFor(t){
   return null;
 }
 const tagAll = games => games.forEach(g => { g.tags = tagsFor(g); });
+let lastTagSig = "";
 function buildTagRow(){
+  lastTagSig = "";
   const counts = {};
   DATA.games.forEach(g => (g.tags||[]).forEach(t => counts[t] = (counts[t]||0) + 1));
   const all = Object.keys(counts).sort((a,b) => a.localeCompare(b));
@@ -403,8 +405,6 @@ function render(){
     if(pickList && !(g.name in pickList.games)) return false;
     if(g.forSale && g.price!==null && (g.price<state.pLo || (state.pHi<200 && g.price>state.pHi)) && (state.seg==="buy" || !g.playable)) return false;
     if(state.query.trim() && !norm(g.name+" "+(g.playsLike||"")+" "+(g.catText||"")+(g.mode?" "+MODE_LABEL[g.mode]:"")).includes(norm(state.query))) return false;
-    if(state.playStyle==="coop" && g.mode!=="coop") return false;
-    if(state.playStyle==="comp" && g.mode==="coop") return false;
     if(narrowed){
       if(!hasStats(g)){ if(countPending) hiddenPending++; return false; }
       if(!(g.players[0]<=state.maxSeats && g.players[1]>=state.minSeats)) return false;
@@ -416,12 +416,24 @@ function render(){
   };
   const has = g => k => (g.tags||[]).includes(k);
   const tagPass = g => !tsel.length || (state.tagMode==="all" ? tsel.every(has(g)) : tsel.some(has(g)));
+  const stylePass = g => state.playStyle==="coop" ? g.mode==="coop" : state.playStyle==="comp" ? g.mode!=="coop" : true;
 
-  let list = DATA.games.filter(g => basePass(g, true) && tagPass(g));
+  let list = DATA.games.filter(g => stylePass(g) && basePass(g, true) && tagPass(g));
 
   // live facet counts: each chip shows what it would yield given every OTHER active filter
-  const basePool = DATA.games.filter(g => basePass(g, false));
-  document.querySelectorAll("#genreRow [data-tag]").forEach(b => {
+  const basePool = DATA.games.filter(g => basePass(g, false) && stylePass(g));
+  // play-style chips face the same music: counts against every other filter, dead when zero
+  const stylePool = DATA.games.filter(g => basePass(g, false) && tagPass(g));
+  document.querySelectorAll("[data-ps]").forEach(b => {
+    const ps = b.dataset.ps;
+    if(ps === "any") return;
+    const n = stylePool.filter(g => ps==="coop" ? g.mode==="coop" : g.mode!=="coop").length;
+    b.querySelector("small").textContent = n;
+    const dead = n===0 && state.playStyle!==ps;
+    b.disabled = dead; b.classList.toggle("dead", dead);
+  });
+  const chips = [...document.querySelectorAll("#genreRow [data-tag]")];
+  chips.forEach(b => {
     const t = b.dataset.tag;
     const n = state.tagMode==="all"
       ? basePool.filter(g => (tsel.includes(t) ? tsel : tsel.concat(t)).every(has(g))).length
@@ -430,6 +442,16 @@ function render(){
     const dead = n===0 && !state.tags[t];
     b.disabled = dead; b.classList.toggle("dead", dead);
   });
+  // regroup chips: selected first, then available, dead ones sink to the end
+  const rank = el => state.tags[el.dataset.tag] ? 0 : el.classList.contains("dead") ? 2 : 1;
+  const sig = chips.map(b => b.dataset.tag + rank(b)).join(",");
+  if(sig !== lastTagSig){
+    lastTagSig = sig;
+    const row = $("genreRow");
+    chips.slice().sort((a,b) => rank(a)-rank(b) || a.dataset.tag.localeCompare(b.dataset.tag))
+      .forEach(el => row.appendChild(el));
+    const cb = $("clearTags"); if(cb) row.appendChild(cb);
+  }
   $("resetBtn").hidden = !(activeFilters || state.query.trim() || state.pick!==null);
   // nulls always sink to the bottom regardless of direction
   const dir = state.sortDir;
