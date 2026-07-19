@@ -5,7 +5,7 @@
 //      skipped gracefully until the café creates the account
 // Writes data/games.json when there is anything to write. Node 20+, zero deps.
 
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, readFileSync, existsSync } from "node:fs";
 
 const BGG_USER = "meepleandmug";
 const COLLECTION_URL = `https://boardgamegeek.com/xmlapi2/collection?username=${BGG_USER}&stats=1&own=1`;
@@ -108,6 +108,7 @@ async function main() {
       if (val("playable")) g.playable = /^y/i.test(val("playable"));
       if (val("for_sale")) g.forSale = /^y/i.test(val("for_sale"));
       if (val("price")) { g.price = parseInt(val("price")) || null; g.priceTxt = "$" + val("price").replace(/^\$/, ""); }
+      if (val("check") && /estimate/i.test(val("check")) && g.priceTxt && g.priceTxt[0] !== "~") g.priceTxt = "~" + g.priceTxt;
       if (val("status")) g.status = val("status");
       if (val("players")) g.players = parsePlayersTxt(val("players")) ?? g.players;
       if (val("age")) g.age = val("age");
@@ -119,6 +120,17 @@ async function main() {
     }
     picks = Object.values(lists);
     console.log(`Sheet overlay applied: ${sheetRows} rows, ${picks.length} pick lists`);
+  }
+
+  // merge the committed BGG ratings map (data/bgg.json) for games the API/dump matched
+  if (existsSync("data/bgg.json")) {
+    const bmap = JSON.parse(readFileSync("data/bgg.json", "utf8"));
+    let merged = 0;
+    for (const g of games) {
+      const b = bmap[g.name];
+      if (b && g.bgg === null) { g.bgg = b.bgg; g.bggId = b.bggId; merged++; }
+    }
+    console.log(`BGG map merged into ${merged} games`);
   }
 
   if (!games.length) { console.log("No data from either source, leaving games.json untouched"); return; }
