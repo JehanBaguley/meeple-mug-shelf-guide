@@ -93,12 +93,17 @@
   .dirbtn{border:1px solid var(--line);background:transparent;color:var(--cream);border-radius:8px;padding:8px 10px;font-size:14px;line-height:1;min-height:36px}
   #toTop{position:fixed;right:14px;bottom:18px;z-index:30;border:1px solid var(--line);background:var(--amber);color:var(--ink);border-radius:999px;width:44px;height:44px;font-size:18px;font-weight:800;box-shadow:0 4px 14px rgba(0,0,0,.35)}
   #toTop[hidden]{display:none}
-  @media(min-width:760px){
-    .wrap{max-width:1140px}
+  .panelwrap summary strong{font-size:14px}
+  .panelwrap[open] summary{margin-bottom:2px}
+  @media(min-width:900px){
+    .wrap{max-width:1400px}
+    .cols{display:grid;grid-template-columns:320px minmax(0,1fr);gap:20px;align-items:start}
+    .side{position:sticky;top:10px;max-height:calc(100vh - 20px);overflow-y:auto;padding-right:2px}
+    .panelwrap summary{display:none}
     .list{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
     .gcard{margin:0}
   }
-  @media(min-width:1100px){ .list{grid-template-columns:1fr 1fr 1fr} }
+  @media(min-width:1500px){ .list{grid-template-columns:1fr 1fr 1fr} }
 </style>
 </head>
 <body>
@@ -109,7 +114,9 @@
 </header>
 
 <main class="wrap">
-  <input type="text" id="search" placeholder="Search 300+ games…" aria-label="Search games" />
+<div class="cols">
+<aside class="side">
+  <input type="text" id="search" placeholder="Search games…" aria-label="Search games" />
 
   <div class="seg" id="seg" role="group" aria-label="Availability">
     <button data-seg="all" aria-pressed="true">All</button>
@@ -120,6 +127,8 @@
   <div class="eyebrow mono" id="picksLabel">Picks &amp; lists · staff and members</div>
   <div class="chiprow" id="picks"></div>
 
+  <details class="fsec panelwrap" id="filterWrap">
+  <summary><strong>Filters</strong><span class="gsum" id="filtCount">none active</span></summary>
   <div class="panel">
     <div class="rowlabel"><strong>Players</strong><span class="readout mono" id="seatOut">1–10+</span></div>
     <div class="dualwrap">
@@ -133,30 +142,35 @@
       <input type="range" class="dual" id="minTime" min="0" max="8" value="0" aria-label="Minimum playtime" />
       <input type="range" class="dual" id="maxTime" min="0" max="8" value="8" aria-label="Maximum playtime" />
     </div>
-    <div class="rowlabel" style="margin-top:10px;margin-bottom:6px"><strong>Rules complexity</strong></div>
-    <div style="display:flex;gap:7px">
-      <button class="wt on" data-wt="easy" aria-pressed="true">Easy</button>
-      <button class="wt on" data-wt="medium" aria-pressed="true">Medium</button>
-      <button class="wt on" data-wt="heavy" aria-pressed="true">Heavy</button>
-    </div>
     <div class="rowlabel" style="margin-top:8px"><strong>Age rating</strong><span class="readout mono" id="ageOut">any age</span></div>
     <div class="dualwrap">
       <div class="dualtrack"></div><div class="dualfill" id="ageFill"></div>
       <input type="range" class="dual" id="minAge" min="4" max="18" value="4" aria-label="Minimum age rating" />
       <input type="range" class="dual" id="maxAge" min="4" max="18" value="18" aria-label="Maximum age rating" />
     </div>
-    <details class="fsec" id="genreSec">
-      <summary><strong>Genre</strong><span class="gsum" id="genreSum">any</span></summary>
-      <div class="genrow" id="genreRow"></div>
-    </details>
     <div class="rowlabel" style="margin-top:8px"><strong>Price (for-sale games)</strong><span class="readout mono" id="priceOut">any price</span></div>
     <div class="dualwrap">
       <div class="dualtrack"></div><div class="dualfill" id="priceFill"></div>
       <input type="range" class="dual" id="minPrice" min="0" max="200" step="5" value="0" aria-label="Minimum price" />
       <input type="range" class="dual" id="maxPrice" min="0" max="200" step="5" value="200" aria-label="Maximum price" />
     </div>
+    <div class="rowlabel" style="margin-top:10px;margin-bottom:6px"><strong>Play style</strong></div>
+    <div class="genrow">
+      <button class="wt on" data-ps="any" aria-pressed="true">Any</button>
+      <button class="wt" data-ps="coop" aria-pressed="false">Co&#8209;op</button>
+      <button class="wt" data-ps="comp" aria-pressed="false">Competitive</button>
+    </div>
+    <div class="rowlabel" style="margin-top:12px;margin-bottom:6px"><strong>Genre</strong><span class="readout mono" id="genreSum">any</span></div>
+    <div class="genrow" style="margin-bottom:7px">
+      <button class="wt on" data-tagmode="any" aria-pressed="true">Match any</button>
+      <button class="wt" data-tagmode="all" aria-pressed="false">Match all</button>
+    </div>
+    <div class="genrow" id="genreRow"></div>
   </div>
+  </details>
 
+</aside>
+<section class="results">
   <div class="countsort">
     <span class="count mono" id="countOut" aria-live="polite"></span>
     <div class="sortwrap">
@@ -174,6 +188,8 @@
   <div class="note" id="hiddenNote" hidden></div>
 
   <div class="list" id="list"></div>
+</section>
+</div>
 
   <footer>
     The play library is the café's own shelf list, kept up to date by staff in a shared sheet. BGG community ratings join automatically once the café links its BoardGameGeek collection. Tapping Buy or Request a copy sends a note to the café, nothing is charged online.
@@ -206,7 +222,7 @@ const EMBED = {"games":[{"name":"20 Questions","players":[2,20],"mins":30,"time"
 const CATS = {party:"#e0a63c",bluff:"#c8452e",heavy:"#9b7fae",engine:"#6aa39a",family:"#8aa08e",coop:"#5b87a5",war:"#7b7466",two:"#c9a06b",strategy:"#4f86b8",deduct:"#3d6fa5"};
 const MODE_LABEL = {coop:"co-op",team:"teams",comp:"competitive"};
 const S_TIME = [0,20,30,45,60,90,120,180,360];
-const state = {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},pLo:0,pHi:200,query:"",sortBy:"name",sortDir:1};
+const state = {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",sortBy:"name",sortDir:1};
 let DATA = EMBED;
 
 const $ = id => document.getElementById(id);
@@ -223,7 +239,7 @@ function tagsFor(g){
   return [...new Set((g.catText||"").split(",").map(s => {
     const k = s.trim().toLowerCase();
     return TAG_ALIAS[k] || k;
-  }).filter(Boolean))];
+  }).filter(t => t && t !== "cooperative"))];
 }
 const ageMin = g => { const m = (g.age||"").match(/^(\d+)/); return m ? +m[1] : null; };
 function catSlugFor(t){
@@ -250,8 +266,23 @@ function buildTagRow(){
 }
 // generic dual-slider wiring: keeps handles ordered, paints the fill bar
 function wireDual(loId, hiId, fillId, loKey, hiKey, min, max){
-  $(loId).addEventListener("input", e => { state[loKey] = Math.min(+e.target.value, state[hiKey]); render(); });
-  $(hiId).addEventListener("input", e => { state[hiKey] = Math.max(+e.target.value, state[loKey]); render(); });
+  let redirect = null; // when handles sit on the same value, reroute the drag to the one that can still move
+  const clear = () => { redirect = null; };
+  $(loId).addEventListener("input", e => {
+    const v = +e.target.value;
+    if(redirect === "hi"){ state[hiKey] = Math.max(v, state[loKey]); }
+    else if(state[loKey] === state[hiKey] && v > state[hiKey]){ redirect = "hi"; state[hiKey] = v; }
+    else { state[loKey] = Math.min(v, state[hiKey]); }
+    render();
+  });
+  $(hiId).addEventListener("input", e => {
+    const v = +e.target.value;
+    if(redirect === "lo"){ state[loKey] = Math.min(v, state[hiKey]); }
+    else if(state[loKey] === state[hiKey] && v < state[loKey]){ redirect = "lo"; state[loKey] = v; }
+    else { state[hiKey] = Math.max(v, state[loKey]); }
+    render();
+  });
+  ["pointerup","touchend","mouseup","change"].forEach(ev => { $(loId).addEventListener(ev, clear); $(hiId).addEventListener(ev, clear); });
   return () => {
     $(loId).value = state[loKey]; $(hiId).value = state[hiKey];
     const a = ((state[loKey]-min)/(max-min))*100, b = ((state[hiKey]-min)/(max-min))*100;
@@ -303,6 +334,7 @@ async function applySheet(){
       if(val("playable")) g.playable = /^y/i.test(val("playable"));
       if(val("for_sale")) g.forSale = /^y/i.test(val("for_sale"));
       if(val("price")) { g.price = parseInt(val("price"))||g.price; g.priceTxt = "$"+val("price").replace(/^\$/,""); }
+      if(val("check") && /estimate/i.test(val("check")) && g.priceTxt && g.priceTxt[0]!=="~") g.priceTxt = "~"+g.priceTxt;
       if(val("status")) g.status = val("status");
       if(val("badge_by")) g.pickBy = val("badge_by"), g.pickNote = val("badge_note");
       if(val("rec_list")) { (lists[val("rec_list")] ??= {list:val("rec_list"),note:"",games:{}}).games[g.name] = val("rec_note"); }
@@ -344,7 +376,14 @@ function render(){
     : state.pLo===0 ? "\u2264 $"+state.pHi
     : "$"+state.pLo+"\u2013$"+state.pHi;
 
+  document.querySelectorAll("[data-tagmode]").forEach(b=>{const on=state.tagMode===b.dataset.tagmode;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
+  document.querySelectorAll("[data-ps]").forEach(b=>{const on=state.playStyle===b.dataset.ps;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
   const timeNarrowed = state.tLo>0||state.tHi<8, ageNarrowed = state.aLo>4||state.aHi<18;
+  const activeFilters =
+    (state.minSeats>1||state.maxSeats<10) + timeNarrowed + ageNarrowed +
+    (state.pLo>0||state.pHi<200) + (state.playStyle!=="any") +
+    Object.keys(state.tags).filter(k=>state.tags[k]).length;
+  $("filtCount").textContent = activeFilters ? activeFilters+" active" : "none active";
   const narrowed = state.minSeats>1||state.maxSeats<10||timeNarrowed||ageNarrowed||!state.wtOn.easy||!state.wtOn.medium||!state.wtOn.heavy;
   const pickList = state.pick!==null ? DATA.picks[state.pick] : null;
   let hiddenPending = 0;
@@ -356,9 +395,14 @@ function render(){
     if(!okAvail) return false;
     if(pickList && !(g.name in pickList.games)) return false;
     if(g.forSale && g.price!==null && (g.price<state.pLo || (state.pHi<200 && g.price>state.pHi)) && (state.seg==="buy" || !g.playable)) return false;
-    if(state.query.trim() && !norm(g.name+" "+(g.playsLike||"")+" "+(g.catText||"")).includes(norm(state.query))) return false;
+    if(state.query.trim() && !norm(g.name+" "+(g.playsLike||"")+" "+(g.catText||"")+(g.mode?" "+MODE_LABEL[g.mode]:"")).includes(norm(state.query))) return false;
+    if(state.playStyle==="coop" && g.mode!=="coop") return false;
+    if(state.playStyle==="comp" && g.mode==="coop") return false;
     const tsel = Object.keys(state.tags).filter(k=>state.tags[k]);
-    if(tsel.length && !tsel.some(k=>(g.tags||[]).includes(k))) return false;
+    if(tsel.length){
+      const has = k => (g.tags||[]).includes(k);
+      if(state.tagMode==="all" ? !tsel.every(has) : !tsel.some(has)) return false;
+    }
     if(narrowed){
       if(!hasStats(g)){ hiddenPending++; return false; }
       if(!(g.players[0]<=state.maxSeats && g.players[1]>=state.minSeats)) return false;
@@ -442,7 +486,9 @@ const paints = [
   wireDual("minAge","maxAge","ageFill","aLo","aHi",4,18),
   wireDual("minPrice","maxPrice","priceFill","pLo","pHi",0,200),
 ];
-if(matchMedia("(min-width:760px)").matches) $("genreSec").open = true;
+if(matchMedia("(min-width:900px)").matches) $("filterWrap").open = true;
+document.querySelectorAll("[data-tagmode]").forEach(b=>b.addEventListener("click",()=>{state.tagMode=b.dataset.tagmode;render()}));
+document.querySelectorAll("[data-ps]").forEach(b=>b.addEventListener("click",()=>{state.playStyle=b.dataset.ps;render()}));
 $("sortSel").addEventListener("change",e=>{state.sortBy=e.target.value;render()});
 boot();
 </script>
