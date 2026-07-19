@@ -77,12 +77,14 @@ function parseTimeTxt(s) {
 }
 // mirrors the site's spine-colour mapping
 function catSlugFor(t) {
-  const c = (t || "").toLowerCase();
-  if (/co-?op|cooperative/.test(c)) return "coop";
-  if (/party|dexterity|drawing|humor|trivia/.test(c)) return "party";
-  if (/deduction|bluffing|hidden roles|political/.test(c)) return "deduct";
-  if (/family|children/.test(c)) return "family";
-  if (/strategy|economic|worker placement|area control|tactical|abstract|tile|city building|civilization|deck building|legacy|asymmetric/.test(c)) return "strategy";
+  // primary (first-listed) category decides the card colour
+  for (const c of (t || "").toLowerCase().split(",").map(s => s.trim()).filter(Boolean)) {
+    if (/co-?op|cooperative/.test(c)) return "coop";
+    if (/party|dexterity|drawing|humor|trivia/.test(c)) return "party";
+    if (/deduction|bluffing|hidden roles|political/.test(c)) return "deduct";
+    if (/family|children/.test(c)) return "family";
+    if (/strategy|economic|worker placement|area control|tactical|abstract|tile|city building|civilization|deck building|legacy|asymmetric/.test(c)) return "strategy";
+  }
   return null;
 }
 
@@ -109,6 +111,8 @@ async function main() {
       if (val("for_sale")) g.forSale = /^y/i.test(val("for_sale"));
       if (val("price")) { g.price = parseInt(val("price")) || null; g.priceTxt = "$" + val("price").replace(/^\$/, ""); }
       if (val("check") && /estimate/i.test(val("check")) && g.priceTxt && g.priceTxt[0] !== "~") g.priceTxt = "~" + g.priceTxt;
+      if (val("price_text")) g.priceTxt = val("price_text");
+      if (val("blurb")) g.playsLike = val("blurb");
       if (val("status")) g.status = val("status");
       if (val("players")) g.players = parsePlayersTxt(val("players")) ?? g.players;
       if (val("age")) g.age = val("age");
@@ -128,7 +132,8 @@ async function main() {
     let merged = 0;
     for (const g of games) {
       const b = bmap[g.name];
-      if (b && g.bgg === null) { g.bgg = b.bgg; g.bggId = b.bggId; merged++; }
+      if (b && g.bgg === null) { g.bgg = b.bgg ?? null; g.bggId = b.bggId ?? null; merged++; }
+      if (b && b.weight != null && g.weight === null) g.weight = b.weight;
     }
     console.log(`BGG map merged into ${merged} games`);
   }
