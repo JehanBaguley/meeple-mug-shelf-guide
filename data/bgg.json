@@ -28,6 +28,10 @@
   "bgg": 7.5,
   "bggId": 103343
  },
+ "A Game of Thrones: The Board Game (Second Edition)": {
+  "bgg": 7.5,
+  "bggId": 103343
+ },
  "A Little Wordy": {
   "bgg": 6.7,
   "bggId": 335869
@@ -68,6 +72,10 @@
   "bggId": null,
   "weight": 4.2
  },
+ "Ark Nova": {
+  "bgg": 8.5,
+  "bggId": 342942
+ },
  "Art Decko": {
   "bgg": 6.8,
   "bggId": 260316
@@ -106,6 +114,10 @@
   "bgg": 6.9,
   "bggId": 143741
  },
+ "Backgammon": {
+  "bgg": 6.6,
+  "bggId": 2397
+ },
  "Balderdash": {
   "bgg": 6.5,
   "bggId": 163
@@ -113,6 +125,10 @@
  "Barcelona": {
   "bgg": 7.7,
   "bggId": 383607
+ },
+ "Betrayal at Baldur's Gate": {
+  "bgg": 7.1,
+  "bggId": 228660
  },
  "Betrayal at House on the Hill": {
   "bgg": 7.0,
@@ -127,6 +143,10 @@
   "bgg": 7.8,
   "bggId": 323612
  },
+ "Black Mirror Nose Dive": {
+  "bgg": 4.0,
+  "bggId": 265316
+ },
  "Block Party": {
   "bgg": 6.6,
   "bggId": 379300
@@ -134,6 +154,14 @@
  "Blokus": {
   "bgg": 6.9,
   "bggId": 2453
+ },
+ "Blood on the Clocktower": {
+  "bgg": 8.3,
+  "bggId": 240980
+ },
+ "Bohnanza: 25th Anniversary Edition": {
+  "bgg": 7.1,
+  "bggId": 11
  },
  "Brass Birmingham": {
   "bgg": 8.6,
@@ -181,6 +209,10 @@
   "bgg": 6.3,
   "bggId": 359502
  },
+ "Castle Combo": {
+  "bgg": 7.7,
+  "bggId": 416851
+ },
  "Catan Settlers of America": {
   "bgg": 6.8,
   "bggId": 67239
@@ -196,6 +228,14 @@
  "Champions of Midgard": {
   "bgg": 7.7,
   "bggId": 172287
+ },
+ "Chess": {
+  "bgg": 7.2,
+  "bggId": 171
+ },
+ "Chucky": {
+  "bgg": 7.0,
+  "bggId": 405696
  },
  "Citadels": {
   "bgg": 7.0,
@@ -213,6 +253,10 @@
  "Clue card game": {
   "bgg": 5.9,
   "bggId": 88922
+ },
+ "Cluedo Game of Thrones": {
+  "bgg": 6.0,
+  "bggId": 198328
  },
  "Codenames": {
   "bgg": 7.5,
@@ -253,9 +297,21 @@
   "bgg": 7.0,
   "bggId": 148943
  },
+ "Cranium": {
+  "bgg": 5.7,
+  "bggId": 891
+ },
+ "Critter Kitchen": {
+  "bgg": 7.8,
+  "bggId": 393429
+ },
  "Cubitos": {
   "bgg": 7.4,
   "bggId": 298069
+ },
+ "Cubo": {
+  "bgg": 5.6,
+  "bggId": 166532
  },
  "Dead of Winter": {
   "bgg": 7.4,
@@ -305,6 +361,10 @@
   "bgg": 6.5,
   "bggId": 329714
  },
+ "Dungeons & Dragons: The Yawning Portal": {
+  "bgg": 7.1,
+  "bggId": 367820
+ },
  "Durian Dash": {
   "bgg": 6.0,
   "bggId": 340396
@@ -317,6 +377,10 @@
  "El Grande": {
   "bgg": 7.8,
   "bggId": 93
+ },
+ "Eldritch Horror Mountains of Madness": {
+  "bgg": 8.2,
+  "weight": 3.25
  },
  "Epic Card Game": {
   "bgg": 6.4,
@@ -337,6 +401,10 @@
   "bggId": 436821,
   "weight": 3.0
  },
+ "Exploding Kittens": {
+  "bgg": 6.1,
+  "bggId": 172225
+ },
  "Festo": {
   "bgg": 6.7,
   "bggId": 253679
@@ -352,6 +420,10 @@
  "Flip City": {
   "bgg": 6.3,
   "bggId": 168679
+ },
+ "Fog of Love": {
+  "bgg": 6.6,
+  "bggId": 175324
  },
  "Forbidden Desert": {
   "bgg": 7.1,
@@ -384,6 +456,10 @@
   "bgg": 7.1,
   "bggId": 197443
  },
+ "Fugitive (Second Edition)": {
+  "bgg": 7.4,
+  "bggId": 370597
+ },
  "Fuji": {
   "bgg": 6.6,
   "bggId": 258308
@@ -399,6 +475,10 @@
  "Game of Life: Twists and Turns": {
   "bgg": 5.8,
   "bggId": 28609
+ },
+ "Game of Thrones: Westeros Intrigue": {
+  "bgg": 5.3,
+  "bggId": 155693
  },
  "Ghost Blitz": {
   "bgg": 6.7,
@@ -425,9 +505,21 @@
   "bgg": 7.0,
   "bggId": 98778
  },
+ "Harmonies": {
+  "bgg": 8.0,
+  "bggId": 414317
+ },
  "Hawker Wars": {
   "bgg": 6.0,
   "bggId": 365749
+ },
+ "Headache": {
+  "bgg": 4.4,
+  "bggId": 9921
+ },
+ "Heat: Pedal to the Metal": {
+  "bgg": 8.0,
+  "bggId": 366013
  },
  "Hues and Cues": {
   "bgg": 6.4,
@@ -437,6 +529,10 @@
  "Imperial Settlers": {
   "bgg": 7.3,
   "bggId": 154203
+ },
+ "Infinity Gauntlet: A Love Letter Game": {
+  "bgg": 6.9,
+  "bggId": 304285
  },
  "Istanbul": {
   "bgg": 7.5,
@@ -458,6 +554,10 @@
   "bgg": 7.6,
   "bggId": 254640,
   "weight": 1.0
+ },
+ "Kabuto Sumo": {
+  "bgg": 6.7,
+  "bggId": 320390
  },
  "Kairo": {
   "bgg": 6.5,
@@ -515,6 +615,10 @@
  "Love Letter - Princess Ever After": {
   "bgg": 7.2,
   "bggId": 129622
+ },
+ "Lucky Numbers": {
+  "bgg": 6.4,
+  "bggId": 118247
  },
  "Machi Koro": {
   "bgg": 6.6,
@@ -576,6 +680,10 @@
   "bgg": 5.9,
   "bggId": 1927
  },
+ "Munchkin Marvel": {
+  "bgg": 6.8,
+  "bggId": 189848
+ },
  "Munchkin Panic": {
   "bgg": 6.0,
   "bggId": 156786
@@ -591,6 +699,10 @@
  "My First Stone Age": {
   "bgg": 6.6,
   "bggId": 191004
+ },
+ "Mysterium": {
+  "bgg": 7.2,
+  "bggId": 181304
  },
  "Near and Far": {
   "bgg": 7.6,
@@ -623,6 +735,10 @@
  "Oath - Chronicles of Empire and Exile": {
   "bgg": 7.7,
   "bggId": 291572
+ },
+ "Odin's Ravens (Second Edition)": {
+  "bgg": 7.0,
+  "bggId": 192074
  },
  "Ok Boomer": {
   "bgg": 4.7,
@@ -660,6 +776,10 @@
   "bgg": 7.5,
   "bggId": 30549
  },
+ "Paperback": {
+  "bgg": 7.1,
+  "bggId": 141572
+ },
  "Pendulum": {
   "bgg": 6.4,
   "bggId": 312804
@@ -667,6 +787,10 @@
  "Phase 10": {
   "bgg": 5.3,
   "bggId": 1258
+ },
+ "Pick Up Sticks": {
+  "bgg": 4.4,
+  "bggId": 6424
  },
  "Pictionary": {
   "bgg": 5.8,
@@ -755,6 +879,14 @@
   "bgg": 8.1,
   "bggId": 237182
  },
+ "Rubiks Cage": {
+  "bgg": 6.4,
+  "bggId": 283609
+ },
+ "Rummikub": {
+  "bgg": 6.5,
+  "bggId": 811
+ },
  "Rummikub Original": {
   "bgg": 6.5,
   "bggId": 811
@@ -762,6 +894,10 @@
  "RuneScape Kingdoms: Shadow of Elvarg": {
   "bgg": 7.5,
   "bggId": 361503
+ },
+ "SCOUT": {
+  "bgg": 7.8,
+  "bggId": 291453
  },
  "SETI": {
   "bgg": 5.7,
@@ -776,6 +912,14 @@
   "bgg": 6.5,
   "bggId": 9220
  },
+ "Scape Goat": {
+  "bgg": 6.9,
+  "bggId": 315043
+ },
+ "Scrabble": {
+  "bgg": 6.3,
+  "bggId": 320
+ },
  "Secret Hitler": {
   "bgg": 7.5,
   "bggId": 188834
@@ -784,9 +928,21 @@
   "bgg": 6.4,
   "bggId": 200847
  },
+ "Selfish": {
+  "bgg": 6.0,
+  "bggId": 288583
+ },
  "Selfish: Zombies": {
   "bgg": 6.0,
   "bggId": 288583
+ },
+ "Sequence": {
+  "bgg": 6.2,
+  "bggId": 2375
+ },
+ "Shadows of Brimstone City of Ancients": {
+  "bgg": 7.9,
+  "bggId": 146791
  },
  "Sherlock Holmes Consulting Detective": {
   "bgg": 7.6,
@@ -867,9 +1023,17 @@
   "bgg": 7.0,
   "bggId": 133473
  },
+ "T.I.M.E Stories: Under the Mask": {
+  "bgg": 7.3,
+  "bggId": 146508
+ },
  "TIME Stories": {
   "bgg": 7.3,
   "bggId": 146508
+ },
+ "Taboo": {
+  "bgg": 6.3,
+  "bggId": 1111
  },
  "Taco Cat Cheese Pizza": {
   "bgg": 6.5,
@@ -904,6 +1068,10 @@
  "Terraforming Mars": {
   "bgg": 8.3,
   "bggId": 167791
+ },
+ "The Gang": {
+  "bgg": 7.5,
+  "bggId": 411567
  },
  "The Great Wall": {
   "bgg": 7.8,
@@ -954,9 +1122,21 @@
   "bgg": 5.4,
   "bggId": 4040
  },
+ "Trivial Pursuit - Horror": {
+  "bgg": 5.8,
+  "bggId": 269963
+ },
+ "Trust Me, I'm a Superhero": {
+  "bgg": 5.6,
+  "bggId": 315733
+ },
  "Trust me I'm a Doctor": {
   "bgg": 5.8,
   "bggId": 295687
+ },
+ "Two Rooms and a Boom": {
+  "bgg": 7.0,
+  "bggId": 134352
  },
  "Tzaar": {
   "bgg": 7.7,
@@ -1003,6 +1183,10 @@
   "bgg": 6.1,
   "bggId": 399088
  },
+ "Upwords": {
+  "bgg": 5.8,
+  "bggId": 1515
+ },
  "Viticulture": {
   "bgg": 7.5,
   "bggId": 128621,
@@ -1048,6 +1232,10 @@
  "Xi'an": {
   "bgg": 7.1,
   "bggId": 234828
+ },
+ "Yum Cha": {
+  "bgg": 6.4,
+  "bggId": 363991
  },
  "boop.": {
   "bgg": 7.0,
