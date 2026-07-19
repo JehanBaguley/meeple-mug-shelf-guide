@@ -1,0 +1,882 @@
+{
+ "20 Questions": {
+  "bgg": 5.8,
+  "bggId": 3377
+ },
+ "3 Ring Circus": {
+  "bgg": 7.2,
+  "bggId": 371947
+ },
+ "5 Minute Marvel": {
+  "bgg": 6.7,
+  "bggId": 253618
+ },
+ "5 Second Rule": {
+  "bgg": 5.5,
+  "bggId": 86073
+ },
+ "7 Wonders": {
+  "bgg": 7.7,
+  "bggId": 68448
+ },
+ "7 Wonders Duel": {
+  "bgg": 8.1,
+  "bggId": 173346
+ },
+ "A Game of Thrones 2nd Edition": {
+  "bgg": 7.5,
+  "bggId": 103343
+ },
+ "A Little Wordy": {
+  "bgg": 6.7,
+  "bggId": 335869
+ },
+ "Adventure Time: Card Wars": {
+  "bgg": 6.1,
+  "bggId": 144728
+ },
+ "Agricola": {
+  "bgg": 7.9,
+  "bggId": 31260
+ },
+ "Alchemists": {
+  "bgg": 7.6,
+  "bggId": 161970
+ },
+ "Anomia": {
+  "bgg": 6.7,
+  "bggId": 67877
+ },
+ "Arboretum": {
+  "bgg": 7.2,
+  "bggId": 140934
+ },
+ "Art Decko": {
+  "bgg": 6.8,
+  "bggId": 260316
+ },
+ "AssassinCon": {
+  "bgg": 5.7,
+  "bggId": 154778
+ },
+ "Asteroyds": {
+  "bgg": 6.3,
+  "bggId": 65200
+ },
+ "Avalon": {
+  "bgg": 7.5,
+  "bggId": 128882
+ },
+ "Awkward Guests - The Mr Walton Case": {
+  "bgg": 7.5,
+  "bggId": 188866
+ },
+ "BANG! The Card Game": {
+  "bgg": 6.5,
+  "bggId": 3955
+ },
+ "BANG! The Dice Game": {
+  "bgg": 6.9,
+  "bggId": 143741
+ },
+ "Balderdash": {
+  "bgg": 6.5,
+  "bggId": 163
+ },
+ "Barcelona": {
+  "bgg": 7.7,
+  "bggId": 383607
+ },
+ "Betrayal at House on the Hill": {
+  "bgg": 7.0,
+  "bggId": 10547
+ },
+ "Beyond the Sun": {
+  "bgg": 7.9,
+  "bggId": 317985
+ },
+ "Bitoku": {
+  "bgg": 7.8,
+  "bggId": 323612
+ },
+ "Block Party": {
+  "bgg": 6.6,
+  "bggId": 379300
+ },
+ "Blokus": {
+  "bgg": 6.9,
+  "bggId": 2453
+ },
+ "Brass Birmingham": {
+  "bgg": 8.6,
+  "bggId": 224517
+ },
+ "Brew Crafters": {
+  "bgg": 7.3,
+  "bggId": 139898
+ },
+ "Cape May": {
+  "bgg": 7.2,
+  "bggId": 281248
+ },
+ "Caravan": {
+  "bgg": 6.6,
+  "bggId": 269789
+ },
+ "Cards Against Humanity": {
+  "bgg": 5.7,
+  "bggId": 50381
+ },
+ "Carnegie": {
+  "bgg": 8.0,
+  "bggId": 310873
+ },
+ "Cascadero": {
+  "bgg": 7.3,
+  "bggId": 401216
+ },
+ "Cascadito": {
+  "bgg": 6.5,
+  "bggId": 401217
+ },
+ "Casting Shadows": {
+  "bgg": 6.3,
+  "bggId": 359502
+ },
+ "Catan Settlers of America": {
+  "bgg": 6.8,
+  "bggId": 67239
+ },
+ "Catan The Settlers": {
+  "bgg": 7.1,
+  "bggId": 13
+ },
+ "Chameleon Game": {
+  "bgg": 6.5,
+  "bggId": 227072
+ },
+ "Champions of Midgard": {
+  "bgg": 7.7,
+  "bggId": 172287
+ },
+ "Clank": {
+  "bgg": 7.8,
+  "bggId": 201808
+ },
+ "Clickbait": {
+  "bgg": 5.3,
+  "bggId": 254417
+ },
+ "Clue card game": {
+  "bgg": 5.9,
+  "bggId": 88922
+ },
+ "Codenames": {
+  "bgg": 7.5,
+  "bggId": 178900
+ },
+ "Codenames Pictures": {
+  "bgg": 7.2,
+  "bggId": 198773
+ },
+ "Coffee Traders": {
+  "bgg": 7.7,
+  "bggId": 325022
+ },
+ "Concept Kids": {
+  "bgg": 7.0,
+  "bggId": 247314
+ },
+ "Concordia": {
+  "bgg": 8.1,
+  "bggId": 124361
+ },
+ "Cosmic Encounter 42nd Anniversary Edition": {
+  "bgg": 7.5,
+  "bggId": 39463
+ },
+ "Coup": {
+  "bgg": 7.0,
+  "bggId": 131357
+ },
+ "Coup Rebellion": {
+  "bgg": 7.0,
+  "bggId": 148943
+ },
+ "Cubitos": {
+  "bgg": 7.4,
+  "bggId": 298069
+ },
+ "Dead of Winter": {
+  "bgg": 7.4,
+  "bggId": 150376
+ },
+ "Deal with the Devil": {
+  "bgg": 7.0,
+  "bggId": 367379
+ },
+ "Dinosaur Island": {
+  "bgg": 7.5,
+  "bggId": 221194
+ },
+ "Dixit": {
+  "bgg": 7.2,
+  "bggId": 39856
+ },
+ "Dominion": {
+  "bgg": 7.6,
+  "bggId": 36218
+ },
+ "Dominion Intrigue": {
+  "bgg": 7.7,
+  "bggId": 40834
+ },
+ "Dorfromantik - The Duel": {
+  "bgg": 7.0,
+  "bggId": 395364
+ },
+ "Dos": {
+  "bgg": 4.8,
+  "bggId": 246701
+ },
+ "Dreadful Circus": {
+  "bgg": 6.5,
+  "bggId": 329714
+ },
+ "Durian Dash": {
+  "bgg": 6.0,
+  "bggId": 340396
+ },
+ "El Grande": {
+  "bgg": 7.8,
+  "bggId": 93
+ },
+ "Epic Card Game": {
+  "bgg": 6.4,
+  "bggId": 175621
+ },
+ "Festo": {
+  "bgg": 6.7,
+  "bggId": 253679
+ },
+ "Fire & Stone": {
+  "bgg": 6.1,
+  "bggId": 342927
+ },
+ "Fire Tower": {
+  "bgg": 7.1,
+  "bggId": 226605
+ },
+ "Flip City": {
+  "bgg": 6.3,
+  "bggId": 168679
+ },
+ "Forbidden Desert": {
+  "bgg": 7.1,
+  "bggId": 136063
+ },
+ "Forbidden Island": {
+  "bgg": 6.8,
+  "bggId": 65244
+ },
+ "Forbidden Jungle": {
+  "bgg": 7.3,
+  "bggId": 380226
+ },
+ "Forgotten Waters": {
+  "bgg": 7.7,
+  "bggId": 302723
+ },
+ "Founders of Gloomhaven": {
+  "bgg": 6.6,
+  "bggId": 214032
+ },
+ "Four Gardens": {
+  "bgg": 6.9,
+  "bggId": 296043
+ },
+ "Fugitive": {
+  "bgg": 7.1,
+  "bggId": 197443
+ },
+ "Fuji": {
+  "bgg": 6.6,
+  "bggId": 258308
+ },
+ "Gaia Project - A Terra Mystica Game": {
+  "bgg": 8.3,
+  "bggId": 220308
+ },
+ "Galaxy Trucker": {
+  "bgg": 7.3,
+  "bggId": 31481
+ },
+ "Game of Life: Twists and Turns": {
+  "bgg": 5.8,
+  "bggId": 28609
+ },
+ "Gloomhaven Jaws of the Lion": {
+  "bgg": 8.4,
+  "bggId": 291457
+ },
+ "Great Western Trail": {
+  "bgg": 8.2,
+  "bggId": 193738
+ },
+ "Greed": {
+  "bgg": 6.6,
+  "bggId": 151247
+ },
+ "Hadara": {
+  "bgg": 7.4,
+  "bggId": 269144
+ },
+ "Hanabi": {
+  "bgg": 7.0,
+  "bggId": 98778
+ },
+ "Hawker Wars": {
+  "bgg": 6.0,
+  "bggId": 365749
+ },
+ "Hues and Cues": {
+  "bgg": 6.4,
+  "bggId": 302520
+ },
+ "Imperial Settlers": {
+  "bgg": 7.3,
+  "bggId": 154203
+ },
+ "Istanbul": {
+  "bgg": 7.5,
+  "bggId": 148949
+ },
+ "Jaipur": {
+  "bgg": 7.5,
+  "bggId": 54043
+ },
+ "Joan of Arc": {
+  "bgg": 6.3,
+  "bggId": 64
+ },
+ "Jungle Speed": {
+  "bgg": 6.5,
+  "bggId": 8098
+ },
+ "Just One": {
+  "bgg": 7.6,
+  "bggId": 254640
+ },
+ "Kairo": {
+  "bgg": 6.5,
+  "bggId": 107635
+ },
+ "Kami-Sama": {
+  "bgg": 6.6,
+  "bggId": 232318
+ },
+ "Kero": {
+  "bgg": 7.0,
+  "bggId": 222219
+ },
+ "Kingdom Rush - Rift in Time": {
+  "bgg": 7.3,
+  "bggId": 272533
+ },
+ "Kingdomino": {
+  "bgg": 7.3,
+  "bggId": 204583
+ },
+ "Last Heroes": {
+  "bgg": 4.9,
+  "bggId": 254686
+ },
+ "Legendary Inventors": {
+  "bgg": 6.3,
+  "bggId": 200785
+ },
+ "Life of a Chameleon": {
+  "bgg": 7.1,
+  "bggId": 337638
+ },
+ "Logo Board Game": {
+  "bgg": 5.1,
+  "bggId": 64204
+ },
+ "Lords of Waterdeep": {
+  "bgg": 7.7,
+  "bggId": 110327
+ },
+ "Lost Ruins of Arnak": {
+  "bgg": 8.1,
+  "bggId": 312484
+ },
+ "Love Letter - Infinity Gauntlet Edition": {
+  "bgg": 6.9,
+  "bggId": 304285
+ },
+ "Love Letter - Princess Ever After": {
+  "bgg": 7.2,
+  "bggId": 129622
+ },
+ "Machi Koro": {
+  "bgg": 6.6,
+  "bggId": 143884
+ },
+ "Machi Koro 2": {
+  "bgg": 7.1,
+  "bggId": 340364
+ },
+ "Man Bites Dog": {
+  "bgg": 4.6,
+  "bggId": 4035
+ },
+ "Mansions of Madness": {
+  "bgg": 7.2,
+  "bggId": 83330
+ },
+ "Maracaibo": {
+  "bgg": 7.9,
+  "bggId": 276025
+ },
+ "Marvel United": {
+  "bgg": 7.5,
+  "bggId": 298047
+ },
+ "Marvel Villainous Infinite Power": {
+  "bgg": 6.7,
+  "bggId": 302336
+ },
+ "Mascarade": {
+  "bgg": 6.5,
+  "bggId": 139030
+ },
+ "Meeple Circus": {
+  "bgg": 7.0,
+  "bggId": 193214
+ },
+ "Moa": {
+  "bgg": 6.3,
+  "bggId": 214123
+ },
+ "Monolith Arena": {
+  "bgg": 7.2,
+  "bggId": 238393
+ },
+ "Monopoly - Classic": {
+  "bgg": 4.4,
+  "bggId": 1406
+ },
+ "Monopoly - Deal Card Game": {
+  "bgg": 6.3,
+  "bggId": 40398
+ },
+ "Monopoly Bid": {
+  "bgg": 5.7,
+  "bggId": 327797
+ },
+ "Munchkin": {
+  "bgg": 5.9,
+  "bggId": 1927
+ },
+ "Munchkin Panic": {
+  "bgg": 6.0,
+  "bggId": 156786
+ },
+ "My First Bananagrams": {
+  "bgg": 6.2,
+  "bggId": 202478
+ },
+ "My First Castle Panic": {
+  "bgg": 6.4,
+  "bggId": 267314
+ },
+ "My First Stone Age": {
+  "bgg": 6.6,
+  "bggId": 191004
+ },
+ "Near and Far": {
+  "bgg": 7.6,
+  "bggId": 195421
+ },
+ "New Frontiers": {
+  "bgg": 7.4,
+  "bggId": 255692
+ },
+ "New York Zoo": {
+  "bgg": 7.0,
+  "bggId": 300877
+ },
+ "No Thanks!": {
+  "bgg": 7.1,
+  "bggId": 12942
+ },
+ "Not Alone": {
+  "bgg": 7.0,
+  "bggId": 194879
+ },
+ "Now or Never": {
+  "bgg": 7.6,
+  "bggId": 314745
+ },
+ "Nucleum": {
+  "bgg": 8.1,
+  "bggId": 396790
+ },
+ "Oath - Chronicles of Empire and Exile": {
+  "bgg": 7.7,
+  "bggId": 291572
+ },
+ "Ok Boomer": {
+  "bgg": 4.7,
+  "bggId": 313463
+ },
+ "One Night Ultimate Superheroes": {
+  "bgg": 6.8,
+  "bggId": 255293
+ },
+ "One Night Ultimate Werewolf": {
+  "bgg": 7.0,
+  "bggId": 147949
+ },
+ "Ono 99": {
+  "bgg": 5.7,
+  "bggId": 7803
+ },
+ "Orleans": {
+  "bgg": 8.1,
+  "bggId": 164928
+ },
+ "Paladins of the West Kingdom": {
+  "bgg": 8.0,
+  "bggId": 266810
+ },
+ "Palazzo": {
+  "bgg": 6.5,
+  "bggId": 15318
+ },
+ "Paleo": {
+  "bgg": 7.7,
+  "bggId": 300531
+ },
+ "Pandemic": {
+  "bgg": 7.5,
+  "bggId": 30549
+ },
+ "Pendulum": {
+  "bgg": 6.4,
+  "bggId": 312804
+ },
+ "Phase 10": {
+  "bgg": 5.3,
+  "bggId": 1258
+ },
+ "Pictionary": {
+  "bgg": 5.8,
+  "bggId": 2281
+ },
+ "Pictomania": {
+  "bgg": 7.3,
+  "bggId": 98229
+ },
+ "Planet": {
+  "bgg": 6.6,
+  "bggId": 252929
+ },
+ "Poo": {
+  "bgg": 5.5,
+  "bggId": 60579
+ },
+ "Pop the Pig": {
+  "bgg": 4.2,
+  "bggId": 35173
+ },
+ "Psycho Killer": {
+  "bgg": 6.7,
+  "bggId": 327371
+ },
+ "Puerto Rico": {
+  "bgg": 7.9,
+  "bggId": 3076
+ },
+ "Quacks of Quedlinburg": {
+  "bgg": 7.5,
+  "bggId": 409496
+ },
+ "Quadefy": {
+  "bgg": 5.8,
+  "bggId": 113517
+ },
+ "RUN": {
+  "bgg": 7.5,
+  "bggId": 368028
+ },
+ "Red Cathedral": {
+  "bgg": 7.7,
+  "bggId": 227224
+ },
+ "Red Rising": {
+  "bgg": 7.0,
+  "bggId": 329465
+ },
+ "Rick and Morty - Total Rickall": {
+  "bgg": 6.1,
+  "bggId": 194232
+ },
+ "Rising Sun": {
+  "bgg": 7.8,
+  "bggId": 205896
+ },
+ "Roll Player": {
+  "bgg": 7.4,
+  "bggId": 169426
+ },
+ "Roll for the Galaxy": {
+  "bgg": 7.6,
+  "bggId": 132531
+ },
+ "Root": {
+  "bgg": 8.1,
+  "bggId": 237182
+ },
+ "Rummikub Original": {
+  "bgg": 6.5,
+  "bggId": 811
+ },
+ "RuneScape Kingdoms: Shadow of Elvarg": {
+  "bgg": 7.5,
+  "bggId": 361503
+ },
+ "Sabotage": {
+  "bgg": 7.2,
+  "bggId": 252854
+ },
+ "Saboteur": {
+  "bgg": 6.5,
+  "bggId": 9220
+ },
+ "Secret Hitler": {
+  "bgg": 7.5,
+  "bggId": 188834
+ },
+ "Secrets": {
+  "bgg": 6.4,
+  "bggId": 200847
+ },
+ "Selfish: Zombies": {
+  "bgg": 6.0,
+  "bggId": 288583
+ },
+ "Sherlock Holmes Consulting Detective": {
+  "bgg": 7.6,
+  "bggId": 2511
+ },
+ "Shit Happens": {
+  "bgg": 5.3,
+  "bggId": 196379
+ },
+ "Shut The Box": {
+  "bgg": 5.2,
+  "bggId": 9851
+ },
+ "Sidereal Confluence": {
+  "bgg": 7.8,
+  "bggId": 202426
+ },
+ "Sideshow Swap": {
+  "bgg": 6.8,
+  "bggId": 256443
+ },
+ "Skip-Bo": {
+  "bgg": 5.7,
+  "bggId": 1269
+ },
+ "Skulk Hollow": {
+  "bgg": 7.2,
+  "bggId": 232595
+ },
+ "Skull": {
+  "bgg": 7.2,
+  "bggId": 92415
+ },
+ "Small World - Warcraft": {
+  "bgg": 7.2,
+  "bggId": 309630
+ },
+ "Smash Up": {
+  "bgg": 6.7,
+  "bggId": 122522
+ },
+ "Sounds Fishy": {
+  "bgg": 6.7,
+  "bggId": 359893
+ },
+ "Spirit Island": {
+  "bgg": 8.3,
+  "bggId": 162886
+ },
+ "Splendor": {
+  "bgg": 7.4,
+  "bggId": 148228
+ },
+ "Streets": {
+  "bgg": 6.6,
+  "bggId": 279720
+ },
+ "Suburbia": {
+  "bgg": 7.5,
+  "bggId": 123260
+ },
+ "Summoner Wars": {
+  "bgg": 7.2,
+  "bggId": 58281
+ },
+ "Sushi Go": {
+  "bgg": 7.0,
+  "bggId": 133473
+ },
+ "TIME Stories": {
+  "bgg": 7.3,
+  "bggId": 146508
+ },
+ "Taco Cat Cheese Pizza": {
+  "bgg": 6.5,
+  "bggId": 253664
+ },
+ "Tainted Grail - Kings of Ruin": {
+  "bgg": 8.6,
+  "bggId": 360366
+ },
+ "Tang Garden": {
+  "bgg": 7.3,
+  "bggId": 252153
+ },
+ "Tavern Masters": {
+  "bgg": 6.8,
+  "bggId": 210418
+ },
+ "Terra Mystica": {
+  "bgg": 8.0,
+  "bggId": 120677
+ },
+ "Terraforming Mars": {
+  "bgg": 8.3,
+  "bggId": 167791
+ },
+ "The Great Wall": {
+  "bgg": 7.8,
+  "bggId": 292375
+ },
+ "The Isle of Cats": {
+  "bgg": 7.6,
+  "bggId": 281259
+ },
+ "The Mind": {
+  "bgg": 6.7,
+  "bggId": 244992
+ },
+ "The Quest for El Dorado": {
+  "bgg": 7.7,
+  "bggId": 217372
+ },
+ "The Red Dragon Inn": {
+  "bgg": 6.5,
+  "bggId": 24310
+ },
+ "The Resistance": {
+  "bgg": 7.2,
+  "bggId": 41114
+ },
+ "The Sherriff of Nottingham": {
+  "bgg": 7.0,
+  "bggId": 157969
+ },
+ "The Singaporean Dream": {
+  "bgg": 5.3,
+  "bggId": 267030
+ },
+ "Ticket to Ride": {
+  "bgg": 7.4,
+  "bggId": 9209
+ },
+ "Ticket to Ride: Europe": {
+  "bgg": 7.5,
+  "bggId": 14996
+ },
+ "Tokaido": {
+  "bgg": 6.9,
+  "bggId": 123540
+ },
+ "Tri-Ominos": {
+  "bgg": 5.4,
+  "bggId": 4040
+ },
+ "Trust me I'm a Doctor": {
+  "bgg": 5.8,
+  "bggId": 295687
+ },
+ "Tzaar": {
+  "bgg": 7.7,
+  "bggId": 31999
+ },
+ "Tzolkin: The Mayan Calendar": {
+  "bgg": 7.8,
+  "bggId": 126163
+ },
+ "Ultimate Werewolf": {
+  "bgg": 6.5,
+  "bggId": 152241
+ },
+ "Undaunted: Battle of Britain": {
+  "bgg": 7.9,
+  "bggId": 366495
+ },
+ "Undaunted: Normandy": {
+  "bgg": 7.8,
+  "bggId": 268864
+ },
+ "Unfair": {
+  "bgg": 7.3,
+  "bggId": 179172
+ },
+ "Uno": {
+  "bgg": 5.5,
+  "bggId": 2223
+ },
+ "Uno - Flip": {
+  "bgg": 6.3,
+  "bggId": 271460
+ },
+ "Uno All Wild": {
+  "bgg": 4.5,
+  "bggId": 352997
+ },
+ "Uno Show em No Mercy": {
+  "bgg": 6.1,
+  "bggId": 399088
+ },
+ "Wavelength": {
+  "bgg": 7.2,
+  "bggId": 262543
+ },
+ "Werewolves of Millers Hollow": {
+  "bgg": 6.7,
+  "bggId": 25821
+ },
+ "What Next": {
+  "bgg": 6.4,
+  "bggId": 342443
+ },
+ "Wingspan": {
+  "bgg": 8.0,
+  "bggId": 266192
+ },
+ "Wizard": {
+  "bgg": 7.0,
+  "bggId": 1465
+ },
+ "Xi'an": {
+  "bgg": 7.1,
+  "bggId": 234828
+ }
+}
