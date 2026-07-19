@@ -20,6 +20,7 @@
   h1 span{color:var(--amber)}
   .sub{margin:0;font-size:13.5px;color:var(--muted);max-width:560px;line-height:1.5}
   input[type=text],select{background:var(--bg-deep);color:var(--cream);border:1px solid var(--line);border-radius:8px;padding:9px 11px;font-size:14px;font-family:inherit}
+  select{-webkit-appearance:none;appearance:none;padding-right:32px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23ece5d3' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center}
   input[type=text]::placeholder{color:var(--muted)}
   #search{width:100%;margin-bottom:10px}
   input[type=range].single{accent-color:var(--amber);width:100%}
@@ -85,6 +86,11 @@
   .fsec[open] summary::after{transform:rotate(180deg)}
   .fsec .genrow{padding-top:7px}
   .gsum{font-size:11.5px;color:var(--muted);font-weight:600}
+  .mseg{display:inline-flex;border:1.5px solid var(--timber);border-radius:8px;overflow:hidden}
+  .mseg button{border:0;background:transparent;color:var(--cream);padding:7px 13px;font-size:12px;font-weight:700}
+  .mseg button.on{background:var(--timber);color:var(--ink)}
+  .wt.dead{opacity:.32}
+  #resetBtn{margin-left:10px}
   .genrow .wt{flex:0 0 auto;white-space:nowrap;padding-left:12px;padding-right:12px}
   .genrow .wt small{opacity:.65;font-weight:600;margin-left:4px}
   .morebtn{background:transparent;border:0;color:#c9a06b;font-weight:700;font-size:12.5px;padding:9px 4px;text-decoration:underline}
@@ -161,9 +167,9 @@
       <button class="wt" data-ps="comp" aria-pressed="false">Competitive</button>
     </div>
     <div class="rowlabel" style="margin-top:12px;margin-bottom:6px"><strong>Genre</strong><span class="readout mono" id="genreSum">any</span></div>
-    <div class="genrow" style="margin-bottom:7px">
-      <button class="wt on" data-tagmode="any" aria-pressed="true">Match any</button>
-      <button class="wt" data-tagmode="all" aria-pressed="false">Match all</button>
+    <div class="mseg" role="group" aria-label="Genre match mode" style="margin-bottom:7px">
+      <button class="on" data-tagmode="any" aria-pressed="true">Match any</button>
+      <button data-tagmode="all" aria-pressed="false">Match all</button>
     </div>
     <div class="genrow" id="genreRow"></div>
   </div>
@@ -172,7 +178,7 @@
 </aside>
 <section class="results">
   <div class="countsort">
-    <span class="count mono" id="countOut" aria-live="polite"></span>
+    <span class="count mono" id="countOut" aria-live="polite"></span><button class="morebtn" id="resetBtn" hidden>Reset</button>
     <div class="sortwrap">
       <select id="sortSel" aria-label="Sort by">
         <option value="name">Name</option>
@@ -388,7 +394,8 @@ function render(){
   const pickList = state.pick!==null ? DATA.picks[state.pick] : null;
   let hiddenPending = 0;
 
-  let list = DATA.games.filter(g=>{
+  const tsel = Object.keys(state.tags).filter(k=>state.tags[k]);
+  const basePass = (g, countPending) => {
     const okAvail = state.seg==="all" ? (g.playable || g.forSale)
       : state.seg==="play" ? (g.playable && !(g.status && !/^on/i.test(g.status)))
       : g.forSale;
@@ -398,20 +405,32 @@ function render(){
     if(state.query.trim() && !norm(g.name+" "+(g.playsLike||"")+" "+(g.catText||"")+(g.mode?" "+MODE_LABEL[g.mode]:"")).includes(norm(state.query))) return false;
     if(state.playStyle==="coop" && g.mode!=="coop") return false;
     if(state.playStyle==="comp" && g.mode==="coop") return false;
-    const tsel = Object.keys(state.tags).filter(k=>state.tags[k]);
-    if(tsel.length){
-      const has = k => (g.tags||[]).includes(k);
-      if(state.tagMode==="all" ? !tsel.every(has) : !tsel.some(has)) return false;
-    }
     if(narrowed){
-      if(!hasStats(g)){ hiddenPending++; return false; }
+      if(!hasStats(g)){ if(countPending) hiddenPending++; return false; }
       if(!(g.players[0]<=state.maxSeats && g.players[1]>=state.minSeats)) return false;
       if(timeNarrowed){ if(g.mins===null || g.mins<S_TIME[state.tLo] || (state.tHi<8 && g.mins>S_TIME[state.tHi])) return false; }
       if(ageNarrowed){ const a = ageMin(g); if(a===null || a<state.aLo || a>state.aHi) return false; }
       if(g.weight!=null && !state.wtOn[wtBucket(g.weight)]) return false;
     }
     return true;
+  };
+  const has = g => k => (g.tags||[]).includes(k);
+  const tagPass = g => !tsel.length || (state.tagMode==="all" ? tsel.every(has(g)) : tsel.some(has(g)));
+
+  let list = DATA.games.filter(g => basePass(g, true) && tagPass(g));
+
+  // live facet counts: each chip shows what it would yield given every OTHER active filter
+  const basePool = DATA.games.filter(g => basePass(g, false));
+  document.querySelectorAll("#genreRow [data-tag]").forEach(b => {
+    const t = b.dataset.tag;
+    const n = state.tagMode==="all"
+      ? basePool.filter(g => (tsel.includes(t) ? tsel : tsel.concat(t)).every(has(g))).length
+      : basePool.filter(g => (g.tags||[]).includes(t)).length;
+    b.querySelector("small").textContent = n;
+    const dead = n===0 && !state.tags[t];
+    b.disabled = dead; b.classList.toggle("dead", dead);
   });
+  $("resetBtn").hidden = !(activeFilters || state.query.trim() || state.pick!==null);
   // nulls always sink to the bottom regardless of direction
   const dir = state.sortDir;
   const cmpNum = (av,bv) => (av===null||av===undefined) && (bv===null||bv===undefined) ? 0 : (av===null||av===undefined) ? 1 : (bv===null||bv===undefined) ? -1 : dir*(av-bv);
@@ -459,7 +478,7 @@ function render(){
       '</div></article>';
   }).join("") : '<div class="empty">'+(state.seg==="buy" && !DATA.games.some(g=>g.forSale)
     ? "No take-home stock is listed online yet \u2014 ask at the counter about buying a copy. Staff: set for_sale and price in the sheet and Buy buttons appear here."
-    : "Nothing matches. Loosen a filter or two.")+'</div>';
+    : 'Nothing matches. <button class="morebtn" id="emptyReset">Reset all filters</button>')+'</div>';
 }
 
 // ————— Prefer synced data/games.json when the Action has run —————
@@ -486,6 +505,13 @@ const paints = [
   wireDual("minAge","maxAge","ageFill","aLo","aHi",4,18),
   wireDual("minPrice","maxPrice","priceFill","pLo","pHi",0,200),
 ];
+function resetAll(){
+  Object.assign(state, {pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:""});
+  $("search").value = "";
+  buildTagRow(); render();
+}
+$("resetBtn").addEventListener("click", resetAll);
+$("list").addEventListener("click", e => { if(e.target.id==="emptyReset") resetAll(); });
 if(matchMedia("(min-width:900px)").matches) $("filterWrap").open = true;
 document.querySelectorAll("[data-tagmode]").forEach(b=>b.addEventListener("click",()=>{state.tagMode=b.dataset.tagmode;render()}));
 document.querySelectorAll("[data-ps]").forEach(b=>b.addEventListener("click",()=>{state.playStyle=b.dataset.ps;render()}));
