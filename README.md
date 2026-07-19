@@ -38,11 +38,15 @@ Live site: https://jehanbaguley.github.io/meeple-mug-shelf-guide/
 | badge_note | one-liner shown on the card |
 | rec_list | list name, e.g. "Ollie's picks" (becomes a chip) |
 | rec_note | one-liner shown when that list is selected |
-| check | transcription flags — cells to verify against the shelf, ignored by the site |
+| check | transcription flags — cells to verify against the shelf; "estimate" in this column renders the price with a ~ |
+| blurb | optional one-line description shown on the card |
+| price_text | optional display price overriding the number, e.g. "$80–110" for dice pricing |
 
 ## Buy and Request buttons
 
-"Buy · $X" on for-sale stock, "Request a copy" on play-only games. With no
+"Buy · $X" on for-sale stock (the café's retail shelf — mark rows for_sale in the
+sheet), "Request a copy" on play-only games. Retail-only stock lives in the same
+sheet with playable set to no. With no
 backend, taps open one of:
 1. **Google Form (recommended):** make a form with Game and Type fields, grab
    a pre-filled link, swap the answers for `{game}` and `{type}`, paste it
