@@ -105,6 +105,11 @@
   body.sheet-open{overflow:hidden}
   body.sheet-open .side{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:60;max-height:82vh;overflow-y:auto;background:var(--bg);border-top:1px solid var(--line);border-radius:16px 16px 0 0;padding:16px 16px 0;box-shadow:0 -14px 44px rgba(0,0,0,.55)}
   body.sheet-open .sheetdone{display:block;position:sticky;bottom:0;margin:16px -16px 0;width:calc(100% + 32px);border:0;background:var(--amber);color:var(--ink);font-weight:800;font-size:14px;padding:16px;border-radius:0}
+  @media(max-width:899px){
+    .panelwrap{display:none}
+    body.sheet-open .panelwrap{display:block}
+    body.sheet-open .panelwrap > summary{display:none}
+  }
   @media(min-width:900px){ .sheetbtn,#scrim{display:none!important} }
   .genrow .wt{flex:0 0 auto;white-space:nowrap;padding-left:12px;padding-right:12px}
   .genrow .wt small{opacity:.65;font-weight:600;margin-left:4px}
@@ -121,7 +126,6 @@
     .cols{display:grid;grid-template-columns:320px minmax(0,1fr);gap:24px;align-items:start}
     .side{position:sticky;top:8px;max-height:calc(100vh - 16px);overflow-y:auto;padding-right:2px;scrollbar-width:none}
     .side::-webkit-scrollbar{display:none}
-    .panelwrap > summary{display:none}
     .list{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .gcard{margin:0}
   }
