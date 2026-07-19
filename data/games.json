@@ -1,5 +1,5 @@
 {
- "built": "2026-07-19T13:26:30.000Z",
+ "built": "2026-07-19T13:34:07.000Z",
  "games": [
   {
    "name": "20 Questions",
@@ -5409,8 +5409,8 @@
     2,
     7
    ],
-   "mins": 6,
-   "time": "6m",
+   "mins": 360,
+   "time": "360m",
    "age": null,
    "catText": null,
    "cat": null,
@@ -5451,8 +5451,8 @@
     2,
     4
    ],
-   "mins": 4,
-   "time": "4m",
+   "mins": 240,
+   "time": "240m",
    "age": null,
    "catText": null,
    "cat": null,
