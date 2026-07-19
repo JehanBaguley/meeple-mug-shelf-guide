@@ -1,0 +1,25 @@
+name: Sync catalogue data
+on:
+  schedule:
+    - cron: "0 17 * * *"   # 3am AEST nightly
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Build games.json from BGG + sheet overlay
+        env:
+          SHEET_CSV_URL: ${{ vars.SHEET_CSV_URL }}
+        run: node scripts/build-data.mjs
+      - name: Commit if changed
+        run: |
+          git config user.name "catalogue-bot"
+          git config user.email "actions@github.com"
+          git add data/games.json
+          git diff --cached --quiet || git commit -m "Nightly data sync"
+          git push
