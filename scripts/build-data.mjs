@@ -1,27 +1,30 @@
 // Nightly data build for the Meeple & Mug catalogue.
-// Fetches the café's BGG collection (with stats), optionally merges the Google Sheet
-// overlay (shop columns + picks), and writes data/games.json for the static site.
-// Node 20+, zero dependencies. Run: node scripts/build-data.mjs
+// Sources, in order of preference:
+//   1. The café's Google Sheet (the master list staff edit) via SHEET_CSV_URL
+//   2. The café's BGG collection (adds community ratings/weights) — optional,
+//      skipped gracefully until the café creates the account
+// Writes data/games.json when there is anything to write. Node 20+, zero deps.
 
 import { writeFileSync, mkdirSync } from "node:fs";
 
 const BGG_USER = "meepleandmug";
 const COLLECTION_URL = `https://boardgamegeek.com/xmlapi2/collection?username=${BGG_USER}&stats=1&own=1`;
-// Set as a repo variable/secret, or paste the published-CSV URL here:
 const SHEET_CSV_URL = process.env.SHEET_CSV_URL || "";
 
-// BGG queues collection requests: a 202 means "come back shortly". Retry politely.
+// BGG queues collection requests: 202 means "come back shortly". 401/403/404 means
+// the account doesn't exist or BGG is blocking — treat as "no BGG source", not a failure.
 async function fetchCollection() {
   for (let attempt = 1; attempt <= 8; attempt++) {
     const res = await fetch(COLLECTION_URL, { headers: { "User-Agent": "meeple-mug-catalogue/1.0" } });
     if (res.status === 200) return res.text();
     if (res.status === 202) { await new Promise(r => setTimeout(r, attempt * 5000)); continue; }
+    if ([401, 403, 404].includes(res.status)) { console.log(`BGG not available (${res.status}), skipping BGG stats this run`); return null; }
     throw new Error(`BGG responded ${res.status}`);
   }
-  throw new Error("BGG collection still queued after 8 attempts");
+  console.log("BGG collection still queued after 8 attempts, skipping this run");
+  return null;
 }
 
-// Minimal XML pulls: enough fields for the site, no parser dependency.
 function parseCollection(xml) {
   const items = [];
   for (const m of xml.matchAll(/<item[^>]*objectid="(\d+)"[\s\S]*?<\/item>/g)) {
@@ -37,6 +40,7 @@ function parseCollection(xml) {
       time: pick(/playingtime="(\d+)"/) ? `${pick(/playingtime="(\d+)"/)}m` : null,
       bgg: pick(/<average[^>]*value="([\d.]+)"/) ? Number(Number(pick(/<average[^>]*value="([\d.]+)"/)).toFixed(1)) : null,
       weight: pick(/<averageweight[^>]*value="([\d.]+)"/) ? Number(Number(pick(/<averageweight[^>]*value="([\d.]+)"/)).toFixed(1)) : null,
+      age: null, catText: null,
       playable: true, forSale: false, cat: null, mode: null, price: null, priceTxt: null, playsLike: null,
     });
   }
@@ -57,38 +61,70 @@ function parseCsv(text) {
 }
 
 const norm = (s) => s.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
+// "2-5" | "3+" | "2" → [min,max]
+function parsePlayersTxt(s) {
+  let m = s.match(/^(\d+)\s*-\s*(\d+)\+?$/); if (m) return [+m[1], +m[2]];
+  m = s.match(/^(\d+)\+$/); if (m) return [+m[1], 20];
+  m = s.match(/^(\d+)$/); if (m) return [+m[1], +m[1]];
+  return null;
+}
+// "30-45 mins" | "90 mins" | "Varies" → {time, mins}
+function parseTimeTxt(s) {
+  if (/varies/i.test(s)) return { time: "Varies", mins: null };
+  let m = s.match(/^(\d+)\s*-\s*(\d+)/); if (m) return { time: `${m[1]}–${m[2]}m`, mins: +m[2] };
+  m = s.match(/^(\d+)/); if (m) return { time: `${m[1]}m`, mins: +m[1] };
+  return { time: null, mins: null };
+}
+// mirrors the site's spine-colour mapping
+function catSlugFor(t) {
+  const c = (t || "").toLowerCase();
+  if (/co-?op|cooperative/.test(c)) return "coop";
+  if (/party|dexterity|drawing|humor|trivia/.test(c)) return "party";
+  if (/deduction|bluffing|hidden roles|political/.test(c)) return "deduct";
+  if (/family|children/.test(c)) return "family";
+  if (/strategy|economic|worker placement|area control|tactical|abstract|tile|city building|civilization|deck building|legacy|asymmetric/.test(c)) return "strategy";
+  return null;
+}
 
 async function main() {
-  const games = parseCollection(await fetchCollection());
+  const xml = await fetchCollection();
+  const games = xml ? parseCollection(xml) : [];
   console.log(`BGG collection: ${games.length} items`);
   let picks = [];
+  let sheetRows = 0;
 
   if (SHEET_CSV_URL) {
     const rows = parseCsv(await (await fetch(SHEET_CSV_URL)).text());
-    const head = rows.shift().map(h => norm(h).replace(/ /g, "_"));
+    const head = rows.shift().map(h => h.toLowerCase().trim().replace(/[^a-z0-9]+/g, "_"));
     const idx = (k) => head.indexOf(k);
     const byName = Object.fromEntries(games.map(g => [norm(g.name), g]));
     const lists = {};
     for (const r of rows) {
       const val = (k) => (idx(k) > -1 ? (r[idx(k)] || "").trim() : "");
       const name = val("name"); if (!name) continue;
+      sheetRows++;
       let g = byName[norm(name)];
-      if (!g) { g = { name, bggId: null, players: null, mins: null, time: null, bgg: null, weight: null, playable: false, forSale: false, cat: null, mode: null, price: null, priceTxt: null, playsLike: null }; games.push(g); byName[norm(name)] = g; }
+      if (!g) { g = { name, bggId: null, players: null, mins: null, time: null, age: null, catText: null, bgg: null, weight: null, playable: false, forSale: false, cat: null, mode: null, price: null, priceTxt: null, playsLike: null }; games.push(g); byName[norm(name)] = g; }
       if (val("playable")) g.playable = /^y/i.test(val("playable"));
       if (val("for_sale")) g.forSale = /^y/i.test(val("for_sale"));
       if (val("price")) { g.price = parseInt(val("price")) || null; g.priceTxt = "$" + val("price").replace(/^\$/, ""); }
       if (val("status")) g.status = val("status");
-      if (val("play_style")) g.mode = { "co-op": "coop", coop: "coop", teams: "team", team: "team", competitive: "comp", comp: "comp" }[norm(val("play_style"))] || null;
+      if (val("players")) g.players = parsePlayersTxt(val("players")) ?? g.players;
+      if (val("age")) g.age = val("age");
+      if (val("time")) { const t = parseTimeTxt(val("time")); if (t.time) { g.time = t.time; g.mins = t.mins; } }
+      if (val("category")) { g.catText = val("category"); g.cat = catSlugFor(g.catText); if (/co-?op|cooperative/i.test(g.catText)) g.mode = "coop"; if (/expansion|stretch goals/i.test(g.catText + " " + name)) g.exp = true; }
+      if (val("play_style")) g.mode = { "co-op": "coop", coop: "coop", teams: "team", team: "team", competitive: "comp", comp: "comp" }[norm(val("play_style"))] || g.mode;
       if (val("badge_by")) { g.pickBy = val("badge_by"); g.pickNote = val("badge_note"); }
       if (val("rec_list")) { (lists[val("rec_list")] ??= { list: val("rec_list"), note: "", games: {} }).games[g.name] = val("rec_note"); }
     }
     picks = Object.values(lists);
-    console.log(`Sheet overlay applied (${picks.length} pick lists)`);
+    console.log(`Sheet overlay applied: ${sheetRows} rows, ${picks.length} pick lists`);
   }
 
+  if (!games.length) { console.log("No data from either source, leaving games.json untouched"); return; }
   mkdirSync("data", { recursive: true });
   writeFileSync("data/games.json", JSON.stringify({ built: new Date().toISOString(), games, picks }, null, 1));
-  console.log("Wrote data/games.json");
+  console.log(`Wrote data/games.json (${games.length} games)`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

@@ -1,51 +1,50 @@
 # Meeple & Mug Catalogue
 
 Static catalogue for the café: every game in the building, filterable, with
-"Play here" vs "For sale", staff badges and member pick lists. Built for
-GitHub Pages, no build step, vanilla JS in a single `index.html`.
+play availability, for-sale stock, staff badges and member pick lists. Built
+for GitHub Pages, no build step, vanilla JS in a single `index.html`.
+
+Live site: https://jehanbaguley.github.io/meeple-mug-shelf-guide/
 
 ## How data flows
 
-1. **Play library** comes from the café's public BGG collection
-   (user `meepleandmug`). `.github/workflows/sync-data.yml` runs nightly,
-   fetches the collection with stats (handling BGG's 202 queue with retries),
-   and commits `data/games.json`. The site prefers that file when present.
-2. **Shop + human layer** comes from one Google Sheet the café edits.
-   Import `sheet-template.csv` into Google Sheets, then File → Share →
-   Publish to web → that tab as CSV. Put the published CSV URL in two places:
-   - repo Settings → Variables → `SHEET_CSV_URL` (for the nightly merge)
-   - `SHEET_CSV_URL` constant at the top of `index.html` (for near-live
-     status updates when the page loads)
-3. Until either source is connected, the site runs on embedded demo data:
-   51 shelf games with full stats and prices, 257 library titles with stats
-   pending, plus sample pick lists.
+1. **The master list is the café's Google Sheet** (the `data` tab). The full
+   play library — transcribed from the printed shelf list — lives there, one
+   row per game. Staff edit the sheet; the site fetches it as CSV on every
+   page load, so status/price/pick changes appear near-live. The same data is
+   embedded in `index.html` as a fallback for when the fetch fails.
+2. **BGG ratings are optional gravy.** `.github/workflows/sync-data.yml` runs
+   nightly; once the café creates a BoardGameGeek account (set `BGG_USER` in
+   `scripts/build-data.mjs`) it merges community ratings and complexity
+   weights into `data/games.json`. Until then it skips quietly.
+3. The published CSV URL is set in two places: the `SHEET_CSV_URL` constant in
+   `index.html`, and the repo Actions variable `SHEET_CSV_URL`.
 
-## Sheet columns (one row per game; repeat a game to add it to more lists)
+## Sheet columns (one row per game; repeat a game's name on extra rows to add it to more pick lists)
 
 | column | values |
 |---|---|
-| name | must match the BGG title |
-| playable | yes / no |
+| name | game title (must match between rows) |
+| playable | yes / no — can punters play it in the café |
+| status | On shelf / Out / Borrowed — anything not starting with "On" drops it from Play here |
 | for_sale | yes / no |
-| price | whole dollars |
-| status | On shelf / Out / Borrowed |
+| price | whole dollars, shows as the Buy button |
+| players | "2-5", "3+", "2" |
+| age | "10+" |
+| time | "30-45 mins", "90 mins", "Varies" |
+| category | e.g. "Strategy, Economic" — drives the genre filter chips and card colour |
 | play_style | co-op / teams / competitive |
-| badge_by | staff name, renders as "Name's pick" |
+| badge_by | staff name, renders as "Name's pick" on the card |
 | badge_note | one-liner shown on the card |
 | rec_list | list name, e.g. "Ollie's picks" (becomes a chip) |
 | rec_note | one-liner shown when that list is selected |
-
-## Deploy
-
-Push to a public repo, enable GitHub Pages (main branch, root), run the
-"Sync catalogue data" action once from the Actions tab to populate stats.
+| check | transcription flags — cells to verify against the shelf, ignored by the site |
 
 ## Buy and Request buttons
 
-Cards carry real actions: "Buy · $X" on shelf stock, "Request a copy" on
-play-only games. With no backend, taps open one of:
-1. **Google Form (recommended):** make a form with Game and Type fields,
-   grab a pre-filled link, swap the answers for `{game}` and `{type}`, and
-   paste it into `REQUEST_URL_TEMPLATE` in index.html. Responses land in a
-   Sheet, so purchase requests join the data the café already manages.
+"Buy · $X" on for-sale stock, "Request a copy" on play-only games. With no
+backend, taps open one of:
+1. **Google Form (recommended):** make a form with Game and Type fields, grab
+   a pre-filled link, swap the answers for `{game}` and `{type}`, paste it
+   into `REQUEST_URL_TEMPLATE` in index.html. Responses land in a Sheet.
 2. **Email fallback:** set `CAFE_EMAIL` and taps open a pre-filled email.
