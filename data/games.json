@@ -1,8 +1,9 @@
 {
- "built": "2026-07-19T13:58:16.000Z",
+ "built": "2026-07-19T17:47:59.230Z",
  "games": [
   {
    "name": "20 Questions",
+   "bggId": 3377,
    "players": [
     2,
     20
@@ -11,19 +12,19 @@
    "time": "30m",
    "age": "8+",
    "catText": "Party, Family",
-   "cat": "party",
-   "mode": null,
    "bgg": 5.8,
    "weight": null,
-   "bggId": 3377,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "3 Ring Circus",
+   "bggId": 371947,
    "players": [
     2,
     4
@@ -32,19 +33,19 @@
    "time": "60–90m",
    "age": "10+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.2,
    "weight": null,
-   "bggId": 371947,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "5 Minute Marvel",
+   "bggId": 253618,
    "players": [
     2,
     5
@@ -53,19 +54,19 @@
    "time": "5m",
    "age": "8+",
    "catText": "Cooperative, Action",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 6.7,
    "weight": null,
-   "bggId": 253618,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "5 Second Rule",
+   "bggId": 86073,
    "players": [
     3,
     20
@@ -74,19 +75,19 @@
    "time": "20m",
    "age": "10+",
    "catText": "Party, Family",
-   "cat": "party",
-   "mode": null,
    "bgg": 5.5,
    "weight": null,
-   "bggId": 86073,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "7 Wonders",
+   "bggId": 68448,
    "players": [
     2,
     7
@@ -95,19 +96,19 @@
    "time": "30m",
    "age": "10+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.7,
    "weight": 2.3,
-   "bggId": 68448,
-   "playsLike": "Sushi Go grown up — the benchmark drafting game",
+   "playable": true,
+   "forSale": true,
+   "cat": "strategy",
+   "mode": null,
    "price": 80,
    "priceTxt": "~$80",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Sushi Go grown up — the benchmark drafting game"
   },
   {
    "name": "7 Wonders Duel",
+   "bggId": 173346,
    "players": [
     2,
     2
@@ -116,19 +117,19 @@
    "time": "30m",
    "age": "10+",
    "catText": "Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 8.1,
    "weight": null,
-   "bggId": 173346,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "A Game of Thrones 2nd Edition",
+   "bggId": 103343,
    "players": [
     3,
     6
@@ -137,19 +138,19 @@
    "time": "180m",
    "age": "14+",
    "catText": "Strategy, Thematic",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.5,
    "weight": null,
-   "bggId": 103343,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "A Little Wordy",
+   "bggId": 335869,
    "players": [
     2,
     2
@@ -158,19 +159,19 @@
    "time": "15–20m",
    "age": "10+",
    "catText": "Word, Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.7,
    "weight": null,
-   "bggId": 335869,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Adventure Time: Card Wars",
+   "bggId": 144728,
    "players": [
     2,
     2
@@ -179,19 +180,19 @@
    "time": "30m",
    "age": "10+",
    "catText": "Strategy, Card Game",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.1,
    "weight": null,
-   "bggId": 144728,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Agricola",
+   "bggId": 31260,
    "players": [
     1,
     5
@@ -200,19 +201,19 @@
    "time": "30–150m",
    "age": "12+",
    "catText": "Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.9,
    "weight": null,
-   "bggId": 31260,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Alchemists",
+   "bggId": 161970,
    "players": [
     2,
     4
@@ -221,19 +222,19 @@
    "time": "120m",
    "age": "13+",
    "catText": "Strategy, Deduction",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.6,
    "weight": 3.9,
-   "bggId": 161970,
-   "playsLike": "Sherlock Holmes deduction inside Lords of Waterdeep worker placement",
+   "playable": true,
+   "forSale": true,
+   "cat": "strategy",
+   "mode": null,
    "price": 90,
    "priceTxt": "~$90",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Sherlock Holmes deduction inside Lords of Waterdeep worker placement"
   },
   {
    "name": "Anomia",
+   "bggId": 67877,
    "players": [
     3,
     6
@@ -242,19 +243,19 @@
    "time": "30m",
    "age": "10+",
    "catText": "Party, Word",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.7,
    "weight": null,
-   "bggId": 67877,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Arboretum",
+   "bggId": 140934,
    "players": [
     2,
     4
@@ -263,19 +264,19 @@
    "time": "30m",
    "age": "8+",
    "catText": "Strategy, Card Game",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.2,
    "weight": null,
-   "bggId": 140934,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Art Decko",
+   "bggId": 260316,
    "players": [
     2,
     4
@@ -284,19 +285,19 @@
    "time": "45–60m",
    "age": "10+",
    "catText": "Deck Building, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.8,
    "weight": null,
-   "bggId": 260316,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "AssassinCon",
+   "bggId": 154778,
    "players": [
     4,
     6
@@ -305,19 +306,19 @@
    "time": "60m",
    "age": "12+",
    "catText": "Deduction, Party",
-   "cat": "deduct",
-   "mode": null,
    "bgg": 5.7,
    "weight": null,
-   "bggId": 154778,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Asteroyds",
+   "bggId": 65200,
    "players": [
     2,
     6
@@ -326,19 +327,19 @@
    "time": "30–45m",
    "age": "10+",
    "catText": "Racing, Tactical",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.3,
    "weight": null,
-   "bggId": 65200,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "AutoCorrect",
+   "bggId": null,
    "players": [
     3,
     8
@@ -347,19 +348,19 @@
    "time": "20m",
    "age": "12+",
    "catText": "Party",
-   "cat": "party",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Avalon",
+   "bggId": 128882,
    "players": [
     5,
     10
@@ -368,19 +369,19 @@
    "time": "30m",
    "age": "13+",
    "catText": "Party, Social Deduction",
-   "cat": "party",
-   "mode": null,
    "bgg": 7.5,
    "weight": null,
-   "bggId": 128882,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Awkward Guests - The Mr Walton Case",
+   "bggId": 188866,
    "players": [
     2,
     8
@@ -389,19 +390,19 @@
    "time": "45–75m",
    "age": "12+",
    "catText": "Deduction",
-   "cat": "deduct",
-   "mode": null,
    "bgg": 7.5,
    "weight": null,
-   "bggId": 188866,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Balderdash",
+   "bggId": 163,
    "players": [
     2,
     6
@@ -410,19 +411,19 @@
    "time": "60m",
    "age": "12+",
    "catText": "Party, Word",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.5,
    "weight": null,
-   "bggId": 163,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "BANG! Old Saloon expansion",
+   "bggId": null,
    "players": [
     4,
     7
@@ -431,20 +432,20 @@
    "time": "20–40m",
    "age": "8+",
    "catText": "Party, Social Deduction",
-   "cat": "party",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true,
+   "playsLike": null,
    "exp": true
   },
   {
    "name": "BANG! The Dice Game",
+   "bggId": 143741,
    "players": [
     3,
     8
@@ -453,19 +454,19 @@
    "time": "15–30m",
    "age": "8+",
    "catText": "Party, Dice Game",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.9,
    "weight": null,
-   "bggId": 143741,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "BANG! The Card Game",
+   "bggId": 3955,
    "players": [
     4,
     7
@@ -474,19 +475,19 @@
    "time": "20–40m",
    "age": "8+",
    "catText": "Party, Card Game",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.5,
    "weight": null,
-   "bggId": 3955,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Barcelona",
+   "bggId": 383607,
    "players": [
     2,
     4
@@ -495,19 +496,19 @@
    "time": "60–120m",
    "age": "12+",
    "catText": "Strategy, Economic",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.7,
    "weight": null,
-   "bggId": 383607,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Betrayal at House on the Hill",
+   "bggId": 10547,
    "players": [
     3,
     6
@@ -516,19 +517,19 @@
    "time": "60m",
    "age": "12+",
    "catText": "Horror, Cooperative",
-   "cat": "coop",
-   "mode": "coop",
-   "bgg": 7.0,
+   "bgg": 7,
    "weight": 2.3,
-   "bggId": 10547,
-   "playsLike": "Dead of Winter's haunted-house little sibling",
+   "playable": true,
+   "forSale": true,
+   "cat": "dark",
+   "mode": "coop",
    "price": 80,
    "priceTxt": "~$80",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Dead of Winter's haunted-house little sibling"
   },
   {
    "name": "Beyond the Sun",
+   "bggId": 317985,
    "players": [
     2,
     4
@@ -537,19 +538,19 @@
    "time": "90–120m",
    "age": "14+",
    "catText": "Strategy, Sci-Fi",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.9,
    "weight": null,
-   "bggId": 317985,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Bigger is Better",
+   "bggId": null,
    "players": [
     3,
     8
@@ -558,19 +559,19 @@
    "time": "30m",
    "age": "12+",
    "catText": "Party, Humor",
-   "cat": "party",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Bitoku",
+   "bggId": 323612,
    "players": [
     1,
     4
@@ -579,19 +580,19 @@
    "time": "120m",
    "age": "14+",
    "catText": "Strategy, Fantasy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.8,
    "weight": null,
-   "bggId": 323612,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Black Mirror Nose Dive",
+   "bggId": 265316,
    "players": [
     3,
     6
@@ -600,19 +601,19 @@
    "time": "45–60m",
    "age": "13+",
    "catText": "Social Strategy",
-   "cat": "strategy",
-   "mode": null,
-   "bgg": 4.0,
+   "bgg": 4,
    "weight": null,
-   "bggId": 265316,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Block Party",
+   "bggId": 379300,
    "players": [
     2,
     8
@@ -621,19 +622,19 @@
    "time": "20–30m",
    "age": "8+",
    "catText": "Party, Dexterity",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.6,
    "weight": null,
-   "bggId": 379300,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Blokus",
+   "bggId": 2453,
    "players": [
     2,
     4
@@ -642,19 +643,19 @@
    "time": "20–30m",
    "age": "7+",
    "catText": "Abstract Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.9,
    "weight": null,
-   "bggId": 2453,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "abstract",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Brass Birmingham",
+   "bggId": 224517,
    "players": [
     2,
     4
@@ -663,19 +664,19 @@
    "time": "60–120m",
    "age": "14+",
    "catText": "Economic, Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 8.6,
    "weight": null,
-   "bggId": 224517,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Brew Crafters",
+   "bggId": 139898,
    "players": [
     2,
     5
@@ -684,19 +685,19 @@
    "time": "90–120m",
    "age": "13+",
    "catText": "Worker Placement, Economic",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.3,
    "weight": null,
-   "bggId": 139898,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Cape May",
+   "bggId": 281248,
    "players": [
     1,
     4
@@ -705,19 +706,19 @@
    "time": "90–120m",
    "age": "13+",
    "catText": "Strategy, Economic",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.2,
    "weight": null,
-   "bggId": 281248,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Caravan",
+   "bggId": 269789,
    "players": [
     2,
     4
@@ -726,19 +727,19 @@
    "time": "45–60m",
    "age": "10+",
    "catText": "Strategy, Economic",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.6,
    "weight": null,
-   "bggId": 269789,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Cards Against Humanity",
+   "bggId": 50381,
    "players": [
     4,
     20
@@ -747,19 +748,19 @@
    "time": "30–90m",
    "age": "17+",
    "catText": "Party, Adult",
-   "cat": "party",
-   "mode": null,
    "bgg": 5.7,
    "weight": null,
-   "bggId": 50381,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Carnegie",
+   "bggId": 310873,
    "players": [
     1,
     4
@@ -768,19 +769,19 @@
    "time": "90–120m",
    "age": "12+",
    "catText": "Strategy, Economic",
+   "bgg": 8,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "strategy",
    "mode": null,
-   "bgg": 8.0,
-   "weight": null,
-   "bggId": 310873,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Cascadero",
+   "bggId": 401216,
    "players": [
     2,
     4
@@ -789,19 +790,19 @@
    "time": "45m",
    "age": "8+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.3,
    "weight": null,
-   "bggId": 401216,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Cascadito",
+   "bggId": 401217,
    "players": [
     2,
     4
@@ -810,19 +811,19 @@
    "time": "30m",
    "age": "6+",
    "catText": "Family, Strategy",
-   "cat": "family",
-   "mode": null,
    "bgg": 6.5,
    "weight": null,
-   "bggId": 401217,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Casting Shadows",
+   "bggId": 359502,
    "players": [
     2,
     4
@@ -831,19 +832,19 @@
    "time": "45–60m",
    "age": "12+",
    "catText": "Strategy, Fantasy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.3,
    "weight": null,
-   "bggId": 359502,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Cat Crimes",
+   "bggId": null,
    "players": [
     1,
     20
@@ -852,19 +853,19 @@
    "time": "20m",
    "age": "8+",
    "catText": "Puzzle, Deduction",
-   "cat": "deduct",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "abstract",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Catan The Settlers",
+   "bggId": 13,
    "players": [
     3,
     4
@@ -873,19 +874,19 @@
    "time": "60–120m",
    "age": "10+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.1,
    "weight": null,
-   "bggId": 13,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "CDMC 3000",
+   "bggId": null,
    "players": [
     2,
     3
@@ -894,19 +895,19 @@
    "time": "10–20m",
    "age": "8+",
    "catText": "Party, Dexterity",
-   "cat": "party",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Chameleon Game",
+   "bggId": 227072,
    "players": [
     3,
     8
@@ -915,19 +916,19 @@
    "time": "15m",
    "age": "14+",
    "catText": "Party, Deduction",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.5,
    "weight": null,
-   "bggId": 227072,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Champions of Midgard",
+   "bggId": 172287,
    "players": [
     2,
     4
@@ -936,19 +937,19 @@
    "time": "60–90m",
    "age": "10+",
    "catText": "Strategy, Worker Placement",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.7,
    "weight": null,
-   "bggId": 172287,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Chucky (Child's Play)",
+   "bggId": 405696,
    "players": [
     2,
     5
@@ -957,19 +958,19 @@
    "time": "45–60m",
    "age": "17+",
    "catText": "Thematic, Horror",
-   "cat": null,
-   "mode": null,
-   "bgg": 7.0,
+   "bgg": 7,
    "weight": null,
-   "bggId": 405696,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "adventure",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Clank",
+   "bggId": 201808,
    "players": [
     2,
     4
@@ -978,19 +979,19 @@
    "time": "30–60m",
    "age": "13+",
    "catText": "Deck Building, Adventure",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.8,
    "weight": null,
-   "bggId": 201808,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Clickbait",
+   "bggId": 254417,
    "players": [
     3,
     8
@@ -999,19 +1000,19 @@
    "time": "30–45m",
    "age": "14+",
    "catText": "Party, Word",
-   "cat": "party",
-   "mode": null,
    "bgg": 5.3,
    "weight": null,
-   "bggId": 254417,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Clue card game",
+   "bggId": 88922,
    "players": [
     3,
     4
@@ -1020,19 +1021,19 @@
    "time": "15–30m",
    "age": "8+",
    "catText": "Deduction, Family",
-   "cat": "deduct",
-   "mode": null,
    "bgg": 5.9,
    "weight": null,
-   "bggId": 88922,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Cluedo Game of Thrones",
+   "bggId": 198328,
    "players": [
     2,
     6
@@ -1041,19 +1042,19 @@
    "time": "60m",
    "age": "18+",
    "catText": "Deduction, Thematic",
+   "bgg": 6,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "deduct",
    "mode": null,
-   "bgg": 6.0,
-   "weight": null,
-   "bggId": 198328,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Codenames",
+   "bggId": 178900,
    "players": [
     2,
     8
@@ -1062,19 +1063,19 @@
    "time": "15m",
    "age": "14+",
    "catText": "Party, Word Game",
-   "cat": "party",
-   "mode": null,
    "bgg": 7.5,
    "weight": 1.3,
-   "bggId": 178900,
-   "playsLike": "the party-deduction benchmark — Just One is its co-op cousin",
+   "playable": true,
+   "forSale": true,
+   "cat": "party",
+   "mode": null,
    "price": 35,
    "priceTxt": "~$35",
-   "forSale": true,
-   "playable": true
+   "playsLike": "the party-deduction benchmark — Just One is its co-op cousin"
   },
   {
    "name": "Codenames Pictures",
+   "bggId": 198773,
    "players": [
     2,
     8
@@ -1083,19 +1084,19 @@
    "time": "15m",
    "age": "10+",
    "catText": "Party, Deduction",
-   "cat": "party",
-   "mode": null,
    "bgg": 7.2,
    "weight": null,
-   "bggId": 198773,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Coffee Traders",
+   "bggId": 325022,
    "players": [
     2,
     5
@@ -1104,19 +1105,19 @@
    "time": "120–180m",
    "age": "14+",
    "catText": "Economic, Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.7,
    "weight": null,
-   "bggId": 325022,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Concept Kids",
+   "bggId": 247314,
    "players": [
     2,
     12
@@ -1125,19 +1126,19 @@
    "time": "20m",
    "age": "4+",
    "catText": "Cooperative, Family",
+   "bgg": 7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "coop",
    "mode": "coop",
-   "bgg": 7.0,
-   "weight": null,
-   "bggId": 247314,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Concordia",
+   "bggId": 124361,
    "players": [
     2,
     5
@@ -1146,19 +1147,19 @@
    "time": "90–120m",
    "age": "12+",
    "catText": "Strategy, Economic",
+   "bgg": 8.1,
+   "weight": 3,
+   "playable": true,
+   "forSale": true,
    "cat": "strategy",
    "mode": null,
-   "bgg": 8.1,
-   "weight": 3.0,
-   "bggId": 124361,
-   "playsLike": "a gentler Brass Birmingham — trade routes without the crunch",
    "price": 95,
    "priceTxt": "~$95",
-   "forSale": true,
-   "playable": true
+   "playsLike": "a gentler Brass Birmingham — trade routes without the crunch"
   },
   {
    "name": "Cosmic Encounter 42nd Anniversary Edition",
+   "bggId": 39463,
    "players": [
     3,
     5
@@ -1167,19 +1168,19 @@
    "time": "60–120m",
    "age": "12+",
    "catText": "Strategy, Sci-Fi",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.5,
    "weight": null,
-   "bggId": 39463,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Coup",
+   "bggId": 131357,
    "players": [
     2,
     6
@@ -1188,19 +1189,19 @@
    "time": "15m",
    "age": "10+",
    "catText": "Card Game, Bluffing",
-   "cat": "deduct",
-   "mode": null,
-   "bgg": 7.0,
+   "bgg": 7,
    "weight": null,
-   "bggId": 131357,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Coup Rebellion",
+   "bggId": 148943,
    "players": [
     2,
     6
@@ -1209,19 +1210,19 @@
    "time": "15–30m",
    "age": "10+",
    "catText": "Card Game, Bluffing",
-   "cat": "deduct",
-   "mode": null,
-   "bgg": 7.0,
+   "bgg": 7,
    "weight": null,
-   "bggId": 148943,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Coup Reformation",
+   "bggId": null,
    "players": [
     2,
     10
@@ -1230,19 +1231,19 @@
    "time": "15m",
    "age": "10+",
    "catText": "Party, Social Deduction",
-   "cat": "party",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Cubitos",
+   "bggId": 298069,
    "players": [
     2,
     4
@@ -1251,19 +1252,19 @@
    "time": "30m",
    "age": "8+",
    "catText": "Family, Dice Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 7.4,
    "weight": null,
-   "bggId": 298069,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Dead of Winter",
+   "bggId": 150376,
    "players": [
     2,
     5
@@ -1272,19 +1273,19 @@
    "time": "60–120m",
    "age": "14+",
    "catText": "Cooperative, Thematic",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 7.4,
    "weight": null,
-   "bggId": 150376,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Deal with the Devil",
+   "bggId": 367379,
    "players": [
     3,
     6
@@ -1293,19 +1294,19 @@
    "time": "60–90m",
    "age": "14+",
    "catText": "Strategy, Hidden Roles",
+   "bgg": 7,
+   "weight": 3.6,
+   "playable": true,
+   "forSale": true,
    "cat": "strategy",
    "mode": null,
-   "bgg": 7.0,
-   "weight": 3.6,
-   "bggId": 367379,
-   "playsLike": "Sheriff of Nottingham bluffing fused with a heavy euro",
    "price": 100,
    "priceTxt": "~$100",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Sheriff of Nottingham bluffing fused with a heavy euro"
   },
   {
    "name": "Dinosaur Island",
+   "bggId": 221194,
    "players": [
     1,
     4
@@ -1314,19 +1315,19 @@
    "time": "90–120m",
    "age": "10+",
    "catText": "Strategy, Economic",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.5,
    "weight": null,
-   "bggId": 221194,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Dixit",
+   "bggId": 39856,
    "players": [
     3,
     6
@@ -1335,19 +1336,19 @@
    "time": "30m",
    "age": "8+",
    "catText": "Party, Storytelling",
-   "cat": "party",
-   "mode": null,
    "bgg": 7.2,
    "weight": 1.2,
-   "bggId": 39856,
-   "playsLike": "Mysterium's picture-poetry sibling",
+   "playable": true,
+   "forSale": true,
+   "cat": "party",
+   "mode": null,
    "price": 55,
    "priceTxt": "~$55",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Mysterium's picture-poetry sibling"
   },
   {
    "name": "Dominion",
+   "bggId": 36218,
    "players": [
     2,
     4
@@ -1356,19 +1357,19 @@
    "time": "30m",
    "age": "14+",
    "catText": "Deck Building, Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.6,
    "weight": null,
-   "bggId": 36218,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Dominion Intrigue",
+   "bggId": 40834,
    "players": [
     2,
     4
@@ -1377,19 +1378,19 @@
    "time": "30m",
    "age": "14+",
    "catText": "Deck Building, Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.7,
    "weight": null,
-   "bggId": 40834,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Dorfromantik - The Duel",
+   "bggId": 395364,
    "players": [
     2,
     2
@@ -1398,19 +1399,19 @@
    "time": "30m",
    "age": "8+",
    "catText": "Tile Placement, Strategy",
-   "cat": "strategy",
-   "mode": null,
-   "bgg": 7.0,
+   "bgg": 7,
    "weight": null,
-   "bggId": 395364,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "abstract",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Dos",
+   "bggId": 246701,
    "players": [
     2,
     4
@@ -1419,19 +1420,19 @@
    "time": "30m",
    "age": "7+",
    "catText": "Family, Card Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 4.8,
    "weight": null,
-   "bggId": 246701,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Dreadful Circus",
+   "bggId": 329714,
    "players": [
     2,
     8
@@ -1440,19 +1441,19 @@
    "time": "60m",
    "age": "12+",
    "catText": "Bidding, Set Collection",
-   "cat": null,
-   "mode": null,
    "bgg": 6.5,
    "weight": null,
-   "bggId": 329714,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Durian Dash",
+   "bggId": 340396,
    "players": [
     2,
     4
@@ -1461,19 +1462,19 @@
    "time": "20–30m",
    "age": "8+",
    "catText": "Family, Strategy",
+   "bgg": 6,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "family",
    "mode": null,
-   "bgg": 6.0,
-   "weight": null,
-   "bggId": 340396,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "El Grande",
+   "bggId": 93,
    "players": [
     2,
     5
@@ -1482,19 +1483,19 @@
    "time": "90m",
    "age": "12+",
    "catText": "Strategy, Area Control",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.8,
    "weight": null,
-   "bggId": 93,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Eldritch Horror Mountains of Madness",
+   "bggId": null,
    "players": [
     1,
     8
@@ -1503,20 +1504,20 @@
    "time": "120–240m",
    "age": "14+",
    "catText": "Cooperative, Expansion",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 8.2,
    "weight": 3.25,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true,
+   "playsLike": null,
    "exp": true
   },
   {
    "name": "Epic Card Game",
+   "bggId": 175621,
    "players": [
     2,
     4
@@ -1525,19 +1526,19 @@
    "time": "20m",
    "age": "13+",
    "catText": "Card Game, Fantasy",
-   "cat": null,
-   "mode": null,
    "bgg": 6.4,
    "weight": null,
-   "bggId": 175621,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Festo",
+   "bggId": 253679,
    "players": [
     2,
     4
@@ -1546,19 +1547,19 @@
    "time": "45–60m",
    "age": "10+",
    "catText": "Family, Strategy",
-   "cat": "family",
-   "mode": null,
    "bgg": 6.7,
    "weight": null,
-   "bggId": 253679,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Fight the Blight",
+   "bggId": null,
    "players": [
     1,
     4
@@ -1567,19 +1568,19 @@
    "time": "60–120m",
    "age": "12+",
    "catText": "Cooperative, Strategy",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Fire & Stone",
+   "bggId": 342927,
    "players": [
     2,
     4
@@ -1588,19 +1589,19 @@
    "time": "45–60m",
    "age": "10+",
    "catText": "Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.1,
    "weight": null,
-   "bggId": 342927,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Fire Tower",
+   "bggId": 226605,
    "players": [
     2,
     4
@@ -1609,19 +1610,19 @@
    "time": "15–30m",
    "age": "12+",
    "catText": "Strategy, Tactical",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.1,
    "weight": null,
-   "bggId": 226605,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Flip City",
+   "bggId": 168679,
    "players": [
     1,
     4
@@ -1630,19 +1631,19 @@
    "time": "30m",
    "age": "8+",
    "catText": "Deck Building, Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.3,
    "weight": null,
-   "bggId": 168679,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Forbidden Desert",
+   "bggId": 136063,
    "players": [
     2,
     5
@@ -1651,19 +1652,19 @@
    "time": "45m",
    "age": "10+",
    "catText": "Cooperative, Adventure",
+   "bgg": 7.1,
+   "weight": 2,
+   "playable": true,
+   "forSale": true,
    "cat": "coop",
    "mode": "coop",
-   "bgg": 7.1,
-   "weight": 2.0,
-   "bggId": 136063,
-   "playsLike": "Forbidden Island, one step up",
    "price": 48,
    "priceTxt": "~$48",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Forbidden Island, one step up"
   },
   {
    "name": "Forbidden Island",
+   "bggId": 65244,
    "players": [
     2,
     4
@@ -1672,19 +1673,19 @@
    "time": "30m",
    "age": "10+",
    "catText": "Cooperative, Family",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 6.8,
    "weight": 1.7,
-   "bggId": 65244,
-   "playsLike": "Pandemic, junior edition",
+   "playable": true,
+   "forSale": true,
+   "cat": "coop",
+   "mode": "coop",
    "price": 40,
    "priceTxt": "~$40",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Pandemic, junior edition"
   },
   {
    "name": "Forbidden Jungle",
+   "bggId": 380226,
    "players": [
     2,
     4
@@ -1693,19 +1694,19 @@
    "time": "45m",
    "age": "10+",
    "catText": "Cooperative, Adventure",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 7.3,
    "weight": 2.1,
-   "bggId": 380226,
-   "playsLike": "Forbidden Desert, another step up",
+   "playable": true,
+   "forSale": true,
+   "cat": "coop",
+   "mode": "coop",
    "price": 52,
    "priceTxt": "~$52",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Forbidden Desert, another step up"
   },
   {
    "name": "Forgotten Waters",
+   "bggId": 302723,
    "players": [
     3,
     7
@@ -1714,19 +1715,19 @@
    "time": "120–240m",
    "age": "14+",
    "catText": "Cooperative, Thematic",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 7.7,
    "weight": null,
-   "bggId": 302723,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Founders of Gloomhaven",
+   "bggId": 214032,
    "players": [
     1,
     4
@@ -1735,19 +1736,19 @@
    "time": "90–150m",
    "age": "12+",
    "catText": "City Building, Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.6,
    "weight": null,
-   "bggId": 214032,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Four Gardens",
+   "bggId": 296043,
    "players": [
     2,
     4
@@ -1756,19 +1757,19 @@
    "time": "45m",
    "age": "10+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.9,
    "weight": null,
-   "bggId": 296043,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Fugitive",
+   "bggId": 197443,
    "players": [
     2,
     2
@@ -1777,19 +1778,19 @@
    "time": "10–20m",
    "age": "10+",
    "catText": "Strategy, Deduction",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.1,
    "weight": null,
-   "bggId": 197443,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Fuji",
+   "bggId": 258308,
    "players": [
     2,
     4
@@ -1798,19 +1799,19 @@
    "time": "30–60m",
    "age": "10+",
    "catText": "Cooperative",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 6.6,
    "weight": null,
-   "bggId": 258308,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Gaia Project - A Terra Mystica Game",
+   "bggId": 220308,
    "players": [
     1,
     4
@@ -1819,19 +1820,19 @@
    "time": "60–150m",
    "age": "14+",
    "catText": "Strategy, Sci-Fi",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 8.3,
    "weight": null,
-   "bggId": 220308,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Galaxy Trucker",
+   "bggId": 31481,
    "players": [
     2,
     4
@@ -1840,19 +1841,19 @@
    "time": "60m",
    "age": "10+",
    "catText": "Strategy, Real-Time",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.3,
    "weight": null,
-   "bggId": 31481,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Game of Life: Twists and Turns",
+   "bggId": 28609,
    "players": [
     2,
     4
@@ -1861,19 +1862,19 @@
    "time": "60m",
    "age": "8+",
    "catText": "Family, Strategy",
-   "cat": "family",
-   "mode": null,
    "bgg": 5.8,
    "weight": null,
-   "bggId": 28609,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Gloomhaven Jaws of the Lion",
+   "bggId": 291457,
    "players": [
     1,
     4
@@ -1882,19 +1883,19 @@
    "time": "30–120m",
    "age": "14+",
    "catText": "Strategy, Cooperative",
-   "cat": "strategy",
-   "mode": "coop",
    "bgg": 8.4,
    "weight": null,
-   "bggId": 291457,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Great Western Trail",
+   "bggId": 193738,
    "players": [
     2,
     4
@@ -1903,19 +1904,19 @@
    "time": "75–150m",
    "age": "12+",
    "catText": "Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 8.2,
    "weight": null,
-   "bggId": 193738,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Greed",
+   "bggId": 151247,
    "players": [
     2,
     5
@@ -1924,19 +1925,19 @@
    "time": "45m",
    "age": "10+",
    "catText": "Strategy, Card Game",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.6,
    "weight": null,
-   "bggId": 151247,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Hadara",
+   "bggId": 269144,
    "players": [
     2,
     5
@@ -1945,19 +1946,19 @@
    "time": "60m",
    "age": "10+",
    "catText": "Strategy, Civilization",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.4,
    "weight": null,
-   "bggId": 269144,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Hanabi",
+   "bggId": 98778,
    "players": [
     2,
     5
@@ -1966,19 +1967,19 @@
    "time": "25m",
    "age": "8+",
    "catText": "Cooperative, Card Game",
+   "bgg": 7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "coop",
    "mode": "coop",
-   "bgg": 7.0,
-   "weight": null,
-   "bggId": 98778,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Hawker Wars",
+   "bggId": 365749,
    "players": [
     2,
     5
@@ -1987,19 +1988,19 @@
    "time": "30–45m",
    "age": "10+",
    "catText": "Strategy, Economic",
+   "bgg": 6,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "strategy",
    "mode": null,
-   "bgg": 6.0,
-   "weight": null,
-   "bggId": 365749,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Hues and Cues",
+   "bggId": 302520,
    "players": [
     3,
     10
@@ -2008,19 +2009,19 @@
    "time": "30m",
    "age": "8+",
    "catText": "Party, Family",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.4,
    "weight": 1.1,
-   "bggId": 302520,
-   "playsLike": "Wavelength with colours",
+   "playable": true,
+   "forSale": true,
+   "cat": "party",
+   "mode": null,
    "price": 50,
    "priceTxt": "~$50",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Wavelength with colours"
   },
   {
    "name": "Imperial Settlers",
+   "bggId": 154203,
    "players": [
     1,
     4
@@ -2029,19 +2030,19 @@
    "time": "45–90m",
    "age": "10+",
    "catText": "Strategy, Card Game",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.3,
    "weight": null,
-   "bggId": 154203,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Istanbul",
+   "bggId": 148949,
    "players": [
     2,
     5
@@ -2050,19 +2051,19 @@
    "time": "40–60m",
    "age": "10+",
    "catText": "Strategy, Economic",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.5,
    "weight": null,
-   "bggId": 148949,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Jaipur",
+   "bggId": 54043,
    "players": [
     2,
     2
@@ -2071,19 +2072,19 @@
    "time": "30m",
    "age": "12+",
    "catText": "Strategy, Card Game",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.5,
    "weight": null,
-   "bggId": 54043,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Joan of Arc",
+   "bggId": 64,
    "players": [
     2,
     4
@@ -2092,19 +2093,19 @@
    "time": "60–120m",
    "age": "14+",
    "catText": "Historical, Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.3,
    "weight": null,
-   "bggId": 64,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "adventure",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Jungle Speed",
+   "bggId": 8098,
    "players": [
     2,
     10
@@ -2113,19 +2114,19 @@
    "time": "15m",
    "age": "7+",
    "catText": "Party, Dexterity",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.5,
    "weight": null,
-   "bggId": 8098,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Just One",
+   "bggId": 254640,
    "players": [
     3,
     7
@@ -2134,19 +2135,19 @@
    "time": "20m",
    "age": "8+",
    "catText": "Party, Word Game",
+   "bgg": 7.6,
+   "weight": 1,
+   "playable": true,
+   "forSale": true,
    "cat": "party",
    "mode": null,
-   "bgg": 7.6,
-   "weight": 1.0,
-   "bggId": 254640,
-   "playsLike": "Codenames' co-op cousin",
    "price": 45,
    "priceTxt": "~$45",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Codenames' co-op cousin"
   },
   {
    "name": "Kairo",
+   "bggId": 107635,
    "players": [
     2,
     4
@@ -2155,19 +2156,19 @@
    "time": "60m",
    "age": "10+",
    "catText": "Economic, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.5,
    "weight": null,
-   "bggId": 107635,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Kami-Sama",
+   "bggId": 232318,
    "players": [
     2,
     4
@@ -2176,19 +2177,19 @@
    "time": "45–90m",
    "age": "10+",
    "catText": "Strategy, Area Control",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.6,
    "weight": null,
-   "bggId": 232318,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Kero",
+   "bggId": 222219,
    "players": [
     2,
     2
@@ -2197,19 +2198,19 @@
    "time": "30–45m",
    "age": "9+",
    "catText": "Resource Management",
-   "cat": null,
-   "mode": null,
-   "bgg": 7.0,
+   "bgg": 7,
    "weight": null,
-   "bggId": 222219,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Kingdom Rush - Rift in Time",
+   "bggId": 272533,
    "players": [
     1,
     4
@@ -2218,19 +2219,19 @@
    "time": "60–90m",
    "age": "12+",
    "catText": "Cooperative, Strategy",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 7.3,
    "weight": null,
-   "bggId": 272533,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Kingdomino",
+   "bggId": 204583,
    "players": [
     2,
     4
@@ -2239,19 +2240,19 @@
    "time": "15–20m",
    "age": "8+",
    "catText": "Family, Strategy",
-   "cat": "family",
-   "mode": null,
    "bgg": 7.3,
    "weight": null,
-   "bggId": 204583,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Kingdomino: Age of Giants",
+   "bggId": null,
    "players": [
     2,
     5
@@ -2260,19 +2261,19 @@
    "time": "15–20m",
    "age": "8+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Last Heroes",
+   "bggId": 254686,
    "players": [
     2,
     4
@@ -2281,19 +2282,19 @@
    "time": "30–45m",
    "age": "12+",
    "catText": "Strategy, Card Game",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 4.9,
    "weight": null,
-   "bggId": 254686,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Legendary Inventors",
+   "bggId": 200785,
    "players": [
     2,
     5
@@ -2302,19 +2303,19 @@
    "time": "40–60m",
    "age": "10+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.3,
    "weight": null,
-   "bggId": 200785,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Life of a Chameleon",
+   "bggId": 337638,
    "players": [
     2,
     6
@@ -2323,19 +2324,19 @@
    "time": "30m",
    "age": "8+",
    "catText": "Family, Strategy",
-   "cat": "family",
-   "mode": null,
    "bgg": 7.1,
    "weight": null,
-   "bggId": 337638,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Logo Board Game",
+   "bggId": 64204,
    "players": [
     2,
     6
@@ -2344,19 +2345,19 @@
    "time": "30–60m",
    "age": "12+",
    "catText": "Trivia, Family",
-   "cat": "party",
-   "mode": null,
    "bgg": 5.1,
    "weight": null,
-   "bggId": 64204,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Lords of Waterdeep",
+   "bggId": 110327,
    "players": [
     2,
     5
@@ -2365,19 +2366,19 @@
    "time": "60–120m",
    "age": "12+",
    "catText": "Strategy, Worker Placement",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.7,
    "weight": null,
-   "bggId": 110327,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Lost Ruins of Arnak",
+   "bggId": 312484,
    "players": [
     1,
     4
@@ -2386,19 +2387,19 @@
    "time": "30–120m",
    "age": "12+",
    "catText": "Strategy, Exploration",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 8.1,
    "weight": null,
-   "bggId": 312484,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Love Letter - Infinity Gauntlet Edition",
+   "bggId": 304285,
    "players": [
     2,
     6
@@ -2407,19 +2408,19 @@
    "time": "20m",
    "age": "10+",
    "catText": "Card Game, Deduction",
-   "cat": "deduct",
-   "mode": null,
    "bgg": 6.9,
    "weight": null,
-   "bggId": 304285,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Love Letter - Princess Ever After",
+   "bggId": 129622,
    "players": [
     2,
     6
@@ -2428,19 +2429,19 @@
    "time": "20m",
    "age": "10+",
    "catText": "Card Game, Deduction",
-   "cat": "deduct",
-   "mode": null,
    "bgg": 7.2,
    "weight": null,
-   "bggId": 129622,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Machi Koro 2",
+   "bggId": 340364,
    "players": [
     2,
     5
@@ -2449,19 +2450,19 @@
    "time": "30–45m",
    "age": "10+",
    "catText": "Family, Strategy",
-   "cat": "family",
-   "mode": null,
    "bgg": 7.1,
    "weight": null,
-   "bggId": 340364,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Machi Koro",
+   "bggId": 143884,
    "players": [
     2,
     4
@@ -2470,19 +2471,19 @@
    "time": "30–45m",
    "age": "10+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.6,
    "weight": null,
-   "bggId": 143884,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Man Bites Dog",
+   "bggId": 4035,
    "players": [
     2,
     6
@@ -2491,19 +2492,19 @@
    "time": "20m",
    "age": "8+",
    "catText": "Party, Word",
-   "cat": "party",
-   "mode": null,
    "bgg": 4.6,
    "weight": null,
-   "bggId": 4035,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Mansions of Madness",
+   "bggId": 83330,
    "players": [
     1,
     5
@@ -2512,19 +2513,19 @@
    "time": "120–180m",
    "age": "14+",
    "catText": "Cooperative, Horror",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 7.2,
    "weight": null,
-   "bggId": 83330,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Maracaibo",
+   "bggId": 276025,
    "players": [
     1,
     4
@@ -2533,19 +2534,19 @@
    "time": "120–150m",
    "age": "12+",
    "catText": "Strategy, Adventure",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.9,
    "weight": null,
-   "bggId": 276025,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Marvel United",
+   "bggId": 298047,
    "players": [
     1,
     4
@@ -2554,19 +2555,19 @@
    "time": "40m",
    "age": "14+",
    "catText": "Cooperative, Superhero",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 7.5,
    "weight": null,
-   "bggId": 298047,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Marvel Villainous Infinite Power",
+   "bggId": 302336,
    "players": [
     2,
     4
@@ -2575,19 +2576,19 @@
    "time": "40–80m",
    "age": "12+",
    "catText": "Strategy, Superhero",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.7,
    "weight": null,
-   "bggId": 302336,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Mascarade",
+   "bggId": 139030,
    "players": [
     2,
     13
@@ -2596,19 +2597,19 @@
    "time": "30m",
    "age": "10+",
    "catText": "Bluffing, Deduction",
-   "cat": "deduct",
-   "mode": null,
    "bgg": 6.5,
    "weight": null,
-   "bggId": 139030,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Meeple Circus",
+   "bggId": 193214,
    "players": [
     2,
     5
@@ -2617,19 +2618,19 @@
    "time": "45m",
    "age": "8+",
    "catText": "Family, Dexterity",
+   "bgg": 7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "family",
    "mode": null,
-   "bgg": 7.0,
-   "weight": null,
-   "bggId": 193214,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Mega WHOT! - Super Mario",
+   "bggId": null,
    "players": [
     2,
     6
@@ -2638,19 +2639,19 @@
    "time": "20m",
    "age": "6+",
    "catText": "Family, Card Game",
-   "cat": "family",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Moa",
+   "bggId": 214123,
    "players": [
     3,
     5
@@ -2659,19 +2660,19 @@
    "time": "90m",
    "age": "12+",
    "catText": "Area Control, Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.3,
    "weight": null,
-   "bggId": 214123,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Monolith Arena",
+   "bggId": 238393,
    "players": [
     2,
     4
@@ -2680,19 +2681,19 @@
    "time": "30–45m",
    "age": "10+",
    "catText": "Strategy, Tactical",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.2,
    "weight": null,
-   "bggId": 238393,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Monopoly - Classic",
+   "bggId": 1406,
    "players": [
     2,
     6
@@ -2701,19 +2702,19 @@
    "time": "60–180m",
    "age": "8+",
    "catText": "Family, Economic",
-   "cat": "family",
-   "mode": null,
    "bgg": 4.4,
    "weight": null,
-   "bggId": 1406,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Monopoly - Deal Card Game",
+   "bggId": 40398,
    "players": [
     2,
     5
@@ -2722,19 +2723,19 @@
    "time": "15m",
    "age": "8+",
    "catText": "Family, Card Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 6.3,
    "weight": null,
-   "bggId": 40398,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Monopoly Bid",
+   "bggId": 327797,
    "players": [
     2,
     5
@@ -2743,19 +2744,19 @@
    "time": "15–20m",
    "age": "7+",
    "catText": "Family, Card Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 5.7,
    "weight": null,
-   "bggId": 327797,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Munchkin",
+   "bggId": 1927,
    "players": [
     3,
     6
@@ -2764,19 +2765,19 @@
    "time": "90m",
    "age": "10+",
    "catText": "Card Game, Fantasy",
-   "cat": null,
-   "mode": null,
    "bgg": 5.9,
    "weight": null,
-   "bggId": 1927,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Munchkin Panic",
+   "bggId": 156786,
    "players": [
     1,
     6
@@ -2785,19 +2786,19 @@
    "time": "60m",
    "age": "10+",
    "catText": "Cooperative, Strategy",
+   "bgg": 6,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "coop",
    "mode": "coop",
-   "bgg": 6.0,
-   "weight": null,
-   "bggId": 156786,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "My First Bananagrams",
+   "bggId": 202478,
    "players": [
     1,
     4
@@ -2806,19 +2807,19 @@
    "time": "15m",
    "age": "4+",
    "catText": "Family, Word Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 6.2,
    "weight": null,
-   "bggId": 202478,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "My First Castle Panic",
+   "bggId": 267314,
    "players": [
     1,
     4
@@ -2827,19 +2828,19 @@
    "time": "20m",
    "age": "4+",
    "catText": "Family, Cooperative",
-   "cat": "family",
-   "mode": "coop",
    "bgg": 6.4,
    "weight": null,
-   "bggId": 267314,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "My First Stone Age",
+   "bggId": 191004,
    "players": [
     2,
     4
@@ -2848,19 +2849,19 @@
    "time": "15–20m",
    "age": "5+",
    "catText": "Family, Strategy",
-   "cat": "family",
-   "mode": null,
    "bgg": 6.6,
    "weight": null,
-   "bggId": 191004,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Near and Far",
+   "bggId": 195421,
    "players": [
     2,
     4
@@ -2869,19 +2870,19 @@
    "time": "90–120m",
    "age": "13+",
    "catText": "Strategy, Adventure",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.6,
    "weight": null,
-   "bggId": 195421,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "New Frontiers",
+   "bggId": 255692,
    "players": [
     2,
     5
@@ -2890,19 +2891,19 @@
    "time": "45–90m",
    "age": "14+",
    "catText": "Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.4,
    "weight": null,
-   "bggId": 255692,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "New York Zoo",
+   "bggId": 300877,
    "players": [
     1,
     5
@@ -2911,19 +2912,19 @@
    "time": "30–60m",
    "age": "10+",
    "catText": "Family, Strategy",
+   "bgg": 7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "family",
    "mode": null,
-   "bgg": 7.0,
-   "weight": null,
-   "bggId": 300877,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "No Thanks!",
+   "bggId": 12942,
    "players": [
     3,
     7
@@ -2932,19 +2933,19 @@
    "time": "20m",
    "age": "8+",
    "catText": "Card Game, Family",
-   "cat": "family",
-   "mode": null,
    "bgg": 7.1,
    "weight": null,
-   "bggId": 12942,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Not Alone",
+   "bggId": 194879,
    "players": [
     2,
     7
@@ -2953,19 +2954,19 @@
    "time": "30–45m",
    "age": "10+",
    "catText": "Strategy, Sci-Fi",
+   "bgg": 7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "strategy",
    "mode": null,
-   "bgg": 7.0,
-   "weight": null,
-   "bggId": 194879,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Now or Never",
+   "bggId": 314745,
    "players": [
     1,
     4
@@ -2974,19 +2975,19 @@
    "time": "120–180m",
    "age": "13+",
    "catText": "Strategy, Adventure",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.6,
    "weight": null,
-   "bggId": 314745,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Nucleum",
+   "bggId": 396790,
    "players": [
     2,
     4
@@ -2995,19 +2996,19 @@
    "time": "60–90m",
    "age": "12+",
    "catText": "Strategy, Sci-Fi",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 8.1,
    "weight": null,
-   "bggId": 396790,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Oath - Chronicles of Empire and Exile",
+   "bggId": 291572,
    "players": [
     1,
     6
@@ -3016,19 +3017,19 @@
    "time": "45–150m",
    "age": "10+",
    "catText": "Strategy, Legacy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.7,
    "weight": null,
-   "bggId": 291572,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Ok Boomer",
+   "bggId": 313463,
    "players": [
     2,
     8
@@ -3037,19 +3038,19 @@
    "time": "30–45m",
    "age": "12+",
    "catText": "Party, Trivia",
-   "cat": "party",
-   "mode": null,
    "bgg": 4.7,
    "weight": null,
-   "bggId": 313463,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "One Night Ultimate Superheroes",
+   "bggId": 255293,
    "players": [
     3,
     10
@@ -3058,19 +3059,19 @@
    "time": "10m",
    "age": "8+",
    "catText": "Party, Social Deduction",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.8,
    "weight": null,
-   "bggId": 255293,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "One Night Ultimate Werewolf",
+   "bggId": 147949,
    "players": [
     3,
     10
@@ -3079,19 +3080,19 @@
    "time": "10m",
    "age": "8+",
    "catText": "Party, Deduction",
+   "bgg": 7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "party",
    "mode": null,
-   "bgg": 7.0,
-   "weight": null,
-   "bggId": 147949,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Ono 99",
+   "bggId": 7803,
    "players": [
     2,
     8
@@ -3100,19 +3101,19 @@
    "time": "20m",
    "age": "10+",
    "catText": "Family, Card Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 5.7,
    "weight": null,
-   "bggId": 7803,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Operation Shuffle",
+   "bggId": null,
    "players": [
     2,
     6
@@ -3121,19 +3122,19 @@
    "time": "20m",
    "age": "8+",
    "catText": "Family, Card",
-   "cat": "family",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Orleans",
+   "bggId": 164928,
    "players": [
     2,
     5
@@ -3142,19 +3143,19 @@
    "time": "90m",
    "age": "12+",
    "catText": "Strategy, Economic",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 8.1,
    "weight": null,
-   "bggId": 164928,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Paladins of the West Kingdom",
+   "bggId": 266810,
    "players": [
     1,
     4
@@ -3163,19 +3164,19 @@
    "time": "90–120m",
    "age": "12+",
    "catText": "Strategy, Worker Placement",
+   "bgg": 8,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "strategy",
    "mode": null,
-   "bgg": 8.0,
-   "weight": null,
-   "bggId": 266810,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Palazzo",
+   "bggId": 15318,
    "players": [
     2,
     4
@@ -3184,19 +3185,19 @@
    "time": "60m",
    "age": "10+",
    "catText": "Tile-Laying, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.5,
    "weight": null,
-   "bggId": 15318,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "abstract",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Paleo",
+   "bggId": 300531,
    "players": [
     2,
     4
@@ -3205,19 +3206,19 @@
    "time": "45–60m",
    "age": "10+",
    "catText": "Cooperative, Strategy",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 7.7,
    "weight": null,
-   "bggId": 300531,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Pandemic",
+   "bggId": 30549,
    "players": [
     2,
     4
@@ -3226,19 +3227,19 @@
    "time": "45m",
    "age": "8+",
    "catText": "Cooperative, Strategy",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 7.5,
    "weight": null,
-   "bggId": 30549,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Pendulum",
+   "bggId": 312804,
    "players": [
     1,
     5
@@ -3247,19 +3248,19 @@
    "time": "60–90m",
    "age": "12+",
    "catText": "Strategy, Real-Time",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.4,
    "weight": null,
-   "bggId": 312804,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Phase 10",
+   "bggId": 1258,
    "players": [
     2,
     6
@@ -3268,19 +3269,19 @@
    "time": "45m",
    "age": "7+",
    "catText": "Family, Card Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 5.3,
    "weight": null,
-   "bggId": 1258,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Pictionary",
+   "bggId": 2281,
    "players": [
     2,
     20
@@ -3289,19 +3290,19 @@
    "time": "60m",
    "age": "8+",
    "catText": "Party, Drawing",
-   "cat": "party",
-   "mode": null,
    "bgg": 5.8,
    "weight": null,
-   "bggId": 2281,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Pictomania",
+   "bggId": 98229,
    "players": [
     3,
     6
@@ -3310,19 +3311,19 @@
    "time": "25m",
    "age": "9+",
    "catText": "Party, Drawing",
-   "cat": "party",
-   "mode": null,
    "bgg": 7.3,
    "weight": null,
-   "bggId": 98229,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Planet",
+   "bggId": 252929,
    "players": [
     2,
     4
@@ -3331,19 +3332,19 @@
    "time": "30–45m",
    "age": "8+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.6,
    "weight": null,
-   "bggId": 252929,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Playdoh Shuffle",
+   "bggId": null,
    "players": [
     3,
     6
@@ -3352,19 +3353,19 @@
    "time": "30m",
    "age": "8+",
    "catText": "Party, Dexterity",
-   "cat": "party",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Poo",
+   "bggId": 60579,
    "players": [
     2,
     8
@@ -3373,19 +3374,19 @@
    "time": "15m",
    "age": "8+",
    "catText": "Party, Humor",
-   "cat": "party",
-   "mode": null,
    "bgg": 5.5,
    "weight": null,
-   "bggId": 60579,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Pop the Pig",
+   "bggId": 35173,
    "players": [
     2,
     6
@@ -3394,19 +3395,19 @@
    "time": "15m",
    "age": "4+",
    "catText": "Family, Children's Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 4.2,
    "weight": null,
-   "bggId": 35173,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Psycho Killer",
+   "bggId": 327371,
    "players": [
     2,
     6
@@ -3415,19 +3416,19 @@
    "time": "15–30m",
    "age": "15+",
    "catText": "Horror, Party",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.7,
    "weight": null,
-   "bggId": 327371,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "dark",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Puerto Rico",
+   "bggId": 3076,
    "players": [
     2,
     5
@@ -3436,19 +3437,19 @@
    "time": "90–150m",
    "age": "12+",
    "catText": "Strategy, Economic",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.9,
    "weight": null,
-   "bggId": 3076,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Quacks of Quedlinburg",
+   "bggId": 409496,
    "players": [
     2,
     4
@@ -3457,19 +3458,19 @@
    "time": "45m",
    "age": "10+",
    "catText": "Family, Strategy",
-   "cat": "family",
-   "mode": null,
    "bgg": 7.5,
    "weight": 1.9,
-   "bggId": 409496,
-   "playsLike": "Diamant-style push-your-luck inside a bag builder",
+   "playable": true,
+   "forSale": true,
+   "cat": "family",
+   "mode": null,
    "price": 70,
    "priceTxt": "~$70",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Diamant-style push-your-luck inside a bag builder"
   },
   {
    "name": "Quadefy",
+   "bggId": 113517,
    "players": [
     2,
     2
@@ -3478,19 +3479,19 @@
    "time": "15–20m",
    "age": "8+",
    "catText": "Strategy, Abstract",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 5.8,
    "weight": null,
-   "bggId": 113517,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Red Cathedral",
+   "bggId": 227224,
    "players": [
     1,
     4
@@ -3499,19 +3500,19 @@
    "time": "80–120m",
    "age": "10+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.7,
    "weight": null,
-   "bggId": 227224,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Red Rising",
+   "bggId": 329465,
    "players": [
     1,
     6
@@ -3520,19 +3521,19 @@
    "time": "45–60m",
    "age": "14+",
    "catText": "Strategy, Fantasy",
+   "bgg": 7,
+   "weight": 2.1,
+   "playable": true,
+   "forSale": true,
    "cat": "strategy",
    "mode": null,
-   "bgg": 7.0,
-   "weight": 2.1,
-   "bggId": 329465,
-   "playsLike": "Fantasy Realms in the Red Rising universe",
    "price": 55,
    "priceTxt": "~$55",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Fantasy Realms in the Red Rising universe"
   },
   {
    "name": "Rick and Morty - Total Rickall",
+   "bggId": 194232,
    "players": [
     2,
     5
@@ -3541,19 +3542,19 @@
    "time": "30m",
    "age": "15+",
    "catText": "Cooperative, Deduction",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 6.1,
    "weight": null,
-   "bggId": 194232,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Rising Sun",
+   "bggId": 205896,
    "players": [
     3,
     5
@@ -3562,19 +3563,19 @@
    "time": "90–120m",
    "age": "14+",
    "catText": "Strategy, Area Control",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.8,
    "weight": null,
-   "bggId": 205896,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Roll for the Galaxy",
+   "bggId": 132531,
    "players": [
     2,
     5
@@ -3583,19 +3584,19 @@
    "time": "45m",
    "age": "14+",
    "catText": "Strategy, Dice Game",
+   "bgg": 7.6,
+   "weight": 3,
+   "playable": true,
+   "forSale": true,
    "cat": "strategy",
    "mode": null,
-   "bgg": 7.6,
-   "weight": 3.0,
-   "bggId": 132531,
-   "playsLike": "Race for the Galaxy rebuilt with dice",
    "price": 95,
    "priceTxt": "~$95",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Race for the Galaxy rebuilt with dice"
   },
   {
    "name": "Roll Player",
+   "bggId": 169426,
    "players": [
     1,
     4
@@ -3604,19 +3605,19 @@
    "time": "60–90m",
    "age": "10+",
    "catText": "Strategy, Dice Game",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.4,
    "weight": 2.4,
-   "bggId": 169426,
-   "playsLike": "Sagrada wearing a character-sheet skin",
+   "playable": true,
+   "forSale": true,
+   "cat": "strategy",
+   "mode": null,
    "price": 75,
    "priceTxt": "~$75",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Sagrada wearing a character-sheet skin"
   },
   {
    "name": "Root",
+   "bggId": 237182,
    "players": [
     2,
     4
@@ -3625,19 +3626,19 @@
    "time": "60–90m",
    "age": "10+",
    "catText": "Strategy, Asymmetric",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 8.1,
    "weight": null,
-   "bggId": 237182,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Rubiks Cage",
+   "bggId": 283609,
    "players": [
     2,
     4
@@ -3646,19 +3647,19 @@
    "time": "20m",
    "age": "7+",
    "catText": "Puzzle, Family",
-   "cat": "family",
-   "mode": null,
    "bgg": 6.4,
    "weight": null,
-   "bggId": 283609,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "abstract",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Rummikub Original",
+   "bggId": 811,
    "players": [
     2,
     4
@@ -3667,19 +3668,19 @@
    "time": "60m",
    "age": "8+",
    "catText": "Family, Abstract",
-   "cat": "family",
-   "mode": null,
    "bgg": 6.5,
    "weight": null,
-   "bggId": 811,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "RUN",
+   "bggId": 368028,
    "players": [
     2,
     5
@@ -3688,19 +3689,19 @@
    "time": "10–15m",
    "age": "8+",
    "catText": "Family, Card Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 7.5,
    "weight": null,
-   "bggId": 368028,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "RuneScape Kingdoms: King Black Dragon",
+   "bggId": null,
    "players": [
     1,
     5
@@ -3709,20 +3710,20 @@
    "time": "60–120m",
    "age": "14+",
    "catText": "Expansion, Adventure",
-   "cat": null,
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "abstract",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true,
+   "playsLike": null,
    "exp": true
   },
   {
    "name": "RuneScape Kingdoms: Shadow of Elvarg",
+   "bggId": 361503,
    "players": [
     1,
     5
@@ -3731,19 +3732,19 @@
    "time": "60–120m",
    "age": "14+",
    "catText": "Cooperative, Adventure",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 7.5,
    "weight": null,
-   "bggId": 361503,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "RuneScape Kingdoms: The Roleplaying Game",
+   "bggId": null,
    "players": [
     1,
     5
@@ -3752,19 +3753,19 @@
    "time": "Varies",
    "age": "14+",
    "catText": "Roleplaying, Adventure",
-   "cat": null,
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "adventure",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Sabotage",
+   "bggId": 252854,
    "players": [
     2,
     4
@@ -3773,19 +3774,19 @@
    "time": "45–60m",
    "age": "10+",
    "catText": "Strategy, Deduction",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.2,
    "weight": null,
-   "bggId": 252854,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Saboteur",
+   "bggId": 9220,
    "players": [
     3,
     10
@@ -3794,19 +3795,19 @@
    "time": "30m",
    "age": "8+",
    "catText": "Social Deduction, Strategy",
-   "cat": "deduct",
-   "mode": null,
    "bgg": 6.5,
    "weight": null,
-   "bggId": 9220,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Secret Hitler",
+   "bggId": 188834,
    "players": [
     5,
     10
@@ -3815,19 +3816,19 @@
    "time": "45m",
    "age": "13+",
    "catText": "Deduction, Political",
-   "cat": "deduct",
-   "mode": null,
    "bgg": 7.5,
    "weight": null,
-   "bggId": 188834,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Secrets",
+   "bggId": 200847,
    "players": [
     4,
     8
@@ -3836,19 +3837,19 @@
    "time": "30–45m",
    "age": "10+",
    "catText": "Party, Social Deduction",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.4,
    "weight": null,
-   "bggId": 200847,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Selfish",
+   "bggId": 288583,
    "players": [
     2,
     5
@@ -3857,19 +3858,19 @@
    "time": "20–30m",
    "age": "12+",
    "catText": "Strategy, Card Game",
+   "bgg": 6,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "strategy",
    "mode": null,
-   "bgg": 6.0,
-   "weight": null,
-   "bggId": 288583,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Selfish: Zombies",
+   "bggId": 288583,
    "players": [
     2,
     5
@@ -3878,19 +3879,19 @@
    "time": "20–30m",
    "age": "12+",
    "catText": "Strategy, Card Game",
+   "bgg": 6,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "strategy",
    "mode": null,
-   "bgg": 6.0,
-   "weight": null,
-   "bggId": 288583,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Shadows of Brimstone City of Ancients",
+   "bggId": 146791,
    "players": [
     1,
     4
@@ -3899,19 +3900,19 @@
    "time": "60–120m",
    "age": "12+",
    "catText": "Cooperative, Adventure",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 7.9,
    "weight": null,
-   "bggId": 146791,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Sherlock Holmes Consulting Detective",
+   "bggId": 2511,
    "players": [
     1,
     8
@@ -3920,19 +3921,19 @@
    "time": "60–120m",
    "age": "14+",
    "catText": "Cooperative, Deduction",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 7.6,
    "weight": null,
-   "bggId": 2511,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Shit Happens",
+   "bggId": 196379,
    "players": [
     2,
     8
@@ -3941,19 +3942,19 @@
    "time": "20–60m",
    "age": "18+",
    "catText": "Party, Card Game",
-   "cat": "party",
-   "mode": null,
    "bgg": 5.3,
    "weight": null,
-   "bggId": 196379,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Shut The Box",
+   "bggId": 9851,
    "players": [
     1,
     20
@@ -3962,19 +3963,19 @@
    "time": "10–20m",
    "age": "8+",
    "catText": "Family, Dice Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 5.2,
    "weight": null,
-   "bggId": 9851,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Sidereal Confluence",
+   "bggId": 202426,
    "players": [
     4,
     9
@@ -3983,19 +3984,19 @@
    "time": "120–180m",
    "age": "14+",
    "catText": "Strategy, Economic",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.8,
    "weight": null,
-   "bggId": 202426,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Sideshow Swap",
+   "bggId": 256443,
    "players": [
     3,
     6
@@ -4004,19 +4005,19 @@
    "time": "20–30m",
    "age": "8+",
    "catText": "Party, Deduction",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.8,
    "weight": null,
-   "bggId": 256443,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Skip-Bo",
+   "bggId": 1269,
    "players": [
     2,
     6
@@ -4025,19 +4026,19 @@
    "time": "20m",
    "age": "7+",
    "catText": "Family, Card Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 5.7,
    "weight": null,
-   "bggId": 1269,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Skulk Hollow",
+   "bggId": 232595,
    "players": [
     2,
     2
@@ -4046,19 +4047,19 @@
    "time": "40–60m",
    "age": "10+",
    "catText": "Strategy, Asymmetrical",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.2,
    "weight": null,
-   "bggId": 232595,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Skull",
+   "bggId": 92415,
    "players": [
     3,
     6
@@ -4067,19 +4068,19 @@
    "time": "30–45m",
    "age": "10+",
    "catText": "Bluffing, Party",
-   "cat": "deduct",
-   "mode": null,
    "bgg": 7.2,
    "weight": null,
-   "bggId": 92415,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Small World - Warcraft",
+   "bggId": 309630,
    "players": [
     2,
     5
@@ -4088,19 +4089,19 @@
    "time": "30–60m",
    "age": "10+",
    "catText": "Area Control, Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.2,
    "weight": null,
-   "bggId": 309630,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Smash Up",
+   "bggId": 122522,
    "players": [
     2,
     4
@@ -4109,19 +4110,19 @@
    "time": "45m",
    "age": "12+",
    "catText": "Strategy, Card Game",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.7,
    "weight": null,
-   "bggId": 122522,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Sounds Fishy",
+   "bggId": 359893,
    "players": [
     4,
     10
@@ -4130,19 +4131,19 @@
    "time": "20–30m",
    "age": "10+",
    "catText": "Party, Bluffing",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.7,
    "weight": null,
-   "bggId": 359893,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Spirit Island",
+   "bggId": 162886,
    "players": [
     1,
     4
@@ -4151,19 +4152,19 @@
    "time": "90–120m",
    "age": "13+",
    "catText": "Cooperative, Strategy",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 8.3,
    "weight": null,
-   "bggId": 162886,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Splendor",
+   "bggId": 148228,
    "players": [
     2,
     4
@@ -4172,19 +4173,19 @@
    "time": "30m",
    "age": "10+",
    "catText": "Strategy, Economic",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.4,
    "weight": 1.8,
-   "bggId": 148228,
-   "playsLike": "Century: Golem Edition's engine-building twin",
+   "playable": true,
+   "forSale": true,
+   "cat": "strategy",
+   "mode": null,
    "price": 62,
    "priceTxt": "~$62",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Century: Golem Edition's engine-building twin"
   },
   {
    "name": "Streets",
+   "bggId": 279720,
    "players": [
     1,
     5
@@ -4193,19 +4194,19 @@
    "time": "30–60m",
    "age": "10+",
    "catText": "Strategy, Tile-Laying",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.6,
    "weight": null,
-   "bggId": 279720,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Suburbia",
+   "bggId": 123260,
    "players": [
     1,
     4
@@ -4214,19 +4215,19 @@
    "time": "90m",
    "age": "8+",
    "catText": "Strategy, City Building",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.5,
    "weight": null,
-   "bggId": 123260,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Summoner Wars",
+   "bggId": 58281,
    "players": [
     2,
     2
@@ -4235,19 +4236,19 @@
    "time": "30–60m",
    "age": "9+",
    "catText": "Strategy, Tactical",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.2,
    "weight": null,
-   "bggId": 58281,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Sushi Go",
+   "bggId": 133473,
    "players": [
     2,
     5
@@ -4256,19 +4257,19 @@
    "time": "15m",
    "age": "8+",
    "catText": "Family, Card Game",
+   "bgg": 7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "family",
    "mode": null,
-   "bgg": 7.0,
-   "weight": null,
-   "bggId": 133473,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Taco Cat Cheese Pizza",
+   "bggId": 253664,
    "players": [
     3,
     8
@@ -4277,19 +4278,19 @@
    "time": "10m",
    "age": "8+",
    "catText": "Party, Dexterity",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.5,
    "weight": null,
-   "bggId": 253664,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Tainted Grail - Kings of Ruin",
+   "bggId": 360366,
    "players": [
     1,
     4
@@ -4298,19 +4299,19 @@
    "time": "90–120m",
    "age": "14+",
    "catText": "Strategy, Adventure",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 8.6,
    "weight": null,
-   "bggId": 360366,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Tang Garden",
+   "bggId": 252153,
    "players": [
     1,
     4
@@ -4319,19 +4320,19 @@
    "time": "45–60m",
    "age": "14+",
    "catText": "Strategy, Tile-Placement",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.3,
    "weight": null,
-   "bggId": 252153,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Tavern Masters",
+   "bggId": 210418,
    "players": [
     1,
     6
@@ -4340,19 +4341,19 @@
    "time": "30–60m",
    "age": "13+",
    "catText": "Resource Management",
-   "cat": null,
-   "mode": null,
    "bgg": 6.8,
    "weight": null,
-   "bggId": 210418,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Terra Mystica",
+   "bggId": 120677,
    "players": [
     2,
     5
@@ -4361,19 +4362,19 @@
    "time": "60–150m",
    "age": "14+",
    "catText": "Strategy, Economic",
+   "bgg": 8,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "strategy",
    "mode": null,
-   "bgg": 8.0,
-   "weight": null,
-   "bggId": 120677,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Terraforming Mars",
+   "bggId": 167791,
    "players": [
     1,
     5
@@ -4382,19 +4383,19 @@
    "time": "120m",
    "age": "12+",
    "catText": "Strategy, Economic",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 8.3,
    "weight": null,
-   "bggId": 167791,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "The Great Wall",
+   "bggId": 292375,
    "players": [
     1,
     4
@@ -4403,19 +4404,19 @@
    "time": "120–180m",
    "age": "14+",
    "catText": "Strategy, Worker Placement",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.8,
    "weight": null,
-   "bggId": 292375,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "The Great Wall - stretch goals",
+   "bggId": null,
    "players": [
     1,
     4
@@ -4424,20 +4425,20 @@
    "time": "120–180m",
    "age": "14+",
    "catText": "Strategy, Expansion",
-   "cat": "strategy",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true,
+   "playsLike": null,
    "exp": true
   },
   {
    "name": "The Isle of Cats",
+   "bggId": 281259,
    "players": [
     1,
     4
@@ -4446,19 +4447,19 @@
    "time": "60–90m",
    "age": "8+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.6,
    "weight": null,
-   "bggId": 281259,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "The Mind",
+   "bggId": 244992,
    "players": [
     2,
     4
@@ -4467,19 +4468,19 @@
    "time": "15m",
    "age": "8+",
    "catText": "Cooperative, Card Game",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 6.7,
    "weight": null,
-   "bggId": 244992,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "The Quest for El Dorado",
+   "bggId": 217372,
    "players": [
     2,
     4
@@ -4488,19 +4489,19 @@
    "time": "60m",
    "age": "10+",
    "catText": "Strategy, Deck Building",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.7,
    "weight": null,
-   "bggId": 217372,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "The Red Dragon Inn",
+   "bggId": 24310,
    "players": [
     2,
     4
@@ -4509,19 +4510,19 @@
    "time": "45m",
    "age": "13+",
    "catText": "Party, Card Game",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.5,
    "weight": null,
-   "bggId": 24310,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "The Resistance",
+   "bggId": 41114,
    "players": [
     5,
     10
@@ -4530,19 +4531,19 @@
    "time": "30m",
    "age": "13+",
    "catText": "Party, Social Deduction",
-   "cat": "party",
-   "mode": null,
    "bgg": 7.2,
    "weight": null,
-   "bggId": 41114,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "The Sherriff of Nottingham",
+   "bggId": 157969,
    "players": [
     3,
     5
@@ -4551,19 +4552,19 @@
    "time": "60m",
    "age": "14+",
    "catText": "Bluffing, Strategy",
+   "bgg": 7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "deduct",
    "mode": null,
-   "bgg": 7.0,
-   "weight": null,
-   "bggId": 157969,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "The Singaporean Dream",
+   "bggId": 267030,
    "players": [
     2,
     6
@@ -4572,19 +4573,19 @@
    "time": "20–30m",
    "age": "8+",
    "catText": "Family, Strategy",
-   "cat": "family",
-   "mode": null,
    "bgg": 5.3,
    "weight": null,
-   "bggId": 267030,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "The Sweet and Spicy Truth",
+   "bggId": null,
    "players": [
     3,
     8
@@ -4593,19 +4594,19 @@
    "time": "30–45m",
    "age": "18+",
    "catText": "Party, Social",
-   "cat": "party",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "The Yawning Portal",
+   "bggId": 367820,
    "players": [
     2,
     4
@@ -4614,19 +4615,19 @@
    "time": "45–60m",
    "age": "10+",
    "catText": "Strategy, Fantasy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.1,
    "weight": null,
-   "bggId": 367820,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Ticket to Ride",
+   "bggId": 9209,
    "players": [
     2,
     5
@@ -4635,19 +4636,19 @@
    "time": "30–60m",
    "age": "8+",
    "catText": "Family, Strategy",
-   "cat": "family",
-   "mode": null,
    "bgg": 7.4,
    "weight": 1.8,
-   "bggId": 9209,
-   "playsLike": "Carcassonne on rails — the other gateway classic",
+   "playable": true,
+   "forSale": true,
+   "cat": "family",
+   "mode": null,
    "price": 75,
    "priceTxt": "~$75",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Carcassonne on rails — the other gateway classic"
   },
   {
    "name": "Ticket to Ride: Europe",
+   "bggId": 14996,
    "players": [
     2,
     5
@@ -4656,19 +4657,19 @@
    "time": "30–60m",
    "age": "8+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.5,
    "weight": null,
-   "bggId": 14996,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "TIME Stories",
+   "bggId": 146508,
    "players": [
     2,
     4
@@ -4677,19 +4678,19 @@
    "time": "90m",
    "age": "12+",
    "catText": "Cooperative, Adventure",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 7.3,
    "weight": null,
-   "bggId": 146508,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Tokaido",
+   "bggId": 123540,
    "players": [
     2,
     5
@@ -4698,19 +4699,19 @@
    "time": "45m",
    "age": "8+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.9,
    "weight": null,
-   "bggId": 123540,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Tri-Ominos",
+   "bggId": 4040,
    "players": [
     2,
     6
@@ -4719,19 +4720,19 @@
    "time": "30m",
    "age": "8+",
    "catText": "Family, Abstract",
-   "cat": "family",
-   "mode": null,
    "bgg": 5.4,
    "weight": null,
-   "bggId": 4040,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Trivial Pursuit - Horror",
+   "bggId": 269963,
    "players": [
     2,
     6
@@ -4740,19 +4741,19 @@
    "time": "60m",
    "age": "18+",
    "catText": "Trivia, Party",
-   "cat": "party",
-   "mode": null,
    "bgg": 5.8,
    "weight": null,
-   "bggId": 269963,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Trivial Pursuit - Supernatural",
+   "bggId": null,
    "players": [
     2,
     6
@@ -4761,19 +4762,19 @@
    "time": "60m",
    "age": "13+",
    "catText": "Trivia, Party",
-   "cat": "party",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Trust me I'm a Doctor",
+   "bggId": 295687,
    "players": [
     3,
     8
@@ -4782,19 +4783,19 @@
    "time": "30–45m",
    "age": "14+",
    "catText": "Party, Social",
-   "cat": "party",
-   "mode": null,
    "bgg": 5.8,
    "weight": null,
-   "bggId": 295687,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Tzaar",
+   "bggId": 31999,
    "players": [
     2,
     2
@@ -4803,19 +4804,19 @@
    "time": "30m",
    "age": "13+",
    "catText": "Abstract Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.7,
    "weight": null,
-   "bggId": 31999,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "abstract",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Tzolkin: The Mayan Calendar",
+   "bggId": 126163,
    "players": [
     2,
     4
@@ -4824,19 +4825,19 @@
    "time": "90m",
    "age": "13+",
    "catText": "Strategy, Worker Placement",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.8,
    "weight": null,
-   "bggId": 126163,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Ultimate Werewolf",
+   "bggId": 152241,
    "players": [
     5,
     30
@@ -4845,19 +4846,19 @@
    "time": "30–90m",
    "age": "8+",
    "catText": "Party, Deduction",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.5,
    "weight": null,
-   "bggId": 152241,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Undaunted: Battle of Britain",
+   "bggId": 366495,
    "players": [
     2,
     2
@@ -4866,19 +4867,19 @@
    "time": "45–60m",
    "age": "14+",
    "catText": "Deck Building, Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.9,
    "weight": null,
-   "bggId": 366495,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Undaunted: Normandy",
+   "bggId": 268864,
    "players": [
     2,
     2
@@ -4887,19 +4888,19 @@
    "time": "45–60m",
    "age": "14+",
    "catText": "Deck Building, Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.8,
    "weight": null,
-   "bggId": 268864,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Unfair",
+   "bggId": 179172,
    "players": [
     2,
     5
@@ -4908,19 +4909,19 @@
    "time": "50–125m",
    "age": "14+",
    "catText": "Family, Card Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 7.3,
    "weight": null,
-   "bggId": 179172,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Uno",
+   "bggId": 2223,
    "players": [
     2,
     10
@@ -4929,19 +4930,19 @@
    "time": "30m",
    "age": "7+",
    "catText": "Family, Card Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 5.5,
    "weight": null,
-   "bggId": 2223,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Uno - Flip",
+   "bggId": 271460,
    "players": [
     2,
     10
@@ -4950,19 +4951,19 @@
    "time": "30m",
    "age": "7+",
    "catText": "Family, Card Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 6.3,
    "weight": null,
-   "bggId": 271460,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Uno All Wild",
+   "bggId": 352997,
    "players": [
     2,
     10
@@ -4971,19 +4972,19 @@
    "time": "20m",
    "age": "7+",
    "catText": "Family, Card Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 4.5,
    "weight": null,
-   "bggId": 352997,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Uno Show em No Mercy",
+   "bggId": 399088,
    "players": [
     2,
     10
@@ -4992,19 +4993,19 @@
    "time": "30m",
    "age": "7+",
    "catText": "Family, Card Game",
-   "cat": "family",
-   "mode": null,
    "bgg": 6.1,
    "weight": null,
-   "bggId": 399088,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Wavelength",
+   "bggId": 262543,
    "players": [
     2,
     12
@@ -5013,19 +5014,19 @@
    "time": "30–45m",
    "age": "14+",
    "catText": "Party, Deduction",
-   "cat": "party",
-   "mode": null,
    "bgg": 7.2,
    "weight": 1.2,
-   "bggId": 262543,
-   "playsLike": "Hues and Cues for concepts instead of colours",
+   "playable": true,
+   "forSale": true,
+   "cat": "party",
+   "mode": null,
    "price": 60,
    "priceTxt": "~$60",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Hues and Cues for concepts instead of colours"
   },
   {
    "name": "Werewolves of Millers Hollow",
+   "bggId": 25821,
    "players": [
     8,
     18
@@ -5034,19 +5035,19 @@
    "time": "30m",
    "age": "10+",
    "catText": "Party, Deduction",
-   "cat": "party",
-   "mode": null,
    "bgg": 6.7,
    "weight": null,
-   "bggId": 25821,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "What Next",
+   "bggId": 342443,
    "players": [
     1,
     4
@@ -5055,19 +5056,19 @@
    "time": "45–90m",
    "age": "10+",
    "catText": "Cooperative, Adventure",
-   "cat": "coop",
-   "mode": "coop",
    "bgg": 6.4,
    "weight": null,
-   "bggId": 342443,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Wingspan",
+   "bggId": 266192,
    "players": [
     1,
     5
@@ -5076,19 +5077,19 @@
    "time": "40–70m",
    "age": "10+",
    "catText": "Strategy, Family",
+   "bgg": 8,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "strategy",
    "mode": null,
-   "bgg": 8.0,
-   "weight": null,
-   "bggId": 266192,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Wizard",
+   "bggId": 1465,
    "players": [
     3,
     6
@@ -5097,19 +5098,19 @@
    "time": "45m",
    "age": "10+",
    "catText": "Family, Card Game",
+   "bgg": 7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": "family",
    "mode": null,
-   "bgg": 7.0,
-   "weight": null,
-   "bggId": 1465,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Xi'an",
+   "bggId": 234828,
    "players": [
     2,
     4
@@ -5118,19 +5119,19 @@
    "time": "60–90m",
    "age": "14+",
    "catText": "Worker Placement, Strategy",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 7.1,
    "weight": null,
-   "bggId": 234828,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Settlers of Catan Expansion 5-6 Player",
+   "bggId": null,
    "players": [
     5,
     6
@@ -5139,20 +5140,20 @@
    "time": "90m",
    "age": "10+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true,
+   "playsLike": null,
    "exp": true
   },
   {
    "name": "Catan Settlers of America",
+   "bggId": 67239,
    "players": [
     3,
     4
@@ -5161,19 +5162,19 @@
    "time": "120m",
    "age": "12+",
    "catText": "Strategy, Family",
-   "cat": "strategy",
-   "mode": null,
    "bgg": 6.8,
    "weight": null,
-   "bggId": 67239,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Cluedo SFX",
+   "bggId": null,
    "players": [
     2,
     4
@@ -5182,19 +5183,19 @@
    "time": null,
    "age": "8+",
    "catText": "Deduction, Family",
-   "cat": "deduct",
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Arcs",
+   "bggId": 359871,
    "players": [
     2,
     4
@@ -5203,19 +5204,19 @@
    "time": "60–120m",
    "age": null,
    "catText": null,
+   "bgg": 8,
+   "weight": 3.4,
+   "playable": true,
+   "forSale": true,
    "cat": null,
    "mode": "comp",
-   "bgg": 8.0,
-   "weight": 3.4,
-   "bggId": 359871,
-   "playsLike": "Root and Oath, condensed into 90 minutes",
    "price": 95,
    "priceTxt": "$80–110",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Root and Oath, condensed into 90 minutes"
   },
   {
    "name": "Arcs: The Blighted Reach",
+   "bggId": null,
    "players": [
     2,
     4
@@ -5224,19 +5225,19 @@
    "time": "90–180m",
    "age": null,
    "catText": null,
+   "bgg": 9,
+   "weight": 4.2,
+   "playable": false,
+   "forSale": true,
    "cat": null,
    "mode": "comp",
-   "bgg": 9.0,
-   "weight": 4.2,
-   "bggId": null,
-   "playsLike": "Oath — a competitive campaign epic",
    "price": 140,
    "priceTxt": "~$140",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Oath — a competitive campaign epic"
   },
   {
    "name": "Everdell: Silverfrost",
+   "bggId": 436821,
    "players": [
     1,
     4
@@ -5245,19 +5246,19 @@
    "time": "30–120m",
    "age": null,
    "catText": null,
+   "bgg": 8.1,
+   "weight": 3,
+   "playable": false,
+   "forSale": true,
    "cat": null,
    "mode": "comp",
-   "bgg": 8.1,
-   "weight": 3.0,
-   "bggId": 436821,
-   "playsLike": "Everdell, refined",
    "price": 90,
    "priceTxt": "$90 ess / $150+ coll",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Everdell, refined"
   },
   {
    "name": "SETI",
+   "bggId": 17785,
    "players": [
     1,
     4
@@ -5266,19 +5267,19 @@
    "time": "40–160m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 5.7,
    "weight": 3.8,
-   "bggId": 17785,
-   "playsLike": "Terraforming Mars meets Ark Nova",
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 120,
    "priceTxt": "$105–140",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Terraforming Mars meets Ark Nova"
   },
   {
    "name": "Cosmic Encounter",
+   "bggId": 39463,
    "players": [
     3,
     5
@@ -5287,19 +5288,19 @@
    "time": "60–120m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 7.5,
    "weight": 2.5,
-   "bggId": 39463,
-   "playsLike": "Coup's chaos scaled to a galaxy of shifting alliances",
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 95,
    "priceTxt": "~$95",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Coup's chaos scaled to a galaxy of shifting alliances"
   },
   {
    "name": "EXIT: The Game (series)",
+   "bggId": null,
    "players": [
     1,
     4
@@ -5308,19 +5309,19 @@
    "time": "60m",
    "age": null,
    "catText": null,
+   "bgg": 7.1,
+   "weight": 2,
+   "playable": false,
+   "forSale": true,
    "cat": null,
    "mode": "coop",
-   "bgg": 7.1,
-   "weight": 2.0,
-   "bggId": null,
-   "playsLike": "an escape room in a box — components get torn, one play each",
    "price": 28,
    "priceTxt": "$25–30 ea",
-   "forSale": true,
-   "playable": false
+   "playsLike": "an escape room in a box — components get torn, one play each"
   },
   {
    "name": "Citadels",
+   "bggId": 478,
    "players": [
     2,
     8
@@ -5329,19 +5330,19 @@
    "time": "60m",
    "age": null,
    "catText": null,
+   "bgg": 7,
+   "weight": 2.1,
+   "playable": false,
+   "forSale": true,
    "cat": null,
    "mode": "comp",
-   "bgg": 7.0,
-   "weight": 2.1,
-   "bggId": 478,
-   "playsLike": "Coup and Love Letter energy that seats eight",
    "price": 40,
    "priceTxt": "~$40",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Coup and Love Letter energy that seats eight"
   },
   {
    "name": "Res Arcana",
+   "bggId": 262712,
    "players": [
     2,
     4
@@ -5350,19 +5351,19 @@
    "time": "20–60m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 7.6,
    "weight": 2.6,
-   "bggId": 262712,
-   "playsLike": "Splendor with teeth, from the Race for the Galaxy designer",
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 60,
    "priceTxt": "~$60",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Splendor with teeth, from the Race for the Galaxy designer"
   },
   {
    "name": "Tapple",
+   "bggId": 129556,
    "players": [
     2,
     8
@@ -5371,19 +5372,19 @@
    "time": "20m",
    "age": null,
    "catText": null,
+   "bgg": 6.4,
+   "weight": 1,
+   "playable": false,
+   "forSale": true,
    "cat": null,
    "mode": "comp",
-   "bgg": 6.4,
-   "weight": 1.0,
-   "bggId": 129556,
-   "playsLike": "Scattergories at speed",
    "price": 32,
    "priceTxt": "~$32",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Scattergories at speed"
   },
   {
    "name": "Ghost Blitz",
+   "bggId": 83195,
    "players": [
     2,
     8
@@ -5392,19 +5393,19 @@
    "time": "20m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 6.7,
    "weight": 1.1,
-   "bggId": 83195,
-   "playsLike": "Jungle Speed reflexes with a logic twist",
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 30,
    "priceTxt": "~$30",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Jungle Speed reflexes with a logic twist"
   },
   {
    "name": "Diplomacy",
+   "bggId": 483,
    "players": [
     2,
     7
@@ -5413,19 +5414,19 @@
    "time": "360m",
    "age": null,
    "catText": null,
+   "bgg": 7,
+   "weight": 3.3,
+   "playable": false,
+   "forSale": true,
    "cat": null,
    "mode": "comp",
-   "bgg": 7.0,
-   "weight": 3.3,
-   "bggId": 483,
-   "playsLike": "Risk without dice — pure negotiation",
    "price": 70,
    "priceTxt": "~$70",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Risk without dice — pure negotiation"
   },
   {
    "name": "Axis & Allies (1942)",
+   "bggId": 41863,
    "players": [
     2,
     5
@@ -5434,19 +5435,19 @@
    "time": "3m",
    "age": null,
    "catText": null,
+   "bgg": 6.9,
+   "weight": 3,
+   "playable": false,
+   "forSale": true,
    "cat": null,
    "mode": "team",
-   "bgg": 6.9,
-   "weight": 3.0,
-   "bggId": 41863,
-   "playsLike": "Risk, grown up",
    "price": 90,
    "priceTxt": "~$90",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Risk, grown up"
   },
   {
    "name": "A&A: Pacific 1940",
+   "bggId": null,
    "players": [
     2,
     4
@@ -5455,19 +5456,19 @@
    "time": "240m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "team",
    "bgg": 7.7,
    "weight": 3.7,
-   "bggId": null,
-   "playsLike": "Axis & Allies 1942, deeper and longer",
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "team",
    "price": 140,
    "priceTxt": "~$140",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Axis & Allies 1942, deeper and longer"
   },
   {
    "name": "Unlock!",
+   "bggId": null,
    "players": [
     1,
     6
@@ -5476,19 +5477,19 @@
    "time": "60m",
    "age": null,
    "catText": null,
+   "bgg": 7.2,
+   "weight": 2,
+   "playable": true,
+   "forSale": true,
    "cat": null,
    "mode": "coop",
-   "bgg": 7.2,
-   "weight": 2.0,
-   "bggId": null,
-   "playsLike": "EXIT with an app — nothing gets destroyed",
    "price": 50,
    "priceTxt": "~$50",
-   "forSale": true,
-   "playable": true
+   "playsLike": "EXIT with an app — nothing gets destroyed"
   },
   {
    "name": "Dorfromantik",
+   "bggId": null,
    "players": [
     1,
     6
@@ -5497,19 +5498,19 @@
    "time": "45m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "coop",
    "bgg": 7.4,
    "weight": 1.2,
-   "bggId": null,
-   "playsLike": "co-op Carcassonne, straight from the video game",
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "coop",
    "price": 65,
    "priceTxt": "~$65",
-   "forSale": true,
-   "playable": false
+   "playsLike": "co-op Carcassonne, straight from the video game"
   },
   {
    "name": "Everdell",
+   "bggId": 199792,
    "players": [
     1,
     4
@@ -5518,19 +5519,19 @@
    "time": "40–80m",
    "age": null,
    "catText": null,
+   "bgg": 8,
+   "weight": 2.8,
+   "playable": true,
+   "forSale": true,
    "cat": null,
    "mode": "comp",
-   "bgg": 8.0,
-   "weight": 2.8,
-   "bggId": 199792,
-   "playsLike": "Wingspan crossed with Lords of Waterdeep",
    "price": 100,
    "priceTxt": "~$100",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Wingspan crossed with Lords of Waterdeep"
   },
   {
    "name": "Wyrmspan",
+   "bggId": 410201,
    "players": [
     1,
     5
@@ -5539,19 +5540,19 @@
    "time": "90m",
    "age": null,
    "catText": null,
+   "bgg": 8,
+   "weight": 3,
+   "playable": true,
+   "forSale": true,
    "cat": null,
    "mode": "comp",
-   "bgg": 8.0,
-   "weight": 3.0,
-   "bggId": 410201,
-   "playsLike": "Wingspan with dragons, a notch crunchier",
    "price": 110,
    "priceTxt": "~$110",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Wingspan with dragons, a notch crunchier"
   },
   {
    "name": "Space Base",
+   "bggId": 242302,
    "players": [
     2,
     5
@@ -5560,19 +5561,19 @@
    "time": "60m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 7.5,
    "weight": 1.6,
-   "bggId": 242302,
-   "playsLike": "Machi Koro, grown up",
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 80,
    "priceTxt": "~$80",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Machi Koro, grown up"
   },
   {
    "name": "Lightning Train",
+   "bggId": 445673,
    "players": [
     2,
     4
@@ -5581,19 +5582,19 @@
    "time": "60–90m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 7.3,
    "weight": 2.8,
-   "bggId": 445673,
-   "playsLike": "Ticket to Ride crossed with Clank! deck-building",
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 95,
    "priceTxt": "~$95",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Ticket to Ride crossed with Clank! deck-building"
   },
   {
    "name": "Wingspan / Wyrmspan expansions",
+   "bggId": null,
    "players": [
     1,
     5
@@ -5602,20 +5603,19 @@
    "time": "Varies",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": null,
    "weight": 2.5,
-   "bggId": null,
-   "playsLike": null,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 50,
    "priceTxt": "$45–55 ea",
-   "forSale": true,
-   "playable": false,
-   "exp": true
+   "playsLike": null
   },
   {
    "name": "Cascadia",
+   "bggId": 295947,
    "players": [
     1,
     4
@@ -5624,19 +5624,19 @@
    "time": "30–45m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 7.9,
    "weight": 1.9,
-   "bggId": 295947,
-   "playsLike": "Azul-adjacent tile drafting with wildlife",
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 65,
    "priceTxt": "~$65",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Azul-adjacent tile drafting with wildlife"
   },
   {
    "name": "Carcassonne",
+   "bggId": 822,
    "players": [
     2,
     5
@@ -5645,19 +5645,19 @@
    "time": "45m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 7.4,
    "weight": 1.9,
-   "bggId": 822,
-   "playsLike": "Dorfromantik's competitive ancestor",
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 60,
    "priceTxt": "~$60",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Dorfromantik's competitive ancestor"
   },
   {
    "name": "Azul",
+   "bggId": 230802,
    "players": [
     2,
     4
@@ -5666,19 +5666,19 @@
    "time": "30–45m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 7.7,
    "weight": 1.8,
-   "bggId": 230802,
-   "playsLike": "Cascadia's abstract cousin — pattern-drafting tiles",
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 65,
    "priceTxt": "~$65",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Cascadia's abstract cousin — pattern-drafting tiles"
   },
   {
    "name": "Qwirkle",
+   "bggId": 25669,
    "players": [
     2,
     4
@@ -5687,19 +5687,19 @@
    "time": "45m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 6.8,
    "weight": 1.6,
-   "bggId": 25669,
-   "playsLike": "Scrabble crossed with dominoes",
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 45,
    "priceTxt": "~$45",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Scrabble crossed with dominoes"
   },
   {
    "name": "Wandering Towers",
+   "bggId": 355483,
    "players": [
     2,
     6
@@ -5708,19 +5708,19 @@
    "time": "30m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 7.3,
    "weight": 1.5,
-   "bggId": 355483,
-   "playsLike": "Labyrinth with memory and stacking chaos",
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 60,
    "priceTxt": "~$60",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Labyrinth with memory and stacking chaos"
   },
   {
    "name": "Ra",
+   "bggId": 12,
    "players": [
     2,
     5
@@ -5729,19 +5729,19 @@
    "time": "60m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 7.7,
    "weight": 2.3,
-   "bggId": 12,
-   "playsLike": "Modern Art's auction sibling — peak Knizia",
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 80,
    "priceTxt": "~$80",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Modern Art's auction sibling — peak Knizia"
   },
   {
    "name": "We Forlorn Few",
+   "bggId": null,
    "players": [
     1,
     4
@@ -5750,19 +5750,19 @@
    "time": null,
    "age": null,
    "catText": null,
+   "bgg": null,
+   "weight": 2,
+   "playable": true,
+   "forSale": true,
    "cat": null,
    "mode": "comp",
-   "bgg": null,
-   "weight": 2.0,
-   "bggId": null,
-   "playsLike": null,
    "price": 60,
    "priceTxt": "~$60?",
-   "forSale": true,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Terra Mystica (Big Box)",
+   "bggId": null,
    "players": [
     2,
     5
@@ -5771,19 +5771,19 @@
    "time": "150m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 8.1,
    "weight": 3.9,
-   "bggId": null,
-   "playsLike": "Gaia Project's fantasy parent",
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 180,
    "priceTxt": "$180+",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Gaia Project's fantasy parent"
   },
   {
    "name": "Viticulture",
+   "bggId": 128621,
    "players": [
     1,
     6
@@ -5792,19 +5792,19 @@
    "time": "90m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 7.5,
    "weight": 2.9,
-   "bggId": 128621,
-   "playsLike": "Lords of Waterdeep charm with Agricola-lite farming",
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 95,
    "priceTxt": "~$95",
-   "forSale": true,
-   "playable": true
+   "playsLike": "Lords of Waterdeep charm with Agricola-lite farming"
   },
   {
    "name": "Sky Team",
+   "bggId": 373106,
    "players": [
     2,
     2
@@ -5813,19 +5813,19 @@
    "time": "15m",
    "age": null,
    "catText": null,
+   "bgg": 8.1,
+   "weight": 2,
+   "playable": true,
+   "forSale": true,
    "cat": null,
    "mode": "coop",
-   "bgg": 8.1,
-   "weight": 2.0,
-   "bggId": 373106,
-   "playsLike": "The Crew condensed to two seats",
    "price": 55,
    "priceTxt": "~$55",
-   "forSale": true,
-   "playable": true
+   "playsLike": "The Crew condensed to two seats"
   },
   {
    "name": "boop.",
+   "bggId": 355433,
    "players": [
     2,
     2
@@ -5834,19 +5834,19 @@
    "time": "20m",
    "age": null,
    "catText": null,
+   "bgg": 7,
+   "weight": 1.6,
+   "playable": true,
+   "forSale": true,
    "cat": null,
    "mode": "comp",
-   "bgg": 7.0,
-   "weight": 1.6,
-   "bggId": 355433,
-   "playsLike": "tic-tac-toe with cat physics",
    "price": 60,
    "priceTxt": "~$60",
-   "forSale": true,
-   "playable": true
+   "playsLike": "tic-tac-toe with cat physics"
   },
   {
    "name": "Everdell Duo",
+   "bggId": 425005,
    "players": [
     1,
     2
@@ -5855,772 +5855,771 @@
    "time": "25–40m",
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": "comp",
    "bgg": 7.6,
    "weight": 2.4,
-   "bggId": 425005,
-   "playsLike": "Everdell distilled for two",
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
    "price": 52,
    "priceTxt": "~$52",
-   "forSale": true,
-   "playable": false
+   "playsLike": "Everdell distilled for two"
   },
   {
    "name": "Aethermon",
+   "bggId": null,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Ark Nova",
+   "bggId": 342942,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 8.5,
    "weight": null,
-   "bggId": 342942,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Backgammon",
+   "bggId": 2397,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 6.6,
    "weight": null,
-   "bggId": 2397,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Betrayal at Baldur's Gate",
+   "bggId": 228660,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 7.1,
    "weight": null,
-   "bggId": 228660,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Blood on the Clocktower",
+   "bggId": 240980,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 8.3,
    "weight": null,
-   "bggId": 240980,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Bohnanza: 25th Anniversary Edition",
+   "bggId": 11,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 7.1,
    "weight": null,
-   "bggId": 11,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Castle Combo",
+   "bggId": 416851,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 7.7,
    "weight": null,
-   "bggId": 416851,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Chess",
+   "bggId": 171,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 7.2,
    "weight": null,
-   "bggId": 171,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Colour Crazy",
+   "bggId": null,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Cranium",
+   "bggId": 891,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 5.7,
    "weight": null,
-   "bggId": 891,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Critter Kitchen",
+   "bggId": 393429,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 7.8,
    "weight": null,
-   "bggId": 393429,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Cubo",
+   "bggId": 166532,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 5.6,
    "weight": null,
-   "bggId": 166532,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Dirty Laundry",
+   "bggId": null,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Exploding Kittens",
+   "bggId": 172225,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 6.1,
    "weight": null,
-   "bggId": 172225,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Fog of Love",
+   "bggId": 175324,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 6.6,
    "weight": null,
-   "bggId": 175324,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "A Game Called Birds",
+   "bggId": null,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Game of Thrones: Westeros Intrigue",
+   "bggId": 155693,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 5.3,
    "weight": null,
-   "bggId": 155693,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "The Gang",
+   "bggId": 411567,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 7.5,
    "weight": null,
-   "bggId": 411567,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Harmonies",
+   "bggId": 414317,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
+   "bgg": 8,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": null,
    "mode": null,
-   "bgg": 8.0,
-   "weight": null,
-   "bggId": 414317,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Headache",
+   "bggId": 9921,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 4.4,
    "weight": null,
-   "bggId": 9921,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Heat: Pedal to the Metal",
+   "bggId": 366013,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
+   "bgg": 8,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": null,
    "mode": null,
-   "bgg": 8.0,
-   "weight": null,
-   "bggId": 366013,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "How to Be a Complete Bastard",
+   "bggId": null,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Kabuto Sumo",
+   "bggId": 320390,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 6.7,
    "weight": null,
-   "bggId": 320390,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Lucky Numbers",
+   "bggId": 118247,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 6.4,
    "weight": null,
-   "bggId": 118247,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Munchkin Marvel",
+   "bggId": 189848,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 6.8,
    "weight": null,
-   "bggId": 189848,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Mysterium",
+   "bggId": 181304,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 7.2,
    "weight": null,
-   "bggId": 181304,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Odin's Ravens (Second Edition)",
+   "bggId": 192074,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
+   "bgg": 7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": null,
    "mode": null,
-   "bgg": 7.0,
-   "weight": null,
-   "bggId": 192074,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Paperback",
+   "bggId": 141572,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 7.1,
    "weight": null,
-   "bggId": 141572,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Pick Up Sticks",
+   "bggId": 6424,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 4.4,
    "weight": null,
-   "bggId": 6424,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Pirates of Perfidy",
+   "bggId": null,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Scape Goat",
+   "bggId": 315043,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 6.9,
    "weight": null,
-   "bggId": 315043,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "SCOUT",
+   "bggId": 291453,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 7.8,
    "weight": null,
-   "bggId": 291453,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Scrabble",
+   "bggId": 320,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 6.3,
    "weight": null,
-   "bggId": 320,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Sea Battle",
+   "bggId": null,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Sequence",
+   "bggId": 2375,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 6.2,
    "weight": null,
-   "bggId": 2375,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Stabber in the Cabin",
+   "bggId": null,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": null,
    "weight": null,
-   "bggId": null,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "T.I.M.E Stories: Under the Mask",
+   "bggId": 146508,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 7.3,
    "weight": null,
-   "bggId": 146508,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Taboo",
+   "bggId": 1111,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 6.3,
    "weight": null,
-   "bggId": 1111,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Trust Me, I'm a Superhero",
+   "bggId": 315733,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 5.6,
    "weight": null,
-   "bggId": 315733,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Two Rooms and a Boom",
+   "bggId": 134352,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
+   "bgg": 7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
    "cat": null,
    "mode": null,
-   "bgg": 7.0,
-   "weight": null,
-   "bggId": 134352,
-   "playsLike": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Upwords",
+   "bggId": 1515,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 5.8,
    "weight": null,
-   "bggId": 1515,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   },
   {
    "name": "Yum Cha",
+   "bggId": 363991,
    "players": null,
    "mins": null,
    "time": null,
    "age": null,
    "catText": null,
-   "cat": null,
-   "mode": null,
    "bgg": 6.4,
    "weight": null,
-   "bggId": 363991,
-   "playsLike": null,
+   "playable": true,
+   "forSale": false,
+   "cat": null,
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "forSale": false,
-   "playable": true
+   "playsLike": null
   }
  ],
  "picks": []
