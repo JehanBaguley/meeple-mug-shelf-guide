@@ -1,5 +1,5 @@
 {
- "built": "2026-07-19T13:21:36.000Z",
+ "built": "2026-07-19T13:22:58.000Z",
  "games": [
   {
    "name": "20 Questions",
@@ -494,7 +494,7 @@
    "mins": 120,
    "time": "60–120m",
    "age": "12+",
-   "catText": "Strategy",
+   "catText": "Strategy, Economic",
    "cat": "strategy",
    "mode": null,
    "bgg": 7.7,
@@ -509,12 +509,12 @@
   {
    "name": "Betrayal at House on the Hill",
    "players": [
-    4,
-    7
+    3,
+    6
    ],
-   "mins": 40,
-   "time": "20–40m",
-   "age": "8+",
+   "mins": 60,
+   "time": "60m",
+   "age": "12+",
    "catText": "Horror, Cooperative",
    "cat": "coop",
    "mode": "coop",
@@ -4295,7 +4295,7 @@
     4
    ],
    "mins": 120,
-   "time": "60–120m",
+   "time": "90–120m",
    "age": "14+",
    "catText": "Strategy, Adventure",
    "cat": "strategy",
@@ -4336,8 +4336,8 @@
     1,
     6
    ],
-   "mins": null,
-   "time": null,
+   "mins": 60,
+   "time": "30–60m",
    "age": "13+",
    "catText": "Resource Management",
    "cat": null,
@@ -4358,7 +4358,7 @@
     5
    ],
    "mins": 150,
-   "time": "30–150m",
+   "time": "60–150m",
    "age": "14+",
    "catText": "Strategy, Economic",
    "cat": "strategy",
