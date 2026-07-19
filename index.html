@@ -10,7 +10,7 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;600&display=swap');
   :root{--bg:#22352c;--bg-deep:#18261f;--card:#f2ead8;--card-edge:#e2d6bc;--timber:#c9a06b;--timber-light:#dcb98a;
-    --red:#c8452e;--amber:#e0a63c;--ink:#2b2419;--ink-soft:#6b6150;--cream:#ece5d3;--muted:#a9bcae;--line:rgba(236,229,211,.16)}
+    --red:#c8452e;--amber:#d8d848;--ink:#2b2419;--ink-soft:#6b6150;--cream:#ece5d3;--muted:#a9bcae;--line:rgba(236,229,211,.16)}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--cream);font-family:'Bricolage Grotesque',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   .mono{font-family:'IBM Plex Mono',monospace}
@@ -66,8 +66,10 @@
   .seg{display:flex;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:12px}
   .seg button{flex:1;padding:12px 0;font-size:12.5px;font-weight:700;background:transparent;border:0;color:var(--muted)}
   .seg button[aria-pressed="true"]{background:var(--amber);color:var(--ink)}
-  .actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;align-items:center}
-  .state{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:9px;font-size:12px;font-weight:700;background:#e9e0cb;color:#4a4234}
+  .actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center}
+  .state{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:8px;font-size:11px;font-weight:700;background:#e9e0cb;color:#4a4234}
+  .state.sale{background:#dceadf;color:#2c5236}
+  .dot.saledot{background:#2c5236}
   .dot{width:8px;height:8px;border-radius:50%;background:#4c8f5d}
   .dot.out{background:#d08430}
   .cta{display:inline-flex;align-items:center;padding:9px 14px;border-radius:9px;font-size:12.5px;font-weight:800;text-decoration:none;min-height:38px}
@@ -120,7 +122,7 @@
     .side{position:sticky;top:8px;max-height:calc(100vh - 16px);overflow-y:auto;padding-right:2px;scrollbar-width:none}
     .side::-webkit-scrollbar{display:none}
     .panelwrap > summary{display:none}
-    .list{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+    .list{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .gcard{margin:0}
   }
   @media(min-width:1500px){ .list{grid-template-columns:1fr 1fr 1fr} }
@@ -500,11 +502,10 @@ function render(){
       (g.exp?'<span class="badge b-exp">expansion</span>':"")+
       (g.pickBy?'<span class="badge b-pick">'+g.pickBy+"'s pick</span>":"");
     const stOut = g.status && !/^on/i.test(g.status);
-    const playState = g.playable ? '<span class="state"><span class="dot'+(stOut?' out':'')+'"></span>'+(g.status?g.status:"On the shelf to play")+'</span>' : "";
-    const buyCta = g.forSale
-      ? '<a class="cta buy" href="'+requestUrl(g,"buy")+'">Buy'+(g.priceTxt?" \u00b7 "+g.priceTxt:"")+'</a>'
-      : (g.playable ? '<a class="cta req" href="'+requestUrl(g,"order")+'">Request a copy</a>' : "");
-    const actions = (playState||buyCta) ? '<div class="actions">'+playState+buyCta+'</div>' : "";
+    const tags = [];
+    if(g.playable) tags.push('<span class="state"><span class="dot'+(stOut?' out':'')+'"></span>'+(g.status?g.status:"On the shelf")+'</span>');
+    if(g.forSale) tags.push('<span class="state sale"><span class="dot saledot"></span>For sale'+(g.priceTxt?' \u00b7 '+g.priceTxt:'')+'</span>');
+    const actions = tags.length ? '<div class="actions">'+tags.join('')+'</div>' : "";
     const bits = [];
     if(g.bgg!=null) bits.push('\u2605 '+g.bgg);
     if(hasStats(g)) bits.push(g.players[0]===g.players[1]?(g.players[1]>=20?g.players[0]+"p+":g.players[0]+"p only"):(g.players[1]>=20?g.players[0]+"p+":g.players[0]+"\u2013"+g.players[1]+"p"));
@@ -520,7 +521,8 @@ function render(){
     const plays = g.playsLike?'<p class="blurb">'+g.playsLike+'</p>':"";
     return '<article class="gcard"><div class="spine" style="background:'+spine+'"></div><div class="gbody">'+
       '<div class="gname"><h3>'+g.name+'</h3>'+badges+'</div>'+stats+plays+pickNote+actions+
-      '<div class="glinks"><a href="'+bggUrl(g)+'" target="_blank" rel="noopener noreferrer">BGG \u2197</a></div>'+
+      '<div class="glinks"><a href="'+bggUrl(g)+'" target="_blank" rel="noopener noreferrer">BGG \u2197</a>'+
+      (g.forSale ? '<a href="'+requestUrl(g,"buy")+'">Buy a copy</a>' : (g.playable ? '<a href="'+requestUrl(g,"order")+'">Request a copy</a>' : ""))+'</div>'+
       '</div></article>';
   }).join("") : '<div class="empty">'+(state.seg==="buy" && !DATA.games.some(g=>g.forSale)
     ? "No take-home stock is listed online yet \u2014 ask at the counter about buying a copy. Staff: set for_sale and price in the sheet and Buy buttons appear here."
