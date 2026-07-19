@@ -77,13 +77,17 @@ function parseTimeTxt(s) {
 }
 // mirrors the site's spine-colour mapping
 function catSlugFor(t) {
-  // primary (first-listed) category decides the card colour
+  // primary (first-listed) category decides the colour; every token maps to one of nine groups
   for (const c of (t || "").toLowerCase().split(",").map(s => s.trim()).filter(Boolean)) {
     if (/co-?op|cooperative/.test(c)) return "coop";
-    if (/party|dexterity|drawing|humor|trivia/.test(c)) return "party";
+    if (/party|dexterity|drawing|humor|trivia|word|social|storytelling/.test(c)) return "party";
     if (/deduction|bluffing|hidden roles|political/.test(c)) return "deduct";
-    if (/family|children/.test(c)) return "family";
-    if (/strategy|economic|worker placement|area control|tactical|abstract|tile|city building|civilization|deck building|legacy|asymmetric/.test(c)) return "strategy";
+    if (/family|children|kids/.test(c)) return "family";
+    if (/horror|adult/.test(c)) return "dark";
+    if (/card|deck building|dice|set collection|bidding/.test(c)) return "cards";
+    if (/adventure|exploration|sci-?fi|fantasy|superhero|thematic|legacy|roleplaying|historical|action/.test(c)) return "adventure";
+    if (/abstract|puzzle|tile|expansion/.test(c)) return "abstract";
+    if (/strategy|economic|worker placement|area control|tactical|city building|civilization|asymmetric|resource management|racing|real-?time/.test(c)) return "strategy";
   }
   return null;
 }
