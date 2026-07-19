@@ -78,6 +78,13 @@
   footer{margin:28px 0 60px;font-size:11.5px;color:var(--muted);line-height:1.6}
   .note{font-size:12px;color:var(--muted);margin:-4px 0 10px}
   .genrow{display:flex;gap:7px;flex-wrap:wrap}
+  .fsec{margin-top:10px}
+  .fsec summary{cursor:pointer;font-weight:700;font-size:13.5px;padding:4px 0;list-style:none;display:flex;align-items:center;gap:8px}
+  .fsec summary::-webkit-details-marker{display:none}
+  .fsec summary::after{content:"\25be";color:var(--muted);margin-left:auto;transition:transform .15s}
+  .fsec[open] summary::after{transform:rotate(180deg)}
+  .fsec .genrow{padding-top:7px}
+  .gsum{font-size:11.5px;color:var(--muted);font-weight:600}
   .genrow .wt{flex:0 0 auto;white-space:nowrap;padding-left:12px;padding-right:12px}
   .genrow .wt small{opacity:.65;font-weight:600;margin-left:4px}
   .morebtn{background:transparent;border:0;color:#c9a06b;font-weight:700;font-size:12.5px;padding:9px 4px;text-decoration:underline}
@@ -120,30 +127,34 @@
       <input type="range" class="dual" id="minSeat" min="1" max="10" value="1" aria-label="Minimum players" />
       <input type="range" class="dual" id="maxSeat" min="1" max="10" value="10" aria-label="Maximum players" />
     </div>
-    <div class="rowlabel" style="margin-top:8px"><strong>Time you've got</strong><span class="readout mono" id="timeOut">any length</span></div>
-    <input type="range" class="single" id="timeRange" min="0" max="7" step="1" value="7" aria-label="Maximum playtime" />
+    <div class="rowlabel" style="margin-top:8px"><strong>Playtime</strong><span class="readout mono" id="timeOut">any length</span></div>
+    <div class="dualwrap">
+      <div class="dualtrack"></div><div class="dualfill" id="timeFill"></div>
+      <input type="range" class="dual" id="minTime" min="0" max="8" value="0" aria-label="Minimum playtime" />
+      <input type="range" class="dual" id="maxTime" min="0" max="8" value="8" aria-label="Maximum playtime" />
+    </div>
     <div class="rowlabel" style="margin-top:10px;margin-bottom:6px"><strong>Rules complexity</strong></div>
     <div style="display:flex;gap:7px">
       <button class="wt on" data-wt="easy" aria-pressed="true">Easy</button>
       <button class="wt on" data-wt="medium" aria-pressed="true">Medium</button>
       <button class="wt on" data-wt="heavy" aria-pressed="true">Heavy</button>
     </div>
-    <div class="rowlabel" style="margin-top:10px;margin-bottom:6px"><strong>Youngest player</strong></div>
-    <div class="genrow" id="ageRow">
-      <button class="wt on" data-age="0" aria-pressed="true">Any</button>
-      <button class="wt" data-age="4" aria-pressed="false">4+</button>
-      <button class="wt" data-age="6" aria-pressed="false">6+</button>
-      <button class="wt" data-age="8" aria-pressed="false">8+</button>
-      <button class="wt" data-age="10" aria-pressed="false">10+</button>
-      <button class="wt" data-age="12" aria-pressed="false">12+</button>
-      <button class="wt" data-age="14" aria-pressed="false">14+</button>
-      <button class="wt" data-age="17" aria-pressed="false">17+</button>
+    <div class="rowlabel" style="margin-top:8px"><strong>Age rating</strong><span class="readout mono" id="ageOut">any age</span></div>
+    <div class="dualwrap">
+      <div class="dualtrack"></div><div class="dualfill" id="ageFill"></div>
+      <input type="range" class="dual" id="minAge" min="4" max="18" value="4" aria-label="Minimum age rating" />
+      <input type="range" class="dual" id="maxAge" min="4" max="18" value="18" aria-label="Maximum age rating" />
     </div>
-    <div class="note" style="margin:6px 0 0">Shows games everyone at the table is old enough for.</div>
-    <div class="rowlabel" style="margin-top:10px;margin-bottom:6px"><strong>Genre</strong></div>
-    <div class="genrow" id="genreRow"></div>
-    <div class="rowlabel" style="margin-top:10px"><strong>Max price (for-sale games)</strong><span class="readout mono" id="priceOut">$200+</span></div>
-    <input type="range" class="single" id="priceRange" min="30" max="200" step="5" value="200" aria-label="Maximum price" />
+    <details class="fsec" id="genreSec">
+      <summary><strong>Genre</strong><span class="gsum" id="genreSum">any</span></summary>
+      <div class="genrow" id="genreRow"></div>
+    </details>
+    <div class="rowlabel" style="margin-top:8px"><strong>Price (for-sale games)</strong><span class="readout mono" id="priceOut">any price</span></div>
+    <div class="dualwrap">
+      <div class="dualtrack"></div><div class="dualfill" id="priceFill"></div>
+      <input type="range" class="dual" id="minPrice" min="0" max="200" step="5" value="0" aria-label="Minimum price" />
+      <input type="range" class="dual" id="maxPrice" min="0" max="200" step="5" value="200" aria-label="Maximum price" />
+    </div>
   </div>
 
   <div class="countsort">
@@ -194,14 +205,13 @@ const EMBED = {"games":[{"name":"20 Questions","players":[2,20],"mins":30,"time"
 
 const CATS = {party:"#e0a63c",bluff:"#c8452e",heavy:"#9b7fae",engine:"#6aa39a",family:"#8aa08e",coop:"#5b87a5",war:"#7b7466",two:"#c9a06b",strategy:"#4f86b8",deduct:"#3d6fa5"};
 const MODE_LABEL = {coop:"co-op",team:"teams",comp:"competitive"};
-const TIME_STOPS = [20,30,45,60,90,120,180,360];
-const state = {seg:"all",pick:null,minSeats:1,maxSeats:10,timeIdx:7,wtOn:{easy:true,medium:true,heavy:true},tags:{},ageCap:0,maxPrice:200,query:"",sortBy:"name",sortDir:1,tagsExpanded:false};
+const S_TIME = [0,20,30,45,60,90,120,180,360];
+const state = {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},pLo:0,pHi:200,query:"",sortBy:"name",sortDir:1};
 let DATA = EMBED;
 
 const $ = id => document.getElementById(id);
 const norm = s => s.toLowerCase().replace(/[^a-z0-9 ]/g,"").trim();
 const seatLabel = n => n>=10?"10+":n;
-const timeLabel = m => m>=360?"any length":(m>=120?"\u2264 "+(m/60)+" hrs":"\u2264 "+m+" min");
 const wtBucket = w => w<2?"easy":(w<=3?"medium":"heavy");
 const bggUrl = g => g.bggId?("https://boardgamegeek.com/boardgame/"+g.bggId):("https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q="+encodeURIComponent(g.name));
 const hasStats = g => g.players !== null && g.players !== undefined;
@@ -226,18 +236,28 @@ function catSlugFor(t){
   return null;
 }
 const tagAll = games => games.forEach(g => { g.tags = tagsFor(g); });
-const TOP_TAGS = 8;
 function buildTagRow(){
   const counts = {};
   DATA.games.forEach(g => (g.tags||[]).forEach(t => counts[t] = (counts[t]||0) + 1));
-  const all = Object.keys(counts).sort((a,b) => counts[b]-counts[a] || a.localeCompare(b));
-  const shown = state.tagsExpanded ? all : all.slice(0, TOP_TAGS);
-  $("genreRow").innerHTML = shown.map(t =>
+  const all = Object.keys(counts).sort((a,b) => a.localeCompare(b));
+  const sel = Object.keys(state.tags).filter(k => state.tags[k]);
+  $("genreRow").innerHTML = all.map(t =>
     '<button class="wt'+(state.tags[t]?" on":"")+'" data-tag="'+t+'" aria-pressed="'+!!state.tags[t]+'">'+tagLabel(t)+'<small>'+counts[t]+'</small></button>'
-  ).join("") + (all.length > TOP_TAGS
-    ? '<button class="morebtn" id="moreTags">'+(state.tagsExpanded ? "Fewer genres" : "All "+all.length+" genres")+'</button>' : "");
+  ).join("") + (sel.length ? '<button class="morebtn" id="clearTags">Clear genres</button>' : "");
+  $("genreSum").textContent = sel.length ? sel.map(tagLabel).join(" \u00b7 ") : "any";
   $("genreRow").querySelectorAll("[data-tag]").forEach(b => b.addEventListener("click", () => { state.tags[b.dataset.tag] = !state.tags[b.dataset.tag]; buildTagRow(); render(); }));
-  const mb = $("moreTags"); if(mb) mb.addEventListener("click", () => { state.tagsExpanded = !state.tagsExpanded; buildTagRow(); });
+  const cb = $("clearTags"); if(cb) cb.addEventListener("click", () => { state.tags = {}; buildTagRow(); render(); });
+}
+// generic dual-slider wiring: keeps handles ordered, paints the fill bar
+function wireDual(loId, hiId, fillId, loKey, hiKey, min, max){
+  $(loId).addEventListener("input", e => { state[loKey] = Math.min(+e.target.value, state[hiKey]); render(); });
+  $(hiId).addEventListener("input", e => { state[hiKey] = Math.max(+e.target.value, state[loKey]); render(); });
+  return () => {
+    $(loId).value = state[loKey]; $(hiId).value = state[hiKey];
+    const a = ((state[loKey]-min)/(max-min))*100, b = ((state[hiKey]-min)/(max-min))*100;
+    $(fillId).style.left = a+"%"; $(fillId).style.right = (100-b)+"%";
+    $(loId).style.zIndex = state[loKey] > (min+max)/2 ? 3 : 2;
+  };
 }
 // "2-5" | "3+" | "2" → [min,max]
 function parsePlayersTxt(s){
@@ -309,16 +329,23 @@ function render(){
   document.querySelectorAll("[data-seg]").forEach(b=>b.setAttribute("aria-pressed", state.seg===b.dataset.seg));
   document.querySelectorAll("[data-pick]").forEach(b=>{const on=state.pick===+b.dataset.pick;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
   document.querySelectorAll("[data-wt]").forEach(b=>{const on=state.wtOn[b.dataset.wt];b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
-  document.querySelectorAll("[data-age]").forEach(b=>{const on=state.ageCap===+b.dataset.age;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
-  $("minSeat").value=state.minSeats;$("maxSeat").value=state.maxSeats;
-  $("minSeat").style.zIndex=state.minSeats>8?3:2;
+  paints.forEach(p=>p());
   $("seatOut").textContent=seatLabel(state.minSeats)+"\u2013"+seatLabel(state.maxSeats);
-  const lo=((state.minSeats-1)/9)*100, hi=((state.maxSeats-1)/9)*100;
-  $("seatFill").style.left=lo+"%";$("seatFill").style.right=(100-hi)+"%";
-  $("timeRange").value=state.timeIdx;$("timeOut").textContent=timeLabel(TIME_STOPS[state.timeIdx]);
-  $("priceRange").value=state.maxPrice;$("priceOut").textContent="$"+state.maxPrice+(state.maxPrice===200?"+":"");
+  $("timeOut").textContent = (state.tLo===0&&state.tHi===8) ? "any length"
+    : state.tLo===0 ? "\u2264 "+S_TIME[state.tHi]+" min"
+    : state.tHi===8 ? "\u2265 "+S_TIME[state.tLo]+" min"
+    : S_TIME[state.tLo]+"\u2013"+S_TIME[state.tHi]+" min";
+  $("ageOut").textContent = (state.aLo===4&&state.aHi===18) ? "any age"
+    : state.aLo===state.aHi ? state.aLo+"+ only"
+    : state.aHi===18 ? state.aLo+"+ and up"
+    : state.aLo+"+\u2013"+state.aHi+"+";
+  $("priceOut").textContent = (state.pLo===0&&state.pHi===200) ? "any price"
+    : state.pHi===200 ? "$"+state.pLo+"+"
+    : state.pLo===0 ? "\u2264 $"+state.pHi
+    : "$"+state.pLo+"\u2013$"+state.pHi;
 
-  const narrowed = state.minSeats>1||state.maxSeats<10||state.timeIdx<7||!state.wtOn.easy||!state.wtOn.medium||!state.wtOn.heavy;
+  const timeNarrowed = state.tLo>0||state.tHi<8, ageNarrowed = state.aLo>4||state.aHi<18;
+  const narrowed = state.minSeats>1||state.maxSeats<10||timeNarrowed||ageNarrowed||!state.wtOn.easy||!state.wtOn.medium||!state.wtOn.heavy;
   const pickList = state.pick!==null ? DATA.picks[state.pick] : null;
   let hiddenPending = 0;
 
@@ -328,15 +355,15 @@ function render(){
       : g.forSale;
     if(!okAvail) return false;
     if(pickList && !(g.name in pickList.games)) return false;
-    if(g.forSale && g.price!==null && g.price>state.maxPrice && (state.seg==="buy" || !g.playable)) return false;
+    if(g.forSale && g.price!==null && (g.price<state.pLo || (state.pHi<200 && g.price>state.pHi)) && (state.seg==="buy" || !g.playable)) return false;
     if(state.query.trim() && !norm(g.name+" "+(g.playsLike||"")+" "+(g.catText||"")).includes(norm(state.query))) return false;
     const tsel = Object.keys(state.tags).filter(k=>state.tags[k]);
     if(tsel.length && !tsel.some(k=>(g.tags||[]).includes(k))) return false;
-    if(state.ageCap){ const a = ageMin(g); if(a===null || a>state.ageCap) return false; }
     if(narrowed){
       if(!hasStats(g)){ hiddenPending++; return false; }
       if(!(g.players[0]<=state.maxSeats && g.players[1]>=state.minSeats)) return false;
-      if(g.mins>TIME_STOPS[state.timeIdx]) return false;
+      if(timeNarrowed){ if(g.mins===null || g.mins<S_TIME[state.tLo] || (state.tHi<8 && g.mins>S_TIME[state.tHi])) return false; }
+      if(ageNarrowed){ const a = ageMin(g); if(a===null || a<state.aLo || a>state.aHi) return false; }
       if(g.weight!=null && !state.wtOn[wtBucket(g.weight)]) return false;
     }
     return true;
@@ -386,7 +413,9 @@ function render(){
       '<div class="gname"><h3>'+g.name+'</h3>'+badges+'</div>'+stats+plays+pickNote+actions+
       '<div class="glinks"><a href="'+bggUrl(g)+'" target="_blank" rel="noopener noreferrer">BGG \u2197</a></div>'+
       '</div></article>';
-  }).join("") : '<div class="empty">Nothing matches. Loosen a filter or two.</div>';
+  }).join("") : '<div class="empty">'+(state.seg==="buy" && !DATA.games.some(g=>g.forSale)
+    ? "No take-home stock is listed online yet \u2014 ask at the counter about buying a copy. Staff: set for_sale and price in the sheet and Buy buttons appear here."
+    : "Nothing matches. Loosen a filter or two.")+'</div>';
 }
 
 // ————— Prefer synced data/games.json when the Action has run —————
@@ -404,14 +433,16 @@ $("search").addEventListener("input",e=>{state.query=e.target.value;render()});
 $("seg").addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(b){state.seg=b.dataset.seg;render()}});
 $("picks").addEventListener("click",e=>{const b=e.target.closest("[data-pick]");if(b){state.pick=state.pick===+b.dataset.pick?null:+b.dataset.pick;render()}});
 document.querySelectorAll("[data-wt]").forEach(b=>b.addEventListener("click",()=>{state.wtOn[b.dataset.wt]=!state.wtOn[b.dataset.wt];render()}));
-document.querySelectorAll("[data-age]").forEach(b=>b.addEventListener("click",()=>{state.ageCap=+b.dataset.age;render()}));
 $("dirBtn").addEventListener("click",()=>{state.sortDir*=-1;$("dirBtn").textContent=state.sortDir===1?"\u2191":"\u2193";render()});
 window.addEventListener("scroll",()=>{$("toTop").hidden = window.scrollY < 600},{passive:true});
 $("toTop").addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
-$("minSeat").addEventListener("input",e=>{state.minSeats=Math.min(+e.target.value,state.maxSeats);render()});
-$("maxSeat").addEventListener("input",e=>{state.maxSeats=Math.max(+e.target.value,state.minSeats);render()});
-$("timeRange").addEventListener("input",e=>{state.timeIdx=+e.target.value;render()});
-$("priceRange").addEventListener("input",e=>{state.maxPrice=+e.target.value;render()});
+const paints = [
+  wireDual("minSeat","maxSeat","seatFill","minSeats","maxSeats",1,10),
+  wireDual("minTime","maxTime","timeFill","tLo","tHi",0,8),
+  wireDual("minAge","maxAge","ageFill","aLo","aHi",4,18),
+  wireDual("minPrice","maxPrice","priceFill","pLo","pHi",0,200),
+];
+if(matchMedia("(min-width:760px)").matches) $("genreSec").open = true;
 $("sortSel").addEventListener("change",e=>{state.sortBy=e.target.value;render()});
 boot();
 </script>
