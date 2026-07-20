@@ -95,7 +95,7 @@
   .fsec{margin-top:16px}
   .fsec summary{cursor:pointer;font-weight:700;font-size:13.5px;padding:4px 0;list-style:none;display:flex;align-items:center;gap:8px}
   .fsec summary::-webkit-details-marker{display:none}
-  .fsec summary::after{content:"\25be";color:var(--muted);margin-left:auto;transition:transform .15s}
+  .fsec summary::after{content:"";width:11px;height:11px;margin-left:auto;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%239dc0a8' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") center/10px no-repeat;transition:transform .15s}
   .fsec[open] summary::after{transform:rotate(180deg)}
   .panelwrap > summary{background:var(--bg-deep);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
   .fsec .genrow{padding-top:7px}
@@ -118,17 +118,17 @@
     body.sheet-open .panelwrap > summary{display:none}
   }
   @media(min-width:900px){ .sheetbtn,#scrim{display:none!important} }
-  .mbar{display:none}
+  .mfiltbtn{display:none}
   @media(max-width:899px){
-    #search{display:none}
+    .mtop{position:sticky;top:0;z-index:40;background:var(--bg);padding:8px 0;margin:0 -2px 6px;box-shadow:0 8px 14px -10px rgba(0,0,0,.6)}
+    .mtoprow{display:flex;gap:8px;align-items:center}
+    .mtop #search{margin-bottom:0;flex:1;min-width:0}
+    .mtop .seg{margin:8px 0 0}
+    .mfiltbtn{display:inline-flex;align-items:center;gap:6px;flex:0 0 auto;white-space:nowrap}
+    .countsort{position:static;box-shadow:none;padding:6px 0 0;margin:0}
     .countsort .sheetbtn{display:none}
-    main.wrap{padding-bottom:84px}
-    .mbar{display:flex;gap:8px;align-items:center;position:fixed;left:0;right:0;bottom:0;z-index:45;padding:10px 12px;background:var(--bg);border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(0,0,0,.45)}
-    #msearch{flex:1;min-width:0}
-    .mfiltbtn{flex:0 0 auto;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
-    body.sheet-open .mbar{display:none}
-    body.sheet-open .side > #segDesc,body.sheet-open .side > .seg,body.sheet-open .side > #picksLabel,body.sheet-open .side > #picksSel{display:none}
-    #toTop{left:14px;right:auto;bottom:94px}
+    #toTop{left:14px;right:auto}
+    body.sheet-open .mtop,body.sheet-open .side > #segDesc,body.sheet-open .side > #picksLabel,body.sheet-open .side > #picksSel{display:none}
   }
   .genrow .wt{flex:0 0 auto;white-space:nowrap;padding-left:12px;padding-right:12px}
   .genrow .wt small{opacity:.65;font-weight:600;margin-left:4px}
@@ -161,12 +161,16 @@
 <main class="wrap">
 <div class="cols">
 <aside class="side">
-  <input type="text" id="search" placeholder="Search games…" aria-label="Search games" autocomplete="off" />
-
-  <div class="seg" id="seg" role="group" aria-label="Availability">
-    <button data-seg="all" aria-pressed="true">All</button>
-    <button data-seg="play" aria-pressed="false">Play here</button>
-    <button data-seg="buy" aria-pressed="false">Take home</button>
+  <div class="mtop">
+    <div class="mtoprow">
+      <input type="text" id="search" placeholder="Search games…" aria-label="Search games" autocomplete="off" />
+      <button id="mfilt" class="dirbtn mfiltbtn">Filters<span id="mfiltBadge" class="fbadge" hidden></span></button>
+    </div>
+    <div class="seg" id="seg" role="group" aria-label="Availability">
+      <button data-seg="all" aria-pressed="true">All</button>
+      <button data-seg="play" aria-pressed="false">Play here</button>
+      <button data-seg="buy" aria-pressed="false">Take home</button>
+    </div>
   </div>
   <p class="segdesc mono" id="segDesc"></p>
 
@@ -241,10 +245,6 @@
     The play library is the café's own list, kept up to date by staff in a shared sheet. Ratings are BoardGameGeek community averages. Buy a copy and Request a copy open the café's <a href="https://www.meepleandmug.com.au/contact" target="_blank" rel="noopener">contact page</a> — nothing is charged online. Or reach the café at <a href="mailto:admin@meepleandmug.com.au">admin@meepleandmug.com.au</a> or (+61) 0418 893 929.
     <span class="credit">Designed &amp; built by <a href="https://github.com/JehanBaguley" target="_blank" rel="noopener">Jehan Baguley</a>.</span>
   </footer>
-  <div class="mbar" id="mbar">
-    <input type="text" id="msearch" placeholder="Search games…" aria-label="Search games" autocomplete="off" />
-    <button id="mfilt" class="dirbtn mfiltbtn">Filters<span id="mfiltBadge" class="fbadge" hidden></span></button>
-  </div>
 </main>
 <div id="scrim" hidden></div>
 <button id="toTop" hidden aria-label="Back to top">↑</button>
@@ -316,7 +316,7 @@ function buildTagRow(){
   lastTagSig = "";
   const counts = {};
   DATA.games.forEach(g => (g.tags||[]).forEach(t => counts[t] = (counts[t]||0) + 1));
-  const all = Object.keys(counts).sort((a,b) => a.localeCompare(b));
+  const all = Object.keys(counts).sort((a,b) => counts[b]-counts[a] || a.localeCompare(b));
   const sel = Object.keys(state.tags).filter(k => state.tags[k]);
   $("genreRow").innerHTML = all.map(t => {
     const slug = catSlugFor(t);
@@ -530,7 +530,7 @@ function render(){
   list.sort((a,b)=>sorters[state.sortBy](a,b)||a.name.localeCompare(b.name));
 
   $("countOut").textContent=list.length+" of "+DATA.games.length+" games";
-  $("search").placeholder="Search "+DATA.games.length+" games…"; { const m=$("msearch"); if(m) m.placeholder=$("search").placeholder; }
+  $("search").placeholder="Search "+DATA.games.length+" games…";
   $("sheetCount").textContent = activeFilters; $("sheetCount").hidden = !activeFilters;
   { const mb=$("mfiltBadge"); if(mb){ mb.textContent=activeFilters; mb.hidden=!activeFilters; } }
   $("sheetDone").textContent = "Show "+list.length+" game"+(list.length===1?"":"s");
@@ -581,10 +581,10 @@ async function boot(){
   buildPicks(); buildTagRow(); render(); applySheet();
 }
 
-function syncQuery(v){state.query=v;if($("search").value!==v)$("search").value=v;const m=$("msearch");if(m&&m.value!==v)m.value=v;render();}
-$("search").addEventListener("input",e=>syncQuery(e.target.value));
-$("msearch").addEventListener("input",e=>syncQuery(e.target.value));
+$("search").addEventListener("input",e=>{state.query=e.target.value;render();});
 $("mfilt").addEventListener("click",()=>openSheet(true));
+function placeMtop(){const mtop=document.querySelector(".mtop"),mainw=document.querySelector("main.wrap"),cols=document.querySelector(".cols"),side=document.querySelector(".side");if(!mtop)return;if(matchMedia("(max-width:899px)").matches){if(mtop.parentElement!==mainw)mainw.insertBefore(mtop,cols);}else{if(mtop.parentElement!==side)side.insertBefore(mtop,side.firstChild);}}
+placeMtop();window.addEventListener("resize",placeMtop);
 $("seg").addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(b){state.seg=b.dataset.seg;render()}});
 $("picksSel").addEventListener("change",e=>{const v=e.target.value;state.pick=v===""?null:+v;render();if(matchMedia("(max-width:899px)").matches)document.querySelector(".results").scrollIntoView({behavior:"smooth",block:"start"});});
 document.querySelectorAll("[data-wt]").forEach(b=>b.addEventListener("click",()=>{state.wtOn[b.dataset.wt]=!state.wtOn[b.dataset.wt];render()}));
@@ -599,7 +599,7 @@ const paints = [
 ];
 function resetAll(){
   Object.assign(state, {pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:""});
-  $("search").value = ""; { const m=$("msearch"); if(m) m.value=""; }
+  $("search").value = "";
   buildTagRow(); render();
 }
 function openSheet(open){
