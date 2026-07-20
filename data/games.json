@@ -1,5 +1,5 @@
 {
- "built": "2026-07-19T20:35:22.376Z",
+ "built": "2026-07-20T01:05:49.157Z",
  "games": [
   {
    "name": "20 Questions",
@@ -6748,5 +6748,30 @@
    "playsLike": null
   }
  ],
- "picks": []
+ "picks": [
+  {
+   "list": "Jehan · member example",
+   "note": "",
+   "games": {
+    "Alchemists": "Deduction masterpiece, big teach",
+    "Deal with the Devil": "Hidden roles inside a heavy euro",
+    "Wavelength": "Best big-group conversation game",
+    "Arcs": "Drama in a box, play it here first",
+    "Everdell: Silverfrost": "Prettiest engine on the shelf",
+    "SETI": "Terraforming Mars fans start here",
+    "Cosmic Encounter": "The rules are lies",
+    "EXIT: The Game (series)": "Escape room night in a box",
+    "Unlock!": "Replayable co-op puzzles",
+    "Dorfromantik": "Cosiest co-op going"
+   }
+  },
+  {
+   "list": "Staff sample · Ollie",
+   "note": "",
+   "games": {
+    "Everdell": "Table wow factor every time",
+    "Sky Team": "Perfect date-night co-op"
+   }
+  }
+ ]
 }
