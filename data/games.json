@@ -1,5 +1,5 @@
 {
- "built": "2026-07-20T05:07:30.644Z",
+ "built": "2026-07-20T18:47:48.535Z",
  "games": [
   {
    "name": "20 Questions",
@@ -333,6 +333,28 @@
    "bggUrl": "https://boardgamegeek.com/boardgame/67877"
   },
   {
+   "name": "Aquaduck",
+   "bggId": 434415,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 120,
+   "time": "60–120m",
+   "age": "10+",
+   "catText": "Card Game, City Building",
+   "bgg": 9.5,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "City-states vie to be the heart of the Roman Eggpublic in this 3D city-builder.",
+   "bggUrl": "https://boardgamegeek.com/boardgame/434415/aqueducks"
+  },
+  {
    "name": "Arboretum",
    "bggId": 140934,
    "players": [
@@ -374,9 +396,7 @@
    "price": 80,
    "priceTxt": "$80–110",
    "playsLike": "Root and Oath, condensed into 90 minutes",
-   "bggUrl": "https://boardgamegeek.com/boardgame/359871/arcs",
-   "pickBy": "Jehan",
-   "pickNote": "Drama in a box, play it here first"
+   "bggUrl": "https://boardgamegeek.com/boardgame/359871/arcs"
   },
   {
    "name": "Arcs: The Blighted Reach",
@@ -399,7 +419,9 @@
    "priceTxt": "~$140",
    "playsLike": "Oath — a competitive campaign epic",
    "exp": true,
-   "bggUrl": "https://boardgamegeek.com/boardgame/363757/arcs-the-blighted-reach-expansion"
+   "bggUrl": "https://boardgamegeek.com/boardgame/363757/arcs-the-blighted-reach-expansion",
+   "pickBy": "Jehan",
+   "pickNote": ""
   },
   {
    "name": "Ark Nova",
@@ -591,7 +613,7 @@
    "playable": true,
    "forSale": true,
    "cat": "abstract",
-   "mode": "comp",
+   "mode": null,
    "price": 65,
    "priceTxt": "~$65",
    "playsLike": "Cascadia's abstract cousin — pattern-drafting tiles",
@@ -660,7 +682,7 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null,
+   "playsLike": "extra characters and cards for BANG!",
    "exp": true
   },
   {
@@ -1775,7 +1797,7 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null,
+   "playsLike": "Coup with religious factions to hide behind",
    "exp": true
   },
   {
@@ -2195,7 +2217,7 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": null,
+   "playsLike": "the Antarctic expansion for Eldritch Horror",
    "exp": true
   },
   {
@@ -3272,7 +3294,7 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null,
+   "playsLike": "Kingdomino with giants trampling your kingdom",
    "exp": true
   },
   {
@@ -4720,7 +4742,7 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null,
+   "playsLike": "a two-player wooden abstract — stacking and capturing",
    "bggUrl": "https://boardgamegeek.com/boardgame/113517"
   },
   {
@@ -5025,7 +5047,7 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null,
+   "playsLike": "a boss-fight expansion for RuneScape Kingdoms",
    "exp": true
   },
   {
@@ -5354,7 +5376,7 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null,
+   "playsLike": "Catan stretched to five and six players",
    "exp": true
   },
   {
@@ -5837,7 +5859,7 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": null,
+   "playsLike": "an Ancient-Egypt case for T.I.M.E Stories",
    "exp": true,
    "bggUrl": "https://boardgamegeek.com/boardgame/146508"
   },
@@ -6838,17 +6860,17 @@
    ],
    "mins": null,
    "time": null,
-   "age": null,
-   "catText": null,
+   "age": "12+",
+   "catText": "Adventure, Survival",
    "bgg": null,
    "weight": 2,
    "playable": true,
    "forSale": true,
-   "cat": null,
+   "cat": "adventure",
    "mode": "comp",
    "price": 60,
    "priceTxt": "~$60?",
-   "playsLike": null
+   "playsLike": "pioneers heading west — Oregon Trail with combat and betrayal"
   },
   {
    "name": "Werewolves of Millers Hollow",
@@ -6988,8 +7010,8 @@
     2,
     4
    ],
-   "mins": 30,
-   "time": "30m",
+   "mins": 120,
+   "time": "60–120m",
    "age": "8+",
    "catText": "Family, Card Game",
    "bgg": 6.4,
@@ -7000,7 +7022,7 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null,
+   "playsLike": "matching dim sum sets — Mahjong, but breezier",
    "bggUrl": "https://boardgamegeek.com/boardgame/363991"
   }
  ],
@@ -7010,7 +7032,7 @@
    "note": "",
    "games": {
     "Alchemists": "Deduction masterpiece, big teach",
-    "Arcs": "Drama in a box, play it here first",
+    "Arcs: The Blighted Reach": "",
     "Cosmic Encounter": "The rules are lies",
     "Deal with the Devil": "Hidden roles inside a heavy euro",
     "Dorfromantik": "Cosiest co-op going",
