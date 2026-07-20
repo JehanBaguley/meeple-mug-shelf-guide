@@ -1,5 +1,5 @@
 {
- "built": "2026-07-20T05:00:47.229Z",
+ "built": "2026-07-20T05:07:30.644Z",
  "games": [
   {
    "name": "20 Questions",
@@ -244,7 +244,7 @@
   },
   {
    "name": "Aethermon",
-   "bggId": null,
+   "bggId": 388721,
    "players": [
     2,
     4
@@ -253,7 +253,7 @@
    "time": "30m",
    "age": "8+",
    "catText": "Strategy, Card Game",
-   "bgg": null,
+   "bgg": 6.6,
    "weight": null,
    "playable": true,
    "forSale": false,
@@ -261,7 +261,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Pokémon battling grown into a board game"
+   "playsLike": "Pokémon battling grown into a board game",
+   "bggUrl": "https://boardgamegeek.com/boardgame/388721/aethermon-collect"
   },
   {
    "name": "Agricola",
@@ -379,7 +380,7 @@
   },
   {
    "name": "Arcs: The Blighted Reach",
-   "bggId": null,
+   "bggId": 363757,
    "players": [
     2,
     4
@@ -397,7 +398,8 @@
    "price": 140,
    "priceTxt": "~$140",
    "playsLike": "Oath — a competitive campaign epic",
-   "exp": true
+   "exp": true,
+   "bggUrl": "https://boardgamegeek.com/boardgame/363757/arcs-the-blighted-reach-expansion"
   },
   {
    "name": "Ark Nova",
@@ -1773,7 +1775,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": null,
+   "exp": true
   },
   {
    "name": "Cranium",
@@ -3269,7 +3272,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": null,
+   "exp": true
   },
   {
    "name": "Last Heroes",
@@ -5834,6 +5838,7 @@
    "price": null,
    "priceTxt": null,
    "playsLike": null,
+   "exp": true,
    "bggUrl": "https://boardgamegeek.com/boardgame/146508"
   },
   {
