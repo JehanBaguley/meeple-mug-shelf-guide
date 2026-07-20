@@ -67,6 +67,8 @@
   .seg{display:flex;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:12px}
   .seg button{flex:1;padding:12px 0;font-size:12.5px;font-weight:700;background:transparent;border:0;color:var(--muted)}
   .seg button[aria-pressed="true"]{background:var(--amber);color:var(--ink)}
+  .segdesc{font-size:11.5px;color:var(--muted);margin:-4px 0 14px;line-height:1.45}
+  .picksSel{width:100%;background:var(--bg-deep);color:var(--cream);border:1px solid var(--line);border-radius:8px;padding:9px 12px;font-size:13.5px;font-family:inherit;margin-bottom:12px;cursor:pointer}
   .actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center}
   .state{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:8px;font-size:11px;font-weight:700;background:#e9e0cb;color:#4a4234;border:1px solid transparent}
   .state.sale{background:#f0e3c2;color:#7a5c1e;border-color:#d9c69a}
@@ -95,6 +97,7 @@
   .fsec summary::-webkit-details-marker{display:none}
   .fsec summary::after{content:"\25be";color:var(--muted);margin-left:auto;transition:transform .15s}
   .fsec[open] summary::after{transform:rotate(180deg)}
+  .panelwrap > summary{background:var(--bg-deep);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
   .fsec .genrow{padding-top:7px}
   .gsum{font-size:11.5px;color:var(--muted);font-weight:600}
   .mseg{display:inline-flex;border:1.5px solid var(--timber);border-radius:8px;overflow:hidden}
@@ -153,9 +156,10 @@
     <button data-seg="play" aria-pressed="false">Play here</button>
     <button data-seg="buy" aria-pressed="false">Take home</button>
   </div>
+  <p class="segdesc mono" id="segDesc"></p>
 
   <div class="eyebrow mono" id="picksLabel">Picks &amp; lists · staff and members</div>
-  <div class="chiprow" id="picks"></div>
+  <select id="picksSel" class="picksSel" aria-label="Staff and member pick lists"></select>
 
   <details class="fsec panelwrap" id="filterWrap">
   <summary><strong>Filters</strong><span class="gsum" id="filtCount">none active</span></summary>
@@ -225,7 +229,7 @@
 
   <footer>
     The play library is the café's own list, kept up to date by staff in a shared sheet. Ratings are BoardGameGeek community averages. Buy a copy and Request a copy open the café's <a href="https://www.meepleandmug.com.au/contact" target="_blank" rel="noopener">contact page</a> — nothing is charged online. Or reach the café at <a href="mailto:admin@meepleandmug.com.au">admin@meepleandmug.com.au</a> or (+61) 0418 893 929.
-    <span class="credit">Designed &amp; built by <a href="https://jehanbaguley.com" target="_blank" rel="noopener">Jehan Baguley</a>.</span>
+    <span class="credit">Designed &amp; built by <a href="https://github.com/JehanBaguley" target="_blank" rel="noopener">Jehan Baguley</a>.</span>
   </footer>
 </main>
 <div id="scrim" hidden></div>
@@ -400,14 +404,18 @@ async function applySheet(){
 
 // ————— Picks chips —————
 function buildPicks(){
-  $("picksLabel").hidden = !DATA.picks.length;
-  $("picks").innerHTML = DATA.picks.map((p,i)=>'<button class="pickchip" data-pick="'+i+'" aria-pressed="false">'+p.list+'\u2019s picks</button>').join("");
+  const has = DATA.picks.length;
+  $("picksLabel").hidden = !has;
+  const sel = $("picksSel"); sel.hidden = !has;
+  sel.innerHTML = '<option value="">All games</option>' + DATA.picks.map((p,i)=>'<option value="'+i+'">'+p.list+'\u2019s picks</option>').join("");
+  sel.value = state.pick!==null ? String(state.pick) : "";
 }
 
 // ————— Render —————
 function render(){
   document.querySelectorAll("[data-seg]").forEach(b=>b.setAttribute("aria-pressed", state.seg===b.dataset.seg));
-  document.querySelectorAll("[data-pick]").forEach(b=>{const on=state.pick===+b.dataset.pick;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
+  { const ps=$("picksSel"); if(ps) ps.value = state.pick!==null?String(state.pick):""; }
+  $("segDesc").textContent = {all:"Everything in the building \u2014 play in, or take a copy home.",play:"Play these at a table in the caf\u00e9.",buy:"Take a fresh, sealed copy home from the shelf."}[state.seg];
   document.querySelectorAll("[data-wt]").forEach(b=>{const on=state.wtOn[b.dataset.wt];b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
   paints.forEach(p=>p());
   $("seatOut").textContent=seatLabel(state.minSeats)+"\u2013"+seatLabel(state.maxSeats);
@@ -559,7 +567,7 @@ async function boot(){
 
 $("search").addEventListener("input",e=>{state.query=e.target.value;render()});
 $("seg").addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(b){state.seg=b.dataset.seg;render()}});
-$("picks").addEventListener("click",e=>{const b=e.target.closest("[data-pick]");if(b){state.pick=state.pick===+b.dataset.pick?null:+b.dataset.pick;render()}});
+$("picksSel").addEventListener("change",e=>{const v=e.target.value;state.pick=v===""?null:+v;render()});
 document.querySelectorAll("[data-wt]").forEach(b=>b.addEventListener("click",()=>{state.wtOn[b.dataset.wt]=!state.wtOn[b.dataset.wt];render()}));
 $("dirBtn").addEventListener("click",()=>{state.sortDir*=-1;$("dirBtn").textContent=state.sortDir===1?"\u2191":"\u2193";render()});
 window.addEventListener("scroll",()=>{$("toTop").hidden = window.scrollY < 600},{passive:true});
