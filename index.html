@@ -30,10 +30,12 @@
   h1 span{color:var(--amber)}
   .sub{margin:0 0 16px;font-size:13.5px;color:var(--muted);max-width:560px;line-height:1.5}
   input[type=text],input[type=search],select{background:var(--bg-deep);color:var(--cream);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:14px;font-family:inherit}
-  /* clear-text (×) button on search fields — wipes only the text, leaves filters be */
-  input[type=search]::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none;height:15px;width:15px;margin-left:6px;cursor:pointer;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 2l8 8M10 2l-8 8' stroke='%239dc0a8' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") center/12px no-repeat}
-  input[type=search]::-webkit-search-cancel-button:hover{opacity:.7}
-  input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+  /* custom clear-text (×) button on search fields — wipes only the text, leaves filters be (works on mobile, unlike the native one) */
+  .srchwrap{position:relative;margin-bottom:12px}
+  .srchwrap>#search,.srchwrap>.genresearch{width:100%;margin-bottom:0}
+  .srchclear{position:absolute;top:50%;right:5px;transform:translateY(-50%);background:transparent;border:0;color:var(--muted);font-size:15px;line-height:1;padding:6px 9px;cursor:pointer;border-radius:6px}
+  .srchclear:hover{color:var(--cream)}
+  .srchclear[hidden],.srchwrap[hidden]{display:none}
   select{-webkit-appearance:none;appearance:none;padding-right:32px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%239dc0a8' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
   input[type=text]::placeholder,input[type=search]::placeholder{color:var(--muted)}
   #search{width:100%;margin-bottom:12px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 16 16'%3E%3Ccircle cx='7' cy='7' r='5' stroke='%239dc0a8' stroke-width='1.5' fill='none'/%3E%3Cpath d='M10.8 10.8l3.2 3.2' stroke='%239dc0a8' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:13px center;padding-left:36px}
@@ -42,7 +44,7 @@
   .chiprow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
   .avail,.pickchip{padding:8px 16px;border-radius:999px;font-size:12.5px;font-weight:700;border:1px solid var(--line);background:transparent;color:var(--cream)}
   .avail.on{border-color:var(--amber);background:var(--amber);color:var(--ink)}
-  .pickchip.on{border-color:var(--timber);background:var(--timber);color:var(--ink)}
+  .pickchip.on{border-color:var(--amber);background:var(--amber);color:var(--ink)}
   .wt{flex:1;padding:8px 0;border-radius:8px;font-size:12.5px;font-weight:700;border:1px solid var(--line);background:transparent;color:var(--muted)}
   .wt.on{border-color:var(--amber);background:var(--amber);color:var(--ink)}
   .panel{background:var(--bg-deep);border:1px solid var(--line);border-radius:16px;padding:16px 16px 12px;margin-bottom:12px}
@@ -93,7 +95,7 @@
   /* Picks & lists collections row: wraps in the desktop sidebar, scrolls horizontally on mobile */
   .picksrow{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
   .pickchip{flex:0 0 auto;white-space:nowrap;background:var(--bg-deep);color:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:12.5px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
-  .pickchip.on{background:var(--timber);color:var(--ink);border-color:var(--timber)}
+  .pickchip.on{background:var(--amber);color:var(--ink);border-color:var(--amber)}
   .pickchip small{opacity:.6;font-weight:600}
   .pickchip.on small{opacity:.85}
   .pickchip.pin{border-color:var(--amber)}
@@ -158,9 +160,9 @@
   .panelwrap > summary{background:var(--bg-deep);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
   .fsec .genrow{padding-top:7px}
   .gsum{font-size:11.5px;color:var(--muted);font-weight:600}
-  .mseg{display:inline-flex;border:1.5px solid var(--timber);border-radius:8px;overflow:hidden}
+  .mseg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
   .mseg button{border:0;background:transparent;color:var(--cream);padding:7px 13px;font-size:12px;font-weight:700}
-  .mseg button.on{background:var(--timber);color:var(--ink)}
+  .mseg button.on{background:var(--amber);color:var(--ink)}
   .wt.dead{opacity:.32}
   .clearbtn{display:block;margin:0 0 12px auto;background:transparent;border:1px solid var(--line);color:var(--timber-light);font-weight:700;font-size:12px;padding:6px 12px;border-radius:8px;cursor:pointer}
   .clearbtn[hidden]{display:none}
@@ -193,15 +195,13 @@
     .mtop{position:sticky;top:0;z-index:40;background:var(--bg);padding:8px 0;margin:0 -2px 6px;transition:box-shadow .15s ease}
     .mtop.stuck{box-shadow:0 8px 14px -10px rgba(0,0,0,.6)}
     .mtoprow{display:flex;gap:8px;align-items:center}
-    .mtop #search{margin-bottom:0;flex:1;min-width:0}
+    .mtop .srchwrap{margin-bottom:0;flex:1;min-width:0}
     .mtop .seg{margin:8px 0 0}
     .mfiltbtn{display:inline-flex;align-items:center;gap:6px;flex:0 0 auto;white-space:nowrap}
     .countsort{position:static;box-shadow:none;padding:6px 0 0;margin:0 0 14px}
     .countsort .sheetbtn{display:none}
     #toTop{left:14px;right:auto}
-    body.sheet-open .mtop,body.sheet-open .side > #segDesc,body.sheet-open .side > #picksLabel,body.sheet-open .side > #picksRow{display:none}
-    .picksrow{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -2px 14px;padding:2px 2px 6px;scrollbar-width:none}
-    .picksrow::-webkit-scrollbar{display:none}
+    body.sheet-open .mtop,body.sheet-open .side > #segDesc{display:none}
     /* larger touch targets on mobile (WCAG 2.5.5 / Baymard) */
     .genrow .wt{padding-top:11px;padding-bottom:11px}
     .pickchip{padding-top:11px;padding-bottom:11px}
@@ -244,7 +244,7 @@
   <div class="sheethead"><strong>Filters</strong><button id="sheetClose" class="sheetclose" aria-label="Close filters">✕</button></div>
   <div class="mtop">
     <div class="mtoprow">
-      <input type="search" id="search" placeholder="Search games…" aria-label="Search games" autocomplete="off" />
+      <div class="srchwrap"><input type="text" id="search" placeholder="Search games…" aria-label="Search games" autocomplete="off" /><button type="button" id="searchClear" class="srchclear" aria-label="Clear search" hidden>✕</button></div>
       <button id="mfilt" class="dirbtn mfiltbtn">Filters<span id="mfiltBadge" class="fbadge" hidden></span></button>
     </div>
     <div class="seg" id="seg" role="group" aria-label="Availability">
@@ -254,9 +254,6 @@
     </div>
   </div>
   <p class="segdesc mono" id="segDesc"></p>
-
-  <div class="eyebrow mono" id="picksLabel">Picks &amp; lists · staff and members</div>
-  <div id="picksRow" class="picksrow" role="group" aria-label="Staff and member pick lists"></div>
 
   <details class="fsec panelwrap" id="filterWrap">
   <summary><strong>Filters</strong><span class="gsum" id="filtCount">none active</span></summary>
@@ -287,7 +284,9 @@
       <input type="range" class="dual" id="maxPrice" min="0" max="200" step="5" value="200" aria-label="Maximum price" />
     </div>
     <div class="fdiv"></div>
-    <div class="rowlabel" style="margin-bottom:8px"><strong>Play style</strong></div>
+    <div class="rowlabel" id="picksLabel" style="margin-bottom:8px"><strong>Picks &amp; lists</strong><span class="gsum">staff &amp; members</span></div>
+    <div id="picksRow" class="picksrow" role="group" aria-label="Staff and member pick lists"></div>
+    <div class="rowlabel" style="margin-top:16px;margin-bottom:8px"><strong>Play style</strong></div>
     <div class="genrow">
       <button class="wt on" data-ps="any" aria-pressed="true">Any</button>
       <button class="wt" data-ps="coop" aria-pressed="false">Co&#8209;op<small></small></button>
@@ -299,7 +298,7 @@
       <button class="on" data-tagmode="any" aria-pressed="true">Match any</button>
       <button data-tagmode="all" aria-pressed="false">Match all</button>
     </div>
-    <input type="search" id="genreSearch" class="genresearch" placeholder="Search genres…" aria-label="Search genres" autocomplete="off" hidden />
+    <div class="srchwrap" id="genreSrchWrap" hidden><input type="text" id="genreSearch" class="genresearch" placeholder="Search genres…" aria-label="Search genres" autocomplete="off" /><button type="button" id="genreClear" class="srchclear" aria-label="Clear genre search" hidden>✕</button></div>
     <div class="genrow" id="genreRow"></div>
   </div>
   </details>
@@ -412,7 +411,7 @@ function buildTagRow(){
   const sel = Object.keys(state.tags).filter(k => state.tags[k]);
   const CAP = 8;
   // the genre search box only appears when there are more genres than the cap
-  const gs = $("genreSearch"); if(gs) gs.hidden = all.length <= CAP;
+  const gs = $("genreSrchWrap"); if(gs) gs.hidden = all.length <= CAP;
   const q = (state.genreQuery||"").trim().toLowerCase();
   const pool = q ? all.filter(t => tagLabel(t).toLowerCase().includes(q) || t.toLowerCase().includes(q)) : all;
   const showAll = state.showAllGenres || !!q || pool.length <= CAP; // searching shows every match
@@ -564,7 +563,6 @@ function buildPicks(){
   row.querySelectorAll("[data-pick]").forEach(b=>b.addEventListener("click",()=>{
     const v=b.dataset.pick; state.pick = v===""?null:+v;
     buildPicks(); render();
-    if(matchMedia("(max-width:899px)").matches) document.querySelector(".results").scrollIntoView({behavior:"smooth",block:"start"});
   }));
 }
 
@@ -738,7 +736,8 @@ async function boot(){
   buildPicks(); buildTagRow(); render(); applySheet();
 }
 
-$("search").addEventListener("input",e=>{state.query=e.target.value;render();});
+$("search").addEventListener("input",e=>{state.query=e.target.value;$("searchClear").hidden=!e.target.value;render();});
+$("searchClear").addEventListener("click",()=>{$("search").value="";state.query="";$("searchClear").hidden=true;$("search").focus();render();});
 $("mfilt").addEventListener("click",()=>openSheet(true));
 function placeMtop(){const mtop=document.querySelector(".mtop"),mainw=document.querySelector("main.wrap"),cols=document.querySelector(".cols"),side=document.querySelector(".side");if(!mtop)return;if(matchMedia("(max-width:899px)").matches){if(mtop.parentElement!==mainw)mainw.insertBefore(mtop,cols);}else{if(mtop.parentElement!==side)side.insertBefore(mtop,side.firstChild);}}
 placeMtop();window.addEventListener("resize",placeMtop);
@@ -761,6 +760,7 @@ const paints = [
 function resetAll(){
   Object.assign(state, {pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",genreQuery:"",showAllGenres:false,limit:PAGE});
   $("search").value = ""; $("genreSearch").value = "";
+  $("searchClear").hidden = true; $("genreClear").hidden = true;
   buildPicks(); buildTagRow(); render();
 }
 function openSheet(open){
@@ -779,7 +779,8 @@ $("activeChips").addEventListener("click", e => { const b=e.target.closest("[dat
 // Load more reveals the next page without resetting scroll
 $("moreWrap").addEventListener("click", e => { if(e.target.closest("#loadMore")){ state.limit += PAGE; render(); } });
 // live genre search
-$("genreSearch").addEventListener("input", e => { state.genreQuery = e.target.value; buildTagRow(); });
+$("genreSearch").addEventListener("input", e => { state.genreQuery = e.target.value; $("genreClear").hidden=!e.target.value; buildTagRow(); });
+$("genreClear").addEventListener("click",()=>{$("genreSearch").value="";state.genreQuery="";$("genreClear").hidden=true;$("genreSearch").focus();buildTagRow();});
 if(matchMedia("(min-width:900px)").matches) $("filterWrap").open = true;
 document.querySelectorAll("[data-tagmode]").forEach(b=>b.addEventListener("click",()=>{state.tagMode=b.dataset.tagmode;render()}));
 document.querySelectorAll("[data-ps]").forEach(b=>b.addEventListener("click",()=>{state.playStyle=b.dataset.ps;render()}));
