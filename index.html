@@ -201,8 +201,7 @@
     .countsort{position:static;box-shadow:none;padding:6px 0 0;margin:0 0 14px}
     .countsort .sheetbtn{display:none}
     #toTop{left:14px;right:auto}
-    body.sheet-open .mtop{display:none}
-    .mtop.stuck #segDesc{display:none}
+    body.sheet-open .mtop,body.sheet-open .side > #segDesc{display:none}
     /* larger touch targets on mobile (WCAG 2.5.5 / Baymard) */
     .genrow .wt{padding-top:11px;padding-bottom:11px}
     .pickchip{padding-top:11px;padding-bottom:11px}
@@ -213,7 +212,7 @@
   .genrow .wt{flex:0 0 auto;white-space:nowrap;padding-left:12px;padding-right:12px}
   .genrow .wt small{opacity:.65;font-weight:600;margin-left:4px}
   .morebtn{background:transparent;border:0;color:#c9a06b;font-weight:700;font-size:12.5px;padding:9px 4px;text-decoration:underline}
-  @media(min-width:900px){ .rhead{position:sticky;top:0;z-index:20;background:var(--bg,#243027);margin:0 -2px;padding-top:8px;transition:box-shadow .15s ease} .rhead.stuck{box-shadow:0 6px 12px -8px rgba(0,0,0,.5)} .rhead .countsort{padding:0 0 8px;margin:0} .rhead .activechips{margin:0;padding-bottom:12px} }
+  @media(min-width:900px){ .countsort{position:sticky;top:0;z-index:20;background:var(--bg,#243027);padding:8px 0;margin:0 -2px;transition:box-shadow .15s ease} .countsort.stuck{box-shadow:0 6px 12px -8px rgba(0,0,0,.5)} }
   .sortwrap{display:flex;gap:7px;align-items:center}
   .sortlbl{font-size:11.5px;color:var(--muted);font-weight:600;white-space:nowrap}
   .dirbtn{border:1px solid var(--line);background:transparent;color:var(--cream);border-radius:8px;padding:8px 10px;font-size:14px;line-height:1;min-height:36px}
@@ -223,19 +222,9 @@
   .panelwrap[open] summary{margin-bottom:2px}
   @media(min-width:900px){
     .wrap{max-width:1400px}
-    /* full-width search bar spans the top; availability sits beside it, panel below is filters-only */
-    .mtop{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:0 0 16px}
-    .mtop .mtoprow{flex:1 1 420px;display:flex;gap:8px}
-    .mtop .srchwrap{flex:1;margin-bottom:0;min-width:0}
-    .mtop .seg{flex:0 0 auto;margin:0}
-    .mtop #segDesc{flex:1 1 100%;order:5;margin:2px 0 0}
     .cols{display:grid;grid-template-columns:320px minmax(0,1fr);gap:24px;align-items:start}
-    /* left panel is pinned; the filter container itself is what scrolls (it now holds only filters) */
-    .side{position:sticky;top:8px;max-height:calc(100vh - 16px);overflow-y:auto;padding-right:4px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
-    .side::-webkit-scrollbar{width:8px}
-    .side::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
-    /* keep the Filters header visible while the list below scrolls */
-    .side > #filterWrap > summary{position:sticky;top:0;z-index:2}
+    .side{position:sticky;top:8px;max-height:calc(100vh - 16px);overflow-y:auto;padding-right:2px;scrollbar-width:none}
+    .side::-webkit-scrollbar{display:none}
     .list{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .gcard{margin:0}
   }
@@ -263,8 +252,8 @@
       <button data-seg="play" aria-pressed="false">Play here</button>
       <button data-seg="buy" aria-pressed="false">Take home</button>
     </div>
-    <p class="segdesc mono" id="segDesc"></p>
   </div>
+  <p class="segdesc mono" id="segDesc"></p>
 
   <details class="fsec panelwrap" id="filterWrap">
   <summary><strong>Filters</strong><span class="gsum" id="filtCount">none active</span></summary>
@@ -317,7 +306,6 @@
   <button id="sheetDone" class="sheetdone">Show all games</button>
 </aside>
 <section class="results">
-  <div class="rhead">
   <div class="countsort">
     <button id="sheetBtn" class="dirbtn sheetbtn">Filters<span id="sheetCount" class="fbadge" hidden></span></button><span class="count mono" id="countOut" aria-live="polite"></span>
     <div class="sortwrap">
@@ -335,7 +323,6 @@
     </div>
   </div>
   <div class="activechips" id="activeChips" hidden></div>
-  </div>
   <div class="note" id="hiddenNote" hidden></div>
 
   <div class="list" id="list"></div>
@@ -752,15 +739,14 @@ async function boot(){
 $("search").addEventListener("input",e=>{state.query=e.target.value;$("searchClear").hidden=!e.target.value;render();});
 $("searchClear").addEventListener("click",()=>{$("search").value="";state.query="";$("searchClear").hidden=true;$("search").focus();render();});
 $("mfilt").addEventListener("click",()=>openSheet(true));
-// search bar sits full-width above the columns on every breakpoint now
-function placeMtop(){const mtop=document.querySelector(".mtop"),mainw=document.querySelector("main.wrap"),cols=document.querySelector(".cols");if(!mtop)return;if(mtop.parentElement!==mainw)mainw.insertBefore(mtop,cols);}
+function placeMtop(){const mtop=document.querySelector(".mtop"),mainw=document.querySelector("main.wrap"),cols=document.querySelector(".cols"),side=document.querySelector(".side");if(!mtop)return;if(matchMedia("(max-width:899px)").matches){if(mtop.parentElement!==mainw)mainw.insertBefore(mtop,cols);}else{if(mtop.parentElement!==side)side.insertBefore(mtop,side.firstChild);}}
 placeMtop();window.addEventListener("resize",placeMtop);
 $("seg").addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(b){state.seg=b.dataset.seg;render()}});
 document.querySelectorAll("[data-wt]").forEach(b=>b.addEventListener("click",()=>{state.wtOn[b.dataset.wt]=!state.wtOn[b.dataset.wt];render()}));
 // shadow appears only once a sticky bar is actually pinned (its top hits 0), not at rest
 function stickShadows(){
   const mt=document.querySelector(".mtop"); if(mt) mt.classList.toggle("stuck", mt.getBoundingClientRect().top<=0.5);
-  const cs=document.querySelector(".rhead"); if(cs) cs.classList.toggle("stuck", cs.getBoundingClientRect().top<=0.5);
+  const cs=document.querySelector(".countsort"); if(cs) cs.classList.toggle("stuck", cs.getBoundingClientRect().top<=0.5);
 }
 window.addEventListener("scroll",()=>{$("toTop").hidden = window.scrollY < 600; stickShadows();},{passive:true});
 stickShadows();
