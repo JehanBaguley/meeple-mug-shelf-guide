@@ -179,6 +179,11 @@
   @media(min-width:900px){ .sheetbtn,#scrim{display:none!important} }
   .mfiltbtn{display:none}
   @media(max-width:899px){
+    /* tighten the header so search + first games arrive sooner */
+    header{padding:16px 16px 8px}
+    h1{margin:6px 0 4px}
+    .sub{font-size:13px;margin:0 0 6px;line-height:1.45}
+    #segDesc{margin:-2px 0 12px}
     .mtop{position:sticky;top:0;z-index:40;background:var(--bg);padding:8px 0;margin:0 -2px 6px;transition:box-shadow .15s ease}
     .mtop.stuck{box-shadow:0 8px 14px -10px rgba(0,0,0,.6)}
     .mtoprow{display:flex;gap:8px;align-items:center}
