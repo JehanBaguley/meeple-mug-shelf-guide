@@ -25,9 +25,9 @@
   h1 span{color:var(--amber)}
   .sub{margin:0 0 16px;font-size:13.5px;color:var(--muted);max-width:560px;line-height:1.5}
   input[type=text],select{background:var(--bg-deep);color:var(--cream);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:14px;font-family:inherit}
-  select{-webkit-appearance:none;appearance:none;padding-right:32px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23ece5d3' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+  select{-webkit-appearance:none;appearance:none;padding-right:32px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%239dc0a8' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
   input[type=text]::placeholder{color:var(--muted)}
-  #search{width:100%;margin-bottom:12px}
+  #search{width:100%;margin-bottom:12px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 16 16'%3E%3Ccircle cx='7' cy='7' r='5' stroke='%239dc0a8' stroke-width='1.5' fill='none'/%3E%3Cpath d='M10.8 10.8l3.2 3.2' stroke='%239dc0a8' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:13px center;padding-left:36px}
   input[type=range].single{accent-color:var(--amber);width:100%}
   .eyebrow{font-size:10.5px;letter-spacing:.14em;color:var(--timber-light);text-transform:uppercase;margin-bottom:6px}
   .chiprow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
@@ -275,7 +275,7 @@ const EMBED = {"games":[{"name":"20 Questions","players":[2,20],"mins":30,"time"
 const CATS = {party:"#d9a441",bluff:"#3d6fa5",heavy:"#8a7fae",engine:"#6aa39a",family:"#8aa08e",coop:"#3f9e5c",war:"#7b7466",two:"#c9a06b",strategy:"#7090a8",deduct:"#3d6fa5",cards:"#c9a06b",adventure:"#6aa39a",dark:"#8a5a7a",abstract:"#7b7466"};
 const MODE_LABEL = {coop:"co-op",team:"teams",comp:"competitive"};
 const S_TIME = [0,20,30,45,60,90,120,180,360];
-const state = {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",sortBy:"name",sortDir:1};
+const state = {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",sortBy:"name",sortDir:1,showAllGenres:false};
 let DATA = EMBED;
 
 const $ = id => document.getElementById(id);
@@ -318,13 +318,19 @@ function buildTagRow(){
   DATA.games.forEach(g => (g.tags||[]).forEach(t => counts[t] = (counts[t]||0) + 1));
   const all = Object.keys(counts).sort((a,b) => counts[b]-counts[a] || a.localeCompare(b));
   const sel = Object.keys(state.tags).filter(k => state.tags[k]);
-  $("genreRow").innerHTML = all.map(t => {
+  const CAP = 8;
+  const showAll = state.showAllGenres || all.length <= CAP;
+  const shown = showAll ? all : all.filter((t,i) => i < CAP || state.tags[t]);
+  $("genreRow").innerHTML = shown.map(t => {
     const slug = catSlugFor(t);
     const dot = slug ? '<i class="tdot" style="background:'+CATS[slug]+'"></i>' : "";
-    return '<button class="wt'+(state.tags[t]?" on":"")+'" data-tag="'+t+'" aria-pressed="'+!!state.tags[t]+'">'+dot+tagLabel(t)+'<small>'+counts[t]+'</small></button>';
-  }).join("") + (sel.length ? '<button class="morebtn" id="clearTags">Clear genres</button>' : "");
+    return '<button class="wt'+(state.tags[t]?" on":"")+'" data-tag="'+t+'" data-count="'+counts[t]+'" aria-pressed="'+!!state.tags[t]+'">'+dot+tagLabel(t)+'<small>'+counts[t]+'</small></button>';
+  }).join("")
+    + (all.length > CAP ? '<button class="morebtn" id="moreTags">'+(showAll?"Show fewer":"Show all "+all.length)+'</button>' : "")
+    + (sel.length ? '<button class="morebtn" id="clearTags">Clear</button>' : "");
   $("genreSum").textContent = sel.length ? sel.map(tagLabel).join(" \u00b7 ") : "any";
   $("genreRow").querySelectorAll("[data-tag]").forEach(b => b.addEventListener("click", () => { state.tags[b.dataset.tag] = !state.tags[b.dataset.tag]; buildTagRow(); render(); }));
+  const mt = $("moreTags"); if(mt) mt.addEventListener("click", () => { state.showAllGenres = !state.showAllGenres; buildTagRow(); render(); });
   const cb = $("clearTags"); if(cb) cb.addEventListener("click", () => { state.tags = {}; buildTagRow(); render(); });
 }
 // generic dual-slider wiring: keeps handles ordered, paints the fill bar
@@ -511,8 +517,9 @@ function render(){
   if(sig !== lastTagSig){
     lastTagSig = sig;
     const row = $("genreRow");
-    chips.slice().sort((a,b) => rank(a)-rank(b) || a.dataset.tag.localeCompare(b.dataset.tag))
+    chips.slice().sort((a,b) => rank(a)-rank(b) || (+b.dataset.count||0)-(+a.dataset.count||0))
       .forEach(el => row.appendChild(el));
+    const mt = $("moreTags"); if(mt) row.appendChild(mt);
     const cb = $("clearTags"); if(cb) row.appendChild(cb);
   }
   $("resetBtn").hidden = !(activeFilters || state.query.trim() || state.pick!==null);
