@@ -116,7 +116,6 @@ async function main() {
       if (val("price")) { const pr = val("price").trim(), pm = pr.match(/\d+/); g.price = pm ? parseInt(pm[0]) : null; g.priceTxt = /^[~$]/.test(pr) ? pr : "$" + pr; }
       if (val("rating")) g.bgg = parseFloat(val("rating")) || g.bgg;
       if (val("bgg_link")) { g.bggUrl = val("bgg_link"); const bm = val("bgg_link").match(/boardgame\/(\d+)/); if (bm) g.bggId = +bm[1]; }
-      if (val("check") && /estimate/i.test(val("check")) && g.priceTxt && g.priceTxt[0] !== "~") g.priceTxt = "~" + g.priceTxt;
       if (val("price_text")) g.priceTxt = val("price_text");
       if (val("blurb")) g.playsLike = val("blurb");
       if (val("status")) g.status = val("status");
