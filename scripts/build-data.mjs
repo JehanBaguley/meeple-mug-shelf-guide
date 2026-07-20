@@ -113,7 +113,9 @@ async function main() {
       if (!g) { g = { name, bggId: null, players: null, mins: null, time: null, age: null, catText: null, bgg: null, weight: null, playable: false, forSale: false, cat: null, mode: null, price: null, priceTxt: null, playsLike: null }; games.push(g); byName[norm(name)] = g; }
       if (val("playable")) g.playable = /^y/i.test(val("playable"));
       if (val("for_sale")) g.forSale = /^y/i.test(val("for_sale"));
-      if (val("price")) { g.price = parseInt(val("price")) || null; g.priceTxt = "$" + val("price").replace(/^\$/, ""); }
+      if (val("price")) { const pr = val("price").trim(), pm = pr.match(/\d+/); g.price = pm ? parseInt(pm[0]) : null; g.priceTxt = /^[~$]/.test(pr) ? pr : "$" + pr; }
+      if (val("rating")) g.bgg = parseFloat(val("rating")) || g.bgg;
+      if (val("bgg_link")) { g.bggUrl = val("bgg_link"); const bm = val("bgg_link").match(/boardgame\/(\d+)/); if (bm) g.bggId = +bm[1]; }
       if (val("check") && /estimate/i.test(val("check")) && g.priceTxt && g.priceTxt[0] !== "~") g.priceTxt = "~" + g.priceTxt;
       if (val("price_text")) g.priceTxt = val("price_text");
       if (val("blurb")) g.playsLike = val("blurb");
@@ -123,8 +125,8 @@ async function main() {
       if (val("time")) { const t = parseTimeTxt(val("time")); if (t.time) { g.time = t.time; g.mins = t.mins; } }
       if (val("category")) { g.catText = val("category"); g.cat = catSlugFor(g.catText); if (/co-?op|cooperative/i.test(g.catText)) g.mode = "coop"; if (/expansion|stretch goals/i.test(g.catText + " " + name)) g.exp = true; }
       if (val("play_style")) g.mode = { "co-op": "coop", coop: "coop", teams: "team", team: "team", competitive: "comp", comp: "comp" }[norm(val("play_style"))] || g.mode;
-      if (val("badge_by")) { g.pickBy = val("badge_by"); g.pickNote = val("badge_note"); }
-      if (val("rec_list")) { (lists[val("rec_list")] ??= { list: val("rec_list"), note: "", games: {} }).games[g.name] = val("rec_note"); }
+      const pb = val("pick_by") || val("badge_by") || val("rec_list"), pn = val("pick_note") || val("badge_note") || val("rec_note");
+      if (pb) { g.pickBy = pb; g.pickNote = pn; (lists[pb] ??= { list: pb, note: "", games: {} }).games[g.name] = pn; }
     }
     picks = Object.values(lists);
     console.log(`Sheet overlay applied: ${sheetRows} rows, ${picks.length} pick lists`);
