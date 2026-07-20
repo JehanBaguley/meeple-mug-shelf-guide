@@ -87,7 +87,7 @@
   .empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}
   footer{margin:28px 0 60px;font-size:11.5px;color:var(--muted);line-height:1.6}
   .credit{display:block;margin-top:10px}
-  .credit a{color:var(--timber-light)}
+  footer a{color:var(--timber-light)}
   .note{font-size:12px;color:var(--muted);margin:-4px 0 10px}
   .genrow{display:flex;gap:7px;flex-wrap:wrap}
   .fsec{margin-top:16px}
@@ -224,7 +224,7 @@
 </div>
 
   <footer>
-    The play library is the café's own list, kept up to date by staff in a shared sheet. Ratings are BoardGameGeek community averages. Buy a copy and Request a copy open a note to the café — nothing is charged online.
+    The play library is the café's own list, kept up to date by staff in a shared sheet. Ratings are BoardGameGeek community averages. Buy a copy and Request a copy open the café's <a href="https://www.meepleandmug.com.au/contact" target="_blank" rel="noopener">contact page</a> — nothing is charged online. Or reach the café at <a href="mailto:admin@meepleandmug.com.au">admin@meepleandmug.com.au</a> or (+61) 0418 893 929.
     <span class="credit">Designed &amp; built by <a href="https://jehanbaguley.com" target="_blank" rel="noopener">Jehan Baguley</a>.</span>
   </footer>
 </main>
@@ -239,8 +239,9 @@ const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1PuwiRbEurcLIG8YOU
 // "I want this" actions. Set ONE of these:
 // Google Form prefill template (Form > Get pre-filled link, swap answers for {game} and {type}):
 // e.g. "https://docs.google.com/forms/d/e/FORM_ID/viewform?usp=pp_url&entry.1111={game}&entry.2222={type}"
-const REQUEST_URL_TEMPLATE = "";
-const CAFE_EMAIL = "hello@meepleandmug.example"; // fallback: taps open a pre-filled email
+const CONTACT_URL = "https://www.meepleandmug.com.au/contact";
+const REQUEST_URL_TEMPLATE = CONTACT_URL; // Buy/Request open the café's contact page
+const CAFE_EMAIL = "admin@meepleandmug.com.au"; // fallback if the contact page is ever blanked above
 function requestUrl(g, type){
   if(REQUEST_URL_TEMPLATE) return REQUEST_URL_TEMPLATE.replace("{game}", encodeURIComponent(g.name)).replace("{type}", type);
   const subj = encodeURIComponent((type==="buy" ? "Hold a copy of " : "Special order request: ") + g.name);
@@ -538,7 +539,7 @@ function render(){
     return '<article class="gcard"><div class="spine" style="background:'+spine+'"></div><div class="gbody">'+
       '<div class="gname"><h3>'+g.name+'</h3>'+badges+'</div>'+stats+plays+pickNote+actions+
       '<div class="glinks"><a href="'+bggUrl(g)+'" target="_blank" rel="noopener noreferrer">BGG \u2197</a>'+
-      (g.forSale ? '<a href="'+requestUrl(g,"buy")+'">Buy a copy</a>' : (g.playable ? '<a href="'+requestUrl(g,"order")+'">Request a copy</a>' : ""))+'</div>'+
+      (g.forSale ? '<a href="'+requestUrl(g,"buy")+'" target="_blank" rel="noopener noreferrer">Buy a copy</a>' : (g.playable ? '<a href="'+requestUrl(g,"order")+'" target="_blank" rel="noopener noreferrer">Request a copy</a>' : ""))+'</div>'+
       '</div></article>';
   }).join("") : '<div class="empty">'+(state.seg==="buy" && !DATA.games.some(g=>g.forSale)
     ? "No take-home stock is listed online yet \u2014 ask at the counter about buying a copy. Staff: set for_sale and price in the sheet and Buy buttons appear here."
