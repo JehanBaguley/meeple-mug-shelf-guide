@@ -141,8 +141,10 @@
   .loadmore:hover{border-color:var(--timber-light)}
   .loadmore span{color:var(--muted);font-weight:600;margin-left:4px}
   /* genre search */
-  .genresearch{width:100%;margin-bottom:10px;font-size:13px;padding:8px 12px}
+  .genresearch{width:100%;margin-bottom:10px;font-size:13px;padding:8px 12px 8px 32px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 16 16'%3E%3Ccircle cx='7' cy='7' r='5' stroke='%239dc0a8' stroke-width='1.5' fill='none'/%3E%3Cpath d='M10.8 10.8l3.2 3.2' stroke='%239dc0a8' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:11px center}
   .genresearch[hidden]{display:none}
+  /* hairline separating the range filters from the categorical (chip) filters */
+  .fdiv{height:1px;background:var(--line);margin:18px 0 16px;border:0}
   .genrow{display:flex;gap:7px;flex-wrap:wrap}
   .fsec{margin-top:16px}
   .fsec summary{cursor:pointer;font-weight:700;font-size:13.5px;padding:4px 0;list-style:none;display:flex;align-items:center;gap:8px}
@@ -280,7 +282,8 @@
       <input type="range" class="dual" id="minPrice" min="0" max="200" step="5" value="0" aria-label="Minimum price" />
       <input type="range" class="dual" id="maxPrice" min="0" max="200" step="5" value="200" aria-label="Maximum price" />
     </div>
-    <div class="rowlabel" style="margin-top:16px;margin-bottom:8px"><strong>Play style</strong></div>
+    <div class="fdiv"></div>
+    <div class="rowlabel" style="margin-bottom:8px"><strong>Play style</strong></div>
     <div class="genrow">
       <button class="wt on" data-ps="any" aria-pressed="true">Any</button>
       <button class="wt" data-ps="coop" aria-pressed="false">Co&#8209;op<small></small></button>
