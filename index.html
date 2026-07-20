@@ -126,6 +126,23 @@
   .credit{display:block;margin-top:10px}
   footer a{color:var(--timber-light)}
   .note{font-size:12px;color:var(--muted);margin:-4px 0 10px}
+  /* applied-filter chips: show exactly what's active, each removable */
+  .activechips{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px;align-items:center}
+  .activechips[hidden]{display:none}
+  .achip{display:inline-flex;align-items:center;gap:7px;background:var(--bg-deep);color:var(--cream);border:1px solid var(--line);border-radius:999px;padding:6px 8px 6px 12px;font-size:12px;font-weight:600;cursor:pointer;line-height:1}
+  .achip .x{font-size:13px;font-weight:700;color:var(--muted);line-height:1}
+  .achip:hover{border-color:var(--timber-light)}.achip:hover .x{color:var(--cream)}
+  .achip.clearall{color:var(--timber-light);padding:6px 12px;border-color:transparent;text-decoration:underline;background:transparent}
+  .achip.clearall:hover{color:var(--cream)}
+  /* Load more */
+  .morewrap{display:flex;justify-content:center;margin:18px 0 4px}
+  .morewrap:empty{display:none}
+  .loadmore{background:var(--bg-deep);color:var(--cream);border:1px solid var(--line);border-radius:10px;padding:11px 22px;font-size:13.5px;font-weight:700;cursor:pointer}
+  .loadmore:hover{border-color:var(--timber-light)}
+  .loadmore span{color:var(--muted);font-weight:600;margin-left:4px}
+  /* genre search */
+  .genresearch{width:100%;margin-bottom:10px;font-size:13px;padding:8px 12px}
+  .genresearch[hidden]{display:none}
   .genrow{display:flex;gap:7px;flex-wrap:wrap}
   .fsec{margin-top:16px}
   .fsec summary{cursor:pointer;font-weight:700;font-size:13.5px;padding:4px 0;list-style:none;display:flex;align-items:center;gap:8px}
@@ -174,6 +191,12 @@
     body.sheet-open .mtop,body.sheet-open .side > #segDesc,body.sheet-open .side > #picksLabel,body.sheet-open .side > #picksRow{display:none}
     .picksrow{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -2px 14px;padding:2px 2px 6px;scrollbar-width:none}
     .picksrow::-webkit-scrollbar{display:none}
+    /* larger touch targets on mobile (WCAG 2.5.5 / Baymard) */
+    .genrow .wt{padding-top:11px;padding-bottom:11px}
+    .pickchip{padding-top:11px;padding-bottom:11px}
+    .mseg button{padding-top:10px;padding-bottom:10px}
+    .achip{padding-top:9px;padding-bottom:9px}
+    #sortSel{padding-top:11px;padding-bottom:11px}
   }
   .genrow .wt{flex:0 0 auto;white-space:nowrap;padding-left:12px;padding-right:12px}
   .genrow .wt small{opacity:.65;font-weight:600;margin-left:4px}
@@ -264,6 +287,7 @@
       <button class="on" data-tagmode="any" aria-pressed="true">Match any</button>
       <button data-tagmode="all" aria-pressed="false">Match all</button>
     </div>
+    <input type="text" id="genreSearch" class="genresearch" placeholder="Search genres…" aria-label="Search genres" autocomplete="off" hidden />
     <div class="genrow" id="genreRow"></div>
   </div>
   </details>
@@ -287,9 +311,11 @@
       </select>
     </div>
   </div>
+  <div class="activechips" id="activeChips" hidden></div>
   <div class="note" id="hiddenNote" hidden></div>
 
   <div class="list" id="list"></div>
+  <div class="morewrap" id="moreWrap"></div>
 </section>
 </div>
 
@@ -327,7 +353,8 @@ const EMBED = {"games":[{"name":"20 Questions","players":[2,20],"mins":30,"time"
 const CATS = {party:"#d9a441",bluff:"#3d6fa5",heavy:"#8a7fae",engine:"#6aa39a",family:"#8aa08e",coop:"#3f9e5c",war:"#7b7466",two:"#c9a06b",strategy:"#7090a8",deduct:"#3d6fa5",cards:"#c9a06b",adventure:"#6aa39a",dark:"#8a5a7a",abstract:"#7b7466"};
 const MODE_LABEL = {coop:"co-op",team:"teams",comp:"competitive"};
 const S_TIME = [0,20,30,45,60,90,120,180,360];
-const state = {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",sortBy:"name",sortDir:1,showAllGenres:false};
+const PAGE = 24; // results rendered per "page"; Load more reveals another PAGE
+const state = {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",sortBy:"name",sortDir:1,showAllGenres:false,genreQuery:"",limit:PAGE};
 let DATA = EMBED;
 
 const $ = id => document.getElementById(id);
@@ -364,6 +391,7 @@ function catSlugFor(t){
 }
 const tagAll = games => games.forEach(g => { g.tags = tagsFor(g); });
 let lastTagSig = "";
+let lastFilterSig = "";
 function buildTagRow(){
   lastTagSig = "";
   const counts = {};
@@ -371,19 +399,51 @@ function buildTagRow(){
   const all = Object.keys(counts).sort((a,b) => counts[b]-counts[a] || a.localeCompare(b));
   const sel = Object.keys(state.tags).filter(k => state.tags[k]);
   const CAP = 8;
-  const showAll = state.showAllGenres || all.length <= CAP;
-  const shown = showAll ? all : all.filter((t,i) => i < CAP || state.tags[t]);
+  // the genre search box only appears when there are more genres than the cap
+  const gs = $("genreSearch"); if(gs) gs.hidden = all.length <= CAP;
+  const q = (state.genreQuery||"").trim().toLowerCase();
+  const pool = q ? all.filter(t => tagLabel(t).toLowerCase().includes(q) || t.toLowerCase().includes(q)) : all;
+  const showAll = state.showAllGenres || !!q || pool.length <= CAP; // searching shows every match
+  const shown = showAll ? pool : pool.filter((t,i) => i < CAP || state.tags[t]);
   $("genreRow").innerHTML = shown.map(t => {
     const slug = catSlugFor(t);
     const dot = slug ? '<i class="tdot" style="background:'+CATS[slug]+'"></i>' : "";
     return '<button class="wt'+(state.tags[t]?" on":"")+'" data-tag="'+t+'" data-count="'+counts[t]+'" aria-pressed="'+!!state.tags[t]+'">'+dot+tagLabel(t)+'<small>'+counts[t]+'</small></button>';
   }).join("")
-    + (all.length > CAP ? '<button class="morebtn" id="moreTags">'+(showAll?"Show fewer":"Show all "+all.length)+'</button>' : "")
+    + (!q && pool.length > CAP ? '<button class="morebtn" id="moreTags">'+(showAll?"Show fewer":"Show all "+all.length)+'</button>' : "")
+    + (q && !shown.length ? '<span class="gsum" style="padding:6px 2px">no genres match \u201c'+q+'\u201d</span>' : "")
     + (sel.length ? '<button class="morebtn" id="clearTags">Clear</button>' : "");
   $("genreSum").textContent = sel.length ? sel.map(tagLabel).join(" \u00b7 ") : "any";
   $("genreRow").querySelectorAll("[data-tag]").forEach(b => b.addEventListener("click", () => { state.tags[b.dataset.tag] = !state.tags[b.dataset.tag]; buildTagRow(); render(); }));
   const mt = $("moreTags"); if(mt) mt.addEventListener("click", () => { state.showAllGenres = !state.showAllGenres; buildTagRow(); render(); });
   const cb = $("clearTags"); if(cb) cb.addEventListener("click", () => { state.tags = {}; buildTagRow(); render(); });
+}
+// The removable "applied filter" chips above the results \u2014 one per active narrowing.
+function buildActiveChips(){
+  const box = $("activeChips"); if(!box) return;
+  const chips = [];
+  if(state.pick!==null && DATA.picks[state.pick]) chips.push(['pick', DATA.picks[state.pick].list]);
+  if(state.minSeats>1||state.maxSeats<10) chips.push(['seat', seatLabel(state.minSeats)+'\u2013'+seatLabel(state.maxSeats)+' players']);
+  if(state.tLo>0||state.tHi<8) chips.push(['time', $("timeOut").textContent]);
+  if(state.aLo>4||state.aHi<18) chips.push(['age', $("ageOut").textContent]);
+  if(state.pLo>0||state.pHi<200) chips.push(['price', $("priceOut").textContent]);
+  if(state.playStyle!=="any") chips.push(['playstyle', MODE_LABEL[state.playStyle]||state.playStyle]);
+  Object.keys(state.tags).filter(k=>state.tags[k]).forEach(t => chips.push(['tag:'+t, tagLabel(t)]));
+  box.hidden = chips.length===0;
+  box.innerHTML = chips.map(([k,label]) =>
+    '<button class="achip" data-clear="'+k+'">'+label+'<span class="x" aria-hidden="true">\u00d7</span></button>').join("")
+    + (chips.length ? '<button class="achip clearall" data-clear="all">Clear all</button>' : "");
+}
+function clearFilter(key){
+  if(key==='all'){ resetAll(); return; }
+  if(key==='pick'){ state.pick=null; buildPicks(); }
+  else if(key==='seat'){ state.minSeats=1; state.maxSeats=10; }
+  else if(key==='time'){ state.tLo=0; state.tHi=8; }
+  else if(key==='age'){ state.aLo=4; state.aHi=18; }
+  else if(key==='price'){ state.pLo=0; state.pHi=200; }
+  else if(key==='playstyle'){ state.playStyle="any"; }
+  else if(key.startsWith('tag:')){ state.tags[key.slice(4)]=false; }
+  buildTagRow(); render();
 }
 // generic dual-slider wiring: keeps handles ordered, paints the fill bar
 function wireDual(loId, hiId, fillId, loKey, hiKey, min, max){
@@ -600,6 +660,12 @@ function render(){
   };
   list.sort((a,b)=>sorters[state.sortBy](a,b)||a.name.localeCompare(b.name));
 
+  // paging: reset to the first page whenever the filtered/sorted set changes; Load more must NOT reset it
+  const fsig = JSON.stringify([state.seg,state.pick,state.query,state.minSeats,state.maxSeats,state.tLo,state.tHi,state.aLo,state.aHi,state.pLo,state.pHi,state.playStyle,state.tagMode,state.sortBy,state.sortDir,Object.keys(state.tags).filter(k=>state.tags[k]).sort()]);
+  if(fsig!==lastFilterSig){ lastFilterSig=fsig; state.limit=PAGE; }
+  const shown = list.slice(0, state.limit);
+  buildActiveChips();
+
   $("countOut").textContent=list.length+" of "+DATA.games.length+" games";
   $("search").placeholder="Search "+DATA.games.length+" games…";
   $("sheetCount").textContent = activeFilters; $("sheetCount").hidden = !activeFilters;
@@ -608,7 +674,7 @@ function render(){
   $("hiddenNote").hidden = hiddenPending===0;
   $("hiddenNote").textContent = hiddenPending ? hiddenPending+" hidden by these filters \u2014 their details haven\u2019t been added yet." : "";
 
-  $("list").innerHTML = list.length ? list.map(g=>{
+  $("list").innerHTML = list.length ? shown.map(g=>{
     const spine = g.cat?CATS[g.cat]:"#55685c";
     const badges =
       (g.exp?'<span class="badge b-exp">expansion</span>':"")+
@@ -643,7 +709,10 @@ function render(){
       '</div></article>';
   }).join("") : '<div class="empty">'+(state.seg==="buy" && !DATA.games.some(g=>g.forSale)
     ? "No take-home stock is listed online yet \u2014 ask at the counter about buying a copy. Staff: set for_sale and price in the sheet and Buy buttons appear here."
-    : 'Nothing matches. <button class="morebtn" id="emptyReset">Reset all filters</button>')+'</div>';
+    : (activeFilters ? 'Nothing matches these filters. Remove one above, or ' : 'No games match your search. ')+'<button class="morebtn" id="emptyReset">reset everything</button>')+'</div>';
+  // Load more: reveal the next page of matches, keeping the footer reachable (no infinite scroll)
+  $("moreWrap").innerHTML = list.length > state.limit
+    ? '<button id="loadMore" class="loadmore">Load more<span>('+(list.length-state.limit)+' more)</span></button>' : "";
 }
 
 // ————— Prefer synced data/games.json when the Action has run —————
@@ -678,9 +747,9 @@ const paints = [
   wireDual("minPrice","maxPrice","priceFill","pLo","pHi",0,200),
 ];
 function resetAll(){
-  Object.assign(state, {pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:""});
-  $("search").value = "";
-  buildTagRow(); render();
+  Object.assign(state, {pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",genreQuery:"",showAllGenres:false,limit:PAGE});
+  $("search").value = ""; $("genreSearch").value = "";
+  buildPicks(); buildTagRow(); render();
 }
 function openSheet(open){
   document.body.classList.toggle("sheet-open", open);
@@ -693,6 +762,12 @@ $("sheetDone").addEventListener("click", () => openSheet(false));
 $("sheetClose").addEventListener("click", () => openSheet(false));
 $("resetBtn").addEventListener("click", resetAll);
 $("list").addEventListener("click", e => { if(e.target.id==="emptyReset") resetAll(); });
+// applied-filter chips: each removes just its own filter; "Clear all" resets everything
+$("activeChips").addEventListener("click", e => { const b=e.target.closest("[data-clear]"); if(b) clearFilter(b.dataset.clear); });
+// Load more reveals the next page without resetting scroll
+$("moreWrap").addEventListener("click", e => { if(e.target.closest("#loadMore")){ state.limit += PAGE; render(); } });
+// live genre search
+$("genreSearch").addEventListener("input", e => { state.genreQuery = e.target.value; buildTagRow(); });
 if(matchMedia("(min-width:900px)").matches) $("filterWrap").open = true;
 document.querySelectorAll("[data-tagmode]").forEach(b=>b.addEventListener("click",()=>{state.tagMode=b.dataset.tagmode;render()}));
 document.querySelectorAll("[data-ps]").forEach(b=>b.addEventListener("click",()=>{state.playStyle=b.dataset.ps;render()}));
