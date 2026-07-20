@@ -1,6 +1,30 @@
 {
- "built": "2026-07-20T01:05:49.157Z",
+ "built": "2026-07-20T04:06:02.841Z",
  "games": [
+  {
+   "name": "123 Test",
+   "bggId": null,
+   "players": [
+    4,
+    26
+   ],
+   "mins": 90,
+   "time": "90m",
+   "age": "14+",
+   "catText": "Horror",
+   "bgg": null,
+   "weight": null,
+   "playable": true,
+   "forSale": true,
+   "cat": "dark",
+   "mode": "team",
+   "price": 90,
+   "priceTxt": "$90",
+   "playsLike": "tes",
+   "status": "New",
+   "pickBy": "Test",
+   "pickNote": "Test"
+  },
   {
    "name": "20 Questions",
    "bggId": 3377,
@@ -128,6 +152,27 @@
    "playsLike": "7 Wonders rebuilt for two"
   },
   {
+   "name": "A Game Called Birds",
+   "bggId": null,
+   "players": [
+    3,
+    8
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "12+",
+   "catText": "Party, Conversation",
+   "bgg": null,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": null
+  },
+  {
    "name": "A Game of Thrones 2nd Edition",
    "bggId": 103343,
    "players": [
@@ -170,6 +215,27 @@
    "playsLike": "Scrabble tiles turned into a two-player deduction duel"
   },
   {
+   "name": "A&A: Pacific 1940",
+   "bggId": null,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 240,
+   "time": "240m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.7,
+   "weight": 3.7,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "team",
+   "price": 140,
+   "priceTxt": "~$140",
+   "playsLike": "Axis & Allies 1942, deeper and longer"
+  },
+  {
    "name": "Adventure Time: Card Wars",
    "bggId": 144728,
    "players": [
@@ -189,6 +255,27 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "Magic: The Gathering lite, in cartoon form"
+  },
+  {
+   "name": "Aethermon",
+   "bggId": null,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "8+",
+   "catText": "Strategy, Card Game",
+   "bgg": null,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Pokémon battling grown into a board game"
   },
   {
    "name": "Agricola",
@@ -230,7 +317,9 @@
    "mode": null,
    "price": 90,
    "priceTxt": "~$90",
-   "playsLike": "Sherlock Holmes deduction inside Lords of Waterdeep worker placement"
+   "playsLike": "Sherlock Holmes deduction inside Lords of Waterdeep worker placement",
+   "pickBy": "Jehan",
+   "pickNote": "Deduction masterpiece, big teach"
   },
   {
    "name": "Anomia",
@@ -273,6 +362,71 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "Lost Cities' beautiful, brutal cousin"
+  },
+  {
+   "name": "Arcs",
+   "bggId": 359871,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 120,
+   "time": "60–120m",
+   "age": null,
+   "catText": null,
+   "bgg": 8,
+   "weight": 3.4,
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 80,
+   "priceTxt": "$80–110",
+   "playsLike": "Root and Oath, condensed into 90 minutes",
+   "pickBy": "Jehan",
+   "pickNote": "Drama in a box, play it here first"
+  },
+  {
+   "name": "Arcs: The Blighted Reach",
+   "bggId": null,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 180,
+   "time": "90–180m",
+   "age": null,
+   "catText": null,
+   "bgg": 9,
+   "weight": 4.2,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 140,
+   "priceTxt": "~$140",
+   "playsLike": "Oath — a competitive campaign epic"
+  },
+  {
+   "name": "Ark Nova",
+   "bggId": 342942,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 150,
+   "time": "90–150m",
+   "age": "14+",
+   "catText": "Strategy, Economic",
+   "bgg": 8.5,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Terraforming Mars with zoos"
   },
   {
    "name": "Art Decko",
@@ -401,6 +555,69 @@
    "playsLike": "Cluedo grown into a real deduction engine"
   },
   {
+   "name": "Axis & Allies (1942)",
+   "bggId": 41863,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 3,
+   "time": "3m",
+   "age": null,
+   "catText": null,
+   "bgg": 6.9,
+   "weight": 3,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "team",
+   "price": 90,
+   "priceTxt": "~$90",
+   "playsLike": "Risk, grown up"
+  },
+  {
+   "name": "Azul",
+   "bggId": 230802,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 45,
+   "time": "30–45m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.7,
+   "weight": 1.8,
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 65,
+   "priceTxt": "~$65",
+   "playsLike": "Cascadia's abstract cousin — pattern-drafting tiles"
+  },
+  {
+   "name": "Backgammon",
+   "bggId": 2397,
+   "players": [
+    2,
+    2
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "8+",
+   "catText": "Abstract Strategy, Classic",
+   "bgg": 6.6,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "abstract",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "the original roll-and-move duel, five thousand years running"
+  },
+  {
    "name": "Balderdash",
    "bggId": 163,
    "players": [
@@ -444,27 +661,6 @@
    "exp": true
   },
   {
-   "name": "BANG! The Dice Game",
-   "bggId": 143741,
-   "players": [
-    3,
-    8
-   ],
-   "mins": 30,
-   "time": "15–30m",
-   "age": "8+",
-   "catText": "Party, Dice Game",
-   "bgg": 6.9,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "BANG! condensed into dice"
-  },
-  {
    "name": "BANG! The Card Game",
    "bggId": 3955,
    "players": [
@@ -486,6 +682,27 @@
    "playsLike": "spaghetti-western Werewolf with bullets"
   },
   {
+   "name": "BANG! The Dice Game",
+   "bggId": 143741,
+   "players": [
+    3,
+    8
+   ],
+   "mins": 30,
+   "time": "15–30m",
+   "age": "8+",
+   "catText": "Party, Dice Game",
+   "bgg": 6.9,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": null,
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "BANG! condensed into dice"
+  },
+  {
    "name": "Barcelona",
    "bggId": 383607,
    "players": [
@@ -505,6 +722,27 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "Brass Birmingham's Spanish cousin"
+  },
+  {
+   "name": "Betrayal at Baldur's Gate",
+   "bggId": 228660,
+   "players": [
+    3,
+    6
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "12+",
+   "catText": "Horror, Cooperative",
+   "bgg": 7.1,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "dark",
+   "mode": "coop",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Betrayal at House on the Hill gone D&D"
   },
   {
    "name": "Betrayal at House on the Hill",
@@ -654,6 +892,69 @@
    "playsLike": "Tetris as an area-control duel"
   },
   {
+   "name": "Blood on the Clocktower",
+   "bggId": 240980,
+   "players": [
+    5,
+    15
+   ],
+   "mins": 120,
+   "time": "60–120m",
+   "age": "15+",
+   "catText": "Party, Social Deduction",
+   "bgg": 8.3,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "team",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Werewolf perfected — death doesn't end your game"
+  },
+  {
+   "name": "Bohnanza: 25th Anniversary Edition",
+   "bggId": 11,
+   "players": [
+    2,
+    7
+   ],
+   "mins": 45,
+   "time": "45m",
+   "age": "12+",
+   "catText": "Family, Card Game",
+   "bgg": 7.1,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "the bean-trading classic — Catan's haggling with no board"
+  },
+  {
+   "name": "boop.",
+   "bggId": 355433,
+   "players": [
+    2,
+    2
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": null,
+   "catText": null,
+   "bgg": 7,
+   "weight": 1.6,
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 60,
+   "priceTxt": "~$60",
+   "playsLike": "tic-tac-toe with cat physics"
+  },
+  {
    "name": "Brass Birmingham",
    "bggId": 224517,
    "players": [
@@ -738,6 +1039,27 @@
    "playsLike": "a route-and-trade euro in the Concordia family"
   },
   {
+   "name": "Carcassonne",
+   "bggId": 822,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 45,
+   "time": "45m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.4,
+   "weight": 1.9,
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 60,
+   "priceTxt": "~$60",
+   "playsLike": "Dorfromantik's competitive ancestor"
+  },
+  {
    "name": "Cards Against Humanity",
    "bggId": 50381,
    "players": [
@@ -801,6 +1123,27 @@
    "playsLike": "Knizia's galloping cousin of Through the Desert"
   },
   {
+   "name": "Cascadia",
+   "bggId": 295947,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 45,
+   "time": "30–45m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.9,
+   "weight": 1.9,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 65,
+   "priceTxt": "~$65",
+   "playsLike": "Azul-adjacent tile drafting with wildlife"
+  },
+  {
    "name": "Cascadito",
    "bggId": 401217,
    "players": [
@@ -843,6 +1186,27 @@
    "playsLike": "Munchkin-style take-that with shadow monsters"
   },
   {
+   "name": "Castle Combo",
+   "bggId": 416851,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 25,
+   "time": "25m",
+   "age": "10+",
+   "catText": "Family, Card Game",
+   "bgg": 7.7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "a 3x3 combo puzzle at Splendor pace"
+  },
+  {
    "name": "Cat Crimes",
    "bggId": null,
    "players": [
@@ -862,6 +1226,27 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "Cluedo compressed into cat logic puzzles"
+  },
+  {
+   "name": "Catan Settlers of America",
+   "bggId": 67239,
+   "players": [
+    3,
+    4
+   ],
+   "mins": 120,
+   "time": "120m",
+   "age": "12+",
+   "catText": "Strategy, Family",
+   "bgg": 6.8,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Catan goes west with trains and wagons"
   },
   {
    "name": "Catan The Settlers",
@@ -948,6 +1333,27 @@
    "playsLike": "Lords of Waterdeep with dice-battled monsters"
   },
   {
+   "name": "Chess",
+   "bggId": 171,
+   "players": [
+    2,
+    2
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "6+",
+   "catText": "Abstract Strategy, Classic",
+   "bgg": 7.2,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "abstract",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "the abstract strategy benchmark"
+  },
+  {
    "name": "Chucky (Child's Play)",
    "bggId": 405696,
    "players": [
@@ -967,6 +1373,27 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "slasher-movie horror in the Betrayal spirit"
+  },
+  {
+   "name": "Citadels",
+   "bggId": 478,
+   "players": [
+    2,
+    8
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": null,
+   "catText": null,
+   "bgg": 7,
+   "weight": 2.1,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 40,
+   "priceTxt": "~$40",
+   "playsLike": "Coup and Love Letter energy that seats eight"
   },
   {
    "name": "Clank",
@@ -1053,6 +1480,27 @@
    "playsLike": "classic Cluedo in Westeros"
   },
   {
+   "name": "Cluedo SFX",
+   "bggId": null,
+   "players": [
+    2,
+    4
+   ],
+   "mins": null,
+   "time": null,
+   "age": "8+",
+   "catText": "Deduction, Family",
+   "bgg": null,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": null,
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Cluedo with sound effects and app-era twists"
+  },
+  {
    "name": "Codenames",
    "bggId": 178900,
    "players": [
@@ -1116,6 +1564,27 @@
    "playsLike": "Brass-weight cooperative-competitive coffee farming"
   },
   {
+   "name": "Colour Crazy",
+   "bggId": null,
+   "players": [
+    2,
+    6
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": "6+",
+   "catText": "Family, Card Game",
+   "bgg": null,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": null
+  },
+  {
    "name": "Concept Kids",
    "bggId": 247314,
    "players": [
@@ -1156,6 +1625,29 @@
    "price": 95,
    "priceTxt": "~$95",
    "playsLike": "a gentler Brass Birmingham — trade routes without the crunch"
+  },
+  {
+   "name": "Cosmic Encounter",
+   "bggId": 39463,
+   "players": [
+    3,
+    5
+   ],
+   "mins": 120,
+   "time": "60–120m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.5,
+   "weight": 2.5,
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 95,
+   "priceTxt": "~$95",
+   "playsLike": "Coup's chaos scaled to a galaxy of shifting alliances",
+   "pickBy": "Jehan",
+   "pickNote": "The rules are lies"
   },
   {
    "name": "Cosmic Encounter 42nd Anniversary Edition",
@@ -1242,6 +1734,48 @@
    "playsLike": null
   },
   {
+   "name": "Cranium",
+   "bggId": 891,
+   "players": [
+    4,
+    16
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "13+",
+   "catText": "Party, Family",
+   "bgg": 5.7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "team",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Pictionary, charades and trivia in one box"
+  },
+  {
+   "name": "Critter Kitchen",
+   "bggId": 393429,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 45,
+   "time": "45m",
+   "age": "10+",
+   "catText": "Family, Strategy",
+   "bgg": 7.8,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "a cute cooking draft — Sushi Go grown into a dinner service"
+  },
+  {
    "name": "Cubitos",
    "bggId": 298069,
    "players": [
@@ -1261,6 +1795,27 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "Quacks of Quedlinburg on a racetrack"
+  },
+  {
+   "name": "Cubo",
+   "bggId": 166532,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 15,
+   "time": "15m",
+   "age": "8+",
+   "catText": "Family, Dice",
+   "bgg": 5.6,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": null
   },
   {
    "name": "Dead of Winter",
@@ -1302,7 +1857,9 @@
    "mode": null,
    "price": 100,
    "priceTxt": "~$100",
-   "playsLike": "Sheriff of Nottingham bluffing fused with a heavy euro"
+   "playsLike": "Sheriff of Nottingham bluffing fused with a heavy euro",
+   "pickBy": "Jehan",
+   "pickNote": "Hidden roles inside a heavy euro"
   },
   {
    "name": "Dinosaur Island",
@@ -1324,6 +1881,48 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "Jurassic Park as a Lords of Waterdeep-style euro"
+  },
+  {
+   "name": "Diplomacy",
+   "bggId": 483,
+   "players": [
+    2,
+    7
+   ],
+   "mins": 360,
+   "time": "360m",
+   "age": null,
+   "catText": null,
+   "bgg": 7,
+   "weight": 3.3,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 70,
+   "priceTxt": "~$70",
+   "playsLike": "Risk without dice — pure negotiation"
+  },
+  {
+   "name": "Dirty Laundry",
+   "bggId": null,
+   "players": [
+    4,
+    10
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "17+",
+   "catText": "Party, Humor",
+   "bgg": null,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Cards Against Humanity pointed at your friends"
   },
   {
    "name": "Dixit",
@@ -1387,6 +1986,29 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "Dominion with sharper elbows"
+  },
+  {
+   "name": "Dorfromantik",
+   "bggId": null,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 45,
+   "time": "45m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.4,
+   "weight": 1.2,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "coop",
+   "price": 65,
+   "priceTxt": "~$65",
+   "playsLike": "co-op Carcassonne, straight from the video game",
+   "pickBy": "Jehan",
+   "pickNote": "Cosiest co-op going"
   },
   {
    "name": "Dorfromantik - The Duel",
@@ -1537,6 +2159,117 @@
    "playsLike": "Magic: The Gathering compressed into one deck"
   },
   {
+   "name": "Everdell",
+   "bggId": 199792,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 80,
+   "time": "40–80m",
+   "age": null,
+   "catText": null,
+   "bgg": 8,
+   "weight": 2.8,
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 100,
+   "priceTxt": "~$100",
+   "playsLike": "Wingspan crossed with Lords of Waterdeep",
+   "pickBy": "Ollie",
+   "pickNote": "Table wow factor every time"
+  },
+  {
+   "name": "Everdell Duo",
+   "bggId": 425005,
+   "players": [
+    1,
+    2
+   ],
+   "mins": 40,
+   "time": "25–40m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.6,
+   "weight": 2.4,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 52,
+   "priceTxt": "~$52",
+   "playsLike": "Everdell distilled for two"
+  },
+  {
+   "name": "Everdell: Silverfrost",
+   "bggId": 436821,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 120,
+   "time": "30–120m",
+   "age": null,
+   "catText": null,
+   "bgg": 8.1,
+   "weight": 3,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 90,
+   "priceTxt": "$90 ess / $150+ coll",
+   "playsLike": "Everdell, refined",
+   "pickBy": "Jehan",
+   "pickNote": "Prettiest engine on the shelf"
+  },
+  {
+   "name": "EXIT: The Game (series)",
+   "bggId": null,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.1,
+   "weight": 2,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "coop",
+   "price": 25,
+   "priceTxt": "$25–30 ea",
+   "playsLike": "an escape room in a box — components get torn, one play each",
+   "pickBy": "Jehan",
+   "pickNote": "Escape room night in a box"
+  },
+  {
+   "name": "Exploding Kittens",
+   "bggId": 172225,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 15,
+   "time": "15m",
+   "age": "7+",
+   "catText": "Party, Card Game",
+   "bgg": 6.1,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Uno crossed with Russian roulette"
+  },
+  {
    "name": "Festo",
    "bggId": 253679,
    "players": [
@@ -1640,6 +2373,27 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "Dominion micro-sized with push-your-luck"
+  },
+  {
+   "name": "Fog of Love",
+   "bggId": 175324,
+   "players": [
+    2,
+    2
+   ],
+   "mins": 90,
+   "time": "90m",
+   "age": "17+",
+   "catText": "Party, Storytelling",
+   "bgg": 6.6,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "a two-player rom-com — roleplay meets hidden agendas"
   },
   {
    "name": "Forbidden Desert",
@@ -1873,6 +2627,48 @@
    "playsLike": "The Game of Life with a debit card"
   },
   {
+   "name": "Game of Thrones: Westeros Intrigue",
+   "bggId": 155693,
+   "players": [
+    2,
+    6
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": "14+",
+   "catText": "Family, Card Game",
+   "bgg": 5.3,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Uno-weight card shedding with Lannister spite"
+  },
+  {
+   "name": "Ghost Blitz",
+   "bggId": 83195,
+   "players": [
+    2,
+    8
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": null,
+   "catText": null,
+   "bgg": 6.7,
+   "weight": 1.1,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 30,
+   "priceTxt": "~$30",
+   "playsLike": "Jungle Speed reflexes with a logic twist"
+  },
+  {
    "name": "Gloomhaven Jaws of the Lion",
    "bggId": 291457,
    "players": [
@@ -1978,6 +2774,27 @@
    "playsLike": "The Mind's older logical sibling — co-op with hidden hands"
   },
   {
+   "name": "Harmonies",
+   "bggId": 414317,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "10+",
+   "catText": "Strategy, Family",
+   "bgg": 8,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Cascadia with landscapes you build upward"
+  },
+  {
    "name": "Hawker Wars",
    "bggId": 365749,
    "players": [
@@ -1997,6 +2814,69 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "street-food stall economics at Machi Koro weight"
+  },
+  {
+   "name": "Headache",
+   "bggId": 9921,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": "5+",
+   "catText": "Family, Classic",
+   "bgg": 4.4,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Frustration by another name — Pop-o-Matic Ludo"
+  },
+  {
+   "name": "Heat: Pedal to the Metal",
+   "bggId": 366013,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "10+",
+   "catText": "Family, Racing",
+   "bgg": 8,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Formula 1 as a hand-management race — Flamme Rouge's big brother"
+  },
+  {
+   "name": "How to Be a Complete Bastard",
+   "bggId": null,
+   "players": [
+    2,
+    6
+   ],
+   "mins": 45,
+   "time": "45m",
+   "age": "18+",
+   "catText": "Party, Humor",
+   "bgg": null,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "an '80s comedy relic — Cards Against Humanity's rude uncle"
   },
   {
    "name": "Hues and Cues",
@@ -2144,6 +3024,27 @@
    "price": 45,
    "priceTxt": "~$45",
    "playsLike": "Codenames' co-op cousin"
+  },
+  {
+   "name": "Kabuto Sumo",
+   "bggId": 320390,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": "6+",
+   "catText": "Party, Dexterity",
+   "bgg": 6.7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "a coin-pusher duel — sumo with beetles"
   },
   {
    "name": "Kairo",
@@ -2335,6 +3236,27 @@
    "playsLike": "a family adventure in the Game of Life spirit"
   },
   {
+   "name": "Lightning Train",
+   "bggId": 445673,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 90,
+   "time": "60–90m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.3,
+   "weight": 2.8,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 95,
+   "priceTxt": "~$95",
+   "playsLike": "Ticket to Ride crossed with Clank! deck-building"
+  },
+  {
    "name": "Logo Board Game",
    "bggId": 64204,
    "players": [
@@ -2440,25 +3362,25 @@
    "playsLike": "classic Love Letter, storybook edition"
   },
   {
-   "name": "Machi Koro 2",
-   "bggId": 340364,
+   "name": "Lucky Numbers",
+   "bggId": 118247,
    "players": [
     2,
-    5
+    4
    ],
-   "mins": 45,
-   "time": "30–45m",
-   "age": "10+",
-   "catText": "Family, Strategy",
-   "bgg": 7.1,
+   "mins": 20,
+   "time": "20m",
+   "age": "8+",
+   "catText": "Family, Abstract",
+   "bgg": 6.4,
    "weight": null,
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Machi Koro rebalanced by a decade of plays"
+   "playsLike": "a breezy number-grid race — bingo with actual decisions"
   },
   {
    "name": "Machi Koro",
@@ -2480,6 +3402,27 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "dice-rolling city building — Catan's little cousin"
+  },
+  {
+   "name": "Machi Koro 2",
+   "bggId": 340364,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 45,
+   "time": "30–45m",
+   "age": "10+",
+   "catText": "Family, Strategy",
+   "bgg": 7.1,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": null,
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Machi Koro rebalanced by a decade of plays"
   },
   {
    "name": "Man Bites Dog",
@@ -2776,6 +3719,27 @@
    "playsLike": "dungeon take-that — Exploding Kittens-era humour with levels"
   },
   {
+   "name": "Munchkin Marvel",
+   "bggId": 189848,
+   "players": [
+    3,
+    6
+   ],
+   "mins": 90,
+   "time": "90m",
+   "age": "10+",
+   "catText": "Card Game, Fantasy",
+   "bgg": 6.8,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Munchkin in the Marvel universe"
+  },
+  {
    "name": "Munchkin Panic",
    "bggId": 156786,
    "players": [
@@ -2858,6 +3822,27 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "Stone Age shrunk for little gatherers"
+  },
+  {
+   "name": "Mysterium",
+   "bggId": 181304,
+   "players": [
+    2,
+    7
+   ],
+   "mins": 45,
+   "time": "45m",
+   "age": "10+",
+   "catText": "Cooperative, Deduction",
+   "bgg": 7.2,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Dixit turned into a ghost-story deduction co-op"
   },
   {
    "name": "Near and Far",
@@ -3026,6 +4011,27 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "Root's designer building empires that remember your last game"
+  },
+  {
+   "name": "Odin's Ravens (Second Edition)",
+   "bggId": 192074,
+   "players": [
+    2,
+    2
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "10+",
+   "catText": "Strategy, Card Game",
+   "bgg": 7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "a two-player race across Norway — Jaipur pace, raven theme"
   },
   {
    "name": "Ok Boomer",
@@ -3238,6 +4244,27 @@
    "playsLike": "THE co-op gateway — cure the world together"
   },
   {
+   "name": "Paperback",
+   "bggId": 141572,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 45,
+   "time": "45m",
+   "age": "8+",
+   "catText": "Strategy, Word",
+   "bgg": 7.1,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Scrabble as a deck-builder"
+  },
+  {
    "name": "Pendulum",
    "bggId": 312804,
    "players": [
@@ -3280,6 +4307,27 @@
    "playsLike": "rummy with a ten-step ladder — Uno's structured cousin"
   },
   {
+   "name": "Pick Up Sticks",
+   "bggId": 6424,
+   "players": [
+    2,
+    6
+   ],
+   "mins": 15,
+   "time": "15m",
+   "age": "5+",
+   "catText": "Family, Classic",
+   "bgg": 4.4,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "the steady-hands classic — Jenga's tabletop ancestor"
+  },
+  {
    "name": "Pictionary",
    "bggId": 2281,
    "players": [
@@ -3320,6 +4368,27 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "Pictionary where everyone draws and guesses at once"
+  },
+  {
+   "name": "Pirates of Perfidy",
+   "bggId": null,
+   "players": [
+    3,
+    6
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "10+",
+   "catText": "Party, Card Game",
+   "bgg": null,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": null
   },
   {
    "name": "Planet",
@@ -3490,6 +4559,48 @@
    "playsLike": null
   },
   {
+   "name": "Qwirkle",
+   "bggId": 25669,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 45,
+   "time": "45m",
+   "age": null,
+   "catText": null,
+   "bgg": 6.8,
+   "weight": 1.6,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 45,
+   "priceTxt": "~$45",
+   "playsLike": "Scrabble crossed with dominoes"
+  },
+  {
+   "name": "Ra",
+   "bggId": 12,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.7,
+   "weight": 2.3,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 80,
+   "priceTxt": "~$80",
+   "playsLike": "Modern Art's auction sibling — peak Knizia"
+  },
+  {
    "name": "Red Cathedral",
    "bggId": 227224,
    "players": [
@@ -3530,6 +4641,27 @@
    "price": 55,
    "priceTxt": "~$55",
    "playsLike": "Fantasy Realms in the Red Rising universe"
+  },
+  {
+   "name": "Res Arcana",
+   "bggId": 262712,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 60,
+   "time": "20–60m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.6,
+   "weight": 2.6,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 60,
+   "priceTxt": "~$60",
+   "playsLike": "Splendor with teeth, from the Race for the Galaxy designer"
   },
   {
    "name": "Rick and Morty - Total Rickall",
@@ -3806,6 +4938,90 @@
    "playsLike": "hidden-traitor tunnel digging — Werewolf with pickaxes"
   },
   {
+   "name": "Scape Goat",
+   "bggId": 315043,
+   "players": [
+    3,
+    6
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": "10+",
+   "catText": "Party, Social Deduction",
+   "bgg": 6.9,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "a quick framing job — Coup energy with goats"
+  },
+  {
+   "name": "SCOUT",
+   "bggId": 291453,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 15,
+   "time": "15m",
+   "age": "9+",
+   "catText": "Family, Card Game",
+   "bgg": 7.8,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "trick-taking meets hand Tetris — you can't rearrange your cards"
+  },
+  {
+   "name": "Scrabble",
+   "bggId": 320,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "8+",
+   "catText": "Family, Word",
+   "bgg": 6.3,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "the word-building institution"
+  },
+  {
+   "name": "Sea Battle",
+   "bggId": null,
+   "players": [
+    2,
+    2
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "6+",
+   "catText": "Family, Classic",
+   "bgg": null,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Battleship — call your shots, sink their fleet"
+  },
+  {
    "name": "Secret Hitler",
    "bggId": 188834,
    "players": [
@@ -3888,6 +5104,72 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "Selfish's undead sibling — same backstabbing race"
+  },
+  {
+   "name": "Sequence",
+   "bggId": 2375,
+   "players": [
+    2,
+    12
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "7+",
+   "catText": "Family, Classic",
+   "bgg": 6.2,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Connect Five with cards — the family classic"
+  },
+  {
+   "name": "SETI",
+   "bggId": 17785,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 160,
+   "time": "40–160m",
+   "age": null,
+   "catText": null,
+   "bgg": 5.7,
+   "weight": 3.8,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 105,
+   "priceTxt": "$105–140",
+   "playsLike": "Terraforming Mars meets Ark Nova",
+   "pickBy": "Jehan",
+   "pickNote": "Terraforming Mars fans start here"
+  },
+  {
+   "name": "Settlers of Catan Expansion 5-6 Player",
+   "bggId": null,
+   "players": [
+    5,
+    6
+   ],
+   "mins": 90,
+   "time": "90m",
+   "age": "10+",
+   "catText": "Strategy, Family",
+   "bgg": null,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": null,
+   "price": null,
+   "priceTxt": null,
+   "playsLike": null,
+   "exp": true
   },
   {
    "name": "Shadows of Brimstone City of Ancients",
@@ -4079,6 +5361,29 @@
    "playsLike": "the purest bluff ever printed — poker distilled to four coasters"
   },
   {
+   "name": "Sky Team",
+   "bggId": 373106,
+   "players": [
+    2,
+    2
+   ],
+   "mins": 15,
+   "time": "15m",
+   "age": null,
+   "catText": null,
+   "bgg": 8.1,
+   "weight": 2,
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "coop",
+   "price": 55,
+   "priceTxt": "~$55",
+   "playsLike": "The Crew condensed to two seats",
+   "pickBy": "Ollie",
+   "pickNote": "Perfect date-night co-op"
+  },
+  {
    "name": "Small World - Warcraft",
    "bggId": 309630,
    "players": [
@@ -4142,6 +5447,27 @@
    "playsLike": "Balderdash flipped — spot the true answer among liars"
   },
   {
+   "name": "Space Base",
+   "bggId": 242302,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.5,
+   "weight": 1.6,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 80,
+   "priceTxt": "~$80",
+   "playsLike": "Machi Koro, grown up"
+  },
+  {
    "name": "Spirit Island",
    "bggId": 162886,
    "players": [
@@ -4182,6 +5508,27 @@
    "price": 62,
    "priceTxt": "~$62",
    "playsLike": "Century: Golem Edition's engine-building twin"
+  },
+  {
+   "name": "Stabber in the Cabin",
+   "bggId": null,
+   "players": [
+    4,
+    10
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": "12+",
+   "catText": "Party, Social Deduction",
+   "bgg": null,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "ten-minute cabin Werewolf"
   },
   {
    "name": "Streets",
@@ -4268,6 +5615,48 @@
    "playsLike": "7 Wonders shrunk to a sushi train"
   },
   {
+   "name": "T.I.M.E Stories: Under the Mask",
+   "bggId": 146508,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 90,
+   "time": "90m",
+   "age": "12+",
+   "catText": "Cooperative, Adventure",
+   "bgg": 7.3,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": null
+  },
+  {
+   "name": "Taboo",
+   "bggId": 1111,
+   "players": [
+    4,
+    10
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "12+",
+   "catText": "Party, Word",
+   "bgg": 6.3,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "team",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Codenames' loud ancestor — forbidden-word guessing"
+  },
+  {
    "name": "Taco Cat Cheese Pizza",
    "bggId": 253664,
    "players": [
@@ -4331,6 +5720,27 @@
    "playsLike": "a zen garden builder — Tokaido's landscaping cousin"
   },
   {
+   "name": "Tapple",
+   "bggId": 129556,
+   "players": [
+    2,
+    8
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": null,
+   "catText": null,
+   "bgg": 6.4,
+   "weight": 1,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 32,
+   "priceTxt": "~$32",
+   "playsLike": "Scattergories at speed"
+  },
+  {
    "name": "Tavern Masters",
    "bggId": 210418,
    "players": [
@@ -4373,6 +5783,27 @@
    "playsLike": "the heavy terraforming classic Gaia Project grew from"
   },
   {
+   "name": "Terra Mystica (Big Box)",
+   "bggId": null,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 150,
+   "time": "150m",
+   "age": null,
+   "catText": null,
+   "bgg": 8.1,
+   "weight": 3.9,
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 180,
+   "priceTxt": "$180+",
+   "playsLike": "Gaia Project's fantasy parent"
+  },
+  {
    "name": "Terraforming Mars",
    "bggId": 167791,
    "players": [
@@ -4392,6 +5823,27 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "the engine-builder about greening Mars — Ark Nova's space rival"
+  },
+  {
+   "name": "The Gang",
+   "bggId": 411567,
+   "players": [
+    3,
+    6
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": "10+",
+   "catText": "Cooperative, Card Game",
+   "bgg": 7.5,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "coop",
+   "mode": "coop",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "co-op Texas hold'em — poker as a team puzzle"
   },
   {
    "name": "The Great Wall",
@@ -4794,6 +6246,48 @@
    "playsLike": "pitch quack cures — Balderdash with a stethoscope"
   },
   {
+   "name": "Trust Me, I'm a Superhero",
+   "bggId": 315733,
+   "players": [
+    3,
+    9
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "12+",
+   "catText": "Party, Humor",
+   "bgg": 5.6,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "pitch your hero to a judge — Superfight in capes"
+  },
+  {
+   "name": "Two Rooms and a Boom",
+   "bggId": 134352,
+   "players": [
+    6,
+    30
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "8+",
+   "catText": "Party, Social Deduction",
+   "bgg": 7,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "team",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Werewolf split across two rooms — whole-venue deduction"
+  },
+  {
    "name": "Tzaar",
    "bggId": 31999,
    "players": [
@@ -4920,6 +6414,29 @@
    "playsLike": "build a theme park, sabotage your rivals — Machi Koro with malice"
   },
   {
+   "name": "Unlock!",
+   "bggId": null,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.2,
+   "weight": 2,
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "coop",
+   "price": 50,
+   "priceTxt": "~$50",
+   "playsLike": "EXIT with an app — nothing gets destroyed",
+   "pickBy": "Jehan",
+   "pickNote": "Replayable co-op puzzles"
+  },
+  {
    "name": "Uno",
    "bggId": 2223,
    "players": [
@@ -5004,6 +6521,69 @@
    "playsLike": "Uno's brutal no-mercy variant"
   },
   {
+   "name": "Upwords",
+   "bggId": 1515,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "8+",
+   "catText": "Family, Word",
+   "bgg": 5.8,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "family",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Scrabble in 3D — stack letters, change words"
+  },
+  {
+   "name": "Viticulture",
+   "bggId": 128621,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 90,
+   "time": "90m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.5,
+   "weight": 2.9,
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 95,
+   "priceTxt": "~$95",
+   "playsLike": "Lords of Waterdeep charm with Agricola-lite farming"
+  },
+  {
+   "name": "Wandering Towers",
+   "bggId": 355483,
+   "players": [
+    2,
+    6
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": null,
+   "catText": null,
+   "bgg": 7.3,
+   "weight": 1.5,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 60,
+   "priceTxt": "~$60",
+   "playsLike": "Labyrinth with memory and stacking chaos"
+  },
+  {
    "name": "Wavelength",
    "bggId": 262543,
    "players": [
@@ -5022,7 +6602,30 @@
    "mode": null,
    "price": 60,
    "priceTxt": "~$60",
-   "playsLike": "Hues and Cues for concepts instead of colours"
+   "playsLike": "Hues and Cues for concepts instead of colours",
+   "pickBy": "Jehan",
+   "pickNote": "Best big-group conversation game"
+  },
+  {
+   "name": "We Forlorn Few",
+   "bggId": null,
+   "players": [
+    1,
+    4
+   ],
+   "mins": null,
+   "time": null,
+   "age": null,
+   "catText": null,
+   "bgg": null,
+   "weight": 2,
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 60,
+   "priceTxt": "~$60?",
+   "playsLike": null
   },
   {
    "name": "Werewolves of Millers Hollow",
@@ -5088,6 +6691,27 @@
    "playsLike": "Everdell's feathered rival — the engine-builder that made birds cool"
   },
   {
+   "name": "Wingspan / Wyrmspan expansions",
+   "bggId": null,
+   "players": [
+    1,
+    5
+   ],
+   "mins": null,
+   "time": "Varies",
+   "age": null,
+   "catText": null,
+   "bgg": null,
+   "weight": 2.5,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 45,
+   "priceTxt": "$45–55 ea",
+   "playsLike": null
+  },
+  {
    "name": "Wizard",
    "bggId": 1465,
    "players": [
@@ -5107,427 +6731,6 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "trick-taking with exact bids — 500's sharper cousin"
-  },
-  {
-   "name": "Xi'an",
-   "bggId": 234828,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 90,
-   "time": "60–90m",
-   "age": "14+",
-   "catText": "Worker Placement, Strategy",
-   "bgg": 7.1,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "strategy",
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "a terracotta-army euro — dice placement in ancient China"
-  },
-  {
-   "name": "Settlers of Catan Expansion 5-6 Player",
-   "bggId": null,
-   "players": [
-    5,
-    6
-   ],
-   "mins": 90,
-   "time": "90m",
-   "age": "10+",
-   "catText": "Strategy, Family",
-   "bgg": null,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "strategy",
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null,
-   "exp": true
-  },
-  {
-   "name": "Catan Settlers of America",
-   "bggId": 67239,
-   "players": [
-    3,
-    4
-   ],
-   "mins": 120,
-   "time": "120m",
-   "age": "12+",
-   "catText": "Strategy, Family",
-   "bgg": 6.8,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "strategy",
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Catan goes west with trains and wagons"
-  },
-  {
-   "name": "Cluedo SFX",
-   "bggId": null,
-   "players": [
-    2,
-    4
-   ],
-   "mins": null,
-   "time": null,
-   "age": "8+",
-   "catText": "Deduction, Family",
-   "bgg": null,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "deduct",
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Cluedo with sound effects and app-era twists"
-  },
-  {
-   "name": "Arcs",
-   "bggId": 359871,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 120,
-   "time": "60–120m",
-   "age": null,
-   "catText": null,
-   "bgg": 8,
-   "weight": 3.4,
-   "playable": true,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 95,
-   "priceTxt": "$80–110",
-   "playsLike": "Root and Oath, condensed into 90 minutes"
-  },
-  {
-   "name": "Arcs: The Blighted Reach",
-   "bggId": null,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 180,
-   "time": "90–180m",
-   "age": null,
-   "catText": null,
-   "bgg": 9,
-   "weight": 4.2,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 140,
-   "priceTxt": "~$140",
-   "playsLike": "Oath — a competitive campaign epic"
-  },
-  {
-   "name": "Everdell: Silverfrost",
-   "bggId": 436821,
-   "players": [
-    1,
-    4
-   ],
-   "mins": 120,
-   "time": "30–120m",
-   "age": null,
-   "catText": null,
-   "bgg": 8.1,
-   "weight": 3,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 90,
-   "priceTxt": "$90 ess / $150+ coll",
-   "playsLike": "Everdell, refined"
-  },
-  {
-   "name": "SETI",
-   "bggId": 17785,
-   "players": [
-    1,
-    4
-   ],
-   "mins": 160,
-   "time": "40–160m",
-   "age": null,
-   "catText": null,
-   "bgg": 5.7,
-   "weight": 3.8,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 120,
-   "priceTxt": "$105–140",
-   "playsLike": "Terraforming Mars meets Ark Nova"
-  },
-  {
-   "name": "Cosmic Encounter",
-   "bggId": 39463,
-   "players": [
-    3,
-    5
-   ],
-   "mins": 120,
-   "time": "60–120m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.5,
-   "weight": 2.5,
-   "playable": true,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 95,
-   "priceTxt": "~$95",
-   "playsLike": "Coup's chaos scaled to a galaxy of shifting alliances"
-  },
-  {
-   "name": "EXIT: The Game (series)",
-   "bggId": null,
-   "players": [
-    1,
-    4
-   ],
-   "mins": 60,
-   "time": "60m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.1,
-   "weight": 2,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "coop",
-   "price": 28,
-   "priceTxt": "$25–30 ea",
-   "playsLike": "an escape room in a box — components get torn, one play each"
-  },
-  {
-   "name": "Citadels",
-   "bggId": 478,
-   "players": [
-    2,
-    8
-   ],
-   "mins": 60,
-   "time": "60m",
-   "age": null,
-   "catText": null,
-   "bgg": 7,
-   "weight": 2.1,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 40,
-   "priceTxt": "~$40",
-   "playsLike": "Coup and Love Letter energy that seats eight"
-  },
-  {
-   "name": "Res Arcana",
-   "bggId": 262712,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 60,
-   "time": "20–60m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.6,
-   "weight": 2.6,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 60,
-   "priceTxt": "~$60",
-   "playsLike": "Splendor with teeth, from the Race for the Galaxy designer"
-  },
-  {
-   "name": "Tapple",
-   "bggId": 129556,
-   "players": [
-    2,
-    8
-   ],
-   "mins": 20,
-   "time": "20m",
-   "age": null,
-   "catText": null,
-   "bgg": 6.4,
-   "weight": 1,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 32,
-   "priceTxt": "~$32",
-   "playsLike": "Scattergories at speed"
-  },
-  {
-   "name": "Ghost Blitz",
-   "bggId": 83195,
-   "players": [
-    2,
-    8
-   ],
-   "mins": 20,
-   "time": "20m",
-   "age": null,
-   "catText": null,
-   "bgg": 6.7,
-   "weight": 1.1,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 30,
-   "priceTxt": "~$30",
-   "playsLike": "Jungle Speed reflexes with a logic twist"
-  },
-  {
-   "name": "Diplomacy",
-   "bggId": 483,
-   "players": [
-    2,
-    7
-   ],
-   "mins": 360,
-   "time": "360m",
-   "age": null,
-   "catText": null,
-   "bgg": 7,
-   "weight": 3.3,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 70,
-   "priceTxt": "~$70",
-   "playsLike": "Risk without dice — pure negotiation"
-  },
-  {
-   "name": "Axis & Allies (1942)",
-   "bggId": 41863,
-   "players": [
-    2,
-    5
-   ],
-   "mins": 3,
-   "time": "3m",
-   "age": null,
-   "catText": null,
-   "bgg": 6.9,
-   "weight": 3,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "team",
-   "price": 90,
-   "priceTxt": "~$90",
-   "playsLike": "Risk, grown up"
-  },
-  {
-   "name": "A&A: Pacific 1940",
-   "bggId": null,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 240,
-   "time": "240m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.7,
-   "weight": 3.7,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "team",
-   "price": 140,
-   "priceTxt": "~$140",
-   "playsLike": "Axis & Allies 1942, deeper and longer"
-  },
-  {
-   "name": "Unlock!",
-   "bggId": null,
-   "players": [
-    1,
-    6
-   ],
-   "mins": 60,
-   "time": "60m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.2,
-   "weight": 2,
-   "playable": true,
-   "forSale": true,
-   "cat": null,
-   "mode": "coop",
-   "price": 50,
-   "priceTxt": "~$50",
-   "playsLike": "EXIT with an app — nothing gets destroyed"
-  },
-  {
-   "name": "Dorfromantik",
-   "bggId": null,
-   "players": [
-    1,
-    6
-   ],
-   "mins": 45,
-   "time": "45m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.4,
-   "weight": 1.2,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "coop",
-   "price": 65,
-   "priceTxt": "~$65",
-   "playsLike": "co-op Carcassonne, straight from the video game"
-  },
-  {
-   "name": "Everdell",
-   "bggId": 199792,
-   "players": [
-    1,
-    4
-   ],
-   "mins": 80,
-   "time": "40–80m",
-   "age": null,
-   "catText": null,
-   "bgg": 8,
-   "weight": 2.8,
-   "playable": true,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 100,
-   "priceTxt": "~$100",
-   "playsLike": "Wingspan crossed with Lords of Waterdeep"
   },
   {
    "name": "Wyrmspan",
@@ -5551,1180 +6754,25 @@
    "playsLike": "Wingspan with dragons, a notch crunchier"
   },
   {
-   "name": "Space Base",
-   "bggId": 242302,
-   "players": [
-    2,
-    5
-   ],
-   "mins": 60,
-   "time": "60m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.5,
-   "weight": 1.6,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 80,
-   "priceTxt": "~$80",
-   "playsLike": "Machi Koro, grown up"
-  },
-  {
-   "name": "Lightning Train",
-   "bggId": 445673,
+   "name": "Xi'an",
+   "bggId": 234828,
    "players": [
     2,
     4
    ],
    "mins": 90,
    "time": "60–90m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.3,
-   "weight": 2.8,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 95,
-   "priceTxt": "~$95",
-   "playsLike": "Ticket to Ride crossed with Clank! deck-building"
-  },
-  {
-   "name": "Wingspan / Wyrmspan expansions",
-   "bggId": null,
-   "players": [
-    1,
-    5
-   ],
-   "mins": null,
-   "time": "Varies",
-   "age": null,
-   "catText": null,
-   "bgg": null,
-   "weight": 2.5,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 50,
-   "priceTxt": "$45–55 ea",
-   "playsLike": null
-  },
-  {
-   "name": "Cascadia",
-   "bggId": 295947,
-   "players": [
-    1,
-    4
-   ],
-   "mins": 45,
-   "time": "30–45m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.9,
-   "weight": 1.9,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 65,
-   "priceTxt": "~$65",
-   "playsLike": "Azul-adjacent tile drafting with wildlife"
-  },
-  {
-   "name": "Carcassonne",
-   "bggId": 822,
-   "players": [
-    2,
-    5
-   ],
-   "mins": 45,
-   "time": "45m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.4,
-   "weight": 1.9,
-   "playable": true,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 60,
-   "priceTxt": "~$60",
-   "playsLike": "Dorfromantik's competitive ancestor"
-  },
-  {
-   "name": "Azul",
-   "bggId": 230802,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 45,
-   "time": "30–45m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.7,
-   "weight": 1.8,
-   "playable": true,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 65,
-   "priceTxt": "~$65",
-   "playsLike": "Cascadia's abstract cousin — pattern-drafting tiles"
-  },
-  {
-   "name": "Qwirkle",
-   "bggId": 25669,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 45,
-   "time": "45m",
-   "age": null,
-   "catText": null,
-   "bgg": 6.8,
-   "weight": 1.6,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 45,
-   "priceTxt": "~$45",
-   "playsLike": "Scrabble crossed with dominoes"
-  },
-  {
-   "name": "Wandering Towers",
-   "bggId": 355483,
-   "players": [
-    2,
-    6
-   ],
-   "mins": 30,
-   "time": "30m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.3,
-   "weight": 1.5,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 60,
-   "priceTxt": "~$60",
-   "playsLike": "Labyrinth with memory and stacking chaos"
-  },
-  {
-   "name": "Ra",
-   "bggId": 12,
-   "players": [
-    2,
-    5
-   ],
-   "mins": 60,
-   "time": "60m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.7,
-   "weight": 2.3,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 80,
-   "priceTxt": "~$80",
-   "playsLike": "Modern Art's auction sibling — peak Knizia"
-  },
-  {
-   "name": "We Forlorn Few",
-   "bggId": null,
-   "players": [
-    1,
-    4
-   ],
-   "mins": null,
-   "time": null,
-   "age": null,
-   "catText": null,
-   "bgg": null,
-   "weight": 2,
-   "playable": true,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 60,
-   "priceTxt": "~$60?",
-   "playsLike": null
-  },
-  {
-   "name": "Terra Mystica (Big Box)",
-   "bggId": null,
-   "players": [
-    2,
-    5
-   ],
-   "mins": 150,
-   "time": "150m",
-   "age": null,
-   "catText": null,
-   "bgg": 8.1,
-   "weight": 3.9,
-   "playable": true,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 180,
-   "priceTxt": "$180+",
-   "playsLike": "Gaia Project's fantasy parent"
-  },
-  {
-   "name": "Viticulture",
-   "bggId": 128621,
-   "players": [
-    1,
-    6
-   ],
-   "mins": 90,
-   "time": "90m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.5,
-   "weight": 2.9,
-   "playable": true,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 95,
-   "priceTxt": "~$95",
-   "playsLike": "Lords of Waterdeep charm with Agricola-lite farming"
-  },
-  {
-   "name": "Sky Team",
-   "bggId": 373106,
-   "players": [
-    2,
-    2
-   ],
-   "mins": 15,
-   "time": "15m",
-   "age": null,
-   "catText": null,
-   "bgg": 8.1,
-   "weight": 2,
-   "playable": true,
-   "forSale": true,
-   "cat": null,
-   "mode": "coop",
-   "price": 55,
-   "priceTxt": "~$55",
-   "playsLike": "The Crew condensed to two seats"
-  },
-  {
-   "name": "boop.",
-   "bggId": 355433,
-   "players": [
-    2,
-    2
-   ],
-   "mins": 20,
-   "time": "20m",
-   "age": null,
-   "catText": null,
-   "bgg": 7,
-   "weight": 1.6,
-   "playable": true,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 60,
-   "priceTxt": "~$60",
-   "playsLike": "tic-tac-toe with cat physics"
-  },
-  {
-   "name": "Everdell Duo",
-   "bggId": 425005,
-   "players": [
-    1,
-    2
-   ],
-   "mins": 40,
-   "time": "25–40m",
-   "age": null,
-   "catText": null,
-   "bgg": 7.6,
-   "weight": 2.4,
-   "playable": false,
-   "forSale": true,
-   "cat": null,
-   "mode": "comp",
-   "price": 52,
-   "priceTxt": "~$52",
-   "playsLike": "Everdell distilled for two"
-  },
-  {
-   "name": "Aethermon",
-   "bggId": null,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 30,
-   "time": "30m",
-   "age": "8+",
-   "catText": "Strategy, Card Game",
-   "bgg": null,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "strategy",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Pokémon battling grown into a board game"
-  },
-  {
-   "name": "Ark Nova",
-   "bggId": 342942,
-   "players": [
-    1,
-    4
-   ],
-   "mins": 150,
-   "time": "90–150m",
    "age": "14+",
-   "catText": "Strategy, Economic",
-   "bgg": 8.5,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "strategy",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Terraforming Mars with zoos"
-  },
-  {
-   "name": "Backgammon",
-   "bggId": 2397,
-   "players": [
-    2,
-    2
-   ],
-   "mins": 30,
-   "time": "30m",
-   "age": "8+",
-   "catText": "Abstract Strategy, Classic",
-   "bgg": 6.6,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "abstract",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "the original roll-and-move duel, five thousand years running"
-  },
-  {
-   "name": "Betrayal at Baldur's Gate",
-   "bggId": 228660,
-   "players": [
-    3,
-    6
-   ],
-   "mins": 60,
-   "time": "60m",
-   "age": "12+",
-   "catText": "Horror, Cooperative",
-   "bgg": 7.1,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "dark",
-   "mode": "coop",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Betrayal at House on the Hill gone D&D"
-  },
-  {
-   "name": "Blood on the Clocktower",
-   "bggId": 240980,
-   "players": [
-    5,
-    15
-   ],
-   "mins": 120,
-   "time": "60–120m",
-   "age": "15+",
-   "catText": "Party, Social Deduction",
-   "bgg": 8.3,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": "team",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Werewolf perfected — death doesn't end your game"
-  },
-  {
-   "name": "Bohnanza: 25th Anniversary Edition",
-   "bggId": 11,
-   "players": [
-    2,
-    7
-   ],
-   "mins": 45,
-   "time": "45m",
-   "age": "12+",
-   "catText": "Family, Card Game",
-   "bgg": 7.1,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "the bean-trading classic — Catan's haggling with no board"
-  },
-  {
-   "name": "Castle Combo",
-   "bggId": 416851,
-   "players": [
-    2,
-    5
-   ],
-   "mins": 25,
-   "time": "25m",
-   "age": "10+",
-   "catText": "Family, Card Game",
-   "bgg": 7.7,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "a 3x3 combo puzzle at Splendor pace"
-  },
-  {
-   "name": "Chess",
-   "bggId": 171,
-   "players": [
-    2,
-    2
-   ],
-   "mins": 60,
-   "time": "60m",
-   "age": "6+",
-   "catText": "Abstract Strategy, Classic",
-   "bgg": 7.2,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "abstract",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "the abstract strategy benchmark"
-  },
-  {
-   "name": "Colour Crazy",
-   "bggId": null,
-   "players": [
-    2,
-    6
-   ],
-   "mins": 20,
-   "time": "20m",
-   "age": "6+",
-   "catText": "Family, Card Game",
-   "bgg": null,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
-  },
-  {
-   "name": "Cranium",
-   "bggId": 891,
-   "players": [
-    4,
-    16
-   ],
-   "mins": 60,
-   "time": "60m",
-   "age": "13+",
-   "catText": "Party, Family",
-   "bgg": 5.7,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": "team",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Pictionary, charades and trivia in one box"
-  },
-  {
-   "name": "Critter Kitchen",
-   "bggId": 393429,
-   "players": [
-    2,
-    5
-   ],
-   "mins": 45,
-   "time": "45m",
-   "age": "10+",
-   "catText": "Family, Strategy",
-   "bgg": 7.8,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "a cute cooking draft — Sushi Go grown into a dinner service"
-  },
-  {
-   "name": "Cubo",
-   "bggId": 166532,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 15,
-   "time": "15m",
-   "age": "8+",
-   "catText": "Family, Dice",
-   "bgg": 5.6,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
-  },
-  {
-   "name": "Dirty Laundry",
-   "bggId": null,
-   "players": [
-    4,
-    10
-   ],
-   "mins": 30,
-   "time": "30m",
-   "age": "17+",
-   "catText": "Party, Humor",
-   "bgg": null,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Cards Against Humanity pointed at your friends"
-  },
-  {
-   "name": "Exploding Kittens",
-   "bggId": 172225,
-   "players": [
-    2,
-    5
-   ],
-   "mins": 15,
-   "time": "15m",
-   "age": "7+",
-   "catText": "Party, Card Game",
-   "bgg": 6.1,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Uno crossed with Russian roulette"
-  },
-  {
-   "name": "Fog of Love",
-   "bggId": 175324,
-   "players": [
-    2,
-    2
-   ],
-   "mins": 90,
-   "time": "90m",
-   "age": "17+",
-   "catText": "Party, Storytelling",
-   "bgg": 6.6,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "a two-player rom-com — roleplay meets hidden agendas"
-  },
-  {
-   "name": "A Game Called Birds",
-   "bggId": null,
-   "players": [
-    3,
-    8
-   ],
-   "mins": 30,
-   "time": "30m",
-   "age": "12+",
-   "catText": "Party, Conversation",
-   "bgg": null,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
-  },
-  {
-   "name": "Game of Thrones: Westeros Intrigue",
-   "bggId": 155693,
-   "players": [
-    2,
-    6
-   ],
-   "mins": 20,
-   "time": "20m",
-   "age": "14+",
-   "catText": "Family, Card Game",
-   "bgg": 5.3,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Uno-weight card shedding with Lannister spite"
-  },
-  {
-   "name": "The Gang",
-   "bggId": 411567,
-   "players": [
-    3,
-    6
-   ],
-   "mins": 20,
-   "time": "20m",
-   "age": "10+",
-   "catText": "Cooperative, Card Game",
-   "bgg": 7.5,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "coop",
-   "mode": "coop",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "co-op Texas hold'em — poker as a team puzzle"
-  },
-  {
-   "name": "Harmonies",
-   "bggId": 414317,
-   "players": [
-    1,
-    4
-   ],
-   "mins": 30,
-   "time": "30m",
-   "age": "10+",
-   "catText": "Strategy, Family",
-   "bgg": 8,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "strategy",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Cascadia with landscapes you build upward"
-  },
-  {
-   "name": "Headache",
-   "bggId": 9921,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 20,
-   "time": "20m",
-   "age": "5+",
-   "catText": "Family, Classic",
-   "bgg": 4.4,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Frustration by another name — Pop-o-Matic Ludo"
-  },
-  {
-   "name": "Heat: Pedal to the Metal",
-   "bggId": 366013,
-   "players": [
-    1,
-    6
-   ],
-   "mins": 60,
-   "time": "60m",
-   "age": "10+",
-   "catText": "Family, Racing",
-   "bgg": 8,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Formula 1 as a hand-management race — Flamme Rouge's big brother"
-  },
-  {
-   "name": "How to Be a Complete Bastard",
-   "bggId": null,
-   "players": [
-    2,
-    6
-   ],
-   "mins": 45,
-   "time": "45m",
-   "age": "18+",
-   "catText": "Party, Humor",
-   "bgg": null,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "an '80s comedy relic — Cards Against Humanity's rude uncle"
-  },
-  {
-   "name": "Kabuto Sumo",
-   "bggId": 320390,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 20,
-   "time": "20m",
-   "age": "6+",
-   "catText": "Party, Dexterity",
-   "bgg": 6.7,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "a coin-pusher duel — sumo with beetles"
-  },
-  {
-   "name": "Lucky Numbers",
-   "bggId": 118247,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 20,
-   "time": "20m",
-   "age": "8+",
-   "catText": "Family, Abstract",
-   "bgg": 6.4,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "a breezy number-grid race — bingo with actual decisions"
-  },
-  {
-   "name": "Munchkin Marvel",
-   "bggId": 189848,
-   "players": [
-    3,
-    6
-   ],
-   "mins": 90,
-   "time": "90m",
-   "age": "10+",
-   "catText": "Card Game, Fantasy",
-   "bgg": 6.8,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "cards",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Munchkin in the Marvel universe"
-  },
-  {
-   "name": "Mysterium",
-   "bggId": 181304,
-   "players": [
-    2,
-    7
-   ],
-   "mins": 45,
-   "time": "45m",
-   "age": "10+",
-   "catText": "Cooperative, Deduction",
-   "bgg": 7.2,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "coop",
-   "mode": "coop",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Dixit turned into a ghost-story deduction co-op"
-  },
-  {
-   "name": "Odin's Ravens (Second Edition)",
-   "bggId": 192074,
-   "players": [
-    2,
-    2
-   ],
-   "mins": 30,
-   "time": "30m",
-   "age": "10+",
-   "catText": "Strategy, Card Game",
-   "bgg": 7,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "strategy",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "a two-player race across Norway — Jaipur pace, raven theme"
-  },
-  {
-   "name": "Paperback",
-   "bggId": 141572,
-   "players": [
-    2,
-    5
-   ],
-   "mins": 45,
-   "time": "45m",
-   "age": "8+",
-   "catText": "Strategy, Word",
+   "catText": "Worker Placement, Strategy",
    "bgg": 7.1,
    "weight": null,
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": "comp",
+   "mode": null,
    "price": null,
    "priceTxt": null,
-   "playsLike": "Scrabble as a deck-builder"
-  },
-  {
-   "name": "Pick Up Sticks",
-   "bggId": 6424,
-   "players": [
-    2,
-    6
-   ],
-   "mins": 15,
-   "time": "15m",
-   "age": "5+",
-   "catText": "Family, Classic",
-   "bgg": 4.4,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "the steady-hands classic — Jenga's tabletop ancestor"
-  },
-  {
-   "name": "Pirates of Perfidy",
-   "bggId": null,
-   "players": [
-    3,
-    6
-   ],
-   "mins": 30,
-   "time": "30m",
-   "age": "10+",
-   "catText": "Party, Card Game",
-   "bgg": null,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
-  },
-  {
-   "name": "Scape Goat",
-   "bggId": 315043,
-   "players": [
-    3,
-    6
-   ],
-   "mins": 20,
-   "time": "20m",
-   "age": "10+",
-   "catText": "Party, Social Deduction",
-   "bgg": 6.9,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "a quick framing job — Coup energy with goats"
-  },
-  {
-   "name": "SCOUT",
-   "bggId": 291453,
-   "players": [
-    2,
-    5
-   ],
-   "mins": 15,
-   "time": "15m",
-   "age": "9+",
-   "catText": "Family, Card Game",
-   "bgg": 7.8,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "trick-taking meets hand Tetris — you can't rearrange your cards"
-  },
-  {
-   "name": "Scrabble",
-   "bggId": 320,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 60,
-   "time": "60m",
-   "age": "8+",
-   "catText": "Family, Word",
-   "bgg": 6.3,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "the word-building institution"
-  },
-  {
-   "name": "Sea Battle",
-   "bggId": null,
-   "players": [
-    2,
-    2
-   ],
-   "mins": 30,
-   "time": "30m",
-   "age": "6+",
-   "catText": "Family, Classic",
-   "bgg": null,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Battleship — call your shots, sink their fleet"
-  },
-  {
-   "name": "Sequence",
-   "bggId": 2375,
-   "players": [
-    2,
-    12
-   ],
-   "mins": 30,
-   "time": "30m",
-   "age": "7+",
-   "catText": "Family, Classic",
-   "bgg": 6.2,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Connect Five with cards — the family classic"
-  },
-  {
-   "name": "Stabber in the Cabin",
-   "bggId": null,
-   "players": [
-    4,
-    10
-   ],
-   "mins": 20,
-   "time": "20m",
-   "age": "12+",
-   "catText": "Party, Social Deduction",
-   "bgg": null,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "ten-minute cabin Werewolf"
-  },
-  {
-   "name": "T.I.M.E Stories: Under the Mask",
-   "bggId": 146508,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 90,
-   "time": "90m",
-   "age": "12+",
-   "catText": "Cooperative, Adventure",
-   "bgg": 7.3,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "coop",
-   "mode": "coop",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
-  },
-  {
-   "name": "Taboo",
-   "bggId": 1111,
-   "players": [
-    4,
-    10
-   ],
-   "mins": 30,
-   "time": "30m",
-   "age": "12+",
-   "catText": "Party, Word",
-   "bgg": 6.3,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": "team",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Codenames' loud ancestor — forbidden-word guessing"
-  },
-  {
-   "name": "Trust Me, I'm a Superhero",
-   "bggId": 315733,
-   "players": [
-    3,
-    9
-   ],
-   "mins": 30,
-   "time": "30m",
-   "age": "12+",
-   "catText": "Party, Humor",
-   "bgg": 5.6,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "pitch your hero to a judge — Superfight in capes"
-  },
-  {
-   "name": "Two Rooms and a Boom",
-   "bggId": 134352,
-   "players": [
-    6,
-    30
-   ],
-   "mins": 30,
-   "time": "30m",
-   "age": "8+",
-   "catText": "Party, Social Deduction",
-   "bgg": 7,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "party",
-   "mode": "team",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Werewolf split across two rooms — whole-venue deduction"
-  },
-  {
-   "name": "Upwords",
-   "bggId": 1515,
-   "players": [
-    2,
-    4
-   ],
-   "mins": 30,
-   "time": "30m",
-   "age": "8+",
-   "catText": "Family, Word",
-   "bgg": 5.8,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "family",
-   "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Scrabble in 3D — stack letters, change words"
+   "playsLike": "a terracotta-army euro — dice placement in ancient China"
   },
   {
    "name": "Yum Cha",
@@ -6750,23 +6798,30 @@
  ],
  "picks": [
   {
-   "list": "Jehan · member example",
+   "list": "Test",
    "note": "",
    "games": {
-    "Alchemists": "Deduction masterpiece, big teach",
-    "Deal with the Devil": "Hidden roles inside a heavy euro",
-    "Wavelength": "Best big-group conversation game",
-    "Arcs": "Drama in a box, play it here first",
-    "Everdell: Silverfrost": "Prettiest engine on the shelf",
-    "SETI": "Terraforming Mars fans start here",
-    "Cosmic Encounter": "The rules are lies",
-    "EXIT: The Game (series)": "Escape room night in a box",
-    "Unlock!": "Replayable co-op puzzles",
-    "Dorfromantik": "Cosiest co-op going"
+    "123 Test": "Test"
    }
   },
   {
-   "list": "Staff sample · Ollie",
+   "list": "Jehan",
+   "note": "",
+   "games": {
+    "Alchemists": "Deduction masterpiece, big teach",
+    "Arcs": "Drama in a box, play it here first",
+    "Cosmic Encounter": "The rules are lies",
+    "Deal with the Devil": "Hidden roles inside a heavy euro",
+    "Dorfromantik": "Cosiest co-op going",
+    "Everdell: Silverfrost": "Prettiest engine on the shelf",
+    "EXIT: The Game (series)": "Escape room night in a box",
+    "SETI": "Terraforming Mars fans start here",
+    "Unlock!": "Replayable co-op puzzles",
+    "Wavelength": "Best big-group conversation game"
+   }
+  },
+  {
+   "list": "Ollie",
    "note": "",
    "games": {
     "Everdell": "Table wow factor every time",
