@@ -1,5 +1,5 @@
 {
- "built": "2026-07-20T04:31:46.302Z",
+ "built": "2026-07-20T04:46:52.161Z",
  "games": [
   {
    "name": "123 Test",
@@ -5874,28 +5874,6 @@
    "playsLike": "Tzolkin's crunch pointed at a Mongol invasion"
   },
   {
-   "name": "The Great Wall - stretch goals",
-   "bggId": null,
-   "players": [
-    1,
-    4
-   ],
-   "mins": 180,
-   "time": "120–180m",
-   "age": "14+",
-   "catText": "Strategy, Expansion",
-   "bgg": null,
-   "weight": null,
-   "playable": true,
-   "forSale": false,
-   "cat": "strategy",
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null,
-   "exp": true
-  },
-  {
    "name": "The Isle of Cats",
    "bggId": 281259,
    "players": [
@@ -6696,28 +6674,6 @@
    "price": null,
    "priceTxt": null,
    "playsLike": "Everdell's feathered rival — the engine-builder that made birds cool"
-  },
-  {
-   "name": "Wingspan / Wyrmspan expansions",
-   "bggId": null,
-   "players": [
-    1,
-    5
-   ],
-   "mins": null,
-   "time": "Varies",
-   "age": "10+",
-   "catText": "Strategy, Expansion",
-   "bgg": null,
-   "weight": 2.5,
-   "playable": false,
-   "forSale": true,
-   "cat": "strategy",
-   "mode": "comp",
-   "price": 45,
-   "priceTxt": "$45–55 ea",
-   "playsLike": null,
-   "exp": true
   },
   {
    "name": "Wizard",
