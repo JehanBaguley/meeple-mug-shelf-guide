@@ -1,30 +1,6 @@
 {
- "built": "2026-07-20T04:46:52.161Z",
+ "built": "2026-07-20T05:00:47.229Z",
  "games": [
-  {
-   "name": "123 Test",
-   "bggId": null,
-   "players": [
-    4,
-    26
-   ],
-   "mins": 90,
-   "time": "90m",
-   "age": "14+",
-   "catText": "Horror",
-   "bgg": 9.9,
-   "weight": null,
-   "playable": true,
-   "forSale": true,
-   "cat": "dark",
-   "mode": "team",
-   "price": 90,
-   "priceTxt": "$90",
-   "playsLike": "tes",
-   "status": "New",
-   "pickBy": "Test",
-   "pickNote": "Test"
-  },
   {
    "name": "20 Questions",
    "bggId": 3377,
@@ -41,10 +17,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Taboo's quieter guessing cousin"
+   "playsLike": "Taboo's quieter guessing cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/3377"
   },
   {
    "name": "3 Ring Circus",
@@ -62,10 +39,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a compact touring euro in the Concordia spirit"
+   "playsLike": "a compact touring euro in the Concordia spirit",
+   "bggUrl": "https://boardgamegeek.com/boardgame/371947"
   },
   {
    "name": "5 Minute Marvel",
@@ -86,7 +64,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "5-Minute Dungeon wearing Avengers suits"
+   "playsLike": "5-Minute Dungeon wearing Avengers suits",
+   "bggUrl": "https://boardgamegeek.com/boardgame/253618"
   },
   {
    "name": "5 Second Rule",
@@ -104,10 +83,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Tapple's shout-it-fast sibling"
+   "playsLike": "Tapple's shout-it-fast sibling",
+   "bggUrl": "https://boardgamegeek.com/boardgame/86073"
   },
   {
    "name": "7 Wonders",
@@ -125,10 +105,11 @@
    "playable": true,
    "forSale": true,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": 80,
    "priceTxt": "~$80",
-   "playsLike": "Sushi Go grown up — the benchmark drafting game"
+   "playsLike": "Sushi Go grown up — the benchmark drafting game",
+   "bggUrl": "https://boardgamegeek.com/boardgame/68448"
   },
   {
    "name": "7 Wonders Duel",
@@ -146,10 +127,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "7 Wonders rebuilt for two"
+   "playsLike": "7 Wonders rebuilt for two",
+   "bggUrl": "https://boardgamegeek.com/boardgame/173346"
   },
   {
    "name": "A Game Called Birds",
@@ -188,10 +170,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Diplomacy in Westeros"
+   "playsLike": "Diplomacy in Westeros",
+   "bggUrl": "https://boardgamegeek.com/boardgame/103343"
   },
   {
    "name": "A Little Wordy",
@@ -209,10 +192,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Scrabble tiles turned into a two-player deduction duel"
+   "playsLike": "Scrabble tiles turned into a two-player deduction duel",
+   "bggUrl": "https://boardgamegeek.com/boardgame/335869"
   },
   {
    "name": "A&A: Pacific 1940",
@@ -252,10 +236,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Magic: The Gathering lite, in cartoon form"
+   "playsLike": "Magic: The Gathering lite, in cartoon form",
+   "bggUrl": "https://boardgamegeek.com/boardgame/144728"
   },
   {
    "name": "Aethermon",
@@ -294,10 +279,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the classic farming euro — Caverna's stricter parent"
+   "playsLike": "the classic farming euro — Caverna's stricter parent",
+   "bggUrl": "https://boardgamegeek.com/boardgame/31260"
   },
   {
    "name": "Alchemists",
@@ -315,10 +301,11 @@
    "playable": true,
    "forSale": true,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": 90,
    "priceTxt": "~$90",
    "playsLike": "Sherlock Holmes deduction inside Lords of Waterdeep worker placement",
+   "bggUrl": "https://boardgamegeek.com/boardgame/161970",
    "pickBy": "Jehan",
    "pickNote": "Deduction masterpiece, big teach"
   },
@@ -338,10 +325,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "snap with categories — Ghost Blitz energy"
+   "playsLike": "snap with categories — Ghost Blitz energy",
+   "bggUrl": "https://boardgamegeek.com/boardgame/67877"
   },
   {
    "name": "Arboretum",
@@ -359,10 +347,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Lost Cities' beautiful, brutal cousin"
+   "playsLike": "Lost Cities' beautiful, brutal cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/140934"
   },
   {
    "name": "Arcs",
@@ -429,7 +418,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Terraforming Mars with zoos"
+   "playsLike": "Terraforming Mars with zoos",
+   "bggUrl": "https://boardgamegeek.com/boardgame/342942"
   },
   {
    "name": "Art Decko",
@@ -447,10 +437,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Dominion-style deck building about collecting art"
+   "playsLike": "Dominion-style deck building about collecting art",
+   "bggUrl": "https://boardgamegeek.com/boardgame/260316"
   },
   {
    "name": "AssassinCon",
@@ -468,10 +459,11 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Ultimate Werewolf loose at a convention"
+   "playsLike": "Ultimate Werewolf loose at a convention",
+   "bggUrl": "https://boardgamegeek.com/boardgame/154778"
   },
   {
    "name": "Asteroyds",
@@ -489,10 +481,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "RoboRally-style programming at speed"
+   "playsLike": "RoboRally-style programming at speed",
+   "bggUrl": "https://boardgamegeek.com/boardgame/65200"
   },
   {
    "name": "AutoCorrect",
@@ -510,7 +503,7 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": "Cards Against Humanity's texting cousin"
@@ -534,7 +527,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The Resistance with Merlin — the social-deduction standard"
+   "playsLike": "The Resistance with Merlin — the social-deduction standard",
+   "bggUrl": "https://boardgamegeek.com/boardgame/128882"
   },
   {
    "name": "Awkward Guests - The Mr Walton Case",
@@ -552,10 +546,11 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Cluedo grown into a real deduction engine"
+   "playsLike": "Cluedo grown into a real deduction engine",
+   "bggUrl": "https://boardgamegeek.com/boardgame/188866"
   },
   {
    "name": "Axis & Allies (1942)",
@@ -619,7 +614,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the original roll-and-move duel, five thousand years running"
+   "playsLike": "the original roll-and-move duel, five thousand years running",
+   "bggUrl": "https://boardgamegeek.com/boardgame/2397"
   },
   {
    "name": "Balderdash",
@@ -637,10 +633,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "bluff the definition — Fibbage before phones"
+   "playsLike": "bluff the definition — Fibbage before phones",
+   "bggUrl": "https://boardgamegeek.com/boardgame/163"
   },
   {
    "name": "BANG! Old Saloon expansion",
@@ -658,7 +655,7 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": null,
@@ -683,7 +680,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "spaghetti-western Werewolf with bullets"
+   "playsLike": "spaghetti-western Werewolf with bullets",
+   "bggUrl": "https://boardgamegeek.com/boardgame/3955"
   },
   {
    "name": "BANG! The Dice Game",
@@ -704,7 +702,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "BANG! condensed into dice"
+   "playsLike": "BANG! condensed into dice",
+   "bggUrl": "https://boardgamegeek.com/boardgame/143741"
   },
   {
    "name": "Barcelona",
@@ -722,10 +721,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Brass Birmingham's Spanish cousin"
+   "playsLike": "Brass Birmingham's Spanish cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/383607"
   },
   {
    "name": "Betrayal at Baldur's Gate",
@@ -746,7 +746,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Betrayal at House on the Hill gone D&D"
+   "playsLike": "Betrayal at House on the Hill gone D&D",
+   "bggUrl": "https://boardgamegeek.com/boardgame/228660"
   },
   {
    "name": "Betrayal at House on the Hill",
@@ -767,7 +768,8 @@
    "mode": "coop",
    "price": 80,
    "priceTxt": "~$80",
-   "playsLike": "Dead of Winter's haunted-house little sibling"
+   "playsLike": "Dead of Winter's haunted-house little sibling",
+   "bggUrl": "https://boardgamegeek.com/boardgame/10547"
   },
   {
    "name": "Beyond the Sun",
@@ -785,10 +787,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a tech-tree race — Through the Ages distilled"
+   "playsLike": "a tech-tree race — Through the Ages distilled",
+   "bggUrl": "https://boardgamegeek.com/boardgame/317985"
   },
   {
    "name": "Bigger is Better",
@@ -806,7 +809,7 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": "party silliness in the Cards Against Humanity vein"
@@ -827,10 +830,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Everdell's mystical, heavier cousin"
+   "playsLike": "Everdell's mystical, heavier cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/323612"
   },
   {
    "name": "Black Mirror Nose Dive",
@@ -848,10 +852,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The Game of Life scored by social ratings"
+   "playsLike": "The Game of Life scored by social ratings",
+   "bggUrl": "https://boardgamegeek.com/boardgame/265316"
   },
   {
    "name": "Block Party",
@@ -869,10 +874,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Jenga meets Pictionary with blocks"
+   "playsLike": "Jenga meets Pictionary with blocks",
+   "bggUrl": "https://boardgamegeek.com/boardgame/379300"
   },
   {
    "name": "Blokus",
@@ -890,10 +896,11 @@
    "playable": true,
    "forSale": false,
    "cat": "abstract",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Tetris as an area-control duel"
+   "playsLike": "Tetris as an area-control duel",
+   "bggUrl": "https://boardgamegeek.com/boardgame/2453"
   },
   {
    "name": "Blood on the Clocktower",
@@ -914,7 +921,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Werewolf perfected — death doesn't end your game"
+   "playsLike": "Werewolf perfected — death doesn't end your game",
+   "bggUrl": "https://boardgamegeek.com/boardgame/240980"
   },
   {
    "name": "Bohnanza: 25th Anniversary Edition",
@@ -935,7 +943,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the bean-trading classic — Catan's haggling with no board"
+   "playsLike": "the bean-trading classic — Catan's haggling with no board",
+   "bggUrl": "https://boardgamegeek.com/boardgame/11"
   },
   {
    "name": "boop.",
@@ -974,10 +983,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the canal-era economic classic — Concordia with teeth"
+   "playsLike": "the canal-era economic classic — Concordia with teeth",
+   "bggUrl": "https://boardgamegeek.com/boardgame/224517"
   },
   {
    "name": "Brew Crafters",
@@ -995,10 +1005,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Viticulture with beer"
+   "playsLike": "Viticulture with beer",
+   "bggUrl": "https://boardgamegeek.com/boardgame/139898"
   },
   {
    "name": "Cape May",
@@ -1016,10 +1027,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a gentle seaside euro — Viticulture's beach holiday"
+   "playsLike": "a gentle seaside euro — Viticulture's beach holiday",
+   "bggUrl": "https://boardgamegeek.com/boardgame/281248"
   },
   {
    "name": "Caravan",
@@ -1037,10 +1049,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a route-and-trade euro in the Concordia family"
+   "playsLike": "a route-and-trade euro in the Concordia family",
+   "bggUrl": "https://boardgamegeek.com/boardgame/269789"
   },
   {
    "name": "Carcassonne",
@@ -1079,10 +1092,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Apples to Apples gone feral"
+   "playsLike": "Apples to Apples gone feral",
+   "bggUrl": "https://boardgamegeek.com/boardgame/50381"
   },
   {
    "name": "Carnegie",
@@ -1100,10 +1114,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Brass Birmingham's American industrialist rival"
+   "playsLike": "Brass Birmingham's American industrialist rival",
+   "bggUrl": "https://boardgamegeek.com/boardgame/310873"
   },
   {
    "name": "Cascadero",
@@ -1121,10 +1136,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Knizia's galloping cousin of Through the Desert"
+   "playsLike": "Knizia's galloping cousin of Through the Desert",
+   "bggUrl": "https://boardgamegeek.com/boardgame/401216"
   },
   {
    "name": "Cascadia",
@@ -1164,10 +1180,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Cascadero's lighter little sibling"
+   "playsLike": "Cascadero's lighter little sibling",
+   "bggUrl": "https://boardgamegeek.com/boardgame/401217"
   },
   {
    "name": "Casting Shadows",
@@ -1185,10 +1202,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Munchkin-style take-that with shadow monsters"
+   "playsLike": "Munchkin-style take-that with shadow monsters",
+   "bggUrl": "https://boardgamegeek.com/boardgame/359502"
   },
   {
    "name": "Castle Combo",
@@ -1209,7 +1227,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a 3x3 combo puzzle at Splendor pace"
+   "playsLike": "a 3x3 combo puzzle at Splendor pace",
+   "bggUrl": "https://boardgamegeek.com/boardgame/416851"
   },
   {
    "name": "Cat Crimes",
@@ -1227,7 +1246,7 @@
    "playable": true,
    "forSale": false,
    "cat": "abstract",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": "Cluedo compressed into cat logic puzzles"
@@ -1248,10 +1267,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Catan goes west with trains and wagons"
+   "playsLike": "Catan goes west with trains and wagons",
+   "bggUrl": "https://boardgamegeek.com/boardgame/67239"
   },
   {
    "name": "Catan The Settlers",
@@ -1269,10 +1289,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the trading-and-building gateway classic"
+   "playsLike": "the trading-and-building gateway classic",
+   "bggUrl": "https://boardgamegeek.com/boardgame/13"
   },
   {
    "name": "CDMC 3000",
@@ -1290,7 +1311,7 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": "party dexterity in the Jungle Speed vein"
@@ -1311,10 +1332,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Spyfall in reverse — find the faker"
+   "playsLike": "Spyfall in reverse — find the faker",
+   "bggUrl": "https://boardgamegeek.com/boardgame/227072"
   },
   {
    "name": "Champions of Midgard",
@@ -1332,10 +1354,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Lords of Waterdeep with dice-battled monsters"
+   "playsLike": "Lords of Waterdeep with dice-battled monsters",
+   "bggUrl": "https://boardgamegeek.com/boardgame/172287"
   },
   {
    "name": "Chess",
@@ -1356,7 +1379,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the abstract strategy benchmark"
+   "playsLike": "the abstract strategy benchmark",
+   "bggUrl": "https://boardgamegeek.com/boardgame/171"
   },
   {
    "name": "Chucky (Child's Play)",
@@ -1374,10 +1398,11 @@
    "playable": true,
    "forSale": false,
    "cat": "adventure",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "slasher-movie horror in the Betrayal spirit"
+   "playsLike": "slasher-movie horror in the Betrayal spirit",
+   "bggUrl": "https://boardgamegeek.com/boardgame/405696"
   },
   {
    "name": "Citadels",
@@ -1416,10 +1441,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Dominion goes dungeon-delving with push-your-luck"
+   "playsLike": "Dominion goes dungeon-delving with push-your-luck",
+   "bggUrl": "https://boardgamegeek.com/boardgame/201808"
   },
   {
    "name": "Clickbait",
@@ -1437,10 +1463,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Balderdash for the internet age"
+   "playsLike": "Balderdash for the internet age",
+   "bggUrl": "https://boardgamegeek.com/boardgame/254417"
   },
   {
    "name": "Clue card game",
@@ -1458,10 +1485,11 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Cluedo distilled to cards"
+   "playsLike": "Cluedo distilled to cards",
+   "bggUrl": "https://boardgamegeek.com/boardgame/88922"
   },
   {
    "name": "Cluedo Game of Thrones",
@@ -1479,10 +1507,11 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "classic Cluedo in Westeros"
+   "playsLike": "classic Cluedo in Westeros",
+   "bggUrl": "https://boardgamegeek.com/boardgame/198328"
   },
   {
    "name": "Cluedo SFX",
@@ -1500,7 +1529,7 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": "Cluedo with sound effects and app-era twists"
@@ -1524,7 +1553,8 @@
    "mode": "team",
    "price": 35,
    "priceTxt": "~$35",
-   "playsLike": "the party-deduction benchmark — Just One is its co-op cousin"
+   "playsLike": "the party-deduction benchmark — Just One is its co-op cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/178900"
   },
   {
    "name": "Codenames Pictures",
@@ -1545,7 +1575,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Codenames with pictures"
+   "playsLike": "Codenames with pictures",
+   "bggUrl": "https://boardgamegeek.com/boardgame/198773"
   },
   {
    "name": "Coffee Traders",
@@ -1563,10 +1594,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Brass-weight cooperative-competitive coffee farming"
+   "playsLike": "Brass-weight cooperative-competitive coffee farming",
+   "bggUrl": "https://boardgamegeek.com/boardgame/325022"
   },
   {
    "name": "Colour Crazy",
@@ -1608,7 +1640,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Concept simplified for little players"
+   "playsLike": "Concept simplified for little players",
+   "bggUrl": "https://boardgamegeek.com/boardgame/247314"
   },
   {
    "name": "Concordia",
@@ -1626,10 +1659,11 @@
    "playable": true,
    "forSale": true,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": 95,
    "priceTxt": "~$95",
-   "playsLike": "a gentler Brass Birmingham — trade routes without the crunch"
+   "playsLike": "a gentler Brass Birmingham — trade routes without the crunch",
+   "bggUrl": "https://boardgamegeek.com/boardgame/124361"
   },
   {
    "name": "Cosmic Encounter",
@@ -1670,10 +1704,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Coup's chaos scaled to a galaxy of shifting alliances"
+   "playsLike": "Coup's chaos scaled to a galaxy of shifting alliances",
+   "bggUrl": "https://boardgamegeek.com/boardgame/39463"
   },
   {
    "name": "Coup",
@@ -1691,10 +1726,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Love Letter with lying"
+   "playsLike": "Love Letter with lying",
+   "bggUrl": "https://boardgamegeek.com/boardgame/131357"
   },
   {
    "name": "Coup Rebellion",
@@ -1712,10 +1748,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Coup with a rotating role menu"
+   "playsLike": "Coup with a rotating role menu",
+   "bggUrl": "https://boardgamegeek.com/boardgame/148943"
   },
   {
    "name": "Coup Reformation",
@@ -1733,7 +1770,7 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": null
@@ -1757,7 +1794,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Pictionary, charades and trivia in one box"
+   "playsLike": "Pictionary, charades and trivia in one box",
+   "bggUrl": "https://boardgamegeek.com/boardgame/891"
   },
   {
    "name": "Critter Kitchen",
@@ -1778,7 +1816,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a cute cooking draft — Sushi Go grown into a dinner service"
+   "playsLike": "a cute cooking draft — Sushi Go grown into a dinner service",
+   "bggUrl": "https://boardgamegeek.com/boardgame/393429"
   },
   {
    "name": "Cubitos",
@@ -1796,10 +1835,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Quacks of Quedlinburg on a racetrack"
+   "playsLike": "Quacks of Quedlinburg on a racetrack",
+   "bggUrl": "https://boardgamegeek.com/boardgame/298069"
   },
   {
    "name": "Cubo",
@@ -1820,7 +1860,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": null,
+   "bggUrl": "https://boardgamegeek.com/boardgame/166532"
   },
   {
    "name": "Dead of Winter",
@@ -1841,7 +1882,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Betrayal's zombie-colony big sibling with traitors"
+   "playsLike": "Betrayal's zombie-colony big sibling with traitors",
+   "bggUrl": "https://boardgamegeek.com/boardgame/150376"
   },
   {
    "name": "Deal with the Devil",
@@ -1859,10 +1901,11 @@
    "playable": true,
    "forSale": true,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": 100,
    "priceTxt": "~$100",
    "playsLike": "Sheriff of Nottingham bluffing fused with a heavy euro",
+   "bggUrl": "https://boardgamegeek.com/boardgame/367379",
    "pickBy": "Jehan",
    "pickNote": "Hidden roles inside a heavy euro"
   },
@@ -1882,10 +1925,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Jurassic Park as a Lords of Waterdeep-style euro"
+   "playsLike": "Jurassic Park as a Lords of Waterdeep-style euro",
+   "bggUrl": "https://boardgamegeek.com/boardgame/221194"
   },
   {
    "name": "Diplomacy",
@@ -1945,10 +1989,11 @@
    "playable": true,
    "forSale": true,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": 55,
    "priceTxt": "~$55",
-   "playsLike": "Mysterium's picture-poetry sibling"
+   "playsLike": "Mysterium's picture-poetry sibling",
+   "bggUrl": "https://boardgamegeek.com/boardgame/39856"
   },
   {
    "name": "Dominion",
@@ -1966,10 +2011,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the original deck-builder — Clank! without the dungeon"
+   "playsLike": "the original deck-builder — Clank! without the dungeon",
+   "bggUrl": "https://boardgamegeek.com/boardgame/36218"
   },
   {
    "name": "Dominion Intrigue",
@@ -1987,10 +2033,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Dominion with sharper elbows"
+   "playsLike": "Dominion with sharper elbows",
+   "bggUrl": "https://boardgamegeek.com/boardgame/40834"
   },
   {
    "name": "Dorfromantik",
@@ -2032,10 +2079,11 @@
    "playable": true,
    "forSale": false,
    "cat": "abstract",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Dorfromantik head-to-head"
+   "playsLike": "Dorfromantik head-to-head",
+   "bggUrl": "https://boardgamegeek.com/boardgame/395364"
   },
   {
    "name": "Dos",
@@ -2053,10 +2101,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Uno's number-matching sequel"
+   "playsLike": "Uno's number-matching sequel",
+   "bggUrl": "https://boardgamegeek.com/boardgame/246701"
   },
   {
    "name": "Dreadful Circus",
@@ -2074,10 +2123,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a hidden-value auction in the Sheriff of Nottingham spirit"
+   "playsLike": "a hidden-value auction in the Sheriff of Nottingham spirit",
+   "bggUrl": "https://boardgamegeek.com/boardgame/329714"
   },
   {
    "name": "Durian Dash",
@@ -2095,10 +2145,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "family set-scrambling in the Sushi Go vein"
+   "playsLike": "family set-scrambling in the Sushi Go vein",
+   "bggUrl": "https://boardgamegeek.com/boardgame/340396"
   },
   {
    "name": "El Grande",
@@ -2116,10 +2167,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the area-majority benchmark Rising Sun descends from"
+   "playsLike": "the area-majority benchmark Rising Sun descends from",
+   "bggUrl": "https://boardgamegeek.com/boardgame/93"
   },
   {
    "name": "Eldritch Horror Mountains of Madness",
@@ -2159,10 +2211,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Magic: The Gathering compressed into one deck"
+   "playsLike": "Magic: The Gathering compressed into one deck",
+   "bggUrl": "https://boardgamegeek.com/boardgame/175621"
   },
   {
    "name": "Everdell",
@@ -2273,7 +2326,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Uno crossed with Russian roulette"
+   "playsLike": "Uno crossed with Russian roulette",
+   "bggUrl": "https://boardgamegeek.com/boardgame/172225"
   },
   {
    "name": "Festo",
@@ -2291,10 +2345,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "light family strategy in the Kingdomino weight class"
+   "playsLike": "light family strategy in the Kingdomino weight class",
+   "bggUrl": "https://boardgamegeek.com/boardgame/253679"
   },
   {
    "name": "Fight the Blight",
@@ -2333,10 +2388,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a light civ-builder — Catan meets Stone Age"
+   "playsLike": "a light civ-builder — Catan meets Stone Age",
+   "bggUrl": "https://boardgamegeek.com/boardgame/342927"
   },
   {
    "name": "Fire Tower",
@@ -2354,10 +2410,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "competitive Forbidden Island — push the fire at each other"
+   "playsLike": "competitive Forbidden Island — push the fire at each other",
+   "bggUrl": "https://boardgamegeek.com/boardgame/226605"
   },
   {
    "name": "Flip City",
@@ -2375,10 +2432,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Dominion micro-sized with push-your-luck"
+   "playsLike": "Dominion micro-sized with push-your-luck",
+   "bggUrl": "https://boardgamegeek.com/boardgame/168679"
   },
   {
    "name": "Fog of Love",
@@ -2399,7 +2457,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a two-player rom-com — roleplay meets hidden agendas"
+   "playsLike": "a two-player rom-com — roleplay meets hidden agendas",
+   "bggUrl": "https://boardgamegeek.com/boardgame/175324"
   },
   {
    "name": "Forbidden Desert",
@@ -2420,7 +2479,8 @@
    "mode": "coop",
    "price": 48,
    "priceTxt": "~$48",
-   "playsLike": "Forbidden Island, one step up"
+   "playsLike": "Forbidden Island, one step up",
+   "bggUrl": "https://boardgamegeek.com/boardgame/136063"
   },
   {
    "name": "Forbidden Island",
@@ -2441,7 +2501,8 @@
    "mode": "coop",
    "price": 40,
    "priceTxt": "~$40",
-   "playsLike": "Pandemic, junior edition"
+   "playsLike": "Pandemic, junior edition",
+   "bggUrl": "https://boardgamegeek.com/boardgame/65244"
   },
   {
    "name": "Forbidden Jungle",
@@ -2462,7 +2523,8 @@
    "mode": "coop",
    "price": 52,
    "priceTxt": "~$52",
-   "playsLike": "Forbidden Desert, another step up"
+   "playsLike": "Forbidden Desert, another step up",
+   "bggUrl": "https://boardgamegeek.com/boardgame/380226"
   },
   {
    "name": "Forgotten Waters",
@@ -2483,7 +2545,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Betrayal-style pirate storybook, fully co-op"
+   "playsLike": "Betrayal-style pirate storybook, fully co-op",
+   "bggUrl": "https://boardgamegeek.com/boardgame/302723"
   },
   {
    "name": "Founders of Gloomhaven",
@@ -2501,10 +2564,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Gloomhaven's city-building spinoff, closer to Lords of Waterdeep"
+   "playsLike": "Gloomhaven's city-building spinoff, closer to Lords of Waterdeep",
+   "bggUrl": "https://boardgamegeek.com/boardgame/214032"
   },
   {
    "name": "Four Gardens",
@@ -2522,10 +2586,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Tokaido's puzzly pagoda cousin"
+   "playsLike": "Tokaido's puzzly pagoda cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/296043"
   },
   {
    "name": "Fugitive",
@@ -2543,10 +2608,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a two-player chase — Sherlock deduction at speed"
+   "playsLike": "a two-player chase — Sherlock deduction at speed",
+   "bggUrl": "https://boardgamegeek.com/boardgame/197443"
   },
   {
    "name": "Fuji",
@@ -2567,7 +2633,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "co-op dice communication like The Mind, harder"
+   "playsLike": "co-op dice communication like The Mind, harder",
+   "bggUrl": "https://boardgamegeek.com/boardgame/258308"
   },
   {
    "name": "Gaia Project - A Terra Mystica Game",
@@ -2585,10 +2652,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Terra Mystica in space — the heavy euro summit"
+   "playsLike": "Terra Mystica in space — the heavy euro summit",
+   "bggUrl": "https://boardgamegeek.com/boardgame/220308"
   },
   {
    "name": "Galaxy Trucker",
@@ -2606,10 +2674,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Ubongo-style speed building strapped to a space disaster"
+   "playsLike": "Ubongo-style speed building strapped to a space disaster",
+   "bggUrl": "https://boardgamegeek.com/boardgame/31481"
   },
   {
    "name": "Game of Life: Twists and Turns",
@@ -2627,10 +2696,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The Game of Life with a debit card"
+   "playsLike": "The Game of Life with a debit card",
+   "bggUrl": "https://boardgamegeek.com/boardgame/28609"
   },
   {
    "name": "Game of Thrones: Westeros Intrigue",
@@ -2651,7 +2721,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Uno-weight card shedding with Lannister spite"
+   "playsLike": "Uno-weight card shedding with Lannister spite",
+   "bggUrl": "https://boardgamegeek.com/boardgame/155693"
   },
   {
    "name": "Ghost Blitz",
@@ -2693,7 +2764,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the campaign dungeon-crawl benchmark, starter size"
+   "playsLike": "the campaign dungeon-crawl benchmark, starter size",
+   "bggUrl": "https://boardgamegeek.com/boardgame/291457"
   },
   {
    "name": "Great Western Trail",
@@ -2711,10 +2783,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "cattle-drive strategy — Concordia meets Clank!"
+   "playsLike": "cattle-drive strategy — Concordia meets Clank!",
+   "bggUrl": "https://boardgamegeek.com/boardgame/193738"
   },
   {
    "name": "Greed",
@@ -2732,10 +2805,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a card tableau race from Dominion's designer"
+   "playsLike": "a card tableau race from Dominion's designer",
+   "bggUrl": "https://boardgamegeek.com/boardgame/151247"
   },
   {
    "name": "Hadara",
@@ -2753,10 +2827,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "7 Wonders' streamlined civilisation cousin"
+   "playsLike": "7 Wonders' streamlined civilisation cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/269144"
   },
   {
    "name": "Hanabi",
@@ -2777,7 +2852,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The Mind's older logical sibling — co-op with hidden hands"
+   "playsLike": "The Mind's older logical sibling — co-op with hidden hands",
+   "bggUrl": "https://boardgamegeek.com/boardgame/98778"
   },
   {
    "name": "Harmonies",
@@ -2798,7 +2874,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Cascadia with landscapes you build upward"
+   "playsLike": "Cascadia with landscapes you build upward",
+   "bggUrl": "https://boardgamegeek.com/boardgame/414317"
   },
   {
    "name": "Hawker Wars",
@@ -2816,10 +2893,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "street-food stall economics at Machi Koro weight"
+   "playsLike": "street-food stall economics at Machi Koro weight",
+   "bggUrl": "https://boardgamegeek.com/boardgame/365749"
   },
   {
    "name": "Headache",
@@ -2840,7 +2918,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Frustration by another name — Pop-o-Matic Ludo"
+   "playsLike": "Frustration by another name — Pop-o-Matic Ludo",
+   "bggUrl": "https://boardgamegeek.com/boardgame/9921"
   },
   {
    "name": "Heat: Pedal to the Metal",
@@ -2861,7 +2940,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Formula 1 as a hand-management race — Flamme Rouge's big brother"
+   "playsLike": "Formula 1 as a hand-management race — Flamme Rouge's big brother",
+   "bggUrl": "https://boardgamegeek.com/boardgame/366013"
   },
   {
    "name": "How to Be a Complete Bastard",
@@ -2900,10 +2980,11 @@
    "playable": true,
    "forSale": true,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": 50,
    "priceTxt": "~$50",
-   "playsLike": "Wavelength with colours"
+   "playsLike": "Wavelength with colours",
+   "bggUrl": "https://boardgamegeek.com/boardgame/302520"
   },
   {
    "name": "Imperial Settlers",
@@ -2921,10 +3002,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Catan energy in a card tableau engine"
+   "playsLike": "Catan energy in a card tableau engine",
+   "bggUrl": "https://boardgamegeek.com/boardgame/154203"
   },
   {
    "name": "Istanbul",
@@ -2942,10 +3024,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a bazaar logistics race — Splendor with legs"
+   "playsLike": "a bazaar logistics race — Splendor with legs",
+   "bggUrl": "https://boardgamegeek.com/boardgame/148949"
   },
   {
    "name": "Jaipur",
@@ -2963,10 +3046,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the two-player trading classic — Splendor for two"
+   "playsLike": "the two-player trading classic — Splendor for two",
+   "bggUrl": "https://boardgamegeek.com/boardgame/54043"
   },
   {
    "name": "Joan of Arc",
@@ -2984,10 +3068,11 @@
    "playable": true,
    "forSale": false,
    "cat": "adventure",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "miniatures-heavy historical battles, War of the Ring scale"
+   "playsLike": "miniatures-heavy historical battles, War of the Ring scale",
+   "bggUrl": "https://boardgamegeek.com/boardgame/64"
   },
   {
    "name": "Jungle Speed",
@@ -3005,10 +3090,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Ghost Blitz's totem-grabbing rival"
+   "playsLike": "Ghost Blitz's totem-grabbing rival",
+   "bggUrl": "https://boardgamegeek.com/boardgame/8098"
   },
   {
    "name": "Just One",
@@ -3026,10 +3112,11 @@
    "playable": true,
    "forSale": true,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": 45,
    "priceTxt": "~$45",
-   "playsLike": "Codenames' co-op cousin"
+   "playsLike": "Codenames' co-op cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/254640"
   },
   {
    "name": "Kabuto Sumo",
@@ -3050,7 +3137,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a coin-pusher duel — sumo with beetles"
+   "playsLike": "a coin-pusher duel — sumo with beetles",
+   "bggUrl": "https://boardgamegeek.com/boardgame/320390"
   },
   {
    "name": "Kairo",
@@ -3068,10 +3156,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a market-building family euro in the Istanbul spirit"
+   "playsLike": "a market-building family euro in the Istanbul spirit",
+   "bggUrl": "https://boardgamegeek.com/boardgame/107635"
   },
   {
    "name": "Kami-Sama",
@@ -3089,10 +3178,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "duelling spirits area control in the El Grande family"
+   "playsLike": "duelling spirits area control in the El Grande family",
+   "bggUrl": "https://boardgamegeek.com/boardgame/232318"
   },
   {
    "name": "Kero",
@@ -3110,10 +3200,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a two-player push-your-luck race — Quacks for two"
+   "playsLike": "a two-player push-your-luck race — Quacks for two",
+   "bggUrl": "https://boardgamegeek.com/boardgame/222219"
   },
   {
    "name": "Kingdom Rush - Rift in Time",
@@ -3134,7 +3225,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "tower defence as a co-op polyomino puzzle"
+   "playsLike": "tower defence as a co-op polyomino puzzle",
+   "bggUrl": "https://boardgamegeek.com/boardgame/272533"
   },
   {
    "name": "Kingdomino",
@@ -3152,10 +3244,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Carcassonne simplified into a 5x5 kingdom"
+   "playsLike": "Carcassonne simplified into a 5x5 kingdom",
+   "bggUrl": "https://boardgamegeek.com/boardgame/204583"
   },
   {
    "name": "Kingdomino: Age of Giants",
@@ -3173,7 +3266,7 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": null
@@ -3194,10 +3287,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a survival card game in the Dead of Winter shadow"
+   "playsLike": "a survival card game in the Dead of Winter shadow",
+   "bggUrl": "https://boardgamegeek.com/boardgame/254686"
   },
   {
    "name": "Legendary Inventors",
@@ -3215,10 +3309,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "an invention race with 7 Wonders workshop energy"
+   "playsLike": "an invention race with 7 Wonders workshop energy",
+   "bggUrl": "https://boardgamegeek.com/boardgame/200785"
   },
   {
    "name": "Life of a Chameleon",
@@ -3236,10 +3331,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a family adventure in the Game of Life spirit"
+   "playsLike": "a family adventure in the Game of Life spirit",
+   "bggUrl": "https://boardgamegeek.com/boardgame/337638"
   },
   {
    "name": "Lightning Train",
@@ -3260,7 +3356,8 @@
    "mode": "comp",
    "price": 95,
    "priceTxt": "~$95",
-   "playsLike": "Ticket to Ride crossed with Clank! deck-building"
+   "playsLike": "Ticket to Ride crossed with Clank! deck-building",
+   "bggUrl": "https://boardgamegeek.com/boardgame/445673"
   },
   {
    "name": "Logo Board Game",
@@ -3278,10 +3375,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Trivial Pursuit for brand logos"
+   "playsLike": "Trivial Pursuit for brand logos",
+   "bggUrl": "https://boardgamegeek.com/boardgame/64204"
   },
   {
    "name": "Lords of Waterdeep",
@@ -3299,10 +3397,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the friendly face of worker placement — D&D's Viticulture"
+   "playsLike": "the friendly face of worker placement — D&D's Viticulture",
+   "bggUrl": "https://boardgamegeek.com/boardgame/110327"
   },
   {
    "name": "Lost Ruins of Arnak",
@@ -3320,10 +3419,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "deck-building meets worker placement — Clank! goes archaeology"
+   "playsLike": "deck-building meets worker placement — Clank! goes archaeology",
+   "bggUrl": "https://boardgamegeek.com/boardgame/312484"
   },
   {
    "name": "Love Letter - Infinity Gauntlet Edition",
@@ -3341,10 +3441,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Love Letter with Thanos — one deck, big bluffs"
+   "playsLike": "Love Letter with Thanos — one deck, big bluffs",
+   "bggUrl": "https://boardgamegeek.com/boardgame/304285"
   },
   {
    "name": "Love Letter - Princess Ever After",
@@ -3362,10 +3463,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "classic Love Letter, storybook edition"
+   "playsLike": "classic Love Letter, storybook edition",
+   "bggUrl": "https://boardgamegeek.com/boardgame/129622"
   },
   {
    "name": "Lucky Numbers",
@@ -3386,7 +3488,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a breezy number-grid race — bingo with actual decisions"
+   "playsLike": "a breezy number-grid race — bingo with actual decisions",
+   "bggUrl": "https://boardgamegeek.com/boardgame/118247"
   },
   {
    "name": "Machi Koro",
@@ -3404,10 +3507,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "dice-rolling city building — Catan's little cousin"
+   "playsLike": "dice-rolling city building — Catan's little cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/143884"
   },
   {
    "name": "Machi Koro 2",
@@ -3425,10 +3529,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Machi Koro rebalanced by a decade of plays"
+   "playsLike": "Machi Koro rebalanced by a decade of plays",
+   "bggUrl": "https://boardgamegeek.com/boardgame/340364"
   },
   {
    "name": "Man Bites Dog",
@@ -3446,10 +3551,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "headline-building word play — tabloid Bananagrams"
+   "playsLike": "headline-building word play — tabloid Bananagrams",
+   "bggUrl": "https://boardgamegeek.com/boardgame/4035"
   },
   {
    "name": "Mansions of Madness",
@@ -3470,7 +3576,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Betrayal's app-driven Lovecraft big brother"
+   "playsLike": "Betrayal's app-driven Lovecraft big brother",
+   "bggUrl": "https://boardgamegeek.com/boardgame/83330"
   },
   {
    "name": "Maracaibo",
@@ -3488,10 +3595,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Great Western Trail's Caribbean rival"
+   "playsLike": "Great Western Trail's Caribbean rival",
+   "bggUrl": "https://boardgamegeek.com/boardgame/276025"
   },
   {
    "name": "Marvel United",
@@ -3512,7 +3620,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a co-op comic strip — Pandemic-lite with heroes"
+   "playsLike": "a co-op comic strip — Pandemic-lite with heroes",
+   "bggUrl": "https://boardgamegeek.com/boardgame/298047"
   },
   {
    "name": "Marvel Villainous Infinite Power",
@@ -3530,10 +3639,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "play the villain — Root-style asymmetry, lighter"
+   "playsLike": "play the villain — Root-style asymmetry, lighter",
+   "bggUrl": "https://boardgamegeek.com/boardgame/302336"
   },
   {
    "name": "Mascarade",
@@ -3551,10 +3661,11 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Coup at thirteen players with swapped identities"
+   "playsLike": "Coup at thirteen players with swapped identities",
+   "bggUrl": "https://boardgamegeek.com/boardgame/139030"
   },
   {
    "name": "Meeple Circus",
@@ -3572,10 +3683,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "acrobatic stacking — Block Party under a big top"
+   "playsLike": "acrobatic stacking — Block Party under a big top",
+   "bggUrl": "https://boardgamegeek.com/boardgame/193214"
   },
   {
    "name": "Mega WHOT! - Super Mario",
@@ -3593,7 +3705,7 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": "WHOT is Uno's ancestor — this one wears Mario"
@@ -3614,10 +3726,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "bird-powered area control in the El Grande family"
+   "playsLike": "bird-powered area control in the El Grande family",
+   "bggUrl": "https://boardgamegeek.com/boardgame/214123"
   },
   {
    "name": "Monolith Arena",
@@ -3635,10 +3748,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Neuroshima Hex with fantasy armies"
+   "playsLike": "Neuroshima Hex with fantasy armies",
+   "bggUrl": "https://boardgamegeek.com/boardgame/238393"
   },
   {
    "name": "Monopoly - Classic",
@@ -3656,10 +3770,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the original property-trading family institution"
+   "playsLike": "the original property-trading family institution",
+   "bggUrl": "https://boardgamegeek.com/boardgame/1406"
   },
   {
    "name": "Monopoly - Deal Card Game",
@@ -3677,10 +3792,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Monopoly compressed into fifteen card-game minutes"
+   "playsLike": "Monopoly compressed into fifteen card-game minutes",
+   "bggUrl": "https://boardgamegeek.com/boardgame/40398"
   },
   {
    "name": "Monopoly Bid",
@@ -3698,10 +3814,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Monopoly as a quick blind auction"
+   "playsLike": "Monopoly as a quick blind auction",
+   "bggUrl": "https://boardgamegeek.com/boardgame/327797"
   },
   {
    "name": "Munchkin",
@@ -3719,10 +3836,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "dungeon take-that — Exploding Kittens-era humour with levels"
+   "playsLike": "dungeon take-that — Exploding Kittens-era humour with levels",
+   "bggUrl": "https://boardgamegeek.com/boardgame/1927"
   },
   {
    "name": "Munchkin Marvel",
@@ -3743,7 +3861,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Munchkin in the Marvel universe"
+   "playsLike": "Munchkin in the Marvel universe",
+   "bggUrl": "https://boardgamegeek.com/boardgame/189848"
   },
   {
    "name": "Munchkin Panic",
@@ -3764,7 +3883,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Munchkin crossed with Castle Panic"
+   "playsLike": "Munchkin crossed with Castle Panic",
+   "bggUrl": "https://boardgamegeek.com/boardgame/156786"
   },
   {
    "name": "My First Bananagrams",
@@ -3782,10 +3902,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Bananagrams with training wheels"
+   "playsLike": "Bananagrams with training wheels",
+   "bggUrl": "https://boardgamegeek.com/boardgame/202478"
   },
   {
    "name": "My First Castle Panic",
@@ -3806,7 +3927,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Castle Panic for pre-schoolers"
+   "playsLike": "Castle Panic for pre-schoolers",
+   "bggUrl": "https://boardgamegeek.com/boardgame/267314"
   },
   {
    "name": "My First Stone Age",
@@ -3824,10 +3946,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Stone Age shrunk for little gatherers"
+   "playsLike": "Stone Age shrunk for little gatherers",
+   "bggUrl": "https://boardgamegeek.com/boardgame/191004"
   },
   {
    "name": "Mysterium",
@@ -3848,7 +3971,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Dixit turned into a ghost-story deduction co-op"
+   "playsLike": "Dixit turned into a ghost-story deduction co-op",
+   "bggUrl": "https://boardgamegeek.com/boardgame/181304"
   },
   {
    "name": "Near and Far",
@@ -3866,10 +3990,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "storybook adventure euro — Above and Below's sequel"
+   "playsLike": "storybook adventure euro — Above and Below's sequel",
+   "bggUrl": "https://boardgamegeek.com/boardgame/195421"
   },
   {
    "name": "New Frontiers",
@@ -3887,10 +4012,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Puerto Rico in space, from the Race for the Galaxy line"
+   "playsLike": "Puerto Rico in space, from the Race for the Galaxy line",
+   "bggUrl": "https://boardgamegeek.com/boardgame/255692"
   },
   {
    "name": "New York Zoo",
@@ -3908,10 +4034,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Patchwork-style polyomino zoo building"
+   "playsLike": "Patchwork-style polyomino zoo building",
+   "bggUrl": "https://boardgamegeek.com/boardgame/300877"
   },
   {
    "name": "No Thanks!",
@@ -3929,10 +4056,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the simplest push-your-luck bidding ever"
+   "playsLike": "the simplest push-your-luck bidding ever",
+   "bggUrl": "https://boardgamegeek.com/boardgame/12942"
   },
   {
    "name": "Not Alone",
@@ -3950,10 +4078,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "hidden-movement cat and mouse — Fugitive at party size"
+   "playsLike": "hidden-movement cat and mouse — Fugitive at party size",
+   "bggUrl": "https://boardgamegeek.com/boardgame/194879"
   },
   {
    "name": "Now or Never",
@@ -3971,10 +4100,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Near and Far's sequel — storybook village rebuilding"
+   "playsLike": "Near and Far's sequel — storybook village rebuilding",
+   "bggUrl": "https://boardgamegeek.com/boardgame/314745"
   },
   {
    "name": "Nucleum",
@@ -3992,10 +4122,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Brass Birmingham with atomic reactors"
+   "playsLike": "Brass Birmingham with atomic reactors",
+   "bggUrl": "https://boardgamegeek.com/boardgame/396790"
   },
   {
    "name": "Oath - Chronicles of Empire and Exile",
@@ -4013,10 +4144,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Root's designer building empires that remember your last game"
+   "playsLike": "Root's designer building empires that remember your last game",
+   "bggUrl": "https://boardgamegeek.com/boardgame/291572"
   },
   {
    "name": "Odin's Ravens (Second Edition)",
@@ -4037,7 +4169,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a two-player race across Norway — Jaipur pace, raven theme"
+   "playsLike": "a two-player race across Norway — Jaipur pace, raven theme",
+   "bggUrl": "https://boardgamegeek.com/boardgame/192074"
   },
   {
    "name": "Ok Boomer",
@@ -4055,10 +4188,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "generation-war trivia — Trivial Pursuit with a smirk"
+   "playsLike": "generation-war trivia — Trivial Pursuit with a smirk",
+   "bggUrl": "https://boardgamegeek.com/boardgame/313463"
   },
   {
    "name": "One Night Ultimate Superheroes",
@@ -4079,7 +4213,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "One Night Werewolf in capes"
+   "playsLike": "One Night Werewolf in capes",
+   "bggUrl": "https://boardgamegeek.com/boardgame/255293"
   },
   {
    "name": "One Night Ultimate Werewolf",
@@ -4100,7 +4235,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Werewolf compressed into ten minutes, no eliminations"
+   "playsLike": "Werewolf compressed into ten minutes, no eliminations",
+   "bggUrl": "https://boardgamegeek.com/boardgame/147949"
   },
   {
    "name": "Ono 99",
@@ -4118,10 +4254,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Uno's press-your-luck counting cousin"
+   "playsLike": "Uno's press-your-luck counting cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/7803"
   },
   {
    "name": "Operation Shuffle",
@@ -4139,7 +4276,7 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": "Operation dealt out as a card game"
@@ -4160,10 +4297,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "bag-building — Dominion drawn from a cloth bag"
+   "playsLike": "bag-building — Dominion drawn from a cloth bag",
+   "bggUrl": "https://boardgamegeek.com/boardgame/164928"
   },
   {
    "name": "Paladins of the West Kingdom",
@@ -4181,10 +4319,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a heavier Lords of Waterdeep with faith and force"
+   "playsLike": "a heavier Lords of Waterdeep with faith and force",
+   "bggUrl": "https://boardgamegeek.com/boardgame/266810"
   },
   {
    "name": "Palazzo",
@@ -4202,10 +4341,11 @@
    "playable": true,
    "forSale": false,
    "cat": "abstract",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a Knizia auction of palace floors — Ra energy"
+   "playsLike": "a Knizia auction of palace floors — Ra energy",
+   "bggUrl": "https://boardgamegeek.com/boardgame/15318"
   },
   {
    "name": "Paleo",
@@ -4226,7 +4366,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a stone-age co-op — Pandemic set in prehistory"
+   "playsLike": "a stone-age co-op — Pandemic set in prehistory",
+   "bggUrl": "https://boardgamegeek.com/boardgame/300531"
   },
   {
    "name": "Pandemic",
@@ -4247,7 +4388,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "THE co-op gateway — cure the world together"
+   "playsLike": "THE co-op gateway — cure the world together",
+   "bggUrl": "https://boardgamegeek.com/boardgame/30549"
   },
   {
    "name": "Paperback",
@@ -4268,7 +4410,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Scrabble as a deck-builder"
+   "playsLike": "Scrabble as a deck-builder",
+   "bggUrl": "https://boardgamegeek.com/boardgame/141572"
   },
   {
    "name": "Pendulum",
@@ -4286,10 +4429,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a real-time euro — Tzolkin with sand timers"
+   "playsLike": "a real-time euro — Tzolkin with sand timers",
+   "bggUrl": "https://boardgamegeek.com/boardgame/312804"
   },
   {
    "name": "Phase 10",
@@ -4307,10 +4451,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "rummy with a ten-step ladder — Uno's structured cousin"
+   "playsLike": "rummy with a ten-step ladder — Uno's structured cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/1258"
   },
   {
    "name": "Pick Up Sticks",
@@ -4331,7 +4476,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the steady-hands classic — Jenga's tabletop ancestor"
+   "playsLike": "the steady-hands classic — Jenga's tabletop ancestor",
+   "bggUrl": "https://boardgamegeek.com/boardgame/6424"
   },
   {
    "name": "Pictionary",
@@ -4352,7 +4498,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the original draw-and-guess — Telestrations' ancestor"
+   "playsLike": "the original draw-and-guess — Telestrations' ancestor",
+   "bggUrl": "https://boardgamegeek.com/boardgame/2281"
   },
   {
    "name": "Pictomania",
@@ -4370,10 +4517,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Pictionary where everyone draws and guesses at once"
+   "playsLike": "Pictionary where everyone draws and guesses at once",
+   "bggUrl": "https://boardgamegeek.com/boardgame/98229"
   },
   {
    "name": "Pirates of Perfidy",
@@ -4412,10 +4560,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a magnetic 3D Kingdomino — build a world in your hands"
+   "playsLike": "a magnetic 3D Kingdomino — build a world in your hands",
+   "bggUrl": "https://boardgamegeek.com/boardgame/252929"
   },
   {
    "name": "Playdoh Shuffle",
@@ -4433,7 +4582,7 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": null
@@ -4454,10 +4603,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "monkey mayhem — Exploding Kittens' cheekier cousin"
+   "playsLike": "monkey mayhem — Exploding Kittens' cheekier cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/60579"
   },
   {
    "name": "Pop the Pig",
@@ -4475,10 +4625,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Buckaroo-style kids' press-your-luck"
+   "playsLike": "Buckaroo-style kids' press-your-luck",
+   "bggUrl": "https://boardgamegeek.com/boardgame/35173"
   },
   {
    "name": "Psycho Killer",
@@ -4496,10 +4647,11 @@
    "playable": true,
    "forSale": false,
    "cat": "dark",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "horror-comedy take-that in the Exploding Kittens vein"
+   "playsLike": "horror-comedy take-that in the Exploding Kittens vein",
+   "bggUrl": "https://boardgamegeek.com/boardgame/327371"
   },
   {
    "name": "Puerto Rico",
@@ -4517,10 +4669,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the role-picking classic New Frontiers descends from"
+   "playsLike": "the role-picking classic New Frontiers descends from",
+   "bggUrl": "https://boardgamegeek.com/boardgame/3076"
   },
   {
    "name": "Quacks of Quedlinburg",
@@ -4538,10 +4691,11 @@
    "playable": true,
    "forSale": true,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": 70,
    "priceTxt": "~$70",
-   "playsLike": "Diamant-style push-your-luck inside a bag builder"
+   "playsLike": "Diamant-style push-your-luck inside a bag builder",
+   "bggUrl": "https://boardgamegeek.com/boardgame/409496"
   },
   {
    "name": "Quadefy",
@@ -4559,10 +4713,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": null,
+   "bggUrl": "https://boardgamegeek.com/boardgame/113517"
   },
   {
    "name": "Qwirkle",
@@ -4622,10 +4777,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "an Istanbul-weight euro with a dice market"
+   "playsLike": "an Istanbul-weight euro with a dice market",
+   "bggUrl": "https://boardgamegeek.com/boardgame/227224"
   },
   {
    "name": "Red Rising",
@@ -4643,10 +4799,11 @@
    "playable": true,
    "forSale": true,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": 55,
    "priceTxt": "~$55",
-   "playsLike": "Fantasy Realms in the Red Rising universe"
+   "playsLike": "Fantasy Realms in the Red Rising universe",
+   "bggUrl": "https://boardgamegeek.com/boardgame/329465"
   },
   {
    "name": "Res Arcana",
@@ -4688,7 +4845,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "One Night Werewolf with fake family members"
+   "playsLike": "One Night Werewolf with fake family members",
+   "bggUrl": "https://boardgamegeek.com/boardgame/194232"
   },
   {
    "name": "Rising Sun",
@@ -4706,10 +4864,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Blood Rage's honour-bound Japanese sibling"
+   "playsLike": "Blood Rage's honour-bound Japanese sibling",
+   "bggUrl": "https://boardgamegeek.com/boardgame/205896"
   },
   {
    "name": "Roll for the Galaxy",
@@ -4727,10 +4886,11 @@
    "playable": true,
    "forSale": true,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": 95,
    "priceTxt": "~$95",
-   "playsLike": "Race for the Galaxy rebuilt with dice"
+   "playsLike": "Race for the Galaxy rebuilt with dice",
+   "bggUrl": "https://boardgamegeek.com/boardgame/132531"
   },
   {
    "name": "Roll Player",
@@ -4748,10 +4908,11 @@
    "playable": true,
    "forSale": true,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": 75,
    "priceTxt": "~$75",
-   "playsLike": "Sagrada wearing a character-sheet skin"
+   "playsLike": "Sagrada wearing a character-sheet skin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/169426"
   },
   {
    "name": "Root",
@@ -4769,10 +4930,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "asymmetric woodland warfare — every faction plays a different game"
+   "playsLike": "asymmetric woodland warfare — every faction plays a different game",
+   "bggUrl": "https://boardgamegeek.com/boardgame/237182"
   },
   {
    "name": "Rubiks Cage",
@@ -4790,10 +4952,11 @@
    "playable": true,
    "forSale": false,
    "cat": "abstract",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Connect 4 inside a Rubik's twist"
+   "playsLike": "Connect 4 inside a Rubik's twist",
+   "bggUrl": "https://boardgamegeek.com/boardgame/283609"
   },
   {
    "name": "Rummikub Original",
@@ -4811,10 +4974,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "gin rummy with tiles — the classic set-shuffler"
+   "playsLike": "gin rummy with tiles — the classic set-shuffler",
+   "bggUrl": "https://boardgamegeek.com/boardgame/811"
   },
   {
    "name": "RUN",
@@ -4832,10 +4996,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": null,
+   "bggUrl": "https://boardgamegeek.com/boardgame/368028"
   },
   {
    "name": "RuneScape Kingdoms: King Black Dragon",
@@ -4853,7 +5018,7 @@
    "playable": true,
    "forSale": false,
    "cat": "abstract",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": null,
@@ -4878,7 +5043,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "RuneScape as a co-op quest crawl — Jaws of the Lion for MMO fans"
+   "playsLike": "RuneScape as a co-op quest crawl — Jaws of the Lion for MMO fans",
+   "bggUrl": "https://boardgamegeek.com/boardgame/361503"
   },
   {
    "name": "RuneScape Kingdoms: The Roleplaying Game",
@@ -4896,7 +5062,7 @@
    "playable": true,
    "forSale": false,
    "cat": "adventure",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": "a tabletop RPG — D&D in Gielinor"
@@ -4920,7 +5086,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Captain Sonar's sneaky cousin — 2v2 hidden movement"
+   "playsLike": "Captain Sonar's sneaky cousin — 2v2 hidden movement",
+   "bggUrl": "https://boardgamegeek.com/boardgame/252854"
   },
   {
    "name": "Saboteur",
@@ -4941,7 +5108,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "hidden-traitor tunnel digging — Werewolf with pickaxes"
+   "playsLike": "hidden-traitor tunnel digging — Werewolf with pickaxes",
+   "bggUrl": "https://boardgamegeek.com/boardgame/9220"
   },
   {
    "name": "Scape Goat",
@@ -4962,7 +5130,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a quick framing job — Coup energy with goats"
+   "playsLike": "a quick framing job — Coup energy with goats",
+   "bggUrl": "https://boardgamegeek.com/boardgame/315043"
   },
   {
    "name": "SCOUT",
@@ -4983,7 +5152,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "trick-taking meets hand Tetris — you can't rearrange your cards"
+   "playsLike": "trick-taking meets hand Tetris — you can't rearrange your cards",
+   "bggUrl": "https://boardgamegeek.com/boardgame/291453"
   },
   {
    "name": "Scrabble",
@@ -5004,7 +5174,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the word-building institution"
+   "playsLike": "the word-building institution",
+   "bggUrl": "https://boardgamegeek.com/boardgame/320"
   },
   {
    "name": "Sea Battle",
@@ -5046,7 +5217,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Avalon's political sibling — hidden roles in parliament"
+   "playsLike": "Avalon's political sibling — hidden roles in parliament",
+   "bggUrl": "https://boardgamegeek.com/boardgame/188834"
   },
   {
    "name": "Secrets",
@@ -5064,10 +5236,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Mascarade's spy-era cousin — your team keeps changing"
+   "playsLike": "Mascarade's spy-era cousin — your team keeps changing",
+   "bggUrl": "https://boardgamegeek.com/boardgame/200847"
   },
   {
    "name": "Selfish",
@@ -5085,10 +5258,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a backstabbing race for oxygen — Exploding Kittens meanness"
+   "playsLike": "a backstabbing race for oxygen — Exploding Kittens meanness",
+   "bggUrl": "https://boardgamegeek.com/boardgame/288583"
   },
   {
    "name": "Selfish: Zombies",
@@ -5106,10 +5280,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Selfish's undead sibling — same backstabbing race"
+   "playsLike": "Selfish's undead sibling — same backstabbing race",
+   "bggUrl": "https://boardgamegeek.com/boardgame/288583"
   },
   {
    "name": "Sequence",
@@ -5130,7 +5305,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Connect Five with cards — the family classic"
+   "playsLike": "Connect Five with cards — the family classic",
+   "bggUrl": "https://boardgamegeek.com/boardgame/2375"
   },
   {
    "name": "SETI",
@@ -5171,7 +5347,7 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": null,
@@ -5196,7 +5372,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a Wild-West Lovecraft dungeon crawl — Gloomhaven's pulpier cousin"
+   "playsLike": "a Wild-West Lovecraft dungeon crawl — Gloomhaven's pulpier cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/146791"
   },
   {
    "name": "Sherlock Holmes Consulting Detective",
@@ -5217,7 +5394,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Awkward Guests' grandparent — pure casebook deduction"
+   "playsLike": "Awkward Guests' grandparent — pure casebook deduction",
+   "bggUrl": "https://boardgamegeek.com/boardgame/2511"
   },
   {
    "name": "Shit Happens",
@@ -5235,10 +5413,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "rank the misfortunes — Cards Against Humanity's ranking cousin"
+   "playsLike": "rank the misfortunes — Cards Against Humanity's ranking cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/196379"
   },
   {
    "name": "Shut The Box",
@@ -5256,10 +5435,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the pub dice classic — Yahtzee's tiny ancestor"
+   "playsLike": "the pub dice classic — Yahtzee's tiny ancestor",
+   "bggUrl": "https://boardgamegeek.com/boardgame/9851"
   },
   {
    "name": "Sidereal Confluence",
@@ -5277,10 +5457,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Catan's trading dialled to eleven — one giant simultaneous negotiation"
+   "playsLike": "Catan's trading dialled to eleven — one giant simultaneous negotiation",
+   "bggUrl": "https://boardgamegeek.com/boardgame/202426"
   },
   {
    "name": "Sideshow Swap",
@@ -5298,10 +5479,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": null,
+   "bggUrl": "https://boardgamegeek.com/boardgame/256443"
   },
   {
    "name": "Skip-Bo",
@@ -5319,10 +5501,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Uno's sequencing sibling"
+   "playsLike": "Uno's sequencing sibling",
+   "bggUrl": "https://boardgamegeek.com/boardgame/1269"
   },
   {
    "name": "Skulk Hollow",
@@ -5340,10 +5523,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a one-vs-one Root — leaping foxes versus a stone guardian"
+   "playsLike": "a one-vs-one Root — leaping foxes versus a stone guardian",
+   "bggUrl": "https://boardgamegeek.com/boardgame/232595"
   },
   {
    "name": "Skull",
@@ -5361,10 +5545,11 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the purest bluff ever printed — poker distilled to four coasters"
+   "playsLike": "the purest bluff ever printed — poker distilled to four coasters",
+   "bggUrl": "https://boardgamegeek.com/boardgame/92415"
   },
   {
    "name": "Sky Team",
@@ -5405,10 +5590,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Small World wearing Warcraft races"
+   "playsLike": "Small World wearing Warcraft races",
+   "bggUrl": "https://boardgamegeek.com/boardgame/309630"
   },
   {
    "name": "Smash Up",
@@ -5426,10 +5612,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "faction mash-up brawls — pirate-dinosaurs versus zombie-wizards"
+   "playsLike": "faction mash-up brawls — pirate-dinosaurs versus zombie-wizards",
+   "bggUrl": "https://boardgamegeek.com/boardgame/122522"
   },
   {
    "name": "Sounds Fishy",
@@ -5447,10 +5634,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Balderdash flipped — spot the true answer among liars"
+   "playsLike": "Balderdash flipped — spot the true answer among liars",
+   "bggUrl": "https://boardgamegeek.com/boardgame/359893"
   },
   {
    "name": "Space Base",
@@ -5492,7 +5680,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the anti-Catan — heavy co-op spirits repelling colonists"
+   "playsLike": "the anti-Catan — heavy co-op spirits repelling colonists",
+   "bggUrl": "https://boardgamegeek.com/boardgame/162886"
   },
   {
    "name": "Splendor",
@@ -5510,10 +5699,11 @@
    "playable": true,
    "forSale": true,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": 62,
    "priceTxt": "~$62",
-   "playsLike": "Century: Golem Edition's engine-building twin"
+   "playsLike": "Century: Golem Edition's engine-building twin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/148228"
   },
   {
    "name": "Stabber in the Cabin",
@@ -5552,10 +5742,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The Isle of Cats' designer doing city streets"
+   "playsLike": "The Isle of Cats' designer doing city streets",
+   "bggUrl": "https://boardgamegeek.com/boardgame/279720"
   },
   {
    "name": "Suburbia",
@@ -5573,10 +5764,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "SimCity as a tile-laying engine"
+   "playsLike": "SimCity as a tile-laying engine",
+   "bggUrl": "https://boardgamegeek.com/boardgame/123260"
   },
   {
    "name": "Summoner Wars",
@@ -5594,10 +5786,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a card-driven battle duel — Magic meets chess"
+   "playsLike": "a card-driven battle duel — Magic meets chess",
+   "bggUrl": "https://boardgamegeek.com/boardgame/58281"
   },
   {
    "name": "Sushi Go",
@@ -5615,10 +5808,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "7 Wonders shrunk to a sushi train"
+   "playsLike": "7 Wonders shrunk to a sushi train",
+   "bggUrl": "https://boardgamegeek.com/boardgame/133473"
   },
   {
    "name": "T.I.M.E Stories: Under the Mask",
@@ -5639,7 +5833,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": null,
+   "bggUrl": "https://boardgamegeek.com/boardgame/146508"
   },
   {
    "name": "Taboo",
@@ -5660,7 +5855,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Codenames' loud ancestor — forbidden-word guessing"
+   "playsLike": "Codenames' loud ancestor — forbidden-word guessing",
+   "bggUrl": "https://boardgamegeek.com/boardgame/1111"
   },
   {
    "name": "Taco Cat Cheese Pizza",
@@ -5678,10 +5874,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Jungle Speed's shouty card cousin"
+   "playsLike": "Jungle Speed's shouty card cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/253664"
   },
   {
    "name": "Tainted Grail - Kings of Ruin",
@@ -5699,10 +5896,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a grim Arthurian story crawl — Gloomhaven meets a novel"
+   "playsLike": "a grim Arthurian story crawl — Gloomhaven meets a novel",
+   "bggUrl": "https://boardgamegeek.com/boardgame/360366"
   },
   {
    "name": "Tang Garden",
@@ -5720,10 +5918,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a zen garden builder — Tokaido's landscaping cousin"
+   "playsLike": "a zen garden builder — Tokaido's landscaping cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/252153"
   },
   {
    "name": "Tapple",
@@ -5762,10 +5961,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "run a fantasy pub — Machi Koro behind the bar"
+   "playsLike": "run a fantasy pub — Machi Koro behind the bar",
+   "bggUrl": "https://boardgamegeek.com/boardgame/210418"
   },
   {
    "name": "Terra Mystica",
@@ -5783,10 +5983,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the heavy terraforming classic Gaia Project grew from"
+   "playsLike": "the heavy terraforming classic Gaia Project grew from",
+   "bggUrl": "https://boardgamegeek.com/boardgame/120677"
   },
   {
    "name": "Terra Mystica (Big Box)",
@@ -5826,10 +6027,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the engine-builder about greening Mars — Ark Nova's space rival"
+   "playsLike": "the engine-builder about greening Mars — Ark Nova's space rival",
+   "bggUrl": "https://boardgamegeek.com/boardgame/167791"
   },
   {
    "name": "The Gang",
@@ -5850,7 +6052,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "co-op Texas hold'em — poker as a team puzzle"
+   "playsLike": "co-op Texas hold'em — poker as a team puzzle",
+   "bggUrl": "https://boardgamegeek.com/boardgame/411567"
   },
   {
    "name": "The Great Wall",
@@ -5868,10 +6071,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Tzolkin's crunch pointed at a Mongol invasion"
+   "playsLike": "Tzolkin's crunch pointed at a Mongol invasion",
+   "bggUrl": "https://boardgamegeek.com/boardgame/292375"
   },
   {
    "name": "The Isle of Cats",
@@ -5889,10 +6093,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Patchwork scaled up to a boatload of cats"
+   "playsLike": "Patchwork scaled up to a boatload of cats",
+   "bggUrl": "https://boardgamegeek.com/boardgame/281259"
   },
   {
    "name": "The Mind",
@@ -5913,7 +6118,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "wordless co-op counting — Hanabi's telepathic cousin"
+   "playsLike": "wordless co-op counting — Hanabi's telepathic cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/244992"
   },
   {
    "name": "The Quest for El Dorado",
@@ -5931,10 +6137,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "deck-building as a race — Dominion strapped to a jungle sprint"
+   "playsLike": "deck-building as a race — Dominion strapped to a jungle sprint",
+   "bggUrl": "https://boardgamegeek.com/boardgame/217372"
   },
   {
    "name": "The Red Dragon Inn",
@@ -5952,10 +6159,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "drink your mates under a fantasy table — Munchkin's pub crawl"
+   "playsLike": "drink your mates under a fantasy table — Munchkin's pub crawl",
+   "bggUrl": "https://boardgamegeek.com/boardgame/24310"
   },
   {
    "name": "The Resistance",
@@ -5976,7 +6184,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Werewolf without eliminations — the missions decide"
+   "playsLike": "Werewolf without eliminations — the missions decide",
+   "bggUrl": "https://boardgamegeek.com/boardgame/41114"
   },
   {
    "name": "The Sherriff of Nottingham",
@@ -5994,10 +6203,11 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Skull with contraband — bluff your bag past the sheriff"
+   "playsLike": "Skull with contraband — bluff your bag past the sheriff",
+   "bggUrl": "https://boardgamegeek.com/boardgame/157969"
   },
   {
    "name": "The Singaporean Dream",
@@ -6015,10 +6225,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Singapore's satirical take on the Selfish formula"
+   "playsLike": "Singapore's satirical take on the Selfish formula",
+   "bggUrl": "https://boardgamegeek.com/boardgame/267030"
   },
   {
    "name": "The Sweet and Spicy Truth",
@@ -6036,7 +6247,7 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": null
@@ -6057,10 +6268,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Kingdomino-weight drafting set in D&D's famous tavern"
+   "playsLike": "Kingdomino-weight drafting set in D&D's famous tavern",
+   "bggUrl": "https://boardgamegeek.com/boardgame/367820"
   },
   {
    "name": "Ticket to Ride",
@@ -6078,10 +6290,11 @@
    "playable": true,
    "forSale": true,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": 75,
    "priceTxt": "~$75",
-   "playsLike": "Carcassonne on rails — the other gateway classic"
+   "playsLike": "Carcassonne on rails — the other gateway classic",
+   "bggUrl": "https://boardgamegeek.com/boardgame/9209"
   },
   {
    "name": "Ticket to Ride: Europe",
@@ -6099,10 +6312,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the train-route gateway classic, Europe edition"
+   "playsLike": "the train-route gateway classic, Europe edition",
+   "bggUrl": "https://boardgamegeek.com/boardgame/14996"
   },
   {
    "name": "TIME Stories",
@@ -6123,7 +6337,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Sherlock-style deduction inside a time loop you replay"
+   "playsLike": "Sherlock-style deduction inside a time loop you replay",
+   "bggUrl": "https://boardgamegeek.com/boardgame/146508"
   },
   {
    "name": "Tokaido",
@@ -6141,10 +6356,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a serene stroll across Japan — Ticket to Ride's zen cousin"
+   "playsLike": "a serene stroll across Japan — Ticket to Ride's zen cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/123540"
   },
   {
    "name": "Tri-Ominos",
@@ -6162,10 +6378,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "dominoes gone triangular"
+   "playsLike": "dominoes gone triangular",
+   "bggUrl": "https://boardgamegeek.com/boardgame/4040"
   },
   {
    "name": "Trivial Pursuit - Horror",
@@ -6183,10 +6400,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Trivial Pursuit for horror tragics"
+   "playsLike": "Trivial Pursuit for horror tragics",
+   "bggUrl": "https://boardgamegeek.com/boardgame/269963"
   },
   {
    "name": "Trivial Pursuit - Supernatural",
@@ -6204,7 +6422,7 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
    "playsLike": "Trivial Pursuit for Winchester devotees"
@@ -6225,10 +6443,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "pitch quack cures — Balderdash with a stethoscope"
+   "playsLike": "pitch quack cures — Balderdash with a stethoscope",
+   "bggUrl": "https://boardgamegeek.com/boardgame/295687"
   },
   {
    "name": "Trust Me, I'm a Superhero",
@@ -6249,7 +6468,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "pitch your hero to a judge — Superfight in capes"
+   "playsLike": "pitch your hero to a judge — Superfight in capes",
+   "bggUrl": "https://boardgamegeek.com/boardgame/315733"
   },
   {
    "name": "Two Rooms and a Boom",
@@ -6270,7 +6490,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Werewolf split across two rooms — whole-venue deduction"
+   "playsLike": "Werewolf split across two rooms — whole-venue deduction",
+   "bggUrl": "https://boardgamegeek.com/boardgame/134352"
   },
   {
    "name": "Tzaar",
@@ -6288,10 +6509,11 @@
    "playable": true,
    "forSale": false,
    "cat": "abstract",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "chess-weight abstract from the GIPF project"
+   "playsLike": "chess-weight abstract from the GIPF project",
+   "bggUrl": "https://boardgamegeek.com/boardgame/31999"
   },
   {
    "name": "Tzolkin: The Mayan Calendar",
@@ -6309,10 +6531,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "worker placement on literal turning gears — Orleans' crunchier cousin"
+   "playsLike": "worker placement on literal turning gears — Orleans' crunchier cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/126163"
   },
   {
    "name": "Ultimate Werewolf",
@@ -6333,7 +6556,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the big-group social deduction original"
+   "playsLike": "the big-group social deduction original",
+   "bggUrl": "https://boardgamegeek.com/boardgame/152241"
   },
   {
    "name": "Undaunted: Battle of Britain",
@@ -6351,10 +6575,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Undaunted's dogfighting chapter — deck-built WWII duels"
+   "playsLike": "Undaunted's dogfighting chapter — deck-built WWII duels",
+   "bggUrl": "https://boardgamegeek.com/boardgame/366495"
   },
   {
    "name": "Undaunted: Normandy",
@@ -6372,10 +6597,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a deck-built WWII skirmish — Memoir '44 meets Dominion"
+   "playsLike": "a deck-built WWII skirmish — Memoir '44 meets Dominion",
+   "bggUrl": "https://boardgamegeek.com/boardgame/268864"
   },
   {
    "name": "Unfair",
@@ -6393,10 +6619,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "build a theme park, sabotage your rivals — Machi Koro with malice"
+   "playsLike": "build a theme park, sabotage your rivals — Machi Koro with malice",
+   "bggUrl": "https://boardgamegeek.com/boardgame/179172"
   },
   {
    "name": "Unlock!",
@@ -6437,10 +6664,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "the colour-matching classic — Crazy Eights perfected"
+   "playsLike": "the colour-matching classic — Crazy Eights perfected",
+   "bggUrl": "https://boardgamegeek.com/boardgame/2223"
   },
   {
    "name": "Uno - Flip",
@@ -6458,10 +6686,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Uno with a dark side — flip the whole deck"
+   "playsLike": "Uno with a dark side — flip the whole deck",
+   "bggUrl": "https://boardgamegeek.com/boardgame/271460"
   },
   {
    "name": "Uno All Wild",
@@ -6479,10 +6708,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Uno where every card is wild"
+   "playsLike": "Uno where every card is wild",
+   "bggUrl": "https://boardgamegeek.com/boardgame/352997"
   },
   {
    "name": "Uno Show em No Mercy",
@@ -6500,10 +6730,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Uno's brutal no-mercy variant"
+   "playsLike": "Uno's brutal no-mercy variant",
+   "bggUrl": "https://boardgamegeek.com/boardgame/399088"
   },
   {
    "name": "Upwords",
@@ -6524,7 +6755,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Scrabble in 3D — stack letters, change words"
+   "playsLike": "Scrabble in 3D — stack letters, change words",
+   "bggUrl": "https://boardgamegeek.com/boardgame/1515"
   },
   {
    "name": "Viticulture",
@@ -6584,10 +6816,11 @@
    "playable": true,
    "forSale": true,
    "cat": "party",
-   "mode": null,
+   "mode": "comp",
    "price": 60,
    "priceTxt": "~$60",
    "playsLike": "Hues and Cues for concepts instead of colours",
+   "bggUrl": "https://boardgamegeek.com/boardgame/262543",
    "pickBy": "Jehan",
    "pickNote": "Best big-group conversation game"
   },
@@ -6631,7 +6864,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "classic village Werewolf, moderator and all"
+   "playsLike": "classic village Werewolf, moderator and all",
+   "bggUrl": "https://boardgamegeek.com/boardgame/25821"
   },
   {
    "name": "What Next",
@@ -6652,7 +6886,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a co-op choose-your-path adventure with dexterity minigames"
+   "playsLike": "a co-op choose-your-path adventure with dexterity minigames",
+   "bggUrl": "https://boardgamegeek.com/boardgame/342443"
   },
   {
    "name": "Wingspan",
@@ -6670,10 +6905,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Everdell's feathered rival — the engine-builder that made birds cool"
+   "playsLike": "Everdell's feathered rival — the engine-builder that made birds cool",
+   "bggUrl": "https://boardgamegeek.com/boardgame/266192"
   },
   {
    "name": "Wizard",
@@ -6691,10 +6927,11 @@
    "playable": true,
    "forSale": false,
    "cat": "family",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "trick-taking with exact bids — 500's sharper cousin"
+   "playsLike": "trick-taking with exact bids — 500's sharper cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/1465"
   },
   {
    "name": "Wyrmspan",
@@ -6733,10 +6970,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": null,
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "a terracotta-army euro — dice placement in ancient China"
+   "playsLike": "a terracotta-army euro — dice placement in ancient China",
+   "bggUrl": "https://boardgamegeek.com/boardgame/234828"
   },
   {
    "name": "Yum Cha",
@@ -6757,17 +6995,11 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": null,
+   "bggUrl": "https://boardgamegeek.com/boardgame/363991"
   }
  ],
  "picks": [
-  {
-   "list": "Test",
-   "note": "",
-   "games": {
-    "123 Test": "Test"
-   }
-  },
   {
    "list": "Jehan",
    "note": "",
