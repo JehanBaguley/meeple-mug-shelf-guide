@@ -113,6 +113,7 @@ async function main() {
       if (!g) { g = { name, bggId: null, players: null, mins: null, time: null, age: null, catText: null, bgg: null, weight: null, playable: false, forSale: false, cat: null, mode: null, price: null, priceTxt: null, playsLike: null }; games.push(g); byName[norm(name)] = g; }
       if (val("playable")) g.playable = /^y/i.test(val("playable"));
       if (val("for_sale")) g.forSale = /^y/i.test(val("for_sale"));
+      if (val("expansion")) g.exp = /^y/i.test(val("expansion"));
       if (val("price")) { const pr = val("price").trim(), pm = pr.match(/\d+/); g.price = pm ? parseInt(pm[0]) : null; g.priceTxt = /^[~$]/.test(pr) ? pr : "$" + pr; }
       if (val("rating")) g.bgg = parseFloat(val("rating")) || g.bgg;
       if (val("bgg_link")) { g.bggUrl = val("bgg_link"); const bm = val("bgg_link").match(/boardgame\/(\d+)/); if (bm) g.bggId = +bm[1]; }
