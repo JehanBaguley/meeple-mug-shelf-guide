@@ -14,7 +14,8 @@
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--cream);font-family:'Bricolage Grotesque',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   .mono{font-family:'IBM Plex Mono',monospace}
-  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+  a:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+  button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid transparent;box-shadow:inset 0 0 0 2px var(--amber)}
   button{font-family:inherit;cursor:pointer}
   .wrap{max-width:760px;margin:0 auto;padding:0 16px}
   header{padding:26px 16px 14px}
@@ -145,7 +146,7 @@
 <main class="wrap">
 <div class="cols">
 <aside class="side">
-  <input type="text" id="search" placeholder="Search games…" aria-label="Search games" />
+  <input type="text" id="search" placeholder="Search games…" aria-label="Search games" autocomplete="off" />
 
   <div class="seg" id="seg" role="group" aria-label="Availability">
     <button data-seg="all" aria-pressed="true">All</button>
@@ -188,6 +189,7 @@
       <button class="wt on" data-ps="any" aria-pressed="true">Any</button>
       <button class="wt" data-ps="coop" aria-pressed="false">Co&#8209;op<small></small></button>
       <button class="wt" data-ps="comp" aria-pressed="false">Competitive<small></small></button>
+      <button class="wt" data-ps="team" aria-pressed="false">Teams<small></small></button>
     </div>
     <details class="fsec" id="genreAcc">
       <summary><strong>Genre</strong><span class="gsum" id="genreSum">any</span></summary>
@@ -260,7 +262,7 @@ const $ = id => document.getElementById(id);
 const norm = s => s.toLowerCase().replace(/[^a-z0-9 ]/g,"").trim();
 const seatLabel = n => n>=10?"10+":n;
 const wtBucket = w => w<2?"easy":(w<=3?"medium":"heavy");
-const bggUrl = g => g.bggId?("https://boardgamegeek.com/boardgame/"+g.bggId):("https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q="+encodeURIComponent(g.name));
+const bggUrl = g => g.bggUrl||(g.bggId?("https://boardgamegeek.com/boardgame/"+g.bggId):("https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q="+encodeURIComponent(g.name)));
 const hasStats = g => g.players !== null && g.players !== undefined;
 // ————— Category helpers: photo-list "Category" text → genre tags + spine colour —————
 // Every category token from the sheet becomes a filter chip; near-duplicates merged.
@@ -374,13 +376,15 @@ async function applySheet(){
       const val = k => idx(k)>-1 ? (r[idx(k)]||"").trim() : "";
       if(val("playable")) g.playable = /^y/i.test(val("playable"));
       if(val("for_sale")) g.forSale = /^y/i.test(val("for_sale"));
-      if(val("price")) { g.price = parseInt(val("price"))||g.price; g.priceTxt = "$"+val("price").replace(/^\$/,""); }
+      if(val("price")) { const pr = val("price").trim(), pm = pr.match(/\d+/); g.price = pm?parseInt(pm[0]):g.price; g.priceTxt = /^[~$]/.test(pr)?pr:"$"+pr; }
+      if(val("rating")) g.bgg = parseFloat(val("rating"))||g.bgg;
+      if(val("bgg_link")) { g.bggUrl = val("bgg_link"); const bm = val("bgg_link").match(/boardgame\/(\d+)/); if(bm) g.bggId = +bm[1]; }
       if(val("check") && /estimate/i.test(val("check")) && g.priceTxt && g.priceTxt[0]!=="~") g.priceTxt = "~"+g.priceTxt;
       if(val("price_text")) g.priceTxt = val("price_text"); // e.g. "$80–110" for roll-the-dice pricing
       if(val("status")) g.status = val("status");
       if(val("blurb")) g.playsLike = val("blurb");
-      if(val("badge_by")) g.pickBy = val("badge_by"), g.pickNote = val("badge_note");
-      if(val("rec_list")) { (lists[val("rec_list")] ??= {list:val("rec_list"),note:"",games:{}}).games[g.name] = val("rec_note"); }
+      const pb = val("pick_by")||val("badge_by")||val("rec_list"), pn = val("pick_note")||val("badge_note")||val("rec_note");
+      if(pb) { g.pickBy = pb; g.pickNote = pn; (lists[pb] ??= {list:pb,note:"",games:{}}).games[g.name] = pn; }
       if(val("players")) g.players = parsePlayersTxt(val("players")) ?? g.players;
       if(val("age")) g.age = val("age");
       if(val("time")) { const t = parseTimeTxt(val("time")); g.time = t.time; g.mins = t.mins; }
@@ -396,7 +400,7 @@ async function applySheet(){
 // ————— Picks chips —————
 function buildPicks(){
   $("picksLabel").hidden = !DATA.picks.length;
-  $("picks").innerHTML = DATA.picks.map((p,i)=>'<button class="pickchip" data-pick="'+i+'" aria-pressed="false">'+p.list+'</button>').join("");
+  $("picks").innerHTML = DATA.picks.map((p,i)=>'<button class="pickchip" data-pick="'+i+'" aria-pressed="false">'+p.list+'\u2019s picks</button>').join("");
 }
 
 // ————— Render —————
@@ -451,7 +455,7 @@ function render(){
   };
   const has = g => k => (g.tags||[]).includes(k);
   const tagPass = g => !tsel.length || (state.tagMode==="all" ? tsel.every(has(g)) : tsel.some(has(g)));
-  const stylePass = g => state.playStyle==="coop" ? g.mode==="coop" : state.playStyle==="comp" ? g.mode!=="coop" : true;
+  const stylePass = g => state.playStyle==="coop" ? g.mode==="coop" : state.playStyle==="team" ? g.mode==="team" : state.playStyle==="comp" ? (g.mode!=="coop"&&g.mode!=="team") : true;
 
   let list = DATA.games.filter(g => stylePass(g) && basePass(g, true) && tagPass(g));
 
@@ -462,7 +466,7 @@ function render(){
   document.querySelectorAll("[data-ps]").forEach(b => {
     const ps = b.dataset.ps;
     if(ps === "any") return;
-    const n = stylePool.filter(g => ps==="coop" ? g.mode==="coop" : g.mode!=="coop").length;
+    const n = stylePool.filter(g => ps==="coop" ? g.mode==="coop" : ps==="team" ? g.mode==="team" : (g.mode!=="coop"&&g.mode!=="team")).length;
     b.querySelector("small").textContent = n;
     const dead = n===0 && state.playStyle!==ps;
     b.disabled = dead; b.classList.toggle("dead", dead);
@@ -502,6 +506,7 @@ function render(){
   list.sort((a,b)=>sorters[state.sortBy](a,b)||a.name.localeCompare(b.name));
 
   $("countOut").textContent=list.length+" of "+DATA.games.length+" games";
+  $("search").placeholder="Search "+DATA.games.length+" games…";
   $("sheetCount").textContent = activeFilters; $("sheetCount").hidden = !activeFilters;
   $("sheetDone").textContent = "Show "+list.length+" game"+(list.length===1?"":"s");
   $("hiddenNote").hidden = hiddenPending===0;
