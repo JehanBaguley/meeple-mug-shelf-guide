@@ -68,7 +68,7 @@
   .seg button{flex:1;padding:12px 0;font-size:12.5px;font-weight:700;background:transparent;border:0;color:var(--muted)}
   .seg button[aria-pressed="true"]{background:var(--amber);color:var(--ink)}
   .segdesc{font-size:11.5px;color:var(--muted);margin:-4px 0 14px;line-height:1.45}
-  .picksSel{width:100%;background:var(--bg-deep);color:var(--cream);border:1px solid var(--line);border-radius:8px;padding:9px 12px;font-size:13.5px;font-family:inherit;margin-bottom:12px;cursor:pointer}
+  .picksSel{width:100%;background-color:var(--bg-deep);color:var(--cream);border:1px solid var(--line);border-radius:8px;padding:9px 30px 9px 12px;font-size:13.5px;font-family:inherit;margin-bottom:12px;cursor:pointer}
   .actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center}
   .state{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:8px;font-size:11px;font-weight:700;background:#e9e0cb;color:#4a4234;border:1px solid transparent}
   .state.sale{background:#f0e3c2;color:#7a5c1e;border-color:#d9c69a}
@@ -118,6 +118,18 @@
     body.sheet-open .panelwrap > summary{display:none}
   }
   @media(min-width:900px){ .sheetbtn,#scrim{display:none!important} }
+  .mbar{display:none}
+  @media(max-width:899px){
+    #search{display:none}
+    .countsort .sheetbtn{display:none}
+    .wrap{padding-bottom:84px}
+    .mbar{display:flex;gap:8px;align-items:center;position:fixed;left:0;right:0;bottom:0;z-index:45;padding:10px 12px;background:var(--bg);border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(0,0,0,.45)}
+    #msearch{flex:1;min-width:0}
+    .mfiltbtn{flex:0 0 auto;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+    body.sheet-open .mbar{display:none}
+    body.sheet-open .side > #segDesc,body.sheet-open .side > .seg,body.sheet-open .side > #picksLabel,body.sheet-open .side > #picksSel{display:none}
+    #toTop{bottom:80px}
+  }
   .genrow .wt{flex:0 0 auto;white-space:nowrap;padding-left:12px;padding-right:12px}
   .genrow .wt small{opacity:.65;font-weight:600;margin-left:4px}
   .morebtn{background:transparent;border:0;color:#c9a06b;font-weight:700;font-size:12.5px;padding:9px 4px;text-decoration:underline}
@@ -195,14 +207,12 @@
       <button class="wt" data-ps="comp" aria-pressed="false">Competitive<small></small></button>
       <button class="wt" data-ps="team" aria-pressed="false">Teams<small></small></button>
     </div>
-    <details class="fsec" id="genreAcc">
-      <summary><strong>Genre</strong><span class="gsum" id="genreSum">any</span></summary>
-      <div class="mseg" role="group" aria-label="Genre match mode" style="margin:8px 0">
-        <button class="on" data-tagmode="any" aria-pressed="true">Match any</button>
-        <button data-tagmode="all" aria-pressed="false">Match all</button>
-      </div>
-      <div class="genrow" id="genreRow"></div>
-    </details>
+    <div class="rowlabel" style="margin-top:16px;margin-bottom:8px"><strong>Genre</strong><span class="gsum" id="genreSum">any</span></div>
+    <div class="mseg" role="group" aria-label="Genre match mode" style="margin-bottom:10px">
+      <button class="on" data-tagmode="any" aria-pressed="true">Match any</button>
+      <button data-tagmode="all" aria-pressed="false">Match all</button>
+    </div>
+    <div class="genrow" id="genreRow"></div>
   </div>
   </details>
 
@@ -231,6 +241,10 @@
     The play library is the café's own list, kept up to date by staff in a shared sheet. Ratings are BoardGameGeek community averages. Buy a copy and Request a copy open the café's <a href="https://www.meepleandmug.com.au/contact" target="_blank" rel="noopener">contact page</a> — nothing is charged online. Or reach the café at <a href="mailto:admin@meepleandmug.com.au">admin@meepleandmug.com.au</a> or (+61) 0418 893 929.
     <span class="credit">Designed &amp; built by <a href="https://github.com/JehanBaguley" target="_blank" rel="noopener">Jehan Baguley</a>.</span>
   </footer>
+  <div class="mbar" id="mbar">
+    <input type="text" id="msearch" placeholder="Search games…" aria-label="Search games" autocomplete="off" />
+    <button id="mfilt" class="dirbtn mfiltbtn">Filters<span id="mfiltBadge" class="fbadge" hidden></span></button>
+  </div>
 </main>
 <div id="scrim" hidden></div>
 <button id="toTop" hidden aria-label="Back to top">↑</button>
@@ -415,7 +429,7 @@ function buildPicks(){
 function render(){
   document.querySelectorAll("[data-seg]").forEach(b=>b.setAttribute("aria-pressed", state.seg===b.dataset.seg));
   { const ps=$("picksSel"); if(ps) ps.value = state.pick!==null?String(state.pick):""; }
-  $("segDesc").textContent = {all:"Everything in the building \u2014 play in, or take a copy home.",play:"Play these at a table in the caf\u00e9.",buy:"Take a fresh, sealed copy home from the shelf."}[state.seg];
+  $("segDesc").textContent = {all:"Everything in the building.",play:"Available to play in the caf\u00e9.",buy:"For sale to take home."}[state.seg];
   document.querySelectorAll("[data-wt]").forEach(b=>{const on=state.wtOn[b.dataset.wt];b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
   paints.forEach(p=>p());
   $("seatOut").textContent=seatLabel(state.minSeats)+"\u2013"+seatLabel(state.maxSeats);
@@ -515,8 +529,9 @@ function render(){
   list.sort((a,b)=>sorters[state.sortBy](a,b)||a.name.localeCompare(b.name));
 
   $("countOut").textContent=list.length+" of "+DATA.games.length+" games";
-  $("search").placeholder="Search "+DATA.games.length+" games…";
+  $("search").placeholder="Search "+DATA.games.length+" games…"; { const m=$("msearch"); if(m) m.placeholder=$("search").placeholder; }
   $("sheetCount").textContent = activeFilters; $("sheetCount").hidden = !activeFilters;
+  { const mb=$("mfiltBadge"); if(mb){ mb.textContent=activeFilters; mb.hidden=!activeFilters; } }
   $("sheetDone").textContent = "Show "+list.length+" game"+(list.length===1?"":"s");
   $("hiddenNote").hidden = hiddenPending===0;
   $("hiddenNote").textContent = hiddenPending ? hiddenPending+" hidden by these filters \u2014 their details haven\u2019t been added yet." : "";
@@ -565,9 +580,12 @@ async function boot(){
   buildPicks(); buildTagRow(); render(); applySheet();
 }
 
-$("search").addEventListener("input",e=>{state.query=e.target.value;render()});
+function syncQuery(v){state.query=v;if($("search").value!==v)$("search").value=v;const m=$("msearch");if(m&&m.value!==v)m.value=v;render();}
+$("search").addEventListener("input",e=>syncQuery(e.target.value));
+$("msearch").addEventListener("input",e=>syncQuery(e.target.value));
+$("mfilt").addEventListener("click",()=>openSheet(true));
 $("seg").addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(b){state.seg=b.dataset.seg;render()}});
-$("picksSel").addEventListener("change",e=>{const v=e.target.value;state.pick=v===""?null:+v;render()});
+$("picksSel").addEventListener("change",e=>{const v=e.target.value;state.pick=v===""?null:+v;render();if(matchMedia("(max-width:899px)").matches)document.querySelector(".results").scrollIntoView({behavior:"smooth",block:"start"});});
 document.querySelectorAll("[data-wt]").forEach(b=>b.addEventListener("click",()=>{state.wtOn[b.dataset.wt]=!state.wtOn[b.dataset.wt];render()}));
 $("dirBtn").addEventListener("click",()=>{state.sortDir*=-1;$("dirBtn").textContent=state.sortDir===1?"\u2191":"\u2193";render()});
 window.addEventListener("scroll",()=>{$("toTop").hidden = window.scrollY < 600},{passive:true});
@@ -580,7 +598,7 @@ const paints = [
 ];
 function resetAll(){
   Object.assign(state, {pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:""});
-  $("search").value = "";
+  $("search").value = ""; { const m=$("msearch"); if(m) m.value=""; }
   buildTagRow(); render();
 }
 function openSheet(open){
