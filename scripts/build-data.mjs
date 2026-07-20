@@ -125,6 +125,7 @@ async function main() {
       if (val("time")) { const t = parseTimeTxt(val("time")); if (t.time) { g.time = t.time; g.mins = t.mins; } }
       if (val("category")) { g.catText = val("category"); g.cat = catSlugFor(g.catText); if (/co-?op|cooperative/i.test(g.catText)) g.mode = "coop"; if (/expansion|stretch goals/i.test(g.catText + " " + name)) g.exp = true; }
       if (val("play_style")) g.mode = { "co-op": "coop", coop: "coop", teams: "team", team: "team", competitive: "comp", comp: "comp" }[norm(val("play_style"))] || g.mode;
+      if (val("rules_link")) g.rulesUrl = val("rules_link"); // optional link to a rules explainer / how-to-play
       const pb = val("pick_by") || val("badge_by") || val("rec_list"), pn = val("pick_note") || val("badge_note") || val("rec_note");
       if (pb) { g.pickBy = pb; g.pickNote = pn; (lists[pb] ??= { list: pb, note: "", games: {} }).games[g.name] = pn; }
     }
