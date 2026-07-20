@@ -14,8 +14,13 @@
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--cream);font-family:'Bricolage Grotesque',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   .mono{font-family:'IBM Plex Mono',monospace}
-  a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
-  input:focus-visible,select:focus-visible{outline:none;box-shadow:inset 0 0 0 2px var(--amber)}
+  a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--amber);outline-offset:2px;border-radius:6px}
+  /* links + buttons that sit on the cream cards need a dark ring for contrast */
+  .glinks a:focus-visible,.cta:focus-visible{outline-color:#7a4d12}
+  input:not([type=range]):focus-visible,select:focus-visible{outline:none;box-shadow:inset 0 0 0 2px var(--amber)}
+  /* keyboard focus lands on the slider thumb, not a box round the whole track */
+  input[type=range].dual:focus-visible::-webkit-slider-thumb{outline:2px solid var(--amber);outline-offset:2px}
+  input[type=range].dual:focus-visible::-moz-range-thumb{outline:2px solid var(--amber)}
   button{font-family:inherit;cursor:pointer}
   .wrap{max-width:760px;margin:0 auto;padding:0 16px}
   header{padding:26px 16px 14px}
@@ -54,15 +59,21 @@
   .gcard{background:var(--card);color:var(--ink);border-radius:16px;border:1px solid var(--card-edge);box-shadow:0 2px 0 rgba(0,0,0,.25);overflow:hidden;display:flex;transition:transform .15s ease}
   .gcard:hover{transform:translateY(-2px)}
   @media(hover:hover){
-    .wt:hover{border-color:var(--timber-light)}
+    .wt:not(.dead):hover{border-color:var(--timber-light)}
     .seg button:not([aria-pressed="true"]):hover{color:var(--cream)}
     .glinks a:hover{opacity:.75}
-    #sortSel:hover,.picksSel:hover{border-color:var(--timber-light)}
+    #sortSel:hover{border-color:var(--timber-light)}
+    .pickchip:not(.on):hover{border-color:var(--timber-light)}
+    .clearbtn:hover{border-color:var(--timber-light);color:var(--cream)}
     .fsec summary:hover strong{color:var(--cream)}
+    .dirbtn:hover{border-color:var(--timber-light)}
+    .mseg button:not(.on):hover{color:#fff}
+    .morebtn:hover{color:var(--cream)}
+    #toTop:hover{background:var(--timber-light)}
   }
   @media (prefers-reduced-motion:reduce){.gcard,.gcard:hover{transition:none;transform:none}}
   .spine{width:6px;flex-shrink:0}
-  .gbody{padding:12px 16px 12px 12px;flex:1;min-width:0}
+  .gbody{padding:13px 16px 13px 13px;flex:1;min-width:0;display:flex;flex-direction:column}
   .gname{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
   .gname h3{margin:0;font-size:17px;font-weight:800;letter-spacing:-.01em;line-height:1.15}
   .badge{font-size:10px;border-radius:4px;padding:1px 5px;font-weight:600;font-family:'IBM Plex Mono',monospace}
@@ -75,7 +86,15 @@
   .seg button{flex:1;padding:12px 0;font-size:12.5px;font-weight:700;background:transparent;border:0;color:var(--muted)}
   .seg button[aria-pressed="true"]{background:var(--amber);color:var(--ink)}
   .segdesc{font-size:11.5px;color:var(--muted);margin:-4px 0 14px;line-height:1.45}
-  .picksSel{width:100%;background-color:var(--bg-deep);color:var(--cream);border:1px solid var(--line);border-radius:8px;padding:9px 30px 9px 12px;font-size:13.5px;font-family:inherit;margin-bottom:12px;cursor:pointer}
+  /* Picks & lists collections row: wraps in the desktop sidebar, scrolls horizontally on mobile */
+  .picksrow{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+  .pickchip{flex:0 0 auto;white-space:nowrap;background:var(--bg-deep);color:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:12.5px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+  .pickchip.on{background:var(--timber);color:var(--ink);border-color:var(--timber)}
+  .pickchip small{opacity:.6;font-weight:600}
+  .pickchip.on small{opacity:.85}
+  .pickchip.pin{border-color:var(--amber)}
+  .pickchip .pinstar{color:var(--amber);font-size:11px}
+  .pickchip.on .pinstar{color:var(--ink)}
   .actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center}
   .state{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:8px;font-size:11px;font-weight:700;background:#e9e0cb;color:#4a4234;border:1px solid transparent}
   .state.sale{background:#f0e3c2;color:#7a5c1e;border-color:#d9c69a}
@@ -86,7 +105,16 @@
   .cta{display:inline-flex;align-items:center;padding:9px 14px;border-radius:9px;font-size:12.5px;font-weight:800;text-decoration:none;min-height:38px}
   .cta.buy{background:var(--amber);color:var(--ink);border:1px solid var(--amber)}
   .cta.req{background:transparent;color:#7a4d12;border:1.5px solid var(--timber)}
-  .stats{font-size:12px;display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:8px;align-items:baseline}
+  .stats{font-size:12.5px;display:flex;flex-wrap:wrap;gap:3px 7px;margin-top:9px;align-items:baseline;color:#463d2c}
+  .stats .sep{opacity:.38}
+  /* genre chips: replace the old trailing category text, colour-dot per genre */
+  .gtags{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+  .gtag{font-size:10.5px;font-weight:700;letter-spacing:.01em;color:#5a4a2c;background:rgba(43,36,25,.05);border:1px solid var(--card-edge);border-radius:999px;padding:2px 9px;display:inline-flex;align-items:center;gap:5px}
+  .gtag i{width:6px;height:6px;border-radius:50%;flex:0 0 auto}
+  /* footer pinned to the card bottom; links always sit bottom-right */
+  .gfoot{margin-top:auto;padding-top:12px;display:flex;align-items:center;gap:8px 14px;flex-wrap:wrap}
+  .gfoot .actions{margin-top:0}
+  .gfoot .glinks{margin-top:0;margin-left:auto;padding-left:8px}
   .pending{font-size:12px;color:var(--ink-soft);margin-top:8px;font-style:italic}
   .gbody p{margin:7px 0 0;font-size:13px;line-height:1.45}
   .picknote{font-style:italic;color:#5a4a2c}
@@ -111,7 +139,9 @@
   .mseg button{border:0;background:transparent;color:var(--cream);padding:7px 13px;font-size:12px;font-weight:700}
   .mseg button.on{background:var(--timber);color:var(--ink)}
   .wt.dead{opacity:.32}
-  #resetBtn{margin-left:10px}
+  .clearbtn{display:block;margin:0 0 12px auto;background:transparent;border:1px solid var(--line);color:var(--timber-light);font-weight:700;font-size:12px;padding:6px 12px;border-radius:8px;cursor:pointer}
+  .clearbtn[hidden]{display:none}
+  .picksrow[hidden]{display:none}
   .sheetbtn{display:inline-flex;align-items:center;gap:6px;margin-right:10px;font-weight:700;font-size:12.5px;padding:8px 12px}
   .fbadge{background:var(--amber);color:var(--ink);border-radius:999px;font-size:11px;font-weight:800;padding:1px 7px}
   .sheetdone{display:none}
@@ -132,7 +162,8 @@
   @media(min-width:900px){ .sheetbtn,#scrim{display:none!important} }
   .mfiltbtn{display:none}
   @media(max-width:899px){
-    .mtop{position:sticky;top:0;z-index:40;background:var(--bg);padding:8px 0;margin:0 -2px 6px;box-shadow:0 8px 14px -10px rgba(0,0,0,.6)}
+    .mtop{position:sticky;top:0;z-index:40;background:var(--bg);padding:8px 0;margin:0 -2px 6px;transition:box-shadow .15s ease}
+    .mtop.stuck{box-shadow:0 8px 14px -10px rgba(0,0,0,.6)}
     .mtoprow{display:flex;gap:8px;align-items:center}
     .mtop #search{margin-bottom:0;flex:1;min-width:0}
     .mtop .seg{margin:8px 0 0}
@@ -140,13 +171,16 @@
     .countsort{position:static;box-shadow:none;padding:6px 0 0;margin:0}
     .countsort .sheetbtn{display:none}
     #toTop{left:14px;right:auto}
-    body.sheet-open .mtop,body.sheet-open .side > #segDesc,body.sheet-open .side > #picksLabel,body.sheet-open .side > #picksSel{display:none}
+    body.sheet-open .mtop,body.sheet-open .side > #segDesc,body.sheet-open .side > #picksLabel,body.sheet-open .side > #picksRow{display:none}
+    .picksrow{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -2px 14px;padding:2px 2px 6px;scrollbar-width:none}
+    .picksrow::-webkit-scrollbar{display:none}
   }
   .genrow .wt{flex:0 0 auto;white-space:nowrap;padding-left:12px;padding-right:12px}
   .genrow .wt small{opacity:.65;font-weight:600;margin-left:4px}
   .morebtn{background:transparent;border:0;color:#c9a06b;font-weight:700;font-size:12.5px;padding:9px 4px;text-decoration:underline}
-  .countsort{position:sticky;top:0;z-index:20;background:var(--bg,#243027);padding:8px 0;margin:0 -2px;box-shadow:0 6px 12px -8px rgba(0,0,0,.5)}
-  .sortwrap{display:flex;gap:6px;align-items:center}
+  @media(min-width:900px){ .countsort{position:sticky;top:0;z-index:20;background:var(--bg,#243027);padding:8px 0;margin:0 -2px;transition:box-shadow .15s ease} .countsort.stuck{box-shadow:0 6px 12px -8px rgba(0,0,0,.5)} }
+  .sortwrap{display:flex;gap:7px;align-items:center}
+  .sortlbl{font-size:11.5px;color:var(--muted);font-weight:600;white-space:nowrap}
   .dirbtn{border:1px solid var(--line);background:transparent;color:var(--cream);border-radius:8px;padding:8px 10px;font-size:14px;line-height:1;min-height:36px}
   #toTop{position:fixed;right:14px;bottom:18px;z-index:30;border:1px solid var(--line);background:var(--amber);color:var(--ink);border-radius:999px;width:44px;height:44px;font-size:18px;font-weight:800;box-shadow:0 4px 14px rgba(0,0,0,.35)}
   #toTop[hidden]{display:none}
@@ -188,11 +222,12 @@
   <p class="segdesc mono" id="segDesc"></p>
 
   <div class="eyebrow mono" id="picksLabel">Picks &amp; lists · staff and members</div>
-  <select id="picksSel" class="picksSel" aria-label="Staff and member pick lists"></select>
+  <div id="picksRow" class="picksrow" role="group" aria-label="Staff and member pick lists"></div>
 
   <details class="fsec panelwrap" id="filterWrap">
   <summary><strong>Filters</strong><span class="gsum" id="filtCount">none active</span></summary>
   <div class="panel">
+    <button id="resetBtn" class="clearbtn" hidden>Clear all filters</button>
     <div class="rowlabel"><strong>Players</strong><span class="readout mono" id="seatOut">1–10+</span></div>
     <div class="dualwrap">
       <div class="dualtrack"></div><div class="dualfill" id="seatFill"></div>
@@ -237,15 +272,19 @@
 </aside>
 <section class="results">
   <div class="countsort">
-    <button id="sheetBtn" class="dirbtn sheetbtn">Filters<span id="sheetCount" class="fbadge" hidden></span></button><span class="count mono" id="countOut" aria-live="polite"></span><button class="morebtn" id="resetBtn" hidden>Reset</button>
+    <button id="sheetBtn" class="dirbtn sheetbtn">Filters<span id="sheetCount" class="fbadge" hidden></span></button><span class="count mono" id="countOut" aria-live="polite"></span>
     <div class="sortwrap">
-      <select id="sortSel" aria-label="Sort by">
-        <option value="name">Name</option>
-        <option value="time">Playtime</option>
-        <option value="bgg">BGG rating</option>
-        <option value="price">Price</option>
+      <span class="sortlbl mono">Sort</span>
+      <select id="sortSel" aria-label="Sort games by">
+        <option value="name:1">Name (A–Z)</option>
+        <option value="name:-1">Name (Z–A)</option>
+        <option value="bgg:1">Rating · high first</option>
+        <option value="bgg:-1">Rating · low first</option>
+        <option value="time:1">Playtime · short first</option>
+        <option value="time:-1">Playtime · long first</option>
+        <option value="price:1">Price · low first</option>
+        <option value="price:-1">Price · high first</option>
       </select>
-      <button id="dirBtn" class="dirbtn" aria-label="Toggle sort direction" title="Toggle sort direction">↑</button>
     </div>
   </div>
   <div class="note" id="hiddenNote" hidden></div>
@@ -429,6 +468,7 @@ async function applySheet(){
       if(val("time")) { const t = parseTimeTxt(val("time")); g.time = t.time; g.mins = t.mins; }
       if(val("category")) { g.catText = val("category"); g.cat = catSlugFor(g.catText); if(/co-?op|cooperative/i.test(g.catText)) g.mode = "coop"; }
       if(val("play_style")) g.mode = ({"co-op":"coop",coop:"coop",teams:"team",team:"team",competitive:"comp",comp:"comp"})[norm(val("play_style"))] || g.mode;
+      if(val("rules_link")) g.rulesUrl = val("rules_link"); // optional link to a rules explainer / how-to-play
     }
     if(Object.keys(lists).length) DATA.picks = Object.values(lists);
     tagAll(DATA.games);
@@ -437,18 +477,29 @@ async function applySheet(){
 }
 
 // ————— Picks chips —————
+const isPinnedPick = name => /game of the week|weekly pick|this week/i.test(name||"");
 function buildPicks(){
   const has = DATA.picks.length;
   $("picksLabel").hidden = !has;
-  const sel = $("picksSel"); sel.hidden = !has;
-  sel.innerHTML = '<option value="">All games</option>' + DATA.picks.map((p,i)=>'<option value="'+i+'">'+p.list+'\u2019s picks</option>').join("");
-  sel.value = state.pick!==null ? String(state.pick) : "";
+  const row = $("picksRow"); if(!row) return;
+  row.hidden = !has;
+  // pinned lists (e.g. "Game of the week") float to the front; the rest keep sheet order
+  const order = DATA.picks.map((p,i)=>i).sort((a,b)=>(isPinnedPick(DATA.picks[a].list)?0:1)-(isPinnedPick(DATA.picks[b].list)?0:1));
+  const chip = (label,val,count,pinned)=>'<button class="pickchip'+(state.pick===val?" on":"")+(pinned?" pin":"")+'" data-pick="'+(val===null?"":val)+'" aria-pressed="'+(state.pick===val)+'">'+(pinned?'<span class="pinstar">\u2605</span>':"")+label+(count!=null?'<small>'+count+'</small>':"")+'</button>';
+  // "All games" first, then each list as its own chip (name shown verbatim so themed lists read naturally)
+  row.innerHTML = chip("All games",null,DATA.games.length,false)
+    + order.map(i=>{const p=DATA.picks[i];return chip(p.list,i,Object.keys(p.games).length,isPinnedPick(p.list));}).join("");
+  row.querySelectorAll("[data-pick]").forEach(b=>b.addEventListener("click",()=>{
+    const v=b.dataset.pick; state.pick = v===""?null:+v;
+    buildPicks(); render();
+    if(matchMedia("(max-width:899px)").matches) document.querySelector(".results").scrollIntoView({behavior:"smooth",block:"start"});
+  }));
 }
 
 // ————— Render —————
 function render(){
   document.querySelectorAll("[data-seg]").forEach(b=>b.setAttribute("aria-pressed", state.seg===b.dataset.seg));
-  { const ps=$("picksSel"); if(ps) ps.value = state.pick!==null?String(state.pick):""; }
+  document.querySelectorAll("#picksRow [data-pick]").forEach(b=>{const v=b.dataset.pick===""?null:+b.dataset.pick;const on=state.pick===v;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on);});
   $("segDesc").textContent = {all:"Everything in the building.",play:"Available to play in the caf\u00e9.",buy:"For sale to take home."}[state.seg];
   document.querySelectorAll("[data-wt]").forEach(b=>{const on=state.wtOn[b.dataset.wt];b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
   paints.forEach(p=>p());
@@ -574,16 +625,21 @@ function render(){
     if(g.time) bits.push(g.time);
     if(g.age) bits.push("ages "+g.age);
     if(g.weight!=null) bits.push(wtBucket(g.weight)+" to learn");
-    if(g.catText) bits.push(g.catText.toLowerCase());
+    // stats read as dot-separated essentials; category moved out to chips below
     const stats = bits.length
-      ? '<div class="stats mono">'+bits.map(b=>'<span>'+b+'</span>').join('')+'</div>'
+      ? '<div class="stats mono">'+bits.map(b=>'<span>'+b+'</span>').join('<span class="sep" aria-hidden="true">\u00b7</span>')+'</div>'
       : '<div class="pending">Details on the box, ask at the counter.</div>';
+    // genre chips (up to 3) with a colour dot per genre; replaces the old trailing text
+    const gtags = (g.tags||[]).slice(0,3).map(t=>{const slug=catSlugFor(t);const dot=slug?'<i style="background:'+CATS[slug]+'"></i>':'';return '<span class="gtag">'+dot+tagLabel(t)+'</span>';}).join('');
+    const genres = gtags ? '<div class="gtags">'+gtags+'</div>' : "";
     const pickNote = (state.pick!==null && DATA.picks[state.pick].games[g.name]) ? '<p class="picknote">'+DATA.picks[state.pick].games[g.name]+'</p>' : (g.pickNote?'<p class="picknote">'+g.pickNote+'</p>':"");
     const plays = g.playsLike?'<p class="blurb">'+g.playsLike+'</p>':"";
+    const links = '<div class="glinks"><a href="'+bggUrl(g)+'" target="_blank" rel="noopener noreferrer">BGG \u2197</a>'+
+      (g.rulesUrl?'<a href="'+g.rulesUrl+'" target="_blank" rel="noopener noreferrer">Rules \u2197</a>':"")+
+      (g.forSale ? '<a href="'+requestUrl(g,"buy")+'" target="_blank" rel="noopener noreferrer">Buy a copy</a>' : (g.playable ? '<a href="'+requestUrl(g,"order")+'" target="_blank" rel="noopener noreferrer">Request a copy</a>' : ""))+'</div>';
     return '<article class="gcard"><div class="spine" style="background:'+spine+'"></div><div class="gbody">'+
-      '<div class="gname"><h3>'+g.name+'</h3>'+badges+'</div>'+stats+plays+pickNote+actions+
-      '<div class="glinks"><a href="'+bggUrl(g)+'" target="_blank" rel="noopener noreferrer">BGG \u2197</a>'+
-      (g.forSale ? '<a href="'+requestUrl(g,"buy")+'" target="_blank" rel="noopener noreferrer">Buy a copy</a>' : (g.playable ? '<a href="'+requestUrl(g,"order")+'" target="_blank" rel="noopener noreferrer">Request a copy</a>' : ""))+'</div>'+
+      '<div class="gname"><h3>'+g.name+'</h3>'+badges+'</div>'+stats+genres+plays+pickNote+
+      '<div class="gfoot">'+actions+links+'</div>'+
       '</div></article>';
   }).join("") : '<div class="empty">'+(state.seg==="buy" && !DATA.games.some(g=>g.forSale)
     ? "No take-home stock is listed online yet \u2014 ask at the counter about buying a copy. Staff: set for_sale and price in the sheet and Buy buttons appear here."
@@ -606,10 +662,14 @@ $("mfilt").addEventListener("click",()=>openSheet(true));
 function placeMtop(){const mtop=document.querySelector(".mtop"),mainw=document.querySelector("main.wrap"),cols=document.querySelector(".cols"),side=document.querySelector(".side");if(!mtop)return;if(matchMedia("(max-width:899px)").matches){if(mtop.parentElement!==mainw)mainw.insertBefore(mtop,cols);}else{if(mtop.parentElement!==side)side.insertBefore(mtop,side.firstChild);}}
 placeMtop();window.addEventListener("resize",placeMtop);
 $("seg").addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(b){state.seg=b.dataset.seg;render()}});
-$("picksSel").addEventListener("change",e=>{const v=e.target.value;state.pick=v===""?null:+v;render();if(matchMedia("(max-width:899px)").matches)document.querySelector(".results").scrollIntoView({behavior:"smooth",block:"start"});});
 document.querySelectorAll("[data-wt]").forEach(b=>b.addEventListener("click",()=>{state.wtOn[b.dataset.wt]=!state.wtOn[b.dataset.wt];render()}));
-$("dirBtn").addEventListener("click",()=>{state.sortDir*=-1;$("dirBtn").textContent=state.sortDir===1?"\u2191":"\u2193";render()});
-window.addEventListener("scroll",()=>{$("toTop").hidden = window.scrollY < 600},{passive:true});
+// shadow appears only once a sticky bar is actually pinned (its top hits 0), not at rest
+function stickShadows(){
+  const mt=document.querySelector(".mtop"); if(mt) mt.classList.toggle("stuck", mt.getBoundingClientRect().top<=0.5);
+  const cs=document.querySelector(".countsort"); if(cs) cs.classList.toggle("stuck", cs.getBoundingClientRect().top<=0.5);
+}
+window.addEventListener("scroll",()=>{$("toTop").hidden = window.scrollY < 600; stickShadows();},{passive:true});
+stickShadows();
 $("toTop").addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
 const paints = [
   wireDual("minSeat","maxSeat","seatFill","minSeats","maxSeats",1,10),
@@ -636,7 +696,7 @@ $("list").addEventListener("click", e => { if(e.target.id==="emptyReset") resetA
 if(matchMedia("(min-width:900px)").matches) $("filterWrap").open = true;
 document.querySelectorAll("[data-tagmode]").forEach(b=>b.addEventListener("click",()=>{state.tagMode=b.dataset.tagmode;render()}));
 document.querySelectorAll("[data-ps]").forEach(b=>b.addEventListener("click",()=>{state.playStyle=b.dataset.ps;render()}));
-$("sortSel").addEventListener("change",e=>{state.sortBy=e.target.value;render()});
+$("sortSel").addEventListener("change",e=>{const p=e.target.value.split(":");state.sortBy=p[0];state.sortDir=+p[1];render();});
 boot();
 </script>
 </body>
