@@ -543,6 +543,7 @@ async function applySheet(){
     }
     if(Object.keys(lists).length) DATA.picks = Object.values(lists);
     tagAll(DATA.games);
+    resolvePick(); // a pick referenced in the URL can only resolve once the sheet's pick lists exist
     buildPicks(); buildTagRow(); render();
   }catch(e){ console.warn("Sheet overlay unavailable:", e); }
 }
@@ -723,6 +724,96 @@ function render(){
   // Load more: reveal the next page of matches, keeping the footer reachable (no infinite scroll)
   $("moreWrap").innerHTML = list.length > state.limit
     ? '<button id="loadMore" class="loadmore">Load more<span>('+(list.length-state.limit)+' more)</span></button>' : "";
+  saveState(); // reflect the current filters into the URL + localStorage after every change
+}
+
+// ————— Persist filters in the URL (shareable + survives refresh) and localStorage (bare-visit memory) —————
+const LS_KEY = "mm_filters";                          // localStorage key for the "remember my last view" fallback
+const SORT_KEYS = ["name","bgg","price","time","age","players"];
+const clampN = (n,lo,hi) => Math.min(hi, Math.max(lo, n));
+const validTags = () => new Set(DATA.games.flatMap(g => g.tags||[])); // only accept genres that actually exist
+let wantPick = null;                                  // pick list-name from the URL, resolved once DATA.picks is built
+
+// serialise the current filters to URL params — only non-default values, so clean views stay clean
+function encodeState(){
+  const p = new URLSearchParams();
+  if(state.query) p.set("q", state.query);
+  if(state.seg !== "all") p.set("av", state.seg);
+  if(state.minSeats > 1 || state.maxSeats < 10) p.set("pl", state.minSeats+"-"+state.maxSeats);
+  if(state.tLo > 0 || state.tHi < 8) p.set("t", state.tLo+"-"+state.tHi);
+  if(state.aLo > 4 || state.aHi < 18) p.set("ag", state.aLo+"-"+state.aHi);
+  if(state.pLo > 0 || state.pHi < 200) p.set("pr", state.pLo+"-"+state.pHi);
+  if(state.playStyle !== "any") p.set("ps", state.playStyle);
+  if(state.tagMode !== "any") p.set("tm", state.tagMode);
+  const tags = Object.keys(state.tags).filter(k => state.tags[k]);
+  if(tags.length) p.set("g", tags.map(encodeURIComponent).join(","));
+  if(state.pick !== null && DATA.picks[state.pick]) p.set("pick", DATA.picks[state.pick].list);
+  if(!(state.sortBy === "name" && state.sortDir === 1)) p.set("s", state.sortBy+"."+state.sortDir);
+  return p;
+}
+
+// resolve a pick referenced by its list-name (robust to the sheet re-ordering the pick lists)
+function resolvePick(){
+  if(wantPick === null) return;
+  if(DATA.picks && DATA.picks.length){
+    const i = DATA.picks.findIndex(x => x.list === wantPick);
+    state.pick = i >= 0 ? i : null;
+    wantPick = null;                                  // done — stop retrying
+  }
+}
+
+// read params back into state (validated + clamped so a hand-edited URL can't break the UI)
+function applyParams(p){
+  const tagset = validTags();
+  const int = (v,d) => { const n = parseInt(v,10); return Number.isFinite(n) ? n : d; };
+  if(p.has("q")) state.query = p.get("q");
+  if(p.has("av") && ["all","play","buy"].includes(p.get("av"))) state.seg = p.get("av");
+  const range = (key,lo0,hi0,min,max,loK,hiK) => {
+    if(!p.has(key)) return;
+    const m = p.get(key).split("-");
+    let lo = clampN(int(m[0],lo0),min,max), hi = clampN(int(m[1],hi0),min,max);
+    if(lo > hi){ const t = lo; lo = hi; hi = t; }      // guard a reversed range
+    state[loK] = lo; state[hiK] = hi;
+  };
+  range("pl",1,10,1,10,"minSeats","maxSeats");
+  range("t",0,8,0,8,"tLo","tHi");
+  range("ag",4,18,4,18,"aLo","aHi");
+  range("pr",0,200,0,200,"pLo","pHi");
+  if(p.has("ps") && ["any","coop","comp","team"].includes(p.get("ps"))) state.playStyle = p.get("ps");
+  if(p.has("tm") && ["any","all"].includes(p.get("tm"))) state.tagMode = p.get("tm");
+  if(p.has("g")){
+    state.tags = {};
+    p.get("g").split(",").forEach(s => { const t = decodeURIComponent(s); if(tagset.has(t)) state.tags[t] = true; });
+  }
+  if(p.has("s")){
+    const m = p.get("s").split("."), sb = m[0], sd = parseInt(m[1],10);
+    if(SORT_KEYS.includes(sb) && (sd === 1 || sd === -1)){ state.sortBy = sb; state.sortDir = sd; }
+  }
+  wantPick = p.has("pick") ? p.get("pick") : null;
+  resolvePick();
+}
+
+// on load: prefer the URL; if it's bare, fall back to the last remembered view
+function loadState(){
+  let sp = new URLSearchParams(location.search);
+  if([...sp.keys()].length === 0){
+    try{ const saved = localStorage.getItem(LS_KEY); if(saved) sp = new URLSearchParams(saved); }catch(e){}
+  }
+  applyParams(sp);
+}
+
+// write current filters to the URL (replaceState = no history spam) and remember them for next time
+function saveState(){
+  const qs = encodeState().toString();
+  try{ history.replaceState(null, "", qs ? "?"+qs : location.pathname); }catch(e){}
+  try{ localStorage.setItem(LS_KEY, qs); }catch(e){}
+}
+
+// push restored state into the inputs render() doesn't own (search box + sort dropdown)
+function syncInputs(){
+  $("search").value = state.query;
+  $("searchClear").hidden = !state.query;
+  $("sortSel").value = state.sortBy+":"+state.sortDir;
 }
 
 // ————— Prefer synced data/games.json when the Action has run —————
@@ -733,6 +824,7 @@ async function boot(){
   }catch(e){}
   tagAll(DATA.games);
   $("search").placeholder = "Search "+DATA.games.length+" games\u2026";
+  loadState(); syncInputs(); // restore filters from URL / localStorage, then mirror into the inputs
   buildPicks(); buildTagRow(); render(); applySheet();
 }
 
