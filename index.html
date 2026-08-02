@@ -6,7 +6,7 @@
 <link rel="icon" type="image/png" href="icon.png" />
 <link rel="apple-touch-icon" href="icon.png" />
 <meta name="theme-color" content="#22352c" />
-<title>Meeple &amp; Mug · Game Catalogue</title>
+<title>Meeple &amp; Mug · Shelf Guide</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;600&display=swap');
   :root{--bg:#123a24;--bg-deep:#0c2a19;--card:#f4ead2;--card-edge:#dccdaa;--timber:#c9a06b;--timber-light:#dcb98a;
@@ -93,7 +93,7 @@
   .b-exp{background:#efe2c4;border:1px solid #d9c69a;color:#7a5c1e}
   .b-pick{background:#fbeecf;border:1px solid #e0a63c;color:#8a5d10}
   .seg{display:flex;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:12px}
-  .seg button{flex:1;padding:12px 0;font-size:12.5px;font-weight:700;background:transparent;border:0;color:var(--muted)}
+  .seg button{flex:1;min-height:44px;padding:12px 0;font-size:12.5px;font-weight:700;background:transparent;border:0;color:var(--muted)}
   .seg button[aria-pressed="true"]{background:var(--amber);color:var(--ink)}
   .segdesc{font-size:11.5px;color:var(--muted);margin:-4px 0 14px;line-height:1.45}
   /* Picks & lists collections row: wraps in the desktop sidebar, scrolls horizontally on mobile */
@@ -158,6 +158,16 @@
   .genresearch[hidden]{display:none}
   /* hairline separating the range filters from the categorical (chip) filters */
   .fdiv{height:1px;background:var(--line);margin:18px 0 16px;border:0}
+  .fgroup{margin:15px 0 0;padding:14px 0 0;border-top:1px solid var(--line)}
+  /* the first group needs no rule: the panel hint above it is already a break */
+  .fgroup:first-of-type{margin-top:6px;padding-top:0;border-top:0}
+  .fgrouphd{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--timber-light);font-weight:700;margin:0 0 10px}
+  /* Price is meaningless unless you are looking at games for sale, so the whole
+     row is withheld until Availability is on Take home. One less permanent row. */
+  #priceGrp[hidden]{display:none}
+  /* Match any/all does nothing until two genres are included, so it stays out
+     of the way until it can actually change the result. */
+  #tagModeWrap[hidden]{display:none}
   .genrow{display:flex;gap:7px;flex-wrap:wrap}
   .fsec{margin-top:16px}
   .fsec summary{cursor:pointer;font-weight:700;font-size:13.5px;padding:4px 0;list-style:none;display:flex;align-items:center;gap:8px}
@@ -167,8 +177,11 @@
   .panelwrap > summary{background:var(--bg-deep);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
   .fsec .genrow{padding-top:7px}
   .gsum{font-size:11.5px;color:var(--muted);font-weight:600}
-  .mseg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-  .mseg button{border:0;background:transparent;color:var(--cream);padding:7px 13px;font-size:12px;font-weight:700}
+  /* This is the same segmented-control pattern as Availability sitting 40px
+     below it, so it should be the same object: full width, 44px touch target,
+     same radius and type scale. It was 216px wide with 34px buttons. */
+  .mseg{display:flex;width:100%;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .mseg button{flex:1;border:0;background:transparent;color:var(--muted);min-height:44px;padding:12px 0;font-size:12.5px;font-weight:700}
   .mseg button.on{background:var(--amber);color:var(--ink)}
   .wt.dead{opacity:.32}
   /* Panel head. The row is always in the layout, so the reset button appearing
@@ -189,7 +202,7 @@
   body.sheet-open{overflow:hidden}
   .sheethead{display:none;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--line);flex:0 0 auto}
   .sheethead strong{font-size:16px}
-  .sheetclose{background:transparent;border:0;color:var(--cream);font-size:20px;line-height:1;padding:4px 10px;cursor:pointer}
+  .sheetclose{background:transparent;border:0;color:var(--cream);font-size:20px;line-height:1;min-width:44px;min-height:44px;padding:0 10px;cursor:pointer;display:flex;align-items:center;justify-content:center}
   body.sheet-open .side{position:fixed;inset:0;z-index:60;height:100dvh;max-height:none;background:var(--bg);border-radius:0;padding:0;display:flex;flex-direction:column;box-shadow:none;overflow:hidden}
   body.sheet-open .sheethead{display:flex}
   body.sheet-open #filterWrap{flex:1 1 auto;overflow-y:auto;padding:14px 16px 8px;margin:0}
@@ -226,13 +239,23 @@
   }
   .genrow .wt{flex:0 0 auto;white-space:nowrap;padding-left:12px;padding-right:12px}
   .genrow .wt small{opacity:.65;font-weight:600;margin-left:4px}
-  .morebtn{background:transparent;border:0;color:#c9a06b;font-weight:700;font-size:12.5px;padding:9px 4px;text-decoration:underline}
+  .morebtn{background:transparent;border:0;color:#c9a06b;font-weight:700;font-size:12.5px;min-height:44px;padding:9px 4px;text-decoration:underline}
   @media(min-width:900px){ .countsort{position:sticky;top:0;z-index:20;background:var(--bg,#243027);padding:8px 0;margin:0 -2px;transition:box-shadow .15s ease} .countsort.stuck{box-shadow:0 6px 12px -8px rgba(0,0,0,.5)} }
   .sortwrap{display:flex;gap:7px;align-items:center}
   .sortlbl{font-size:11.5px;color:var(--muted);font-weight:600;white-space:nowrap}
   .dirbtn{border:1px solid var(--line);background:transparent;color:var(--cream);border-radius:8px;padding:8px 10px;font-size:14px;line-height:1;min-height:36px}
   #toTop{position:fixed;right:14px;bottom:18px;z-index:30;border:1px solid var(--line);background:var(--amber);color:var(--ink);border-radius:999px;width:44px;height:44px;font-size:18px;font-weight:800;box-shadow:0 4px 14px rgba(0,0,0,.35)}
   #toTop[hidden]{display:none}
+  /* A stale-feed notice, not an error screen: the page still works off the
+     nightly baked data, so this reads as information, not failure. */
+  .feednote{margin:0 0 12px;padding:9px 12px;border:1px solid #d98a8a;background:rgba(217,138,138,.12);color:#f0b7b7;border-radius:8px;font-size:12.5px;line-height:1.45}
+  .feednote[hidden]{display:none}
+  .dbg{margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:11.5px;line-height:1.55;white-space:pre-wrap;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .dbg[hidden]{display:none}
+  /* Reserve the button footprint at the end of the list so the final card is
+     never partly under it. Mid-scroll overlap is inherent to a floating button;
+     end-of-list overlap is just a missing gutter. */
+  .list{padding-bottom:72px}
   .panelwrap summary strong{font-size:14px}
   .panelwrap[open] summary{margin-bottom:2px}
   @media(min-width:900px){
@@ -249,21 +272,21 @@
 <body>
 <header class="wrap">
   <div class="kicker mono">63 Hardgrave Rd · West End · Brisbane</div>
-  <h1>Meeple &amp; Mug <span>Catalogue</span></h1>
-  <p class="sub">Every game in the building. Play it at a table, or take a fresh copy home from the shelf.</p>
+  <h1>Meeple &amp; Mug <span>Shelf Guide</span></h1>
+  <p class="sub">Every game we’ve got. Play one here, or take a new copy home.</p>
 </header>
 
 <main class="wrap">
 <div class="cols">
 <aside class="side">
-  <div class="sheethead"><strong>Filters</strong><button id="sheetClose" class="sheetclose" aria-label="Close filters">✕</button></div>
+  <div class="sheethead"><strong>Find a game</strong><button id="sheetClose" class="sheetclose" aria-label="Close filters">✕</button></div>
   <div class="mtop">
     <div class="mtoprow">
-      <div class="srchwrap"><input type="text" id="search" placeholder="Search games…" aria-label="Search games" autocomplete="off" /><button type="button" id="searchClear" class="srchclear" aria-label="Clear search" hidden>✕</button></div>
+      <div class="srchwrap"><input type="text" id="search" placeholder="Search games" aria-label="Search games" autocomplete="off" /><button type="button" id="searchClear" class="srchclear" aria-label="Clear search" hidden>✕</button></div>
       <button id="mfilt" class="dirbtn mfiltbtn">Filters<span id="mfiltBadge" class="fbadge" hidden></span></button>
     </div>
     <div class="seg" id="seg" role="group" aria-label="Availability">
-      <button data-seg="all" aria-pressed="true">All</button>
+      <button data-seg="all" aria-pressed="true">Everything</button>
       <button data-seg="play" aria-pressed="false">Play here</button>
       <button data-seg="buy" aria-pressed="false">Take home</button>
     </div>
@@ -271,64 +294,76 @@
   <p class="segdesc mono" id="segDesc"></p>
 
   <details class="fsec panelwrap" id="filterWrap">
-  <summary><strong>Filters</strong><span class="gsum" id="filtCount">none active</span></summary>
+  <summary><strong>Find a game</strong><span class="gsum" id="filtCount"></span></summary>
   <div class="panel">
     <div class="panelhead">
       <p class="panelhint">Narrow it down. The count updates as you go.</p>
       <button id="resetBtn" class="clearbtn" hidden>Clear all</button>
     </div>
-    <div class="rowlabel msheetonly" style="margin-bottom:8px"><strong>Availability</strong></div>
-    <div class="seg msheetonly" id="seg2" role="group" aria-label="Availability">
-      <button data-seg="all" aria-pressed="true">All</button>
-      <button data-seg="play" aria-pressed="false">Play here</button>
-      <button data-seg="buy" aria-pressed="false">Take home</button>
+    <div class="fgroup">
+      <p class="fgrouphd">Your table</p>
+      <div class="rowlabel"><strong>Players</strong><span class="readout mono" id="seatOut">any number</span></div>
+      <div class="dualwrap">
+        <div class="dualtrack"></div><div class="dualfill" id="seatFill"></div>
+        <input type="range" class="dual" id="minSeat" min="1" max="10" value="1" aria-label="Minimum players" />
+        <input type="range" class="dual" id="maxSeat" min="1" max="10" value="10" aria-label="Maximum players" />
+      </div>
+      <div class="rowlabel" style="margin-top:14px"><strong>Playtime</strong><span class="readout mono" id="timeOut">any length</span></div>
+      <div class="dualwrap">
+        <div class="dualtrack"></div><div class="dualfill" id="timeFill"></div>
+        <input type="range" class="dual" id="minTime" min="0" max="8" value="0" aria-label="Minimum playtime" />
+        <input type="range" class="dual" id="maxTime" min="0" max="8" value="8" aria-label="Maximum playtime" />
+      </div>
+      <div class="rowlabel" style="margin-top:14px"><strong>Ages</strong><span class="readout mono" id="ageOut">any age</span></div>
+      <div class="dualwrap">
+        <div class="dualtrack"></div><div class="dualfill" id="ageFill"></div>
+        <input type="range" class="dual" id="minAge" min="4" max="18" value="4" aria-label="Minimum age rating" />
+        <input type="range" class="dual" id="maxAge" min="4" max="18" value="18" aria-label="Maximum age rating" />
+      </div>
     </div>
-    <div class="rowlabel"><strong>Players</strong><span class="readout mono" id="seatOut">1–10+</span></div>
-    <div class="dualwrap">
-      <div class="dualtrack"></div><div class="dualfill" id="seatFill"></div>
-      <input type="range" class="dual" id="minSeat" min="1" max="10" value="1" aria-label="Minimum players" />
-      <input type="range" class="dual" id="maxSeat" min="1" max="10" value="10" aria-label="Maximum players" />
+    <div class="fgroup">
+      <p class="fgrouphd">What kind of game</p>
+      <div class="rowlabel" style="margin-bottom:8px"><strong>How you play</strong></div>
+      <div class="genrow">
+        <button class="wt on" data-ps="any" aria-pressed="true">Any</button>
+        <button class="wt" data-ps="coop" aria-pressed="false">Co&#8209;op<small></small></button>
+        <button class="wt" data-ps="comp" aria-pressed="false">Competitive<small></small></button>
+        <button class="wt" data-ps="team" aria-pressed="false">Teams<small></small></button>
+      </div>
+      <div class="rowlabel" style="margin-top:16px;margin-bottom:8px"><strong>Genre</strong><span class="gsum" id="genreSum">any</span></div>
+      <p class="genrehint mono">Tap once to include, twice to rule out</p>
+      <div class="srchwrap" id="genreSrchWrap" hidden><input type="text" id="genreSearch" class="genresearch" placeholder="Search genres" aria-label="Search genres" autocomplete="off" /><button type="button" id="genreClear" class="srchclear" aria-label="Clear genre search" hidden>✕</button></div>
+      <div class="genrow" id="genreRow"></div>
+      <div id="tagModeWrap" hidden style="margin-top:10px">
+        <div class="mseg" role="group" aria-label="Genre match mode">
+          <button class="on" data-tagmode="any" aria-pressed="true">Any of these</button>
+          <button data-tagmode="all" aria-pressed="false">All of these</button>
+        </div>
+      </div>
     </div>
-    <div class="rowlabel" style="margin-top:16px"><strong>Playtime</strong><span class="readout mono" id="timeOut">any length</span></div>
-    <div class="dualwrap">
-      <div class="dualtrack"></div><div class="dualfill" id="timeFill"></div>
-      <input type="range" class="dual" id="minTime" min="0" max="8" value="0" aria-label="Minimum playtime" />
-      <input type="range" class="dual" id="maxTime" min="0" max="8" value="8" aria-label="Maximum playtime" />
+    <div class="fgroup">
+      <p class="fgrouphd">Where it’s from</p>
+      <div class="rowlabel msheetonly" style="margin-bottom:8px"><strong>Availability</strong></div>
+      <div class="seg msheetonly" id="seg2" role="group" aria-label="Availability">
+        <button data-seg="all" aria-pressed="true">Everything</button>
+        <button data-seg="play" aria-pressed="false">Play here</button>
+        <button data-seg="buy" aria-pressed="false">Take home</button>
+      </div>
+      <div id="priceGrp" hidden>
+        <div class="rowlabel"><strong>Price</strong><span class="readout mono" id="priceOut">any price</span></div>
+        <div class="dualwrap">
+          <div class="dualtrack"></div><div class="dualfill" id="priceFill"></div>
+          <input type="range" class="dual" id="minPrice" min="0" max="200" step="5" value="0" aria-label="Minimum price" />
+          <input type="range" class="dual" id="maxPrice" min="0" max="200" step="5" value="200" aria-label="Maximum price" />
+        </div>
+      </div>
+      <div class="rowlabel" id="picksLabel" style="margin-top:16px;margin-bottom:8px"><strong>Staff &amp; member picks</strong></div>
+      <div id="picksRow" class="picksrow" role="group" aria-label="Staff and member pick lists"></div>
     </div>
-    <div class="rowlabel" style="margin-top:16px"><strong>Age rating</strong><span class="readout mono" id="ageOut">any age</span></div>
-    <div class="dualwrap">
-      <div class="dualtrack"></div><div class="dualfill" id="ageFill"></div>
-      <input type="range" class="dual" id="minAge" min="4" max="18" value="4" aria-label="Minimum age rating" />
-      <input type="range" class="dual" id="maxAge" min="4" max="18" value="18" aria-label="Maximum age rating" />
-    </div>
-    <div class="rowlabel" style="margin-top:16px"><strong>Price (for sale)</strong><span class="readout mono" id="priceOut">any price</span></div>
-    <div class="dualwrap">
-      <div class="dualtrack"></div><div class="dualfill" id="priceFill"></div>
-      <input type="range" class="dual" id="minPrice" min="0" max="200" step="5" value="0" aria-label="Minimum price" />
-      <input type="range" class="dual" id="maxPrice" min="0" max="200" step="5" value="200" aria-label="Maximum price" />
-    </div>
-    <div class="fdiv"></div>
-    <div class="rowlabel" id="picksLabel" style="margin-bottom:8px"><strong>Picks &amp; lists</strong><span class="gsum">staff &amp; members</span></div>
-    <div id="picksRow" class="picksrow" role="group" aria-label="Staff and member pick lists"></div>
-    <div class="rowlabel" style="margin-top:16px;margin-bottom:8px"><strong>Play style</strong></div>
-    <div class="genrow">
-      <button class="wt on" data-ps="any" aria-pressed="true">Any</button>
-      <button class="wt" data-ps="coop" aria-pressed="false">Co&#8209;op<small></small></button>
-      <button class="wt" data-ps="comp" aria-pressed="false">Competitive<small></small></button>
-      <button class="wt" data-ps="team" aria-pressed="false">Teams<small></small></button>
-    </div>
-    <div class="rowlabel" style="margin-top:16px;margin-bottom:8px"><strong>Genre</strong><span class="gsum" id="genreSum">any</span></div>
-    <div class="mseg" role="group" aria-label="Genre match mode" style="margin-bottom:10px">
-      <button class="on" data-tagmode="any" aria-pressed="true">Match any</button>
-      <button data-tagmode="all" aria-pressed="false">Match all</button>
-    </div>
-    <p class="genrehint mono">Tap to include · tap again to exclude</p>
-    <div class="srchwrap" id="genreSrchWrap" hidden><input type="text" id="genreSearch" class="genresearch" placeholder="Search genres…" aria-label="Search genres" autocomplete="off" /><button type="button" id="genreClear" class="srchclear" aria-label="Clear genre search" hidden>✕</button></div>
-    <div class="genrow" id="genreRow"></div>
   </div>
   </details>
 
-  <button id="sheetDone" class="sheetdone">Show all games</button>
+  <button id="sheetDone" class="sheetdone">See all games</button>
 </aside>
 <section class="results">
   <div class="countsort">
@@ -336,17 +371,19 @@
     <div class="sortwrap">
       <span class="sortlbl mono">Sort</span>
       <select id="sortSel" aria-label="Sort games by">
-        <option value="name:1">Name (A–Z)</option>
-        <option value="name:-1">Name (Z–A)</option>
-        <option value="bgg:1">Rating · high first</option>
-        <option value="bgg:-1">Rating · low first</option>
-        <option value="time:1">Playtime · short first</option>
-        <option value="time:-1">Playtime · long first</option>
-        <option value="price:1">Price · low first</option>
-        <option value="price:-1">Price · high first</option>
+        <option value="name:1">A to Z</option>
+        <option value="name:-1">Z to A</option>
+        <option value="bgg:1">Highest rated</option>
+        <option value="bgg:-1">Lowest rated</option>
+        <option value="time:1">Quickest first</option>
+        <option value="time:-1">Longest first</option>
+        <option value="price:1">Cheapest first</option>
+        <option value="price:-1">Most expensive first</option>
       </select>
     </div>
   </div>
+  <p class="feednote" id="feedNote" hidden></p>
+  <pre class="dbg" id="debugOut" hidden></pre>
   <div class="activechips" id="activeChips" hidden></div>
   <div class="note" id="hiddenNote" hidden></div>
 
@@ -356,7 +393,7 @@
 </div>
 
   <footer>
-    The play library is the café's own list, kept up to date by staff in a shared sheet. Ratings are BoardGameGeek community averages. Buy a copy and Request a copy open the café's <a href="https://www.meepleandmug.com.au/contact" target="_blank" rel="noopener">contact page</a> — nothing is charged online. Or reach the café at <a href="mailto:admin@meepleandmug.com.au">admin@meepleandmug.com.au</a> or (+61) 0418 893 929.
+    The play list is kept up to date by staff. Ratings come from BoardGameGeek. Buying or requesting a copy just opens our <a href="https://www.meepleandmug.com.au/contact" target="_blank" rel="noopener">contact page</a>, nothing is charged online.
     <span class="credit">Designed &amp; built by <a href="https://github.com/JehanBaguley" target="_blank" rel="noopener">Jehan Baguley</a>.</span>
   </footer>
 </main>
@@ -390,37 +427,74 @@ const CATS = {party:"#d9a441",bluff:"#3d6fa5",heavy:"#8a7fae",engine:"#6aa39a",f
 const MODE_LABEL = {coop:"co-op",team:"teams",comp:"competitive"};
 const S_TIME = [0,20,30,45,60,90,120,180,360];
 const PAGE = 24; // results rendered per "page"; Load more reveals another PAGE
-const state = {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",sortBy:"name",sortDir:1,showAllGenres:false,genreQuery:"",limit:PAGE};
+const state = {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",sortBy:"name",sortDir:1,showAllGenres:false,genreQuery:"",limit:PAGE};
 let DATA = EMBED;
 
 const $ = id => document.getElementById(id);
 const norm = s => s.toLowerCase().replace(/[^a-z0-9 ]/g,"").trim();
 const seatLabel = n => n>=10?"10+":n;
 const wtBucket = w => w<2?"easy":(w<=3?"medium":"heavy");
+// ?debug=1 turns the silent failures loud. Every value the sheet hands us that
+// we could not parse gets recorded with its row number instead of vanishing.
+const DEBUG = new URLSearchParams(location.search).get("debug")==="1";
+const DBG = {rows:0, matched:0, added:0, missingHeaders:[], badPlayers:[], badTime:[], badAge:[], badPrice:[], unmapped:new Set()};
+function renderDebug(){
+  if(!DEBUG) return;
+  const el = $("debugOut"); if(!el) return;
+  const or_none = a => a.length ? a.join(" | ") : "none";
+  el.hidden = false;
+  el.textContent = [
+    "sheet rows read: "+DBG.rows+"   matched existing: "+DBG.matched+"   added new: "+DBG.added,
+    "missing expected columns: "+or_none(DBG.missingHeaders),
+    "unparsed players: "+or_none(DBG.badPlayers),
+    "unparsed time: "+or_none(DBG.badTime),
+    "unparsed age: "+or_none(DBG.badAge),
+    "unparsed price: "+or_none(DBG.badPrice),
+    "genres with no colour mapping: "+or_none([...DBG.unmapped].sort())
+  ].join("\n");
+}
 const bggUrl = g => g.bggUrl||(g.bggId?("https://boardgamegeek.com/boardgame/"+g.bggId):("https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q="+encodeURIComponent(g.name)));
 const hasStats = g => g.players !== null && g.players !== undefined;
 // ————— Category helpers: photo-list "Category" text → genre tags + spine colour —————
 // Every category token from the sheet becomes a filter chip; near-duplicates merged.
-const TAG_ALIAS = {"word game":"word","card":"card game","children's game":"kids","abstract strategy":"abstract","social strategy":"social","tile placement":"tile laying","tile-laying":"tile laying","tile-placement":"tile laying","asymmetrical":"asymmetric","co-op":"cooperative","hidden roles":"deduction","social deduction":"deduction"};
+const TAG_ALIAS = {"word game":"word","card":"card game","children's game":"kids","abstract strategy":"abstract","social strategy":"social","tile placement":"tile laying","tile-laying":"tile laying","tile-placement":"tile laying","asymmetrical":"asymmetric","co-op":"cooperative","hidden roles":"deduction","social deduction":"deduction","science fiction":"sci-fi","dice":"dice game","auction":"bidding","conversation":"social"};
+// tokens the sheet contains that are not genres: "cooperative" is already the
+// Play style control, "two player" is the Players slider, "expansion" is a
+// product type and "classic" is a vibe. Add here, not in a filter() somewhere.
+const TAG_DROP = new Set(["cooperative","two player","expansion","classic"]);
+// Everything below can arrive from the cafe sheet, which anyone with edit
+// access can type into. Escaping at the point of interpolation is the only
+// place guaranteed to run, so it lives here rather than at parse time.
+const ESC_MAP = {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"};
+const esc = v => String(v==null?"":v).replace(/[&<>"']/g, c => ESC_MAP[c]);
+// Links are the other injection surface: a "javascript:" href typed into the
+// sheet would run on click. Allow only the schemes this page actually uses.
+const safeUrl = u => { const v = String(u==null?"":u).trim(); return /^(https?:|mailto:)/i.test(v) ? esc(v) : "#"; };
+// Hand-edited sheets say yes in a lot of ways. Accept all of them.
+const truthy = v => /^\s*(y|t|1|\u2713|\u2714)/i.test(String(v==null?"":v));
 const tagLabel = t => t.replace(/\b\w/g, c => c.toUpperCase()).replace("Bgg","BGG");
 function tagsFor(g){
   return [...new Set((g.catText||"").split(",").map(s => {
     const k = s.trim().toLowerCase();
     return TAG_ALIAS[k] || k;
-  }).filter(t => t && t !== "cooperative"))];
+  }).filter(t => t && !TAG_DROP.has(t)))];
 }
-const ageMin = g => { const m = (g.age||"").match(/^(\d+)/); return m ? +m[1] : null; };
+// "Ages 10+" used to return null here, which meant the game silently vanished
+// the moment anyone touched the age slider. Match a digit anywhere instead.
+const ageMin = g => { const m = String(g.age==null?"":g.age).match(/(\d+)/); return m ? +m[1] : null; };
 function catSlugFor(t){
   // primary (first-listed) category decides the colour; every token maps to one of nine groups
   for(const c of (t||"").toLowerCase().split(",").map(s=>s.trim()).filter(Boolean)){
     if(/co-?op|cooperative/.test(c)) return "coop";
-    if(/party|dexterity|drawing|humor|trivia|word|social|storytelling/.test(c)) return "party";
-    if(/deduction|bluffing|hidden roles|political/.test(c)) return "deduct";
+    if(/party|dexterity|drawing|humor|trivia|word|social|storytelling|conversation/.test(c)) return "party";
+    if(/deduction|bluffing|hidden roles|political|negotiation|auction/.test(c)) return "deduct";
     if(/family|children|kids/.test(c)) return "family";
     if(/horror|adult/.test(c)) return "dark";
     if(/card|deck building|dice|set collection|bidding/.test(c)) return "cards";
-    if(/adventure|exploration|sci-?fi|fantasy|superhero|thematic|legacy|roleplaying|historical|action/.test(c)) return "adventure";
-    if(/abstract|puzzle|tile|expansion/.test(c)) return "abstract";
+    if(/adventure|exploration|sci-?fi|science fiction|fantasy|superhero|thematic|legacy|roleplaying|historical|action/.test(c)) return "adventure";
+    if(/wargame|war game|military/.test(c)) return "war";
+    if(/two.?player|2.?player/.test(c)) return "two";
+    if(/abstract|puzzle|tile|expansion|classic/.test(c)) return "abstract";
     if(/strategy|economic|worker placement|area control|tactical|city building|civilization|asymmetric|resource management|racing|real-?time/.test(c)) return "strategy";
   }
   return null;
@@ -445,11 +519,14 @@ function buildTagRow(){
     const slug = catSlugFor(t);
     const dot = slug ? '<i class="tdot" style="background:'+CATS[slug]+'"></i>' : "";
     const _st=state.tags[t]; const _cls=_st===1?" on":_st===-1?" ex":"";
-    return '<button class="wt'+_cls+'" data-tag="'+t+'" data-count="'+counts[t]+'" aria-pressed="'+(!!_st)+'">'+dot+tagLabel(t)+'<small>'+counts[t]+'</small></button>';
+    // aria-pressed alone cannot say "excluded", so the label carries the state
+    const _sr = tagLabel(t)+", "+counts[t]+" games"+(_st===1?", included":_st===-1?", ruled out":"");
+    if(!slug && DEBUG) DBG.unmapped.add(t);
+    return '<button class="wt'+_cls+'" data-tag="'+esc(t)+'" data-count="'+counts[t]+'" aria-pressed="'+(!!_st)+'" aria-label="'+esc(_sr)+'">'+dot+esc(tagLabel(t))+'<small>'+counts[t]+'</small></button>';
   }).join("")
     + (!q && pool.length > CAP ? '<button class="morebtn" id="moreTags">'+(showAll?"Show fewer":"Show all "+all.length)+'</button>' : "")
-    + (q && !shown.length ? '<span class="gsum" style="padding:6px 2px">no genres match \u201c'+q+'\u201d</span>' : "")
-    + (sel.length ? '<button class="morebtn" id="clearTags">Clear</button>' : "");
+    + (q && !shown.length ? '<span class="gsum" style="padding:6px 2px">No genres called \u201c'+esc(q)+'\u201d</span>' : "")
+    + (sel.length ? '<button class="morebtn" id="clearTags">Clear genres</button>' : "");
   $("genreSum").textContent = sel.length ? sel.map(t=>(state.tags[t]===-1?"not ":"")+tagLabel(t)).join(" \u00b7 ") : "any";
   $("genreRow").querySelectorAll("[data-tag]").forEach(b => b.addEventListener("click", () => { const k=b.dataset.tag, cur=state.tags[k]||0, nxt=cur===1?-1:cur===-1?0:1; if(nxt===0) delete state.tags[k]; else state.tags[k]=nxt; buildTagRow(); render(); }));
   const mt = $("moreTags"); if(mt) mt.addEventListener("click", () => { state.showAllGenres = !state.showAllGenres; buildTagRow(); render(); });
@@ -465,7 +542,8 @@ function buildActiveChips(){
   if(state.aLo>4||state.aHi<18) chips.push(['age', $("ageOut").textContent]);
   if(state.pLo>0||state.pHi<200) chips.push(['price', $("priceOut").textContent]);
   if(state.playStyle!=="any") chips.push(['playstyle', MODE_LABEL[state.playStyle]||state.playStyle]);
-  Object.keys(state.tags).filter(k=>state.tags[k]).forEach(t => chips.push(['tag:'+t, (state.tags[t]===-1?"not ":"")+tagLabel(t)]));
+  // an excluded chip reads as a sentence, not as filter syntax
+  Object.keys(state.tags).filter(k=>state.tags[k]).forEach(t => chips.push(['tag:'+t, state.tags[t]===-1 ? "No "+tagLabel(t).toLowerCase()+" games" : tagLabel(t)]));
   box.hidden = chips.length===0;
   box.innerHTML = chips.map(([k,label]) =>
     '<button class="achip'+(k.startsWith('tag:')&&state.tags[k.slice(4)]===-1?' ex':'')+'" data-clear="'+k+'">'+label+'<span class="x" aria-hidden="true">\u00d7</span></button>').join("")
@@ -483,7 +561,7 @@ function clearFilter(key){
   buildTagRow(); render();
 }
 // generic dual-slider wiring: keeps handles ordered, paints the fill bar
-function wireDual(loId, hiId, fillId, loKey, hiKey, min, max){
+function wireDual(loId, hiId, fillId, loKey, hiKey, min, max, vt){
   let redirect = null; // when handles sit on the same value, reroute the drag to the one that can still move
   const clear = () => { redirect = null; };
   $(loId).addEventListener("input", e => {
@@ -506,20 +584,38 @@ function wireDual(loId, hiId, fillId, loKey, hiKey, min, max){
     const a = ((state[loKey]-min)/(max-min))*100, b = ((state[hiKey]-min)/(max-min))*100;
     $(fillId).style.left = a+"%"; $(fillId).style.right = (100-b)+"%";
     $(loId).style.zIndex = state[loKey] > (min+max)/2 ? 3 : 2;
+    // the raw slider value is a bucket index for time; announce the real thing
+    if(vt){
+      $(loId).setAttribute("aria-valuetext","minimum "+vt(state[loKey]));
+      $(hiId).setAttribute("aria-valuetext","maximum "+vt(state[hiKey]));
+    }
   };
 }
 // "2-5" | "3+" | "2" → [min,max]
 function parsePlayersTxt(s){
-  let m = s.match(/^(\d+)\s*-\s*(\d+)\+?$/); if(m) return [+m[1], +m[2]];
-  m = s.match(/^(\d+)\+$/); if(m) return [+m[1], 20];
-  m = s.match(/^(\d+)$/); if(m) return [+m[1], +m[1]];
+  // normalise the four unicode dashes staff paste in, then read the leading
+  // numbers. Trailing words ("2-4 players") used to fail the $-anchor and the
+  // whole value was dropped without a sound.
+  // also drop a leading hedge ("~2-4", "approx 45") so the number is at the front
+  s = String(s==null?"":s).replace(/[\u2010-\u2015]/g,"-").trim()
+    .replace(/^(?:~|\u2248|approx\.?|about|around)\s*/i,"");
+  let m = s.match(/^(\d+)\s*(?:-|to)\s*(\d+)/i); if(m) return [+m[1], +m[2]];
+  m = s.match(/^(\d+)\s*\+/); if(m) return [+m[1], 20];
+  m = s.match(/^(\d+)/); if(m) return [+m[1], +m[1]];
   return null;
 }
 // "30-45 mins" | "90 mins" | "Varies" → {time, mins}
 function parseTimeTxt(s){
+  s = String(s==null?"":s).replace(/[\u2010-\u2015]/g,"-").trim()
+    .replace(/^(?:~|\u2248|approx\.?|about|around)\s*/i,"");
   if(/varies/i.test(s)) return {time:"Varies", mins:null};
-  let m = s.match(/^(\d+)\s*-\s*(\d+)/); if(m) return {time:m[1]+"\u2013"+m[2]+"m", mins:+m[2]};
-  m = s.match(/^(\d+)/); if(m) return {time:m[1]+"m", mins:+m[1]};
+  // "1 hour" and "1-2 hrs" are common in the sheet and used to read as 1 minute
+  const mult = /\bh(ou)?rs?\b/i.test(s) ? 60 : 1;
+  const mins = n => Math.round(parseFloat(n)*mult);
+  let m = s.match(/^(\d+(?:\.\d+)?)\s*(?:-|to)\s*(\d+(?:\.\d+)?)/i);
+  if(m) return {time:mins(m[1])+"\u2013"+mins(m[2])+"m", mins:mins(m[2])};
+  m = s.match(/^(\d+(?:\.\d+)?)/);
+  if(m) return {time:mins(m[1])+"m", mins:mins(m[1])};
   return {time:null, mins:null};
 }
 
@@ -541,18 +637,31 @@ async function applySheet(){
   try{
     const rows = parseCsv(await (await fetch(SHEET_CSV_URL)).text());
     const head = rows.shift().map(h=>h.toLowerCase().trim().replace(/[^a-z0-9]+/g,"_"));
-    const idx = k => head.indexOf(k);
+    // Staff rename columns. Map the common variants back to the canonical key
+    // rather than letting indexOf return -1 and drop the column in silence.
+    const HEAD_ALIAS = {game:"name",title:"name",game_name:"name",player_count:"players",no_of_players:"players",num_players:"players",playtime:"time",play_time:"time",duration:"time",length:"time",age_rating:"age",ages:"age",min_age:"age",categories:"category",genre:"category",genres:"category",forsale:"for_sale",in_stock:"for_sale",play_here:"playable",on_shelf:"playable",bgg:"rating",bgg_rating:"rating",bgg_url:"bgg_link",rules_url:"rules_link",how_to_play:"rules_link",description:"blurb"};
+    const head2 = head.map(h => HEAD_ALIAS[h] || h);
+    const idx = k => head2.indexOf(k);
+    DBG.missingHeaders = ["name","players","time","age","category","playable","for_sale"].filter(k => idx(k)===-1);
     const byName = Object.fromEntries(DATA.games.map(g=>[norm(g.name),g]));
     const lists = {};
     for(const r of rows){
       const name = r[idx("name")]; if(!name) continue;
+      DBG.rows++;
       let g = byName[norm(name)];
-      if(!g){ g={name,players:null,bgg:null,weight:null,mins:null,time:null,age:null,catText:null,price:null,priceTxt:null,cat:null,mode:null,forSale:false,playable:false}; DATA.games.push(g); byName[norm(name)]=g; }
+      if(!g){ DBG.added++; g={name,players:null,bgg:null,weight:null,mins:null,time:null,age:null,catText:null,price:null,priceTxt:null,cat:null,mode:null,forSale:false,playable:false}; DATA.games.push(g); byName[norm(name)]=g; }
+      else DBG.matched++;
       const val = k => idx(k)>-1 ? (r[idx(k)]||"").trim() : "";
-      if(val("playable")) g.playable = /^y/i.test(val("playable"));
-      if(val("for_sale")) g.forSale = /^y/i.test(val("for_sale"));
-      if(val("expansion")) g.exp = /^y/i.test(val("expansion"));
-      if(val("price")) { const pr = val("price").trim(), pm = pr.match(/\d+/); g.price = pm?parseInt(pm[0]):g.price; g.priceTxt = /^[~$]/.test(pr)?pr:"$"+pr; }
+      if(val("playable")) g.playable = truthy(val("playable"));
+      if(val("for_sale")) g.forSale = truthy(val("for_sale"));
+      if(val("expansion")) g.exp = truthy(val("expansion"));
+      if(val("price")) {
+        const pr = val("price").trim(), pm = pr.match(/\d+(?:\.\d+)?/);
+        if(pm) g.price = Math.round(parseFloat(pm[0])); else DBG.badPrice.push(name+": "+pr);
+        // only prefix a dollar sign when the value is bare digits. "Free" and
+        // "AUD 50" used to come out as "$Free" and "$AUD 50".
+        g.priceTxt = /^[0-9.,\u2013-]+$/.test(pr) ? "$"+pr : pr;
+      }
       if(val("rating")) g.bgg = parseFloat(val("rating"))||g.bgg;
       if(val("bgg_link")) { g.bggUrl = val("bgg_link"); const bm = val("bgg_link").match(/boardgame\/(\d+)/); if(bm) g.bggId = +bm[1]; }
       if(val("price_text")) g.priceTxt = val("price_text"); // e.g. "$80–110" for roll-the-dice pricing
@@ -560,9 +669,9 @@ async function applySheet(){
       if(val("blurb")) g.playsLike = val("blurb");
       const pb = val("pick_by")||val("badge_by")||val("rec_list"), pn = val("pick_note")||val("badge_note")||val("rec_note");
       if(pb) { g.pickBy = pb; g.pickNote = pn; (lists[pb] ??= {list:pb,note:"",games:{}}).games[g.name] = pn; }
-      if(val("players")) g.players = parsePlayersTxt(val("players")) ?? g.players;
-      if(val("age")) g.age = val("age");
-      if(val("time")) { const t = parseTimeTxt(val("time")); g.time = t.time; g.mins = t.mins; }
+      if(val("players")) { const p = parsePlayersTxt(val("players")); if(p) g.players = p; else DBG.badPlayers.push(name+": "+val("players")); }
+      if(val("age")) { g.age = val("age"); if(!/\d/.test(val("age"))) DBG.badAge.push(name+": "+val("age")); }
+      if(val("time")) { const t = parseTimeTxt(val("time")); if(t.time===null) DBG.badTime.push(name+": "+val("time")); else { g.time = t.time; g.mins = t.mins; } }
       if(val("category")) { g.catText = val("category"); g.cat = catSlugFor(g.catText); if(/co-?op|cooperative/i.test(g.catText)) g.mode = "coop"; }
       if(val("play_style")) g.mode = ({"co-op":"coop",coop:"coop",teams:"team",team:"team",competitive:"comp",comp:"comp"})[norm(val("play_style"))] || g.mode;
       if(val("rules_link")) g.rulesUrl = val("rules_link"); // optional link to a rules explainer / how-to-play
@@ -571,7 +680,13 @@ async function applySheet(){
     tagAll(DATA.games);
     resolvePick(); // a pick referenced in the URL can only resolve once the sheet's pick lists exist
     buildPicks(); buildTagRow(); render();
-  }catch(e){ console.warn("Sheet overlay unavailable:", e); }
+  }catch(e){
+    console.warn("Sheet overlay unavailable:", e);
+    // The page still works off the nightly baked list, so this is a notice.
+    // Customers need to know it might be stale; staff need to know it broke.
+    const n = $("feedNote");
+    if(n){ n.hidden = false; n.textContent = "Showing our last saved list, today\u2019s updates aren\u2019t loading."; }
+  }
 }
 
 // ————— Picks chips —————
@@ -597,10 +712,10 @@ function buildPicks(){
 function render(){
   document.querySelectorAll("[data-seg]").forEach(b=>b.setAttribute("aria-pressed", state.seg===b.dataset.seg));
   document.querySelectorAll("#picksRow [data-pick]").forEach(b=>{const v=b.dataset.pick===""?null:+b.dataset.pick;const on=state.pick===v;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on);});
-  $("segDesc").textContent = {all:"Everything in the building.",play:"Available to play in the caf\u00e9.",buy:"For sale to take home."}[state.seg];
-  document.querySelectorAll("[data-wt]").forEach(b=>{const on=state.wtOn[b.dataset.wt];b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
+  $("segDesc").textContent = {all:"Every game we\u2019ve got.",play:"On the shelf right now.",buy:"Buy a copy to take home."}[state.seg];
   paints.forEach(p=>p());
-  $("seatOut").textContent=seatLabel(state.minSeats)+"\u2013"+seatLabel(state.maxSeats);
+  $("seatOut").textContent = (state.minSeats===1&&state.maxSeats===10) ? "any number"
+    : seatLabel(state.minSeats)+"\u2013"+seatLabel(state.maxSeats);
   $("timeOut").textContent = (state.tLo===0&&state.tHi===8) ? "any length"
     : state.tLo===0 ? "\u2264 "+S_TIME[state.tHi]+" min"
     : state.tHi===8 ? "\u2265 "+S_TIME[state.tLo]+" min"
@@ -615,14 +730,15 @@ function render(){
     : "$"+state.pLo+"\u2013$"+state.pHi;
 
   document.querySelectorAll("[data-tagmode]").forEach(b=>{const on=state.tagMode===b.dataset.tagmode;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
+  $("priceGrp").hidden = state.seg!=="buy";
   document.querySelectorAll("[data-ps]").forEach(b=>{const on=state.playStyle===b.dataset.ps;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
   const timeNarrowed = state.tLo>0||state.tHi<8, ageNarrowed = state.aLo>4||state.aHi<18;
   const activeFilters =
     (state.minSeats>1||state.maxSeats<10) + timeNarrowed + ageNarrowed +
     (state.pLo>0||state.pHi<200) + (state.playStyle!=="any") +
     Object.keys(state.tags).filter(k=>state.tags[k]).length;
-  $("filtCount").textContent = activeFilters ? activeFilters+" active" : "none active";
-  const narrowed = state.minSeats>1||state.maxSeats<10||timeNarrowed||ageNarrowed||!state.wtOn.easy||!state.wtOn.medium||!state.wtOn.heavy;
+  $("filtCount").textContent = activeFilters ? activeFilters+" filter"+(activeFilters===1?"":"s")+" on" : "";
+  const narrowed = state.minSeats>1||state.maxSeats<10||timeNarrowed||ageNarrowed;
   const pickList = state.pick!==null ? DATA.picks[state.pick] : null;
   let hiddenPending = 0;
 
@@ -642,7 +758,6 @@ function render(){
       if(!(g.players[0]<=state.maxSeats && g.players[1]>=state.minSeats)) return false;
       if(timeNarrowed){ if(g.mins===null || g.mins<S_TIME[state.tLo] || (state.tHi<8 && g.mins>S_TIME[state.tHi])) return false; }
       if(ageNarrowed){ const a = ageMin(g); if(a===null || a<state.aLo || a>state.aHi) return false; }
-      if(g.weight!=null && !state.wtOn[wtBucket(g.weight)]) return false;
     }
     return true;
   };
@@ -651,6 +766,24 @@ function render(){
   const stylePass = g => state.playStyle==="coop" ? g.mode==="coop" : state.playStyle==="team" ? g.mode==="team" : state.playStyle==="comp" ? (g.mode!=="coop"&&g.mode!=="team") : true;
 
   let list = DATA.games.filter(g => stylePass(g) && basePass(g, true) && tagPass(g));
+
+  // The match-mode control only earns its place when "All of these" would
+  // actually return something. No game in the catalogue carries more than two
+  // genres, so at three-plus includes the AND is empty by construction. This
+  // counts it live rather than hard-coding that, so it stays correct if the
+  // sheet\u2019s Category column ever gets richer.
+  const allCount = tInc.length >= 2
+    ? DATA.games.filter(g => stylePass(g) && basePass(g, false) && tInc.every(has(g)) && !tExc.some(has(g))).length
+    : 0;
+  $("tagModeWrap").hidden = allCount === 0;
+
+  // If someone was already in "all" when it stopped being possible, the panel
+  // control is gone but the mode is not. The empty state below offers the way
+  // back, which is better than silently flipping the mode under them.
+  let anyCount = 0;
+  if(list.length === 0 && state.tagMode === "all" && tInc.length >= 2){
+    anyCount = DATA.games.filter(g => stylePass(g) && basePass(g, false) && tInc.some(has(g)) && !tExc.some(has(g))).length;
+  }
 
   // live facet counts: each chip shows what it would yield given every OTHER active filter
   const basePool = DATA.games.filter(g => basePass(g, false) && stylePass(g));
@@ -705,53 +838,57 @@ function render(){
   const shown = list.slice(0, state.limit);
   buildActiveChips();
 
-  $("countOut").textContent=list.length+" of "+DATA.games.length+" games";
-  $("search").placeholder="Search "+DATA.games.length+" games…";
+  // the denominator is a database readout; only show it when nothing is filtered
+  $("countOut").textContent = list.length===DATA.games.length ? "All "+DATA.games.length+" games" : list.length+" game"+(list.length===1?"":"s");
+  $("search").placeholder="Search "+DATA.games.length+" games";
   $("sheetCount").textContent = activeFilters; $("sheetCount").hidden = !activeFilters;
   { const mb=$("mfiltBadge"); if(mb){ mb.textContent=activeFilters; mb.hidden=!activeFilters; } }
-  $("sheetDone").textContent = "Show "+list.length+" game"+(list.length===1?"":"s");
+  $("sheetDone").textContent = "See "+list.length+" game"+(list.length===1?"":"s");
   $("hiddenNote").hidden = hiddenPending===0;
-  $("hiddenNote").textContent = hiddenPending ? hiddenPending+" hidden by these filters \u2014 their details haven\u2019t been added yet." : "";
+  $("hiddenNote").textContent = hiddenPending ? hiddenPending+" game"+(hiddenPending===1?"":"s")+" hidden, we haven\u2019t added their details yet." : "";
 
   $("list").innerHTML = list.length ? shown.map(g=>{
     const spine = g.cat?CATS[g.cat]:"#55685c";
     const badges =
       (g.exp?'<span class="badge b-exp">expansion</span>':"")+
-      (g.pickBy?'<span class="badge b-pick">'+g.pickBy+"'s pick</span>":"");
+      (g.pickBy?'<span class="badge b-pick">'+esc(g.pickBy)+"'s pick</span>":"");
     const stOut = g.status && !/^on/i.test(g.status);
     const tags = [];
-    if(g.playable) tags.push('<span class="state"><span class="dot'+(stOut?' out':'')+'"></span>'+(g.status?g.status:"On the shelf")+'</span>');
-    if(g.forSale) tags.push('<span class="state sale"><span class="dot saledot"></span>For sale'+(g.priceTxt?' \u00b7 '+g.priceTxt:'')+'</span>');
+    if(g.playable) tags.push('<span class="state"><span class="dot'+(stOut?' out':'')+'"></span>'+(g.status?esc(g.status):"On the shelf")+'</span>');
+    if(g.forSale) tags.push('<span class="state sale"><span class="dot saledot"></span>For sale'+(g.priceTxt?' \u00b7 '+esc(g.priceTxt):'')+'</span>');
     const actions = tags.length ? '<div class="actions">'+tags.join('')+'</div>' : "";
     const bits = [];
     if(g.bgg!=null) bits.push('\u2605 '+g.bgg);
     if(hasStats(g)) bits.push(g.players[0]===g.players[1]?(g.players[1]>=20?g.players[0]+"p+":g.players[0]+"p only"):(g.players[1]>=20?g.players[0]+"p+":g.players[0]+"\u2013"+g.players[1]+"p"));
     if(g.mode) bits.push(MODE_LABEL[g.mode]);
-    if(g.time) bits.push(g.time);
-    if(g.age) bits.push("ages "+g.age);
+    if(g.time) bits.push(esc(g.time));
+    if(g.age) bits.push("ages "+esc(g.age));
     if(g.weight!=null) bits.push(wtBucket(g.weight)+" to learn");
     // stats read as dot-separated essentials; category moved out to chips below
     const stats = bits.length
       ? '<div class="stats mono">'+bits.map(b=>'<span>'+b+'</span>').join('<span class="sep" aria-hidden="true">\u00b7</span>')+'</div>'
       : '<div class="pending">Details on the box, ask at the counter.</div>';
     // genre chips (up to 3) with a colour dot per genre; replaces the old trailing text
-    const gtags = (g.tags||[]).slice(0,3).map(t=>{const slug=catSlugFor(t);const dot=slug?'<i style="background:'+CATS[slug]+'"></i>':'';return '<span class="gtag">'+dot+tagLabel(t)+'</span>';}).join('');
+    const gtags = (g.tags||[]).slice(0,3).map(t=>{const slug=catSlugFor(t);if(!slug&&DEBUG)DBG.unmapped.add(t);const dot=slug?'<i style="background:'+CATS[slug]+'"></i>':'';return '<span class="gtag">'+dot+esc(tagLabel(t))+'</span>';}).join('');
     const genres = gtags ? '<div class="gtags">'+gtags+'</div>' : "";
-    const pickNote = (state.pick!==null && DATA.picks[state.pick].games[g.name]) ? '<p class="picknote">'+DATA.picks[state.pick].games[g.name]+'</p>' : (g.pickNote?'<p class="picknote">'+g.pickNote+'</p>':"");
-    const plays = g.playsLike?'<p class="blurb">'+g.playsLike+'</p>':"";
-    const links = '<div class="glinks"><a href="'+bggUrl(g)+'" target="_blank" rel="noopener noreferrer">BGG \u2197</a>'+
-      (g.rulesUrl?'<a href="'+g.rulesUrl+'" target="_blank" rel="noopener noreferrer">Rules \u2197</a>':"")+
-      (g.forSale ? '<a href="'+requestUrl(g,"buy")+'" target="_blank" rel="noopener noreferrer">Buy a copy</a>' : (g.playable ? '<a href="'+requestUrl(g,"order")+'" target="_blank" rel="noopener noreferrer">Request a copy</a>' : ""))+'</div>';
+    const pickNote = (state.pick!==null && DATA.picks[state.pick].games[g.name]) ? '<p class="picknote">'+esc(DATA.picks[state.pick].games[g.name])+'</p>' : (g.pickNote?'<p class="picknote">'+esc(g.pickNote)+'</p>':"");
+    const plays = g.playsLike?'<p class="blurb">'+esc(g.playsLike)+'</p>':"";
+    const links = '<div class="glinks"><a href="'+safeUrl(bggUrl(g))+'" target="_blank" rel="noopener noreferrer">BGG \u2197</a>'+
+      (g.rulesUrl?'<a href="'+safeUrl(g.rulesUrl)+'" target="_blank" rel="noopener noreferrer">How to play \u2197</a>':"")+
+      (g.forSale ? '<a href="'+safeUrl(requestUrl(g,"buy"))+'" target="_blank" rel="noopener noreferrer">Buy a copy</a>' : (g.playable ? '<a href="'+safeUrl(requestUrl(g,"order"))+'" target="_blank" rel="noopener noreferrer">Request a copy</a>' : ""))+'</div>';
     return '<article class="gcard"><div class="spine" style="background:'+spine+'"></div><div class="gbody">'+
-      '<div class="gname"><h3>'+g.name+'</h3>'+badges+'</div>'+stats+genres+plays+pickNote+
+      '<div class="gname"><h3>'+esc(g.name)+'</h3>'+badges+'</div>'+stats+genres+plays+pickNote+
       '<div class="gfoot">'+actions+links+'</div>'+
       '</div></article>';
   }).join("") : '<div class="empty">'+(state.seg==="buy" && !DATA.games.some(g=>g.forSale)
-    ? "No take-home stock is listed online yet \u2014 ask at the counter about buying a copy. Staff: set for_sale and price in the sheet and Buy buttons appear here."
-    : (activeFilters ? 'Nothing matches these filters. Remove one above, or ' : 'No games match your search. ')+'<button class="morebtn" id="emptyReset">reset everything</button>')+'</div>';
+    ? "Nothing\u2019s listed for sale right now. Everything here is still on the shelf to play in the caf\u00e9."
+    : anyCount ? 'No game is all of those at once. <button class="morebtn" id="emptyAny">Try any of them instead ('+anyCount+' games)</button>'
+    : state.query.trim() ? 'Nothing called \u201c'+esc(state.query.trim())+'\u201d. Check the spelling, or '+'<button class="morebtn" id="emptyReset">clear all</button>'
+    : 'No games match. Try taking a filter off above, or '+'<button class="morebtn" id="emptyReset">clear all</button>')+'</div>';
   // Load more: reveal the next page of matches, keeping the footer reachable (no infinite scroll)
   $("moreWrap").innerHTML = list.length > state.limit
     ? '<button id="loadMore" class="loadmore">Load more<span>('+(list.length-state.limit)+' more)</span></button>' : "";
+  renderDebug();
   saveState(); // reflect the current filters into the URL + localStorage after every change
 }
 
@@ -864,8 +1001,9 @@ $("searchClear").addEventListener("click",()=>{$("search").value="";state.query=
 $("mfilt").addEventListener("click",()=>openSheet(true));
 function placeMtop(){const mtop=document.querySelector(".mtop"),mainw=document.querySelector("main.wrap"),cols=document.querySelector(".cols"),side=document.querySelector(".side");if(!mtop)return;if(matchMedia("(max-width:899px)").matches){if(mtop.parentElement!==mainw)mainw.insertBefore(mtop,cols);}else{if(mtop.parentElement!==side)side.insertBefore(mtop,side.firstChild);}}
 placeMtop();window.addEventListener("resize",placeMtop);
-document.addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(b){state.seg=b.dataset.seg;render()}});
-document.querySelectorAll("[data-wt]").forEach(b=>b.addEventListener("click",()=>{state.wtOn[b.dataset.wt]=!state.wtOn[b.dataset.wt];render()}));
+document.addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(b){
+  if(b.dataset.seg!=="buy"&&(state.pLo>0||state.pHi<200)){state.pLo=0;state.pHi=200;$("minPrice").value=0;$("maxPrice").value=200;}
+  state.seg=b.dataset.seg;render()}});
 // shadow appears only once a sticky bar is actually pinned (its top hits 0), not at rest
 function stickShadows(){
   const mt=document.querySelector(".mtop"); if(mt) mt.classList.toggle("stuck", mt.getBoundingClientRect().top<=0.5);
@@ -875,28 +1013,64 @@ window.addEventListener("scroll",()=>{$("toTop").hidden = window.scrollY < 600; 
 stickShadows();
 $("toTop").addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
 const paints = [
-  wireDual("minSeat","maxSeat","seatFill","minSeats","maxSeats",1,10),
-  wireDual("minTime","maxTime","timeFill","tLo","tHi",0,8),
-  wireDual("minAge","maxAge","ageFill","aLo","aHi",4,18),
-  wireDual("minPrice","maxPrice","priceFill","pLo","pHi",0,200),
+  wireDual("minSeat","maxSeat","seatFill","minSeats","maxSeats",1,10,v=>seatLabel(v)+" player"+(v===1?"":"s")),
+  wireDual("minTime","maxTime","timeFill","tLo","tHi",0,8,v=>S_TIME[v]+" minutes"),
+  wireDual("minAge","maxAge","ageFill","aLo","aHi",4,18,v=>"ages "+v+" and up"),
+  wireDual("minPrice","maxPrice","priceFill","pLo","pHi",0,200,v=>"$"+v),
 ];
 function resetAll(){
-  Object.assign(state, {pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,wtOn:{easy:true,medium:true,heavy:true},tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",genreQuery:"",showAllGenres:false,limit:PAGE});
+  Object.assign(state, {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",genreQuery:"",showAllGenres:false,limit:PAGE});
   $("search").value = ""; $("genreSearch").value = "";
   $("searchClear").hidden = true; $("genreClear").hidden = true;
   buildPicks(); buildTagRow(); render();
 }
+// The sheet was a styled aside: no dialog role, no focus trap, no Escape, and
+// the results behind it stayed tabbable. Everything below fixes that.
+let _sheetPrev = null;
+const FOCUSABLE = 'button,[href],input,select,textarea,summary,[tabindex]:not([tabindex="-1"])';
+function onSheetKey(e){
+  if(e.key === "Escape"){ e.preventDefault(); openSheet(false); return; }
+  if(e.key !== "Tab") return;
+  const side = document.querySelector(".side");
+  // offsetParent is null for anything display:none, which is most of the panel
+  // when a group is collapsed, so it doubles as a visibility test
+  const f = [...side.querySelectorAll(FOCUSABLE)].filter(el => el.offsetParent !== null && !el.hasAttribute("disabled"));
+  if(!f.length) return;
+  const first = f[0], last = f[f.length-1];
+  if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+  else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+}
 function openSheet(open){
+  const side = document.querySelector(".side");
+  const results = document.querySelector("section.results");
   document.body.classList.toggle("sheet-open", open);
   $("scrim").hidden = !open;
-  if(open) $("filterWrap").open = true;
+  if(open){
+    _sheetPrev = document.activeElement;   // so focus can go back where it came from
+    $("filterWrap").open = true;
+    side.setAttribute("role","dialog");
+    side.setAttribute("aria-modal","true");
+    side.setAttribute("aria-label","Find a game");
+    if(results) results.setAttribute("inert","");
+    document.addEventListener("keydown", onSheetKey);
+    setTimeout(() => { const c = $("sheetClose"); if(c) c.focus(); }, 0);
+  } else {
+    side.removeAttribute("role"); side.removeAttribute("aria-modal"); side.removeAttribute("aria-label");
+    if(results) results.removeAttribute("inert");
+    document.removeEventListener("keydown", onSheetKey);
+    if(_sheetPrev && _sheetPrev.focus) _sheetPrev.focus();
+    _sheetPrev = null;
+  }
 }
 $("sheetBtn").addEventListener("click", () => openSheet(true));
 $("scrim").addEventListener("click", () => openSheet(false));
 $("sheetDone").addEventListener("click", () => openSheet(false));
 $("sheetClose").addEventListener("click", () => openSheet(false));
 $("resetBtn").addEventListener("click", resetAll);
-$("list").addEventListener("click", e => { if(e.target.id==="emptyReset") resetAll(); });
+$("list").addEventListener("click", e => {
+  if(e.target.id==="emptyReset") resetAll();
+  if(e.target.id==="emptyAny"){ state.tagMode = "any"; render(); }   // the match-all escape hatch
+});
 // applied-filter chips: each removes just its own filter; "Clear all" resets everything
 $("activeChips").addEventListener("click", e => { const b=e.target.closest("[data-clear]"); if(b) clearFilter(b.dataset.clear); });
 // Load more reveals the next page without resetting scroll
