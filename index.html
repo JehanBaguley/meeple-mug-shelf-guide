@@ -47,6 +47,10 @@
   .pickchip.on{border-color:var(--amber);background:var(--amber);color:var(--ink)}
   .wt{flex:1;padding:8px 0;border-radius:8px;font-size:12.5px;font-weight:700;border:1px solid var(--line);background:transparent;color:var(--muted)}
   .wt.on{border-color:var(--amber);background:var(--amber);color:var(--ink)}
+  .wt.ex{border-color:#d98a8a;background:rgba(217,138,138,.16);color:#f0b7b7;text-decoration:line-through}
+  .msheetonly{display:none!important}
+  body.sheet-open .msheetonly{display:block!important}
+  body.sheet-open .seg.msheetonly{display:flex!important;margin:0 0 10px}
   .panel{background:var(--bg-deep);border:1px solid var(--line);border-radius:16px;padding:16px 16px 12px;margin-bottom:12px}
   .rowlabel{display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:4px}
   .rowlabel strong{font-weight:700}
@@ -139,6 +143,9 @@
   .achip .x{font-size:13px;font-weight:700;color:var(--muted);line-height:1}
   .achip:hover{border-color:var(--timber-light)}.achip:hover .x{color:var(--cream)}
   .achip.clearall{color:var(--timber-light);padding:6px 12px;border-color:transparent;text-decoration:underline;background:transparent}
+  .achip.ex{border-color:#d98a8a;color:#f0b7b7}
+  .achip.ex .x{color:#f0b7b7}
+  .genrehint{font-size:11px;color:var(--muted);margin:0 0 8px;opacity:.9}
   .achip.clearall:hover{color:var(--cream)}
   /* Load more */
   .morewrap{display:flex;justify-content:center;margin:18px 0 4px}
@@ -258,6 +265,12 @@
   <details class="fsec panelwrap" id="filterWrap">
   <summary><strong>Filters</strong><span class="gsum" id="filtCount">none active</span></summary>
   <div class="panel">
+    <div class="rowlabel msheetonly" style="margin-bottom:8px"><strong>Availability</strong></div>
+    <div class="seg msheetonly" id="seg2" role="group" aria-label="Availability">
+      <button data-seg="all" aria-pressed="true">All</button>
+      <button data-seg="play" aria-pressed="false">Play here</button>
+      <button data-seg="buy" aria-pressed="false">Take home</button>
+    </div>
     <button id="resetBtn" class="clearbtn" hidden>Clear all filters</button>
     <div class="rowlabel"><strong>Players</strong><span class="readout mono" id="seatOut">1–10+</span></div>
     <div class="dualwrap">
@@ -298,6 +311,7 @@
       <button class="on" data-tagmode="any" aria-pressed="true">Match any</button>
       <button data-tagmode="all" aria-pressed="false">Match all</button>
     </div>
+    <p class="genrehint mono">Tap to include · tap again to exclude</p>
     <div class="srchwrap" id="genreSrchWrap" hidden><input type="text" id="genreSearch" class="genresearch" placeholder="Search genres…" aria-label="Search genres" autocomplete="off" /><button type="button" id="genreClear" class="srchclear" aria-label="Clear genre search" hidden>✕</button></div>
     <div class="genrow" id="genreRow"></div>
   </div>
@@ -419,13 +433,14 @@ function buildTagRow(){
   $("genreRow").innerHTML = shown.map(t => {
     const slug = catSlugFor(t);
     const dot = slug ? '<i class="tdot" style="background:'+CATS[slug]+'"></i>' : "";
-    return '<button class="wt'+(state.tags[t]?" on":"")+'" data-tag="'+t+'" data-count="'+counts[t]+'" aria-pressed="'+!!state.tags[t]+'">'+dot+tagLabel(t)+'<small>'+counts[t]+'</small></button>';
+    const _st=state.tags[t]; const _cls=_st===1?" on":_st===-1?" ex":"";
+    return '<button class="wt'+_cls+'" data-tag="'+t+'" data-count="'+counts[t]+'" aria-pressed="'+(!!_st)+'">'+dot+tagLabel(t)+'<small>'+counts[t]+'</small></button>';
   }).join("")
     + (!q && pool.length > CAP ? '<button class="morebtn" id="moreTags">'+(showAll?"Show fewer":"Show all "+all.length)+'</button>' : "")
     + (q && !shown.length ? '<span class="gsum" style="padding:6px 2px">no genres match \u201c'+q+'\u201d</span>' : "")
     + (sel.length ? '<button class="morebtn" id="clearTags">Clear</button>' : "");
-  $("genreSum").textContent = sel.length ? sel.map(tagLabel).join(" \u00b7 ") : "any";
-  $("genreRow").querySelectorAll("[data-tag]").forEach(b => b.addEventListener("click", () => { state.tags[b.dataset.tag] = !state.tags[b.dataset.tag]; buildTagRow(); render(); }));
+  $("genreSum").textContent = sel.length ? sel.map(t=>(state.tags[t]===-1?"not ":"")+tagLabel(t)).join(" \u00b7 ") : "any";
+  $("genreRow").querySelectorAll("[data-tag]").forEach(b => b.addEventListener("click", () => { const k=b.dataset.tag, cur=state.tags[k]||0, nxt=cur===1?-1:cur===-1?0:1; if(nxt===0) delete state.tags[k]; else state.tags[k]=nxt; buildTagRow(); render(); }));
   const mt = $("moreTags"); if(mt) mt.addEventListener("click", () => { state.showAllGenres = !state.showAllGenres; buildTagRow(); render(); });
   const cb = $("clearTags"); if(cb) cb.addEventListener("click", () => { state.tags = {}; buildTagRow(); render(); });
 }
@@ -439,10 +454,10 @@ function buildActiveChips(){
   if(state.aLo>4||state.aHi<18) chips.push(['age', $("ageOut").textContent]);
   if(state.pLo>0||state.pHi<200) chips.push(['price', $("priceOut").textContent]);
   if(state.playStyle!=="any") chips.push(['playstyle', MODE_LABEL[state.playStyle]||state.playStyle]);
-  Object.keys(state.tags).filter(k=>state.tags[k]).forEach(t => chips.push(['tag:'+t, tagLabel(t)]));
+  Object.keys(state.tags).filter(k=>state.tags[k]).forEach(t => chips.push(['tag:'+t, (state.tags[t]===-1?"not ":"")+tagLabel(t)]));
   box.hidden = chips.length===0;
   box.innerHTML = chips.map(([k,label]) =>
-    '<button class="achip" data-clear="'+k+'">'+label+'<span class="x" aria-hidden="true">\u00d7</span></button>').join("")
+    '<button class="achip'+(k.startsWith('tag:')&&state.tags[k.slice(4)]===-1?' ex':'')+'" data-clear="'+k+'">'+label+'<span class="x" aria-hidden="true">\u00d7</span></button>').join("")
     + (chips.length ? '<button class="achip clearall" data-clear="all">Clear all</button>' : "");
 }
 function clearFilter(key){
@@ -601,6 +616,8 @@ function render(){
   let hiddenPending = 0;
 
   const tsel = Object.keys(state.tags).filter(k=>state.tags[k]);
+  const tInc = Object.keys(state.tags).filter(k=>state.tags[k]===1);
+  const tExc = Object.keys(state.tags).filter(k=>state.tags[k]===-1);
   const basePass = (g, countPending) => {
     const okAvail = state.seg==="all" ? (g.playable || g.forSale)
       : state.seg==="play" ? (g.playable && !(g.status && !/^on/i.test(g.status)))
@@ -619,7 +636,7 @@ function render(){
     return true;
   };
   const has = g => k => (g.tags||[]).includes(k);
-  const tagPass = g => !tsel.length || (state.tagMode==="all" ? tsel.every(has(g)) : tsel.some(has(g)));
+  const tagPass = g => (!tInc.length || (state.tagMode==="all" ? tInc.every(has(g)) : tInc.some(has(g)))) && !tExc.some(has(g));
   const stylePass = g => state.playStyle==="coop" ? g.mode==="coop" : state.playStyle==="team" ? g.mode==="team" : state.playStyle==="comp" ? (g.mode!=="coop"&&g.mode!=="team") : true;
 
   let list = DATA.games.filter(g => stylePass(g) && basePass(g, true) && tagPass(g));
@@ -640,7 +657,7 @@ function render(){
   chips.forEach(b => {
     const t = b.dataset.tag;
     const n = state.tagMode==="all"
-      ? basePool.filter(g => (tsel.includes(t) ? tsel : tsel.concat(t)).every(has(g))).length
+      ? basePool.filter(g => (tInc.includes(t) ? tInc : tInc.concat(t)).every(has(g))).length
       : basePool.filter(g => (g.tags||[]).includes(t)).length;
     b.querySelector("small").textContent = n;
     const dead = n===0 && !state.tags[t];
@@ -672,7 +689,7 @@ function render(){
   list.sort((a,b)=>sorters[state.sortBy](a,b)||a.name.localeCompare(b.name));
 
   // paging: reset to the first page whenever the filtered/sorted set changes; Load more must NOT reset it
-  const fsig = JSON.stringify([state.seg,state.pick,state.query,state.minSeats,state.maxSeats,state.tLo,state.tHi,state.aLo,state.aHi,state.pLo,state.pHi,state.playStyle,state.tagMode,state.sortBy,state.sortDir,Object.keys(state.tags).filter(k=>state.tags[k]).sort()]);
+  const fsig = JSON.stringify([state.seg,state.pick,state.query,state.minSeats,state.maxSeats,state.tLo,state.tHi,state.aLo,state.aHi,state.pLo,state.pHi,state.playStyle,state.tagMode,state.sortBy,state.sortDir,Object.entries(state.tags).filter(e=>e[1]).sort().map(e=>e[0]+e[1])]);
   if(fsig!==lastFilterSig){ lastFilterSig=fsig; state.limit=PAGE; }
   const shown = list.slice(0, state.limit);
   buildActiveChips();
@@ -745,8 +762,10 @@ function encodeState(){
   if(state.pLo > 0 || state.pHi < 200) p.set("pr", state.pLo+"-"+state.pHi);
   if(state.playStyle !== "any") p.set("ps", state.playStyle);
   if(state.tagMode !== "any") p.set("tm", state.tagMode);
-  const tags = Object.keys(state.tags).filter(k => state.tags[k]);
-  if(tags.length) p.set("g", tags.map(encodeURIComponent).join(","));
+  const gi = Object.keys(state.tags).filter(k => state.tags[k]===1);
+  if(gi.length) p.set("g", gi.map(encodeURIComponent).join(","));
+  const gx = Object.keys(state.tags).filter(k => state.tags[k]===-1);
+  if(gx.length) p.set("gx", gx.map(encodeURIComponent).join(","));
   if(state.pick !== null && DATA.picks[state.pick]) p.set("pick", DATA.picks[state.pick].list);
   if(!(state.sortBy === "name" && state.sortDir === 1)) p.set("s", state.sortBy+"."+state.sortDir);
   return p;
@@ -781,9 +800,10 @@ function applyParams(p){
   range("pr",0,200,0,200,"pLo","pHi");
   if(p.has("ps") && ["any","coop","comp","team"].includes(p.get("ps"))) state.playStyle = p.get("ps");
   if(p.has("tm") && ["any","all"].includes(p.get("tm"))) state.tagMode = p.get("tm");
-  if(p.has("g")){
+  if(p.has("g")||p.has("gx")){
     state.tags = {};
-    p.get("g").split(",").forEach(s => { const t = decodeURIComponent(s); if(tagset.has(t)) state.tags[t] = true; });
+    if(p.has("g")) p.get("g").split(",").forEach(s => { const t = decodeURIComponent(s); if(tagset.has(t)) state.tags[t] = 1; });
+    if(p.has("gx")) p.get("gx").split(",").forEach(s => { const t = decodeURIComponent(s); if(tagset.has(t)) state.tags[t] = -1; });
   }
   if(p.has("s")){
     const m = p.get("s").split("."), sb = m[0], sd = parseInt(m[1],10);
@@ -833,7 +853,7 @@ $("searchClear").addEventListener("click",()=>{$("search").value="";state.query=
 $("mfilt").addEventListener("click",()=>openSheet(true));
 function placeMtop(){const mtop=document.querySelector(".mtop"),mainw=document.querySelector("main.wrap"),cols=document.querySelector(".cols"),side=document.querySelector(".side");if(!mtop)return;if(matchMedia("(max-width:899px)").matches){if(mtop.parentElement!==mainw)mainw.insertBefore(mtop,cols);}else{if(mtop.parentElement!==side)side.insertBefore(mtop,side.firstChild);}}
 placeMtop();window.addEventListener("resize",placeMtop);
-$("seg").addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(b){state.seg=b.dataset.seg;render()}});
+document.addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(b){state.seg=b.dataset.seg;render()}});
 document.querySelectorAll("[data-wt]").forEach(b=>b.addEventListener("click",()=>{state.wtOn[b.dataset.wt]=!state.wtOn[b.dataset.wt];render()}));
 // shadow appears only once a sticky bar is actually pinned (its top hits 0), not at rest
 function stickShadows(){
