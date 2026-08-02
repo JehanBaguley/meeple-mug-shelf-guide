@@ -80,13 +80,15 @@ function catSlugFor(t) {
   // primary (first-listed) category decides the colour; every token maps to one of nine groups
   for (const c of (t || "").toLowerCase().split(",").map(s => s.trim()).filter(Boolean)) {
     if (/co-?op|cooperative/.test(c)) return "coop";
-    if (/party|dexterity|drawing|humor|trivia|word|social|storytelling/.test(c)) return "party";
-    if (/deduction|bluffing|hidden roles|political/.test(c)) return "deduct";
+    if (/party|dexterity|drawing|humor|trivia|word|social|storytelling|conversation/.test(c)) return "party";
+    if (/deduction|bluffing|hidden roles|political|negotiation|auction/.test(c)) return "deduct";
     if (/family|children|kids/.test(c)) return "family";
     if (/horror|adult/.test(c)) return "dark";
     if (/card|deck building|dice|set collection|bidding/.test(c)) return "cards";
-    if (/adventure|exploration|sci-?fi|fantasy|superhero|thematic|legacy|roleplaying|historical|action/.test(c)) return "adventure";
-    if (/abstract|puzzle|tile|expansion/.test(c)) return "abstract";
+    if (/adventure|exploration|sci-?fi|science fiction|fantasy|superhero|thematic|legacy|roleplaying|historical|action|survival/.test(c)) return "adventure";
+    if (/wargame|war game|military/.test(c)) return "war";
+    if (/two.?player|2.?player/.test(c)) return "two";
+    if (/abstract|puzzle|tile|expansion|classic/.test(c)) return "abstract";
     if (/strategy|economic|worker placement|area control|tactical|city building|civilization|asymmetric|resource management|racing|real-?time/.test(c)) return "strategy";
   }
   return null;
@@ -116,7 +118,7 @@ async function main() {
       if (val("expansion")) g.exp = /^y/i.test(val("expansion"));
       if (val("price")) { const pr = val("price").trim(), pm = pr.match(/\d+/); g.price = pm ? parseInt(pm[0]) : null; g.priceTxt = /^[~$]/.test(pr) ? pr : "$" + pr; }
       if (val("rating")) g.bgg = parseFloat(val("rating")) || g.bgg;
-      if (val("bgg_link")) { g.bggUrl = val("bgg_link"); const bm = val("bgg_link").match(/boardgame\/(\d+)/); if (bm) g.bggId = +bm[1]; }
+      if (val("bgg_link")) { g.bggUrl = val("bgg_link"); const bm = val("bgg_link").match(/boardgame(?:expansion|accessory)?\/(\d+)/); if (bm) g.bggId = +bm[1]; }
       if (val("price_text")) g.priceTxt = val("price_text");
       if (val("blurb")) g.playsLike = val("blurb");
       if (val("status")) g.status = val("status");
