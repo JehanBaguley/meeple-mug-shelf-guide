@@ -11,7 +11,13 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 
 const SHEET_CSV_URL = process.env.SHEET_CSV_URL || "";
-const UA = { "User-Agent": "meeple-mug-catalogue/1.0" };
+// BGG closed the XML API to anonymous callers: every request now needs an
+// application token, sent as a normal bearer header. No token = 401 on everything.
+const BGG_TOKEN = process.env.BGG_TOKEN || "";
+const UA = {
+  "User-Agent": "meeple-mug-catalogue/1.0",
+  ...(BGG_TOKEN ? { Authorization: `Bearer ${BGG_TOKEN}` } : {}),
+};
 const CHUNK = 20;      // BGG's /thing accepts a comma-separated id list
 const GAP_MS = 2500;   // BGG asks for a pause between requests, so we give it one
 
@@ -45,6 +51,13 @@ async function fetchThings(ids) {
     const res = await fetch(url, { headers: UA });
     if (res.status === 200) return res.text();
     if (res.status === 429 || res.status === 202) { await sleep(attempt * 5000); continue; }
+    // 401 is not a per-batch hiccup, it is "your token is missing or wrong".
+    // Fail the whole run loudly rather than grinding through 16 identical refusals.
+    if (res.status === 401) {
+      throw new Error(BGG_TOKEN
+        ? "BGG rejected the token (401). Check the BGG_TOKEN secret is the current application token."
+        : "BGG requires an application token now (401). Set the BGG_TOKEN secret in repo settings.");
+    }
     console.log(`  BGG responded ${res.status} for this batch, skipping it`);
     return null;
   }
