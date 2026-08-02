@@ -212,15 +212,14 @@
   .mseg button{flex:1;border:0;background:transparent;color:var(--muted);min-height:44px;padding:12px 0;font-size:12.5px;font-weight:700}
   .mseg button.on{background:var(--amber);color:var(--ink)}
   .wt.dead{opacity:.32}
-  /* Panel head. The row is always in the layout, so the reset button appearing
-     and disappearing can no longer shove every filter below it up and down.
-     min-height matches the button height, which is the tallest thing in here. */
-  .panelhead{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;min-height:32px;margin:0 0 12px}
-  /* max-width is deliberately narrow: it keeps the hint on the same number of
-     lines whether or not the reset button is present, so the text doesn't
-     reflow when a filter is applied. */
-  .panelhint{margin:0;font-size:12px;line-height:1.35;color:var(--muted);max-width:15.5em}
-  .clearbtn{flex:0 0 auto;margin:0;background:transparent;border:1px solid var(--line);color:var(--timber-light);font-weight:700;font-size:12px;padding:6px 12px;border-radius:8px;cursor:pointer;white-space:nowrap}
+  /* "Clear all" sits alone at the top of the panel, right aligned, and takes up
+     no vertical space at all when there is nothing to clear. The old wrapper
+     reserved 44px permanently for a line of hint text that only restated what
+     the count button already says. */
+  .clearbtn{display:block;margin:0 0 12px auto;background:transparent;border:1px solid var(--line);color:var(--timber-light);font-weight:700;font-size:12px;padding:6px 12px;border-radius:8px;cursor:pointer;white-space:nowrap}
+  /* in the mobile sheet it is adopted by the sticky header (see placeReset), so
+     it drops the bottom margin and pushes itself over next to the close button */
+  .sheethead .clearbtn{margin:0 0 0 auto}
   .clearbtn[hidden]{display:none}
   .picksrow[hidden]{display:none}
   .sheetbtn{display:inline-flex;align-items:center;gap:6px;margin-right:10px;font-weight:700;font-size:12.5px;padding:8px 12px}
@@ -324,10 +323,7 @@
   <details class="fsec panelwrap" id="filterWrap">
   <summary><strong>Find a game</strong><span class="gsum" id="filtCount"></span></summary>
   <div class="panel">
-    <div class="panelhead">
-      <p class="panelhint">Narrow it down. The count updates as you go.</p>
-      <button id="resetBtn" class="clearbtn" hidden>Clear all</button>
-    </div>
+    <button id="resetBtn" class="clearbtn" hidden>Clear all</button>
     <div class="fgroup">
       <p class="fgrouphd">Your table</p>
       <div class="rowlabel"><strong>Players</strong><span class="readout mono" id="seatOut">any number</span></div>
@@ -400,17 +396,10 @@
       <span class="sortlbl mono">Sort</span>
       <select id="sortSel" aria-label="Sort games by">
         <option value="name:1">A to Z</option>
-        <option value="name:-1">Z to A</option>
         <option value="bgg:1">Highest rated</option>
-        <option value="bgg:-1">Lowest rated</option>
         <option value="time:1">Quickest first</option>
         <option value="time:-1">Longest first</option>
-        <option value="players:1">Biggest groups first</option>
-        <option value="players:-1">Smallest groups first</option>
-        <option value="age:1">Youngest players first</option>
-        <option value="age:-1">Oldest players first</option>
         <option value="price:1">Cheapest first</option>
-        <option value="price:-1">Most expensive first</option>
       </select>
     </div>
   </div>
@@ -541,8 +530,10 @@ function buildTagRow(){
   const all = Object.keys(counts).sort((a,b) => counts[b]-counts[a] || a.localeCompare(b));
   const sel = Object.keys(state.tags).filter(k => state.tags[k]);
   const CAP = 8;
-  // the genre search box only appears when there are more genres than the cap
-  const gs = $("genreSrchWrap"); if(gs) gs.hidden = all.length <= CAP;
+  // The search box costs ~46px of permanent height, and with only 8 chips on
+  // screen scanning beats typing. It earns its space once "Show all" is tapped
+  // and there are 46 chips to hunt through.
+  const gs = $("genreSrchWrap"); if(gs) gs.hidden = !state.showAllGenres || all.length <= CAP;
   const q = (state.genreQuery||"").trim().toLowerCase();
   const pool = q ? all.filter(t => tagLabel(t).toLowerCase().includes(q) || t.toLowerCase().includes(q)) : all;
   const showAll = state.showAllGenres || !!q || pool.length <= CAP; // searching shows every match
@@ -561,7 +552,11 @@ function buildTagRow(){
     + (sel.length ? '<button class="morebtn" id="clearTags">Clear genres</button>' : "");
   $("genreSum").textContent = sel.length ? sel.map(t=>(state.tags[t]===-1?"not ":"")+tagLabel(t)).join(" \u00b7 ") : "any";
   $("genreRow").querySelectorAll("[data-tag]").forEach(b => b.addEventListener("click", () => { const k=b.dataset.tag, cur=state.tags[k]||0, nxt=cur===1?-1:cur===-1?0:1; if(nxt===0) delete state.tags[k]; else state.tags[k]=nxt; buildTagRow(); render(); }));
-  const mt = $("moreTags"); if(mt) mt.addEventListener("click", () => { state.showAllGenres = !state.showAllGenres; buildTagRow(); render(); });
+  const mt = $("moreTags"); if(mt) mt.addEventListener("click", () => {
+    state.showAllGenres = !state.showAllGenres;
+    if(!state.showAllGenres){ state.genreQuery = ""; $("genreSearch").value = ""; $("genreClear").hidden = true; }
+    buildTagRow(); render();
+  });
   const cb = $("clearTags"); if(cb) cb.addEventListener("click", () => { state.tags = {}; buildTagRow(); render(); });
 }
 // The removable "applied filter" chips above the results \u2014 one per active narrowing.
@@ -671,7 +666,7 @@ async function applySheet(){
     const head = rows.shift().map(h=>h.toLowerCase().trim().replace(/[^a-z0-9]+/g,"_"));
     // Staff rename columns. Map the common variants back to the canonical key
     // rather than letting indexOf return -1 and drop the column in silence.
-    const HEAD_ALIAS = {game:"name",title:"name",game_name:"name",player_count:"players",no_of_players:"players",num_players:"players",playtime:"time",play_time:"time",duration:"time",length:"time",age_rating:"age",ages:"age",min_age:"age",categories:"category",genre:"category",genres:"category",forsale:"for_sale",in_stock:"for_sale",play_here:"playable",on_shelf:"playable",bgg:"rating",bgg_rating:"rating",bgg_url:"bgg_link",rules_url:"rules_link",how_to_play:"rules_link",description:"blurb"};
+    const HEAD_ALIAS = {game:"name",title:"name",game_name:"name",player_count:"players",no_of_players:"players",num_players:"players",playtime:"time",play_time:"time",duration:"time",length:"time",age_rating:"age",ages:"age",min_age:"age",categories:"category",genre:"category",genres:"category",forsale:"for_sale",in_stock:"for_sale",play_here:"playable",on_shelf:"playable",bgg:"rating",bgg_rating:"rating",bgg_url:"bgg_link",description:"blurb"};
     const head2 = head.map(h => HEAD_ALIAS[h] || h);
     const idx = k => head2.indexOf(k);
     DBG.missingHeaders = ["name","players","time","age","category","playable","for_sale"].filter(k => idx(k)===-1);
@@ -706,7 +701,6 @@ async function applySheet(){
       if(val("time")) { const t = parseTimeTxt(val("time")); if(t.time===null) DBG.badTime.push(name+": "+val("time")); else { g.time = t.time; g.mins = t.mins; } }
       if(val("category")) { g.catText = val("category"); g.cat = catSlugFor(g.catText); if(/co-?op|cooperative/i.test(g.catText)) g.mode = "coop"; }
       if(val("play_style")) g.mode = ({"co-op":"coop",coop:"coop",teams:"team",team:"team",competitive:"comp",comp:"comp"})[norm(val("play_style"))] || g.mode;
-      if(val("rules_link")) g.rulesUrl = val("rules_link"); // optional link to a rules explainer / how-to-play
     }
     if(Object.keys(lists).length) DATA.picks = Object.values(lists);
     tagAll(DATA.games);
@@ -929,7 +923,6 @@ function render(){
     const pickNote = (state.pick!==null && DATA.picks[state.pick].games[g.name]) ? '<p class="picknote">'+esc(DATA.picks[state.pick].games[g.name])+'</p>' : (g.pickNote?'<p class="picknote">'+esc(g.pickNote)+'</p>':"");
     const plays = g.playsLike?'<p class="blurb">'+esc(g.playsLike)+'</p>':"";
     const links = '<div class="glinks"><a href="'+safeUrl(bggUrl(g))+'" target="_blank" rel="noopener noreferrer">BGG \u2197</a>'+
-      (g.rulesUrl?'<a href="'+safeUrl(g.rulesUrl)+'" target="_blank" rel="noopener noreferrer">How to play \u2197</a>':"")+
       (g.forSale ? '<a href="'+safeUrl(requestUrl(g,"buy"))+'" target="_blank" rel="noopener noreferrer">Buy a copy</a>' : (g.playable ? '<a href="'+safeUrl(requestUrl(g,"order"))+'" target="_blank" rel="noopener noreferrer">Request a copy</a>' : ""))+'</div>';
     return '<article class="gcard"><div class="spine" style="background:'+spine+'"></div><div class="gbody">'+
       '<div class="gname"><h3>'+esc(g.name)+'</h3>'+badges+'</div>'+stats+genres+plays+pickNote+
@@ -949,7 +942,7 @@ function render(){
 
 // ————— Persist filters in the URL (shareable + survives refresh) and localStorage (bare-visit memory) —————
 const LS_KEY = "mm_filters";                          // localStorage key for the "remember my last view" fallback
-const SORT_KEYS = ["name","bgg","price","time","age","players"];
+const SORT_OPTS = ["name:1","bgg:1","time:1","time:-1","price:1"];  // exactly what the dropdown offers
 const clampN = (n,lo,hi) => Math.min(hi, Math.max(lo, n));
 const validTags = () => new Set(DATA.games.flatMap(g => g.tags||[])); // only accept genres that actually exist
 let wantPick = null;                                  // pick list-name from the URL, resolved once DATA.picks is built
@@ -1010,7 +1003,7 @@ function applyParams(p){
   }
   if(p.has("s")){
     const m = p.get("s").split("."), sb = m[0], sd = parseInt(m[1],10);
-    if(SORT_KEYS.includes(sb) && (sd === 1 || sd === -1)){ state.sortBy = sb; state.sortDir = sd; }
+    if(SORT_OPTS.includes(sb+":"+sd)){ state.sortBy = sb; state.sortDir = sd; }
   }
   wantPick = p.has("pick") ? p.get("pick") : null;
   resolvePick();
@@ -1056,6 +1049,16 @@ $("searchClear").addEventListener("click",()=>{$("search").value="";state.query=
 $("mfilt").addEventListener("click",()=>openSheet(true));
 function placeMtop(){const mtop=document.querySelector(".mtop"),mainw=document.querySelector("main.wrap"),cols=document.querySelector(".cols"),side=document.querySelector(".side");if(!mtop)return;if(matchMedia("(max-width:899px)").matches){if(mtop.parentElement!==mainw)mainw.insertBefore(mtop,cols);}else{if(mtop.parentElement!==side)side.insertBefore(mtop,side.firstChild);}}
 placeMtop();window.addEventListener("resize",placeMtop);
+// On mobile the panel scrolls under a sticky header, so a "Clear all" parked at
+// the top of the panel scrolls away exactly when you need it. Rehome it into the
+// header on small screens, back into the panel on desktop where nothing scrolls.
+function placeReset(){
+  const btn=$("resetBtn"),head=document.querySelector(".sheethead"),panel=document.querySelector(".panel"),close=$("sheetClose");
+  if(!btn||!head||!panel)return;
+  if(matchMedia("(max-width:899px)").matches){ if(btn.parentElement!==head) head.insertBefore(btn,close); }
+  else if(btn.parentElement!==panel) panel.insertBefore(btn,panel.firstChild);
+}
+placeReset();window.addEventListener("resize",placeReset);
 document.addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(b){
   if(b.dataset.seg!=="buy"&&(state.pLo>0||state.pHi<200)){state.pLo=0;state.pHi=200;$("minPrice").value=0;$("maxPrice").value=200;}
   state.seg=b.dataset.seg;render()}});
