@@ -161,6 +161,7 @@
   .glinks a{font-size:12px;color:#7a4d12;font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--timber);font-family:'IBM Plex Mono',monospace;padding:4px 0;display:inline-block}
   .empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}
   footer{margin:28px 0 60px;font-size:11.5px;color:var(--muted);line-height:1.6}
+  .homelink{display:block;margin-top:8px}
   .credit{display:block;margin-top:10px}
   footer a{color:var(--timber-light)}
   .note{font-size:12px;color:var(--muted);margin:-4px 0 10px}
@@ -407,10 +408,13 @@
       <span class="sortlbl mono">Sort</span>
       <select id="sortSel" aria-label="Sort games by">
         <option value="name:1">A to Z</option>
+        <option value="name:-1">Z to A</option>
         <option value="bgg:1">Highest rated</option>
+        <option value="bgg:-1">Lowest rated</option>
         <option value="time:1">Quickest first</option>
         <option value="time:-1">Longest first</option>
         <option value="price:1">Cheapest first</option>
+        <option value="price:-1">Most expensive first</option>
       </select>
     </div>
   </div>
@@ -426,6 +430,7 @@
 
   <footer>
     The play list is kept up to date by staff. Ratings come from BoardGameGeek. Buying or requesting a copy just opens our <a href="https://www.meepleandmug.com.au/contact" target="_blank" rel="noopener">contact page</a>, nothing is charged online.
+    <span class="homelink"><a href="https://www.meepleandmug.com.au" target="_blank" rel="noopener">meepleandmug.com.au</a> has our hours, menu and bookings.</span>
     <span class="credit">Designed &amp; built by <a href="https://github.com/JehanBaguley" target="_blank" rel="noopener">Jehan Baguley</a>.</span>
   </footer>
 </main>
@@ -459,11 +464,27 @@ const CATS = {party:"#d9a441",bluff:"#3d6fa5",heavy:"#8a7fae",engine:"#6aa39a",f
 const MODE_LABEL = {coop:"co-op",team:"teams",comp:"competitive"};
 const S_TIME = [0,20,30,45,60,90,120,180,360];
 const PAGE = 24; // results rendered per "page"; Load more reveals another PAGE
-const state = {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",sortBy:"name",sortDir:1,showAllGenres:false,showAllPicks:false,genreQuery:"",limit:PAGE};
+const state = {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",sortBy:"name",sortDir:1,sortTouched:false,showAllGenres:false,showAllPicks:false,genreQuery:"",limit:PAGE};
 let DATA = EMBED;
 
 const $ = id => document.getElementById(id);
 const norm = s => s.toLowerCase().replace(/[^a-z0-9 ]/g,"").trim();
+// Relevance bands for search. Higher is better, and 0 means "no match at all",
+// which is what lets this one function double as the filter test. The point is
+// that a game literally called Warhammer should never sit below a game whose
+// blurb happens to mention war. Within the name we also prefer an exact hit,
+// then a title that starts with the query, then any word that starts with it,
+// and only then a match buried mid-word.
+function matchRank(g, q){
+  const name = norm(g.name);
+  if(name === q) return 5;                                   // typed the whole title
+  if(name.startsWith(q)) return 4;                           // "cat" → Cat in the Box
+  if(name.split(" ").some(w => w.startsWith(q))) return 3;   // "box" → Cat in the Box
+  if(name.includes(q)) return 2;                             // "atan" → Catan
+  // supporting text: what it plays like, its genres, and the play style label
+  const rest = norm((g.playsLike||"")+" "+(g.catText||"")+(g.mode?" "+MODE_LABEL[g.mode]:""));
+  return rest.includes(q) ? 1 : 0;
+}
 const seatLabel = n => n>=10?"10+":n;
 const wtBucket = w => w<2?"easy":(w<=3?"medium":"heavy");
 // ?debug=1 turns the silent failures loud. Every value the sheet hands us that
@@ -788,9 +809,18 @@ function render(){
     (state.pLo>0||state.pHi<200) + (state.playStyle!=="any") +
     Object.keys(state.tags).filter(k=>state.tags[k]).length;
   $("filtCount").textContent = activeFilters ? activeFilters+" filter"+(activeFilters===1?"":"s")+" on" : "";
+  if(!state.sortTouched){
+    const want = activeFilters ? "bgg" : "name";   // bgg:1 is Highest rated, name:1 is A to Z
+    if(state.sortBy !== want || state.sortDir !== 1){
+      state.sortBy = want; state.sortDir = 1;
+      const ss = $("sortSel"); if(ss) ss.value = want+":1";
+    }
+  }
   const narrowed = state.minSeats>1||state.maxSeats<10||timeNarrowed||ageNarrowed;
   const pickList = state.pick!==null ? DATA.picks[state.pick] : null;
   let hiddenPending = 0;
+  const qn = state.query.trim() ? norm(state.query) : "";   // "" switches relevance off entirely
+  const RANK = new Map();                                   // game → relevance band, only while searching
 
   const tsel = Object.keys(state.tags).filter(k=>state.tags[k]);
   const tInc = Object.keys(state.tags).filter(k=>state.tags[k]===1);
@@ -802,7 +832,7 @@ function render(){
     if(!okAvail) return false;
     if(pickList && !(g.name in pickList.games)) return false;
     if(g.forSale && g.price!==null && (g.price<state.pLo || (state.pHi<200 && g.price>state.pHi)) && (state.seg==="buy" || !g.playable)) return false;
-    if(state.query.trim() && !norm(g.name+" "+(g.playsLike||"")+" "+(g.catText||"")+(g.mode?" "+MODE_LABEL[g.mode]:"")).includes(norm(state.query))) return false;
+    if(qn){ const r = matchRank(g, qn); if(!r) return false; RANK.set(g, r); }
     if(narrowed){
       if(!hasStats(g)){ if(countPending) hiddenPending++; return false; }
       if(!(g.players[0]<=state.maxSeats && g.players[1]>=state.minSeats)) return false;
@@ -880,7 +910,9 @@ function render(){
     age:(a,b)=>cmpNum(ageMin(a),ageMin(b)),
     players:(a,b)=>cmpNum(a.players?-a.players[1]:null, b.players?-b.players[1]:null),
   };
-  list.sort((a,b)=>sorters[state.sortBy](a,b)||a.name.localeCompare(b.name));
+  // With a query up, relevance leads and the chosen sort breaks ties inside each
+  // band, so the two compose rather than one silently overriding the other.
+  list.sort((a,b)=> (qn ? (RANK.get(b)||0)-(RANK.get(a)||0) : 0) || sorters[state.sortBy](a,b) || a.name.localeCompare(b.name));
 
   // paging: reset to the first page whenever the filtered/sorted set changes; Load more must NOT reset it
   const fsig = JSON.stringify([state.seg,state.pick,state.query,state.minSeats,state.maxSeats,state.tLo,state.tHi,state.aLo,state.aHi,state.pLo,state.pHi,state.playStyle,state.tagMode,state.sortBy,state.sortDir,Object.entries(state.tags).filter(e=>e[1]).sort().map(e=>e[0]+e[1])]);
@@ -953,7 +985,7 @@ function render(){
 
 // ————— Persist filters in the URL (shareable + survives refresh) and localStorage (bare-visit memory) —————
 const LS_KEY = "mm_filters";                          // localStorage key for the "remember my last view" fallback
-const SORT_OPTS = ["name:1","bgg:1","time:1","time:-1","price:1"];  // exactly what the dropdown offers
+const SORT_OPTS = ["name:1","name:-1","bgg:1","bgg:-1","time:1","time:-1","price:1","price:-1"];  // exactly what the dropdown offers
 const clampN = (n,lo,hi) => Math.min(hi, Math.max(lo, n));
 const validTags = () => new Set(DATA.games.flatMap(g => g.tags||[])); // only accept genres that actually exist
 let wantPick = null;                                  // pick list-name from the URL, resolved once DATA.picks is built
@@ -974,7 +1006,7 @@ function encodeState(){
   const gx = Object.keys(state.tags).filter(k => state.tags[k]===-1);
   if(gx.length) p.set("gx", gx.map(encodeURIComponent).join(","));
   if(state.pick !== null && DATA.picks[state.pick]) p.set("pick", DATA.picks[state.pick].list);
-  if(!(state.sortBy === "name" && state.sortDir === 1)) p.set("s", state.sortBy+"."+state.sortDir);
+  if(state.sortTouched) p.set("s", state.sortBy+"."+state.sortDir);
   return p;
 }
 
@@ -1014,7 +1046,7 @@ function applyParams(p){
   }
   if(p.has("s")){
     const m = p.get("s").split("."), sb = m[0], sd = parseInt(m[1],10);
-    if(SORT_OPTS.includes(sb+":"+sd)){ state.sortBy = sb; state.sortDir = sd; }
+    if(SORT_OPTS.includes(sb+":"+sd)){ state.sortBy = sb; state.sortDir = sd; state.sortTouched = true; }
   }
   wantPick = p.has("pick") ? p.get("pick") : null;
   resolvePick();
@@ -1092,7 +1124,7 @@ const paints = [
   wireDual("minPrice","maxPrice","priceFill","pLo","pHi",0,200,v=>"$"+v),
 ];
 function resetAll(){
-  Object.assign(state, {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",genreQuery:"",showAllGenres:false,showAllPicks:false,limit:PAGE});
+  Object.assign(state, {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",genreQuery:"",showAllGenres:false,showAllPicks:false,sortTouched:false,limit:PAGE});
   $("search").value = ""; $("genreSearch").value = "";
   $("searchClear").hidden = true; $("genreClear").hidden = true;
   buildPicks(); buildTagRow(); render();
@@ -1154,7 +1186,7 @@ $("genreClear").addEventListener("click",()=>{$("genreSearch").value="";state.ge
 if(matchMedia("(min-width:900px)").matches) $("filterWrap").open = true;
 document.querySelectorAll("[data-tagmode]").forEach(b=>b.addEventListener("click",()=>{state.tagMode=b.dataset.tagmode;render()}));
 document.querySelectorAll("[data-ps]").forEach(b=>b.addEventListener("click",()=>{state.playStyle=b.dataset.ps;render()}));
-$("sortSel").addEventListener("change",e=>{const p=e.target.value.split(":");state.sortBy=p[0];state.sortDir=+p[1];render();});
+$("sortSel").addEventListener("change",e=>{const p=e.target.value.split(":");state.sortBy=p[0];state.sortDir=+p[1];state.sortTouched=true;render();});
 boot();
 </script>
 </body>
