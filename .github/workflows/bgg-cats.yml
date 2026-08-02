@@ -1,0 +1,25 @@
+name: Fetch BGG categories
+# Manual only. BGG categories do not change once a game is published, so this
+# runs when new games are added to the shelf, not every night.
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Fetch categories and mechanics from BGG
+        env:
+          SHEET_CSV_URL: ${{ vars.SHEET_CSV_URL }}
+        run: node scripts/fetch-bgg-cats.mjs
+      - name: Commit if changed
+        run: |
+          git config user.name "catalogue-bot"
+          git config user.email "actions@github.com"
+          git add data/bgg-cats.json
+          git diff --cached --quiet || git commit -m "Refresh BGG categories"
+          git push
