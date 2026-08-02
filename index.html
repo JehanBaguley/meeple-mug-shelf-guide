@@ -171,7 +171,15 @@
   .mseg button{border:0;background:transparent;color:var(--cream);padding:7px 13px;font-size:12px;font-weight:700}
   .mseg button.on{background:var(--amber);color:var(--ink)}
   .wt.dead{opacity:.32}
-  .clearbtn{display:block;margin:0 0 12px auto;background:transparent;border:1px solid var(--line);color:var(--timber-light);font-weight:700;font-size:12px;padding:6px 12px;border-radius:8px;cursor:pointer}
+  /* Panel head. The row is always in the layout, so the reset button appearing
+     and disappearing can no longer shove every filter below it up and down.
+     min-height matches the button height, which is the tallest thing in here. */
+  .panelhead{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;min-height:32px;margin:0 0 12px}
+  /* max-width is deliberately narrow: it keeps the hint on the same number of
+     lines whether or not the reset button is present, so the text doesn't
+     reflow when a filter is applied. */
+  .panelhint{margin:0;font-size:12px;line-height:1.35;color:var(--muted);max-width:15.5em}
+  .clearbtn{flex:0 0 auto;margin:0;background:transparent;border:1px solid var(--line);color:var(--timber-light);font-weight:700;font-size:12px;padding:6px 12px;border-radius:8px;cursor:pointer;white-space:nowrap}
   .clearbtn[hidden]{display:none}
   .picksrow[hidden]{display:none}
   .sheetbtn{display:inline-flex;align-items:center;gap:6px;margin-right:10px;font-weight:700;font-size:12.5px;padding:8px 12px}
@@ -265,13 +273,16 @@
   <details class="fsec panelwrap" id="filterWrap">
   <summary><strong>Filters</strong><span class="gsum" id="filtCount">none active</span></summary>
   <div class="panel">
+    <div class="panelhead">
+      <p class="panelhint">Narrow it down. The count updates as you go.</p>
+      <button id="resetBtn" class="clearbtn" hidden>Clear all</button>
+    </div>
     <div class="rowlabel msheetonly" style="margin-bottom:8px"><strong>Availability</strong></div>
     <div class="seg msheetonly" id="seg2" role="group" aria-label="Availability">
       <button data-seg="all" aria-pressed="true">All</button>
       <button data-seg="play" aria-pressed="false">Play here</button>
       <button data-seg="buy" aria-pressed="false">Take home</button>
     </div>
-    <button id="resetBtn" class="clearbtn" hidden>Clear all filters</button>
     <div class="rowlabel"><strong>Players</strong><span class="readout mono" id="seatOut">1–10+</span></div>
     <div class="dualwrap">
       <div class="dualtrack"></div><div class="dualfill" id="seatFill"></div>
