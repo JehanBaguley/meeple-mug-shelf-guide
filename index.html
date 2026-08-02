@@ -221,6 +221,11 @@
      it drops the bottom margin and pushes itself over next to the close button */
   .sheethead .clearbtn{margin:0 0 0 auto}
   .clearbtn[hidden]{display:none}
+  /* On desktop the applied-filter chip row above the results already shows a
+     "Clear all" (same resetAll), so the panel copy is a duplicate. Hide it there
+     rather than delete it: mobile still needs it in the sticky sheet header,
+     where the chip row is covered by the sheet. */
+  @media(min-width:900px){ .panel > .clearbtn{display:none} }
   .picksrow[hidden]{display:none}
   .sheetbtn{display:inline-flex;align-items:center;gap:6px;margin-right:10px;font-weight:700;font-size:12.5px;padding:8px 12px}
   .fbadge{background:var(--amber);color:var(--ink);border-radius:999px;font-size:11px;font-weight:800;padding:1px 7px}
