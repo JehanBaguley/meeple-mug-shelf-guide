@@ -59,8 +59,10 @@
   .dualtrack{position:absolute;top:13px;left:0;right:0;height:4px;background:rgba(236,229,211,.18);border-radius:2px}
   .dualfill{position:absolute;top:13px;height:4px;background:var(--amber);border-radius:2px}
   input[type=range].dual{position:absolute;top:0;left:0;width:100%;height:30px;margin:0;background:transparent;-webkit-appearance:none;appearance:none;pointer-events:none}
-  input[type=range].dual::-webkit-slider-thumb{pointer-events:auto;-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:var(--amber);border:3px solid var(--bg-deep);cursor:pointer}
-  input[type=range].dual::-moz-range-thumb{pointer-events:auto;width:18px;height:18px;border-radius:50%;background:var(--amber);border:3px solid var(--bg-deep);cursor:pointer}
+  input[type=range].dual::-webkit-slider-thumb{pointer-events:auto;-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:var(--amber);border:3px solid var(--bg-deep);cursor:pointer;transition:box-shadow .14s ease}
+  input[type=range].dual::-moz-range-thumb{pointer-events:auto;width:18px;height:18px;border-radius:50%;background:var(--amber);border:3px solid var(--bg-deep);cursor:pointer;transition:box-shadow .14s ease}
+  input[type=range].dual:active::-webkit-slider-thumb{box-shadow:0 0 0 7px rgba(216,216,72,.18)}
+  input[type=range].dual:active::-moz-range-thumb{box-shadow:0 0 0 7px rgba(216,216,72,.18)}
   input[type=range].dual::-webkit-slider-runnable-track{background:transparent}
   input[type=range].dual::-moz-range-track{background:transparent}
   .countsort{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}
@@ -81,7 +83,33 @@
     .morebtn:hover{color:var(--cream)}
     #toTop:hover{background:var(--timber-light)}
   }
-  @media (prefers-reduced-motion:reduce){.gcard,.gcard:hover{transition:none;transform:none}}
+  /* ————— Micro-interactions ————— */
+  /* One shared press transition for everything tappable. Touch has no hover,
+     so a small scale on :active is the only tactile confirmation a chip gets
+     that the tap landed. The colour part of the same transition is what makes
+     a genre chip cycling include -> exclude -> off read as one control
+     changing state rather than three unrelated repaints. */
+  .wt,.pickchip,.avail,.seg button,.mseg button,.clearbtn,.dirbtn,.morebtn,.sheetclose,.sheetdone,#toTop,.loadmore{transition:transform .12s ease,background-color .16s ease,border-color .16s ease,color .16s ease,opacity .16s ease}
+  .wt:active,.pickchip:active,.avail:active,.seg button:active,.mseg button:active,.clearbtn:active,.dirbtn:active,.morebtn:active,.sheetclose:active,.sheetdone:active,#toTop:active,.loadmore:active{transform:scale(.96)}
+  /* the sheet slides up, so it reads as a layer over the list rather than a
+     page swap. Short and eased out, it should not feel like a wait. */
+  @keyframes sheetin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  body.sheet-open .side{animation:sheetin .2s cubic-bezier(.2,.7,.3,1)}
+  /* #toTop is display:none while hidden, so it cannot transition in. An
+     animation on the not([hidden]) state runs the moment it is displayed. */
+  @keyframes ttin{from{opacity:0;transform:translateY(8px) scale(.9)}to{opacity:1;transform:none}}
+  #toTop:not([hidden]){animation:ttin .18s ease-out}
+  /* the count is the number people watch while filtering. Opacity only, so
+     nothing reflows and the sticky bar never shifts under a thumb. */
+  @keyframes countbump{from{opacity:.3}to{opacity:1}}
+  .count.bumped{animation:countbump .26s ease-out}
+  @media (prefers-reduced-motion:reduce){
+    .gcard,.gcard:hover,.wt,.pickchip,.avail,.seg button,.mseg button,.clearbtn,.dirbtn,.morebtn,.sheetclose,.sheetdone,#toTop,.loadmore{transition:none;transform:none}
+    .wt:active,.pickchip:active,.avail:active,.seg button:active,.mseg button:active,.clearbtn:active,.dirbtn:active,.morebtn:active,.sheetclose:active,.sheetdone:active,#toTop:active,.loadmore:active{transform:none}
+    input[type=range].dual::-webkit-slider-thumb,input[type=range].dual::-moz-range-thumb{transition:none}
+    input[type=range].dual:active::-webkit-slider-thumb,input[type=range].dual:active::-moz-range-thumb{box-shadow:none}
+    body.sheet-open .side,#toTop:not([hidden]),.count.bumped{animation:none}
+  }
   .spine{width:6px;flex-shrink:0}
   .gbody{padding:13px 16px 13px 13px;flex:1;min-width:0;display:flex;flex-direction:column}
   .gname{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
@@ -377,6 +405,10 @@
         <option value="bgg:-1">Lowest rated</option>
         <option value="time:1">Quickest first</option>
         <option value="time:-1">Longest first</option>
+        <option value="players:1">Biggest groups first</option>
+        <option value="players:-1">Smallest groups first</option>
+        <option value="age:1">Youngest players first</option>
+        <option value="age:-1">Oldest players first</option>
         <option value="price:1">Cheapest first</option>
         <option value="price:-1">Most expensive first</option>
       </select>
@@ -839,7 +871,17 @@ function render(){
   buildActiveChips();
 
   // the denominator is a database readout; only show it when nothing is filtered
-  $("countOut").textContent = list.length===DATA.games.length ? "All "+DATA.games.length+" games" : list.length+" game"+(list.length===1?"":"s");
+  {
+    const cEl = $("countOut");
+    const cNext = list.length===DATA.games.length ? "All "+DATA.games.length+" games" : list.length+" game"+(list.length===1?"":"s");
+    const dragging = document.activeElement && document.activeElement.type === "range";
+    if(cEl.textContent && cEl.textContent !== cNext && !dragging){
+      cEl.classList.remove("bumped");
+      void cEl.offsetWidth;          // forced reflow, so the animation restarts on repeat taps
+      cEl.classList.add("bumped");
+    }
+    cEl.textContent = cNext;
+  }
   $("search").placeholder="Search "+DATA.games.length+" games";
   $("sheetCount").textContent = activeFilters; $("sheetCount").hidden = !activeFilters;
   { const mb=$("mfiltBadge"); if(mb){ mb.textContent=activeFilters; mb.hidden=!activeFilters; } }
