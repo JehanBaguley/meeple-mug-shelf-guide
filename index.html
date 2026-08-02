@@ -459,7 +459,7 @@ const CATS = {party:"#d9a441",bluff:"#3d6fa5",heavy:"#8a7fae",engine:"#6aa39a",f
 const MODE_LABEL = {coop:"co-op",team:"teams",comp:"competitive"};
 const S_TIME = [0,20,30,45,60,90,120,180,360];
 const PAGE = 24; // results rendered per "page"; Load more reveals another PAGE
-const state = {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",sortBy:"name",sortDir:1,showAllGenres:false,genreQuery:"",limit:PAGE};
+const state = {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",sortBy:"name",sortDir:1,showAllGenres:false,showAllPicks:false,genreQuery:"",limit:PAGE};
 let DATA = EMBED;
 
 const $ = id => document.getElementById(id);
@@ -728,16 +728,29 @@ function buildPicks(){
   $("picksLabel").hidden = !has;
   const row = $("picksRow"); if(!row) return;
   row.hidden = !has;
-  // pinned lists (e.g. "Game of the week") float to the front; the rest keep sheet order
-  const order = DATA.picks.map((p,i)=>i).sort((a,b)=>(isPinnedPick(DATA.picks[a].list)?0:1)-(isPinnedPick(DATA.picks[b].list)?0:1));
+  // pinned lists (e.g. "Game of the week") float to the front, then people A to Z.
+  // A member scanning this row is hunting their own name, not reading a ranking,
+  // so alphabetical beats sheet order the moment there is more than a handful.
+  const order = DATA.picks.map((p,i)=>i).sort((a,b)=>
+    (isPinnedPick(DATA.picks[a].list)?0:1)-(isPinnedPick(DATA.picks[b].list)?0:1)
+    || DATA.picks[a].list.localeCompare(DATA.picks[b].list));
+  const CAP = 4;   // "All games" plus four lists, then it folds
+  // same fold as the genre row, so the row is a fixed height no matter how big the
+  // roster gets. A selected list is always kept on screen, or tapping "Show fewer"
+  // would hide the filter you are currently looking at.
+  const showAll = state.showAllPicks || order.length <= CAP;
+  const shown = showAll ? order : order.filter((i,n)=>n<CAP || state.pick===i);
   const chip = (label,val,count,pinned)=>'<button class="pickchip'+(state.pick===val?" on":"")+(pinned?" pin":"")+'" data-pick="'+(val===null?"":val)+'" aria-pressed="'+(state.pick===val)+'">'+(pinned?'<span class="pinstar">\u2605</span>':"")+label+(count!=null?'<small>'+count+'</small>':"")+'</button>';
   // "All games" first, then each list as its own chip (name shown verbatim so themed lists read naturally)
   row.innerHTML = chip("All games",null,DATA.games.length,false)
-    + order.map(i=>{const p=DATA.picks[i];return chip(p.list,i,Object.keys(p.games).length,isPinnedPick(p.list));}).join("");
+    + shown.map(i=>{const p=DATA.picks[i];return chip(p.list,i,Object.keys(p.games).length,isPinnedPick(p.list));}).join("")
+    + (order.length > CAP ? '<button class="morebtn" id="morePicks">'+(showAll?"Show fewer":"Show all "+order.length)+'</button>' : "");
   row.querySelectorAll("[data-pick]").forEach(b=>b.addEventListener("click",()=>{
     const v=b.dataset.pick; state.pick = v===""?null:+v;
     buildPicks(); render();
   }));
+  // no render() here: folding the row changes nothing about which games match
+  const mp = $("morePicks"); if(mp) mp.addEventListener("click",()=>{ state.showAllPicks = !state.showAllPicks; buildPicks(); });
 }
 
 // ————— Render —————
@@ -1061,7 +1074,7 @@ const paints = [
   wireDual("minPrice","maxPrice","priceFill","pLo","pHi",0,200,v=>"$"+v),
 ];
 function resetAll(){
-  Object.assign(state, {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",genreQuery:"",showAllGenres:false,limit:PAGE});
+  Object.assign(state, {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",genreQuery:"",showAllGenres:false,showAllPicks:false,limit:PAGE});
   $("search").value = ""; $("genreSearch").value = "";
   $("searchClear").hidden = true; $("genreClear").hidden = true;
   buildPicks(); buildTagRow(); render();
