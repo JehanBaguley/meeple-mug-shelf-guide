@@ -103,7 +103,7 @@ function catSlugFor(t) {
 
 async function main() {
   const xml = await fetchCollection();
-  const games = xml ? parseCollection(xml) : [];
+  let games = xml ? parseCollection(xml) : [];
   console.log(`BGG collection: ${games.length} items`);
   let picks = [];
   let sheetRows = 0;
@@ -114,13 +114,22 @@ async function main() {
       const head = rows.shift().map(h => h.toLowerCase().trim().replace(/[^a-z0-9]+/g, "_"));
       const idx = (k) => head.indexOf(k);
       const byName = Object.fromEntries(games.map(g => [norm(g.name), g]));
+      const byId = new Map();                       // bggId -> collection entries, in order
+      for (const g of games) if (g.bggId != null) { if (!byId.has(g.bggId)) byId.set(g.bggId, []); byId.get(g.bggId).push(g); }
+      const claimed = new Set();                    // so two sheet rows can't claim one entry
       const lists = {};
       for (const r of rows) {
         const val = (k) => (idx(k) > -1 ? (r[idx(k)] || "").trim() : "");
         const name = val("name"); if (!name) continue;
         sheetRows++;
-        let g = byName[norm(name)];
-        if (!g) { g = { name, bggId: null, players: null, mins: null, time: null, age: null, catText: null, bgg: null, weight: null, playable: false, forSale: false, cat: null, mode: null, price: null, priceTxt: null, playsLike: null }; games.push(g); byName[norm(name)] = g; }
+        // resolve the sheet's own BGG link first: it is the only reliable join key
+        const lm = (idx("bgg_link") > -1 ? (r[idx("bgg_link")] || "") : "").match(/boardgame(?:expansion|accessory)?\/(\d+)/);
+        let g = null;
+        if (lm) g = (byId.get(+lm[1]) || []).find(c => !claimed.has(c)) || null;
+        if (!g) { const c = byName[norm(name)]; if (c && !claimed.has(c)) g = c; }
+        if (g) { claimed.add(g); g.name = name; }   // the cafe's spelling is the one on the shelf
+        g && (g.__sheet = true);
+        if (!g) { g = { name, __sheet: true, bggId: null, players: null, mins: null, time: null, age: null, catText: null, bgg: null, weight: null, playable: false, forSale: false, cat: null, mode: null, price: null, priceTxt: null, playsLike: null }; games.push(g); byName[norm(name)] = g; claimed.add(g); }
         if (val("playable")) g.playable = /^y/i.test(val("playable"));
         if (val("for_sale")) g.forSale = /^y/i.test(val("for_sale"));
         if (val("expansion")) g.exp = /^y/i.test(val("expansion"));
@@ -147,6 +156,19 @@ async function main() {
       sheetRows = 0; picks = [];
     }
   }
+
+  // The sheet is the shelf. Collection entries no sheet row claimed are games the cafe
+  // does not stock, so they must not appear in the guide saying "On the shelf".
+  if (sheetRows > 0) {
+    const before = games.length;
+    games = games.filter(g => g.__sheet);
+    for (const g of games) delete g.__sheet;
+    if (before !== games.length) console.log(`Dropped ${before - games.length} BGG entries no sheet row claimed`);
+  } else {
+    for (const g of games) delete g.__sheet;
+  }
+  // BGG reports 0 for a game nobody has rated for complexity; that is "unknown", not "trivial"
+  for (const g of games) if (g.weight === 0) g.weight = null;
 
   // merge the committed BGG ratings map (data/bgg.json) for games the API/dump matched
   if (existsSync("data/bgg.json")) {
