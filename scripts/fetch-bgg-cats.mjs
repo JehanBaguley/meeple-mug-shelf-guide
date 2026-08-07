@@ -75,9 +75,24 @@ function parseItems(xml) {
     )].map(x => x[1].replace(/&amp;/g, "&").replace(/&#039;/g, "'").replace(/&quot;/g, '"'));
     const wm = body.match(/<averageweight[^>]*value="([\d.]+)"/);
     const am = body.match(/<average[^>]*value="([\d.]+)"/);
+    // First sentence of BGG's description, as a stand-in blurb for games nobody has
+    // written one for yet. BGG's copy is publisher marketing and runs to paragraphs, so
+    // only the opening sentence is worth keeping, and only if it is a sensible length.
+    const dm = body.match(/<description>([\s\S]*?)<\/description>/);
+    let desc = null;
+    if (dm) {
+      const plain = dm[1]
+        .replace(/&#10;|&#13;|<br\s*\/?>/gi, " ")
+        .replace(/&amp;/g, "&").replace(/&#039;|&rsquo;/g, "'").replace(/&quot;|&ldquo;|&rdquo;/g, '"')
+        .replace(/&mdash;|&ndash;/g, "-").replace(/&hellip;/g, "...").replace(/&[a-z]+;|&#\d+;/gi, " ")
+        .replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+      const first = (plain.match(/^.*?[.!?](?=\s|$)/) || [plain])[0].trim();
+      if (first.length >= 25 && first.length <= 180) desc = first;
+    }
     out[m[1]] = {
       cats: grab("boardgamecategory"),
       mechs: grab("boardgamemechanic"),
+      desc,
       // rating and weight come free in the same response, so take them
       bgg: am ? Number(Number(am[1]).toFixed(1)) : null,
       weight: wm ? Number(Number(wm[1]).toFixed(2)) : null,
