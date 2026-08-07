@@ -329,6 +329,7 @@
 </header>
 
 <main class="wrap">
+  <div id="schemaWarn" class="feednote" hidden></div>
 <div class="cols">
 <aside class="side">
   <div class="sheethead"><strong>Find a game</strong><button id="sheetClose" class="sheetclose" aria-label="Close filters">✕</button></div>
@@ -771,6 +772,33 @@ async function applySheet(){
   }
 }
 
+// ————— Live sheet header/schema check —————
+async function checkSheetHeader(){
+  if(!SHEET_CSV_URL) return;
+  try{
+    const txt = await (await fetch(SHEET_CSV_URL)).text();
+    const rows = parseCsv(txt);
+    if(!rows || !rows.length) return;
+    const head = rows[0].map(h=>h.toLowerCase().trim().replace(/[^a-z0-9]+/g,'_'));
+    const CANONICAL = ['name','bgg_link','playable','status','for_sale','expansion','price','price_text','rating','players','age','time','category','play_style','blurb','pick_by','pick_note','rec_list','rec_note','notes','rules_link'];
+    const missing = CANONICAL.filter(h=>!head.includes(h));
+    const extra = head.filter(h=>!CANONICAL.includes(h));
+    if(missing.length || extra.length){
+      const el = document.getElementById('schemaWarn');
+      if(el){
+        el.hidden = false;
+        el.innerHTML = '<strong>Sheet columns mismatch</strong>: The published sheet header does not match the expected column order. '+
+          (missing.length?('<div>Missing: '+missing.join(', ')+'</div>'):'')+
+          (extra.length?('<div>Unexpected: '+extra.join(', ')+'</div>'):'')+
+          '<div style="margin-top:8px">Quick fixes: run the repo fix script to produce a corrected CSV (`scripts/fix-sheet-order.mjs`) or install the sheet header Apps Script to auto-repair.</div>';
+      }
+      console.warn('Sheet header mismatch — missing:',missing,'extra:',extra);
+    }
+  }catch(e){
+    console.warn('Header check failed',e);
+  }
+}
+
 // ————— Picks chips —————
 const isPinnedPick = name => /game of the week|weekly pick|this week/i.test(name||"");
 function buildPicks(){
@@ -1115,6 +1143,9 @@ async function boot(){
   loadState(); syncInputs(); // restore filters from URL / localStorage, then mirror into the inputs
   buildPicks(); buildTagRow(); await applySheet(); render();
 }
+
+// Run a header check before applying the sheet overlay so staff see a warning early
+boot = (async function(orig){ return async function(){ await orig(); await checkSheetHeader(); }; })(boot);
 
 $("search").addEventListener("input",e=>{state.query=e.target.value;$("searchClear").hidden=!e.target.value;render();});
 $("searchClear").addEventListener("click",()=>{$("search").value="";state.query="";$("searchClear").hidden=true;$("search").focus();render();});
