@@ -174,8 +174,12 @@
   .empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}
   footer{margin:28px 0 60px;font-size:11.5px;color:var(--muted);line-height:1.6}
   .bggcredit img{height:15px;width:auto;vertical-align:-3px;margin-right:5px}
-  .homelink{display:block;margin-top:8px}
-  .credit{display:block;margin-top:10px}
+  /* The cafe's own name leads: it is the only thing in here anyone taps on purpose. */
+  .fname{font-size:15px;font-weight:700;color:var(--cream);margin:0 0 2px}
+  .fname a{color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(236,229,211,.35)}
+  .fhome{margin:0 0 12px}
+  footer p{margin:0 0 10px;max-width:62ch}
+  .credit{margin-top:14px;opacity:.75}
   footer a{color:var(--timber-light)}
   .note{font-size:12px;color:var(--muted);margin:-4px 0 10px}
   /* applied-filter chips: show exactly what's active, each removable */
@@ -442,20 +446,18 @@
 </div>
 
   <footer>
-    The play list is kept up to date by staff. Ratings come from <span class="bggcredit"><a href="https://boardgamegeek.com" target="_blank" rel="noopener">BoardGameGeek</a></span>. Buying or requesting a copy just opens our <a href="https://www.meepleandmug.com.au/contact" target="_blank" rel="noopener">contact page</a>, nothing is charged online.
-    <p class="note">Table fee: roll the trolling dice and pay what they show. Members play free.</p>
+    <p class="fname"><a href="https://www.meepleandmug.com.au" target="_blank" rel="noopener">Meeple &amp; Mug</a></p>
+    <p class="fhome">Hours, bookings and how to find us are on our main site.</p>
+    <p>Staff keep this shelf list current. If a game is not on the shelf it is probably out on a table, so ask at the counter. To buy a copy or have us order one, use our <a href="https://www.meepleandmug.com.au/contact" target="_blank" rel="noopener">contact page</a>. There is no checkout here, we sort it out with you in person.</p>
+    <p class="note">Table fee: roll the dice and pay what they show. Members don’t pay it.</p>
     <p class="note">
-      <span class="bggcredit">
-        <a href="https://boardgamegeek.com" target="_blank" rel="noopener">
-          <img src="assets/powered-by-bgg.png" alt="BoardGameGeek logo" id="bggLogo" hidden style="height:15px;width:auto;vertical-align:-3px;margin-right:6px">Powered by BoardGameGeek
-        </a>
-      </span>
-      <!-- Image is hidden until assets/powered-by-bgg.png is added. Text-only
-           attribution remains visible and satisfies BGG terms. Use the light
-           logo variant for the dark footer when swapping the image in. -->
+      <span class="bggcredit"><a href="https://boardgamegeek.com" target="_blank" rel="noopener"><img src="assets/powered-by-bgg.png" alt="" id="bggLogo" hidden>Ratings come from BoardGameGeek members.</a></span>
+      <!-- The logo is hidden until assets/powered-by-bgg.png exists; the text credit alone
+           already satisfies BGG's attribution terms. Use the light variant, the footer sits
+           on dark green. alt is deliberately empty so a screen reader doesn't say the name
+           twice, since the link text already carries it. -->
     </p>
-    <span class="homelink"><a href="https://www.meepleandmug.com.au" target="_blank" rel="noopener">meepleandmug.com.au</a> has our hours, menu and bookings.</span>
-    <span class="credit">Designed &amp; built by <a href="https://github.com/JehanBaguley" target="_blank" rel="noopener">Jehan Baguley</a>.</span>
+    <p class="credit">Designed &amp; built by <a href="https://github.com/JehanBaguley" target="_blank" rel="noopener">Jehan Baguley</a>.</p>
   </footer>
 </main>
 <div id="scrim" hidden></div>
