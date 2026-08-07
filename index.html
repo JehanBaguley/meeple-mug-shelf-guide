@@ -122,12 +122,6 @@
     input[type=range].dual:active::-webkit-slider-thumb,input[type=range].dual:active::-moz-range-thumb{box-shadow:none}
     body.sheet-open .side,#toTop:not([hidden]),.count.bumped{animation:none}
   }
-  /* Respect reduced motion for skeleton shimmer specifically */
-  @media (prefers-reduced-motion:reduce){
-    .gcard.skeleton .skel-title, .gcard.skeleton .skel-line, .gcard.skeleton .skel-tags { animation: none !important; background-position: 0 0 !important; }
-  }
-  .skel-track{position:relative}
-  .skel-track::after{content:'';position:absolute;left:0;right:0;top:6px;height:10px;border-radius:6px;background:linear-gradient(90deg,rgba(236,229,211,0.04),rgba(236,229,211,0.1),rgba(236,229,211,0.04));pointer-events:none}
   .spine{width:6px;flex-shrink:0}
   .gbody{padding:13px 16px 13px 13px;flex:1;min-width:0;display:flex;flex-direction:column}
   .gname{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
@@ -325,17 +319,6 @@
     .gcard{margin:0}
   }
   @media(min-width:1500px){ .list{grid-template-columns:1fr 1fr 1fr} }
-  /* Skeleton loading placeholders (shimmer) */
-  .skeleton { --skel-bg: linear-gradient(90deg, rgba(236,229,211,0.06) 25%, rgba(236,229,211,0.12) 50%, rgba(236,229,211,0.06) 75%); }
-  .skel { background: linear-gradient(180deg, rgba(236,229,211,0.04), rgba(236,229,211,0.02)); border:1px solid rgba(236,229,211,0.04); color:transparent; }
-  .gcard.skeleton{background:linear-gradient(180deg, rgba(236,229,211,0.04), rgba(236,229,211,0.02));box-shadow:none;border:1px solid rgba(236,229,211,0.04)}
-  .gcard.skeleton .gbody{padding:14px}
-  .gcard.skeleton .skel-title{height:18px;width:60%;border-radius:6px;background:var(--skel-bg);animation:skew 1.2s linear infinite}
-  .gcard.skeleton .skel-line{height:12px;width:100%;border-radius:6px;margin-top:10px;background:var(--skel-bg);animation:skew 1.2s linear infinite}
-  .gcard.skeleton .skel-line.short{width:40%}
-  .gcard.skeleton .skel-tags{height:22px;width:45%;border-radius:999px;margin-top:12px;background:var(--skel-bg);animation:skew 1.2s linear infinite}
-  .gcard.skeleton .spine{background:linear-gradient(180deg, rgba(85,104,92,0.12), rgba(85,104,92,0.06));}
-  @keyframes skew{0%{background-position:-200px 0}100%{background-position:200px 0}} 
 </style>
 </head>
 <body>
@@ -346,7 +329,6 @@
 </header>
 
 <main class="wrap">
-  <div id="schemaWarn" class="feednote" hidden></div>
 <div class="cols">
 <aside class="side">
   <div class="sheethead"><strong>Find a game</strong><button id="sheetClose" class="sheetclose" aria-label="Close filters">✕</button></div>
@@ -465,7 +447,7 @@
     <p class="note">
       <span class="bggcredit">
         <a href="https://boardgamegeek.com" target="_blank" rel="noopener">
-          <img data-src="assets/powered-by-bgg.png" alt="BoardGameGeek logo" id="bggLogo" hidden style="height:15px;width:auto;vertical-align:-3px;margin-right:6px">Powered by BoardGameGeek
+          <img src="assets/powered-by-bgg.png" alt="BoardGameGeek logo" id="bggLogo" hidden style="height:15px;width:auto;vertical-align:-3px;margin-right:6px">Powered by BoardGameGeek
         </a>
       </span>
       <!-- Image is hidden until assets/powered-by-bgg.png is added. Text-only
@@ -665,44 +647,30 @@ function clearFilter(key){
 function wireDual(loId, hiId, fillId, loKey, hiKey, min, max, vt){
   let redirect = null; // when handles sit on the same value, reroute the drag to the one that can still move
   const clear = () => { redirect = null; };
-  const loEl = $(loId);
-  const hiEl = $(hiId);
-  const fillEl = $(fillId);
-  if(loEl){
-    loEl.addEventListener("input", e => {
-      const v = +e.target.value;
-      if(redirect === "hi"){ state[hiKey] = Math.max(v, state[loKey]); }
-      else if(state[loKey] === state[hiKey] && v > state[hiKey]){ redirect = "hi"; state[hiKey] = v; }
-      else { state[loKey] = Math.min(v, state[hiKey]); }
-      render();
-    });
-  }
-  if(hiEl){
-    hiEl.addEventListener("input", e => {
-      const v = +e.target.value;
-      if(redirect === "lo"){ state[loKey] = Math.min(v, state[hiKey]); }
-      else if(state[loKey] === state[hiKey] && v < state[loKey]){ redirect = "lo"; state[loKey] = v; }
-      else { state[hiKey] = Math.max(v, state[loKey]); }
-      render();
-    });
-  }
-  ["pointerup","touchend","mouseup","change"].forEach(ev => {
-    if(loEl) loEl.addEventListener(ev, clear);
-    if(hiEl) hiEl.addEventListener(ev, clear);
+  $(loId).addEventListener("input", e => {
+    const v = +e.target.value;
+    if(redirect === "hi"){ state[hiKey] = Math.max(v, state[loKey]); }
+    else if(state[loKey] === state[hiKey] && v > state[hiKey]){ redirect = "hi"; state[hiKey] = v; }
+    else { state[loKey] = Math.min(v, state[hiKey]); }
+    render();
   });
+  $(hiId).addEventListener("input", e => {
+    const v = +e.target.value;
+    if(redirect === "lo"){ state[loKey] = Math.min(v, state[hiKey]); }
+    else if(state[loKey] === state[hiKey] && v < state[loKey]){ redirect = "lo"; state[loKey] = v; }
+    else { state[hiKey] = Math.max(v, state[loKey]); }
+    render();
+  });
+  ["pointerup","touchend","mouseup","change"].forEach(ev => { $(loId).addEventListener(ev, clear); $(hiId).addEventListener(ev, clear); });
   return () => {
-    const lo = $(loId);
-    const hi = $(hiId);
-    const fill = $(fillId);
-    if(!lo || !hi) return;
-    lo.value = state[loKey]; hi.value = state[hiKey];
+    $(loId).value = state[loKey]; $(hiId).value = state[hiKey];
     const a = ((state[loKey]-min)/(max-min))*100, b = ((state[hiKey]-min)/(max-min))*100;
-    if(fill){ fill.style.left = a+"%"; fill.style.right = (100-b)+"%"; }
-    lo.style.zIndex = state[loKey] > (min+max)/2 ? 3 : 2;
+    $(fillId).style.left = a+"%"; $(fillId).style.right = (100-b)+"%";
+    $(loId).style.zIndex = state[loKey] > (min+max)/2 ? 3 : 2;
     // the raw slider value is a bucket index for time; announce the real thing
     if(vt){
-      lo.setAttribute("aria-valuetext","minimum "+vt(state[loKey]));
-      hi.setAttribute("aria-valuetext","maximum "+vt(state[hiKey]));
+      $(loId).setAttribute("aria-valuetext","minimum "+vt(state[loKey]));
+      $(hiId).setAttribute("aria-valuetext","maximum "+vt(state[hiKey]));
     }
   };
 }
@@ -777,18 +745,16 @@ async function applySheet(){
         // "AUD 50" used to come out as "$Free" and "$AUD 50".
         g.priceTxt = /^[0-9.,\u2013-]+$/.test(pr) ? "$"+pr : pr;
       }
-      // Do not let the live sheet overwrite authoritative BGG stats.
-      if(val("rating") && (g.bgg===null || g.bgg===undefined)) g.bgg = parseFloat(val("rating"))||g.bgg;
+      if(val("rating")) g.bgg = parseFloat(val("rating"))||g.bgg;
       if(val("bgg_link")) { g.bggUrl = val("bgg_link"); const bm = val("bgg_link").match(/boardgame\/(\d+)/); if(bm) g.bggId = +bm[1]; }
       if(val("price_text")) g.priceTxt = val("price_text"); // e.g. "$80–110" for roll-the-dice pricing
       if(val("status")) g.status = val("status");
       if(val("blurb")) g.playsLike = val("blurb");
       const pb = val("pick_by")||val("badge_by")||val("rec_list"), pn = val("pick_note")||val("badge_note")||val("rec_note");
       if(pb) { g.pickBy = pb; g.pickNote = pn; (lists[pb] ??= {list:pb,note:"",games:{}}).games[g.name] = pn; }
-      // Only apply players/time/age from the sheet when we don't already have stats (BGG authoritative)
-      if(val("players") && !hasStats(g)) { const p = parsePlayersTxt(val("players")); if(p) g.players = p; else DBG.badPlayers.push(name+": "+val("players")); }
-      if(val("age") && (g.age===null || g.age===undefined)) { g.age = val("age"); if(!/\d/.test(val("age"))) DBG.badAge.push(name+": "+val("age")); }
-      if(val("time") && (g.mins===null || g.mins===undefined)) { const t = parseTimeTxt(val("time")); if(t.time===null) DBG.badTime.push(name+": "+val("time")); else { g.time = t.time; g.mins = t.mins; } }
+      if(val("players")) { const p = parsePlayersTxt(val("players")); if(p) g.players = p; else DBG.badPlayers.push(name+": "+val("players")); }
+      if(val("age")) { g.age = val("age"); if(!/\d/.test(val("age"))) DBG.badAge.push(name+": "+val("age")); }
+      if(val("time")) { const t = parseTimeTxt(val("time")); if(t.time===null) DBG.badTime.push(name+": "+val("time")); else { g.time = t.time; g.mins = t.mins; } }
       if(val("category")) { g.catText = val("category"); g.cat = catSlugFor(g.catText); if(/co-?op|cooperative/i.test(g.catText)) g.mode = "coop"; }
       if(val("play_style")) g.mode = ({"co-op":"coop",coop:"coop",teams:"team",team:"team",competitive:"comp",comp:"comp"})[norm(val("play_style"))] || g.mode;
     }
@@ -802,62 +768,6 @@ async function applySheet(){
     // Customers need to know it might be stale; staff need to know it broke.
     const n = $("feedNote");
     if(n){ n.hidden = false; n.textContent = "Showing our last saved list, today\u2019s updates aren\u2019t loading."; }
-  }
-}
-
-// Render N skeleton cards into the list while data loads
-function showSkeletons(n){
-  const out = [];
-  for(let i=0;i<n;i++){
-    out.push('<article class="gcard skeleton"><div class="spine"></div><div class="gbody">'+
-      '<div class="skel-title"></div>'+
-      '<div class="skel-line"></div>'+
-      '<div class="skel-line short"></div>'+
-      '<div class="skel-tags"></div>'+
-      '</div></article>');
-  }
-  const list = document.getElementById('list'); if(list) list.innerHTML = out.join('');
-}
-
-// sidebar/filter skeletons: simple placeholders for picks, sliders and chips
-function showSidebarSkeletons(){
-  // picks row skeletons
-  const pr = document.getElementById('picksRow');
-  if(pr){ pr.innerHTML = Array.from({length:4}).map(()=>'<button class="pickchip skel">&nbsp;</button>').join(''); }
-  // panels: replace main genre row chips with skeleton chips
-  const gr = document.getElementById('genreRow');
-  if(gr){ gr.innerHTML = Array.from({length:8}).map(()=>'<button class="wt skel" style="width:80px;height:28px;border-radius:8px"></button>').join(''); }
-  // sliders skeleton: add a class to show a non-destructive skeleton bar
-  document.querySelectorAll('.panel .dualwrap').forEach(dw => { dw.classList.add('skel-track'); });
-  // tag summary / counts placeholder
-  const gs = document.getElementById('genreSum'); if(gs) gs.textContent = '';
-}
-
-
-// ————— Live sheet header/schema check —————
-async function checkSheetHeader(){
-  if(!SHEET_CSV_URL) return;
-  try{
-    const txt = await (await fetch(SHEET_CSV_URL)).text();
-    const rows = parseCsv(txt);
-    if(!rows || !rows.length) return;
-    const head = rows[0].map(h=>h.toLowerCase().trim().replace(/[^a-z0-9]+/g,'_'));
-    const CANONICAL = ['name','bgg_link','playable','status','for_sale','expansion','price','price_text','rating','players','age','time','category','play_style','blurb','pick_by','pick_note','rec_list','rec_note','notes','rules_link'];
-    const missing = CANONICAL.filter(h=>!head.includes(h));
-    const extra = head.filter(h=>!CANONICAL.includes(h));
-    if(missing.length || extra.length){
-      const el = document.getElementById('schemaWarn');
-      if(el){
-        el.hidden = false;
-        el.innerHTML = '<strong>Sheet columns mismatch</strong>: The published sheet header does not match the expected column order. '+
-          (missing.length?('<div>Missing: '+missing.join(', ')+'</div>'):'')+
-          (extra.length?('<div>Unexpected: '+extra.join(', ')+'</div>'):'')+
-          '<div style="margin-top:8px">Quick fixes: run the repo fix script to produce a corrected CSV (`scripts/fix-sheet-order.mjs`) or install the sheet header Apps Script to auto-repair.</div>';
-      }
-      console.warn('Sheet header mismatch — missing:',missing,'extra:',extra);
-    }
-  }catch(e){
-    console.warn('Header check failed',e);
   }
 }
 
@@ -1075,7 +985,7 @@ function render(){
       ? '<div class="stats mono">'+bits.map(b=>'<span>'+b+'</span>').join('<span class="sep" aria-hidden="true">\u00b7</span>')+'</div>'
       : '<div class="pending">Details on the box, ask at the counter.</div>';
     // genre chips (up to 3) with a colour dot per genre; replaces the old trailing text
-    const gtags = (g.tags||[]).slice(0,4).map(t=>{const slug=catSlugFor(t);if(!slug&&DEBUG)DBG.unmapped.add(t);const dot=slug?'<i style="background:'+CATS[slug]+'"></i>':'';return '<span class="gtag">'+dot+esc(tagLabel(t))+'</span>';}).join('');
+    const gtags = (g.tags||[]).slice(0,3).map(t=>{const slug=catSlugFor(t);if(!slug&&DEBUG)DBG.unmapped.add(t);const dot=slug?'<i style="background:'+CATS[slug]+'"></i>':'';return '<span class="gtag">'+dot+esc(tagLabel(t))+'</span>';}).join('');
     const genres = gtags ? '<div class="gtags">'+gtags+'</div>' : "";
     const pickNote = (state.pick!==null && DATA.picks[state.pick].games[g.name]) ? '<p class="picknote">'+esc(DATA.picks[state.pick].games[g.name])+'</p>' : (g.pickNote?'<p class="picknote">'+esc(g.pickNote)+'</p>':"");
     const plays = g.playsLike?'<p class="blurb">'+esc(g.playsLike)+'</p>':"";
@@ -1190,11 +1100,8 @@ function syncInputs(){
 }
 
 // ————— Prefer synced data/games.json when the Action has run —————
-async function runBoot(){
+async function boot(){
   try{
-    // show skeleton placeholders while we fetch the baked data (improves perceived load)
-    showSidebarSkeletons();
-    showSkeletons(8);
     const r = await fetch("data/games.json",{cache:"no-store"});
     if(r.ok){ const j = await r.json(); if(j.games?.length) DATA = j; }
     else {
@@ -1206,11 +1113,8 @@ async function runBoot(){
   tagAll(DATA.games);
   $("search").placeholder = "Search "+DATA.games.length+" games\u2026";
   loadState(); syncInputs(); // restore filters from URL / localStorage, then mirror into the inputs
-  buildPicks(); buildTagRow(); await applySheet(); render();
+  buildPicks(); buildTagRow(); render(); applySheet();
 }
-
-// Wrap the boot function to run the header check after the initial boot
-const boot = (async function(orig){ return async function(){ await orig(); await checkSheetHeader(); }; })(runBoot);
 
 $("search").addEventListener("input",e=>{state.query=e.target.value;$("searchClear").hidden=!e.target.value;render();});
 $("searchClear").addEventListener("click",()=>{$("search").value="";state.query="";$("searchClear").hidden=true;$("search").focus();render();});
@@ -1232,12 +1136,7 @@ function placeReset(){
 }
 placeReset();window.addEventListener("resize",placeReset);
 document.addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(b){
-  if(b.dataset.seg!=="buy"&&(state.pLo>0||state.pHi<200)){
-    state.pLo=0;state.pHi=200;
-    const minPrice = $("minPrice"); const maxPrice = $("maxPrice");
-    if(minPrice) minPrice.value = 0;
-    if(maxPrice) maxPrice.value = 200;
-  }
+  if(b.dataset.seg!=="buy"&&(state.pLo>0||state.pHi<200)){state.pLo=0;state.pHi=200;$("minPrice").value=0;$("maxPrice").value=200;}
   state.seg=b.dataset.seg;render()}});
 // shadow appears only once a sticky bar is actually pinned (its top hits 0), not at rest
 function stickShadows(){
@@ -1253,16 +1152,6 @@ const paints = [
   wireDual("minAge","maxAge","ageFill","aLo","aHi",4,18,v=>"ages "+v+" and up"),
   wireDual("minPrice","maxPrice","priceFill","pLo","pHi",0,200,v=>"$"+v),
 ];
-function loadBggLogo(){
-  const logo = $("bggLogo");
-  if(!logo) return;
-  const src = logo.dataset.src;
-  if(!src) return;
-  logo.src = src;
-  logo.hidden = false;
-  logo.addEventListener("error", ()=>{ logo.hidden = true; });
-}
-loadBggLogo();
 function resetAll(){
   Object.assign(state, {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",genreQuery:"",showAllGenres:false,showAllPicks:false,sortTouched:false,limit:PAGE});
   $("search").value = ""; $("genreSearch").value = "";
@@ -1327,7 +1216,7 @@ if(matchMedia("(min-width:900px)").matches) $("filterWrap").open = true;
 document.querySelectorAll("[data-tagmode]").forEach(b=>b.addEventListener("click",()=>{state.tagMode=b.dataset.tagmode;render()}));
 document.querySelectorAll("[data-ps]").forEach(b=>b.addEventListener("click",()=>{state.playStyle=b.dataset.ps;render()}));
 $("sortSel").addEventListener("change",e=>{const p=e.target.value.split(":");state.sortBy=p[0];state.sortDir=+p[1];state.sortTouched=true;render();});
-(async function(){ await runBoot(); await checkSheetHeader(); })();
+boot();
 </script>
 </body>
 </html>
