@@ -194,6 +194,12 @@ async function main() {
     for (const g of games) {
       const b = (g.bggId != null && byId.get(g.bggId)) || cmap[g.name];
       if (!b) continue;
+      // The committed snapshot is the safety net. The collection API is the thing that
+      // goes down, and since the cafe emptied these columns in the sheet there is no
+      // longer a hand-typed fallback behind them.
+      if (!g.players && b.minPlayers) g.players = [b.minPlayers, b.maxPlayers || b.minPlayers];
+      if (!g.mins && b.mins) { g.mins = b.mins; g.time = b.mins + "m"; }
+      if (!g.age && b.minAge) g.age = b.minAge + "+";
       // Two of BGG's "categories" are not genres. Expansion is a flag we already show as
       // a pill next to the title, and Print & Play means nothing on a cafe shelf.
       const cats = (b.cats || []).filter(c => {
@@ -233,6 +239,32 @@ async function main() {
   for (const g of games) if (g.catText) g.cat = catSlugFor(g.catText);
 
   if (!games.length) { console.log("No data from either source, leaving games.json untouched"); return; }
+
+  // A shelf guide with no player counts is worse than a slightly stale one. If a source
+  // went down mid-build we would otherwise publish a catalogue with every filter broken,
+  // so compare coverage against what is already live and refuse to make it much worse.
+  if (existsSync("data/games.json")) {
+    const prev = JSON.parse(readFileSync("data/games.json", "utf8")).games || [];
+    if (prev.length) {
+      const cov = (list, f) => list.filter(f).length;
+      const checks = [
+        ["games",   g => true],
+        ["players", g => g.players],
+        ["time",    g => g.mins],
+        ["rating",  g => g.bgg != null],
+      ];
+      const lost = [];
+      for (const [name, f] of checks) {
+        const was = cov(prev, f), now = cov(games, f);
+        if (was >= 20 && now < was * 0.8) lost.push(`${name}: ${was} -> ${now}`);
+      }
+      if (lost.length) {
+        console.error("REFUSING to publish, coverage collapsed: " + lost.join("; "));
+        console.error("Leaving data/games.json as it was. Check the BGG token and the sheet.");
+        process.exit(1);
+      }
+    }
+  }
   mkdirSync("data", { recursive: true });
   writeFileSync("data/games.json", JSON.stringify({ built: new Date().toISOString(), games, picks }, null, 1));
   console.log(`Wrote data/games.json (${games.length} games)`);
