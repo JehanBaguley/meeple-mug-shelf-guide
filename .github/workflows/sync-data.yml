@@ -14,7 +14,7 @@ jobs:
         with: { node-version: 20 }
       - name: Build games.json from BGG + sheet overlay
         env:
-          SHEET_CSV_URL: ${{ vars.SHEET_CSV_URL }}
+          BGG_TOKEN: ${{ secrets.BGG_TOKEN }}
         run: node scripts/build-data.mjs
       - name: Commit if changed
         run: |
