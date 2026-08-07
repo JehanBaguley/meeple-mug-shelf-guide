@@ -89,9 +89,18 @@ function parseItems(xml) {
       const first = (plain.match(/^.*?[.!?](?=\s|$)/) || [plain])[0].trim();
       if (first.length >= 25 && first.length <= 180) desc = first;
     }
+    // The thing endpoint carries player count, length and age, and unlike the collection
+    // endpoint it is not the one that 401s. Capturing them here makes bgg-cats.json a
+    // durable fallback rather than just a category list, which matters now the sheet no
+    // longer holds a hand-typed copy of any of it.
+    const num = (re) => { const x = body.match(re); return x ? Number(x[1]) : null; };
     out[m[1]] = {
       cats: grab("boardgamecategory"),
       mechs: grab("boardgamemechanic"),
+      minPlayers: num(/<minplayers[^>]*value="(\d+)"/),
+      maxPlayers: num(/<maxplayers[^>]*value="(\d+)"/),
+      mins: num(/<playingtime[^>]*value="(\d+)"/),
+      minAge: num(/<minage[^>]*value="(\d+)"/),
       desc,
       // rating and weight come free in the same response, so take them
       bgg: am ? Number(Number(am[1]).toFixed(1)) : null,
