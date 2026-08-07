@@ -122,6 +122,10 @@
     input[type=range].dual:active::-webkit-slider-thumb,input[type=range].dual:active::-moz-range-thumb{box-shadow:none}
     body.sheet-open .side,#toTop:not([hidden]),.count.bumped{animation:none}
   }
+  /* Respect reduced motion for skeleton shimmer specifically */
+  @media (prefers-reduced-motion:reduce){
+    .gcard.skeleton .skel-title, .gcard.skeleton .skel-line, .gcard.skeleton .skel-tags { animation: none !important; background-position: 0 0 !important; }
+  }
   .spine{width:6px;flex-shrink:0}
   .gbody{padding:13px 16px 13px 13px;flex:1;min-width:0;display:flex;flex-direction:column}
   .gname{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
@@ -797,6 +801,20 @@ function showSkeletons(n){
   const list = document.getElementById('list'); if(list) list.innerHTML = out.join('');
 }
 
+// sidebar/filter skeletons: simple placeholders for picks, sliders and chips
+function showSidebarSkeletons(){
+  // picks row skeletons
+  const pr = document.getElementById('picksRow');
+  if(pr){ pr.innerHTML = Array.from({length:4}).map(()=>'<button class="pickchip skel">&nbsp;</button>').join(''); }
+  // panels: replace main genre row chips with skeleton chips
+  const gr = document.getElementById('genreRow');
+  if(gr){ gr.innerHTML = Array.from({length:8}).map(()=>'<button class="wt skel" style="width:80px;height:28px;border-radius:8px"></button>').join(''); }
+  // sliders skeleton: find any dualwraps and put a small bar
+  document.querySelectorAll('.panel .dualwrap').forEach(dw => { dw.innerHTML = '<div style="height:10px;background:linear-gradient(90deg,#0f2a1b,#173a23);border-radius:6px"></div>'; });
+  // tag summary / counts placeholder
+  const gs = document.getElementById('genreSum'); if(gs) gs.textContent = '';
+}
+
 
 // ————— Live sheet header/schema check —————
 async function checkSheetHeader(){
@@ -1157,6 +1175,7 @@ function syncInputs(){
 async function runBoot(){
   try{
     // show skeleton placeholders while we fetch the baked data (improves perceived load)
+    showSidebarSkeletons();
     showSkeletons(8);
     const r = await fetch("data/games.json",{cache:"no-store"});
     if(r.ok){ const j = await r.json(); if(j.games?.length) DATA = j; }
