@@ -7,6 +7,11 @@
    "Trivia"
   ],
   "mechs": [],
+  "minPlayers": 2,
+  "maxPlayers": 7,
+  "mins": 30,
+  "minAge": 8,
+  "desc": "20 Questions is the popular panel game in which the panel ask up to 20 Questions to guess the Person, Place or Thing.",
   "bgg": 5.8,
   "weight": 1.3
  },
@@ -20,6 +25,11 @@
    "Movement Points",
    "Point to Point Movement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 75,
+  "minAge": 12,
+  "desc": "The circus has come to town!",
   "bgg": 7.2,
   "weight": 2.76
  },
@@ -38,6 +48,11 @@
    "Real-Time",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 5,
+  "minAge": 8,
+  "desc": "The Marvel version of the chaotically fast-paced cooperative card game 5-Minute Dungeon that lets a group of Marvel heroes battle past Marvel bosses all in less than 5 minutes!",
   "bgg": 6.7,
   "weight": 1.14
  },
@@ -52,6 +67,11 @@
    "Action Timer",
    "Real-Time"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 30,
+  "minAge": 10,
+  "desc": null,
   "bgg": 5.5,
   "weight": 1.1
  },
@@ -80,6 +100,11 @@
    "Variable Player Powers",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 7,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "You are the leader of one of the 7 great cities of the Ancient World.",
   "bgg": 7.7,
   "weight": 2.31
  },
@@ -109,6 +134,11 @@
    "Tug of War",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "In many ways 7 Wonders Duel resembles its parent game 7 Wonders.",
   "bgg": 8.1,
   "weight": 2.23
  },
@@ -127,6 +157,11 @@
    "Card Play Conflict Resolution",
    "Roll / Spin and Move"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 80,
+  "minAge": 10,
+  "desc": "Birds as it is colloquially known, is an Australian bird-themed board game with elements of strategy, sabotage and luck.",
   "bgg": 7.4,
   "weight": 2.25
  },
@@ -158,6 +193,11 @@
    "Turn Order: Auction",
    "Variable Player Powers"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 240,
+  "minAge": 14,
+  "desc": "Game description from the publisher: King Robert Baratheon is dead, and the lands of Westeros brace for battle.",
   "bgg": 7.5,
   "weight": 3.74
  },
@@ -170,6 +210,11 @@
   "mechs": [
    "Questions and Answers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 15,
+  "minAge": 10,
+  "desc": null,
   "bgg": 6.7,
   "weight": 1.26
  },
@@ -187,6 +232,11 @@
    "Simulation",
    "Team-Based Game"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 360,
+  "minAge": 12,
+  "desc": "Axis & Allies celebrates 25 years of strategy war gaming with a deluxe edition of its original theater-level game.",
   "bgg": 7.5,
   "weight": 3.55
  },
@@ -200,6 +250,11 @@
   "mechs": [
    "Hand Management"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "Game description from the publisher: Adventure Time Card Wars is the most epic card game ever found in the Land of Ooo, or anywhere for that matter!",
   "bgg": 6.1,
   "weight": 1.72
  },
@@ -218,6 +273,11 @@
    "Set Collection",
    "Solo / Solitaire Game"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 20,
+  "minAge": 14,
+  "desc": "Join Rika, Haru, BEB0 and Followoof, four lost souls who have come together to explore the World of Aethermon!",
   "bgg": 6.6,
   "weight": 1.25
  },
@@ -237,6 +297,11 @@
    "Turn Order: Claim Action",
    "Worker Placement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 5,
+  "mins": 150,
+  "minAge": 12,
+  "desc": "In Agricola, you're a farmer in a wooden shack with your spouse and little else.",
   "bgg": 7.9,
   "weight": 3.64
  },
@@ -258,6 +323,11 @@
    "Turn Order: Progressive",
    "Worker Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 12,
+  "desc": "In Alchemists, two to four budding alchemists compete to discover the secrets of their mystical art.",
   "bgg": 7.6,
   "weight": 3.92
  },
@@ -273,6 +343,11 @@
    "Pattern Recognition",
    "Speed Matching"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "Anomia plays off the fact that our minds are positively brimming with all sorts of random information: things to eat, pop songs, websites, etc...",
   "bgg": 6.7,
   "weight": 1.05
  },
@@ -291,6 +366,11 @@
    "Physical Removal",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 120,
+  "minAge": 10,
+  "desc": "It's the dawn of the Roman Eggpublic, and the Pondifex has tasked you with leading a city of the Eggpublic into the new age.",
   "bgg": 9.5,
   "weight": 3
  },
@@ -310,6 +390,11 @@
    "Set Collection",
    "Square Grid"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 30,
+  "minAge": 8,
+  "desc": "Arboretum is a strategy card game for 2-4 players, aged 10 and up, that combines set collection, tile-laying and hand management while playing in about 25 minutes.",
   "bgg": 7.2,
   "weight": 2.11
  },
@@ -334,6 +419,11 @@
    "Turn Order: Claim Action",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 14,
+  "desc": "Arcs is a sharp, tactical space opera game set in a dark yet silly universe.",
   "bgg": 8,
   "weight": 3.45
  },
@@ -353,6 +443,11 @@
    "Trick-taking",
    "Turn Order: Claim Action"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 0,
+  "minAge": 0,
+  "desc": null,
   "bgg": 8.9,
   "weight": 4.55
  },
@@ -382,6 +477,11 @@
    "Variable Player Powers",
    "Variable Set-up"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 150,
+  "minAge": 14,
+  "desc": "In Ark Nova, you will plan and design a modern, scientifically managed zoo.",
   "bgg": 8.5,
   "weight": 3.8
  },
@@ -395,6 +495,11 @@
    "Commodity Speculation",
    "Deck, Bag, and Pool Building"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 10,
+  "desc": null,
   "bgg": 6.8,
   "weight": 2.22
  },
@@ -411,6 +516,11 @@
    "Secret Unit Deployment",
    "Simultaneous Action Selection"
   ],
+  "minPlayers": 4,
+  "maxPlayers": 6,
+  "mins": 30,
+  "minAge": 12,
+  "desc": "Welcome to AssassinCon, the annual convention where assassins meet to show off tools and skills and decide who is the best in the world!",
   "bgg": 5.7,
   "weight": 1
  },
@@ -435,6 +545,11 @@
    "Team-Based Game",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "Asteroyds is a racing and pre-program game similar to RoboRally but with enough significant differences to make it stand out as its own design.",
   "bgg": 6.3,
   "weight": 2.15
  },
@@ -447,6 +562,11 @@
   "mechs": [
    "Deduction"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 99,
+  "mins": 0,
+  "minAge": 12,
+  "desc": null,
   "bgg": 4,
   "weight": 0
  },
@@ -472,6 +592,11 @@
    "Variable Player Powers",
    "Voting"
   ],
+  "minPlayers": 5,
+  "maxPlayers": 10,
+  "mins": 30,
+  "minAge": 13,
+  "desc": "The Resistance: Avalon pits the forces of Good and Evil in a battle to control the future of civilization.",
   "bgg": 7.5,
   "weight": 1.74
  },
@@ -488,6 +613,11 @@
    "Hand Management",
    "Trading"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 8,
+  "mins": 75,
+  "minAge": 12,
+  "desc": null,
   "bgg": 7.5,
   "weight": 2.32
  },
@@ -506,6 +636,11 @@
    "Simulation",
    "Team-Based Game"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 240,
+  "minAge": 12,
+  "desc": "Game description from the publisher: It's Spring 1942, and the world is at war.",
   "bgg": 6.9,
   "weight": 3.16
  },
@@ -526,6 +661,11 @@
    "Tile Placement",
    "Turn Order: Claim Action"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 8,
+  "desc": null,
   "bgg": 7.7,
   "weight": 1.77
  },
@@ -545,6 +685,11 @@
    "Static Capture",
    "Track Movement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 30,
+  "minAge": 8,
+  "desc": "Backgammon is a classic abstract strategy game dating back thousands of years.",
   "bgg": 6.6,
   "weight": 2
  },
@@ -559,6 +704,11 @@
    "Paper-and-Pencil",
    "Voting"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 60,
+  "minAge": 12,
+  "desc": "A clever repackaging of the parlor game Dictionary, Balderdash contains several cards with real words nobody has heard of.",
   "bgg": 6.5,
   "weight": 1.39
  },
@@ -579,6 +729,11 @@
    "Team-Based Game",
    "Variable Player Powers"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 8,
+  "mins": 15,
+  "minAge": 8,
+  "desc": null,
   "bgg": 7.5,
   "weight": 1.67
  },
@@ -601,6 +756,11 @@
    "Team-Based Game",
    "Variable Player Powers"
   ],
+  "minPlayers": 4,
+  "maxPlayers": 7,
+  "mins": 40,
+  "minAge": 8,
+  "desc": "\"The Outlaws hunt the Sheriff.",
   "bgg": 6.5,
   "weight": 1.63
  },
@@ -624,6 +784,11 @@
    "Team-Based Game",
    "Variable Player Powers"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 8,
+  "mins": 15,
+  "minAge": 8,
+  "desc": null,
   "bgg": 6.9,
   "weight": 1.28
  },
@@ -637,6 +802,11 @@
    "Tile Placement",
    "Worker Placement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 14,
+  "desc": "It's the mid-19th century.",
   "bgg": 7.7,
   "weight": 3.36
  },
@@ -657,6 +827,11 @@
    "Traitor Game",
    "Variable Player Powers"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 60,
+  "minAge": 12,
+  "desc": "Description from the publisher: The shadow of Bhaal has come over Baldur's Gate, summoning monsters and other horrors from the darkness!",
   "bgg": 7.1,
   "weight": 2.58
  },
@@ -678,6 +853,11 @@
    "Traitor Game",
    "Variable Player Powers"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 60,
+  "minAge": 12,
+  "desc": null,
   "bgg": 7,
   "weight": 2.4
  },
@@ -698,6 +878,11 @@
    "Tech Trees / Tech Tracks",
    "Worker Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 14,
+  "desc": null,
   "bgg": 7.9,
   "weight": 3.15
  },
@@ -707,6 +892,11 @@
    "Trivia"
   ],
   "mechs": [],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 30,
+  "minAge": 18,
+  "desc": "Bigger is Better The Game Where Size Matters This is the game of measurement...",
   "bgg": 5.6,
   "weight": 1
  },
@@ -727,6 +917,11 @@
    "Turn Order: Claim Action",
    "Worker Placement with Dice Workers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 12,
+  "desc": null,
   "bgg": 7.8,
   "weight": 3.76
  },
@@ -743,6 +938,11 @@
    "Voting",
    "Worker Placement"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 60,
+  "minAge": 13,
+  "desc": null,
   "bgg": 4,
   "weight": 1.8
  },
@@ -756,6 +956,11 @@
    "Pattern Recognition",
    "Semi-Cooperative Game"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 20,
+  "minAge": 8,
+  "desc": null,
   "bgg": 6.6,
   "weight": 1
  },
@@ -774,6 +979,11 @@
    "Square Grid",
    "Tile Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 30,
+  "minAge": 7,
+  "desc": "Blokus (officially pronounced \"Block us\") is an abstract strategy game with transparent, Tetris-shaped, colored pieces that players are trying to play onto the board.",
   "bgg": 6.9,
   "weight": 1.73
  },
@@ -798,6 +1008,11 @@
    "Variable Player Powers",
    "Voting"
   ],
+  "minPlayers": 6,
+  "maxPlayers": 21,
+  "mins": 120,
+  "minAge": 15,
+  "desc": "In the sleepy town of Ravenswood Bluff, a demon walks amongst you.",
   "bgg": 8.3,
   "weight": 3.02
  },
@@ -815,6 +1030,11 @@
    "Set Collection",
    "Trading"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 7,
+  "mins": 45,
+  "minAge": 12,
+  "desc": "Bohnanza is the first in the Bohnanza family of games and has been published in several different editions, including a 2023 version with flowers.",
   "bgg": 7.1,
   "weight": 1.67
  },
@@ -832,6 +1052,11 @@
    "Square Grid",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "A deceptively cute, deceivingly challenging abstract strategy game for two players.",
   "bgg": 7,
   "weight": 1.37
  },
@@ -861,6 +1086,11 @@
    "Turn Order: Stat-Based",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 14,
+  "desc": "Brass: Birmingham is an economic strategy game sequel to Martin Wallace's 2007 masterpiece, Brass.",
   "bgg": 8.6,
   "weight": 3.86
  },
@@ -875,6 +1105,11 @@
    "Variable Set-up",
    "Worker Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 90,
+  "minAge": 12,
+  "desc": "It's a time of regrowth in the old urban center, and the hippest and best beer crafters have gathered both hops and hopes in building the best brewery in the city.",
   "bgg": 7.4,
   "weight": 3.59
  },
@@ -892,6 +1127,11 @@
    "Set Collection",
    "Solo / Solitaire Game"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 13,
+  "desc": "In Cape May, players traverse the city streets as entrepreneurs, developing property while building wealth over four seasons to earn prestige.",
   "bgg": 7.2,
   "weight": 2.45
  },
@@ -907,6 +1147,11 @@
    "Pick-up and Deliver",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 12,
+  "desc": null,
   "bgg": 6.6,
   "weight": 1.77
  },
@@ -925,6 +1170,11 @@
    "Square Grid",
    "Tile Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 45,
+  "minAge": 7,
+  "desc": "Carcassonne is a tile placement game in which the players draw and place a tile with a piece of southern French landscape represented on it.",
   "bgg": 7.4,
   "weight": 1.88
  },
@@ -942,6 +1192,11 @@
    "Player Judge",
    "Simultaneous Action Selection"
   ],
+  "minPlayers": 4,
+  "maxPlayers": 30,
+  "mins": 30,
+  "minAge": 17,
+  "desc": "A party game for horrible people.",
   "bgg": 5.7,
   "weight": 1.17
  },
@@ -970,6 +1225,11 @@
    "Variable Phase Order",
    "Worker Placement, Different Worker Types"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 12,
+  "desc": "Carnegie was inspired by the life of Andrew Carnegie who was born in Scotland in 1835.",
   "bgg": 8,
   "weight": 3.82
  },
@@ -987,6 +1247,11 @@
    "Once-Per-Game Abilities",
    "Track Movement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 14,
+  "desc": "The kingdom is shattered, its towns are divided, and its people are distrusting.",
   "bgg": 7.3,
   "weight": 2.55
  },
@@ -1006,6 +1271,11 @@
    "Tile Placement",
    "Variable Set-up"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 10,
+  "desc": "Cascadia is a puzzly tile-laying and token-drafting game featuring the habitats and wildlife of the Pacific Northwest.",
   "bgg": 7.9,
   "weight": 1.84
  },
@@ -1025,6 +1295,11 @@
    "Tile Placement",
    "Track Movement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 14,
+  "desc": "The kingdom is reuniting, but the work of El Cascadero and his ministers has only begun.",
   "bgg": 6.5,
   "weight": 1.8
  },
@@ -1043,6 +1318,11 @@
    "Hexagon Grid",
    "Player Elimination"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 12,
+  "desc": "Explore a dark, enchanting world and battle your opponents in this 2-4 player turn-based competitive strategic board game.",
   "bgg": 6.3,
   "weight": 2.27
  },
@@ -1060,6 +1340,11 @@
    "Tags",
    "Tile Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 25,
+  "minAge": 10,
+  "desc": "Castle Combo is a tableau-building game that combines simplicity with deep, engaging gameplay, offering highly satisfying experiences.",
   "bgg": 7.7,
   "weight": 1.74
  },
@@ -1077,6 +1362,11 @@
    "Network and Route Building",
    "Trading"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 12,
+  "desc": "Catan is off the island and in America.",
   "bgg": 6.8,
   "weight": 2.69
  },
@@ -1102,6 +1392,11 @@
    "Trading",
    "Variable Set-up"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 10,
+  "desc": "In CATAN (formerly The Settlers of Catan), players try to be the dominant force on the island of Catan by building settlements, cities and roads.",
   "bgg": 7.1,
   "weight": 2.28
  },
@@ -1112,6 +1407,11 @@
    "Real-time"
   ],
   "mechs": [],
+  "minPlayers": 1,
+  "maxPlayers": 3,
+  "mins": 15,
+  "minAge": 10,
+  "desc": null,
   "bgg": 6.2,
   "weight": 1.09
  },
@@ -1131,6 +1431,11 @@
    "Team-Based Game",
    "Voting"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 8,
+  "mins": 15,
+  "minAge": 14,
+  "desc": "A bluffing deduction game for everyone.",
   "bgg": 6.5,
   "weight": 1.05
  },
@@ -1155,6 +1460,11 @@
    "Variable Player Powers",
    "Worker Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 10,
+  "desc": null,
   "bgg": 7.7,
   "weight": 2.62
  },
@@ -1171,6 +1481,11 @@
    "Static Capture",
    "Sudden Death Ending"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 0,
+  "minAge": 6,
+  "desc": "Chess is a two-player, abstract strategy board game that represents medieval warfare on an 8x8 board with alternating light and dark squares.",
   "bgg": 7.2,
   "weight": 3.64
  },
@@ -1181,6 +1496,11 @@
    "Movies / TV / Radio theme"
   ],
   "mechs": [],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 14,
+  "desc": "Chucky wants to be your friend, but being Chucky's friend sometimes comes with...challenges.",
   "bgg": 7,
   "weight": 2
  },
@@ -1204,6 +1524,11 @@
    "Turn Order: Role Order",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "mins": 60,
+  "minAge": 10,
+  "desc": "In Citadels, players take on new roles each round to represent characters they hire in order to help them acquire gold and erect buildings.",
   "bgg": 7.1,
   "weight": 2.05
  },
@@ -1225,6 +1550,11 @@
    "Push Your Luck",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 12,
+  "desc": "Burgle your way to adventure in the deck-building board game Clank!",
   "bgg": 7.8,
   "weight": 2.23
  },
@@ -1237,6 +1567,11 @@
   "mechs": [
    "Dice Rolling"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 8,
+  "mins": 30,
+  "minAge": 14,
+  "desc": "Are you in the market for some revolutionary diet pills?",
   "bgg": 5.3,
   "weight": 1
  },
@@ -1252,6 +1587,11 @@
    "Memory",
    "Open Drafting"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 4,
+  "mins": 15,
+  "minAge": 8,
+  "desc": "This is a fast-playing stripped down version of the classic boardgame, Clue.",
   "bgg": 5.9,
   "weight": 1.26
  },
@@ -1263,6 +1603,11 @@
   "mechs": [
    "Memory"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 60,
+  "minAge": 18,
+  "desc": "Description from the publisher: High treachery and betrayal are behind the two mysteries to solve in Clue: Game of Thrones.",
   "bgg": 6,
   "weight": 2.13
  },
@@ -1278,6 +1623,11 @@
    "Hand Management",
    "Paper-and-Pencil"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 30,
+  "minAge": 8,
+  "desc": "Clue FX Electronic Talking Clue Game by Hasbro Games and Parker Brothers.",
   "bgg": 6.3,
   "weight": 1.82
  },
@@ -1297,6 +1647,11 @@
    "Race",
    "Team-Based Game"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "mins": 15,
+  "minAge": 10,
+  "desc": "Two rival spymasters know the secret identities of 25 agents.",
   "bgg": 7.5,
   "weight": 1.25
  },
@@ -1313,6 +1668,11 @@
    "Memory",
    "Team-Based Game"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "mins": 15,
+  "minAge": 10,
+  "desc": "What are these strange symbols on the map?",
   "bgg": 7.2,
   "weight": 1.24
  },
@@ -1330,6 +1690,11 @@
    "Contracts",
    "Turn Order: Pass Order"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 150,
+  "minAge": 12,
+  "desc": "Thousands of coffee farmers all over the world support their families by using small stretches of hillside land for their coffee plantations.",
   "bgg": 7.7,
   "weight": 4.27
  },
@@ -1342,6 +1707,11 @@
    "Matching",
    "Speed Matching"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "mins": 15,
+  "minAge": 8,
+  "desc": "Colour Crazy is a mind-bending game of brilliant colours.",
   "bgg": 7.3,
   "weight": 1
  },
@@ -1357,6 +1727,11 @@
    "Communication Limits",
    "Cooperative Game"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 12,
+  "mins": 20,
+  "minAge": 4,
+  "desc": "Concept Kids Animals is a cooperative version of the game Concept, adapted for children who don't yet know how to read.",
   "bgg": 7,
   "weight": 1.18
  },
@@ -1383,6 +1758,11 @@
    "Set Collection",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 100,
+  "minAge": 13,
+  "desc": "Two thousand years ago, the Roman Empire ruled the lands around the Mediterranean Sea.",
   "bgg": 8.1,
   "weight": 2.99
  },
@@ -1407,6 +1787,11 @@
    "Trading",
    "Variable Player Powers"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 5,
+  "mins": 120,
+  "minAge": 12,
+  "desc": "Build a galactic empire...",
   "bgg": 7.5,
   "weight": 2.58
  },
@@ -1431,6 +1816,11 @@
    "Trading",
    "Variable Player Powers"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 5,
+  "mins": 120,
+  "minAge": 12,
+  "desc": "Build a galactic empire...",
   "bgg": 7.5,
   "weight": 2.58
  },
@@ -1450,6 +1840,11 @@
    "Take That",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 15,
+  "minAge": 13,
+  "desc": "You are head of a family in an Italian city-state, a city run by a weak and corrupt court.",
   "bgg": 7,
   "weight": 1.42
  },
@@ -1468,6 +1863,11 @@
    "Take That",
    "Variable Player Powers"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 15,
+  "minAge": 14,
+  "desc": "In Coup: Rebellion G54 (G54), the last player with influence in the game wins, with influence being represented by face-down character cards in your playing area.",
   "bgg": 7,
   "weight": 1.94
  },
@@ -1487,6 +1887,11 @@
    "Team-Based Game",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 10,
+  "mins": 15,
+  "minAge": 10,
+  "desc": "Coup: Reformation, is an expansion for the original version of Coup: City State from La Mame Games.",
   "bgg": 7.3,
   "weight": 1.6
  },
@@ -1506,6 +1911,11 @@
    "Singing",
    "Team-Based Game"
   ],
+  "minPlayers": 4,
+  "maxPlayers": 99,
+  "mins": 60,
+  "minAge": 13,
+  "desc": "Cranium bills itself as the \"whole-brain\" game.",
   "bgg": 5.7,
   "weight": 1.42
  },
@@ -1521,6 +1931,11 @@
    "Variable Player Powers",
    "Worker Placement, Different Worker Types"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 5,
+  "mins": 60,
+  "minAge": 12,
+  "desc": "It's Restaurant Week in Bistro Bay!",
   "bgg": 7.8,
   "weight": 2.46
  },
@@ -1542,6 +1957,11 @@
    "Re-rolling and Locking",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 10,
+  "desc": null,
   "bgg": 7.4,
   "weight": 2.17
  },
@@ -1556,6 +1976,11 @@
    "Pattern Building",
    "Set Collection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 20,
+  "minAge": 8,
+  "desc": "Cubo is a fast-paced dice rolling game played in six rounds with all players rolling their dice simultaneously.",
   "bgg": 5.6,
   "weight": 1.58
  },
@@ -1584,6 +2009,11 @@
    "Variable Player Powers",
    "Voting"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 120,
+  "minAge": 13,
+  "desc": null,
   "bgg": 7.4,
   "weight": 3.01
  },
@@ -1606,6 +2036,11 @@
    "Variable Player Powers",
    "Voting"
   ],
+  "minPlayers": 4,
+  "maxPlayers": 4,
+  "mins": 150,
+  "minAge": 14,
+  "desc": "Deal with the Devil is a deeply thematic competitive Eurogame set in a fantasy medieval era.",
   "bgg": 7,
   "weight": 3.72
  },
@@ -1624,6 +2059,11 @@
    "Tile Placement",
    "Worker Placement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 8,
+  "desc": null,
   "bgg": 7.5,
   "weight": 3.05
  },
@@ -1645,6 +2085,11 @@
    "Simulation",
    "Simultaneous Action Selection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 7,
+  "mins": 360,
+  "minAge": 12,
+  "desc": "Diplomacy, the classic boardgame of pure negotiation has taken many forms over the years.",
   "bgg": 7,
   "weight": 3.32
  },
@@ -1662,6 +2107,11 @@
    "Targeted Clues",
    "Voting"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 30,
+  "minAge": 8,
+  "desc": null,
   "bgg": 7.2,
   "weight": 1.19
  },
@@ -1679,6 +2129,11 @@
    "Take That",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 30,
+  "minAge": 13,
+  "desc": "\"You are a monarch, like your parents before you, a ruler of a small pleasant kingdom of rivers and evergreens.",
   "bgg": 7.6,
   "weight": 2.34
  },
@@ -1695,6 +2150,11 @@
    "Open Drafting",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 30,
+  "minAge": 13,
+  "desc": "In Dominion: Intrigue (as with Dominion), each player starts with an identical, very small deck of cards.",
   "bgg": 7.7,
   "weight": 2.41
  },
@@ -1716,6 +2176,11 @@
    "Tile Placement",
    "Variable Set-up"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 60,
+  "minAge": 8,
+  "desc": "Rippling rivers, rustling forests, wheat fields swaying in the wind and here and there a cute little village - that's Dorfromantik!",
   "bgg": 7.6,
   "weight": 1.64
  },
@@ -1732,6 +2197,11 @@
    "Tile Placement",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 45,
+  "minAge": 8,
+  "desc": "After the great success of Dorfromantik: The Board Game, the next part of the Dorfromantik world is no longer about working together, but about friendly competition.",
   "bgg": 6.9,
   "weight": 1.78
  },
@@ -1744,6 +2214,11 @@
   "mechs": [
    "Hand Management"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 7,
+  "desc": "DOS is the follow up to the classic card game UNO.",
   "bgg": 4.8,
   "weight": 1.39
  },
@@ -1757,6 +2232,11 @@
    "Betting and Bluffing",
    "Set Collection"
   ],
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "mins": 45,
+  "minAge": 14,
+  "desc": "No longer do you anxiously await the arrival of the wicked - for they have just arrived!",
   "bgg": 6.5,
   "weight": 2.24
  },
@@ -1772,6 +2252,11 @@
    "Set Collection",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 20,
+  "minAge": 8,
+  "desc": "Durian Dash is a strategy card-based game where players will need to visit different plantations to collect their favourite durians to become the King of the King of Fruits.",
   "bgg": 6,
   "weight": 1.5
  },
@@ -1791,6 +2276,11 @@
    "Take That",
    "Turn Order: Auction"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 120,
+  "minAge": 12,
+  "desc": "In this award-winning game, players take on the roles of Grandes in medieval Spain.",
   "bgg": 7.8,
   "weight": 2.93
  },
@@ -1813,6 +2303,11 @@
    "Storytelling",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 8,
+  "mins": 180,
+  "minAge": 14,
+  "desc": "Explore the farthest reaches of Antarctica in Mountains of Madness, the second expansion for Eldritch Horror.",
   "bgg": 8.2,
   "weight": 3.25
  },
@@ -1832,6 +2327,11 @@
    "Player Elimination",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 40,
+  "minAge": 13,
+  "desc": "Epic is a fantasy card game by White Wizard Games which aims to recreate the TCG-style experience from a single box, with no additional purchases required.",
   "bgg": 6.4,
   "weight": 2.52
  },
@@ -1856,6 +2356,11 @@
    "Variable Set-up",
    "Worker Placement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 80,
+  "minAge": 10,
+  "desc": null,
   "bgg": 8,
   "weight": 2.83
  },
@@ -1878,6 +2383,11 @@
    "Variable Set-up",
    "Worker Placement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 2,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "In Everdell Duo, you either compete against your single opponent or play co-operatively with another player to earn the most points.",
   "bgg": 7.6,
   "weight": 2.72
  },
@@ -1895,6 +2405,11 @@
    "Set Collection",
    "Worker Placement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 10,
+  "desc": "Silverfrost is the next standalone edge of the map series of Everdell.",
   "bgg": 8.1,
   "weight": 3.2
  },
@@ -1914,6 +2429,11 @@
    "Set Collection",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 15,
+  "minAge": 7,
+  "desc": "Exploding Kittens is a kitty-powered version of Russian Roulette.",
   "bgg": 6.1,
   "weight": 1.08
  },
@@ -1930,6 +2450,11 @@
    "Push Your Luck",
    "Worker Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 60,
+  "minAge": 8,
+  "desc": null,
   "bgg": 6.6,
   "weight": 2.27
  },
@@ -1948,6 +2473,11 @@
    "Take That",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 30,
+  "minAge": 13,
+  "desc": "Fight the Blight is a competitive card game for 2-6 players.",
   "bgg": 7.9,
   "weight": 2
  },
@@ -1961,6 +2491,11 @@
   "mechs": [
    "Worker Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 10,
+  "desc": "In Fire & Stone, players lead their tribe through the Stone Age.",
   "bgg": 6.1,
   "weight": 2
  },
@@ -1978,6 +2513,11 @@
    "Square Grid",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "While manning your fire tower you notice smoke in the distance and pull out your radio to report a blaze growing somewhere in the forest.",
   "bgg": 7.1,
   "weight": 1.71
  },
@@ -1992,6 +2532,11 @@
    "Push Your Luck",
    "Sudden Death Ending"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 50,
+  "minAge": 8,
+  "desc": "Build your own town in Flip City!",
   "bgg": 6.3,
   "weight": 1.74
  },
@@ -2011,6 +2556,11 @@
    "Simultaneous Action Selection",
    "Storytelling"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 120,
+  "minAge": 17,
+  "desc": "Fog of Love is a game for two players.",
   "bgg": 6.6,
   "weight": 2.25
  },
@@ -2035,6 +2585,11 @@
    "Tile Placement",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 45,
+  "minAge": 10,
+  "desc": "Gear up for a thrilling adventure to recover a legendary flying machine buried deep in the ruins of an ancient desert city.",
   "bgg": 7.1,
   "weight": 2.04
  },
@@ -2060,6 +2615,11 @@
    "Tile Placement",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "Forbidden Island is a visually stunning cooperative board game.",
   "bgg": 6.7,
   "weight": 1.74
  },
@@ -2082,6 +2642,11 @@
    "Tile Placement",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 45,
+  "minAge": 10,
+  "desc": "In Forbidden Jungle, your team has crash-landed on a mysterious jungle planet, and you need to work together to survive.",
   "bgg": 7.3,
   "weight": 2.09
  },
@@ -2105,6 +2670,11 @@
    "Storytelling",
    "Worker Placement"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 7,
+  "mins": 240,
+  "minAge": 14,
+  "desc": "Forgotten Waters is a Crossroads Game set in a world of fantastical pirate adventure.",
   "bgg": 7.7,
   "weight": 2.09
  },
@@ -2128,6 +2698,11 @@
    "Voting",
    "Worker Placement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 12,
+  "desc": null,
   "bgg": 6.6,
   "weight": 4.12
  },
@@ -2143,6 +2718,11 @@
    "Hand Management",
    "Set Collection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 10,
+  "desc": "Long ago, in a beautiful Eastern kingdom, a queen and her people pleased their Gods by building a mystical pagoda.",
   "bgg": 6.9,
   "weight": 2.28
  },
@@ -2163,6 +2743,11 @@
    "Secret Unit Deployment",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 20,
+  "minAge": 10,
+  "desc": "Fugitive is a two-player card game set in the world of Burgle Bros.",
   "bgg": 7.1,
   "weight": 1.64
  },
@@ -2178,6 +2763,11 @@
    "Grid Movement",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 10,
+  "desc": "In Fuji, you play as a group of adventurers on their way to Japan s most famous volcano, Mount Fuji.",
   "bgg": 6.6,
   "weight": 2.16
  },
@@ -2204,6 +2794,11 @@
    "Variable Set-up",
    "Victory Points as a Resource"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 150,
+  "minAge": 12,
+  "desc": "Gaia Project is a new game in the line of Terra Mystica.",
   "bgg": 8.3,
   "weight": 4.4
  },
@@ -2230,6 +2825,11 @@
    "Track Movement",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 10,
+  "desc": "In a galaxy far, far away...",
   "bgg": 7.3,
   "weight": 2.33
  },
@@ -2243,6 +2843,11 @@
    "Point to Point Movement",
    "Roll / Spin and Move"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 9,
+  "desc": "In the new version, the winner is not the person with the most money, but the one who earns the most \"life points\" - a mix of wealth and life experiences, he says.",
   "bgg": 5.8,
   "weight": 1.34
  },
@@ -2256,6 +2861,11 @@
   "mechs": [
    "Hand Management"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 30,
+  "minAge": 8,
+  "desc": "Game description from the publisher: Game of Thrones: Westeros Intrigue is a fast-paced game of cards and intrigue at court, created by renowned game designer Reiner Knizia.",
   "bgg": 5.3,
   "weight": 1.07
  },
@@ -2271,6 +2881,11 @@
    "Pattern Recognition",
    "Speed Matching"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "mins": 20,
+  "minAge": 8,
+  "desc": "Balduin, the house ghost, found an old camera in the castle cellar.",
   "bgg": 6.7,
   "weight": 1.13
  },
@@ -2305,6 +2920,11 @@
    "Solo / Solitaire Game",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 14,
+  "desc": "Gloomhaven: Jaws of the Lion is a standalone game that takes place before the events of Gloomhaven.",
   "bgg": 8.4,
   "weight": 3.64
  },
@@ -2324,6 +2944,11 @@
    "Track Movement",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 150,
+  "minAge": 12,
+  "desc": "America in the 19th century: You are a rancher and repeatedly herd your cattle from Texas to Kansas City, where you send them off by train.",
   "bgg": 8.1,
   "weight": 3.7
  },
@@ -2342,6 +2967,11 @@
    "Take That",
    "Turn Order: Stat-Based"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "In the card game Greed, crime lords (the players) try to earn more money than anyone else through clever use of their cards.",
   "bgg": 6.6,
   "weight": 2
  },
@@ -2358,6 +2988,11 @@
    "Set Collection",
    "Simultaneous Action Selection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 60,
+  "minAge": 10,
+  "desc": "Hadara carries you off into the world of cultures and countries of this earth.",
   "bgg": 7.4,
   "weight": 2.21
  },
@@ -2376,6 +3011,11 @@
    "Ordering",
    "Set Collection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 25,
+  "minAge": 8,
+  "desc": null,
   "bgg": 7,
   "weight": 1.69
  },
@@ -2397,6 +3037,11 @@
    "Tile Placement",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 10,
+  "desc": "In Harmonies, build landscapes by placing colored tokens and create habitats for your animals.",
   "bgg": 8,
   "weight": 2.01
  },
@@ -2411,6 +3056,11 @@
    "Set Collection",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 20,
+  "minAge": 10,
+  "desc": "A mouth-watering party game that lets you compete to cook some of the most iconic hawker dishes in Singapore.",
   "bgg": 6,
   "weight": 1.2
  },
@@ -2427,6 +3077,11 @@
    "Point to Point Movement",
    "Roll / Spin and Move"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 20,
+  "minAge": 5,
+  "desc": "Players move their men around the board while trying to capture the other player's men.",
   "bgg": 4.4,
   "weight": 1.08
  },
@@ -2449,6 +3104,11 @@
    "Track Movement",
    "Variable Set-up"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 60,
+  "minAge": 10,
+  "desc": null,
   "bgg": 8,
   "weight": 2.2
  },
@@ -2463,6 +3123,11 @@
    "Hand Management",
    "Roll / Spin and Move"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 0,
+  "minAge": 16,
+  "desc": "The board represents a lavatory system.",
   "bgg": 4.7,
   "weight": 1
  },
@@ -2479,6 +3144,11 @@
    "Targeted Clues",
    "Turn Order: Progressive"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 10,
+  "mins": 30,
+  "minAge": 8,
+  "desc": "What hue do you think of when we say \"apple\"?",
   "bgg": 6.4,
   "weight": 1.06
  },
@@ -2503,6 +3173,11 @@
    "Turn Order: Progressive",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 10,
+  "desc": "Settlers from four major powers of the world have discovered new lands, with new resources and opportunities.",
   "bgg": 7.3,
   "weight": 2.77
  },
@@ -2524,6 +3199,11 @@
    "Variable Set-up",
    "Worker Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 60,
+  "minAge": 10,
+  "desc": "There's hustle and bustle at Istanbul's grand bazaar as merchants and their assistants rush through the narrow alleys in their attempt to be more successful than their competitors.",
   "bgg": 7.5,
   "weight": 2.58
  },
@@ -2547,6 +3227,11 @@
    "Turn Order: Progressive",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 30,
+  "minAge": 10,
+  "desc": null,
   "bgg": 7.5,
   "weight": 1.46
  },
@@ -2566,6 +3251,11 @@
    "Take That",
    "Team-Based Game"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 150,
+  "minAge": 10,
+  "desc": "Joan of Arc, a game of \"Conquest and Perfidy in the Kingdom of France\", deals with the conflicts in France during the Hundred Years' War.",
   "bgg": 6.3,
   "weight": 2.54
  },
@@ -2582,6 +3272,11 @@
    "Real-Time",
    "Speed Matching"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 10,
+  "mins": 10,
+  "minAge": 7,
+  "desc": "In Jungle Speed, you must rely on your keen sense of observation and quick reflexes.",
   "bgg": 6.4,
   "weight": 1.13
  },
@@ -2598,6 +3293,11 @@
    "Deduction",
    "Score-and-Reset Game"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 7,
+  "mins": 60,
+  "minAge": 8,
+  "desc": "Just One is a co-operative party game in which you all play together to get the best score!",
   "bgg": 7.6,
   "weight": 1.03
  },
@@ -2612,6 +3312,11 @@
    "Slide / Push",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 15,
+  "minAge": 0,
+  "desc": "Spring time in Japan means the return of the rhinoceros beetles - \"Kabutomushi\", which is Japanese for \"helmet bug\" - and their athletic contests of dominance.",
   "bgg": 6.7,
   "weight": 1.19
  },
@@ -2630,6 +3335,11 @@
    "Tile Placement",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 8,
+  "desc": null,
   "bgg": 6.5,
   "weight": 2.53
  },
@@ -2646,6 +3356,11 @@
    "Take That",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 14,
+  "desc": null,
   "bgg": 6.6,
   "weight": 2.68
  },
@@ -2669,6 +3384,11 @@
    "Take That",
    "Worker Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 30,
+  "minAge": 9,
+  "desc": "June 2471, and kerosene - KERO - is scarce.",
   "bgg": 7,
   "weight": 2.06
  },
@@ -2690,6 +3410,11 @@
    "Tile Placement",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 10,
+  "desc": "Welcome to Kingdom Rush: Rift in Time, where you and your allies must work together to fend off the furious onslaught of the mysterious Time Mage.",
   "bgg": 7.3,
   "weight": 2.98
  },
@@ -2707,6 +3432,11 @@
    "Tile Placement",
    "Turn Order: Claim Action"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 25,
+  "minAge": 8,
+  "desc": "Kingdomino is a tile-laying game in which players take the role of monarchs expanding their kingdoms by claiming and arranging lands.",
   "bgg": 7.3,
   "weight": 1.24
  },
@@ -2725,6 +3455,11 @@
    "Tile Placement",
    "Turn Order: Claim Action"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 20,
+  "minAge": 8,
+  "desc": "The giants have come to Kingdomino!",
   "bgg": 7.2,
   "weight": 1.64
  },
@@ -2742,6 +3477,11 @@
    "Area Majority / Influence",
    "Hand Management"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 5,
+  "mins": 45,
+  "minAge": 12,
+  "desc": "A dimensional gate has just opened, and monsters are surging over our world.",
   "bgg": 4.9,
   "weight": 2.33
  },
@@ -2757,6 +3497,11 @@
    "Set Collection",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 40,
+  "minAge": 10,
+  "desc": null,
   "bgg": 6.3,
   "weight": 2.02
  },
@@ -2773,6 +3518,11 @@
    "Set Collection",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 12,
+  "desc": "A chameleon's life isn't easy-constantly adapting to new environments and hiding from predators like snakes!",
   "bgg": 7.1,
   "weight": 1.71
  },
@@ -2784,6 +3534,11 @@
   "mechs": [
    "Deck, Bag, and Pool Building"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 13,
+  "desc": "All aboard the Lightning Train!",
   "bgg": 7.2,
   "weight": 3
  },
@@ -2796,6 +3551,11 @@
   "mechs": [
    "Memory"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 40,
+  "minAge": 12,
+  "desc": "The game's theme is based on answering questions relating to popular advertising logos and brands.",
   "bgg": 5.1,
   "weight": 1.17
  },
@@ -2815,6 +3575,11 @@
    "Turn Order: Claim Action",
    "Worker Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 120,
+  "minAge": 12,
+  "desc": "Waterdeep, the City of Splendors - the most resplendent jewel in the Forgotten Realms, and a den of political intrigue and shady back-alley dealings.",
   "bgg": 7.7,
   "weight": 2.45
  },
@@ -2842,6 +3607,11 @@
    "Turn Order: Progressive",
    "Worker Placement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 12,
+  "desc": "On an uninhabited island in uncharted seas, explorers have found traces of a great civilization.",
   "bgg": 8.1,
   "weight": 2.93
  },
@@ -2858,6 +3628,11 @@
    "Set Collection",
    "Team-Based Game"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 15,
+  "minAge": 10,
+  "desc": "The Mad Titan Thanos seeks the Infinity Stones to bend the universe to his indomitable will, but courageous heroes are assembling to stand in his path to ultimate power.",
   "bgg": 6.9,
   "weight": 1.24
  },
@@ -2875,6 +3650,11 @@
    "Score-and-Reset Game",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 20,
+  "minAge": 10,
+  "desc": "All of the eligible young men (and many of the not-so-young) seek to woo the princess of Tempest.",
   "bgg": 7.2,
   "weight": 1.18
  },
@@ -2888,6 +3668,11 @@
    "Solo / Solitaire Game",
    "Tile Placement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 20,
+  "minAge": 8,
+  "desc": "Your challenge in Lucky Numbers is to fill your grid first, but you never know which tiles you'll have to work with!",
   "bgg": 6.4,
   "weight": 1.13
  },
@@ -2903,6 +3688,11 @@
    "Race",
    "Random Production"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "Welcome to the city of Machi Koro.",
   "bgg": 6.6,
   "weight": 1.52
  },
@@ -2916,6 +3706,11 @@
    "Dice Rolling",
    "Random Production"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 45,
+  "minAge": 10,
+  "desc": "Your favorite lovably quirky city is back at it again!",
   "bgg": 7.1,
   "weight": 1.55
  },
@@ -2927,6 +3722,11 @@
    "Word Game"
   ],
   "mechs": [],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 10,
+  "minAge": 8,
+  "desc": "It's the hilarious headline card game!",
   "bgg": 4.6,
   "weight": 1.1
  },
@@ -2953,6 +3753,11 @@
    "Team-Based Game",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 180,
+  "minAge": 13,
+  "desc": "Description from the publisher: Horrific monsters and spectral presences lurk in manors, crypts, schools, monasteries, and derelict buildings near Arkham, Massachusetts.",
   "bgg": 7.2,
   "weight": 3.24
  },
@@ -2982,6 +3787,11 @@
    "Track Movement",
    "Variable Set-up"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 12,
+  "desc": "Maracaibo, a strategy game for 1-4 players by Alexander Pfister, is set in the Caribbean during the 17th century.",
   "bgg": 7.9,
   "weight": 3.92
  },
@@ -2999,6 +3809,11 @@
    "Solo / Solitaire Game",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 40,
+  "minAge": 14,
+  "desc": "In Marvel United, you take the role of iconic Marvel Heroes cooperating to stop the master plan of a powerful Villain controlled by the game.",
   "bgg": 7.5,
   "weight": 1.85
  },
@@ -3014,6 +3829,11 @@
    "Hand Management",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 80,
+  "minAge": 12,
+  "desc": "Dominate the Marvel universe as an iconic comic book villain!",
   "bgg": 6.7,
   "weight": 2.71
  },
@@ -3030,6 +3850,11 @@
    "Memory",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 13,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "Who are you in Mascarade?",
   "bgg": 6.6,
   "weight": 1.53
  },
@@ -3047,6 +3872,11 @@
    "Real-Time",
    "Stacking and Balancing"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 45,
+  "minAge": 8,
+  "desc": null,
   "bgg": 7,
   "weight": 1.41
  },
@@ -3060,6 +3890,11 @@
    "Area Majority / Influence",
    "Hand Management"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 60,
+  "minAge": 10,
+  "desc": "Moa takes its inspiration from the events surrounding the settlement of New Zealand, recasting them with anthropomorphized birds and mammals.",
   "bgg": 6.4,
   "weight": 2.62
  },
@@ -3077,6 +3912,11 @@
    "Tile Placement",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 10,
+  "desc": "Wage war against opponents on a hexagonal board.",
   "bgg": 7.2,
   "weight": 2.43
  },
@@ -3098,6 +3938,11 @@
    "Track Movement",
    "Trading"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "mins": 180,
+  "minAge": 8,
+  "desc": "Theme Players take the part of land owners, attempting to buy and then develop their land.",
   "bgg": 4.4,
   "weight": 1.62
  },
@@ -3112,6 +3957,11 @@
    "Set Collection",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 15,
+  "minAge": 8,
+  "desc": "(from the box): The fast-paced, addictive card game where your luck can change in the play of a card!",
   "bgg": 6.3,
   "weight": 1.31
  },
@@ -3126,6 +3976,11 @@
    "Hand Management",
    "Set Collection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 20,
+  "minAge": 7,
+  "desc": null,
   "bgg": 5.7,
   "weight": 1.36
  },
@@ -3143,6 +3998,11 @@
    "Take That",
    "Variable Player Powers"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 120,
+  "minAge": 10,
+  "desc": "Publisher's DescriptionGo down in the dungeon.",
   "bgg": 5.9,
   "weight": 1.82
  },
@@ -3159,6 +4019,11 @@
    "Take That",
    "Variable Player Powers"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 120,
+  "minAge": 10,
+  "desc": "Description from the publisher: Munchkin Marvel fuses the classic card game fun of monster-slaying and role-playing with the most iconic characters from the Marvel universe.",
   "bgg": 6.8,
   "weight": 2.04
  },
@@ -3172,6 +4037,11 @@
    "Hand Management",
    "Semi-Cooperative Game"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 60,
+  "minAge": 8,
+  "desc": "Munchkin Panic is a semi-cooperative board game that blends the all-for-one gameplay of Castle Panic and the all-for-me gameplay of Munchkin.",
   "bgg": 6,
   "weight": 2.05
  },
@@ -3187,6 +4057,11 @@
    "Spelling",
    "Tile Placement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 20,
+  "minAge": 4,
+  "desc": "Bananagrams is a Scrabble-like game without the board that's much like Pick Two!, but without the letter values.",
   "bgg": 6.2,
   "weight": 1
  },
@@ -3202,6 +4077,11 @@
    "Matching",
    "Solo / Solitaire Game"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 20,
+  "minAge": 4,
+  "desc": null,
   "bgg": 6.4,
   "weight": 1.14
  },
@@ -3216,6 +4096,11 @@
    "Memory",
    "Set Collection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 15,
+  "minAge": 5,
+  "desc": "Travel to the past with Jonon and Jada, two stone age children, to rediscover how the first humans settled the world around them.",
   "bgg": 6.6,
   "weight": 1.15
  },
@@ -3238,6 +4123,11 @@
    "Storytelling",
    "Voting"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 7,
+  "mins": 42,
+  "minAge": 10,
+  "desc": null,
   "bgg": 7.2,
   "weight": 1.89
  },
@@ -3270,6 +4160,11 @@
    "Variable Player Powers",
    "Worker Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 13,
+  "desc": "Four wanderers search for the Last Ruin, a city that legends say contains an artifact that will grant the greatest desires of the heart.",
   "bgg": 7.6,
   "weight": 2.9
  },
@@ -3289,6 +4184,11 @@
    "Variable Phase Order",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 75,
+  "minAge": 14,
+  "desc": null,
   "bgg": 7.4,
   "weight": 2.96
  },
@@ -3307,6 +4207,11 @@
    "Rondel",
    "Tile Placement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 5,
+  "mins": 60,
+  "minAge": 10,
+  "desc": "Puzzling and animal breeding: Designer Uwe Rosenberg is at his best!",
   "bgg": 7,
   "weight": 1.96
  },
@@ -3322,6 +4227,11 @@
    "Score-and-Reset Game",
    "Set Collection"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 7,
+  "mins": 20,
+  "minAge": 8,
+  "desc": null,
   "bgg": 7.1,
   "weight": 1.13
  },
@@ -3342,6 +4252,11 @@
    "Simultaneous Action Selection",
    "Team-Based Game"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 7,
+  "mins": 45,
+  "minAge": 10,
+  "desc": null,
   "bgg": 7,
   "weight": 2
  },
@@ -3361,6 +4276,11 @@
    "Tile Placement",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 180,
+  "minAge": 14,
+  "desc": "Far to the south of The Last Ruin lies a cliffside village called The Monument.",
   "bgg": 7.6,
   "weight": 3.6
  },
@@ -3383,6 +4303,11 @@
    "Tech Trees / Tech Tracks",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 150,
+  "minAge": 14,
+  "desc": "When Elsa von Fr hlingsfeld presented her invention to King Frederik Augustus II of Saxony, people thought it was trickery.",
   "bgg": 8.1,
   "weight": 4.19
  },
@@ -3408,6 +4333,11 @@
    "Take That",
    "Variable Set-up"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 150,
+  "minAge": 10,
+  "desc": "In Oath, one to six players guide the course of history in an ancient land.",
   "bgg": 7.7,
   "weight": 4.12
  },
@@ -3424,6 +4354,11 @@
    "Resource to Move",
    "Track Movement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "Every morning Odin sends his ravens, Huginn and Muninn, across the entire world to bring back news of what life is like on Earth.",
   "bgg": 7,
   "weight": 1.24
  },
@@ -3434,6 +4369,11 @@
    "Trivia"
   ],
   "mechs": [],
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "mins": 60,
+  "minAge": 18,
+  "desc": "Test your knowledge about your rival generation's pop culture trivia in OK Boomer!",
   "bgg": 4.7,
   "weight": 1
  },
@@ -3454,6 +4394,11 @@
    "Variable Player Powers",
    "Voting"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 10,
+  "mins": 10,
+  "minAge": 8,
+  "desc": "Unbeknownst to the citizens of Shady Grove, USA, a battle is brewing while they sleep.",
   "bgg": 6.8,
   "weight": 1.5
  },
@@ -3474,6 +4419,11 @@
    "Variable Player Powers",
    "Voting"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 10,
+  "mins": 10,
+  "minAge": 8,
+  "desc": "No moderator, no elimination, ten-minute games.",
   "bgg": 7,
   "weight": 1.38
  },
@@ -3484,6 +4434,11 @@
    "Math"
   ],
   "mechs": [],
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "mins": 0,
+  "minAge": 7,
+  "desc": "Another in the line of Uno styled and themed games.",
   "bgg": 5.7,
   "weight": 1.16
  },
@@ -3497,6 +4452,11 @@
    "Push Your Luck",
    "Set Collection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 15,
+  "minAge": 5,
+  "desc": "What kind of Surgeon will you be?",
   "bgg": 5.3,
   "weight": 1
  },
@@ -3520,6 +4480,11 @@
    "Variable Set-up",
    "Worker Placement, Different Worker Types"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 90,
+  "minAge": 12,
+  "desc": "During the medieval goings-on around Orl ans, you must assemble a following of farmers, merchants, knights, monks, etc.",
   "bgg": 8,
   "weight": 3.01
  },
@@ -3536,6 +4501,11 @@
    "Worker Placement",
    "Worker Placement, Different Worker Types"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 12,
+  "desc": "Paladins of the West Kingdom is set at a turbulent time of West Francia's story, circa 900 AD.",
   "bgg": 8,
   "weight": 3.71
  },
@@ -3549,6 +4519,11 @@
    "Hand Management",
    "Set Collection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 10,
+  "desc": "Who will build the most magnificent palace?",
   "bgg": 6.5,
   "weight": 2.06
  },
@@ -3568,6 +4543,11 @@
    "Simultaneous Action Selection",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 10,
+  "desc": "Paleo is a co-operative adventure game set in the stone age, a game in which players try to keep the human beings in their care alive while completing missions.",
   "bgg": 7.6,
   "weight": 2.65
  },
@@ -3594,6 +4574,11 @@
    "Variable Player Powers",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 8,
+  "desc": "In Pandemic, several virulent diseases have broken out simultaneously all over the world!",
   "bgg": 7.5,
   "weight": 2.39
  },
@@ -3612,6 +4597,11 @@
    "Open Drafting",
    "Spelling"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 45,
+  "minAge": 8,
+  "desc": "You are a paperback author trying to finish novels for your editor.",
   "bgg": 7.1,
   "weight": 2
  },
@@ -3632,6 +4622,11 @@
    "Worker Placement",
    "Worker Placement, Different Worker Types"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 5,
+  "mins": 90,
+  "minAge": 12,
+  "desc": "In Pendulum, each player is a powerful, unique noble vying to succeed the Timeless King as the true ruler of D nya.",
   "bgg": 6.4,
   "weight": 2.99
  },
@@ -3644,6 +4639,11 @@
    "Melding and Splaying",
    "Set Collection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 45,
+  "minAge": 8,
+  "desc": "A rummy-type card game where players compete to be the first to finish completing all ten phases.",
   "bgg": 5.3,
   "weight": 1.25
  },
@@ -3660,6 +4660,11 @@
    "Set Collection",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 30,
+  "minAge": 4,
+  "desc": "Long, thin sticks are scattered on the table in a heap.",
   "bgg": 4.4,
   "weight": 1.06
  },
@@ -3673,6 +4678,11 @@
    "Roll / Spin and Move",
    "Team-Based Game"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 16,
+  "mins": 90,
+  "minAge": 12,
+  "desc": "Pictionary is a fast-paced party game of sketching and guessing, often compared to Charades, but with drawings instead of physical acting.",
   "bgg": 5.9,
   "weight": 1.22
  },
@@ -3685,6 +4695,11 @@
   "mechs": [
    "Drawing"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 25,
+  "minAge": 9,
+  "desc": null,
   "bgg": 7.3,
   "weight": 1.52
  },
@@ -3695,6 +4710,11 @@
    "Pirates"
   ],
   "mechs": [],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 25,
+  "minAge": 0,
+  "desc": "Each player wants to have the most swagger, but your plans will break down as your crew will be stolen, killed, or might just be unhelpful.",
   "bgg": 0,
   "weight": 0
  },
@@ -3710,6 +4730,11 @@
    "Tile Placement",
    "Turn Order: Progressive"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 8,
+  "desc": "The spark of life is about to jump from your hands to spread out in the world.",
   "bgg": 6.6,
   "weight": 1.58
  },
@@ -3722,6 +4747,11 @@
   "mechs": [
    "Storytelling"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 0,
+  "minAge": 4,
+  "desc": "Shuffle: Play-Doh is a game targeting younger children and that wants to improve there speaking skills.",
   "bgg": 5,
   "weight": 1
  },
@@ -3737,6 +4767,11 @@
    "Player Elimination",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "mins": 15,
+  "minAge": 8,
+  "desc": "From the Catalyst Game Labs Website: It's been a tough day in the monkey cage and something in the food tonight wasn't quite right.",
   "bgg": 5.6,
   "weight": 1.1
  },
@@ -3749,6 +4784,11 @@
   "mechs": [
    "Dice Rolling"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 15,
+  "minAge": 4,
+  "desc": "Pop the Pig is an international preschool classic that is adored by millions of children-it's the #2 best-selling new kids game of the last five years.",
   "bgg": 4.2,
   "weight": 1
  },
@@ -3767,6 +4807,11 @@
    "Hot Potato",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 30,
+  "minAge": 13,
+  "desc": "In the deck, there are 5 cards for the psycho killer and cards for the weapons he uses to attack you.",
   "bgg": 6.7,
   "weight": 1.67
  },
@@ -3786,6 +4831,11 @@
    "Turn Order: Progressive",
    "Variable Phase Order"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 5,
+  "mins": 150,
+  "minAge": 12,
+  "desc": "In Puerto Rico, players assume the roles of colonial governors on the island of Puerto Rico.",
   "bgg": 7.9,
   "weight": 3.27
  },
@@ -3797,6 +4847,11 @@
   "mechs": [
    "Deck, Bag, and Pool Building"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 60,
+  "minAge": 10,
+  "desc": "There is always something happening in the lively market square of Quedlinburg.",
   "bgg": 7.5,
   "weight": 2.27
  },
@@ -3808,6 +4863,11 @@
   "mechs": [
    "Tile Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 3,
+  "minAge": 4,
+  "desc": "From Publisher Website: Quadefy is a fast playing new strategy game played in three dimensions.",
   "bgg": 5.8,
   "weight": 1
  },
@@ -3820,6 +4880,11 @@
    "Square Grid",
    "Tile Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 6,
+  "desc": "The abstract game of Qwirkle consists of 108 wooden blocks with six different shapes in six different colors.",
   "bgg": 6.8,
   "weight": 1.58
  },
@@ -3838,6 +4903,11 @@
    "Push Your Luck",
    "Set Collection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 60,
+  "minAge": 12,
+  "desc": "Ra is an auction and set-collection game with an Ancient Egyptian theme.",
   "bgg": 7.7,
   "weight": 2.3
  },
@@ -3856,6 +4926,11 @@
    "Solo / Solitaire Game",
    "Victory Points as a Resource"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 80,
+  "minAge": 10,
+  "desc": "Autumn is not the best time to climb up on a scaffold in Moscow, but it is still far better than doing so in the winter.",
   "bgg": 7.7,
   "weight": 2.82
  },
@@ -3876,6 +4951,11 @@
    "Take That",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 60,
+  "minAge": 14,
+  "desc": "Enter the futuristic universe of Red Rising, based on the book series by Pierce Brown featuring a dystopian society divided into fourteen castes.",
   "bgg": 7,
   "weight": 2.31
  },
@@ -3896,6 +4976,11 @@
    "Turn Order: Pass Order",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 12,
+  "desc": "Prepare Your Place of Power!",
   "bgg": 7.6,
   "weight": 2.66
  },
@@ -3914,6 +4999,11 @@
    "Memory",
    "Traitor Game"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 30,
+  "minAge": 15,
+  "desc": "Rick and Morty: Total Rickall Card Game is based on the Rick and Morty episode of the same name.",
   "bgg": 6.1,
   "weight": 1.51
  },
@@ -3945,6 +5035,11 @@
    "Variable Player Powers",
    "Variable Set-up"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 5,
+  "mins": 120,
+  "minAge": 14,
+  "desc": "The great and forgotten Kami have returned from the underworld, displeased with the affairs of the Empire's present Shōgun.",
   "bgg": 7.8,
   "weight": 3.3
  },
@@ -3974,6 +5069,11 @@
    "Variable Set-up",
    "Worker Placement with Dice Workers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 45,
+  "minAge": 13,
+  "desc": "Game description from the publisher: Roll for the Galaxy is a dice game of building space empires for 2-5 players.",
   "bgg": 7.6,
   "weight": 2.78
  },
@@ -3991,6 +5091,11 @@
    "Set Collection",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 10,
+  "desc": "Mighty heroes don't just appear out of thin air -- you must create them!",
   "bgg": 7.4,
   "weight": 2.42
  },
@@ -4020,6 +5125,11 @@
    "Variable Player Powers",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 14,
+  "desc": null,
   "bgg": 8.1,
   "weight": 3.84
  },
@@ -4031,6 +5141,11 @@
   "mechs": [
    "Pattern Building"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 20,
+  "minAge": 7,
+  "desc": "The Mind-Bending, Mind-Turning Challenge!",
   "bgg": 6.4,
   "weight": 1.25
  },
@@ -4045,6 +5160,11 @@
    "Set Collection",
    "Tile Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 8,
+  "desc": "Rummikub is similar to several central European card games which are played with two decks of playing cards, including Machiavelli and Vatikan.",
   "bgg": 6.5,
   "weight": 1.71
  },
@@ -4061,6 +5181,11 @@
    "Variable Player Powers",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 30,
+  "minAge": 14,
+  "desc": "RUN is a quick, tense, hidden movement game of cat-and-mouse.",
   "bgg": 7.5,
   "weight": 2.14
  },
@@ -4078,6 +5203,11 @@
    "Scenario / Mission / Campaign Game",
    "Solo / Solitaire Game"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 5,
+  "mins": 90,
+  "minAge": 14,
+  "desc": "RuneScape Kingdoms: King Black Dragon Expansion enhances your RuneScape Kingdoms experiences with a new skill, campaign, area and boss.",
   "bgg": 8.8,
   "weight": 0
  },
@@ -4094,6 +5224,11 @@
    "Scenario / Mission / Campaign Game",
    "Solo / Solitaire Game"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 5,
+  "mins": 90,
+  "minAge": 14,
+  "desc": "Grab your capes and party hats, 'cause we're going to Gielinor!",
   "bgg": 7.5,
   "weight": 2.2
  },
@@ -4115,6 +5250,11 @@
    "Team-Based Game",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 10,
+  "desc": "Sabotage is a game of team stealth tactics.",
   "bgg": 7.2,
   "weight": 2.89
  },
@@ -4138,6 +5278,11 @@
    "Take That",
    "Traitor Game"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 10,
+  "mins": 30,
+  "minAge": 8,
+  "desc": "Players take on the role of dwarves.",
   "bgg": 6.5,
   "weight": 1.32
  },
@@ -4152,6 +5297,11 @@
    "Deduction",
    "Hand Management"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 30,
+  "minAge": 14,
+  "desc": "You're part of an internationally renowned group of billy goat criminal masterminds, and you've just pulled off your greatest caper yet.",
   "bgg": 6.9,
   "weight": 1.67
  },
@@ -4165,6 +5315,11 @@
    "Ladder Climbing",
    "Score-and-Reset Game"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 20,
+  "minAge": 9,
+  "desc": null,
   "bgg": 7.8,
   "weight": 1.39
  },
@@ -4180,6 +5335,11 @@
    "Square Grid",
    "Tile Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 10,
+  "desc": "In this classic word game, players use their seven drawn letter-tiles to form words on the gameboard.",
   "bgg": 6.3,
   "weight": 2.05
  },
@@ -4202,6 +5362,11 @@
    "Traitor Game",
    "Voting"
   ],
+  "minPlayers": 5,
+  "maxPlayers": 10,
+  "mins": 45,
+  "minAge": 13,
+  "desc": "Secret Hitler is a dramatic game of political intrigue and betrayal set in 1930s Germany.",
   "bgg": 7.5,
   "weight": 1.74
  },
@@ -4222,6 +5387,11 @@
    "Take That",
    "Team-Based Game"
   ],
+  "minPlayers": 4,
+  "maxPlayers": 8,
+  "mins": 35,
+  "minAge": 10,
+  "desc": null,
   "bgg": 6.4,
   "weight": 1.5
  },
@@ -4236,6 +5406,11 @@
    "Player Elimination",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 20,
+  "minAge": 7,
+  "desc": "How far would you go to save yourself?",
   "bgg": 6.2,
   "weight": 1.1
  },
@@ -4250,6 +5425,11 @@
   "mechs": [
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 30,
+  "minAge": 7,
+  "desc": "You and your friends are survivors of a devastating zombie apocalypse, but for how long?!",
   "bgg": 6,
   "weight": 1.25
  },
@@ -4265,6 +5445,11 @@
    "Take That",
    "Team-Based Game"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 12,
+  "mins": 30,
+  "minAge": 7,
+  "desc": "Sequence is a board and card game.",
   "bgg": 6.2,
   "weight": 1.31
  },
@@ -4284,6 +5469,11 @@
    "Turn Order: Progressive",
    "Variable Set-up"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 160,
+  "minAge": 14,
+  "desc": "In SETI: Search for Extraterrestrial Intelligence, you lead a scientific institution tasked with searching for traces of life beyond planet Earth.",
   "bgg": 8.4,
   "weight": 3.83
  },
@@ -4300,6 +5490,11 @@
    "Network and Route Building",
    "Trading"
   ],
+  "minPlayers": 5,
+  "maxPlayers": 6,
+  "mins": 120,
+  "minAge": 10,
+  "desc": "Allows you to add up to two more opponents to The Settlers of Catan.",
   "bgg": 7,
   "weight": 2.31
  },
@@ -4322,6 +5517,11 @@
    "Role Playing",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 12,
+  "desc": "Shadows of Brimstone: City of the Ancients is a fast-paced, fully cooperative, dungeon-crawl board game set in the Old West, with a heavy dose of unspeakable horror!",
   "bgg": 7.9,
   "weight": 3.38
  },
@@ -4340,6 +5540,11 @@
    "Solo / Solitaire Game",
    "Storytelling"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 8,
+  "mins": 120,
+  "minAge": 13,
+  "desc": "Have you ever had the desire to walk the streets of Victorian London with Sherlock Holmes in search of Professor Moriarty?",
   "bgg": 7.6,
   "weight": 2.66
  },
@@ -4355,6 +5560,11 @@
    "Pattern Building",
    "Set Collection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "mins": 60,
+  "minAge": 18,
+  "desc": "Shit Happens is as funny and surprising and crazy as REAL LIFE.",
   "bgg": 5.3,
   "weight": 1.05
  },
@@ -4367,6 +5577,11 @@
   "mechs": [
    "Dice Rolling"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 30,
+  "minAge": 8,
+  "desc": "In Shut the Box, players match rolls of the dice to numbers on the game.",
   "bgg": 5.2,
   "weight": 1.07
  },
@@ -4390,6 +5605,11 @@
    "Trading",
    "Variable Player Powers"
   ],
+  "minPlayers": 4,
+  "maxPlayers": 9,
+  "mins": 180,
+  "minAge": 14,
+  "desc": "Sidereal Confluence: Trading and Negotiation in the Elysian Quadrant is a singularly unique trading and negotiation game for 4-9 players.",
   "bgg": 7.8,
   "weight": 3.57
  },
@@ -4405,6 +5625,11 @@
    "Memory",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "mins": 45,
+  "minAge": 8,
+  "desc": "Sideshow Swap is an original, deduction-style party game based on cunning and chance.",
   "bgg": 6.8,
   "weight": 1.67
  },
@@ -4416,6 +5641,11 @@
   "mechs": [
    "Hand Management"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 20,
+  "minAge": 8,
+  "desc": "Each player is dealt a stockpile of 30 cards.",
   "bgg": 5.7,
   "weight": 1.19
  },
@@ -4431,6 +5661,11 @@
    "Hand Management",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 40,
+  "minAge": 8,
+  "desc": "THE GREAT RETURN ​Over generations and generations the ancient woodland of B re prospered and grew.",
   "bgg": 7.2,
   "weight": 2.15
  },
@@ -4449,6 +5684,11 @@
    "Player Elimination",
    "Predictive Bid"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 45,
+  "minAge": 10,
+  "desc": null,
   "bgg": 7.2,
   "weight": 1.12
  },
@@ -4468,6 +5708,11 @@
    "Variable Set-up",
    "Worker Placement with Dice Workers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 20,
+  "minAge": 10,
+  "desc": "Sky Team is a co-operative game, exclusively for two players, in which you play a pilot and co-pilot at the controls of an airliner.",
   "bgg": 8.1,
   "weight": 2.04
  },
@@ -4488,6 +5733,11 @@
    "Variable Player Powers",
    "Victory Points as a Resource"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 80,
+  "minAge": 8,
+  "desc": "In Small World of Warcraft, players vie for conquest and control of a world that is simply too small to accommodate everybody.",
   "bgg": 7.2,
   "weight": 2.68
  },
@@ -4512,6 +5762,11 @@
    "Variable Player Powers",
    "Variable Set-up"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 12,
+  "desc": null,
   "bgg": 6.7,
   "weight": 2.06
  },
@@ -4524,6 +5779,11 @@
    "Betting and Bluffing",
    "Player Judge"
   ],
+  "minPlayers": 4,
+  "maxPlayers": 10,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "Sounds Fishy isn't about always knowing the right answer - it's about being able to spot the fake ones.",
   "bgg": 6.7,
   "weight": 1
  },
@@ -4539,6 +5799,11 @@
    "Open Drafting",
    "Random Production"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 60,
+  "minAge": 14,
+  "desc": "In Space Base, players assume the roles of Commodores of a small fleet of ships.",
   "bgg": 7.5,
   "weight": 2.13
  },
@@ -4565,6 +5830,11 @@
    "Variable Player Powers",
    "Variable Set-up"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 13,
+  "desc": "In the most distant reaches of the world, magic still exists, embodied by spirits of the land, of the sky, and of every natural thing.",
   "bgg": 8.3,
   "weight": 4.07
  },
@@ -4581,6 +5851,11 @@
    "Race",
    "Set Collection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "Splendor is a game of chip-collecting and card development.",
   "bgg": 7.4,
   "weight": 1.77
  },
@@ -4603,6 +5878,11 @@
    "Traitor Game",
    "Variable Player Powers"
   ],
+  "minPlayers": 5,
+  "maxPlayers": 10,
+  "mins": 90,
+  "minAge": 14,
+  "desc": "Stabbin' in the Cabin is a hidden-role deduction game in the style of a cabin in the woods style slasher film.",
   "bgg": 7.7,
   "weight": 1.5
  },
@@ -4616,6 +5896,11 @@
    "Tile Placement",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 5,
+  "mins": 60,
+  "minAge": 10,
+  "desc": "The city was once a small and sleepy town, but the affordable properties have attracted artists, startup companies, and families.",
   "bgg": 6.6,
   "weight": 1.98
  },
@@ -4636,6 +5921,11 @@
    "Solo / Solitaire Game",
    "Tile Placement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 8,
+  "desc": "Plan, build, and develop a small town into a major metropolis.",
   "bgg": 7.5,
   "weight": 2.76
  },
@@ -4654,6 +5944,11 @@
    "Take That",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 9,
+  "desc": "GAME SYSTEM This entry is to allow for discussion/rating of the game system as a whole.",
   "bgg": 7.2,
   "weight": 2.33
  },
@@ -4671,6 +5966,11 @@
    "Set Collection",
    "Simultaneous Action Selection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 15,
+  "minAge": 8,
+  "desc": "In the super-fast sushi card game Sushi Go!, you are eating at a sushi restaurant and trying to grab the best combination of sushi dishes as they whiz by.",
   "bgg": 7,
   "weight": 1.16
  },
@@ -4692,6 +5992,11 @@
    "Variable Player Powers",
    "Voting"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 0,
+  "minAge": 12,
+  "desc": "Description from the publisher: Enter the Valley of the Kings and unravel a pharaoh's secret.",
   "bgg": 7.3,
   "weight": 2.46
  },
@@ -4706,6 +6011,11 @@
    "Communication Limits",
    "Team-Based Game"
   ],
+  "minPlayers": 4,
+  "maxPlayers": 10,
+  "mins": 20,
+  "minAge": 12,
+  "desc": "In the party game Taboo, you're trying to give clues to your teammates so that they'll guess a particular word, but you can't say just anything you like.",
   "bgg": 6.3,
   "weight": 1.2
  },
@@ -4725,6 +6035,11 @@
    "Real-Time",
    "Speed Matching"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 8,
+  "mins": 30,
+  "minAge": 8,
+  "desc": "Taco Cat Goat Cheese Pizza is filled to the brim with hand-slapping mayhem!",
   "bgg": 6.5,
   "weight": 1.03
  },
@@ -4750,6 +6065,11 @@
    "Solo / Solitaire Game",
    "Storytelling"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 14,
+  "desc": "Kings of Ruin is a new stand-alone story campaign from the team behind the acclaimed Tainted Grail board game, set in the same universe.",
   "bgg": 8.6,
   "weight": 3.28
  },
@@ -4766,6 +6086,11 @@
    "Tile Placement",
    "Variable Player Powers"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 14,
+  "desc": "The Tang dynasty was considered the first golden age of the classical and now iconic Chinese gardens.",
   "bgg": 7.3,
   "weight": 2.64
  },
@@ -4784,6 +6109,11 @@
    "Player Elimination",
    "Spelling"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 10,
+  "mins": 30,
+  "minAge": 8,
+  "desc": "Each round in Tapple, one player draws a topic card, then starts the timer.",
   "bgg": 6.4,
   "weight": 1.02
  },
@@ -4804,6 +6134,11 @@
    "Simultaneous Action Selection",
    "Trading"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 30,
+  "minAge": 13,
+  "desc": "Run the best fantasy tavern in the village!",
   "bgg": 6.8,
   "weight": 2
  },
@@ -4828,6 +6163,11 @@
    "Variable Set-up",
    "Victory Points as a Resource"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 150,
+  "minAge": 12,
+  "desc": null,
   "bgg": 8,
   "weight": 3.97
  },
@@ -4852,6 +6192,11 @@
    "Variable Set-up",
    "Victory Points as a Resource"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 5,
+  "mins": 150,
+  "minAge": 14,
+  "desc": null,
   "bgg": 8.7,
   "weight": 4.32
  },
@@ -4881,6 +6226,11 @@
    "Variable Player Powers",
    "Variable Set-up"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 5,
+  "mins": 120,
+  "minAge": 12,
+  "desc": "In the 2400s, mankind begins to terraform the planet Mars.",
   "bgg": 8.3,
   "weight": 3.27
  },
@@ -4896,6 +6246,11 @@
    "Deduction",
    "Predictive Bid"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 20,
+  "minAge": 10,
+  "desc": "Round up your gang and get ready to pull off a series of bank heists using the power of poker!",
   "bgg": 7.6,
   "weight": 1.6
  },
@@ -4918,6 +6273,11 @@
    "Worker Placement",
    "Worker Placement, Different Worker Types"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 180,
+  "minAge": 13,
+  "desc": null,
   "bgg": 7.8,
   "weight": 3.91
  },
@@ -4943,6 +6303,11 @@
    "Tile Placement",
    "Turn Order: Stat-Based"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 8,
+  "desc": "The Isle of Cats is a competitive, medium-weight, card-drafting, polyomino cat-placement board game.",
   "bgg": 7.6,
   "weight": 2.36
  },
@@ -4957,6 +6322,11 @@
    "Cooperative Game",
    "Hand Management"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 20,
+  "minAge": 8,
+  "desc": "The Mind is more than just a game.",
   "bgg": 6.7,
   "weight": 1.07
  },
@@ -4981,6 +6351,11 @@
    "Variable Set-up",
    "Zone of Control"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 10,
+  "desc": "In The Quest for El Dorado, players take the roles of expedition leaders who have embarked on a search for the legendary land of gold in the dense jungles of South America.",
   "bgg": 7.7,
   "weight": 1.94
  },
@@ -5000,6 +6375,11 @@
    "Take That",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 45,
+  "minAge": 13,
+  "desc": "In Red Dragon Inn, you and your friends are a party of heroic, fantasy adventurers.",
   "bgg": 6.5,
   "weight": 1.66
  },
@@ -5024,6 +6404,11 @@
    "Traitor Game",
    "Voting"
   ],
+  "minPlayers": 5,
+  "maxPlayers": 10,
+  "mins": 30,
+  "minAge": 13,
+  "desc": null,
   "bgg": 7.2,
   "weight": 1.59
  },
@@ -5047,6 +6432,11 @@
    "Role Playing",
    "Set Collection"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 5,
+  "mins": 60,
+  "minAge": 14,
+  "desc": "Prince John is coming to Nottingham!",
   "bgg": 7,
   "weight": 1.66
  },
@@ -5060,6 +6450,11 @@
    "Open Drafting",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 20,
+  "minAge": 12,
+  "desc": "The Singaporean Dream is a humorous card game that lets you steal, sabo and pay your way to be the perfect Singaporean.",
   "bgg": 5.3,
   "weight": 1.17
  },
@@ -5071,6 +6466,11 @@
    "Party Game"
   ],
   "mechs": [],
+  "minPlayers": 4,
+  "maxPlayers": 12,
+  "mins": 40,
+  "minAge": 17,
+  "desc": "In the adult party game, The Sweet and Spicy Truth, each player takes a turn being asked a Sweet, Medium, or Spicy question.",
   "bgg": 6.7,
   "weight": 0
  },
@@ -5085,6 +6485,11 @@
    "Pattern Recognition",
    "Race"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 12,
+  "desc": "The Yawning Portal is an iconic inn that attracts fascinating adventurers with two things in common: They're famished, and they have unique tastes in food.",
   "bgg": 7.1,
   "weight": 2.04
  },
@@ -5103,6 +6508,11 @@
    "Push Your Luck",
    "Set Collection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 60,
+  "minAge": 8,
+  "desc": "With elegantly simple gameplay, Ticket to Ride can be learned in under 15 minutes.",
   "bgg": 7.4,
   "weight": 1.82
  },
@@ -5121,6 +6531,11 @@
    "Push Your Luck",
    "Set Collection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 60,
+  "minAge": 8,
+  "desc": "Ticket to Ride: Europe takes you on a new train adventure across Europe.",
   "bgg": 7.5,
   "weight": 1.91
  },
@@ -5139,6 +6554,11 @@
    "Storytelling",
    "Variable Player Powers"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 12,
+  "desc": "The T.I.M.E Agency protects humanity by preventing temporal faults and paradoxes from threatening the fabric of our universe.",
   "bgg": 7.3,
   "weight": 2.59
  },
@@ -5156,6 +6576,11 @@
    "Variable Player Powers",
    "Worker Placement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 5,
+  "mins": 45,
+  "minAge": 8,
+  "desc": "In Tokaido, each player is a traveler crossing the \"East sea road\", one of the most magnificent roads of Japan.",
   "bgg": 6.9,
   "weight": 1.74
  },
@@ -5170,6 +6595,11 @@
    "Pattern Building",
    "Tile Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 30,
+  "minAge": 6,
+  "desc": "Triominos is a game similar to Dominoes, in that players are laying tiles that match up to other tiles in the play area, with the goal to get points and be rid of tiles.",
   "bgg": 5.4,
   "weight": 1.37
  },
@@ -5184,6 +6614,11 @@
    "Dice Rolling",
    "Team-Based Game"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 99,
+  "mins": 60,
+  "minAge": 17,
+  "desc": "Perfect for thrill seekers and know-it-alls alike, TRIVIAL PURSUIT: Horror Movie Edition is a must-have for any game collection.",
   "bgg": 5.8,
   "weight": 0
  },
@@ -5194,6 +6629,11 @@
    "Trivia"
   ],
   "mechs": [],
+  "minPlayers": 2,
+  "maxPlayers": 99,
+  "mins": 0,
+  "minAge": 12,
+  "desc": "Supernatural fans test their knowledge of the TV Series with TRIVIAL PURSUIT: Supernatural.",
   "bgg": 7.2,
   "weight": 0
  },
@@ -5218,6 +6658,11 @@
    "Storytelling",
    "Voting"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 8,
+  "mins": 60,
+  "minAge": 12,
+  "desc": "Trust Me I'm a Doctor is a hilarious card game that lets you become an old time doctor, treating serious medieval maladies with some VERY questionable cures.",
   "bgg": 5.7,
   "weight": 1.25
  },
@@ -5233,6 +6678,11 @@
    "Negotiation",
    "Player Judge"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 8,
+  "mins": 30,
+  "minAge": 8,
+  "desc": null,
   "bgg": 5.6,
   "weight": 1
  },
@@ -5257,6 +6707,11 @@
    "Variable Player Powers",
    "Voting"
   ],
+  "minPlayers": 6,
+  "maxPlayers": 30,
+  "mins": 20,
+  "minAge": 8,
+  "desc": "In Two Rooms and a Boom - a social deduction/hidden role party game for six or more players - there are two teams: the Red Team and the Blue Team.",
   "bgg": 7,
   "weight": 1.48
  },
@@ -5269,6 +6724,11 @@
    "Grid Movement",
    "Map Reduction"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 60,
+  "minAge": 13,
+  "desc": "TZAAR is a game about making choices.",
   "bgg": 7.7,
   "weight": 2.48
  },
@@ -5289,6 +6749,11 @@
    "Turn Order: Claim Action",
    "Worker Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 13,
+  "desc": "Tzolkin: The Mayan Calendar presents a new game mechanism: dynamic worker placement.",
   "bgg": 7.8,
   "weight": 3.66
  },
@@ -5313,6 +6778,11 @@
    "Variable Player Powers",
    "Voting"
   ],
+  "minPlayers": 5,
+  "maxPlayers": 30,
+  "mins": 90,
+  "minAge": 13,
+  "desc": "Ultimate Werewolf is an interactive game of deduction for two teams: Villagers and Werewolves.",
   "bgg": 6.5,
   "weight": 1.15
  },
@@ -5334,6 +6804,11 @@
    "Scenario / Mission / Campaign Game",
    "Simulation"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 60,
+  "minAge": 14,
+  "desc": "The RAF faces the Luftwaffe in this two-player deck-building game of aerial WWII combat.",
   "bgg": 7.9,
   "weight": 2.76
  },
@@ -5353,6 +6828,11 @@
    "Scenario / Mission / Campaign Game",
    "Simulation"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 2,
+  "mins": 60,
+  "minAge": 14,
+  "desc": "June, 1944: Through the D-Day landings, the Allies have seized a foothold on the beaches of Normandy.",
   "bgg": 7.8,
   "weight": 2.27
  },
@@ -5373,6 +6853,11 @@
    "Take That",
    "Turn Order: Progressive"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "mins": 125,
+  "minAge": 14,
+  "desc": "Build the city's greatest theme park, whatever it takes!",
   "bgg": 7.3,
   "weight": 2.72
  },
@@ -5391,6 +6876,11 @@
    "Matching",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 10,
+  "mins": 30,
+  "minAge": 6,
+  "desc": "Players race to empty their hands and catch opposing players with cards left in theirs, which score points.",
   "bgg": 5.5,
   "weight": 1.1
  },
@@ -5404,6 +6894,11 @@
    "Hand Management",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 10,
+  "mins": 30,
+  "minAge": 7,
+  "desc": "UNO gets a brand new twist in the new UNO Flip!",
   "bgg": 6.3,
   "weight": 1.23
  },
@@ -5416,6 +6911,11 @@
    "Hand Management",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 10,
+  "mins": 30,
+  "minAge": 7,
+  "desc": "UNO All Wild plays just like traditional UNO except every card is wild.",
   "bgg": 4.5,
   "weight": 1
  },
@@ -5431,6 +6931,11 @@
    "Player Elimination",
    "Take That"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 30,
+  "minAge": 7,
+  "desc": "UNO Show 'Em No Mercy is a brutal, ruthless version of the classic UNO card game.",
   "bgg": 6.1,
   "weight": 1.44
  },
@@ -5446,6 +6951,11 @@
    "Square Grid",
    "Tile Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 8,
+  "desc": "Players take turns forming words on either an 8x8 (original and Winning Moves \"new classic\" versions) or a 10x10 (most later versions) grid.",
   "bgg": 5.8,
   "weight": 1.67
  },
@@ -5463,6 +6973,11 @@
    "Turn Order: Progressive",
    "Worker Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 90,
+  "minAge": 13,
+  "desc": "In Viticulture, the players find themselves in the roles of people in rustic, pre-modern Tuscany who have inherited meager vineyards.",
   "bgg": 7.5,
   "weight": 2.95
  },
@@ -5481,6 +6996,11 @@
    "Take That",
    "Track Movement"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 30,
+  "minAge": 8,
+  "desc": "Each year, the graduating classes of the Ravenrealm Magic School compete to demonstrate their mastery of magic.",
   "bgg": 7.3,
   "weight": 1.6
  },
@@ -5494,6 +7014,11 @@
    "Targeted Clues",
    "Team-Based Game"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 12,
+  "mins": 45,
+  "minAge": 14,
+  "desc": "Wavelength is a social guessing game in which two teams compete to read each other's minds.",
   "bgg": 7.2,
   "weight": 1.11
  },
@@ -5517,6 +7042,11 @@
    "Trading",
    "Turn Order: Pass Order"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 5,
+  "mins": 90,
+  "minAge": 15,
+  "desc": null,
   "bgg": 7.8,
   "weight": 2.5
  },
@@ -5537,6 +7067,11 @@
    "Variable Player Powers",
    "Voting"
   ],
+  "minPlayers": 8,
+  "maxPlayers": 18,
+  "mins": 30,
+  "minAge": 10,
+  "desc": "Werewolves of Miller's Hollow is a game that takes place in a small village which is haunted by werewolves.",
   "bgg": 6.7,
   "weight": 1.31
  },
@@ -5553,6 +7088,11 @@
    "Narrative Choice / Paragraph",
    "Solo / Solitaire Game"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 10,
+  "desc": "Introducing What Next, the brand new 'Pick-Your-Path' adventure game where you never know what's waiting around the corner.",
   "bgg": 6.4,
   "weight": 1.57
  },
@@ -5574,6 +7114,11 @@
    "Solo / Solitaire Game",
    "Turn Order: Progressive"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 5,
+  "mins": 70,
+  "minAge": 10,
+  "desc": "Wingspan is a competitive, medium-weight, card-driven, engine-building board game from Stonemaier Games.",
   "bgg": 8,
   "weight": 2.48
  },
@@ -5589,6 +7134,11 @@
    "Predictive Bid",
    "Trick-taking"
   ],
+  "minPlayers": 3,
+  "maxPlayers": 6,
+  "mins": 45,
+  "minAge": 10,
+  "desc": "The trick-taking game Wizard uses a sixty-card deck that consists of the traditional 52-card deck (1-13 in four suits) along with four Wizards (high) and four Jesters (low).",
   "bgg": 7,
   "weight": 1.7
  },
@@ -5608,6 +7158,11 @@
    "Track Movement",
    "Turn Order: Progressive"
   ],
+  "minPlayers": 1,
+  "maxPlayers": 5,
+  "mins": 90,
+  "minAge": 14,
+  "desc": "You are an amateur dracologist in the world of Wyrmspan, a place where dragons of all shapes, sizes, and colors roam the skies.",
   "bgg": 7.9,
   "weight": 2.83
  },
@@ -5623,6 +7178,11 @@
    "Simultaneous Action Selection",
    "Worker Placement"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 4,
+  "mins": 60,
+  "minAge": 14,
+  "desc": "246 BCE: The future first emperor of China, Ying Zheng, orders the construction of the Terracotta Army.",
   "bgg": 7.1,
   "weight": 2.78
  },
@@ -5640,6 +7200,11 @@
    "Push Your Luck",
    "Set Collection"
   ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 40,
+  "minAge": 7,
+  "desc": "Yum Cha is a cute little card game based on everyone's favourite Chinese brunch, also known as Dim Sum.",
   "bgg": 6.4,
   "weight": 1.5
  }
