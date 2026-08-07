@@ -1154,7 +1154,7 @@ function syncInputs(){
 }
 
 // ————— Prefer synced data/games.json when the Action has run —————
-async function boot(){
+async function runBoot(){
   try{
     // show skeleton placeholders while we fetch the baked data (improves perceived load)
     showSkeletons(8);
@@ -1172,8 +1172,8 @@ async function boot(){
   buildPicks(); buildTagRow(); await applySheet(); render();
 }
 
-// Run a header check before applying the sheet overlay so staff see a warning early
-boot = (async function(orig){ return async function(){ await orig(); await checkSheetHeader(); }; })(boot);
+// Wrap the boot function to run the header check after the initial boot
+const boot = (async function(orig){ return async function(){ await orig(); await checkSheetHeader(); }; })(runBoot);
 
 $("search").addEventListener("input",e=>{state.query=e.target.value;$("searchClear").hidden=!e.target.value;render();});
 $("searchClear").addEventListener("click",()=>{$("search").value="";state.query="";$("searchClear").hidden=true;$("search").focus();render();});
