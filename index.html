@@ -1275,7 +1275,7 @@ if(matchMedia("(min-width:900px)").matches) $("filterWrap").open = true;
 document.querySelectorAll("[data-tagmode]").forEach(b=>b.addEventListener("click",()=>{state.tagMode=b.dataset.tagmode;render()}));
 document.querySelectorAll("[data-ps]").forEach(b=>b.addEventListener("click",()=>{state.playStyle=b.dataset.ps;render()}));
 $("sortSel").addEventListener("change",e=>{const p=e.target.value.split(":");state.sortBy=p[0];state.sortDir=+p[1];state.sortTouched=true;render();});
-boot();
+(async function(){ await runBoot(); await checkSheetHeader(); })();
 </script>
 </body>
 </html>
