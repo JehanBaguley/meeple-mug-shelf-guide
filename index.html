@@ -319,6 +319,17 @@
     .gcard{margin:0}
   }
   @media(min-width:1500px){ .list{grid-template-columns:1fr 1fr 1fr} }
+  /* Skeleton loading placeholders (shimmer) */
+  .skeleton { --skel-bg: linear-gradient(90deg, rgba(236,229,211,0.06) 25%, rgba(236,229,211,0.12) 50%, rgba(236,229,211,0.06) 75%); }
+  .skel { background: linear-gradient(180deg, rgba(236,229,211,0.04), rgba(236,229,211,0.02)); border:1px solid rgba(236,229,211,0.04); color:transparent; }
+  .gcard.skeleton{background:linear-gradient(180deg, rgba(236,229,211,0.04), rgba(236,229,211,0.02));box-shadow:none;border:1px solid rgba(236,229,211,0.04)}
+  .gcard.skeleton .gbody{padding:14px}
+  .gcard.skeleton .skel-title{height:18px;width:60%;border-radius:6px;background:var(--skel-bg);animation:skew 1.2s linear infinite}
+  .gcard.skeleton .skel-line{height:12px;width:100%;border-radius:6px;margin-top:10px;background:var(--skel-bg);animation:skew 1.2s linear infinite}
+  .gcard.skeleton .skel-line.short{width:40%}
+  .gcard.skeleton .skel-tags{height:22px;width:45%;border-radius:999px;margin-top:12px;background:var(--skel-bg);animation:skew 1.2s linear infinite}
+  .gcard.skeleton .spine{background:linear-gradient(180deg, rgba(85,104,92,0.12), rgba(85,104,92,0.06));}
+  @keyframes skew{0%{background-position:-200px 0}100%{background-position:200px 0}} 
 </style>
 </head>
 <body>
@@ -772,6 +783,21 @@ async function applySheet(){
   }
 }
 
+// Render N skeleton cards into the list while data loads
+function showSkeletons(n){
+  const out = [];
+  for(let i=0;i<n;i++){
+    out.push('<article class="gcard skeleton"><div class="spine"></div><div class="gbody">'+
+      '<div class="skel-title"></div>'+
+      '<div class="skel-line"></div>'+
+      '<div class="skel-line short"></div>'+
+      '<div class="skel-tags"></div>'+
+      '</div></article>');
+  }
+  const list = document.getElementById('list'); if(list) list.innerHTML = out.join('');
+}
+
+
 // ————— Live sheet header/schema check —————
 async function checkSheetHeader(){
   if(!SHEET_CSV_URL) return;
@@ -1130,6 +1156,8 @@ function syncInputs(){
 // ————— Prefer synced data/games.json when the Action has run —————
 async function boot(){
   try{
+    // show skeleton placeholders while we fetch the baked data (improves perceived load)
+    showSkeletons(8);
     const r = await fetch("data/games.json",{cache:"no-store"});
     if(r.ok){ const j = await r.json(); if(j.games?.length) DATA = j; }
     else {
