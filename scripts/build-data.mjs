@@ -182,6 +182,56 @@ async function main() {
     console.log(`BGG map merged into ${merged} games`);
   }
 
+  // ————— BGG categories, mechanics and description —————
+  // The sheet is still the shelf, so this only ever ADDS. The cafe's own categories keep
+  // their position, which matters because the first one sets the spine colour, and BGG's
+  // are appended behind them. Anything the cafe has already stated wins outright.
+  if (existsSync("data/bgg-cats.json")) {
+    const cmap = JSON.parse(readFileSync("data/bgg-cats.json", "utf8"));
+    const byId = new Map();
+    for (const v of Object.values(cmap)) if (v.bggId != null && !byId.has(v.bggId)) byId.set(v.bggId, v);
+    let catAdd = 0, modeAdd = 0, blurbAdd = 0;
+    for (const g of games) {
+      const b = (g.bggId != null && byId.get(g.bggId)) || cmap[g.name];
+      if (!b) continue;
+      // Two of BGG's "categories" are not genres. Expansion is a flag we already show as
+      // a pill next to the title, and Print & Play means nothing on a cafe shelf.
+      const cats = (b.cats || []).filter(c => {
+        if (/^expansion for base/i.test(c)) { g.exp = true; return false; }
+        return !/^print\s*&\s*play$/i.test(c);
+      });
+      if (cats.length) {
+        const have = new Set((g.catText || "").split(",").map(s => s.trim().toLowerCase()).filter(Boolean));
+        const add = cats.filter(c => !have.has(c.toLowerCase()));
+        if (add.length) { g.catText = [g.catText, ...add].filter(Boolean).join(", "); catAdd++; }
+      }
+      // Play style, only where the sheet left it blank. BGG's mechanic list is the honest
+      // source for this: "Cooperative Game" and "Semi-Cooperative Game" both mean everyone
+      // is on the same side as far as someone picking a game off the shelf is concerned.
+      if (!g.mode) {
+        const m = (b.mechs || []).join(" ").toLowerCase();
+        if (/semi-?cooperative game|cooperative game/.test(m)) g.mode = "coop";
+        else if (/team-based game/.test(m)) g.mode = "team";
+        else g.mode = "comp";
+        modeAdd++;
+      }
+      // A blurb is the best thing on the card, so BGG's first sentence is only ever a
+      // stand-in for a game nobody has written one for yet.
+      if (!g.playsLike && b.desc) { g.playsLike = b.desc; blurbAdd++; }
+    }
+    console.log(`BGG enrichment: categories on ${catAdd}, play style on ${modeAdd}, fallback blurb on ${blurbAdd}`);
+  }
+  // "Expansion" is a pill beside the title, not a genre, and while it sits first in
+  // catText it steals the spine colour from the genre that should own it.
+  for (const g of games) {
+    if (!g.catText) continue;
+    const kept = g.catText.split(",").map(s => s.trim()).filter(Boolean)
+      .filter(c => { if (/^expansions?$/i.test(c)) { g.exp = true; return false; } return true; });
+    g.catText = kept.join(", ") || null;
+  }
+  // The spine colour has to be recomputed after the categories settle, not before.
+  for (const g of games) if (g.catText) g.cat = catSlugFor(g.catText);
+
   if (!games.length) { console.log("No data from either source, leaving games.json untouched"); return; }
   mkdirSync("data", { recursive: true });
   writeFileSync("data/games.json", JSON.stringify({ built: new Date().toISOString(), games, picks }, null, 1));
