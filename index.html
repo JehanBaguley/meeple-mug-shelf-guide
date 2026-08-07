@@ -1113,7 +1113,7 @@ async function boot(){
   tagAll(DATA.games);
   $("search").placeholder = "Search "+DATA.games.length+" games\u2026";
   loadState(); syncInputs(); // restore filters from URL / localStorage, then mirror into the inputs
-  buildPicks(); buildTagRow(); render(); applySheet();
+  buildPicks(); buildTagRow(); await applySheet(); render();
 }
 
 $("search").addEventListener("input",e=>{state.query=e.target.value;$("searchClear").hidden=!e.target.value;render();});
