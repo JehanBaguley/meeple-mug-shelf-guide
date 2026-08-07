@@ -10,12 +10,19 @@ import { writeFileSync, mkdirSync, readFileSync, existsSync } from "node:fs";
 const BGG_USER = "meepleandmug";
 const COLLECTION_URL = `https://boardgamegeek.com/xmlapi2/collection?username=${BGG_USER}&stats=1&own=1`;
 const SHEET_CSV_URL = process.env.SHEET_CSV_URL || "";
-
+// BGG application token, injected by the workflow. Empty string = no auth header sent.
+const BGG_TOKEN = process.env.BGG_TOKEN || "";
 // BGG queues collection requests: 202 means "come back shortly". 401/403/404 means
 // the account doesn't exist or BGG is blocking — treat as "no BGG source", not a failure.
 async function fetchCollection() {
   for (let attempt = 1; attempt <= 8; attempt++) {
-    const res = await fetch(COLLECTION_URL, { headers: { "User-Agent": "meeple-mug-catalogue/1.0" } });
+  const res = await fetch(COLLECTION_URL, {
+  headers: {
+    "User-Agent": "meeple-mug-catalogue/1.0",
+    // only send the auth header when the token exists, same trick as fetch-bgg-cats.mjs
+    ...(BGG_TOKEN ? { Authorization: `Bearer ${BGG_TOKEN}` } : {}),
+  },
+}); 
     if (res.status === 200) return res.text();
     if (res.status === 202) { await new Promise(r => setTimeout(r, attempt * 5000)); continue; }
     if ([401, 403, 404].includes(res.status)) { console.log(`BGG not available (${res.status}), skipping BGG stats this run`); return null; }
