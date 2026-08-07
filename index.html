@@ -126,6 +126,8 @@
   @media (prefers-reduced-motion:reduce){
     .gcard.skeleton .skel-title, .gcard.skeleton .skel-line, .gcard.skeleton .skel-tags { animation: none !important; background-position: 0 0 !important; }
   }
+  .skel-track{position:relative}
+  .skel-track::after{content:'';position:absolute;left:0;right:0;top:6px;height:10px;border-radius:6px;background:linear-gradient(90deg,rgba(236,229,211,0.04),rgba(236,229,211,0.1),rgba(236,229,211,0.04));pointer-events:none}
   .spine{width:6px;flex-shrink:0}
   .gbody{padding:13px 16px 13px 13px;flex:1;min-width:0;display:flex;flex-direction:column}
   .gname{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
@@ -811,8 +813,8 @@ function showSidebarSkeletons(){
   // panels: replace main genre row chips with skeleton chips
   const gr = document.getElementById('genreRow');
   if(gr){ gr.innerHTML = Array.from({length:8}).map(()=>'<button class="wt skel" style="width:80px;height:28px;border-radius:8px"></button>').join(''); }
-  // sliders skeleton: find any dualwraps and put a small bar
-  document.querySelectorAll('.panel .dualwrap').forEach(dw => { dw.innerHTML = '<div style="height:10px;background:linear-gradient(90deg,#0f2a1b,#173a23);border-radius:6px"></div>'; });
+  // sliders skeleton: add a class to show a non-destructive skeleton bar
+  document.querySelectorAll('.panel .dualwrap').forEach(dw => { dw.classList.add('skel-track'); });
   // tag summary / counts placeholder
   const gs = document.getElementById('genreSum'); if(gs) gs.textContent = '';
 }
