@@ -252,6 +252,7 @@ async function main() {
         ["players", g => g.players],
         ["time",    g => g.mins],
         ["rating",  g => g.bgg != null],
+        ["age",     g => g.age],
       ];
       const lost = [];
       for (const [name, f] of checks) {
