@@ -985,7 +985,7 @@ function render(){
       ? '<div class="stats mono">'+bits.map(b=>'<span>'+b+'</span>').join('<span class="sep" aria-hidden="true">\u00b7</span>')+'</div>'
       : '<div class="pending">Details on the box, ask at the counter.</div>';
     // genre chips (up to 3) with a colour dot per genre; replaces the old trailing text
-    const gtags = (g.tags||[]).slice(0,3).map(t=>{const slug=catSlugFor(t);if(!slug&&DEBUG)DBG.unmapped.add(t);const dot=slug?'<i style="background:'+CATS[slug]+'"></i>':'';return '<span class="gtag">'+dot+esc(tagLabel(t))+'</span>';}).join('');
+    const gtags = (g.tags||[]).slice(0,4).map(t=>{const slug=catSlugFor(t);if(!slug&&DEBUG)DBG.unmapped.add(t);const dot=slug?'<i style="background:'+CATS[slug]+'"></i>':'';return '<span class="gtag">'+dot+esc(tagLabel(t))+'</span>';}).join('');
     const genres = gtags ? '<div class="gtags">'+gtags+'</div>' : "";
     const pickNote = (state.pick!==null && DATA.picks[state.pick].games[g.name]) ? '<p class="picknote">'+esc(DATA.picks[state.pick].games[g.name])+'</p>' : (g.pickNote?'<p class="picknote">'+esc(g.pickNote)+'</p>':"");
     const plays = g.playsLike?'<p class="blurb">'+esc(g.playsLike)+'</p>':"";

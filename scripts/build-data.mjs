@@ -148,16 +148,70 @@ async function main() {
     }
   }
 
-  // merge the committed BGG ratings map (data/bgg.json) for games the API/dump matched
-  if (existsSync("data/bgg.json")) {
-    const bmap = JSON.parse(readFileSync("data/bgg.json", "utf8"));
-    let merged = 0;
+  // merge the committed BGG stats map (data/bgg-cats.json) for games the sheet linked
+  // to BGG. For linked games, rating/players/time/age come from BGG when available;
+  // the sheet is only a fallback for those fields. Sheet remains authoritative for
+  // availability, price, category text, play style, blurb, picks, and rules_link.
+  let bggStatsUsed = 0;
+  let sheetFallbackUsed = 0;
+  if (existsSync("data/bgg-cats.json")) {
+    const bmap = JSON.parse(readFileSync("data/bgg-cats.json", "utf8"));
+    const bmapById = Object.fromEntries(Object.entries(bmap)
+      .filter(([,b]) => b.bggId != null)
+      .map(([,b]) => [b.bggId, b]));
     for (const g of games) {
-      const b = bmap[g.name];
-      if (b && g.bgg === null) { g.bgg = b.bgg ?? null; g.bggId = b.bggId ?? null; merged++; }
-      if (b && b.weight != null && g.weight === null) g.weight = b.weight;
+      const b = g.bggId != null ? bmapById[g.bggId] : bmap[g.name];
+      const hasBggLink = g.bggId != null || g.bggUrl;
+      if (!hasBggLink) continue;
+      if (!b) {
+        sheetFallbackUsed++;
+        continue;
+      }
+      let used = false;
+      if (b.bgg != null) { g.bgg = b.bgg; used = true; }
+      if (b.weight != null) { g.weight = b.weight; used = true; }
+      if (b.minPlayers != null || b.maxPlayers != null) {
+        const min = b.minPlayers != null ? b.minPlayers : b.maxPlayers;
+        const max = b.maxPlayers != null ? b.maxPlayers : b.minPlayers;
+        if (min != null && max != null) {
+          g.players = [min, max];
+          used = true;
+        }
+      }
+      if (b.minTime != null || b.maxTime != null) {
+        const min = b.minTime != null ? b.minTime : b.maxTime;
+        const max = b.maxTime != null ? b.maxTime : b.minTime;
+        if (min != null && max != null) {
+          g.mins = max;
+          g.time = min === max ? `${min}m` : `${min}–${max}m`;
+          used = true;
+        }
+      }
+      if (b.minAge != null) {
+        g.age = `${b.minAge}+`;
+        used = true;
+      }
+      if (b.cats?.length) {
+        const existing = new Set((g.catText || "").split(",").map(s => s.trim()).filter(Boolean).map(s => s.toLowerCase()));
+        const merged = (g.catText ? g.catText.split(",").map(s => s.trim()).filter(Boolean) : []);
+        for (const cat of b.cats) {
+          if (!existing.has(cat.toLowerCase())) {
+            merged.push(cat);
+            existing.add(cat.toLowerCase());
+          }
+        }
+        if (merged.length) {
+          const newCatText = merged.join(", ");
+          if (newCatText !== g.catText) {
+            g.catText = newCatText;
+            g.cat = catSlugFor(g.catText);
+          }
+        }
+      }
+      if (b.bggId != null) { g.bggId = b.bggId; }
+      if (used) bggStatsUsed++; else sheetFallbackUsed++;
     }
-    console.log(`BGG map merged into ${merged} games`);
+    console.log(`BGG stats applied to ${bggStatsUsed} games; sheet fallback used for ${sheetFallbackUsed} linked games`);
   }
 
   if (!games.length) { console.log("No data from either source, leaving games.json untouched"); return; }

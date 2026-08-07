@@ -75,12 +75,22 @@ function parseItems(xml) {
     )].map(x => x[1].replace(/&amp;/g, "&").replace(/&#039;/g, "'").replace(/&quot;/g, '"'));
     const wm = body.match(/<averageweight[^>]*value="([\d.]+)"/);
     const am = body.match(/<average[^>]*value="([\d.]+)"/);
+    const minPlayers = body.match(/minplayers="(\d+)"/);
+    const maxPlayers = body.match(/maxplayers="(\d+)"/);
+    const minPlaytime = body.match(/minplaytime="(\d+)"/);
+    const maxPlaytime = body.match(/maxplaytime="(\d+)"/);
+    const minAge = body.match(/minage="(\d+)"/);
     out[m[1]] = {
+      bggId: Number(m[1]),
       cats: grab("boardgamecategory"),
       mechs: grab("boardgamemechanic"),
-      // rating and weight come free in the same response, so take them
       bgg: am ? Number(Number(am[1]).toFixed(1)) : null,
       weight: wm ? Number(Number(wm[1]).toFixed(2)) : null,
+      minPlayers: minPlayers ? Number(minPlayers[1]) : null,
+      maxPlayers: maxPlayers ? Number(maxPlayers[1]) : null,
+      minTime: minPlaytime ? Number(minPlaytime[1]) : null,
+      maxTime: maxPlaytime ? Number(maxPlaytime[1]) : null,
+      minAge: minAge ? Number(minAge[1]) : null,
     };
   }
   return out;
