@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 20 }
+        with: { node-version: 22 }
       - name: Fetch categories and mechanics from BGG
         env:
           SHEET_CSV_URL: ${{ vars.SHEET_CSV_URL }}

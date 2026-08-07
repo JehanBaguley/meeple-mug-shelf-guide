@@ -109,36 +109,43 @@ async function main() {
   let sheetRows = 0;
 
   if (SHEET_CSV_URL) {
-    const rows = parseCsv(await (await fetch(SHEET_CSV_URL)).text());
-    const head = rows.shift().map(h => h.toLowerCase().trim().replace(/[^a-z0-9]+/g, "_"));
-    const idx = (k) => head.indexOf(k);
-    const byName = Object.fromEntries(games.map(g => [norm(g.name), g]));
-    const lists = {};
-    for (const r of rows) {
-      const val = (k) => (idx(k) > -1 ? (r[idx(k)] || "").trim() : "");
-      const name = val("name"); if (!name) continue;
-      sheetRows++;
-      let g = byName[norm(name)];
-      if (!g) { g = { name, bggId: null, players: null, mins: null, time: null, age: null, catText: null, bgg: null, weight: null, playable: false, forSale: false, cat: null, mode: null, price: null, priceTxt: null, playsLike: null }; games.push(g); byName[norm(name)] = g; }
-      if (val("playable")) g.playable = /^y/i.test(val("playable"));
-      if (val("for_sale")) g.forSale = /^y/i.test(val("for_sale"));
-      if (val("expansion")) g.exp = /^y/i.test(val("expansion"));
-      if (val("price")) { const pr = val("price").trim(), pm = pr.match(/\d+/); g.price = pm ? parseInt(pm[0]) : null; g.priceTxt = /^[~$]/.test(pr) ? pr : "$" + pr; }
-      if (val("rating")) g.bgg = parseFloat(val("rating")) || g.bgg;
-      if (val("bgg_link")) { g.bggUrl = val("bgg_link"); const bm = val("bgg_link").match(/boardgame(?:expansion|accessory)?\/(\d+)/); if (bm) g.bggId = +bm[1]; }
-      if (val("price_text")) g.priceTxt = val("price_text");
-      if (val("blurb")) g.playsLike = val("blurb");
-      if (val("status")) g.status = val("status");
-      if (val("players")) g.players = parsePlayersTxt(val("players")) ?? g.players;
-      if (val("age")) g.age = val("age");
-      if (val("time")) { const t = parseTimeTxt(val("time")); if (t.time) { g.time = t.time; g.mins = t.mins; } }
-      if (val("category")) { g.catText = val("category"); g.cat = catSlugFor(g.catText); if (/co-?op|cooperative/i.test(g.catText)) g.mode = "coop"; if (/expansion|stretch goals/i.test(g.catText + " " + name)) g.exp = true; }
-      if (val("play_style")) g.mode = { "co-op": "coop", coop: "coop", teams: "team", team: "team", competitive: "comp", comp: "comp" }[norm(val("play_style"))] || g.mode;
-      const pb = val("pick_by") || val("badge_by") || val("rec_list"), pn = val("pick_note") || val("badge_note") || val("rec_note");
-      if (pb) { g.pickBy = pb; g.pickNote = pn; (lists[pb] ??= { list: pb, note: "", games: {} }).games[g.name] = pn; }
+    try {
+      const rows = parseCsv(await (await fetch(SHEET_CSV_URL)).text());
+      const head = rows.shift().map(h => h.toLowerCase().trim().replace(/[^a-z0-9]+/g, "_"));
+      const idx = (k) => head.indexOf(k);
+      const byName = Object.fromEntries(games.map(g => [norm(g.name), g]));
+      const lists = {};
+      for (const r of rows) {
+        const val = (k) => (idx(k) > -1 ? (r[idx(k)] || "").trim() : "");
+        const name = val("name"); if (!name) continue;
+        sheetRows++;
+        let g = byName[norm(name)];
+        if (!g) { g = { name, bggId: null, players: null, mins: null, time: null, age: null, catText: null, bgg: null, weight: null, playable: false, forSale: false, cat: null, mode: null, price: null, priceTxt: null, playsLike: null }; games.push(g); byName[norm(name)] = g; }
+        if (val("playable")) g.playable = /^y/i.test(val("playable"));
+        if (val("for_sale")) g.forSale = /^y/i.test(val("for_sale"));
+        if (val("expansion")) g.exp = /^y/i.test(val("expansion"));
+        if (val("price")) { const pr = val("price").trim(), pm = pr.match(/\d+/); g.price = pm ? parseInt(pm[0]) : null; g.priceTxt = /^[~$]/.test(pr) ? pr : "$" + pr; }
+        if (val("rating")) g.bgg = parseFloat(val("rating")) || g.bgg;
+        if (val("bgg_link")) { g.bggUrl = val("bgg_link"); const bm = val("bgg_link").match(/boardgame(?:expansion|accessory)?\/(\d+)/); if (bm) g.bggId = +bm[1]; }
+        if (val("price_text")) g.priceTxt = val("price_text");
+        if (val("blurb")) g.playsLike = val("blurb");
+        if (val("status")) g.status = val("status");
+        if (val("players")) g.players = parsePlayersTxt(val("players")) ?? g.players;
+        if (val("age")) g.age = val("age");
+        if (val("time")) { const t = parseTimeTxt(val("time")); if (t.time) { g.time = t.time; g.mins = t.mins; } }
+        if (val("category")) { g.catText = val("category"); g.cat = catSlugFor(g.catText); if (/co-?op|cooperative/i.test(g.catText)) g.mode = "coop"; if (/expansion|stretch goals/i.test(g.catText + " " + name)) g.exp = true; }
+        if (val("play_style")) g.mode = { "co-op": "coop", coop: "coop", teams: "team", team: "team", competitive: "comp", comp: "comp" }[norm(val("play_style"))] || g.mode;
+        const pb = val("pick_by") || val("badge_by") || val("rec_list"), pn = val("pick_note") || val("badge_note") || val("rec_note");
+        if (pb) { g.pickBy = pb; g.pickNote = pn; (lists[pb] ??= { list: pb, note: "", games: {} }).games[g.name] = pn; }
+      }
+      picks = Object.values(lists);
+      console.log(`Sheet overlay applied: ${sheetRows} rows, ${picks.length} pick lists`);
+    } catch (e) {
+      console.warn("Sheet overlay unavailable:", e);
+      // Leave `games` as-is (may be from BGG) and continue — don't let a
+      // failing sheet fetch abort the entire nightly build.
+      sheetRows = 0; picks = [];
     }
-    picks = Object.values(lists);
-    console.log(`Sheet overlay applied: ${sheetRows} rows, ${picks.length} pick lists`);
   }
 
   // merge the committed BGG ratings map (data/bgg.json) for games the API/dump matched
