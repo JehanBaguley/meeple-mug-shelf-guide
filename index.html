@@ -761,16 +761,18 @@ async function applySheet(){
         // "AUD 50" used to come out as "$Free" and "$AUD 50".
         g.priceTxt = /^[0-9.,\u2013-]+$/.test(pr) ? "$"+pr : pr;
       }
-      if(val("rating")) g.bgg = parseFloat(val("rating"))||g.bgg;
+      // Do not let the live sheet overwrite authoritative BGG stats.
+      if(val("rating") && (g.bgg===null || g.bgg===undefined)) g.bgg = parseFloat(val("rating"))||g.bgg;
       if(val("bgg_link")) { g.bggUrl = val("bgg_link"); const bm = val("bgg_link").match(/boardgame\/(\d+)/); if(bm) g.bggId = +bm[1]; }
       if(val("price_text")) g.priceTxt = val("price_text"); // e.g. "$80–110" for roll-the-dice pricing
       if(val("status")) g.status = val("status");
       if(val("blurb")) g.playsLike = val("blurb");
       const pb = val("pick_by")||val("badge_by")||val("rec_list"), pn = val("pick_note")||val("badge_note")||val("rec_note");
       if(pb) { g.pickBy = pb; g.pickNote = pn; (lists[pb] ??= {list:pb,note:"",games:{}}).games[g.name] = pn; }
-      if(val("players")) { const p = parsePlayersTxt(val("players")); if(p) g.players = p; else DBG.badPlayers.push(name+": "+val("players")); }
-      if(val("age")) { g.age = val("age"); if(!/\d/.test(val("age"))) DBG.badAge.push(name+": "+val("age")); }
-      if(val("time")) { const t = parseTimeTxt(val("time")); if(t.time===null) DBG.badTime.push(name+": "+val("time")); else { g.time = t.time; g.mins = t.mins; } }
+      // Only apply players/time/age from the sheet when we don't already have stats (BGG authoritative)
+      if(val("players") && !hasStats(g)) { const p = parsePlayersTxt(val("players")); if(p) g.players = p; else DBG.badPlayers.push(name+": "+val("players")); }
+      if(val("age") && (g.age===null || g.age===undefined)) { g.age = val("age"); if(!/\d/.test(val("age"))) DBG.badAge.push(name+": "+val("age")); }
+      if(val("time") && (g.mins===null || g.mins===undefined)) { const t = parseTimeTxt(val("time")); if(t.time===null) DBG.badTime.push(name+": "+val("time")); else { g.time = t.time; g.mins = t.mins; } }
       if(val("category")) { g.catText = val("category"); g.cat = catSlugFor(g.catText); if(/co-?op|cooperative/i.test(g.catText)) g.mode = "coop"; }
       if(val("play_style")) g.mode = ({"co-op":"coop",coop:"coop",teams:"team",team:"team",competitive:"comp",comp:"comp"})[norm(val("play_style"))] || g.mode;
     }
