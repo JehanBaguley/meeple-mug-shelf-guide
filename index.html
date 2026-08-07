@@ -465,7 +465,7 @@
     <p class="note">
       <span class="bggcredit">
         <a href="https://boardgamegeek.com" target="_blank" rel="noopener">
-          <img src="assets/powered-by-bgg.png" alt="BoardGameGeek logo" id="bggLogo" hidden style="height:15px;width:auto;vertical-align:-3px;margin-right:6px">Powered by BoardGameGeek
+          <img data-src="assets/powered-by-bgg.png" alt="BoardGameGeek logo" id="bggLogo" hidden style="height:15px;width:auto;vertical-align:-3px;margin-right:6px">Powered by BoardGameGeek
         </a>
       </span>
       <!-- Image is hidden until assets/powered-by-bgg.png is added. Text-only
@@ -665,30 +665,44 @@ function clearFilter(key){
 function wireDual(loId, hiId, fillId, loKey, hiKey, min, max, vt){
   let redirect = null; // when handles sit on the same value, reroute the drag to the one that can still move
   const clear = () => { redirect = null; };
-  $(loId).addEventListener("input", e => {
-    const v = +e.target.value;
-    if(redirect === "hi"){ state[hiKey] = Math.max(v, state[loKey]); }
-    else if(state[loKey] === state[hiKey] && v > state[hiKey]){ redirect = "hi"; state[hiKey] = v; }
-    else { state[loKey] = Math.min(v, state[hiKey]); }
-    render();
+  const loEl = $(loId);
+  const hiEl = $(hiId);
+  const fillEl = $(fillId);
+  if(loEl){
+    loEl.addEventListener("input", e => {
+      const v = +e.target.value;
+      if(redirect === "hi"){ state[hiKey] = Math.max(v, state[loKey]); }
+      else if(state[loKey] === state[hiKey] && v > state[hiKey]){ redirect = "hi"; state[hiKey] = v; }
+      else { state[loKey] = Math.min(v, state[hiKey]); }
+      render();
+    });
+  }
+  if(hiEl){
+    hiEl.addEventListener("input", e => {
+      const v = +e.target.value;
+      if(redirect === "lo"){ state[loKey] = Math.min(v, state[hiKey]); }
+      else if(state[loKey] === state[hiKey] && v < state[loKey]){ redirect = "lo"; state[loKey] = v; }
+      else { state[hiKey] = Math.max(v, state[loKey]); }
+      render();
+    });
+  }
+  ["pointerup","touchend","mouseup","change"].forEach(ev => {
+    if(loEl) loEl.addEventListener(ev, clear);
+    if(hiEl) hiEl.addEventListener(ev, clear);
   });
-  $(hiId).addEventListener("input", e => {
-    const v = +e.target.value;
-    if(redirect === "lo"){ state[loKey] = Math.min(v, state[hiKey]); }
-    else if(state[loKey] === state[hiKey] && v < state[loKey]){ redirect = "lo"; state[loKey] = v; }
-    else { state[hiKey] = Math.max(v, state[loKey]); }
-    render();
-  });
-  ["pointerup","touchend","mouseup","change"].forEach(ev => { $(loId).addEventListener(ev, clear); $(hiId).addEventListener(ev, clear); });
   return () => {
-    $(loId).value = state[loKey]; $(hiId).value = state[hiKey];
+    const lo = $(loId);
+    const hi = $(hiId);
+    const fill = $(fillId);
+    if(!lo || !hi) return;
+    lo.value = state[loKey]; hi.value = state[hiKey];
     const a = ((state[loKey]-min)/(max-min))*100, b = ((state[hiKey]-min)/(max-min))*100;
-    $(fillId).style.left = a+"%"; $(fillId).style.right = (100-b)+"%";
-    $(loId).style.zIndex = state[loKey] > (min+max)/2 ? 3 : 2;
+    if(fill){ fill.style.left = a+"%"; fill.style.right = (100-b)+"%"; }
+    lo.style.zIndex = state[loKey] > (min+max)/2 ? 3 : 2;
     // the raw slider value is a bucket index for time; announce the real thing
     if(vt){
-      $(loId).setAttribute("aria-valuetext","minimum "+vt(state[loKey]));
-      $(hiId).setAttribute("aria-valuetext","maximum "+vt(state[hiKey]));
+      lo.setAttribute("aria-valuetext","minimum "+vt(state[loKey]));
+      hi.setAttribute("aria-valuetext","maximum "+vt(state[hiKey]));
     }
   };
 }
@@ -1218,7 +1232,12 @@ function placeReset(){
 }
 placeReset();window.addEventListener("resize",placeReset);
 document.addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(b){
-  if(b.dataset.seg!=="buy"&&(state.pLo>0||state.pHi<200)){state.pLo=0;state.pHi=200;$("minPrice").value=0;$("maxPrice").value=200;}
+  if(b.dataset.seg!=="buy"&&(state.pLo>0||state.pHi<200)){
+    state.pLo=0;state.pHi=200;
+    const minPrice = $("minPrice"); const maxPrice = $("maxPrice");
+    if(minPrice) minPrice.value = 0;
+    if(maxPrice) maxPrice.value = 200;
+  }
   state.seg=b.dataset.seg;render()}});
 // shadow appears only once a sticky bar is actually pinned (its top hits 0), not at rest
 function stickShadows(){
@@ -1234,6 +1253,16 @@ const paints = [
   wireDual("minAge","maxAge","ageFill","aLo","aHi",4,18,v=>"ages "+v+" and up"),
   wireDual("minPrice","maxPrice","priceFill","pLo","pHi",0,200,v=>"$"+v),
 ];
+function loadBggLogo(){
+  const logo = $("bggLogo");
+  if(!logo) return;
+  const src = logo.dataset.src;
+  if(!src) return;
+  logo.src = src;
+  logo.hidden = false;
+  logo.addEventListener("error", ()=>{ logo.hidden = true; });
+}
+loadBggLogo();
 function resetAll(){
   Object.assign(state, {seg:"all",pick:null,minSeats:1,maxSeats:10,tLo:0,tHi:8,aLo:4,aHi:18,tags:{},tagMode:"any",playStyle:"any",pLo:0,pHi:200,query:"",genreQuery:"",showAllGenres:false,showAllPicks:false,sortTouched:false,limit:PAGE});
   $("search").value = ""; $("genreSearch").value = "";
