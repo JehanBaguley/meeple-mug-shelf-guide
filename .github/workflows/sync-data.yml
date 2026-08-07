@@ -1,7 +1,7 @@
 name: Sync catalogue data
 on:
   schedule:
-    - cron: "0 17 * * *"   # 3am AEST nightly
+    - cron: "0 17 * * *"   # 3am AEST nightly (UTC 17:00) — Brisbane local time (AEST, UTC+10). Note: Queensland does not observe DST.
   workflow_dispatch: {}
 permissions:
   contents: write

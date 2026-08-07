@@ -7,12 +7,24 @@
 <link rel="apple-touch-icon" href="icon.png" />
 <meta name="theme-color" content="#22352c" />
 <title>Meeple &amp; Mug · Shelf Guide</title>
+  <meta name="description" content="Meeple & Mug shelf guide — browse every game we have, see playtime, players and community ratings." />
+  <!-- Open Graph / Social preview -->
+  <meta property="og:title" content="Meeple &amp; Mug · Shelf Guide" />
+  <meta property="og:description" content="Browse every game on our shelf — play here or take a copy home. Updated nightly." />
+  <meta property="og:image" content="https://meepleandmug.com.au/icon.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meeple &amp; Mug · Shelf Guide" />
+  <meta name="twitter:description" content="Browse every game on our shelf — play here or take a copy home. Updated nightly." />
+  <meta name="twitter:image" content="https://meepleandmug.com.au/icon.png" />
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;600&display=swap');
   :root{--bg:#123a24;--bg-deep:#0c2a19;--card:#f4ead2;--card-edge:#dccdaa;--timber:#c9a06b;--timber-light:#dcb98a;
     --red:#c8452e;--amber:#d8d848;--ink:#2b2419;--ink-soft:#6b6150;--cream:#ece5d3;--muted:#9dc0a8;--line:rgba(236,229,211,.16)}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--cream);font-family:'Bricolage Grotesque',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  /* Avoid horizontal scrolling on small screens */
+  html,body{max-width:100%;overflow-x:hidden}
   .mono{font-family:'IBM Plex Mono',monospace}
   a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--amber);outline-offset:2px;border-radius:6px}
   /* links + buttons that sit on the cream cards need a dark ring for contrast */
@@ -1092,7 +1104,12 @@ async function boot(){
   try{
     const r = await fetch("data/games.json",{cache:"no-store"});
     if(r.ok){ const j = await r.json(); if(j.games?.length) DATA = j; }
-  }catch(e){}
+    else {
+      const n = $("feedNote"); if(n){ n.hidden = false; n.textContent = "Couldn't load the shelf; check your connection and refresh."; }
+    }
+  }catch(e){
+    const n = $("feedNote"); if(n){ n.hidden = false; n.textContent = "Couldn't load the shelf; check your connection and refresh."; }
+  }
   tagAll(DATA.games);
   $("search").placeholder = "Search "+DATA.games.length+" games\u2026";
   loadState(); syncInputs(); // restore filters from URL / localStorage, then mirror into the inputs
