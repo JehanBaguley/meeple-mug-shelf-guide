@@ -1,1 +1,5646 @@
-{}
+{
+ "20 Questions": {
+  "bggId": 3377,
+  "cats": [
+   "Deduction",
+   "Party Game",
+   "Trivia"
+  ],
+  "mechs": [],
+  "bgg": 5.8,
+  "weight": 1.3
+ },
+ "3 Ring Circus": {
+  "bggId": 371947,
+  "cats": [],
+  "mechs": [
+   "Area Majority / Influence",
+   "End Game Bonuses",
+   "Hand Management",
+   "Movement Points",
+   "Point to Point Movement"
+  ],
+  "bgg": 7.2,
+  "weight": 2.76
+ },
+ "5 Minute Marvel": {
+  "bggId": 253618,
+  "cats": [
+   "Card Game",
+   "Comic Book / Strip",
+   "Fighting",
+   "Real-time"
+  ],
+  "mechs": [
+   "Card Play Conflict Resolution",
+   "Cooperative Game",
+   "Hand Management",
+   "Real-Time",
+   "Variable Player Powers"
+  ],
+  "bgg": 6.7,
+  "weight": 1.14
+ },
+ "5 Second Rule": {
+  "bggId": 86073,
+  "cats": [
+   "Card Game",
+   "Party Game",
+   "Trivia"
+  ],
+  "mechs": [
+   "Action Timer",
+   "Real-Time"
+  ],
+  "bgg": 5.5,
+  "weight": 1.1
+ },
+ "7 Wonders": {
+  "bggId": 68448,
+  "cats": [
+   "Ancient",
+   "Card Game",
+   "City Building",
+   "Civilization",
+   "Economic"
+  ],
+  "mechs": [
+   "Closed Drafting",
+   "End Game Bonuses",
+   "Hand Management",
+   "Melding and Splaying",
+   "Multi-Use Cards",
+   "Neighbor Scope",
+   "Once-Per-Game Abilities",
+   "Score-and-Reset Game",
+   "Set Collection",
+   "Simultaneous Action Selection",
+   "Tags",
+   "Tech Trees / Tech Tracks",
+   "Variable Player Powers",
+   "Variable Set-up"
+  ],
+  "bgg": 7.7,
+  "weight": 2.31
+ },
+ "7 Wonders Duel": {
+  "bggId": 173346,
+  "cats": [
+   "Ancient",
+   "Card Game",
+   "City Building",
+   "Civilization",
+   "Economic"
+  ],
+  "mechs": [
+   "End Game Bonuses",
+   "Income",
+   "Melding and Splaying",
+   "Modular Board",
+   "Multi-Use Cards",
+   "Once-Per-Game Abilities",
+   "Open Drafting",
+   "Score-and-Reset Game",
+   "Set Collection",
+   "Sudden Death Ending",
+   "Tags",
+   "Tech Trees / Tech Tracks",
+   "Track Movement",
+   "Tug of War",
+   "Variable Set-up"
+  ],
+  "bgg": 8.1,
+  "weight": 2.23
+ },
+ "A Game Called Birds": {
+  "bggId": 436363,
+  "cats": [
+   "Animals",
+   "Bluffing",
+   "Card Game",
+   "Educational",
+   "Environmental",
+   "Math",
+   "Number"
+  ],
+  "mechs": [
+   "Card Play Conflict Resolution",
+   "Roll / Spin and Move"
+  ],
+  "bgg": 7.4,
+  "weight": 2.25
+ },
+ "A Game of Thrones 2nd Edition": {
+  "bggId": 103343,
+  "cats": [
+   "Bluffing",
+   "Fantasy",
+   "Negotiation",
+   "Novel-based",
+   "Political",
+   "Wargame"
+  ],
+  "mechs": [
+   "Advantage Token",
+   "Alliances",
+   "Area Movement",
+   "Auction / Bidding",
+   "Auction: Sealed Bid",
+   "Card Play Conflict Resolution",
+   "Events",
+   "Hand Management",
+   "Income",
+   "Negotiation",
+   "Order Counters",
+   "Player Elimination",
+   "Simultaneous Action Selection",
+   "Sudden Death Ending",
+   "Turn Order: Auction",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.5,
+  "weight": 3.74
+ },
+ "A Little Wordy": {
+  "bggId": 335869,
+  "cats": [
+   "Deduction",
+   "Word Game"
+  ],
+  "mechs": [
+   "Questions and Answers"
+  ],
+  "bgg": 6.7,
+  "weight": 1.26
+ },
+ "A&A: Pacific 1940": {
+  "bggId": 55829,
+  "cats": [
+   "Economic",
+   "Wargame",
+   "World War II"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Area Movement",
+   "Dice Rolling",
+   "Simulation",
+   "Team-Based Game"
+  ],
+  "bgg": 7.5,
+  "weight": 3.55
+ },
+ "Adventure Time: Card Wars": {
+  "bggId": 144728,
+  "cats": [
+   "Card Game",
+   "Humor",
+   "Movies / TV / Radio theme"
+  ],
+  "mechs": [
+   "Hand Management"
+  ],
+  "bgg": 6.1,
+  "weight": 1.72
+ },
+ "Aethermon": {
+  "bggId": 388721,
+  "cats": [
+   "Animals",
+   "Card Game",
+   "Fantasy",
+   "Print & Play"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Grid Movement",
+   "Map Reduction",
+   "Set Collection",
+   "Solo / Solitaire Game"
+  ],
+  "bgg": 6.6,
+  "weight": 1.25
+ },
+ "Agricola": {
+  "bggId": 31260,
+  "cats": [
+   "Animals",
+   "Economic",
+   "Farming"
+  ],
+  "mechs": [
+   "Automatic Resource Growth",
+   "Closed Drafting",
+   "Enclosure",
+   "Increase Value of Unchosen Resources",
+   "Solo / Solitaire Game",
+   "Turn Order: Claim Action",
+   "Worker Placement"
+  ],
+  "bgg": 7.9,
+  "weight": 3.64
+ },
+ "Alchemists": {
+  "bggId": 161970,
+  "cats": [
+   "Deduction",
+   "Fantasy",
+   "Puzzle"
+  ],
+  "mechs": [
+   "Action Drafting",
+   "Constrained Bidding",
+   "Deduction",
+   "End Game Bonuses",
+   "Events",
+   "Hand Management",
+   "Open Drafting",
+   "Turn Order: Progressive",
+   "Worker Placement"
+  ],
+  "bgg": 7.6,
+  "weight": 3.92
+ },
+ "Anomia": {
+  "bggId": 67877,
+  "cats": [
+   "Party Game",
+   "Real-time",
+   "Trivia",
+   "Word Game"
+  ],
+  "mechs": [
+   "Pattern Recognition",
+   "Speed Matching"
+  ],
+  "bgg": 6.7,
+  "weight": 1.05
+ },
+ "Aquaduck": {
+  "bggId": 434415,
+  "cats": [
+   "Card Game",
+   "City Building",
+   "Civilization",
+   "Puzzle"
+  ],
+  "mechs": [
+   "Deck Construction",
+   "End Game Bonuses",
+   "Hand Management",
+   "Physical Removal",
+   "Variable Player Powers"
+  ],
+  "bgg": 9.5,
+  "weight": 3
+ },
+ "Arboretum": {
+  "bggId": 140934,
+  "cats": [
+   "Card Game",
+   "Number"
+  ],
+  "mechs": [
+   "Connections",
+   "Hand Management",
+   "Move Through Deck",
+   "Open Drafting",
+   "Ordering",
+   "Pattern Building",
+   "Set Collection",
+   "Square Grid"
+  ],
+  "bgg": 7.2,
+  "weight": 2.11
+ },
+ "Arcs": {
+  "bggId": 359871,
+  "cats": [
+   "Science Fiction",
+   "Space Exploration",
+   "Wargame"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Area Movement",
+   "Campaign / Battle Card Driven",
+   "Dice Rolling",
+   "Die Icon Resolution",
+   "Hand Management",
+   "Negotiation",
+   "Resource to Move",
+   "Take That",
+   "Trick-taking",
+   "Turn Order: Claim Action",
+   "Variable Player Powers"
+  ],
+  "bgg": 8,
+  "weight": 3.45
+ },
+ "Arcs: The Blighted Reach": {
+  "bggId": 363757,
+  "cats": [
+   "Expansion for Base-game",
+   "Negotiation",
+   "Science Fiction"
+  ],
+  "mechs": [
+   "Area Movement",
+   "Campaign / Battle Card Driven",
+   "Dice Rolling",
+   "Negotiation",
+   "Take That",
+   "Trick-taking",
+   "Turn Order: Claim Action"
+  ],
+  "bgg": 8.9,
+  "weight": 4.55
+ },
+ "Ark Nova": {
+  "bggId": 342942,
+  "cats": [
+   "Animals",
+   "Card Game",
+   "Environmental"
+  ],
+  "mechs": [
+   "Contracts",
+   "End Game Bonuses",
+   "Events",
+   "Grid Coverage",
+   "Hand Management",
+   "Hexagon Grid",
+   "Income",
+   "Increase Value of Unchosen Resources",
+   "Open Drafting",
+   "Race",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Tags",
+   "Tile Placement",
+   "Track Movement",
+   "Variable Player Powers",
+   "Variable Set-up"
+  ],
+  "bgg": 8.5,
+  "weight": 3.8
+ },
+ "Art Decko": {
+  "bggId": 260316,
+  "cats": [
+   "Card Game",
+   "Economic"
+  ],
+  "mechs": [
+   "Commodity Speculation",
+   "Deck, Bag, and Pool Building"
+  ],
+  "bgg": 6.8,
+  "weight": 2.22
+ },
+ "AssassinCon": {
+  "bggId": 154778,
+  "cats": [
+   "Deduction",
+   "Murder / Mystery",
+   "Spies / Secret Agents"
+  ],
+  "mechs": [
+   "Player Elimination",
+   "Point to Point Movement",
+   "Secret Unit Deployment",
+   "Simultaneous Action Selection"
+  ],
+  "bgg": 5.7,
+  "weight": 1
+ },
+ "Asteroyds": {
+  "bggId": 65200,
+  "cats": [
+   "Real-time",
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "mechs": [
+   "Action Queue",
+   "Dice Rolling",
+   "Grid Movement",
+   "Modular Board",
+   "Player Elimination",
+   "Programmed Movement",
+   "Race",
+   "Real-Time",
+   "Set Collection",
+   "Simultaneous Action Selection",
+   "Team-Based Game",
+   "Variable Player Powers"
+  ],
+  "bgg": 6.3,
+  "weight": 2.15
+ },
+ "AutoCorrect": {
+  "bggId": 452407,
+  "cats": [
+   "Puzzle",
+   "Word Game"
+  ],
+  "mechs": [
+   "Deduction"
+  ],
+  "bgg": 4,
+  "weight": 0
+ },
+ "Avalon": {
+  "bggId": 128882,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Fantasy",
+   "Medieval",
+   "Negotiation",
+   "Party Game",
+   "Spies / Secret Agents"
+  ],
+  "mechs": [
+   "Finale Ending",
+   "Hidden Roles",
+   "Roles with Asymmetric Information",
+   "Simultaneous Action Selection",
+   "Team-Based Game",
+   "Traitor Game",
+   "Variable Player Powers",
+   "Voting"
+  ],
+  "bgg": 7.5,
+  "weight": 1.74
+ },
+ "Awkward Guests - The Mr Walton Case": {
+  "bggId": 188866,
+  "cats": [
+   "Card Game",
+   "Deduction",
+   "Movies / TV / Radio theme",
+   "Murder / Mystery"
+  ],
+  "mechs": [
+   "Deduction",
+   "Hand Management",
+   "Trading"
+  ],
+  "bgg": 7.5,
+  "weight": 2.32
+ },
+ "Axis & Allies (1942)": {
+  "bggId": 41863,
+  "cats": [
+   "Economic",
+   "Wargame",
+   "World War II"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Area Movement",
+   "Dice Rolling",
+   "Income",
+   "Simulation",
+   "Team-Based Game"
+  ],
+  "bgg": 6.9,
+  "weight": 3.16
+ },
+ "Azul": {
+  "bggId": 230802,
+  "cats": [
+   "Abstract Strategy",
+   "Renaissance"
+  ],
+  "mechs": [
+   "Chaining",
+   "End Game Bonuses",
+   "Grid Coverage",
+   "Open Drafting",
+   "Pattern Building",
+   "Set Collection",
+   "Square Grid",
+   "Tile Placement",
+   "Turn Order: Claim Action"
+  ],
+  "bgg": 7.7,
+  "weight": 1.77
+ },
+ "Backgammon": {
+  "bggId": 2397,
+  "cats": [
+   "Abstract Strategy",
+   "Dice"
+  ],
+  "mechs": [
+   "Betting and Bluffing",
+   "Dice Rolling",
+   "Lose a Turn",
+   "Race",
+   "Roll / Spin and Move",
+   "Score-and-Reset Game",
+   "Static Capture",
+   "Track Movement"
+  ],
+  "bgg": 6.6,
+  "weight": 2
+ },
+ "Balderdash": {
+  "bggId": 163,
+  "cats": [
+   "Bluffing",
+   "Party Game",
+   "Word Game"
+  ],
+  "mechs": [
+   "Paper-and-Pencil",
+   "Voting"
+  ],
+  "bgg": 6.5,
+  "weight": 1.39
+ },
+ "BANG! Old Saloon expansion": {
+  "bggId": 193614,
+  "cats": [
+   "American West",
+   "Bluffing",
+   "Deduction",
+   "Dice",
+   "Expansion for Base-game",
+   "Fighting",
+   "Party Game"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Player Elimination",
+   "Team-Based Game",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.5,
+  "weight": 1.67
+ },
+ "BANG! The Card Game": {
+  "bggId": 3955,
+  "cats": [
+   "American West",
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Fighting"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Hidden Roles",
+   "Hot Potato",
+   "Kill Steal",
+   "Player Elimination",
+   "Take That",
+   "Team-Based Game",
+   "Variable Player Powers"
+  ],
+  "bgg": 6.5,
+  "weight": 1.63
+ },
+ "BANG! The Dice Game": {
+  "bggId": 143741,
+  "cats": [
+   "American West",
+   "Bluffing",
+   "Deduction",
+   "Dice",
+   "Fighting",
+   "Party Game"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Die Icon Resolution",
+   "Hidden Roles",
+   "Player Elimination",
+   "Push Your Luck",
+   "Re-rolling and Locking",
+   "Team-Based Game",
+   "Variable Player Powers"
+  ],
+  "bgg": 6.9,
+  "weight": 1.28
+ },
+ "Barcelona": {
+  "bggId": 383607,
+  "cats": [
+   "City Building"
+  ],
+  "mechs": [
+   "End Game Bonuses",
+   "Tile Placement",
+   "Worker Placement"
+  ],
+  "bgg": 7.7,
+  "weight": 3.36
+ },
+ "Betrayal at Baldur's Gate": {
+  "bggId": 228660,
+  "cats": [
+   "Adventure",
+   "Exploration",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Map Addition",
+   "Modular Board",
+   "Role Playing",
+   "Storytelling",
+   "Team-Based Game",
+   "Traitor Game",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.1,
+  "weight": 2.58
+ },
+ "Betrayal at House on the Hill": {
+  "bggId": 10547,
+  "cats": [
+   "Adventure",
+   "Exploration",
+   "Horror"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Map Addition",
+   "Modular Board",
+   "Player Elimination",
+   "Role Playing",
+   "Storytelling",
+   "Team-Based Game",
+   "Traitor Game",
+   "Variable Player Powers"
+  ],
+  "bgg": 7,
+  "weight": 2.4
+ },
+ "Beyond the Sun": {
+  "bggId": 317985,
+  "cats": [
+   "Civilization",
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Contracts",
+   "End Game Bonuses",
+   "Events",
+   "Income",
+   "Point to Point Movement",
+   "Tech Trees / Tech Tracks",
+   "Worker Placement"
+  ],
+  "bgg": 7.9,
+  "weight": 3.15
+ },
+ "Bigger is Better": {
+  "bggId": 297123,
+  "cats": [
+   "Trivia"
+  ],
+  "mechs": [],
+  "bgg": 5.6,
+  "weight": 1
+ },
+ "Bitoku": {
+  "bggId": 323612,
+  "cats": [
+   "Fantasy",
+   "Mythology"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Deck, Bag, and Pool Building",
+   "End Game Bonuses",
+   "Hand Management",
+   "Income",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Turn Order: Claim Action",
+   "Worker Placement with Dice Workers"
+  ],
+  "bgg": 7.8,
+  "weight": 3.76
+ },
+ "Black Mirror Nose Dive": {
+  "bggId": 265316,
+  "cats": [
+   "Card Game",
+   "Movies / TV / Radio theme"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Open Drafting",
+   "Set Collection",
+   "Voting",
+   "Worker Placement"
+  ],
+  "bgg": 4,
+  "weight": 1.8
+ },
+ "Block Party": {
+  "bggId": 379300,
+  "cats": [
+   "Action / Dexterity",
+   "Party Game"
+  ],
+  "mechs": [
+   "Pattern Recognition",
+   "Semi-Cooperative Game"
+  ],
+  "bgg": 6.6,
+  "weight": 1
+ },
+ "Blokus": {
+  "bggId": 2453,
+  "cats": [
+   "Abstract Strategy",
+   "Territory Building"
+  ],
+  "mechs": [
+   "Chaining",
+   "Enclosure",
+   "Grid Coverage",
+   "Hand Management",
+   "Player Elimination",
+   "Square Grid",
+   "Tile Placement"
+  ],
+  "bgg": 6.9,
+  "weight": 1.73
+ },
+ "Blood on the Clocktower": {
+  "bggId": 240980,
+  "cats": [
+   "Bluffing",
+   "Deduction",
+   "Murder / Mystery",
+   "Party Game"
+  ],
+  "mechs": [
+   "Betting and Bluffing",
+   "Deduction",
+   "Hidden Roles",
+   "Negotiation",
+   "Prisoner's Dilemma",
+   "Rock-Paper-Scissors",
+   "Roles with Asymmetric Information",
+   "Team-Based Game",
+   "Traitor Game",
+   "Variable Player Powers",
+   "Voting"
+  ],
+  "bgg": 8.3,
+  "weight": 3.02
+ },
+ "Bohnanza: 25th Anniversary Edition": {
+  "bggId": 11,
+  "cats": [
+   "Card Game",
+   "Farming",
+   "Negotiation"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Multi-Use Cards",
+   "Negotiation",
+   "Set Collection",
+   "Trading"
+  ],
+  "bgg": 7.1,
+  "weight": 1.67
+ },
+ "boop.": {
+  "bggId": 355433,
+  "cats": [
+   "Abstract Strategy",
+   "Animals"
+  ],
+  "mechs": [
+   "Grid Movement",
+   "Pattern Building",
+   "Race",
+   "Slide / Push",
+   "Square Grid",
+   "Take That"
+  ],
+  "bgg": 7,
+  "weight": 1.37
+ },
+ "Brass Birmingham": {
+  "bggId": 224517,
+  "cats": [
+   "Age of Reason",
+   "Economic",
+   "Industry / Manufacturing",
+   "Post-Napoleonic",
+   "Trains",
+   "Transportation"
+  ],
+  "mechs": [
+   "Chaining",
+   "End Game Bonuses",
+   "Hand Management",
+   "Income",
+   "Loans",
+   "Market",
+   "Multi-Use Cards",
+   "Network and Route Building",
+   "Ownership",
+   "Tags",
+   "Tech Trees / Tech Tracks",
+   "Tile Placement",
+   "Turn Order: Stat-Based",
+   "Variable Set-up"
+  ],
+  "bgg": 8.6,
+  "weight": 3.86
+ },
+ "Brew Crafters": {
+  "bggId": 139898,
+  "cats": [
+   "Economic",
+   "Industry / Manufacturing"
+  ],
+  "mechs": [
+   "End Game Bonuses",
+   "Variable Set-up",
+   "Worker Placement"
+  ],
+  "bgg": 7.4,
+  "weight": 3.59
+ },
+ "Cape May": {
+  "bggId": 281248,
+  "cats": [
+   "City Building",
+   "Economic"
+  ],
+  "mechs": [
+   "Action Points",
+   "Area Majority / Influence",
+   "Hand Management",
+   "Point to Point Movement",
+   "Set Collection",
+   "Solo / Solitaire Game"
+  ],
+  "bgg": 7.2,
+  "weight": 2.45
+ },
+ "Caravan": {
+  "bggId": 269789,
+  "cats": [
+   "Abstract Strategy",
+   "Arabian"
+  ],
+  "mechs": [
+   "Action Points",
+   "Grid Movement",
+   "Pick-up and Deliver",
+   "Take That"
+  ],
+  "bgg": 6.6,
+  "weight": 1.77
+ },
+ "Carcassonne": {
+  "bggId": 822,
+  "cats": [
+   "Medieval",
+   "Territory Building"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Enclosure",
+   "Kill Steal",
+   "Map Addition",
+   "Pattern Building",
+   "Square Grid",
+   "Tile Placement"
+  ],
+  "bgg": 7.4,
+  "weight": 1.88
+ },
+ "Cards Against Humanity": {
+  "bggId": 50381,
+  "cats": [
+   "Card Game",
+   "Humor",
+   "Mature / Adult",
+   "Party Game",
+   "Print & Play"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Player Judge",
+   "Simultaneous Action Selection"
+  ],
+  "bgg": 5.7,
+  "weight": 1.17
+ },
+ "Carnegie": {
+  "bggId": 310873,
+  "cats": [
+   "Economic",
+   "Industry / Manufacturing",
+   "Post-Napoleonic"
+  ],
+  "mechs": [
+   "Action Retrieval",
+   "Area Movement",
+   "Connections",
+   "End Game Bonuses",
+   "Follow",
+   "Grid Movement",
+   "Income",
+   "Movement Points",
+   "Network and Route Building",
+   "Resource to Move",
+   "Solo / Solitaire Game",
+   "Square Grid",
+   "Tech Trees / Tech Tracks",
+   "Turn Order: Progressive",
+   "Variable Phase Order",
+   "Worker Placement, Different Worker Types"
+  ],
+  "bgg": 8,
+  "weight": 3.82
+ },
+ "Cascadero": {
+  "bggId": 401216,
+  "cats": [
+   "Abstract Strategy",
+   "Renaissance"
+  ],
+  "mechs": [
+   "Chaining",
+   "Connections",
+   "Hexagon Grid",
+   "Network and Route Building",
+   "Once-Per-Game Abilities",
+   "Track Movement"
+  ],
+  "bgg": 7.3,
+  "weight": 2.55
+ },
+ "Cascadia": {
+  "bggId": 295947,
+  "cats": [
+   "Animals",
+   "Environmental"
+  ],
+  "mechs": [
+   "Chaining",
+   "End Game Bonuses",
+   "Hexagon Grid",
+   "Open Drafting",
+   "Pattern Building",
+   "Solo / Solitaire Game",
+   "Tile Placement",
+   "Variable Set-up"
+  ],
+  "bgg": 7.9,
+  "weight": 1.84
+ },
+ "Cascadito": {
+  "bggId": 401217,
+  "cats": [
+   "Renaissance"
+  ],
+  "mechs": [
+   "Chaining",
+   "Connections",
+   "Dice Rolling",
+   "Hexagon Grid",
+   "Open Drafting",
+   "Paper-and-Pencil",
+   "Solo / Solitaire Game",
+   "Tile Placement",
+   "Track Movement"
+  ],
+  "bgg": 6.5,
+  "weight": 1.8
+ },
+ "Casting Shadows": {
+  "bggId": 359502,
+  "cats": [
+   "Abstract Strategy",
+   "Animals",
+   "Children's Game",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Action Points",
+   "Area Movement",
+   "Dice Rolling",
+   "Hexagon Grid",
+   "Player Elimination"
+  ],
+  "bgg": 6.3,
+  "weight": 2.27
+ },
+ "Castle Combo": {
+  "bggId": 416851,
+  "cats": [
+   "Card Game",
+   "Medieval"
+  ],
+  "mechs": [
+   "End Game Bonuses",
+   "Multi-Use Cards",
+   "Open Drafting",
+   "Set Collection",
+   "Tags",
+   "Tile Placement"
+  ],
+  "bgg": 7.7,
+  "weight": 1.74
+ },
+ "Catan Settlers of America": {
+  "bggId": 67239,
+  "cats": [
+   "Civilization",
+   "Exploration",
+   "Negotiation",
+   "Trains"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Hand Management",
+   "Network and Route Building",
+   "Trading"
+  ],
+  "bgg": 6.8,
+  "weight": 2.69
+ },
+ "Catan The Settlers": {
+  "bggId": 13,
+  "cats": [
+   "Economic",
+   "Negotiation"
+  ],
+  "mechs": [
+   "Chaining",
+   "Dice Rolling",
+   "Hand Management",
+   "Hexagon Grid",
+   "Hidden Victory Points",
+   "Income",
+   "Market",
+   "Modular Board",
+   "Network and Route Building",
+   "Race",
+   "Random Production",
+   "Take That",
+   "Trading",
+   "Variable Set-up"
+  ],
+  "bgg": 7.1,
+  "weight": 2.28
+ },
+ "CDMC 3000": {
+  "bggId": 25695,
+  "cats": [
+   "Action / Dexterity",
+   "Real-time"
+  ],
+  "mechs": [],
+  "bgg": 6.2,
+  "weight": 1.09
+ },
+ "Chameleon Game": {
+  "bggId": 227072,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Humor",
+   "Party Game",
+   "Word Game"
+  ],
+  "mechs": [
+   "Hidden Roles",
+   "Targeted Clues",
+   "Team-Based Game",
+   "Voting"
+  ],
+  "bgg": 6.5,
+  "weight": 1.05
+ },
+ "Champions of Midgard": {
+  "bggId": 172287,
+  "cats": [
+   "Adventure",
+   "Dice",
+   "Fantasy",
+   "Fighting",
+   "Medieval",
+   "Mythology"
+  ],
+  "mechs": [
+   "Contracts",
+   "Dice Rolling",
+   "End Game Bonuses",
+   "Income",
+   "Increase Value of Unchosen Resources",
+   "Set Collection",
+   "Turn Order: Claim Action",
+   "Variable Player Powers",
+   "Worker Placement"
+  ],
+  "bgg": 7.7,
+  "weight": 2.62
+ },
+ "Chess": {
+  "bggId": 171,
+  "cats": [
+   "Abstract Strategy"
+  ],
+  "mechs": [
+   "Grid Movement",
+   "Once-Per-Game Abilities",
+   "Pattern Movement",
+   "Square Grid",
+   "Static Capture",
+   "Sudden Death Ending"
+  ],
+  "bgg": 7.2,
+  "weight": 3.64
+ },
+ "Chucky (Child's Play)": {
+  "bggId": 405696,
+  "cats": [
+   "Horror",
+   "Movies / TV / Radio theme"
+  ],
+  "mechs": [],
+  "bgg": 7,
+  "weight": 2
+ },
+ "Citadels": {
+  "bggId": 478,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "City Building",
+   "Deduction",
+   "Fantasy",
+   "Medieval"
+  ],
+  "mechs": [
+   "Action Drafting",
+   "Closed Drafting",
+   "Income",
+   "Lose a Turn",
+   "Set Collection",
+   "Take That",
+   "Turn Order: Role Order",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.1,
+  "weight": 2.05
+ },
+ "Clank": {
+  "bggId": 201808,
+  "cats": [
+   "Adventure",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Action Points",
+   "Deck, Bag, and Pool Building",
+   "Delayed Purchase",
+   "End Game Bonuses",
+   "Movement Points",
+   "Open Drafting",
+   "Player Elimination",
+   "Point to Point Movement",
+   "Push Your Luck",
+   "Variable Set-up"
+  ],
+  "bgg": 7.8,
+  "weight": 2.23
+ },
+ "Clickbait": {
+  "bggId": 254417,
+  "cats": [
+   "Dice",
+   "Party Game"
+  ],
+  "mechs": [
+   "Dice Rolling"
+  ],
+  "bgg": 5.3,
+  "weight": 1
+ },
+ "Clue card game": {
+  "bggId": 88922,
+  "cats": [
+   "Card Game",
+   "Deduction",
+   "Murder / Mystery"
+  ],
+  "mechs": [
+   "Deduction",
+   "Memory",
+   "Open Drafting"
+  ],
+  "bgg": 5.9,
+  "weight": 1.26
+ },
+ "Cluedo Game of Thrones": {
+  "bggId": 198328,
+  "cats": [
+   "Movies / TV / Radio theme"
+  ],
+  "mechs": [
+   "Memory"
+  ],
+  "bgg": 6,
+  "weight": 2.13
+ },
+ "Cluedo SFX": {
+  "bggId": 8069,
+  "cats": [
+   "Bluffing",
+   "Deduction",
+   "Electronic",
+   "Murder / Mystery"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Paper-and-Pencil"
+  ],
+  "bgg": 6.3,
+  "weight": 1.82
+ },
+ "Codenames": {
+  "bggId": 178900,
+  "cats": [
+   "Card Game",
+   "Deduction",
+   "Party Game",
+   "Spies / Secret Agents",
+   "Word Game"
+  ],
+  "mechs": [
+   "Communication Limits",
+   "Deduction",
+   "Memory",
+   "Race",
+   "Team-Based Game"
+  ],
+  "bgg": 7.5,
+  "weight": 1.25
+ },
+ "Codenames Pictures": {
+  "bggId": 198773,
+  "cats": [
+   "Card Game",
+   "Deduction",
+   "Party Game",
+   "Spies / Secret Agents"
+  ],
+  "mechs": [
+   "Communication Limits",
+   "Memory",
+   "Team-Based Game"
+  ],
+  "bgg": 7.2,
+  "weight": 1.24
+ },
+ "Coffee Traders": {
+  "bggId": 325022,
+  "cats": [
+   "Economic",
+   "Farming",
+   "Industry / Manufacturing",
+   "Territory Building"
+  ],
+  "mechs": [
+   "Action Points",
+   "Area Majority / Influence",
+   "Contracts",
+   "Turn Order: Pass Order"
+  ],
+  "bgg": 7.7,
+  "weight": 4.27
+ },
+ "Colour Crazy": {
+  "bggId": 400870,
+  "cats": [
+   "Card Game"
+  ],
+  "mechs": [
+   "Matching",
+   "Speed Matching"
+  ],
+  "bgg": 7.3,
+  "weight": 1
+ },
+ "Concept Kids": {
+  "bggId": 247314,
+  "cats": [
+   "Animals",
+   "Card Game",
+   "Children's Game",
+   "Deduction"
+  ],
+  "mechs": [
+   "Communication Limits",
+   "Cooperative Game"
+  ],
+  "bgg": 7,
+  "weight": 1.18
+ },
+ "Concordia": {
+  "bggId": 124361,
+  "cats": [
+   "Ancient",
+   "Economic",
+   "Nautical"
+  ],
+  "mechs": [
+   "Action Retrieval",
+   "Advantage Token",
+   "Auction: Dutch",
+   "Deck, Bag, and Pool Building",
+   "End Game Bonuses",
+   "Hand Management",
+   "Hidden Victory Points",
+   "Investment",
+   "Movement Points",
+   "Network and Route Building",
+   "Open Drafting",
+   "Point to Point Movement",
+   "Set Collection",
+   "Variable Set-up"
+  ],
+  "bgg": 8.1,
+  "weight": 2.99
+ },
+ "Cosmic Encounter": {
+  "bggId": 39463,
+  "cats": [
+   "Bluffing",
+   "Negotiation",
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "mechs": [
+   "Alliances",
+   "Card Play Conflict Resolution",
+   "Hand Management",
+   "Interrupts",
+   "Negotiation",
+   "Prisoner's Dilemma",
+   "Race",
+   "Simultaneous Action Selection",
+   "Take That",
+   "Trading",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.5,
+  "weight": 2.58
+ },
+ "Cosmic Encounter 42nd Anniversary Edition": {
+  "bggId": 39463,
+  "cats": [
+   "Bluffing",
+   "Negotiation",
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "mechs": [
+   "Alliances",
+   "Card Play Conflict Resolution",
+   "Hand Management",
+   "Interrupts",
+   "Negotiation",
+   "Prisoner's Dilemma",
+   "Race",
+   "Simultaneous Action Selection",
+   "Take That",
+   "Trading",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.5,
+  "weight": 2.58
+ },
+ "Coup": {
+  "bggId": 131357,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Party Game",
+   "Political"
+  ],
+  "mechs": [
+   "Hidden Roles",
+   "Memory",
+   "Player Elimination",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "bgg": 7,
+  "weight": 1.42
+ },
+ "Coup Rebellion": {
+  "bggId": 148943,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Party Game",
+   "Political"
+  ],
+  "mechs": [
+   "Memory",
+   "Player Elimination",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "bgg": 7,
+  "weight": 1.94
+ },
+ "Coup Reformation": {
+  "bggId": 148931,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Expansion for Base-game",
+   "Political"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Player Elimination",
+   "Take That",
+   "Team-Based Game",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.3,
+  "weight": 1.6
+ },
+ "Cranium": {
+  "bggId": 891,
+  "cats": [
+   "Party Game",
+   "Puzzle",
+   "Trivia",
+   "Word Game"
+  ],
+  "mechs": [
+   "Acting",
+   "Line Drawing",
+   "Paper-and-Pencil",
+   "Roll / Spin and Move",
+   "Singing",
+   "Team-Based Game"
+  ],
+  "bgg": 5.7,
+  "weight": 1.42
+ },
+ "Critter Kitchen": {
+  "bggId": 393429,
+  "cats": [
+   "Animals"
+  ],
+  "mechs": [
+   "Auction: Sealed Bid",
+   "Contracts",
+   "Programmed Movement",
+   "Variable Player Powers",
+   "Worker Placement, Different Worker Types"
+  ],
+  "bgg": 7.8,
+  "weight": 2.46
+ },
+ "Cubitos": {
+  "bggId": 298069,
+  "cats": [
+   "Dice",
+   "Racing"
+  ],
+  "mechs": [
+   "Catch the Leader",
+   "Deck, Bag, and Pool Building",
+   "Delayed Purchase",
+   "Dice Rolling",
+   "Grid Movement",
+   "Market",
+   "Push Your Luck",
+   "Race",
+   "Re-rolling and Locking",
+   "Variable Set-up"
+  ],
+  "bgg": 7.4,
+  "weight": 2.17
+ },
+ "Cubo": {
+  "bggId": 166532,
+  "cats": [
+   "Dice",
+   "Real-time"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Pattern Building",
+   "Set Collection"
+  ],
+  "bgg": 5.6,
+  "weight": 1.58
+ },
+ "Dead of Winter": {
+  "bggId": 150376,
+  "cats": [
+   "Bluffing",
+   "Deduction",
+   "Horror",
+   "Science Fiction",
+   "Zombies"
+  ],
+  "mechs": [
+   "Action Points",
+   "Area Movement",
+   "Dice Rolling",
+   "Hand Management",
+   "Narrative Choice / Paragraph",
+   "Push Your Luck",
+   "Scenario / Mission / Campaign Game",
+   "Semi-Cooperative Game",
+   "Storytelling",
+   "Trading",
+   "Traitor Game",
+   "Turn Order: Progressive",
+   "Variable Player Powers",
+   "Voting"
+  ],
+  "bgg": 7.4,
+  "weight": 3.01
+ },
+ "Deal with the Devil": {
+  "bggId": 367379,
+  "cats": [
+   "City Building",
+   "Deduction",
+   "Fantasy",
+   "Medieval",
+   "Religious"
+  ],
+  "mechs": [
+   "Deduction",
+   "Events",
+   "Hidden Roles",
+   "Income",
+   "Loans",
+   "Trading",
+   "Variable Player Powers",
+   "Voting"
+  ],
+  "bgg": 7,
+  "weight": 3.72
+ },
+ "Dinosaur Island": {
+  "bggId": 221194,
+  "cats": [
+   "Animals",
+   "Economic",
+   "Science Fiction"
+  ],
+  "mechs": [
+   "Action Points",
+   "Dice Rolling",
+   "Income",
+   "Set Collection",
+   "Tile Placement",
+   "Worker Placement"
+  ],
+  "bgg": 7.5,
+  "weight": 3.05
+ },
+ "Diplomacy": {
+  "bggId": 483,
+  "cats": [
+   "Bluffing",
+   "Negotiation",
+   "Political",
+   "Post-Napoleonic",
+   "Wargame"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Area Movement",
+   "Negotiation",
+   "Player Elimination",
+   "Prisoner's Dilemma",
+   "Simulation",
+   "Simultaneous Action Selection"
+  ],
+  "bgg": 7,
+  "weight": 3.32
+ },
+ "Dixit": {
+  "bggId": 39856,
+  "cats": [
+   "Card Game",
+   "Humor",
+   "Party Game"
+  ],
+  "mechs": [
+   "Race",
+   "Singing",
+   "Storytelling",
+   "Targeted Clues",
+   "Voting"
+  ],
+  "bgg": 7.2,
+  "weight": 1.19
+ },
+ "Dominion": {
+  "bggId": 36218,
+  "cats": [
+   "Card Game",
+   "Medieval"
+  ],
+  "mechs": [
+   "Deck, Bag, and Pool Building",
+   "Delayed Purchase",
+   "Hand Management",
+   "Open Drafting",
+   "Take That",
+   "Variable Set-up"
+  ],
+  "bgg": 7.6,
+  "weight": 2.34
+ },
+ "Dominion Intrigue": {
+  "bggId": 40834,
+  "cats": [
+   "Card Game",
+   "Medieval"
+  ],
+  "mechs": [
+   "Deck, Bag, and Pool Building",
+   "Delayed Purchase",
+   "Hand Management",
+   "Open Drafting",
+   "Variable Set-up"
+  ],
+  "bgg": 7.7,
+  "weight": 2.41
+ },
+ "Dorfromantik": {
+  "bggId": 370591,
+  "cats": [
+   "Environmental",
+   "Puzzle",
+   "Territory Building",
+   "Video Game Theme"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Cooperative Game",
+   "Hexagon Grid",
+   "Map Addition",
+   "Modular Board",
+   "Scenario / Mission / Campaign Game",
+   "Tile Placement",
+   "Variable Set-up"
+  ],
+  "bgg": 7.6,
+  "weight": 1.64
+ },
+ "Dorfromantik - The Duel": {
+  "bggId": 395364,
+  "cats": [
+   "City Building",
+   "Environmental",
+   "Puzzle"
+  ],
+  "mechs": [
+   "Hexagon Grid",
+   "Modular Board",
+   "Tile Placement",
+   "Variable Set-up"
+  ],
+  "bgg": 6.9,
+  "weight": 1.78
+ },
+ "Dos": {
+  "bggId": 246701,
+  "cats": [
+   "Card Game",
+   "Number"
+  ],
+  "mechs": [
+   "Hand Management"
+  ],
+  "bgg": 4.8,
+  "weight": 1.39
+ },
+ "Dreadful Circus": {
+  "bggId": 329714,
+  "cats": [
+   "Card Game"
+  ],
+  "mechs": [
+   "Auction / Bidding",
+   "Betting and Bluffing",
+   "Set Collection"
+  ],
+  "bgg": 6.5,
+  "weight": 2.24
+ },
+ "Durian Dash": {
+  "bggId": 340396,
+  "cats": [
+   "Card Game",
+   "Farming"
+  ],
+  "mechs": [
+   "Action Queue",
+   "Hand Management",
+   "Set Collection",
+   "Take That"
+  ],
+  "bgg": 6,
+  "weight": 1.5
+ },
+ "El Grande": {
+  "bggId": 93,
+  "cats": [
+   "Medieval"
+  ],
+  "mechs": [
+   "Action Drafting",
+   "Area Majority / Influence",
+   "Auction / Bidding",
+   "Hand Management",
+   "Open Drafting",
+   "Selection Order Bid",
+   "Simultaneous Action Selection",
+   "Take That",
+   "Turn Order: Auction"
+  ],
+  "bgg": 7.8,
+  "weight": 2.93
+ },
+ "Eldritch Horror Mountains of Madness": {
+  "bggId": 164167,
+  "cats": [
+   "Expansion for Base-game",
+   "Adventure",
+   "Fantasy",
+   "Fighting",
+   "Horror",
+   "Novel-based"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Dice Rolling",
+   "Open Drafting",
+   "Point to Point Movement",
+   "Role Playing",
+   "Storytelling",
+   "Variable Player Powers"
+  ],
+  "bgg": 8.2,
+  "weight": 3.25
+ },
+ "Epic Card Game": {
+  "bggId": 175621,
+  "cats": [
+   "Card Game",
+   "Fantasy",
+   "Fighting",
+   "Prehistoric",
+   "Zombies"
+  ],
+  "mechs": [
+   "Closed Drafting",
+   "Deck Construction",
+   "Hand Management",
+   "Player Elimination",
+   "Take That"
+  ],
+  "bgg": 6.4,
+  "weight": 2.52
+ },
+ "Everdell": {
+  "bggId": 199792,
+  "cats": [
+   "Animals",
+   "Card Game",
+   "City Building",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Contracts",
+   "End Game Bonuses",
+   "Hand Management",
+   "Income",
+   "Open Drafting",
+   "Ownership",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Tags",
+   "Variable Set-up",
+   "Worker Placement"
+  ],
+  "bgg": 8,
+  "weight": 2.83
+ },
+ "Everdell Duo": {
+  "bggId": 425005,
+  "cats": [
+   "Animals",
+   "Card Game",
+   "City Building",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Contracts",
+   "Cooperative Game",
+   "Income",
+   "Open Drafting",
+   "Scenario / Mission / Campaign Game",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Variable Set-up",
+   "Worker Placement"
+  ],
+  "bgg": 7.6,
+  "weight": 2.72
+ },
+ "Everdell: Silverfrost": {
+  "bggId": 436821,
+  "cats": [
+   "Animals",
+   "Card Game",
+   "City Building",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Open Drafting",
+   "Set Collection",
+   "Worker Placement"
+  ],
+  "bgg": 8.1,
+  "weight": 3.2
+ },
+ "Exploding Kittens": {
+  "bggId": 172225,
+  "cats": [
+   "Animals",
+   "Card Game",
+   "Comic Book / Strip",
+   "Humor"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Hot Potato",
+   "Player Elimination",
+   "Push Your Luck",
+   "Set Collection",
+   "Take That"
+  ],
+  "bgg": 6.1,
+  "weight": 1.08
+ },
+ "Festo": {
+  "bggId": 253679,
+  "cats": [
+   "Bluffing",
+   "Deduction",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Action Queue",
+   "Area Majority / Influence",
+   "Push Your Luck",
+   "Worker Placement"
+  ],
+  "bgg": 6.6,
+  "weight": 2.27
+ },
+ "Fight the Blight": {
+  "bggId": 359959,
+  "cats": [
+   "Card Game",
+   "Horror",
+   "Party Game",
+   "Zombies"
+  ],
+  "mechs": [
+   "Action Points",
+   "Hand Management",
+   "King of the Hill",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.9,
+  "weight": 2
+ },
+ "Fire & Stone": {
+  "bggId": 342927,
+  "cats": [
+   "Civilization",
+   "Exploration",
+   "Prehistoric"
+  ],
+  "mechs": [
+   "Worker Placement"
+  ],
+  "bgg": 6.1,
+  "weight": 2
+ },
+ "Fire Tower": {
+  "bggId": 226605,
+  "cats": [
+   "Abstract Strategy",
+   "Environmental"
+  ],
+  "mechs": [
+   "Grid Movement",
+   "Hand Management",
+   "Pattern Building",
+   "Player Elimination",
+   "Square Grid",
+   "Take That"
+  ],
+  "bgg": 7.1,
+  "weight": 1.71
+ },
+ "Flip City": {
+  "bggId": 168679,
+  "cats": [
+   "Card Game",
+   "City Building"
+  ],
+  "mechs": [
+   "Deck, Bag, and Pool Building",
+   "Push Your Luck",
+   "Sudden Death Ending"
+  ],
+  "bgg": 6.3,
+  "weight": 1.74
+ },
+ "Fog of Love": {
+  "bggId": 175324,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction"
+  ],
+  "mechs": [
+   "Communication Limits",
+   "Hand Management",
+   "Role Playing",
+   "Semi-Cooperative Game",
+   "Simulation",
+   "Simultaneous Action Selection",
+   "Storytelling"
+  ],
+  "bgg": 6.6,
+  "weight": 2.25
+ },
+ "Forbidden Desert": {
+  "bggId": 136063,
+  "cats": [
+   "Adventure",
+   "Fantasy",
+   "Science Fiction"
+  ],
+  "mechs": [
+   "Action Points",
+   "Bias",
+   "Cooperative Game",
+   "Grid Movement",
+   "Hand Management",
+   "Map Deformation",
+   "Modular Board",
+   "Pick-up and Deliver",
+   "Solo / Solitaire Game",
+   "Square Grid",
+   "Tile Placement",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.1,
+  "weight": 2.04
+ },
+ "Forbidden Island": {
+  "bggId": 65244,
+  "cats": [
+   "Adventure",
+   "Fantasy",
+   "Science Fiction"
+  ],
+  "mechs": [
+   "Action Points",
+   "Cooperative Game",
+   "Events",
+   "Grid Movement",
+   "Hand Management",
+   "Map Reduction",
+   "Modular Board",
+   "Pick-up and Deliver",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Square Grid",
+   "Tile Placement",
+   "Variable Player Powers"
+  ],
+  "bgg": 6.7,
+  "weight": 1.74
+ },
+ "Forbidden Jungle": {
+  "bggId": 380226,
+  "cats": [
+   "Adventure",
+   "Fantasy",
+   "Science Fiction"
+  ],
+  "mechs": [
+   "Action Points",
+   "Cooperative Game",
+   "Grid Movement",
+   "Hand Management",
+   "Map Reduction",
+   "Modular Board",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Tile Placement",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.3,
+  "weight": 2.09
+ },
+ "Forgotten Waters": {
+  "bggId": 302723,
+  "cats": [
+   "Adventure",
+   "Exploration",
+   "Fantasy",
+   "Nautical",
+   "Pirates",
+   "Travel"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Events",
+   "Narrative Choice / Paragraph",
+   "Scenario / Mission / Campaign Game",
+   "Semi-Cooperative Game",
+   "Stat Check Resolution",
+   "Storytelling",
+   "Worker Placement"
+  ],
+  "bgg": 7.7,
+  "weight": 2.09
+ },
+ "Founders of Gloomhaven": {
+  "bggId": 214032,
+  "cats": [
+   "City Building",
+   "Economic",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Action Retrieval",
+   "Auction / Bidding",
+   "Deck, Bag, and Pool Building",
+   "Follow",
+   "Hand Management",
+   "Network and Route Building",
+   "Solo / Solitaire Game",
+   "Tile Placement",
+   "Variable Player Powers",
+   "Voting",
+   "Worker Placement"
+  ],
+  "bgg": 6.6,
+  "weight": 4.12
+ },
+ "Four Gardens": {
+  "bggId": 296043,
+  "cats": [
+   "Environmental",
+   "Mythology"
+  ],
+  "mechs": [
+   "Action Points",
+   "Contracts",
+   "Hand Management",
+   "Set Collection"
+  ],
+  "bgg": 6.9,
+  "weight": 2.28
+ },
+ "Fugitive": {
+  "bggId": 197443,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Number",
+   "Spies / Secret Agents"
+  ],
+  "mechs": [
+   "Deduction",
+   "Hand Management",
+   "Hidden Movement",
+   "Memory",
+   "Secret Unit Deployment",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.1,
+  "weight": 1.64
+ },
+ "Fuji": {
+  "bggId": 258308,
+  "cats": [
+   "Dice"
+  ],
+  "mechs": [
+   "Communication Limits",
+   "Cooperative Game",
+   "Dice Rolling",
+   "Grid Movement",
+   "Variable Player Powers"
+  ],
+  "bgg": 6.6,
+  "weight": 2.16
+ },
+ "Gaia Project - A Terra Mystica Game": {
+  "bggId": 220308,
+  "cats": [
+   "Civilization",
+   "Economic",
+   "Science Fiction",
+   "Space Exploration",
+   "Territory Building"
+  ],
+  "mechs": [
+   "End Game Bonuses",
+   "Hexagon Grid",
+   "Income",
+   "Modular Board",
+   "Network and Route Building",
+   "Solo / Solitaire Game",
+   "Tags",
+   "Tech Trees / Tech Tracks",
+   "Turn Order: Pass Order",
+   "Variable Player Powers",
+   "Variable Set-up",
+   "Victory Points as a Resource"
+  ],
+  "bgg": 8.3,
+  "weight": 4.4
+ },
+ "Galaxy Trucker": {
+  "bggId": 31481,
+  "cats": [
+   "Real-time",
+   "Science Fiction",
+   "Space Exploration",
+   "Transportation"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Events",
+   "Grid Coverage",
+   "Open Drafting",
+   "Pattern Building",
+   "Push Your Luck",
+   "Real-Time",
+   "Relative Movement",
+   "Square Grid",
+   "Team-Based Game",
+   "Tile Placement",
+   "Track Movement",
+   "Variable Set-up"
+  ],
+  "bgg": 7.3,
+  "weight": 2.33
+ },
+ "Game of Life: Twists and Turns": {
+  "bggId": 28609,
+  "cats": [
+   "Economic",
+   "Electronic"
+  ],
+  "mechs": [
+   "Point to Point Movement",
+   "Roll / Spin and Move"
+  ],
+  "bgg": 5.8,
+  "weight": 1.34
+ },
+ "Game of Thrones: Westeros Intrigue": {
+  "bggId": 155693,
+  "cats": [
+   "Card Game",
+   "Movies / TV / Radio theme",
+   "Novel-based"
+  ],
+  "mechs": [
+   "Hand Management"
+  ],
+  "bgg": 5.3,
+  "weight": 1.07
+ },
+ "Ghost Blitz": {
+  "bggId": 83195,
+  "cats": [
+   "Action / Dexterity",
+   "Card Game",
+   "Children's Game",
+   "Real-time"
+  ],
+  "mechs": [
+   "Pattern Recognition",
+   "Speed Matching"
+  ],
+  "bgg": 6.7,
+  "weight": 1.13
+ },
+ "Gloomhaven Jaws of the Lion": {
+  "bggId": 291457,
+  "cats": [
+   "Adventure",
+   "Exploration",
+   "Fantasy",
+   "Fighting",
+   "Miniatures"
+  ],
+  "mechs": [
+   "Action Queue",
+   "Action Retrieval",
+   "Campaign / Battle Card Driven",
+   "Communication Limits",
+   "Cooperative Game",
+   "Critical Hits and Failures",
+   "Deck Construction",
+   "Grid Movement",
+   "Hand Management",
+   "Hexagon Grid",
+   "Legacy Game",
+   "Line of Sight",
+   "Multi-Use Cards",
+   "Once-Per-Game Abilities",
+   "Player Elimination",
+   "Role Playing",
+   "Scenario / Mission / Campaign Game",
+   "Simultaneous Action Selection",
+   "Solo / Solitaire Game",
+   "Variable Player Powers"
+  ],
+  "bgg": 8.4,
+  "weight": 3.64
+ },
+ "Great Western Trail": {
+  "bggId": 193738,
+  "cats": [
+   "American West",
+   "Animals"
+  ],
+  "mechs": [
+   "Contracts",
+   "Deck, Bag, and Pool Building",
+   "Hand Management",
+   "Income",
+   "Ownership",
+   "Set Collection",
+   "Track Movement",
+   "Variable Set-up"
+  ],
+  "bgg": 8.1,
+  "weight": 3.7
+ },
+ "Greed": {
+  "bggId": 151247,
+  "cats": [
+   "Card Game",
+   "Mafia"
+  ],
+  "mechs": [
+   "Closed Drafting",
+   "End Game Bonuses",
+   "Hand Management",
+   "Simultaneous Action Selection",
+   "Tags",
+   "Take That",
+   "Turn Order: Stat-Based"
+  ],
+  "bgg": 6.6,
+  "weight": 2
+ },
+ "Hadara": {
+  "bggId": 269144,
+  "cats": [
+   "City Building",
+   "Civilization"
+  ],
+  "mechs": [
+   "End Game Bonuses",
+   "Memory",
+   "Open Drafting",
+   "Set Collection",
+   "Simultaneous Action Selection"
+  ],
+  "bgg": 7.4,
+  "weight": 2.21
+ },
+ "Hanabi": {
+  "bggId": 98778,
+  "cats": [
+   "Card Game",
+   "Deduction",
+   "Memory"
+  ],
+  "mechs": [
+   "Communication Limits",
+   "Cooperative Game",
+   "Hand Management",
+   "Memory",
+   "Ordering",
+   "Set Collection"
+  ],
+  "bgg": 7,
+  "weight": 1.69
+ },
+ "Harmonies": {
+  "bggId": 414317,
+  "cats": [
+   "Abstract Strategy",
+   "Animals",
+   "Environmental",
+   "Puzzle"
+  ],
+  "mechs": [
+   "Chaining",
+   "Hexagon Grid",
+   "Open Drafting",
+   "Pattern Building",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Tile Placement",
+   "Variable Player Powers"
+  ],
+  "bgg": 8,
+  "weight": 2.01
+ },
+ "Hawker Wars": {
+  "bggId": 365749,
+  "cats": [
+   "Card Game",
+   "Travel"
+  ],
+  "mechs": [
+   "Action / Event",
+   "Set Collection",
+   "Take That"
+  ],
+  "bgg": 6,
+  "weight": 1.2
+ },
+ "Headache": {
+  "bggId": 9921,
+  "cats": [
+   "Abstract Strategy",
+   "Children's Game",
+   "Dice"
+  ],
+  "mechs": [
+   "Area Movement",
+   "Pick-up and Deliver",
+   "Point to Point Movement",
+   "Roll / Spin and Move"
+  ],
+  "bgg": 4.4,
+  "weight": 1.08
+ },
+ "Heat: Pedal to the Metal": {
+  "bggId": 366013,
+  "cats": [
+   "Racing",
+   "Sports"
+  ],
+  "mechs": [
+   "Catch the Leader",
+   "Deck, Bag, and Pool Building",
+   "Hand Management",
+   "Programmed Movement",
+   "Push Your Luck",
+   "Race",
+   "Simulation",
+   "Simultaneous Action Selection",
+   "Solo / Solitaire Game",
+   "Track Movement",
+   "Variable Set-up"
+  ],
+  "bgg": 8,
+  "weight": 2.2
+ },
+ "How to Be a Complete Bastard": {
+  "bggId": 11155,
+  "cats": [
+   "Humor",
+   "Mature / Adult",
+   "Movies / TV / Radio theme"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Roll / Spin and Move"
+  ],
+  "bgg": 4.7,
+  "weight": 1
+ },
+ "Hues and Cues": {
+  "bggId": 302520,
+  "cats": [
+   "Deduction",
+   "Party Game"
+  ],
+  "mechs": [
+   "Communication Limits",
+   "Deduction",
+   "Score-and-Reset Game",
+   "Targeted Clues",
+   "Turn Order: Progressive"
+  ],
+  "bgg": 6.4,
+  "weight": 1.06
+ },
+ "Imperial Settlers": {
+  "bggId": 154203,
+  "cats": [
+   "Ancient",
+   "Card Game",
+   "City Building",
+   "Civilization"
+  ],
+  "mechs": [
+   "Closed Drafting",
+   "Contracts",
+   "End Game Bonuses",
+   "Hand Management",
+   "Income",
+   "Multi-Use Cards",
+   "Open Drafting",
+   "Solo / Solitaire Game",
+   "Take That",
+   "Turn Order: Progressive",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.3,
+  "weight": 2.77
+ },
+ "Istanbul": {
+  "bggId": 148949,
+  "cats": [
+   "Economic"
+  ],
+  "mechs": [
+   "Contracts",
+   "Dice Rolling",
+   "Grid Movement",
+   "Mancala",
+   "Market",
+   "Modular Board",
+   "Network and Route Building",
+   "Pick-up and Deliver",
+   "Race",
+   "Variable Set-up",
+   "Worker Placement"
+  ],
+  "bgg": 7.5,
+  "weight": 2.58
+ },
+ "Jaipur": {
+  "bggId": 54043,
+  "cats": [
+   "Arabian",
+   "Card Game",
+   "Economic"
+  ],
+  "mechs": [
+   "End Game Bonuses",
+   "Hand Management",
+   "Hidden Victory Points",
+   "Market",
+   "Open Drafting",
+   "Race",
+   "Score-and-Reset Game",
+   "Set Collection",
+   "Sudden Death Ending",
+   "Turn Order: Progressive",
+   "Variable Set-up"
+  ],
+  "bgg": 7.5,
+  "weight": 1.46
+ },
+ "Joan of Arc": {
+  "bggId": 64,
+  "cats": [
+   "Card Game",
+   "Medieval",
+   "Political",
+   "Wargame"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Area Movement",
+   "Dice Rolling",
+   "Hand Management",
+   "Take That",
+   "Team-Based Game"
+  ],
+  "bgg": 6.3,
+  "weight": 2.54
+ },
+ "Jungle Speed": {
+  "bggId": 8098,
+  "cats": [
+   "Action / Dexterity",
+   "Card Game",
+   "Party Game",
+   "Real-time"
+  ],
+  "mechs": [
+   "Pattern Recognition",
+   "Real-Time",
+   "Speed Matching"
+  ],
+  "bgg": 6.4,
+  "weight": 1.13
+ },
+ "Just One": {
+  "bggId": 254640,
+  "cats": [
+   "Deduction",
+   "Party Game",
+   "Word Game"
+  ],
+  "mechs": [
+   "Communication Limits",
+   "Cooperative Game",
+   "Deduction",
+   "Score-and-Reset Game"
+  ],
+  "bgg": 7.6,
+  "weight": 1.03
+ },
+ "Kabuto Sumo": {
+  "bggId": 320390,
+  "cats": [
+   "Action / Dexterity",
+   "Animals",
+   "Fighting"
+  ],
+  "mechs": [
+   "Slide / Push",
+   "Variable Player Powers"
+  ],
+  "bgg": 6.7,
+  "weight": 1.19
+ },
+ "Kairo": {
+  "bggId": 107635,
+  "cats": [
+   "Arabian",
+   "Economic"
+  ],
+  "mechs": [
+   "End Game Bonuses",
+   "Grid Movement",
+   "Hand Management",
+   "Open Drafting",
+   "Square Grid",
+   "Tile Placement",
+   "Variable Set-up"
+  ],
+  "bgg": 6.5,
+  "weight": 2.53
+ },
+ "Kami-Sama": {
+  "bggId": 232318,
+  "cats": [
+   "Mythology",
+   "Territory Building"
+  ],
+  "mechs": [
+   "Action Points",
+   "Area Majority / Influence",
+   "Open Drafting",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "bgg": 6.6,
+  "weight": 2.68
+ },
+ "Kero": {
+  "bggId": 222219,
+  "cats": [
+   "Dice",
+   "Real-time",
+   "Territory Building"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Dice Rolling",
+   "End Game Bonuses",
+   "Events",
+   "Move Through Deck",
+   "Push Your Luck",
+   "Re-rolling and Locking",
+   "Real-Time",
+   "Set Collection",
+   "Take That",
+   "Worker Placement"
+  ],
+  "bgg": 7,
+  "weight": 2.06
+ },
+ "Kingdom Rush - Rift in Time": {
+  "bggId": 272533,
+  "cats": [
+   "Adventure",
+   "Fantasy",
+   "Fighting",
+   "Medieval",
+   "Miniatures",
+   "Video Game Theme"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Hand Management",
+   "Modular Board",
+   "Pattern Building",
+   "Tile Placement",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.3,
+  "weight": 2.98
+ },
+ "Kingdomino": {
+  "bggId": 204583,
+  "cats": [
+   "Abstract Strategy",
+   "Medieval",
+   "Puzzle",
+   "Territory Building"
+  ],
+  "mechs": [
+   "Enclosure",
+   "Open Drafting",
+   "Tile Placement",
+   "Turn Order: Claim Action"
+  ],
+  "bgg": 7.3,
+  "weight": 1.24
+ },
+ "Kingdomino: Age of Giants": {
+  "bggId": 240909,
+  "cats": [
+   "Expansion for Base-game",
+   "Fantasy",
+   "Medieval",
+   "Territory Building"
+  ],
+  "mechs": [
+   "Open Drafting",
+   "Pattern Building",
+   "Take That",
+   "Tile Placement",
+   "Turn Order: Claim Action"
+  ],
+  "bgg": 7.2,
+  "weight": 1.64
+ },
+ "Last Heroes": {
+  "bggId": 254686,
+  "cats": [
+   "Fantasy",
+   "Fighting",
+   "Mature / Adult",
+   "Mythology",
+   "Science Fiction"
+  ],
+  "mechs": [
+   "Action Points",
+   "Area Majority / Influence",
+   "Hand Management"
+  ],
+  "bgg": 4.9,
+  "weight": 2.33
+ },
+ "Legendary Inventors": {
+  "bggId": 200785,
+  "cats": [
+   "Card Game",
+   "Industry / Manufacturing"
+  ],
+  "mechs": [
+   "Action Retrieval",
+   "Area Majority / Influence",
+   "Set Collection",
+   "Variable Player Powers"
+  ],
+  "bgg": 6.3,
+  "weight": 2.02
+ },
+ "Life of a Chameleon": {
+  "bggId": 337638,
+  "cats": [
+   "Animals"
+  ],
+  "mechs": [
+   "Action Points",
+   "Area Movement",
+   "Contracts",
+   "Random Production",
+   "Set Collection",
+   "Variable Set-up"
+  ],
+  "bgg": 7.1,
+  "weight": 1.71
+ },
+ "Lightning Train": {
+  "bggId": 445673,
+  "cats": [
+   "Trains"
+  ],
+  "mechs": [
+   "Deck, Bag, and Pool Building"
+  ],
+  "bgg": 7.2,
+  "weight": 3
+ },
+ "Logo Board Game": {
+  "bggId": 64204,
+  "cats": [
+   "Movies / TV / Radio theme",
+   "Trivia"
+  ],
+  "mechs": [
+   "Memory"
+  ],
+  "bgg": 5.1,
+  "weight": 1.17
+ },
+ "Lords of Waterdeep": {
+  "bggId": 110327,
+  "cats": [
+   "City Building",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Contracts",
+   "Hidden Roles",
+   "Increase Value of Unchosen Resources",
+   "Ownership",
+   "Set Collection",
+   "Take That",
+   "Turn Order: Claim Action",
+   "Worker Placement"
+  ],
+  "bgg": 7.7,
+  "weight": 2.45
+ },
+ "Lost Ruins of Arnak": {
+  "bggId": 312484,
+  "cats": [
+   "Adventure",
+   "Card Game",
+   "Exploration",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Area Movement",
+   "Contracts",
+   "Deck, Bag, and Pool Building",
+   "Delayed Purchase",
+   "End Game Bonuses",
+   "Hand Management",
+   "Multi-Use Cards",
+   "Once-Per-Game Abilities",
+   "Open Drafting",
+   "Resource to Move",
+   "Solo / Solitaire Game",
+   "Track Movement",
+   "Turn Order: Progressive",
+   "Worker Placement"
+  ],
+  "bgg": 8.1,
+  "weight": 2.93
+ },
+ "Love Letter - Infinity Gauntlet Edition": {
+  "bggId": 304285,
+  "cats": [
+   "Card Game",
+   "Comic Book / Strip",
+   "Deduction",
+   "Movies / TV / Radio theme"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Set Collection",
+   "Team-Based Game"
+  ],
+  "bgg": 6.9,
+  "weight": 1.24
+ },
+ "Love Letter - Princess Ever After": {
+  "bggId": 129622,
+  "cats": [
+   "Card Game",
+   "Deduction",
+   "Renaissance"
+  ],
+  "mechs": [
+   "Deduction",
+   "Hand Management",
+   "Player Elimination",
+   "Score-and-Reset Game",
+   "Take That"
+  ],
+  "bgg": 7.2,
+  "weight": 1.18
+ },
+ "Lucky Numbers": {
+  "bggId": 118247,
+  "cats": [
+   "Abstract Strategy",
+   "Number"
+  ],
+  "mechs": [
+   "Solo / Solitaire Game",
+   "Tile Placement"
+  ],
+  "bgg": 6.4,
+  "weight": 1.13
+ },
+ "Machi Koro": {
+  "bggId": 143884,
+  "cats": [
+   "City Building",
+   "Dice"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Ownership",
+   "Race",
+   "Random Production"
+  ],
+  "bgg": 6.6,
+  "weight": 1.52
+ },
+ "Machi Koro 2": {
+  "bggId": 340364,
+  "cats": [
+   "City Building",
+   "Dice"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Random Production"
+  ],
+  "bgg": 7.1,
+  "weight": 1.55
+ },
+ "Man Bites Dog": {
+  "bggId": 4035,
+  "cats": [
+   "Card Game",
+   "Humor",
+   "Word Game"
+  ],
+  "mechs": [],
+  "bgg": 4.6,
+  "weight": 1.1
+ },
+ "Mansions of Madness": {
+  "bggId": 83330,
+  "cats": [
+   "Adventure",
+   "Exploration",
+   "Fantasy",
+   "Fighting",
+   "Horror",
+   "Miniatures",
+   "Murder / Mystery",
+   "Puzzle"
+  ],
+  "mechs": [
+   "Area Movement",
+   "Dice Rolling",
+   "Hand Management",
+   "Modular Board",
+   "Pick-up and Deliver",
+   "Role Playing",
+   "Scenario / Mission / Campaign Game",
+   "Team-Based Game",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.2,
+  "weight": 3.24
+ },
+ "Maracaibo": {
+  "bggId": 276025,
+  "cats": [
+   "Economic",
+   "Exploration",
+   "Nautical",
+   "Pirates"
+  ],
+  "mechs": [
+   "Contracts",
+   "End Game Bonuses",
+   "Events",
+   "Hand Management",
+   "Income",
+   "Movement Points",
+   "Multi-Use Cards",
+   "Narrative Choice / Paragraph",
+   "Point to Point Movement",
+   "Scenario / Mission / Campaign Game",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Stock Holding",
+   "Tech Trees / Tech Tracks",
+   "Track Movement",
+   "Variable Set-up"
+  ],
+  "bgg": 7.9,
+  "weight": 3.92
+ },
+ "Marvel United": {
+  "bggId": 298047,
+  "cats": [
+   "Card Game",
+   "Comic Book / Strip",
+   "Fighting"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Hand Management",
+   "Modular Board",
+   "Solo / Solitaire Game",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.5,
+  "weight": 1.85
+ },
+ "Marvel Villainous Infinite Power": {
+  "bggId": 302336,
+  "cats": [
+   "Card Game",
+   "Comic Book / Strip",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Action Points",
+   "Hand Management",
+   "Variable Player Powers"
+  ],
+  "bgg": 6.7,
+  "weight": 2.71
+ },
+ "Mascarade": {
+  "bggId": 139030,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Medieval",
+   "Party Game"
+  ],
+  "mechs": [
+   "Hidden Roles",
+   "Memory",
+   "Variable Player Powers"
+  ],
+  "bgg": 6.6,
+  "weight": 1.53
+ },
+ "Meeple Circus": {
+  "bggId": 193214,
+  "cats": [
+   "Action / Dexterity",
+   "Animals",
+   "Real-time"
+  ],
+  "mechs": [
+   "Open Drafting",
+   "Pattern Building",
+   "Push Your Luck",
+   "Real-Time",
+   "Stacking and Balancing"
+  ],
+  "bgg": 7,
+  "weight": 1.41
+ },
+ "Moa": {
+  "bggId": 214123,
+  "cats": [
+   "Animals",
+   "Economic"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Hand Management"
+  ],
+  "bgg": 6.4,
+  "weight": 2.62
+ },
+ "Monolith Arena": {
+  "bggId": 238393,
+  "cats": [
+   "Fantasy",
+   "Fighting"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Hexagon Grid",
+   "Player Elimination",
+   "Team-Based Game",
+   "Tile Placement",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.2,
+  "weight": 2.43
+ },
+ "Monopoly - Classic": {
+  "bggId": 1406,
+  "cats": [
+   "Economic"
+  ],
+  "mechs": [
+   "Auction / Bidding",
+   "Auction: English",
+   "Income",
+   "Loans",
+   "Lose a Turn",
+   "Ownership",
+   "Player Elimination",
+   "Roll / Spin and Move",
+   "Set Collection",
+   "Track Movement",
+   "Trading"
+  ],
+  "bgg": 4.4,
+  "weight": 1.62
+ },
+ "Monopoly - Deal Card Game": {
+  "bggId": 40398,
+  "cats": [
+   "Card Game",
+   "Economic"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Set Collection",
+   "Take That"
+  ],
+  "bgg": 6.3,
+  "weight": 1.31
+ },
+ "Monopoly Bid": {
+  "bggId": 327797,
+  "cats": [
+   "Card Game",
+   "Economic"
+  ],
+  "mechs": [
+   "Auction / Bidding",
+   "Hand Management",
+   "Set Collection"
+  ],
+  "bgg": 5.7,
+  "weight": 1.36
+ },
+ "Munchkin": {
+  "bggId": 1927,
+  "cats": [
+   "Card Game",
+   "Fantasy",
+   "Fighting",
+   "Humor"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Race",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "bgg": 5.9,
+  "weight": 1.82
+ },
+ "Munchkin Marvel": {
+  "bggId": 189848,
+  "cats": [
+   "Card Game",
+   "Comic Book / Strip",
+   "Fighting"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Hand Management",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "bgg": 6.8,
+  "weight": 2.04
+ },
+ "Munchkin Panic": {
+  "bggId": 156786,
+  "cats": [
+   "Card Game",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Semi-Cooperative Game"
+  ],
+  "bgg": 6,
+  "weight": 2.05
+ },
+ "My First Bananagrams": {
+  "bggId": 202478,
+  "cats": [
+   "Children's Game",
+   "Word Game"
+  ],
+  "mechs": [
+   "Memory",
+   "Pattern Building",
+   "Spelling",
+   "Tile Placement"
+  ],
+  "bgg": 6.2,
+  "weight": 1
+ },
+ "My First Castle Panic": {
+  "bggId": 267314,
+  "cats": [
+   "Children's Game",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Hand Management",
+   "Matching",
+   "Solo / Solitaire Game"
+  ],
+  "bgg": 6.4,
+  "weight": 1.14
+ },
+ "My First Stone Age": {
+  "bggId": 191004,
+  "cats": [
+   "Children's Game",
+   "Memory",
+   "Prehistoric"
+  ],
+  "mechs": [
+   "Memory",
+   "Set Collection"
+  ],
+  "bgg": 6.6,
+  "weight": 1.15
+ },
+ "Mysterium": {
+  "bggId": 181304,
+  "cats": [
+   "Deduction",
+   "Murder / Mystery",
+   "Party Game",
+   "Real-time"
+  ],
+  "mechs": [
+   "Communication Limits",
+   "Cooperative Game",
+   "Deduction",
+   "Finale Ending",
+   "Hand Management",
+   "Pattern Recognition",
+   "Real-Time",
+   "Storytelling",
+   "Voting"
+  ],
+  "bgg": 7.2,
+  "weight": 1.89
+ },
+ "Near and Far": {
+  "bggId": 195421,
+  "cats": [
+   "Adventure",
+   "Exploration",
+   "Fantasy",
+   "Fighting"
+  ],
+  "mechs": [
+   "Closed Drafting",
+   "Contracts",
+   "Dice Rolling",
+   "End Game Bonuses",
+   "Hand Management",
+   "Movement Points",
+   "Multiple Maps",
+   "Narrative Choice / Paragraph",
+   "Network and Route Building",
+   "Open Drafting",
+   "Point to Point Movement",
+   "Push Your Luck",
+   "Resource to Move",
+   "Scenario / Mission / Campaign Game",
+   "Set Collection",
+   "Storytelling",
+   "Tags",
+   "Variable Player Powers",
+   "Worker Placement"
+  ],
+  "bgg": 7.6,
+  "weight": 2.9
+ },
+ "New Frontiers": {
+  "bggId": 255692,
+  "cats": [
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "mechs": [
+   "Action Drafting",
+   "Follow",
+   "Increase Value of Unchosen Resources",
+   "Open Drafting",
+   "Race",
+   "Turn Order: Claim Action",
+   "Variable Phase Order",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.4,
+  "weight": 2.96
+ },
+ "New York Zoo": {
+  "bggId": 300877,
+  "cats": [
+   "Abstract Strategy",
+   "Animals",
+   "Puzzle"
+  ],
+  "mechs": [
+   "Automatic Resource Growth",
+   "Grid Coverage",
+   "Modular Board",
+   "Race",
+   "Rondel",
+   "Tile Placement"
+  ],
+  "bgg": 7,
+  "weight": 1.96
+ },
+ "No Thanks!": {
+  "bggId": 12942,
+  "cats": [
+   "Card Game"
+  ],
+  "mechs": [
+   "Auction / Bidding",
+   "Closed Economy Auction",
+   "Push Your Luck",
+   "Score-and-Reset Game",
+   "Set Collection"
+  ],
+  "bgg": 7.1,
+  "weight": 1.13
+ },
+ "Not Alone": {
+  "bggId": 194879,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Horror",
+   "Science Fiction"
+  ],
+  "mechs": [
+   "Deck, Bag, and Pool Building",
+   "Hand Management",
+   "Hidden Movement",
+   "Race",
+   "Simultaneous Action Selection",
+   "Team-Based Game"
+  ],
+  "bgg": 7,
+  "weight": 2
+ },
+ "Now or Never": {
+  "bggId": 314745,
+  "cats": [
+   "City Building",
+   "Exploration",
+   "Fantasy",
+   "Science Fiction"
+  ],
+  "mechs": [
+   "Action Drafting",
+   "Hand Management",
+   "Narrative Choice / Paragraph",
+   "Solo / Solitaire Game",
+   "Tile Placement",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.6,
+  "weight": 3.6
+ },
+ "Nucleum": {
+  "bggId": 396790,
+  "cats": [
+   "Economic",
+   "Industry / Manufacturing",
+   "Science Fiction"
+  ],
+  "mechs": [
+   "Action Retrieval",
+   "Contracts",
+   "End Game Bonuses",
+   "Hand Management",
+   "Income",
+   "Market",
+   "Network and Route Building",
+   "Solo / Solitaire Game",
+   "Tech Trees / Tech Tracks",
+   "Variable Player Powers"
+  ],
+  "bgg": 8.1,
+  "weight": 4.19
+ },
+ "Oath - Chronicles of Empire and Exile": {
+  "bggId": 291572,
+  "cats": [
+   "Economic",
+   "Fantasy",
+   "Negotiation",
+   "Political",
+   "Territory Building",
+   "Wargame"
+  ],
+  "mechs": [
+   "Action Points",
+   "Area Majority / Influence",
+   "Area Movement",
+   "Dice Rolling",
+   "Modular Board",
+   "Negotiation",
+   "Scenario / Mission / Campaign Game",
+   "Storytelling",
+   "Take That",
+   "Variable Set-up"
+  ],
+  "bgg": 7.7,
+  "weight": 4.12
+ },
+ "Odin's Ravens (Second Edition)": {
+  "bggId": 192074,
+  "cats": [
+   "Animals",
+   "Card Game",
+   "Mythology"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Race",
+   "Resource to Move",
+   "Track Movement"
+  ],
+  "bgg": 7,
+  "weight": 1.24
+ },
+ "Ok Boomer": {
+  "bggId": 313463,
+  "cats": [
+   "Party Game",
+   "Trivia"
+  ],
+  "mechs": [],
+  "bgg": 4.7,
+  "weight": 1
+ },
+ "One Night Ultimate Superheroes": {
+  "bggId": 255293,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Horror",
+   "Party Game"
+  ],
+  "mechs": [
+   "Hidden Roles",
+   "Role Playing",
+   "Roles with Asymmetric Information",
+   "Traitor Game",
+   "Variable Player Powers",
+   "Voting"
+  ],
+  "bgg": 6.8,
+  "weight": 1.5
+ },
+ "One Night Ultimate Werewolf": {
+  "bggId": 147949,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Horror",
+   "Party Game"
+  ],
+  "mechs": [
+   "Hidden Roles",
+   "Role Playing",
+   "Roles with Asymmetric Information",
+   "Traitor Game",
+   "Variable Player Powers",
+   "Voting"
+  ],
+  "bgg": 7,
+  "weight": 1.38
+ },
+ "Ono 99": {
+  "bggId": 7803,
+  "cats": [
+   "Card Game",
+   "Math"
+  ],
+  "mechs": [],
+  "bgg": 5.7,
+  "weight": 1.16
+ },
+ "Operation Shuffle": {
+  "bggId": 239828,
+  "cats": [
+   "Card Game",
+   "Medical"
+  ],
+  "mechs": [
+   "Push Your Luck",
+   "Set Collection"
+  ],
+  "bgg": 5.3,
+  "weight": 1
+ },
+ "Orleans": {
+  "bggId": 164928,
+  "cats": [
+   "Medieval",
+   "Religious",
+   "Travel"
+  ],
+  "mechs": [
+   "Contracts",
+   "Deck, Bag, and Pool Building",
+   "End Game Bonuses",
+   "Events",
+   "Kill Steal",
+   "Point to Point Movement",
+   "Simultaneous Action Selection",
+   "Tech Trees / Tech Tracks",
+   "Turn Order: Progressive",
+   "Variable Set-up",
+   "Worker Placement, Different Worker Types"
+  ],
+  "bgg": 8,
+  "weight": 3.01
+ },
+ "Paladins of the West Kingdom": {
+  "bggId": 266810,
+  "cats": [
+   "Medieval"
+  ],
+  "mechs": [
+   "End Game Bonuses",
+   "Market",
+   "Open Drafting",
+   "Solo / Solitaire Game",
+   "Worker Placement",
+   "Worker Placement, Different Worker Types"
+  ],
+  "bgg": 8,
+  "weight": 3.71
+ },
+ "Palazzo": {
+  "bggId": 15318,
+  "cats": [
+   "Renaissance"
+  ],
+  "mechs": [
+   "Auction / Bidding",
+   "Hand Management",
+   "Set Collection"
+  ],
+  "bgg": 6.5,
+  "weight": 2.06
+ },
+ "Paleo": {
+  "bggId": 300531,
+  "cats": [
+   "Card Game",
+   "Exploration",
+   "Prehistoric"
+  ],
+  "mechs": [
+   "Action / Event",
+   "Cooperative Game",
+   "Deck, Bag, and Pool Building",
+   "Memory",
+   "Scenario / Mission / Campaign Game",
+   "Simultaneous Action Selection",
+   "Variable Set-up"
+  ],
+  "bgg": 7.6,
+  "weight": 2.65
+ },
+ "Pandemic": {
+  "bggId": 30549,
+  "cats": [
+   "Medical",
+   "Travel"
+  ],
+  "mechs": [
+   "Action Points",
+   "Chaining",
+   "Contracts",
+   "Cooperative Game",
+   "Events",
+   "Hand Management",
+   "Multi-Use Cards",
+   "Point to Point Movement",
+   "Set Collection",
+   "Simulation",
+   "Solo / Solitaire Game",
+   "Tags",
+   "Trading",
+   "Variable Player Powers",
+   "Variable Set-up"
+  ],
+  "bgg": 7.5,
+  "weight": 2.39
+ },
+ "Paperback": {
+  "bggId": 141572,
+  "cats": [
+   "Card Game",
+   "Print & Play",
+   "Word Game"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Deck, Bag, and Pool Building",
+   "Delayed Purchase",
+   "Market",
+   "Open Drafting",
+   "Spelling"
+  ],
+  "bgg": 7.1,
+  "weight": 2
+ },
+ "Pendulum": {
+  "bggId": 312804,
+  "cats": [
+   "Card Game",
+   "Economic",
+   "Real-time"
+  ],
+  "mechs": [
+   "Action Timer",
+   "Deck Construction",
+   "Real-Time",
+   "Simultaneous Action Selection",
+   "Solo / Solitaire Game",
+   "Variable Player Powers",
+   "Worker Placement",
+   "Worker Placement, Different Worker Types"
+  ],
+  "bgg": 6.4,
+  "weight": 2.99
+ },
+ "Phase 10": {
+  "bggId": 1258,
+  "cats": [
+   "Card Game"
+  ],
+  "mechs": [
+   "Melding and Splaying",
+   "Set Collection"
+  ],
+  "bgg": 5.3,
+  "weight": 1.25
+ },
+ "Pick Up Sticks": {
+  "bggId": 6424,
+  "cats": [
+   "Action / Dexterity",
+   "Children's Game",
+   "Party Game"
+  ],
+  "mechs": [
+   "Physical Removal",
+   "Push Your Luck",
+   "Set Collection",
+   "Take That"
+  ],
+  "bgg": 4.4,
+  "weight": 1.06
+ },
+ "Pictionary": {
+  "bggId": 2281,
+  "cats": [
+   "Party Game"
+  ],
+  "mechs": [
+   "Drawing",
+   "Roll / Spin and Move",
+   "Team-Based Game"
+  ],
+  "bgg": 5.9,
+  "weight": 1.22
+ },
+ "Pictomania": {
+  "bggId": 98229,
+  "cats": [
+   "Party Game",
+   "Real-time"
+  ],
+  "mechs": [
+   "Drawing"
+  ],
+  "bgg": 7.3,
+  "weight": 1.52
+ },
+ "Pirates of Perfidy": {
+  "bggId": 436471,
+  "cats": [
+   "Card Game",
+   "Pirates"
+  ],
+  "mechs": [],
+  "bgg": 0,
+  "weight": 0
+ },
+ "Planet": {
+  "bggId": 252929,
+  "cats": [
+   "Environmental",
+   "Puzzle",
+   "Science Fiction"
+  ],
+  "mechs": [
+   "Open Drafting",
+   "Tile Placement",
+   "Turn Order: Progressive"
+  ],
+  "bgg": 6.6,
+  "weight": 1.58
+ },
+ "Playdoh Shuffle": {
+  "bggId": 179589,
+  "cats": [
+   "Card Game",
+   "Children's Game"
+  ],
+  "mechs": [
+   "Storytelling"
+  ],
+  "bgg": 5,
+  "weight": 1
+ },
+ "Poo": {
+  "bggId": 60579,
+  "cats": [
+   "Animals",
+   "Card Game",
+   "Humor"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Player Elimination",
+   "Take That"
+  ],
+  "bgg": 5.6,
+  "weight": 1.1
+ },
+ "Pop the Pig": {
+  "bggId": 35173,
+  "cats": [
+   "Animals",
+   "Children's Game"
+  ],
+  "mechs": [
+   "Dice Rolling"
+  ],
+  "bgg": 4.2,
+  "weight": 1
+ },
+ "Psycho Killer": {
+  "bggId": 327371,
+  "cats": [
+   "Card Game",
+   "Horror",
+   "Humor",
+   "Movies / TV / Radio theme",
+   "Party Game"
+  ],
+  "mechs": [
+   "Finale Ending",
+   "Hand Management",
+   "Hot Potato",
+   "Take That"
+  ],
+  "bgg": 6.7,
+  "weight": 1.67
+ },
+ "Puerto Rico": {
+  "bggId": 3076,
+  "cats": [
+   "City Building",
+   "Economic",
+   "Farming"
+  ],
+  "mechs": [
+   "Action Drafting",
+   "End Game Bonuses",
+   "Follow",
+   "Hidden Victory Points",
+   "Increase Value of Unchosen Resources",
+   "Turn Order: Progressive",
+   "Variable Phase Order"
+  ],
+  "bgg": 7.9,
+  "weight": 3.27
+ },
+ "Quacks of Quedlinburg": {
+  "bggId": 409496,
+  "cats": [
+   "Medieval"
+  ],
+  "mechs": [
+   "Deck, Bag, and Pool Building"
+  ],
+  "bgg": 7.5,
+  "weight": 2.27
+ },
+ "Quadefy": {
+  "bggId": 113517,
+  "cats": [
+   "Abstract Strategy"
+  ],
+  "mechs": [
+   "Tile Placement"
+  ],
+  "bgg": 5.8,
+  "weight": 1
+ },
+ "Qwirkle": {
+  "bggId": 25669,
+  "cats": [],
+  "mechs": [
+   "Hand Management",
+   "Pattern Building",
+   "Square Grid",
+   "Tile Placement"
+  ],
+  "bgg": 6.8,
+  "weight": 1.58
+ },
+ "Ra": {
+  "bggId": 12,
+  "cats": [
+   "Ancient",
+   "Mythology"
+  ],
+  "mechs": [
+   "Auction / Bidding",
+   "Auction: Once Around",
+   "Closed Economy Auction",
+   "Constrained Bidding",
+   "Hidden Victory Points",
+   "Push Your Luck",
+   "Set Collection"
+  ],
+  "bgg": 7.7,
+  "weight": 2.3
+ },
+ "Red Cathedral": {
+  "bggId": 227224,
+  "cats": [
+   "Dice",
+   "Economic"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Contracts",
+   "Dice Rolling",
+   "End Game Bonuses",
+   "Rondel",
+   "Solo / Solitaire Game",
+   "Victory Points as a Resource"
+  ],
+  "bgg": 7.7,
+  "weight": 2.82
+ },
+ "Red Rising": {
+  "bggId": 329465,
+  "cats": [
+   "Card Game",
+   "Novel-based",
+   "Science Fiction"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "End Game Bonuses",
+   "Hand Management",
+   "Open Drafting",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "bgg": 7,
+  "weight": 2.31
+ },
+ "Res Arcana": {
+  "bggId": 262712,
+  "cats": [
+   "Card Game",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Income",
+   "Multi-Use Cards",
+   "Open Drafting",
+   "Race",
+   "Score-and-Reset Game",
+   "Take That",
+   "Turn Order: Pass Order",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.6,
+  "weight": 2.66
+ },
+ "Rick and Morty - Total Rickall": {
+  "bggId": 194232,
+  "cats": [
+   "Card Game",
+   "Deduction",
+   "Humor",
+   "Movies / TV / Radio theme"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Hand Management",
+   "Hidden Roles",
+   "Memory",
+   "Traitor Game"
+  ],
+  "bgg": 6.1,
+  "weight": 1.51
+ },
+ "Rising Sun": {
+  "bggId": 205896,
+  "cats": [
+   "Bluffing",
+   "Fantasy",
+   "Mythology",
+   "Negotiation",
+   "Wargame"
+  ],
+  "mechs": [
+   "Action Drafting",
+   "Alliances",
+   "Area Majority / Influence",
+   "Area Movement",
+   "Auction: Sealed Bid",
+   "Betting and Bluffing",
+   "Closed Drafting",
+   "End Game Bonuses",
+   "Follow",
+   "Force Commitment",
+   "Negotiation",
+   "Set Collection",
+   "Simultaneous Action Selection",
+   "Take That",
+   "Variable Phase Order",
+   "Variable Player Powers",
+   "Variable Set-up"
+  ],
+  "bgg": 7.8,
+  "weight": 3.3
+ },
+ "Roll for the Galaxy": {
+  "bggId": 132531,
+  "cats": [
+   "Civilization",
+   "Dice",
+   "Economic",
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "mechs": [
+   "Action Retrieval",
+   "Contracts",
+   "Deck, Bag, and Pool Building",
+   "Dice Rolling",
+   "Die Icon Resolution",
+   "Follow",
+   "Hand Management",
+   "Race",
+   "Simultaneous Action Selection",
+   "Tags",
+   "Tile Placement",
+   "Variable Phase Order",
+   "Variable Player Powers",
+   "Variable Set-up",
+   "Worker Placement with Dice Workers"
+  ],
+  "bgg": 7.6,
+  "weight": 2.78
+ },
+ "Roll Player": {
+  "bggId": 169426,
+  "cats": [
+   "Dice",
+   "Fantasy",
+   "Medieval"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Open Drafting",
+   "Role Playing",
+   "Set Collection",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.4,
+  "weight": 2.42
+ },
+ "Root": {
+  "bggId": 237182,
+  "cats": [
+   "Animals",
+   "Fantasy",
+   "Negotiation",
+   "Territory Building",
+   "Wargame"
+  ],
+  "mechs": [
+   "Action Points",
+   "Action Queue",
+   "Action Retrieval",
+   "Area Majority / Influence",
+   "Area Movement",
+   "Dice Rolling",
+   "Hand Management",
+   "Multi-Use Cards",
+   "Negotiation",
+   "Point to Point Movement",
+   "Race",
+   "Sudden Death Ending",
+   "Take That",
+   "Variable Player Powers",
+   "Variable Set-up"
+  ],
+  "bgg": 8.1,
+  "weight": 3.84
+ },
+ "Rubiks Cage": {
+  "bggId": 283609,
+  "cats": [
+   "Abstract Strategy"
+  ],
+  "mechs": [
+   "Pattern Building"
+  ],
+  "bgg": 6.4,
+  "weight": 1.25
+ },
+ "Rummikub Original": {
+  "bggId": 811,
+  "cats": [
+   "Abstract Strategy",
+   "Card Game",
+   "Number"
+  ],
+  "mechs": [
+   "Set Collection",
+   "Tile Placement"
+  ],
+  "bgg": 6.5,
+  "weight": 1.71
+ },
+ "RUN": {
+  "bggId": 368028,
+  "cats": [
+   "Deduction"
+  ],
+  "mechs": [
+   "Deduction",
+   "Grid Movement",
+   "Hidden Movement",
+   "Once-Per-Game Abilities",
+   "Variable Player Powers",
+   "Variable Set-up"
+  ],
+  "bgg": 7.5,
+  "weight": 2.14
+ },
+ "RuneScape Kingdoms: King Black Dragon": {
+  "bggId": 415085,
+  "cats": [
+   "Expansion for Base-game",
+   "Fantasy",
+   "Miniatures",
+   "Video Game Theme"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Dice Rolling",
+   "Scenario / Mission / Campaign Game",
+   "Solo / Solitaire Game"
+  ],
+  "bgg": 8.8,
+  "weight": 0
+ },
+ "RuneScape Kingdoms: Shadow of Elvarg": {
+  "bggId": 361503,
+  "cats": [
+   "Fantasy",
+   "Miniatures",
+   "Video Game Theme"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Dice Rolling",
+   "Scenario / Mission / Campaign Game",
+   "Solo / Solitaire Game"
+  ],
+  "bgg": 7.5,
+  "weight": 2.2
+ },
+ "Sabotage": {
+  "bggId": 252854,
+  "cats": [
+   "Bluffing",
+   "Deduction",
+   "Dice",
+   "Spies / Secret Agents"
+  ],
+  "mechs": [
+   "Action Queue",
+   "Dice Rolling",
+   "Grid Movement",
+   "Hidden Movement",
+   "Secret Unit Deployment",
+   "Simultaneous Action Selection",
+   "Team-Based Game",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.2,
+  "weight": 2.89
+ },
+ "Saboteur": {
+  "bggId": 9220,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Exploration",
+   "Fantasy",
+   "Party Game"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Hidden Roles",
+   "Hidden Victory Points",
+   "Map Addition",
+   "Network and Route Building",
+   "Score-and-Reset Game",
+   "Take That",
+   "Traitor Game"
+  ],
+  "bgg": 6.5,
+  "weight": 1.32
+ },
+ "Scape Goat": {
+  "bggId": 315043,
+  "cats": [
+   "Card Game",
+   "Deduction",
+   "Party Game"
+  ],
+  "mechs": [
+   "Deduction",
+   "Hand Management"
+  ],
+  "bgg": 6.9,
+  "weight": 1.67
+ },
+ "SCOUT": {
+  "bggId": 291453,
+  "cats": [
+   "Card Game"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Ladder Climbing",
+   "Score-and-Reset Game"
+  ],
+  "bgg": 7.8,
+  "weight": 1.39
+ },
+ "Scrabble": {
+  "bggId": 320,
+  "cats": [
+   "Word Game"
+  ],
+  "mechs": [
+   "End Game Bonuses",
+   "Hand Management",
+   "Spelling",
+   "Square Grid",
+   "Tile Placement"
+  ],
+  "bgg": 6.3,
+  "weight": 2.05
+ },
+ "Secret Hitler": {
+  "bggId": 188834,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Humor",
+   "Party Game",
+   "Political",
+   "Print & Play",
+   "Spies / Secret Agents"
+  ],
+  "mechs": [
+   "Hidden Roles",
+   "Player Elimination",
+   "Team-Based Game",
+   "Traitor Game",
+   "Voting"
+  ],
+  "bgg": 7.5,
+  "weight": 1.74
+ },
+ "Secrets": {
+  "bggId": 200847,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Party Game",
+   "Spies / Secret Agents"
+  ],
+  "mechs": [
+   "Advantage Token",
+   "Open Drafting",
+   "Push Your Luck",
+   "Tags",
+   "Take That",
+   "Team-Based Game"
+  ],
+  "bgg": 6.4,
+  "weight": 1.5
+ },
+ "Selfish": {
+  "bggId": 265912,
+  "cats": [
+   "Card Game",
+   "Humor",
+   "Science Fiction"
+  ],
+  "mechs": [
+   "Player Elimination",
+   "Take That"
+  ],
+  "bgg": 6.2,
+  "weight": 1.1
+ },
+ "Selfish: Zombies": {
+  "bggId": 288583,
+  "cats": [
+   "Card Game",
+   "Horror",
+   "Humor",
+   "Zombies"
+  ],
+  "mechs": [
+   "Take That"
+  ],
+  "bgg": 6,
+  "weight": 1.25
+ },
+ "Sequence": {
+  "bggId": 2375,
+  "cats": [
+   "Abstract Strategy",
+   "Card Game"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Pattern Building",
+   "Take That",
+   "Team-Based Game"
+  ],
+  "bgg": 6.2,
+  "weight": 1.31
+ },
+ "SETI": {
+  "bggId": 418059,
+  "cats": [
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "End Game Bonuses",
+   "Income",
+   "Multi-Use Cards",
+   "Resource to Move",
+   "Solo / Solitaire Game",
+   "Turn Order: Progressive",
+   "Variable Set-up"
+  ],
+  "bgg": 8.4,
+  "weight": 3.83
+ },
+ "Settlers of Catan Expansion 5-6 Player": {
+  "bggId": 2807,
+  "cats": [
+   "Expansion for Base-game",
+   "Negotiation"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Hand Management",
+   "Modular Board",
+   "Network and Route Building",
+   "Trading"
+  ],
+  "bgg": 7,
+  "weight": 2.31
+ },
+ "Shadows of Brimstone City of Ancients": {
+  "bggId": 146791,
+  "cats": [
+   "Adventure",
+   "American West",
+   "Exploration",
+   "Fantasy",
+   "Fighting",
+   "Horror",
+   "Miniatures"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Dice Rolling",
+   "Grid Movement",
+   "Modular Board",
+   "Role Playing",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.9,
+  "weight": 3.38
+ },
+ "Sherlock Holmes Consulting Detective": {
+  "bggId": 2511,
+  "cats": [
+   "Deduction",
+   "Murder / Mystery",
+   "Novel-based",
+   "Post-Napoleonic"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Deduction",
+   "Narrative Choice / Paragraph",
+   "Solo / Solitaire Game",
+   "Storytelling"
+  ],
+  "bgg": 7.6,
+  "weight": 2.66
+ },
+ "Shit Happens": {
+  "bggId": 196379,
+  "cats": [
+   "Card Game",
+   "Mature / Adult",
+   "Party Game"
+  ],
+  "mechs": [
+   "Memory",
+   "Pattern Building",
+   "Set Collection"
+  ],
+  "bgg": 5.3,
+  "weight": 1.05
+ },
+ "Shut The Box": {
+  "bggId": 9851,
+  "cats": [
+   "Dice",
+   "Number"
+  ],
+  "mechs": [
+   "Dice Rolling"
+  ],
+  "bgg": 5.2,
+  "weight": 1.07
+ },
+ "Sidereal Confluence": {
+  "bggId": 202426,
+  "cats": [
+   "Economic",
+   "Negotiation",
+   "Real-time",
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "mechs": [
+   "Auction: Sealed Bid",
+   "Hidden Victory Points",
+   "Income",
+   "Negotiation",
+   "Real-Time",
+   "Simultaneous Action Selection",
+   "Tech Trees / Tech Tracks",
+   "Trading",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.8,
+  "weight": 3.57
+ },
+ "Sideshow Swap": {
+  "bggId": 256443,
+  "cats": [
+   "Card Game",
+   "Deduction",
+   "Party Game"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Memory",
+   "Take That"
+  ],
+  "bgg": 6.8,
+  "weight": 1.67
+ },
+ "Skip-Bo": {
+  "bggId": 1269,
+  "cats": [
+   "Card Game"
+  ],
+  "mechs": [
+   "Hand Management"
+  ],
+  "bgg": 5.7,
+  "weight": 1.19
+ },
+ "Skulk Hollow": {
+  "bggId": 232595,
+  "cats": [
+   "Animals",
+   "Fighting"
+  ],
+  "mechs": [
+   "Action Points",
+   "Command Cards",
+   "Hand Management",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.2,
+  "weight": 2.15
+ },
+ "Skull": {
+  "bggId": 92415,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Party Game"
+  ],
+  "mechs": [
+   "Auction / Bidding",
+   "Auction: Turn Order Until Pass",
+   "Bids As Wagers",
+   "Hand Management",
+   "Player Elimination",
+   "Predictive Bid"
+  ],
+  "bgg": 7.2,
+  "weight": 1.12
+ },
+ "Sky Team": {
+  "bggId": 373106,
+  "cats": [
+   "Aviation / Flight",
+   "Dice"
+  ],
+  "mechs": [
+   "Communication Limits",
+   "Cooperative Game",
+   "Dice Rolling",
+   "Scenario / Mission / Campaign Game",
+   "Turn Order: Progressive",
+   "Variable Player Powers",
+   "Variable Set-up",
+   "Worker Placement with Dice Workers"
+  ],
+  "bgg": 8.1,
+  "weight": 2.04
+ },
+ "Small World - Warcraft": {
+  "bggId": 309630,
+  "cats": [
+   "Fantasy",
+   "Fighting",
+   "Territory Building",
+   "Video Game Theme"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Area Movement",
+   "Dice Rolling",
+   "Increase Value of Unchosen Resources",
+   "Team-Based Game",
+   "Variable Player Powers",
+   "Victory Points as a Resource"
+  ],
+  "bgg": 7.2,
+  "weight": 2.68
+ },
+ "Smash Up": {
+  "bggId": 122522,
+  "cats": [
+   "Card Game",
+   "Fantasy",
+   "Humor",
+   "Pirates",
+   "Science Fiction",
+   "Zombies"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Card Play Conflict Resolution",
+   "Deck Construction",
+   "Hand Management",
+   "Kill Steal",
+   "Open Drafting",
+   "Take That",
+   "Variable Player Powers",
+   "Variable Set-up"
+  ],
+  "bgg": 6.7,
+  "weight": 2.06
+ },
+ "Sounds Fishy": {
+  "bggId": 359893,
+  "cats": [
+   "Party Game"
+  ],
+  "mechs": [
+   "Betting and Bluffing",
+   "Player Judge"
+  ],
+  "bgg": 6.7,
+  "weight": 1
+ },
+ "Space Base": {
+  "bggId": 242302,
+  "cats": [
+   "Dice",
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Open Drafting",
+   "Random Production"
+  ],
+  "bgg": 7.5,
+  "weight": 2.13
+ },
+ "Spirit Island": {
+  "bggId": 162886,
+  "cats": [
+   "Environmental",
+   "Fantasy",
+   "Mythology",
+   "Territory Building"
+  ],
+  "mechs": [
+   "Action Retrieval",
+   "Area Majority / Influence",
+   "Automatic Resource Growth",
+   "Campaign / Battle Card Driven",
+   "Cooperative Game",
+   "Deck, Bag, and Pool Building",
+   "Hand Management",
+   "Modular Board",
+   "Simultaneous Action Selection",
+   "Solo / Solitaire Game",
+   "Tags",
+   "Variable Player Powers",
+   "Variable Set-up"
+  ],
+  "bgg": 8.3,
+  "weight": 4.07
+ },
+ "Splendor": {
+  "bggId": 148228,
+  "cats": [
+   "Card Game",
+   "Economic",
+   "Renaissance"
+  ],
+  "mechs": [
+   "Contracts",
+   "Open Drafting",
+   "Race",
+   "Set Collection"
+  ],
+  "bgg": 7.4,
+  "weight": 1.77
+ },
+ "Stabber in the Cabin": {
+  "bggId": 429885,
+  "cats": [
+   "Deduction",
+   "Horror",
+   "Memory",
+   "Murder / Mystery",
+   "Party Game"
+  ],
+  "mechs": [
+   "Hidden Roles",
+   "Memory",
+   "Modular Board",
+   "Once-Per-Game Abilities",
+   "Passed Action Token",
+   "Pattern Recognition",
+   "Traitor Game",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.7,
+  "weight": 1.5
+ },
+ "Streets": {
+  "bggId": 279720,
+  "cats": [
+   "City Building"
+  ],
+  "mechs": [
+   "Set Collection",
+   "Tile Placement",
+   "Variable Player Powers"
+  ],
+  "bgg": 6.6,
+  "weight": 1.98
+ },
+ "Suburbia": {
+  "bggId": 123260,
+  "cats": [
+   "City Building",
+   "Economic"
+  ],
+  "mechs": [
+   "Auction: Dutch",
+   "Catch the Leader",
+   "End Game Bonuses",
+   "Hexagon Grid",
+   "Income",
+   "Open Drafting",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Tile Placement"
+  ],
+  "bgg": 7.5,
+  "weight": 2.76
+ },
+ "Summoner Wars": {
+  "bggId": 58281,
+  "cats": [
+   "Card Game",
+   "Fantasy",
+   "Fighting"
+  ],
+  "mechs": [
+   "Action Points",
+   "Dice Rolling",
+   "Grid Movement",
+   "Hand Management",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.2,
+  "weight": 2.33
+ },
+ "Sushi Go": {
+  "bggId": 133473,
+  "cats": [
+   "Card Game",
+   "Party Game"
+  ],
+  "mechs": [
+   "Closed Drafting",
+   "End Game Bonuses",
+   "Hand Management",
+   "Score-and-Reset Game",
+   "Set Collection",
+   "Simultaneous Action Selection"
+  ],
+  "bgg": 7,
+  "weight": 1.16
+ },
+ "T.I.M.E Stories: Under the Mask": {
+  "bggId": 189686,
+  "cats": [
+   "Adventure",
+   "Ancient",
+   "Expansion for Base-game",
+   "Fantasy",
+   "Puzzle"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Dice Rolling",
+   "Move Through Deck",
+   "Role Playing",
+   "Storytelling",
+   "Variable Player Powers",
+   "Voting"
+  ],
+  "bgg": 7.3,
+  "weight": 2.46
+ },
+ "Taboo": {
+  "bggId": 1111,
+  "cats": [
+   "Party Game",
+   "Real-time",
+   "Word Game"
+  ],
+  "mechs": [
+   "Communication Limits",
+   "Team-Based Game"
+  ],
+  "bgg": 6.3,
+  "weight": 1.2
+ },
+ "Taco Cat Cheese Pizza": {
+  "bggId": 253664,
+  "cats": [
+   "Action / Dexterity",
+   "Card Game",
+   "Children's Game",
+   "Party Game",
+   "Real-time"
+  ],
+  "mechs": [
+   "Interrupts",
+   "Pattern Recognition",
+   "Race",
+   "Real-Time",
+   "Speed Matching"
+  ],
+  "bgg": 6.5,
+  "weight": 1.03
+ },
+ "Tainted Grail - Kings of Ruin": {
+  "bggId": 360366,
+  "cats": [
+   "Adventure",
+   "Exploration",
+   "Fantasy",
+   "Miniatures",
+   "Mythology"
+  ],
+  "mechs": [
+   "Area Movement",
+   "Cooperative Game",
+   "Deck Construction",
+   "Dice Rolling",
+   "Events",
+   "Hand Management",
+   "Modular Board",
+   "Role Playing",
+   "Scenario / Mission / Campaign Game",
+   "Solo / Solitaire Game",
+   "Storytelling"
+  ],
+  "bgg": 8.6,
+  "weight": 3.28
+ },
+ "Tang Garden": {
+  "bggId": 252153,
+  "cats": [
+   "Environmental"
+  ],
+  "mechs": [
+   "Line of Sight",
+   "Open Drafting",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Tile Placement",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.3,
+  "weight": 2.64
+ },
+ "Tapple": {
+  "bggId": 129556,
+  "cats": [
+   "Card Game",
+   "Electronic",
+   "Party Game",
+   "Real-time",
+   "Word Game"
+  ],
+  "mechs": [
+   "Matching",
+   "Memory",
+   "Player Elimination",
+   "Spelling"
+  ],
+  "bgg": 6.4,
+  "weight": 1.02
+ },
+ "Tavern Masters": {
+  "bggId": 210418,
+  "cats": [
+   "Card Game",
+   "Fantasy",
+   "Humor",
+   "Negotiation"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Hand Management",
+   "Hidden Movement",
+   "Negotiation",
+   "Open Drafting",
+   "Simultaneous Action Selection",
+   "Trading"
+  ],
+  "bgg": 6.8,
+  "weight": 2
+ },
+ "Terra Mystica": {
+  "bggId": 120677,
+  "cats": [
+   "Civilization",
+   "Economic",
+   "Fantasy",
+   "Territory Building"
+  ],
+  "mechs": [
+   "Chaining",
+   "End Game Bonuses",
+   "Hexagon Grid",
+   "Income",
+   "Increase Value of Unchosen Resources",
+   "Network and Route Building",
+   "Tech Trees / Tech Tracks",
+   "Turn Order: Pass Order",
+   "Variable Player Powers",
+   "Variable Set-up",
+   "Victory Points as a Resource"
+  ],
+  "bgg": 8,
+  "weight": 3.97
+ },
+ "Terra Mystica (Big Box)": {
+  "bggId": 356238,
+  "cats": [
+   "Civilization",
+   "Economic",
+   "Fantasy",
+   "Territory Building"
+  ],
+  "mechs": [
+   "Chaining",
+   "End Game Bonuses",
+   "Hexagon Grid",
+   "Income",
+   "Increase Value of Unchosen Resources",
+   "Network and Route Building",
+   "Tech Trees / Tech Tracks",
+   "Turn Order: Pass Order",
+   "Variable Player Powers",
+   "Variable Set-up",
+   "Victory Points as a Resource"
+  ],
+  "bgg": 8.7,
+  "weight": 4.32
+ },
+ "Terraforming Mars": {
+  "bggId": 167791,
+  "cats": [
+   "Civilization",
+   "Economic",
+   "Environmental",
+   "Industry / Manufacturing",
+   "Science Fiction",
+   "Space Exploration",
+   "Territory Building"
+  ],
+  "mechs": [
+   "Closed Drafting",
+   "Contracts",
+   "End Game Bonuses",
+   "Hand Management",
+   "Hexagon Grid",
+   "Income",
+   "Solo / Solitaire Game",
+   "Tags",
+   "Take That",
+   "Tile Placement",
+   "Turn Order: Progressive",
+   "Variable Player Powers",
+   "Variable Set-up"
+  ],
+  "bgg": 8.3,
+  "weight": 3.27
+ },
+ "The Gang": {
+  "bggId": 411567,
+  "cats": [
+   "Card Game",
+   "Party Game"
+  ],
+  "mechs": [
+   "Communication Limits",
+   "Cooperative Game",
+   "Deduction",
+   "Predictive Bid"
+  ],
+  "bgg": 7.6,
+  "weight": 1.6
+ },
+ "The Great Wall": {
+  "bggId": 292375,
+  "cats": [
+   "Economic",
+   "Fantasy",
+   "Territory Building"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Command Cards",
+   "Income",
+   "Investment",
+   "Secret Unit Deployment",
+   "Semi-Cooperative Game",
+   "Solo / Solitaire Game",
+   "Turn Order: Claim Action",
+   "Worker Placement",
+   "Worker Placement, Different Worker Types"
+  ],
+  "bgg": 7.8,
+  "weight": 3.91
+ },
+ "The Isle of Cats": {
+  "bggId": 281259,
+  "cats": [
+   "Animals",
+   "Fantasy",
+   "Nautical",
+   "Pirates",
+   "Puzzle"
+  ],
+  "mechs": [
+   "Closed Drafting",
+   "Grid Coverage",
+   "Hidden Victory Points",
+   "Income",
+   "Open Drafting",
+   "Pattern Building",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Square Grid",
+   "Tile Placement",
+   "Turn Order: Stat-Based"
+  ],
+  "bgg": 7.6,
+  "weight": 2.36
+ },
+ "The Mind": {
+  "bggId": 244992,
+  "cats": [
+   "Card Game",
+   "Number"
+  ],
+  "mechs": [
+   "Communication Limits",
+   "Cooperative Game",
+   "Hand Management"
+  ],
+  "bgg": 6.7,
+  "weight": 1.07
+ },
+ "The Quest for El Dorado": {
+  "bggId": 217372,
+  "cats": [
+   "Adventure",
+   "Exploration"
+  ],
+  "mechs": [
+   "Deck, Bag, and Pool Building",
+   "Delayed Purchase",
+   "Grid Movement",
+   "Hand Management",
+   "Hexagon Grid",
+   "Modular Board",
+   "Multi-Use Cards",
+   "Once-Per-Game Abilities",
+   "Open Drafting",
+   "Race",
+   "Resource to Move",
+   "Variable Set-up",
+   "Zone of Control"
+  ],
+  "bgg": 7.7,
+  "weight": 1.94
+ },
+ "The Red Dragon Inn": {
+  "bggId": 24310,
+  "cats": [
+   "Card Game",
+   "Fantasy",
+   "Humor",
+   "Medieval",
+   "Party Game"
+  ],
+  "mechs": [
+   "Betting and Bluffing",
+   "Hand Management",
+   "Player Elimination",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "bgg": 6.5,
+  "weight": 1.66
+ },
+ "The Resistance": {
+  "bggId": 41114,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Negotiation",
+   "Party Game",
+   "Print & Play",
+   "Science Fiction",
+   "Spies / Secret Agents"
+  ],
+  "mechs": [
+   "Hidden Roles",
+   "Memory",
+   "Roles with Asymmetric Information",
+   "Simultaneous Action Selection",
+   "Team-Based Game",
+   "Traitor Game",
+   "Voting"
+  ],
+  "bgg": 7.2,
+  "weight": 1.59
+ },
+ "The Sherriff of Nottingham": {
+  "bggId": 157969,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Humor",
+   "Medieval",
+   "Negotiation",
+   "Novel-based",
+   "Party Game"
+  ],
+  "mechs": [
+   "Betting and Bluffing",
+   "Bribery",
+   "Hand Management",
+   "Negotiation",
+   "Open Drafting",
+   "Role Playing",
+   "Set Collection"
+  ],
+  "bgg": 7,
+  "weight": 1.66
+ },
+ "The Singaporean Dream": {
+  "bggId": 267030,
+  "cats": [
+   "Card Game",
+   "Humor"
+  ],
+  "mechs": [
+   "Open Drafting",
+   "Variable Player Powers"
+  ],
+  "bgg": 5.3,
+  "weight": 1.17
+ },
+ "The Sweet and Spicy Truth": {
+  "bggId": 311211,
+  "cats": [
+   "Humor",
+   "Mature / Adult",
+   "Party Game"
+  ],
+  "mechs": [],
+  "bgg": 6.7,
+  "weight": 0
+ },
+ "The Yawning Portal": {
+  "bggId": 367820,
+  "cats": [
+   "Fantasy"
+  ],
+  "mechs": [
+   "Increase Value of Unchosen Resources",
+   "Matching",
+   "Pattern Recognition",
+   "Race"
+  ],
+  "bgg": 7.1,
+  "weight": 2.04
+ },
+ "Ticket to Ride": {
+  "bggId": 9209,
+  "cats": [
+   "Trains"
+  ],
+  "mechs": [
+   "Connections",
+   "Contracts",
+   "End Game Bonuses",
+   "Hand Management",
+   "Network and Route Building",
+   "Open Drafting",
+   "Push Your Luck",
+   "Set Collection"
+  ],
+  "bgg": 7.4,
+  "weight": 1.82
+ },
+ "Ticket to Ride: Europe": {
+  "bggId": 14996,
+  "cats": [
+   "Trains"
+  ],
+  "mechs": [
+   "Connections",
+   "Contracts",
+   "End Game Bonuses",
+   "Hand Management",
+   "Network and Route Building",
+   "Open Drafting",
+   "Push Your Luck",
+   "Set Collection"
+  ],
+  "bgg": 7.5,
+  "weight": 1.91
+ },
+ "TIME Stories": {
+  "bggId": 146508,
+  "cats": [
+   "Adventure",
+   "Puzzle",
+   "Science Fiction"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Dice Rolling",
+   "Move Through Deck",
+   "Narrative Choice / Paragraph",
+   "Storytelling",
+   "Variable Player Powers"
+  ],
+  "bgg": 7.3,
+  "weight": 2.59
+ },
+ "Tokaido": {
+  "bggId": 123540,
+  "cats": [
+   "Travel"
+  ],
+  "mechs": [
+   "End Game Bonuses",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Track Movement",
+   "Turn Order: Time Track",
+   "Variable Player Powers",
+   "Worker Placement"
+  ],
+  "bgg": 6.9,
+  "weight": 1.74
+ },
+ "Tri-Ominos": {
+  "bggId": 4040,
+  "cats": [
+   "Abstract Strategy",
+   "Movies / TV / Radio theme"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Pattern Building",
+   "Tile Placement"
+  ],
+  "bgg": 5.4,
+  "weight": 1.37
+ },
+ "Trivial Pursuit - Horror": {
+  "bggId": 269963,
+  "cats": [
+   "Horror",
+   "Movies / TV / Radio theme",
+   "Trivia"
+  ],
+  "mechs": [
+   "Dice Rolling",
+   "Team-Based Game"
+  ],
+  "bgg": 5.8,
+  "weight": 0
+ },
+ "Trivial Pursuit - Supernatural": {
+  "bggId": 253204,
+  "cats": [
+   "Movies / TV / Radio theme",
+   "Trivia"
+  ],
+  "mechs": [],
+  "bgg": 7.2,
+  "weight": 0
+ },
+ "Trust me I'm a Doctor": {
+  "bggId": 295687,
+  "cats": [
+   "Card Game",
+   "Horror",
+   "Humor",
+   "Medical",
+   "Negotiation",
+   "Party Game",
+   "Real-time",
+   "Word Game"
+  ],
+  "mechs": [
+   "Acting",
+   "Hand Management",
+   "Negotiation",
+   "Real-Time",
+   "Role Playing",
+   "Storytelling",
+   "Voting"
+  ],
+  "bgg": 5.7,
+  "weight": 1.25
+ },
+ "Trust Me, I'm a Superhero": {
+  "bggId": 315733,
+  "cats": [
+   "Card Game",
+   "Humor",
+   "Negotiation",
+   "Party Game"
+  ],
+  "mechs": [
+   "Negotiation",
+   "Player Judge"
+  ],
+  "bgg": 5.6,
+  "weight": 1
+ },
+ "Two Rooms and a Boom": {
+  "bggId": 134352,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Negotiation",
+   "Party Game",
+   "Print & Play",
+   "Real-time",
+   "Spies / Secret Agents"
+  ],
+  "mechs": [
+   "Acting",
+   "Elapsed Real Time Ending",
+   "Hidden Roles",
+   "Real-Time",
+   "Team-Based Game",
+   "Variable Player Powers",
+   "Voting"
+  ],
+  "bgg": 7,
+  "weight": 1.48
+ },
+ "Tzaar": {
+  "bggId": 31999,
+  "cats": [
+   "Abstract Strategy"
+  ],
+  "mechs": [
+   "Grid Movement",
+   "Map Reduction"
+  ],
+  "bgg": 7.7,
+  "weight": 2.48
+ },
+ "Tzolkin: The Mayan Calendar": {
+  "bggId": 126163,
+  "cats": [
+   "Ancient",
+   "Civilization",
+   "Economic",
+   "Farming",
+   "Mythology"
+  ],
+  "mechs": [
+   "Bias",
+   "End Game Bonuses",
+   "Once-Per-Game Abilities",
+   "Track Movement",
+   "Turn Order: Claim Action",
+   "Worker Placement"
+  ],
+  "bgg": 7.8,
+  "weight": 3.66
+ },
+ "Ultimate Werewolf": {
+  "bggId": 152241,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Fantasy",
+   "Horror",
+   "Murder / Mystery",
+   "Negotiation",
+   "Party Game"
+  ],
+  "mechs": [
+   "Hidden Roles",
+   "Role Playing",
+   "Storytelling",
+   "Team-Based Game",
+   "Traitor Game",
+   "Variable Player Powers",
+   "Voting"
+  ],
+  "bgg": 6.5,
+  "weight": 1.15
+ },
+ "Undaunted: Battle of Britain": {
+  "bggId": 366495,
+  "cats": [
+   "Aviation / Flight",
+   "Wargame",
+   "World War II"
+  ],
+  "mechs": [
+   "Command Cards",
+   "Deck, Bag, and Pool Building",
+   "Dice Rolling",
+   "Hand Management",
+   "Hexagon Grid",
+   "Modular Board",
+   "Open Drafting",
+   "Scenario / Mission / Campaign Game",
+   "Simulation"
+  ],
+  "bgg": 7.9,
+  "weight": 2.76
+ },
+ "Undaunted: Normandy": {
+  "bggId": 268864,
+  "cats": [
+   "Wargame",
+   "World War II"
+  ],
+  "mechs": [
+   "Command Cards",
+   "Deck, Bag, and Pool Building",
+   "Dice Rolling",
+   "Hand Management",
+   "Modular Board",
+   "Open Drafting",
+   "Scenario / Mission / Campaign Game",
+   "Simulation"
+  ],
+  "bgg": 7.8,
+  "weight": 2.27
+ },
+ "Unfair": {
+  "bggId": 179172,
+  "cats": [
+   "Card Game",
+   "City Building",
+   "Economic",
+   "Print & Play"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Income",
+   "Loans",
+   "Open Drafting",
+   "Set Collection",
+   "Take That",
+   "Turn Order: Progressive"
+  ],
+  "bgg": 7.3,
+  "weight": 2.72
+ },
+ "Uno": {
+  "bggId": 2223,
+  "cats": [
+   "Card Game",
+   "Children's Game",
+   "Comic Book / Strip",
+   "Movies / TV / Radio theme",
+   "Number"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Lose a Turn",
+   "Matching",
+   "Take That"
+  ],
+  "bgg": 5.5,
+  "weight": 1.1
+ },
+ "Uno - Flip": {
+  "bggId": 271460,
+  "cats": [
+   "Card Game",
+   "Number"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Take That"
+  ],
+  "bgg": 6.3,
+  "weight": 1.23
+ },
+ "Uno All Wild": {
+  "bggId": 352997,
+  "cats": [
+   "Card Game"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Take That"
+  ],
+  "bgg": 4.5,
+  "weight": 1
+ },
+ "Uno Show em No Mercy": {
+  "bggId": 399088,
+  "cats": [
+   "Card Game"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Lose a Turn",
+   "Matching",
+   "Player Elimination",
+   "Take That"
+  ],
+  "bgg": 6.1,
+  "weight": 1.44
+ },
+ "Upwords": {
+  "bggId": 1515,
+  "cats": [
+   "Word Game"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Layering",
+   "Spelling",
+   "Square Grid",
+   "Tile Placement"
+  ],
+  "bgg": 5.8,
+  "weight": 1.67
+ },
+ "Viticulture": {
+  "bggId": 128621,
+  "cats": [
+   "Economic",
+   "Farming"
+  ],
+  "mechs": [
+   "Contracts",
+   "Hand Management",
+   "Income",
+   "Race",
+   "Turn Order: Progressive",
+   "Worker Placement"
+  ],
+  "bgg": 7.5,
+  "weight": 2.95
+ },
+ "Wandering Towers": {
+  "bggId": 355483,
+  "cats": [
+   "Fantasy",
+   "Memory"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Memory",
+   "Race",
+   "Rondel",
+   "Solo / Solitaire Game",
+   "Take That",
+   "Track Movement"
+  ],
+  "bgg": 7.3,
+  "weight": 1.6
+ },
+ "Wavelength": {
+  "bggId": 262543,
+  "cats": [
+   "Party Game"
+  ],
+  "mechs": [
+   "Race",
+   "Targeted Clues",
+   "Team-Based Game"
+  ],
+  "bgg": 7.2,
+  "weight": 1.11
+ },
+ "We Forlorn Few": {
+  "bggId": 427584,
+  "cats": [
+   "Adventure",
+   "American West",
+   "Dice",
+   "Exploration",
+   "Travel"
+  ],
+  "mechs": [
+   "Action / Event",
+   "Dice Rolling",
+   "Hexagon Grid",
+   "Negotiation",
+   "Push Your Luck",
+   "Race",
+   "Resource to Move",
+   "Trading",
+   "Turn Order: Pass Order"
+  ],
+  "bgg": 7.8,
+  "weight": 2.5
+ },
+ "Werewolves of Millers Hollow": {
+  "bggId": 25821,
+  "cats": [
+   "Bluffing",
+   "Deduction",
+   "Horror",
+   "Murder / Mystery",
+   "Party Game"
+  ],
+  "mechs": [
+   "Hidden Roles",
+   "Player Elimination",
+   "Role Playing",
+   "Team-Based Game",
+   "Variable Player Powers",
+   "Voting"
+  ],
+  "bgg": 6.7,
+  "weight": 1.31
+ },
+ "What Next": {
+  "bggId": 342443,
+  "cats": [
+   "Action / Dexterity",
+   "Adventure",
+   "Party Game"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Flicking",
+   "Narrative Choice / Paragraph",
+   "Solo / Solitaire Game"
+  ],
+  "bgg": 6.4,
+  "weight": 1.57
+ },
+ "Wingspan": {
+  "bggId": 266192,
+  "cats": [
+   "Animals",
+   "Card Game",
+   "Educational"
+  ],
+  "mechs": [
+   "Action Queue",
+   "Dice Rolling",
+   "End Game Bonuses",
+   "Hand Management",
+   "Once-Per-Game Abilities",
+   "Open Drafting",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Turn Order: Progressive"
+  ],
+  "bgg": 8,
+  "weight": 2.48
+ },
+ "Wizard": {
+  "bggId": 1465,
+  "cats": [
+   "Card Game",
+   "Fantasy"
+  ],
+  "mechs": [
+   "Betting and Bluffing",
+   "Hand Management",
+   "Predictive Bid",
+   "Trick-taking"
+  ],
+  "bgg": 7,
+  "weight": 1.7
+ },
+ "Wyrmspan": {
+  "bggId": 410201,
+  "cats": [
+   "Animals",
+   "Card Game",
+   "Fantasy"
+  ],
+  "mechs": [
+   "End Game Bonuses",
+   "Hand Management",
+   "Once-Per-Game Abilities",
+   "Open Drafting",
+   "Solo / Solitaire Game",
+   "Track Movement",
+   "Turn Order: Progressive"
+  ],
+  "bgg": 7.9,
+  "weight": 2.83
+ },
+ "Xi'an": {
+  "bggId": 234828,
+  "cats": [
+   "Ancient"
+  ],
+  "mechs": [
+   "Area Majority / Influence",
+   "Hand Management",
+   "Set Collection",
+   "Simultaneous Action Selection",
+   "Worker Placement"
+  ],
+  "bgg": 7.1,
+  "weight": 2.78
+ },
+ "Yum Cha": {
+  "bggId": 363991,
+  "cats": [
+   "Card Game",
+   "Children's Game",
+   "Educational",
+   "Party Game"
+  ],
+  "mechs": [
+   "Hand Management",
+   "Matching",
+   "Push Your Luck",
+   "Set Collection"
+  ],
+  "bgg": 6.4,
+  "weight": 1.5
+ }
+}
