@@ -198,6 +198,19 @@ async function main() {
         if (/^expansion for base/i.test(c)) { g.exp = true; return false; }
         return !/^print\s*&\s*play$/i.test(c);
       });
+      // Named mechanics that read as genres at a shelf. Deliberately a short list.
+      const MECH_AS_GENRE = {
+        "solo / solitaire game": "Solo",
+        "scenario / mission / campaign game": "Campaign",
+        "campaign / battle card driven": "Campaign",
+        "legacy game": "Legacy",
+        "storytelling": "Storytelling",
+        "traitor game": "Traitor",
+      };
+      for (const m of (b.mechs || [])) {
+        const g = MECH_AS_GENRE[m.toLowerCase()];
+        if (g && !cats.includes(g)) cats.push(g);
+      }
       if (cats.length) {
         const have = new Set((g.catText || "").split(",").map(s => s.trim().toLowerCase()).filter(Boolean));
         const add = cats.filter(c => !have.has(c.toLowerCase()));
