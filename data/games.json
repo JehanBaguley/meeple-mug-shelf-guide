@@ -1,5 +1,5 @@
 {
- "built": "2026-08-08T02:35:51.453Z",
+ "built": "2026-08-08T08:14:33.487Z",
  "games": [
   {
    "bggId": 3377,
@@ -1045,8 +1045,8 @@
     2,
     2
    ],
-   "mins": null,
-   "time": null,
+   "mins": 60,
+   "time": "30–60m",
    "bgg": 7.2,
    "weight": 3.64,
    "age": "6+",
@@ -2437,8 +2437,8 @@
     2,
     6
    ],
-   "mins": null,
-   "time": null,
+   "mins": 45,
+   "time": "45m",
    "bgg": 4.7,
    "weight": 1,
    "age": "16+",
@@ -2639,7 +2639,7 @@
    "time": "15m",
    "bgg": 6.7,
    "weight": 1.19,
-   "age": null,
+   "age": "6+",
    "catText": "Action / Dexterity, Animals, Fighting",
    "playable": true,
    "forSale": false,
@@ -3670,8 +3670,8 @@
     2,
     8
    ],
-   "mins": null,
-   "time": null,
+   "mins": 20,
+   "time": "20m",
    "bgg": 5.7,
    "weight": 1.16,
    "age": "7+",
@@ -3938,7 +3938,7 @@
    "time": "25m",
    "bgg": 0,
    "weight": null,
-   "age": null,
+   "age": "14+",
    "catText": "Card Game, Pirates",
    "playable": true,
    "forSale": false,
@@ -5434,8 +5434,8 @@
     2,
     99
    ],
-   "mins": null,
-   "time": null,
+   "mins": 60,
+   "time": "30–60m",
    "bgg": 7.2,
    "weight": null,
    "age": "12+",
@@ -6032,9 +6032,9 @@
     2,
     4
    ],
-   "mins": null,
-   "time": null,
-   "age": null,
+   "mins": 120,
+   "time": "60–120m",
+   "age": "14+",
    "catText": "Negotiation, Science Fiction, Campaign",
    "bgg": 8.9,
    "weight": 4.55,
@@ -6057,8 +6057,8 @@
     2,
     99
    ],
-   "mins": null,
-   "time": null,
+   "mins": 20,
+   "time": "20m",
    "age": "12+",
    "catText": "Puzzle, Word Game",
    "bgg": 4,
@@ -6637,8 +6637,8 @@
     2,
     6
    ],
-   "mins": null,
-   "time": null,
+   "mins": 20,
+   "time": "20m",
    "age": "4+",
    "catText": "Card Game, Children's Game, Storytelling",
    "bgg": 5,
