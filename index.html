@@ -94,9 +94,9 @@
     background:linear-gradient(100deg,rgba(236,229,211,.035) 38%,rgba(236,229,211,.075) 50%,rgba(236,229,211,.035) 62%);
     background-size:260% 100%;animation:mmshim 1.9s ease-in-out infinite}
   /* A card-shaped hole rather than a bright card: same silhouette, none of the presence. */
-  .skcard{background:rgba(244,234,210,.07);border:1px solid rgba(236,229,211,.09);border-radius:16px;
+  .skcard{background:rgba(244,234,210,.16);border:1px solid rgba(236,229,211,.14);border-radius:16px;
     padding:14px 16px;display:flex;flex-direction:column;gap:9px}
-  .skcard .skel{background:linear-gradient(100deg,rgba(236,229,211,.05) 38%,rgba(236,229,211,.1) 50%,rgba(236,229,211,.05) 62%);background-size:260% 100%}
+  .skcard .skel{background:linear-gradient(100deg,rgba(43,36,25,.05) 38%,rgba(43,36,25,.1) 50%,rgba(43,36,25,.05) 62%);background-size:260% 100%}
   .skline{height:11px}
   .skline.t{height:15px;width:58%}
   .skline.m{width:78%}
@@ -106,6 +106,7 @@
   .skpill{height:26px;width:96px;border-radius:999px}
   /* The placeholders fade out rather than vanishing, so the swap to real content
      reads as one motion instead of two. */
+  .skwrap#skList{display:contents}
   .skwrap{transition:opacity .18s ease}
   .skwrap.gone{opacity:0}
 
@@ -176,6 +177,13 @@
   .segpill{position:absolute;top:0;bottom:0;left:0;width:0;background:var(--amber);border-radius:10px;z-index:0;
     transition:transform .34s cubic-bezier(.32,.9,.24,1.02),width .34s cubic-bezier(.32,.9,.24,1.02);pointer-events:none}
   .segpill.instant{transition:none}
+  @keyframes mmslidein{from{opacity:0}to{opacity:1}}
+  .list.swipe{animation:mmslidein .26s ease}
+  .list.swipe.fwd{animation-name:mmslidefwd}
+  .list.swipe.back{animation-name:mmslideback}
+  @keyframes mmslidefwd{from{opacity:0;transform:translateX(22px)}to{opacity:1;transform:none}}
+  @keyframes mmslideback{from{opacity:0;transform:translateX(-22px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){ .list.swipe,.list.swipe.fwd,.list.swipe.back{animation:none} }
   @media (prefers-reduced-motion:reduce){ .segpill{transition:none} }
   .segdesc{font-size:11.5px;color:var(--muted);margin:-4px 0 14px;line-height:1.45}
   /* Picks & lists collections row: wraps in the desktop sidebar, scrolls horizontally on mobile */
@@ -214,14 +222,15 @@
   .glinks{display:flex;gap:16px;margin-top:8px}
   .glinks a{font-size:12px;color:#7a4d12;font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--timber);font-family:'IBM Plex Mono',monospace;padding:4px 0;display:inline-block}
   .empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}
-  footer{margin:28px 0 60px;font-size:11.5px;color:var(--muted);line-height:1.6}
+  footer{margin:44px 0 60px;padding-top:26px;border-top:1px solid var(--line);
+    font-size:12.5px;color:#b9d3c2;line-height:1.65}
   .bggcredit img{height:15px;width:auto;vertical-align:-3px;margin-right:5px}
   /* The cafe's own name leads: it is the only thing in here anyone taps on purpose. */
   .fname{font-size:15px;font-weight:700;color:var(--cream);margin:0 0 2px}
   .fname a{color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(236,229,211,.35)}
   .fhome{margin:0 0 12px}
-  footer p{margin:0 0 10px;max-width:62ch}
-  .credit{margin-top:14px;opacity:.75}
+  footer p{margin:0 0 10px;max-width:none}
+  .credit{margin-top:16px;color:var(--muted)}
   footer a{color:var(--timber-light)}
   .note{font-size:12px;color:var(--muted);margin:-4px 0 10px}
   /* applied-filter chips: show exactly what's active, each removable */
@@ -359,8 +368,13 @@
   @media(min-width:900px){
     .wrap{max-width:1400px}
     .cols{display:grid;grid-template-columns:320px minmax(0,1fr);gap:24px;align-items:start}
-    .side{position:sticky;top:8px;max-height:calc(100vh - 16px);overflow-y:auto;padding-right:2px;scrollbar-width:none}
+    .side{position:sticky;top:8px;max-height:calc(100vh - 16px);overflow-y:auto;overflow-x:hidden;padding-right:2px;scrollbar-width:none;overscroll-behavior:contain}
     .side::-webkit-scrollbar{display:none}
+    /* Pinned to the top of the sidebar's own scroll area, not the page. */
+    .side .mtop{position:sticky;top:0;z-index:30;background:var(--bg);padding:2px 0 8px;margin:0 0 6px}
+    .side .mtop::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:10px;
+      background:linear-gradient(var(--bg),rgba(18,58,36,0));pointer-events:none}
+    .side .segdesc{margin-top:0}
     .list{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .gcard{margin:0}
   }
@@ -602,6 +616,7 @@ const TAG_ALIAS = {"word game":"word","card":"card game","children's game":"kids
 // stored, so search and the URL still work, it just does not clutter the card.
 const TAG_MIN = 5;
 let TAG_OK = null;
+let TAG_REACH = null;   // per-genre count of what is reachable under the other filters
 function refreshTagOk(){
   const c = {};
   DATA.games.forEach(g => (g.tags||[]).forEach(t => c[t] = (c[t]||0) + 1));
@@ -658,11 +673,14 @@ let lastTagSig = "";
 let lastFilterSig = "";
 function buildTagRow(){
   lastTagSig = "";
-  const counts = {};
-  DATA.games.forEach(g => (g.tags||[]).forEach(t => counts[t] = (counts[t]||0) + 1));
-  TAG_OK = new Set(Object.keys(counts).filter(t => counts[t] >= TAG_MIN));
-  const all = Object.keys(counts).filter(t => counts[t] >= TAG_MIN)
-    .sort((a,b) => counts[b]-counts[a] || a.localeCompare(b));
+  const total = {};
+  DATA.games.forEach(g => (g.tags||[]).forEach(t => total[t] = (total[t]||0) + 1));
+  TAG_OK = new Set(Object.keys(total).filter(t => total[t] >= TAG_MIN));
+  // Membership is decided by the whole catalogue so chips do not appear and vanish as
+  // you filter, but the number on each chip is what you would actually get.
+  const counts = TAG_REACH || total;
+  const all = Object.keys(total).filter(t => total[t] >= TAG_MIN)
+    .sort((a,b) => (counts[b]||0)-(counts[a]||0) || total[b]-total[a] || a.localeCompare(b));
   const sel = Object.keys(state.tags).filter(k => state.tags[k]);
   const CAP = 8;
   // The search box costs ~46px of permanent height, and with only 8 chips on
@@ -925,7 +943,7 @@ addEventListener("pointerdown", e => {
 function showSkeletons(){
   const list = $("list");
   if(list && !list.children.length){
-    list.innerHTML = '<div class="skwrap" id="skList">' + Array.from({length:6}, () =>
+    list.innerHTML = '<div class="skwrap" id="skList">' + Array.from({length:8}, () =>
       '<div class="skcard" style="margin-bottom:12px">' +
         '<div class="skel skline t"></div><div class="skel skline m"></div>' +
         '<div class="skrow"><span class="skel skchip"></span><span class="skel skchip"></span><span class="skel skchip"></span></div>' +
@@ -958,12 +976,27 @@ function clearSkeletons(){
   });
 }
 
+const SEG_ORDER = ["all","play","buy"];
+let lastSeg = null;
+// Replays the slide whenever the availability tab changes. Restarting the animation
+// needs the class off for one frame, otherwise the browser sees no change.
+function slideList(){
+  const el = $("list");
+  if(!el || lastSeg === null || lastSeg === state.seg) { lastSeg = state.seg; return; }
+  const dir = SEG_ORDER.indexOf(state.seg) > SEG_ORDER.indexOf(lastSeg) ? "fwd" : "back";
+  lastSeg = state.seg;
+  el.classList.remove("swipe","fwd","back");
+  void el.offsetWidth;
+  el.classList.add("swipe", dir);
+}
+
 function render(){
   clearSkeletons();
   requestAnimationFrame(() => placeSegPill(false));
   document.querySelectorAll("[data-seg]").forEach(b=>b.setAttribute("aria-pressed", state.seg===b.dataset.seg));
   document.querySelectorAll("#picksRow [data-pick]").forEach(b=>{const v=b.dataset.pick===""?null:+b.dataset.pick;const on=state.pick===v;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on);});
   $("segDesc").textContent = {all:"Every game we\u2019ve got.",play:"On the shelf right now.",buy:"Buy a copy to take home."}[state.seg];
+  slideList();
   paints.forEach(p=>p());
   $("seatOut").textContent = (state.minSeats===1&&state.maxSeats===10) ? "any number"
     : seatLabel(state.minSeats)+"\u2013"+seatLabel(state.maxSeats);
@@ -1024,6 +1057,15 @@ function render(){
   const has = g => k => (g.tags||[]).includes(k);
   const tagPass = g => (!tInc.length || (state.tagMode==="all" ? tInc.every(has(g)) : tInc.some(has(g)))) && !tExc.some(has(g));
   const stylePass = g => state.playStyle==="coop" ? g.mode==="coop" : state.playStyle==="team" ? g.mode==="team" : state.playStyle==="comp" ? (g.mode!=="coop"&&g.mode!=="team") : true;
+
+  // Everything except the genre filter, which is what each genre chip is offering to
+  // narrow. Excludes are still honoured: ruling a genre out should shrink the others.
+  TAG_REACH = {};
+  for (const g of DATA.games) {
+    if (!(stylePass(g) && basePass(g, true))) continue;
+    if (tExc.some(has(g))) continue;
+    for (const t of (g.tags||[])) TAG_REACH[t] = (TAG_REACH[t]||0) + 1;
+  }
 
   let list = DATA.games.filter(g => stylePass(g) && basePass(g, true) && tagPass(g));
 
