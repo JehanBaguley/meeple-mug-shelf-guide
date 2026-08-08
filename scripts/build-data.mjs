@@ -134,7 +134,7 @@ async function main() {
         if (val("for_sale")) g.forSale = /^y/i.test(val("for_sale"));
         if (val("expansion")) g.exp = /^y/i.test(val("expansion"));
         if (val("price")) { const pr = val("price").trim(), pm = pr.match(/\d+/); g.price = pm ? parseInt(pm[0]) : null; g.priceTxt = /^[~$]/.test(pr) ? pr : "$" + pr; }
-        if (val("rating")) g.bgg = parseFloat(val("rating")) || g.bgg;
+        if (val("rating")) { g.bgg = parseFloat(val("rating")) || g.bgg; g.__setRating = true; }
         if (val("bgg_link")) { g.bggUrl = val("bgg_link"); const bm = val("bgg_link").match(/boardgame(?:expansion|accessory)?\/(\d+)/); if (bm) g.bggId = +bm[1]; }
         if (val("price_text")) g.priceTxt = val("price_text");
         if (val("blurb")) g.playsLike = val("blurb");
@@ -170,18 +170,6 @@ async function main() {
   // BGG reports 0 for a game nobody has rated for complexity; that is "unknown", not "trivial"
   for (const g of games) if (g.weight === 0) g.weight = null;
 
-  // merge the committed BGG ratings map (data/bgg.json) for games the API/dump matched
-  if (existsSync("data/bgg.json")) {
-    const bmap = JSON.parse(readFileSync("data/bgg.json", "utf8"));
-    let merged = 0;
-    for (const g of games) {
-      const b = bmap[g.name];
-      if (b && g.bgg === null) { g.bgg = b.bgg ?? null; g.bggId = b.bggId ?? null; merged++; }
-      if (b && b.weight != null && g.weight === null) g.weight = b.weight;
-    }
-    console.log(`BGG map merged into ${merged} games`);
-  }
-
   // ————— BGG categories, mechanics and description —————
   // The sheet is still the shelf, so this only ever ADDS. The cafe's own categories keep
   // their position, which matters because the first one sets the spine colour, and BGG's
@@ -200,6 +188,10 @@ async function main() {
       if (!g.players && b.minPlayers) g.players = [b.minPlayers, b.maxPlayers || b.minPlayers];
       if (!g.mins && b.mins) { g.mins = b.mins; g.time = b.mins + "m"; }
       if (!g.age && b.minAge) g.age = b.minAge + "+";
+      // The snapshot is pulled straight off the game's own BGG page, so it is the most
+      // current number we have. It only ever loses to a rating somebody typed on purpose.
+      if (!g.__setRating && b.bgg != null) g.bgg = b.bgg;
+      if (b.weight != null && b.weight > 0) g.weight = b.weight;
       // Two of BGG's "categories" are not genres. Expansion is a flag we already show as
       // a pill next to the title, and Print & Play means nothing on a cafe shelf.
       const cats = (b.cats || []).filter(c => {
@@ -227,6 +219,20 @@ async function main() {
     }
     console.log(`BGG enrichment: categories on ${catAdd}, play style on ${modeAdd}, fallback blurb on ${blurbAdd}`);
   }
+  // merge the committed BGG ratings map (data/bgg.json) for games the API/dump matched
+  if (existsSync("data/bgg.json")) {
+    const bmap = JSON.parse(readFileSync("data/bgg.json", "utf8"));
+    let merged = 0;
+    for (const g of games) {
+      const b = bmap[g.name];
+      if (!b) continue;
+      if (g.bgg == null && b.bgg != null) { g.bgg = b.bgg; merged++; }
+      if (g.bggId == null && b.bggId != null) g.bggId = b.bggId;
+      if (g.weight == null && b.weight != null) g.weight = b.weight;
+    }
+    console.log(`BGG map merged into ${merged} games`);
+  }
+
   // "Expansion" is a pill beside the title, not a genre, and while it sits first in
   // catText it steals the spine colour from the genre that should own it.
   for (const g of games) {
@@ -237,6 +243,8 @@ async function main() {
   }
   // The spine colour has to be recomputed after the categories settle, not before.
   for (const g of games) if (g.catText) g.cat = catSlugFor(g.catText);
+
+  for (const g of games) delete g.__setRating;
 
   if (!games.length) { console.log("No data from either source, leaving games.json untouched"); return; }
 
