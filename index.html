@@ -91,11 +91,12 @@
      than opacity so it costs one composited layer and nothing reflows. */
   @keyframes mmshim{0%{background-position:180% 0}100%{background-position:-80% 0}}
   .skel{position:relative;overflow:hidden;border-radius:8px;
-    background:linear-gradient(100deg,rgba(236,229,211,.06) 30%,rgba(236,229,211,.13) 48%,rgba(236,229,211,.06) 66%);
-    background-size:220% 100%;animation:mmshim 1.4s ease-in-out infinite}
-  .skcard{background:var(--card);border:1px solid var(--card-edge);border-radius:16px;
-    box-shadow:0 2px 0 rgba(0,0,0,.25);padding:14px 16px;display:flex;flex-direction:column;gap:9px;opacity:.72}
-  .skcard .skel{background:linear-gradient(100deg,rgba(43,36,25,.06) 30%,rgba(43,36,25,.13) 48%,rgba(43,36,25,.06) 66%);background-size:220% 100%}
+    background:linear-gradient(100deg,rgba(236,229,211,.035) 38%,rgba(236,229,211,.075) 50%,rgba(236,229,211,.035) 62%);
+    background-size:260% 100%;animation:mmshim 1.9s ease-in-out infinite}
+  /* A card-shaped hole rather than a bright card: same silhouette, none of the presence. */
+  .skcard{background:rgba(244,234,210,.07);border:1px solid rgba(236,229,211,.09);border-radius:16px;
+    padding:14px 16px;display:flex;flex-direction:column;gap:9px}
+  .skcard .skel{background:linear-gradient(100deg,rgba(236,229,211,.05) 38%,rgba(236,229,211,.1) 50%,rgba(236,229,211,.05) 62%);background-size:260% 100%}
   .skline{height:11px}
   .skline.t{height:15px;width:58%}
   .skline.m{width:78%}
@@ -107,6 +108,12 @@
      reads as one motion instead of two. */
   .skwrap{transition:opacity .18s ease}
   .skwrap.gone{opacity:0}
+
+  @keyframes mmripple{to{transform:scale(2.4);opacity:0}}
+  .rip{position:absolute;border-radius:50%;transform:scale(0);opacity:.28;pointer-events:none;
+    background:currentColor;animation:mmripple .55s cubic-bezier(.2,.6,.3,1) forwards}
+  .wt,.pickchip,.seg button,.mseg button,.avail{position:relative;overflow:hidden}
+  @media (prefers-reduced-motion:reduce){ .rip{display:none} }
   @media (prefers-reduced-motion:reduce){
     .skel{animation:none}
     .skwrap{transition:none}
@@ -163,9 +170,13 @@
   .b-out{background:#f4ddd6;border:1px solid #d9a898;color:#7a3b28}
   .b-exp{background:#efe2c4;border:1px solid #d9c69a;color:#7a5c1e}
   .b-pick{background:#fbeecf;border:1px solid #e0a63c;color:#8a5d10}
-  .seg{display:flex;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:12px}
-  .seg button{flex:1;min-height:44px;padding:12px 0;font-size:12.5px;font-weight:700;background:transparent;border:0;color:var(--muted)}
-  .seg button[aria-pressed="true"]{background:var(--amber);color:var(--ink)}
+  .seg{display:flex;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:12px;position:relative;isolation:isolate}
+  .seg button{flex:1;min-height:44px;padding:12px 0;font-size:12.5px;font-weight:700;background:transparent;border:0;color:var(--muted);position:relative;z-index:1}
+  .seg button[aria-pressed="true"]{color:var(--ink)}
+  .segpill{position:absolute;top:0;bottom:0;left:0;width:0;background:var(--amber);border-radius:10px;z-index:0;
+    transition:transform .34s cubic-bezier(.32,.9,.24,1.02),width .34s cubic-bezier(.32,.9,.24,1.02);pointer-events:none}
+  .segpill.instant{transition:none}
+  @media (prefers-reduced-motion:reduce){ .segpill{transition:none} }
   .segdesc{font-size:11.5px;color:var(--muted);margin:-4px 0 14px;line-height:1.45}
   /* Picks & lists collections row: wraps in the desktop sidebar, scrolls horizontally on mobile */
   .picksrow{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
@@ -883,6 +894,34 @@ function loadBggLogo(){
   probe.src = el.dataset.src;
 }
 
+// The pill measures the pressed tab and slides to it. Called on every render, so it also
+// settles correctly when the saved tab is restored before the catalogue has loaded.
+function placeSegPill(instant){
+  document.querySelectorAll(".seg").forEach(seg => {
+    let pill = seg.querySelector(".segpill");
+    if(!pill){ pill = document.createElement("span"); pill.className = "segpill instant"; seg.prepend(pill); }
+    const on = seg.querySelector('[aria-pressed="true"]');
+    if(!on) { pill.style.opacity = "0"; return; }
+    pill.style.opacity = "1";
+    pill.style.width = on.offsetWidth + "px";
+    pill.style.transform = "translateX(" + on.offsetLeft + "px)";
+    if(!instant) requestAnimationFrame(() => pill.classList.remove("instant"));
+  });
+}
+addEventListener("resize", () => placeSegPill(true));
+
+// One delegated listener rather than one per control, so chips added later ripple too.
+addEventListener("pointerdown", e => {
+  const t = e.target.closest(".wt,.pickchip,.seg button,.mseg button,.avail");
+  if(!t) return;
+  const r = t.getBoundingClientRect(), d = Math.max(r.width, r.height);
+  const s = document.createElement("span");
+  s.className = "rip";
+  s.style.cssText = "width:" + d + "px;height:" + d + "px;left:" + (e.clientX - r.left - d/2) + "px;top:" + (e.clientY - r.top - d/2) + "px";
+  t.appendChild(s);
+  setTimeout(() => s.remove(), 600);
+}, {passive:true});
+
 function showSkeletons(){
   const list = $("list");
   if(list && !list.children.length){
@@ -892,6 +931,9 @@ function showSkeletons(){
         '<div class="skrow"><span class="skel skchip"></span><span class="skel skchip"></span><span class="skel skchip"></span></div>' +
         '<div class="skel skline s"></div></div>').join('') + '</div>';
   }
+  // The filter panel is static markup and its controls work the moment the page paints,
+  // so a placeholder over it would be theatre. Only the genre chips and the picks row are
+  // built from data, so only those get one.
   const gr = $("genreRow");
   if(gr && !gr.children.length){
     gr.innerHTML = '<div class="skwrap skrow" id="skGenre">' +
@@ -918,6 +960,7 @@ function clearSkeletons(){
 
 function render(){
   clearSkeletons();
+  requestAnimationFrame(() => placeSegPill(false));
   document.querySelectorAll("[data-seg]").forEach(b=>b.setAttribute("aria-pressed", state.seg===b.dataset.seg));
   document.querySelectorAll("#picksRow [data-pick]").forEach(b=>{const v=b.dataset.pick===""?null:+b.dataset.pick;const on=state.pick===v;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on);});
   $("segDesc").textContent = {all:"Every game we\u2019ve got.",play:"On the shelf right now.",buy:"Buy a copy to take home."}[state.seg];
@@ -1219,6 +1262,7 @@ async function boot(){
   // default tab, sat there through the fetch, then snapped to whatever you were last on.
   loadState(); syncInputs();
   document.querySelectorAll("[data-seg]").forEach(b=>b.setAttribute("aria-pressed", state.seg===b.dataset.seg));
+  placeSegPill(true);          // no slide on first paint, it should already be there
   showSkeletons();
   try{
     const r = await fetch("data/games.json",{cache:"no-store"});
