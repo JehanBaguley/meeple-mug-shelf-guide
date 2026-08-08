@@ -185,7 +185,7 @@
   .seg button[aria-pressed="true"]{color:var(--ink)}
   .seg.nopill button[aria-pressed="true"]{background:var(--amber);border-radius:10px}
   .segpill{position:absolute;top:0;bottom:0;left:0;width:0;background:var(--amber);border-radius:10px;z-index:0;
-    transition:transform .38s cubic-bezier(.3,1.22,.36,1),width .38s cubic-bezier(.3,1.22,.36,1);pointer-events:none}
+    transition:transform .3s cubic-bezier(.22,.9,.3,1);pointer-events:none}
   .segpill.instant{transition:none}
   @keyframes mmslidein{from{opacity:0}to{opacity:1}}
   .list.swipe{animation:mmslidein .26s ease}
@@ -426,8 +426,10 @@
   /* pinned bars pick up a little translucency and blur, so content slides under
      them instead of vanishing at a hard edge */
   @supports ((backdrop-filter:blur(8px)) or (-webkit-backdrop-filter:blur(8px))){
-    .mtop,.countsort{background:color-mix(in srgb, var(--bg) 84%, transparent);
-      -webkit-backdrop-filter:blur(10px) saturate(1.1);backdrop-filter:blur(10px) saturate(1.1)}
+    @media(min-width:900px){
+      .mtop,.countsort{background:color-mix(in srgb, var(--bg) 84%, transparent);
+        -webkit-backdrop-filter:blur(10px) saturate(1.1);backdrop-filter:blur(10px) saturate(1.1)}
+    }
   }
   @media (prefers-reduced-motion:reduce){
     body.sheet-open .side,#scrim{animation:none}
@@ -978,16 +980,19 @@ function loadBggLogo(){
 function placeSegPill(instant){
   document.querySelectorAll(".seg").forEach(seg => {
     let pill = seg.querySelector(".segpill");
-    if(!pill){ pill = document.createElement("span"); pill.className = "segpill instant"; seg.prepend(pill); }
+    const fresh = !pill;
+    if(fresh){ pill = document.createElement("span"); pill.className = "segpill instant"; seg.prepend(pill); }
     const on = seg.querySelector('[aria-pressed="true"]');
     // a hidden bar measures 0: park the pill and let the button carry the amber itself
     const unmeasurable = !on || !on.offsetWidth;
     seg.classList.toggle("nopill", unmeasurable);
     if(unmeasurable){ pill.style.opacity = "0"; return; }
+    const w = on.offsetWidth + "px", x = "translateX(" + on.offsetLeft + "px)";
+    if(pill.style.opacity === "1" && pill.style.width === w && pill.style.transform === x) return; // already there
+    pill.classList.toggle("instant", !!(instant || fresh));  // taps glide, resizes and reveals snap
     pill.style.opacity = "1";
-    pill.style.width = on.offsetWidth + "px";
-    pill.style.transform = "translateX(" + on.offsetLeft + "px)";
-    if(!instant) requestAnimationFrame(() => pill.classList.remove("instant"));
+    pill.style.width = w;
+    pill.style.transform = x;
   });
 }
 addEventListener("resize", () => placeSegPill(true));
@@ -1000,7 +1005,7 @@ if(window.ResizeObserver){
 
 // One delegated listener rather than one per control, so chips added later ripple too.
 addEventListener("pointerdown", e => {
-  const t = e.target.closest(".wt,.pickchip,.seg button,.mseg button,.avail");
+  const t = e.target.closest(".wt,.pickchip,.avail");
   if(!t) return;
   const r = t.getBoundingClientRect(), d = Math.max(r.width, r.height);
   const s = document.createElement("span");
@@ -1441,7 +1446,19 @@ document.addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(
   if(b.dataset.seg!=="buy"&&(state.pLo>0||state.pHi<200)){state.pLo=0;state.pHi=200;$("minPrice").value=0;$("maxPrice").value=200;}
   state.seg=b.dataset.seg;
   if(state.seg==="buy"){const hg=$("homeGrp");if(hg)hg.open=true;} // the price filter lives in this group
-  render()}});
+  document.querySelectorAll("[data-seg]").forEach(x=>x.setAttribute("aria-pressed", String(state.seg===x.dataset.seg)));
+  placeSegPill(false);                 // the pill answers the tap this frame
+  requestAnimationFrame(() => {        // the 326-card rebuild waits one frame
+    render();
+    // the whole list just changed underneath you: go to the top of it deliberately,
+    // instead of letting the shorter page clamp the scroll to somewhere random
+    const cs=document.querySelector(".countsort");
+    if(cs){
+      const barH=(parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--mtoph"))||0);
+      const y=cs.getBoundingClientRect().top+window.scrollY-barH-8;
+      if(window.scrollY>Math.max(0,y)) window.scrollTo({top:Math.max(0,y),behavior:"auto"});
+    }
+  })}});
 // shadow appears only once a sticky bar is actually pinned (its top hits 0), not at rest
 function stickShadows(){
   const mt=document.querySelector(".mtop"); if(mt) mt.classList.toggle("stuck", mt.getBoundingClientRect().top<=0.5);
