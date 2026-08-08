@@ -277,6 +277,16 @@
   /* the first group needs no rule: the panel hint above it is already a break */
   .fgroup:first-of-type{margin-top:6px;padding-top:0;border-top:0}
   .fgrouphd{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--timber-light);font-weight:700;margin:0 0 10px}
+  /* Players and playtime get used constantly, price and picks occasionally. The
+     occasional ones fold shut by default: the heading itself is the toggle, and
+     they open themselves the moment a restored URL or the Take-home tab needs them. */
+  .fcol > summary.fgrouphd{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;margin:0;padding:4px 0;min-height:28px}
+  .fcol > summary.fgrouphd::-webkit-details-marker{display:none}
+  .fcol > summary.fgrouphd::after{content:"";width:11px;height:11px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%239dc0a8' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") center/10px no-repeat;transition:transform .15s}
+  .fcol[open] > summary.fgrouphd::after{transform:rotate(180deg)}
+  .fcol[open] > summary.fgrouphd{margin-bottom:10px}
+  .fcol[hidden]{display:none}
+  @media(min-width:900px){ body:not(.seg-buy) #homeGrp{display:none} }
   /* Price is meaningless unless you are looking at games for sale, so the whole
      row is withheld until Availability is on Take home. One less permanent row. */
   #priceGrp[hidden]{display:none}
@@ -285,10 +295,10 @@
   #tagModeWrap[hidden]{display:none}
   .genrow{display:flex;gap:7px;flex-wrap:wrap}
   .fsec{margin-top:16px}
-  .fsec summary{cursor:pointer;font-weight:700;font-size:13.5px;padding:4px 0;list-style:none;display:flex;align-items:center;gap:8px}
-  .fsec summary::-webkit-details-marker{display:none}
-  .fsec summary::after{content:"";width:11px;height:11px;margin-left:auto;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%239dc0a8' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") center/10px no-repeat;transition:transform .15s}
-  .fsec[open] summary::after{transform:rotate(180deg)}
+  .fsec > summary{cursor:pointer;font-weight:700;font-size:13.5px;padding:4px 0;list-style:none;display:flex;align-items:center;gap:8px}
+  .fsec > summary::-webkit-details-marker{display:none}
+  .fsec > summary::after{content:"";width:11px;height:11px;margin-left:auto;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%239dc0a8' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") center/10px no-repeat;transition:transform .15s}
+  .fsec[open] > summary::after{transform:rotate(180deg)}
   .panelwrap > summary{background:var(--bg-deep);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
   /* Desktop: the panel is a permanent sidebar, so a disclosure bar that never
      discloses anything is just a header for a header. placeReset() keeps the
@@ -363,7 +373,7 @@
   .genrow .wt{flex:0 0 auto;white-space:nowrap;padding-left:12px;padding-right:12px}
   .genrow .wt small{opacity:.65;font-weight:600;margin-left:4px}
   .morebtn{background:transparent;border:0;color:#c9a06b;font-weight:700;font-size:12.5px;min-height:44px;padding:9px 4px;text-decoration:underline}
-  @media(min-width:900px){ .countsort{position:sticky;top:0;z-index:20;background:var(--bg,#243027);padding:8px 0;margin:0 -2px;transition:box-shadow .15s ease} .countsort.stuck{box-shadow:0 6px 12px -8px rgba(0,0,0,.5)} }
+  @media(min-width:900px){ .countsort{position:sticky;top:var(--mtoph,62px);z-index:20;background:var(--bg,#243027);padding:8px 0;margin:0 -2px;transition:box-shadow .15s ease} .countsort.stuck{box-shadow:0 6px 12px -8px rgba(0,0,0,.5)} }
   .sortwrap{display:flex;gap:7px;align-items:center}
   .sortlbl{font-size:11.5px;color:var(--muted);font-weight:600;white-space:nowrap}
   .dirbtn{border:1px solid var(--line);background:transparent;color:var(--cream);border-radius:8px;padding:8px 10px;font-size:14px;line-height:1;min-height:36px}
@@ -382,14 +392,21 @@
   .panelwrap summary strong{font-size:14px}
   .panelwrap[open] summary{margin-bottom:2px}
   @media(min-width:900px){
-    .wrap{max-width:1400px}
+    .wrap{max-width:1600px}
     .cols{display:grid;grid-template-columns:320px minmax(0,1fr);gap:24px;align-items:start}
     .side{align-self:start}
-    /* A hairline and a couple of pixels, nothing more. Enough to say "this is pinned"
-       without building a second header out of it. */
-    .side .mtop{position:sticky;top:0;z-index:30;background:var(--bg);
-      padding:6px 0 8px;margin:0 0 10px;border-bottom:1px solid var(--line)}
-    .side .segdesc{margin-top:0}
+    /* Search and the availability tabs are how you decide what question you're asking,
+       so they span both columns and pin to the top. The sidebar below is refinement. */
+    .mtop{position:sticky;top:0;z-index:40;background:var(--bg);display:flex;gap:20px;align-items:center;
+      padding:10px 0;margin:0 0 16px;border-bottom:1px solid var(--line);transition:box-shadow .15s ease}
+    .mtop.stuck{box-shadow:0 8px 14px -10px rgba(0,0,0,.6)}
+    .mtoprow{display:flex;flex:1 1 340px;max-width:520px;min-width:0}
+    .mtop .srchwrap{flex:1;margin-bottom:0;min-width:0}
+    .mtop #search{margin-bottom:0}
+    .mtop .seg{flex:0 1 460px;margin:0 0 0 auto}
+    /* the tab bar sits right there now; a one-line restatement under the filters
+       was only earning its keep when the tabs could scroll out of view */
+    #segDesc{display:none}
     .list{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .gcard{margin:0}
   }
@@ -404,9 +421,6 @@
 </header>
 
 <main class="wrap">
-<div class="cols">
-<aside class="side">
-  <div class="sheethead"><strong>Find a game</strong><button id="sheetClose" class="sheetclose" aria-label="Close filters">✕</button></div>
   <div class="mtop">
     <div class="mtoprow">
       <div class="srchwrap"><input type="text" id="search" placeholder="Search games" aria-label="Search games" autocomplete="off" /><button type="button" id="searchClear" class="srchclear" aria-label="Clear search" hidden>✕</button></div>
@@ -418,6 +432,9 @@
       <button data-seg="buy" aria-pressed="false">Take home</button>
     </div>
   </div>
+<div class="cols">
+<aside class="side">
+  <div class="sheethead"><strong>Find a game</strong><button id="sheetClose" class="sheetclose" aria-label="Close filters">✕</button></div>
   <p class="segdesc mono" id="segDesc"></p>
 
   <details class="fsec panelwrap" id="filterWrap">
@@ -465,8 +482,8 @@
         </div>
       </div>
     </div>
-    <div class="fgroup">
-      <p class="fgrouphd">Taking one home</p>
+    <details class="fgroup fcol" id="homeGrp">
+      <summary class="fgrouphd">Taking one home</summary>
       <div class="rowlabel msheetonly" style="margin-bottom:8px"><strong>Availability</strong></div>
       <div class="seg msheetonly" id="seg2" role="group" aria-label="Availability">
         <button data-seg="all" aria-pressed="true">Everything</button>
@@ -481,11 +498,11 @@
           <input type="range" class="dual" id="maxPrice" min="0" max="200" step="5" value="200" aria-label="Maximum price" />
         </div>
       </div>
-    </div>
-    <div class="fgroup">
-      <p class="fgrouphd" id="picksLabel">Staff &amp; member picks</p>
+    </details>
+    <details class="fgroup fcol" id="picksLabel">
+      <summary class="fgrouphd">Staff &amp; member picks</summary>
       <div id="picksRow" class="picksrow" role="group" aria-label="Staff and member pick lists"></div>
-    </div>
+    </details>
   </div>
   </details>
 
@@ -1043,6 +1060,7 @@ function render(){
 
   document.querySelectorAll("[data-tagmode]").forEach(b=>{const on=state.tagMode===b.dataset.tagmode;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
   $("priceGrp").hidden = state.seg!=="buy";
+  document.body.classList.toggle("seg-buy", state.seg==="buy"); // desktop hides #homeGrp off the buy tab
   document.querySelectorAll("[data-ps]").forEach(b=>{const on=state.playStyle===b.dataset.ps;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
   const timeNarrowed = state.tLo>0||state.tHi<8, ageNarrowed = state.aLo>4||state.aHi<18;
   const activeFilters =
@@ -1348,6 +1366,9 @@ async function boot(){
   // needed to wait on games.json, and waiting was the whole bug: the page painted on the
   // default tab, sat there through the fetch, then snapped to whatever you were last on.
   loadState(); syncInputs();
+  // a restored view that relies on a folded group unfolds it before first paint
+  if(state.seg==="buy" || state.pLo>0 || state.pHi<200){ const hg=$("homeGrp"); if(hg) hg.open=true; }
+  if(state.pick!==null || wantPick!==null){ const pg=$("picksLabel"); if(pg) pg.open=true; }
   document.querySelectorAll("[data-seg]").forEach(b=>b.setAttribute("aria-pressed", state.seg===b.dataset.seg));
   placeSegPill(true);          // no slide on first paint, it should already be there
   showSkeletons();
@@ -1369,7 +1390,7 @@ async function boot(){
 $("search").addEventListener("input",e=>{state.query=e.target.value;$("searchClear").hidden=!e.target.value;render();});
 $("searchClear").addEventListener("click",()=>{$("search").value="";state.query="";$("searchClear").hidden=true;$("search").focus();render();});
 $("mfilt").addEventListener("click",()=>openSheet(true));
-function placeMtop(){const mtop=document.querySelector(".mtop"),mainw=document.querySelector("main.wrap"),cols=document.querySelector(".cols"),side=document.querySelector(".side");if(!mtop)return;if(matchMedia("(max-width:899px)").matches){if(mtop.parentElement!==mainw)mainw.insertBefore(mtop,cols);}else{if(mtop.parentElement!==side)side.insertBefore(mtop,side.firstChild);}}
+function placeMtop(){const mtop=document.querySelector(".mtop");if(!mtop)return;document.documentElement.style.setProperty("--mtoph",mtop.offsetHeight+"px");}
 placeMtop();window.addEventListener("resize",placeMtop);
 // On mobile the panel scrolls under a sticky header, so a "Clear all" parked at
 // the top of the panel scrolls away exactly when you need it. Rehome it into the
@@ -1387,11 +1408,14 @@ function placeReset(){
 placeReset();window.addEventListener("resize",placeReset);
 document.addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(b){
   if(b.dataset.seg!=="buy"&&(state.pLo>0||state.pHi<200)){state.pLo=0;state.pHi=200;$("minPrice").value=0;$("maxPrice").value=200;}
-  state.seg=b.dataset.seg;render()}});
+  state.seg=b.dataset.seg;
+  if(state.seg==="buy"){const hg=$("homeGrp");if(hg)hg.open=true;} // the price filter lives in this group
+  render()}});
 // shadow appears only once a sticky bar is actually pinned (its top hits 0), not at rest
 function stickShadows(){
   const mt=document.querySelector(".mtop"); if(mt) mt.classList.toggle("stuck", mt.getBoundingClientRect().top<=0.5);
-  const cs=document.querySelector(".countsort"); if(cs) cs.classList.toggle("stuck", cs.getBoundingClientRect().top<=0.5);
+  const cs=document.querySelector(".countsort"), mh=parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--mtoph"))||0;
+  if(cs) cs.classList.toggle("stuck", cs.getBoundingClientRect().top<=(matchMedia("(min-width:900px)").matches?mh+0.5:0.5));
 }
 window.addEventListener("scroll",()=>{$("toTop").hidden = window.scrollY < 600; stickShadows();},{passive:true});
 stickShadows();
