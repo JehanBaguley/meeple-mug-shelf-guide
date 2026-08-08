@@ -54,7 +54,8 @@ is not a gap, it's the normal state.
 The sheet flags itself. A required cell (name, link, playable, blurb) goes amber the
 moment it's left empty, and clears the moment you type. The BGG columns go amber only
 for the handful of games BGG genuinely has nothing for; those are the only blanks worth
-filling by hand. Type a number and the flag clears itself by the next morning.
+filling by hand, and typing a number clears the flag instantly. Nobody maintains the
+colours; leave the little `gaps` tab alone, it feeds them.
 
 ## Staff picks
 
