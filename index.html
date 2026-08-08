@@ -183,8 +183,9 @@
   .seg{display:flex;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:12px;position:relative;isolation:isolate}
   .seg button{flex:1;min-height:44px;padding:12px 0;font-size:12.5px;font-weight:700;background:transparent;border:0;color:var(--muted);position:relative;z-index:1}
   .seg button[aria-pressed="true"]{color:var(--ink)}
+  .seg.nopill button[aria-pressed="true"]{background:var(--amber);border-radius:10px}
   .segpill{position:absolute;top:0;bottom:0;left:0;width:0;background:var(--amber);border-radius:10px;z-index:0;
-    transition:transform .34s cubic-bezier(.32,.9,.24,1.02),width .34s cubic-bezier(.32,.9,.24,1.02);pointer-events:none}
+    transition:transform .38s cubic-bezier(.3,1.22,.36,1),width .38s cubic-bezier(.3,1.22,.36,1);pointer-events:none}
   .segpill.instant{transition:none}
   @keyframes mmslidein{from{opacity:0}to{opacity:1}}
   .list.swipe{animation:mmslidein .26s ease}
@@ -411,6 +412,27 @@
     .gcard{margin:0}
   }
   @media(min-width:1500px){ .list{grid-template-columns:1fr 1fr 1fr} }
+  /* ————— motion polish ————— */
+  /* folded groups ease open instead of snapping (browsers without support just snap) */
+  @supports (interpolate-size: allow-keywords){
+    :root{interpolate-size:allow-keywords}
+    .fcol::details-content{block-size:0;overflow:clip;transition:block-size .28s cubic-bezier(.32,.9,.24,1.02),content-visibility .28s allow-discrete}
+    .fcol[open]::details-content{block-size:auto}
+  }
+  /* the filter sheet rises rather than appearing; the scrim fades in behind it */
+  @keyframes mmsheetup{from{opacity:.4;transform:translateY(26px)}to{opacity:1;transform:none}}
+  body.sheet-open .side{animation:mmsheetup .3s cubic-bezier(.32,.9,.24,1.02)}
+  #scrim{animation:mmslidein .22s ease}
+  /* pinned bars pick up a little translucency and blur, so content slides under
+     them instead of vanishing at a hard edge */
+  @supports ((backdrop-filter:blur(8px)) or (-webkit-backdrop-filter:blur(8px))){
+    .mtop,.countsort{background:color-mix(in srgb, var(--bg) 84%, transparent);
+      -webkit-backdrop-filter:blur(10px) saturate(1.1);backdrop-filter:blur(10px) saturate(1.1)}
+  }
+  @media (prefers-reduced-motion:reduce){
+    body.sheet-open .side,#scrim{animation:none}
+    .fcol::details-content{transition:none}
+  }
 </style>
 </head>
 <body>
@@ -958,7 +980,10 @@ function placeSegPill(instant){
     let pill = seg.querySelector(".segpill");
     if(!pill){ pill = document.createElement("span"); pill.className = "segpill instant"; seg.prepend(pill); }
     const on = seg.querySelector('[aria-pressed="true"]');
-    if(!on) { pill.style.opacity = "0"; return; }
+    // a hidden bar measures 0: park the pill and let the button carry the amber itself
+    const unmeasurable = !on || !on.offsetWidth;
+    seg.classList.toggle("nopill", unmeasurable);
+    if(unmeasurable){ pill.style.opacity = "0"; return; }
     pill.style.opacity = "1";
     pill.style.width = on.offsetWidth + "px";
     pill.style.transform = "translateX(" + on.offsetLeft + "px)";
@@ -966,6 +991,12 @@ function placeSegPill(instant){
   });
 }
 addEventListener("resize", () => placeSegPill(true));
+// Fires the moment the sheet or a folded group reveals a tab bar (its size goes
+// 0 -> real), so the pill is in place before anyone sees the ghost state.
+if(window.ResizeObserver){
+  const segRO = new ResizeObserver(() => placeSegPill(true));
+  document.querySelectorAll(".seg").forEach(s => segRO.observe(s));
+}
 
 // One delegated listener rather than one per control, so chips added later ripple too.
 addEventListener("pointerdown", e => {
