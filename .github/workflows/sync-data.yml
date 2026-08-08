@@ -21,6 +21,6 @@ jobs:
         run: |
           git config user.name "catalogue-bot"
           git config user.email "actions@github.com"
-          git add data/games.json
+          git add data/games.json data/gaps.json
           git diff --cached --quiet || git commit -m "Nightly data sync"
           git push
