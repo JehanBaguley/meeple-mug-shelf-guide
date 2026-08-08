@@ -25,6 +25,10 @@
   body{margin:0;background:var(--bg);color:var(--cream);font-family:'Bricolage Grotesque',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   /* Avoid horizontal scrolling on small screens */
   html,body{max-width:100%;overflow-x:hidden}
+  /* Scrolling to the bottom of the filter sheet used to start scrolling the list
+     underneath it, which loses your place in a 320 game list. */
+  .side,.panel{overscroll-behavior:contain}
+  @media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth} }
   .mono{font-family:'IBM Plex Mono',monospace}
   a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--amber);outline-offset:2px;border-radius:6px}
   /* links + buttons that sit on the cream cards need a dark ring for contrast */
@@ -80,6 +84,33 @@
   .countsort{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}
   .count{font-size:12px;color:var(--muted)}
   .list{display:flex;flex-direction:column;gap:12px}
+
+  /* ————— loading placeholders —————
+     A shelf guide that pops in fully formed feels faster than one that shows an
+     empty page and then jumps. The shimmer runs on a background gradient rather
+     than opacity so it costs one composited layer and nothing reflows. */
+  @keyframes mmshim{0%{background-position:180% 0}100%{background-position:-80% 0}}
+  .skel{position:relative;overflow:hidden;border-radius:8px;
+    background:linear-gradient(100deg,rgba(236,229,211,.06) 30%,rgba(236,229,211,.13) 48%,rgba(236,229,211,.06) 66%);
+    background-size:220% 100%;animation:mmshim 1.4s ease-in-out infinite}
+  .skcard{background:var(--card);border:1px solid var(--card-edge);border-radius:16px;
+    box-shadow:0 2px 0 rgba(0,0,0,.25);padding:14px 16px;display:flex;flex-direction:column;gap:9px;opacity:.72}
+  .skcard .skel{background:linear-gradient(100deg,rgba(43,36,25,.06) 30%,rgba(43,36,25,.13) 48%,rgba(43,36,25,.06) 66%);background-size:220% 100%}
+  .skline{height:11px}
+  .skline.t{height:15px;width:58%}
+  .skline.m{width:78%}
+  .skline.s{width:34%}
+  .skrow{display:flex;gap:6px;flex-wrap:wrap}
+  .skchip{height:22px;width:74px;border-radius:999px}
+  .skpill{height:26px;width:96px;border-radius:999px}
+  /* The placeholders fade out rather than vanishing, so the swap to real content
+     reads as one motion instead of two. */
+  .skwrap{transition:opacity .18s ease}
+  .skwrap.gone{opacity:0}
+  @media (prefers-reduced-motion:reduce){
+    .skel{animation:none}
+    .skwrap{transition:none}
+  }
   .gcard{background:var(--card);color:var(--ink);border-radius:16px;border:1px solid var(--card-edge);box-shadow:0 2px 0 rgba(0,0,0,.25);overflow:hidden;display:flex;transition:transform .15s ease}
   .gcard:hover{transform:translateY(-2px)}
   @media(hover:hover){
@@ -451,7 +482,7 @@
     <p>Staff keep this shelf list current. If a game is not on the shelf it is probably out on a table, so ask at the counter. To buy a copy or have us order one, use our <a href="https://www.meepleandmug.com.au/contact" target="_blank" rel="noopener">contact page</a>. There is no checkout here, we sort it out with you in person.</p>
     <p class="note">Table fee: roll the dice and pay what they show. Members don’t pay it.</p>
     <p class="note">
-      <span class="bggcredit"><a href="https://boardgamegeek.com" target="_blank" rel="noopener"><img src="assets/powered-by-bgg.png" alt="" id="bggLogo" hidden>Ratings come from BoardGameGeek members.</a></span>
+      <span class="bggcredit"><a href="https://boardgamegeek.com" target="_blank" rel="noopener"><img data-src="assets/powered-by-bgg.png" alt="" id="bggLogo" hidden>Ratings come from BoardGameGeek members.</a></span>
       <!-- The logo is hidden until assets/powered-by-bgg.png exists; the text credit alone
            already satisfies BGG's attribution terms. Use the light variant, the footer sits
            on dark green. alt is deliberately empty so a screen reader doesn't say the name
@@ -841,7 +872,52 @@ function buildPicks(){
 }
 
 // ————— Render —————
+// Placeholders go only into containers that are empty at boot. Anything with a real
+// control in it is left alone on purpose.
+// Only ask for the BGG logo once it exists, so a missing file costs nothing.
+function loadBggLogo(){
+  const el = document.getElementById("bggLogo");
+  if(!el || !el.dataset.src) return;
+  const probe = new Image();
+  probe.onload = () => { el.src = el.dataset.src; el.hidden = false; };
+  probe.src = el.dataset.src;
+}
+
+function showSkeletons(){
+  const list = $("list");
+  if(list && !list.children.length){
+    list.innerHTML = '<div class="skwrap" id="skList">' + Array.from({length:6}, () =>
+      '<div class="skcard" style="margin-bottom:12px">' +
+        '<div class="skel skline t"></div><div class="skel skline m"></div>' +
+        '<div class="skrow"><span class="skel skchip"></span><span class="skel skchip"></span><span class="skel skchip"></span></div>' +
+        '<div class="skel skline s"></div></div>').join('') + '</div>';
+  }
+  const gr = $("genreRow");
+  if(gr && !gr.children.length){
+    gr.innerHTML = '<div class="skwrap skrow" id="skGenre">' +
+      Array.from({length:8}, () => '<span class="skel skchip"></span>').join('') + '</div>';
+  }
+  const pr = $("picksRow");
+  if(pr && !pr.children.length){
+    pr.innerHTML = '<div class="skwrap skrow" id="skPicks">' +
+      Array.from({length:3}, () => '<span class="skel skpill"></span>').join('') + '</div>';
+  }
+}
+// Fade them out, then drop them. Called once, from the first render.
+let skelCleared = false;
+function clearSkeletons(){
+  if(skelCleared) return;
+  skelCleared = true;
+  ["skList","skGenre","skPicks"].forEach(id => {
+    const el = document.getElementById(id);
+    if(!el) return;
+    el.classList.add("gone");
+    setTimeout(() => el.remove(), 200);
+  });
+}
+
 function render(){
+  clearSkeletons();
   document.querySelectorAll("[data-seg]").forEach(b=>b.setAttribute("aria-pressed", state.seg===b.dataset.seg));
   document.querySelectorAll("#picksRow [data-pick]").forEach(b=>{const v=b.dataset.pick===""?null:+b.dataset.pick;const on=state.pick===v;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on);});
   $("segDesc").textContent = {all:"Every game we\u2019ve got.",play:"On the shelf right now.",buy:"Buy a copy to take home."}[state.seg];
@@ -1142,6 +1218,8 @@ async function boot(){
   // needed to wait on games.json, and waiting was the whole bug: the page painted on the
   // default tab, sat there through the fetch, then snapped to whatever you were last on.
   loadState(); syncInputs();
+  document.querySelectorAll("[data-seg]").forEach(b=>b.setAttribute("aria-pressed", state.seg===b.dataset.seg));
+  showSkeletons();
   try{
     const r = await fetch("data/games.json",{cache:"no-store"});
     if(r.ok){ const j = await r.json(); if(j.games?.length) DATA = j; }
@@ -1154,7 +1232,7 @@ async function boot(){
   tagAll(DATA.games);
   $("search").placeholder = "Search "+DATA.games.length+" games\u2026";
   syncInputs();                       // re-mirror now the sliders know the real catalogue
-  buildPicks(); buildTagRow(); render(); applySheet();
+  buildPicks(); buildTagRow(); render(); loadBggLogo(); applySheet();
 }
 
 $("search").addEventListener("input",e=>{state.query=e.target.value;$("searchClear").hidden=!e.target.value;render();});
