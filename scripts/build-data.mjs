@@ -303,6 +303,9 @@ async function main() {
     .filter(g => g.missing.length);
   writeFileSync("data/gaps.json", JSON.stringify({ built: new Date().toISOString(), gaps }, null, 1));
   console.log(`Wrote data/gaps.json (${gaps.length} games with gaps)`);
+  const csv = gaps.flatMap(g => g.missing.map(f => '"' + (g.name + "|" + f).replace(/"/g, '""') + '"')).join("\n") + "\n";
+  writeFileSync("data/gaps.csv", csv);
+  console.log(`Wrote data/gaps.csv (${gaps.reduce((n, g) => n + g.missing.length, 0)} flags)`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
