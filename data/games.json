@@ -1,5 +1,5 @@
 {
- "built": "2026-08-08T01:29:41.235Z",
+ "built": "2026-08-08T02:09:01.646Z",
  "games": [
   {
    "bggId": 3377,
@@ -5626,6 +5626,30 @@
    "bggUrl": "https://boardgamegeek.com/boardgame/179172"
   },
   {
+   "bggId": 294612,
+   "name": "Unlock!: Epic Adventures",
+   "players": [
+    1,
+    6
+   ],
+   "mins": 60,
+   "time": "60m",
+   "bgg": 7.6,
+   "weight": 2.12,
+   "age": "10+",
+   "catText": "Card Game, Exploration, Fantasy, Horror, Puzzle, Real-time, Spies / Secret Agents, Campaign",
+   "playable": true,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "coop",
+   "price": 50,
+   "priceTxt": "~$50",
+   "playsLike": "three app-driven escape rooms, the series at its most cinematic",
+   "bggUrl": "https://boardgamegeek.com/boardgame/294612",
+   "pickBy": "Jehan",
+   "pickNote": "Replayable co-op puzzles"
+  },
+  {
    "bggId": 2223,
    "name": "Uno",
    "players": [
@@ -6918,23 +6942,26 @@
    "bggUrl": "https://boardgamegeek.com/boardgame/152241"
   },
   {
-   "name": "Unlock!",
-   "bggId": null,
-   "players": null,
-   "mins": null,
-   "time": null,
-   "age": null,
-   "catText": null,
-   "bgg": 7.2,
-   "weight": 2,
+   "name": "Unlock!: Escape Adventures",
+   "bggId": 213460,
+   "players": [
+    2,
+    6
+   ],
+   "mins": 75,
+   "time": "75m",
+   "age": "10+",
+   "catText": "Card Game, Puzzle, Campaign, Storytelling",
+   "bgg": 7.3,
+   "weight": 2.12,
    "playable": true,
    "forSale": true,
-   "cat": null,
+   "cat": "cards",
    "mode": "coop",
    "price": 50,
    "priceTxt": "~$50",
-   "playsLike": "EXIT with an app. Nothing gets destroyed",
-   "bggUrl": "https://boardgamegeek.com/boardgamefamily/39442",
+   "playsLike": "the original trilogy. EXIT with an app, nothing gets destroyed",
+   "bggUrl": "https://boardgamegeek.com/boardgame/213460",
    "pickBy": "Jehan",
    "pickNote": "Replayable co-op puzzles"
   },
@@ -7101,6 +7128,102 @@
    "bggUrl": "https://boardgamegeek.com/boardgame/226518/exit-the-game-the-sunken-treasure",
    "pickBy": "Jehan",
    "pickNote": "Escape room night in a box"
+  },
+  {
+   "name": "Unlock!: Mystery Adventures",
+   "bggId": 228867,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 75,
+   "time": "75m",
+   "age": "10+",
+   "catText": "Card Game, Exploration, Horror, Novel-based, Puzzle, Real-time, Storytelling",
+   "bgg": 7.3,
+   "weight": 2.1,
+   "playable": true,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "coop",
+   "price": 50,
+   "priceTxt": "~$50",
+   "playsLike": "three app-driven escape rooms: haunted house, Nautilus, pirate gold",
+   "bggUrl": "https://boardgamegeek.com/boardgame/228867",
+   "pickBy": "Jehan",
+   "pickNote": "Replayable co-op puzzles"
+  },
+  {
+   "name": "Unlock!: Secret Adventures",
+   "bggId": 239307,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "10+",
+   "catText": "American West, Card Game, Exploration, Fantasy, Novel-based, Puzzle, Real-time, Trains, Storytelling",
+   "bgg": 7.5,
+   "weight": 2.13,
+   "playable": true,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "coop",
+   "price": 50,
+   "priceTxt": "~$50",
+   "playsLike": "three app-driven escape rooms, a western train heist among them",
+   "bggUrl": "https://boardgamegeek.com/boardgame/239307",
+   "pickBy": "Jehan",
+   "pickNote": "Replayable co-op puzzles"
+  },
+  {
+   "name": "Unlock!: Heroic Adventures",
+   "bggId": 266121,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "10+",
+   "catText": "Card Game, Exploration, Fantasy, Novel-based, Puzzle, Real-time, Storytelling",
+   "bgg": 7.6,
+   "weight": 2.25,
+   "playable": true,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "coop",
+   "price": 50,
+   "priceTxt": "~$50",
+   "playsLike": "three app-driven escape rooms: Sherlock, Wonderland, retro arcade",
+   "bggUrl": "https://boardgamegeek.com/boardgame/266121",
+   "pickBy": "Jehan",
+   "pickNote": "Replayable co-op puzzles"
+  },
+  {
+   "name": "Unlock!: Timeless Adventures",
+   "bggId": 279613,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 90,
+   "time": "90m",
+   "age": "10+",
+   "catText": "Card Game, Exploration, Novel-based, Puzzle, Real-time, Storytelling",
+   "bgg": 7.7,
+   "weight": 2.07,
+   "playable": true,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "coop",
+   "price": 50,
+   "priceTxt": "~$50",
+   "playsLike": "three app-driven escape rooms hopping through history",
+   "bggUrl": "https://boardgamegeek.com/boardgame/279613",
+   "pickBy": "Jehan",
+   "pickNote": "Replayable co-op puzzles"
   }
  ],
  "picks": [
@@ -7116,13 +7239,18 @@
     "Everdell: Silverfrost": "Prettiest engine on the shelf",
     "EXIT: The Abandoned Cabin": "Escape room night in a box",
     "SETI": "Terraforming Mars fans start here",
-    "Unlock!": "Replayable co-op puzzles",
+    "Unlock!: Escape Adventures": "Replayable co-op puzzles",
     "Wavelength": "Best big-group conversation game",
     "EXIT: The Secret Lab": "Escape room night in a box",
     "EXIT: Dead Man on the Orient Express": "Escape room night in a box",
     "EXIT: The Sinister Mansion": "Escape room night in a box",
     "EXIT: The Pharaoh's Tomb": "Escape room night in a box",
-    "EXIT: The Sunken Treasure": "Escape room night in a box"
+    "EXIT: The Sunken Treasure": "Escape room night in a box",
+    "Unlock!: Mystery Adventures": "Replayable co-op puzzles",
+    "Unlock!: Secret Adventures": "Replayable co-op puzzles",
+    "Unlock!: Heroic Adventures": "Replayable co-op puzzles",
+    "Unlock!: Timeless Adventures": "Replayable co-op puzzles",
+    "Unlock!: Epic Adventures": "Replayable co-op puzzles"
    }
   },
   {
