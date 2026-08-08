@@ -466,7 +466,7 @@
       </div>
     </div>
     <div class="fgroup">
-      <p class="fgrouphd">Where it’s from</p>
+      <p class="fgrouphd">Taking one home</p>
       <div class="rowlabel msheetonly" style="margin-bottom:8px"><strong>Availability</strong></div>
       <div class="seg msheetonly" id="seg2" role="group" aria-label="Availability">
         <button data-seg="all" aria-pressed="true">Everything</button>
@@ -481,7 +481,9 @@
           <input type="range" class="dual" id="maxPrice" min="0" max="200" step="5" value="200" aria-label="Maximum price" />
         </div>
       </div>
-      <div class="rowlabel" id="picksLabel" style="margin-top:16px;margin-bottom:8px"><strong>Staff &amp; member picks</strong></div>
+    </div>
+    <div class="fgroup">
+      <p class="fgrouphd" id="picksLabel">Staff &amp; member picks</p>
       <div id="picksRow" class="picksrow" role="group" aria-label="Staff and member pick lists"></div>
     </div>
   </div>
@@ -523,7 +525,6 @@
     <p>Staff keep this list current. If a game is not on the shelf it is probably out on a table, so ask at the counter. To buy or order a copy, use our <a href="https://www.meepleandmug.com.au/contact" target="_blank" rel="noopener">contact page</a>; nothing is paid for here.</p>
   </div>
     <div class="footside">
-    <p class="note">Table fee: roll two dice and pay what they show. Members do not pay it.</p>
     <p class="note">
       <span class="bggcredit"><a href="https://boardgamegeek.com" target="_blank" rel="noopener"><img data-src="assets/powered-by-bgg.png" alt="" id="bggLogo" hidden>Ratings from BoardGameGeek members.</a></span>
       <!-- The logo is hidden until assets/powered-by-bgg.png exists; the text credit alone
@@ -634,12 +635,14 @@ const TAG_ALIAS = {"word game":"word","card":"card game","children's game":"kids
 // A genre only earns a chip once enough games share it. Below this the tag is still
 // stored, so search and the URL still work, it just does not clutter the card.
 const TAG_MIN = 5;
+// Shown however few games carry them: these are sought, not stumbled upon.
+const TAG_KEEP = new Set(["legacy","storytelling","traitor","campaign","solo"]);
 let TAG_OK = null;
 let TAG_REACH = null;   // per-genre count of what is reachable under the other filters
 function refreshTagOk(){
   const c = {};
   DATA.games.forEach(g => (g.tags||[]).forEach(t => c[t] = (c[t]||0) + 1));
-  TAG_OK = new Set(Object.keys(c).filter(t => c[t] >= TAG_MIN));
+  TAG_OK = new Set(Object.keys(c).filter(t => c[t] >= TAG_MIN || TAG_KEEP.has(t)));
 }
 // tokens the sheet contains that are not genres: "cooperative" is already the
 // Play style control, "two player" is the Players slider, "expansion" is a
@@ -675,14 +678,14 @@ function catSlugFor(t){
     if(/movie|video game theme|comic book|novel-based|licensed|mythology|arabian|religious/.test(c)) return "licensed";
     if(/ancient|medieval|renaissance|prehistoric|post-napoleonic|world war|age of reason|historical|american west|western/.test(c)) return "historical";
     if(/party|dexterity|drawing|humor|trivia|word|social|storytelling|conversation/.test(c)) return "party";
-    if(/deduction|bluffing|hidden roles|political|negotiation|auction|murder|mystery|spies|secret agent/.test(c)) return "deduct";
+    if(/deduction|bluffing|hidden roles|political|negotiation|auction|murder|mystery|spies|secret agent|traitor/.test(c)) return "deduct";
     if(/family|children|kids|animals|travel/.test(c)) return "family";
     if(/horror|adult|zombie/.test(c)) return "dark";
     if(/card|deck building|dice|set collection|bidding/.test(c)) return "cards";
     if(/wargame|war game|military|fighting/.test(c)) return "war";
-    if(/adventure|exploration|sci-?fi|science fiction|space|fantasy|superhero|thematic|legacy|roleplaying|action|survival|miniature|pirate/.test(c)) return "adventure";
+    if(/adventure|exploration|sci-?fi|science fiction|space|fantasy|superhero|thematic|legacy|campaign|roleplaying|action|survival|miniature|pirate/.test(c)) return "adventure";
     if(/two.?player|2.?player/.test(c)) return "two";
-    if(/abstract|puzzle|tile|expansion|classic|number|math/.test(c)) return "abstract";
+    if(/abstract|puzzle|tile|expansion|classic|number|math|solo/.test(c)) return "abstract";
     if(/strategy|economic|industry|worker placement|area control|territory|tactical|city building|civilization|asymmetric|resource management|racing|real[- ]?time|farming|environmental|transport|train|nautical|aviation|flight|educational|medical|electronic|sports|memory|mafia/.test(c)) return "strategy";
   }
   return null;
@@ -694,11 +697,11 @@ function buildTagRow(){
   lastTagSig = "";
   const total = {};
   DATA.games.forEach(g => (g.tags||[]).forEach(t => total[t] = (total[t]||0) + 1));
-  TAG_OK = new Set(Object.keys(total).filter(t => total[t] >= TAG_MIN));
+  TAG_OK = new Set(Object.keys(total).filter(t => total[t] >= TAG_MIN || TAG_KEEP.has(t)));
   // Membership is decided by the whole catalogue so chips do not appear and vanish as
   // you filter, but the number on each chip is what you would actually get.
   const counts = TAG_REACH || total;
-  const all = Object.keys(total).filter(t => total[t] >= TAG_MIN)
+  const all = Object.keys(total).filter(t => total[t] >= TAG_MIN || TAG_KEEP.has(t))
     .sort((a,b) => (counts[b]||0)-(counts[a]||0) || total[b]-total[a] || a.localeCompare(b));
   const sel = Object.keys(state.tags).filter(k => state.tags[k]);
   const CAP = 8;
