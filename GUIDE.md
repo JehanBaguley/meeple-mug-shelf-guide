@@ -49,6 +49,13 @@ permanently, until you clear the cell again.
 So the rule is: **only type in those columns when BGG is actually wrong.** An empty cell
 is not a gap, it's the normal state.
 
+## Amber cells
+
+The sheet flags itself. A required cell (name, link, playable, blurb) goes amber the
+moment it's left empty, and clears the moment you type. The BGG columns go amber only
+for the handful of games BGG genuinely has nothing for; those are the only blanks worth
+filling by hand. Type a number and the flag clears itself by the next morning.
+
 ## Staff picks
 
 Put your name in **pick_by** and a line in **pick_note**. It shows on the card as "Sam's
