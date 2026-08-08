@@ -290,6 +290,19 @@ async function main() {
   mkdirSync("data", { recursive: true });
   writeFileSync("data/games.json", JSON.stringify({ built: new Date().toISOString(), games, picks }, null, 1));
   console.log(`Wrote data/games.json (${games.length} games)`);
+
+  // Which games ended the build with holes BGG could not fill. The sheet's Apps
+  // Script fetches this and paints the matching cells amber, so nobody hand-flags.
+  const gaps = games
+    .map(g => ({ name: g.name, missing: [
+      ...(g.players ? [] : ["players"]),
+      ...(g.mins ? [] : ["time"]),
+      ...(g.age ? [] : ["age"]),
+      ...(g.bgg == null ? ["rating"] : []),
+    ] }))
+    .filter(g => g.missing.length);
+  writeFileSync("data/gaps.json", JSON.stringify({ built: new Date().toISOString(), gaps }, null, 1));
+  console.log(`Wrote data/gaps.json (${gaps.length} games with gaps)`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
