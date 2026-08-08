@@ -101,7 +101,10 @@
     background-size:260% 100%;animation:mmshim 1.9s ease-in-out infinite}
   /* A card-shaped hole rather than a bright card: same silhouette, none of the presence. */
   .skcard{background:rgba(244,234,210,.16);border:1px solid rgba(236,229,211,.14);border-radius:16px;
-    padding:14px 16px;display:flex;flex-direction:column;gap:9px}
+    display:flex;overflow:hidden;min-height:161px}
+  .skcard .skspine{width:6px;flex:0 0 6px;background:rgba(236,229,211,.13)}
+  .skcard .skbody{flex:1;padding:14px 16px;display:flex;flex-direction:column;gap:9px}
+  .skcard .skfoot{margin-top:auto;display:flex;justify-content:space-between;gap:8px}
   .skcard .skel{background:linear-gradient(100deg,rgba(43,36,25,.05) 38%,rgba(43,36,25,.1) 50%,rgba(43,36,25,.05) 62%);background-size:260% 100%}
   .skline{height:11px}
   .skline.t{height:15px;width:58%}
@@ -237,6 +240,13 @@
   .fhome{margin:0 0 12px}
   footer p{margin:0 0 10px;max-width:none}
   .credit{margin-top:16px;color:var(--muted)}
+  @media(min-width:900px){
+    footer{display:flex;gap:56px;align-items:flex-start}
+    .footmain{flex:1 1 auto;max-width:66ch}
+    .footside{flex:0 0 300px}
+    footer p{margin:0 0 9px}
+    footer .credit{margin-top:14px}
+  }
   footer a{color:var(--timber-light)}
   .note{font-size:12px;color:var(--muted);margin:-4px 0 10px}
   /* applied-filter chips: show exactly what's active, each removable */
@@ -507,18 +517,22 @@
 </div>
 
   <footer>
+    <div class="footmain">
     <p class="fname"><a href="https://www.meepleandmug.com.au" target="_blank" rel="noopener">Meeple &amp; Mug</a></p>
     <p class="fhome">Hours, bookings and how to find us are on our main site.</p>
-    <p>Staff keep this shelf list current. If a game is not on the shelf it is probably out on a table, so ask at the counter. To buy a copy or have us order one, use our <a href="https://www.meepleandmug.com.au/contact" target="_blank" rel="noopener">contact page</a>. There is no checkout here, we sort it out with you in person.</p>
-    <p class="note">Table fee: roll the dice and pay what they show. Members don’t pay it.</p>
+    <p>Staff keep this list current. If a game is not on the shelf it is probably out on a table, so ask at the counter. To buy or order a copy, use our <a href="https://www.meepleandmug.com.au/contact" target="_blank" rel="noopener">contact page</a>; nothing is paid for here.</p>
+  </div>
+    <div class="footside">
+    <p class="note">Table fee: roll two dice and pay what they show. Members do not pay it.</p>
     <p class="note">
-      <span class="bggcredit"><a href="https://boardgamegeek.com" target="_blank" rel="noopener"><img data-src="assets/powered-by-bgg.png" alt="" id="bggLogo" hidden>Ratings come from BoardGameGeek members.</a></span>
+      <span class="bggcredit"><a href="https://boardgamegeek.com" target="_blank" rel="noopener"><img data-src="assets/powered-by-bgg.png" alt="" id="bggLogo" hidden>Ratings from BoardGameGeek members.</a></span>
       <!-- The logo is hidden until assets/powered-by-bgg.png exists; the text credit alone
            already satisfies BGG's attribution terms. Use the light variant, the footer sits
            on dark green. alt is deliberately empty so a screen reader doesn't say the name
            twice, since the link text already carries it. -->
     </p>
     <p class="credit">Designed &amp; built by <a href="https://github.com/JehanBaguley" target="_blank" rel="noopener">Jehan Baguley</a>.</p>
+    </div>
   </footer>
 </main>
 <div id="scrim" hidden></div>
@@ -949,10 +963,16 @@ function showSkeletons(){
   const list = $("list");
   if(list && !list.children.length){
     list.innerHTML = '<div class="skwrap" id="skList">' + Array.from({length:8}, () =>
-      '<div class="skcard" style="margin-bottom:12px">' +
-        '<div class="skel skline t"></div><div class="skel skline m"></div>' +
-        '<div class="skrow"><span class="skel skchip"></span><span class="skel skchip"></span><span class="skel skchip"></span></div>' +
-        '<div class="skel skline s"></div></div>').join('') + '</div>';
+      '<div class="skcard">' +
+        '<div class="skspine"></div>' +
+        '<div class="skbody">' +
+          '<div class="skel skline t"></div>' +
+          '<div class="skel skline m"></div>' +
+          '<div class="skrow"><span class="skel skchip"></span><span class="skel skchip"></span><span class="skel skchip"></span></div>' +
+          '<div class="skel skline s"></div>' +
+          '<div class="skfoot"><span class="skel skpill"></span><span class="skel skline" style="width:92px;align-self:center"></span></div>' +
+        '</div>' +
+      '</div>').join('') + '</div>';
   }
   // The filter panel is static markup and its controls work the moment the page paints,
   // so a placeholder over it would be theatre. Only the genre chips and the picks row are
