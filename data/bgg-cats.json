@@ -6903,6 +6903,26 @@
   "bgg": 7.3,
   "weight": 2.72
  },
+ "Unlock!: Escape Adventures": {
+  "bggId": 213460,
+  "cats": [
+   "Card Game",
+   "Puzzle"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Elapsed Real Time Ending",
+   "Scenario / Mission / Campaign Game",
+   "Storytelling"
+  ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 75,
+  "minAge": 10,
+  "desc": null,
+  "bgg": 7.3,
+  "weight": 2.12
+ },
  "Uno": {
   "bggId": 2223,
   "cats": [
@@ -7347,5 +7367,118 @@
   "desc": "Exit: The Game - The Sunken Treasure is a puzzle game modeled after escape rooms.",
   "bgg": 7,
   "weight": 1.81
+ },
+ "Unlock!: Mystery Adventures": {
+  "bggId": 228867,
+  "cats": [
+   "Card Game",
+   "Exploration",
+   "Horror",
+   "Novel-based",
+   "Puzzle",
+   "Real-time"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Storytelling"
+  ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 75,
+  "minAge": 10,
+  "desc": null,
+  "bgg": 7.3,
+  "weight": 2.1
+ },
+ "Unlock!: Secret Adventures": {
+  "bggId": 239307,
+  "cats": [
+   "American West",
+   "Card Game",
+   "Exploration",
+   "Fantasy",
+   "Novel-based",
+   "Puzzle",
+   "Real-time",
+   "Trains"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Storytelling"
+  ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 60,
+  "minAge": 10,
+  "desc": null,
+  "bgg": 7.5,
+  "weight": 2.13
+ },
+ "Unlock!: Heroic Adventures": {
+  "bggId": 266121,
+  "cats": [
+   "Card Game",
+   "Exploration",
+   "Fantasy",
+   "Novel-based",
+   "Puzzle",
+   "Real-time"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Storytelling"
+  ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 60,
+  "minAge": 10,
+  "desc": null,
+  "bgg": 7.6,
+  "weight": 2.25
+ },
+ "Unlock!: Timeless Adventures": {
+  "bggId": 279613,
+  "cats": [
+   "Card Game",
+   "Exploration",
+   "Novel-based",
+   "Puzzle",
+   "Real-time"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Storytelling"
+  ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 90,
+  "minAge": 10,
+  "desc": null,
+  "bgg": 7.7,
+  "weight": 2.07
+ },
+ "Unlock!: Epic Adventures": {
+  "bggId": 294612,
+  "cats": [
+   "Card Game",
+   "Exploration",
+   "Fantasy",
+   "Horror",
+   "Puzzle",
+   "Real-time",
+   "Spies / Secret Agents"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Real-Time",
+   "Scenario / Mission / Campaign Game"
+  ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 60,
+  "minAge": 10,
+  "desc": null,
+  "bgg": 7.6,
+  "weight": 2.12
  }
 }
