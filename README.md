@@ -101,6 +101,7 @@ this repo. Read it before touching the build.
 | `data/games.json` | the baked catalogue the page loads first |
 | `data/bgg-cats.json` | committed BGG snapshot, the durable fallback |
 | `data/bgg.json` | committed ratings map, keyed by name |
+| `data/gaps.json` | nightly list of games BGG can't fill; the sheet's Apps Script reads it to paint its own amber flags |
 | `.github/workflows/sync-data.yml` | the nightly, 3am AEST |
 
 ## Config
