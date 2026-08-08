@@ -2093,6 +2093,29 @@
   "bgg": 7,
   "weight": 3.32
  },
+ "Dirty Laundry": {
+  "bggId": 353938,
+  "cats": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Memory"
+  ],
+  "mechs": [
+   "Action / Event",
+   "Deduction",
+   "Hidden Movement",
+   "Memory",
+   "Take That"
+  ],
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "mins": 90,
+  "minAge": 7,
+  "desc": "Dirty Laundry is a sabotage shedding game.",
+  "bgg": 6.7,
+  "weight": 2.5
+ },
  "Dixit": {
   "bggId": 39856,
   "cats": [
@@ -2412,6 +2435,25 @@
   "desc": "Silverfrost is the next standalone edge of the map series of Everdell.",
   "bgg": 8.1,
   "weight": 3.2
+ },
+ "EXIT: The Abandoned Cabin": {
+  "bggId": 203420,
+  "cats": [
+   "Deduction",
+   "Puzzle",
+   "Real-time"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Solo / Solitaire Game"
+  ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 120,
+  "minAge": 12,
+  "desc": null,
+  "bgg": 7.4,
+  "weight": 2.54
  },
  "Exploding Kittens": {
   "bggId": 172225,
@@ -7207,5 +7249,103 @@
   "desc": "Yum Cha is a cute little card game based on everyone's favourite Chinese brunch, also known as Dim Sum.",
   "bgg": 6.4,
   "weight": 1.5
+ },
+ "EXIT: The Secret Lab": {
+  "bggId": 203417,
+  "cats": [
+   "Deduction",
+   "Puzzle",
+   "Real-time"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Solo / Solitaire Game"
+  ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 150,
+  "minAge": 12,
+  "desc": null,
+  "bgg": 7,
+  "weight": 2.52
+ },
+ "EXIT: Dead Man on the Orient Express": {
+  "bggId": 226522,
+  "cats": [
+   "Deduction",
+   "Murder / Mystery",
+   "Puzzle",
+   "Real-time"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Deduction"
+  ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 120,
+  "minAge": 12,
+  "desc": "Exit: The Game - Dead Man on the Orient Express is a puzzle game modeled after escape rooms.",
+  "bgg": 7.5,
+  "weight": 2.64
+ },
+ "EXIT: The Sinister Mansion": {
+  "bggId": 226520,
+  "cats": [
+   "Deduction",
+   "Horror"
+  ],
+  "mechs": [
+   "Cooperative Game"
+  ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 12,
+  "desc": "Exit: The Game - The Sinister Mansion is a puzzle game modeled after escape rooms.",
+  "bgg": 7.2,
+  "weight": 2.47
+ },
+ "EXIT: The Pharaoh's Tomb": {
+  "bggId": 203416,
+  "cats": [
+   "Ancient",
+   "Deduction",
+   "Puzzle",
+   "Real-time"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Solo / Solitaire Game"
+  ],
+  "minPlayers": 1,
+  "maxPlayers": 6,
+  "mins": 90,
+  "minAge": 12,
+  "desc": "On an Egyptian holiday, players are visiting the highlight of the entire journey: the stone pyramids!",
+  "bgg": 7.1,
+  "weight": 2.73
+ },
+ "EXIT: The Sunken Treasure": {
+  "bggId": 226518,
+  "cats": [
+   "Deduction",
+   "Puzzle",
+   "Real-time"
+  ],
+  "mechs": [
+   "Cooperative Game",
+   "Deduction",
+   "Move Through Deck",
+   "Real-Time",
+   "Simulation"
+  ],
+  "minPlayers": 1,
+  "maxPlayers": 4,
+  "mins": 90,
+  "minAge": 10,
+  "desc": "Exit: The Game - The Sunken Treasure is a puzzle game modeled after escape rooms.",
+  "bgg": 7,
+  "weight": 1.81
  }
 }
