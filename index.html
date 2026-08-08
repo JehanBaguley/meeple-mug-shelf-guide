@@ -24,10 +24,16 @@
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--cream);font-family:'Bricolage Grotesque',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   /* Avoid horizontal scrolling on small screens */
-  html,body{max-width:100%;overflow-x:hidden}
+  html,body{max-width:100%;overflow-x:clip}
   /* Scrolling to the bottom of the filter sheet used to start scrolling the list
      underneath it, which loses your place in a 320 game list. */
   .side,.panel{overscroll-behavior:contain}
+  /* On a phone the panel is a sheet, so it needs to scroll internally and still leave
+     the Done button reachable above the home indicator. */
+  @media(max-width:899px){
+    body.sheet-open .panel{max-height:calc(100dvh - 132px);overflow-y:auto;-webkit-overflow-scrolling:touch}
+    body.sheet-open{overflow:hidden}
+  }
   @media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth} }
   .mono{font-family:'IBM Plex Mono',monospace}
   a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--amber);outline-offset:2px;border-radius:6px}
@@ -368,12 +374,11 @@
   @media(min-width:900px){
     .wrap{max-width:1400px}
     .cols{display:grid;grid-template-columns:320px minmax(0,1fr);gap:24px;align-items:start}
-    .side{position:sticky;top:8px;max-height:calc(100vh - 16px);overflow-y:auto;overflow-x:hidden;padding-right:2px;scrollbar-width:none;overscroll-behavior:contain}
-    .side::-webkit-scrollbar{display:none}
-    /* Pinned to the top of the sidebar's own scroll area, not the page. */
-    .side .mtop{position:sticky;top:0;z-index:30;background:var(--bg);padding:2px 0 8px;margin:0 0 6px}
-    .side .mtop::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:10px;
-      background:linear-gradient(var(--bg),rgba(18,58,36,0));pointer-events:none}
+    .side{align-self:start}
+    /* A hairline and a couple of pixels, nothing more. Enough to say "this is pinned"
+       without building a second header out of it. */
+    .side .mtop{position:sticky;top:0;z-index:30;background:var(--bg);
+      padding:6px 0 8px;margin:0 0 10px;border-bottom:1px solid var(--line)}
     .side .segdesc{margin-top:0}
     .list{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .gcard{margin:0}
@@ -1029,9 +1034,11 @@ function render(){
       const ss = $("sortSel"); if(ss) ss.value = want+":1";
     }
   }
-  const narrowed = state.minSeats>1||state.maxSeats<10||timeNarrowed||ageNarrowed;
+  const seatNarrowed = state.minSeats>1||state.maxSeats<10;
+  const narrowed = seatNarrowed||timeNarrowed||ageNarrowed;
   const pickList = state.pick!==null ? DATA.picks[state.pick] : null;
   let hiddenPending = 0;
+  const pendWhy = {};                                       // which detail is actually missing
   const qn = state.query.trim() ? norm(state.query) : "";   // "" switches relevance off entirely
   const RANK = new Map();                                   // game → relevance band, only while searching
 
@@ -1046,11 +1053,18 @@ function render(){
     if(pickList && !(g.name in pickList.games)) return false;
     if(g.forSale && g.price!==null && (g.price<state.pLo || (state.pHi<200 && g.price>state.pHi)) && (state.seg==="buy" || !g.playable)) return false;
     if(qn){ const r = matchRank(g, qn); if(!r) return false; RANK.set(g, r); }
-    if(narrowed){
-      if(!hasStats(g)){ if(countPending) hiddenPending++; return false; }
+    if(seatNarrowed){
+      if(!hasStats(g)){ if(countPending){ hiddenPending++; pendWhy.players=1; } return false; }
       if(!(g.players[0]<=state.maxSeats && g.players[1]>=state.minSeats)) return false;
-      if(timeNarrowed){ if(g.mins===null || g.mins<S_TIME[state.tLo] || (state.tHi<8 && g.mins>S_TIME[state.tHi])) return false; }
-      if(ageNarrowed){ const a = ageMin(g); if(a===null || a<state.aLo || a>state.aHi) return false; }
+    }
+    if(timeNarrowed){
+      if(g.mins===null){ if(countPending){ hiddenPending++; pendWhy.time=1; } return false; }
+      if(g.mins<S_TIME[state.tLo] || (state.tHi<8 && g.mins>S_TIME[state.tHi])) return false;
+    }
+    if(ageNarrowed){
+      const a = ageMin(g);
+      if(a===null){ if(countPending){ hiddenPending++; pendWhy.age=1; } return false; }
+      if(a<state.aLo || a>state.aHi) return false;
     }
     return true;
   };
@@ -1062,7 +1076,7 @@ function render(){
   // narrow. Excludes are still honoured: ruling a genre out should shrink the others.
   TAG_REACH = {};
   for (const g of DATA.games) {
-    if (!(stylePass(g) && basePass(g, true))) continue;
+    if (!(stylePass(g) && basePass(g, false))) continue;
     if (tExc.some(has(g))) continue;
     for (const t of (g.tags||[])) TAG_REACH[t] = (TAG_REACH[t]||0) + 1;
   }
@@ -1159,7 +1173,15 @@ function render(){
   { const mb=$("mfiltBadge"); if(mb){ mb.textContent=activeFilters; mb.hidden=!activeFilters; } }
   $("sheetDone").textContent = "See "+list.length+" game"+(list.length===1?"":"s");
   $("hiddenNote").hidden = hiddenPending===0;
-  $("hiddenNote").textContent = hiddenPending ? hiddenPending+" more game"+(hiddenPending===1?"":"s")+" we don\u2019t have a player count for yet." : "";
+  {
+    const why = Object.keys(pendWhy).map(k => ({players:"a player count",time:"a play time",age:"an age"}[k]));
+    const what = why.length === 0 ? "these details"
+      : why.length === 1 ? why[0]
+      : why.slice(0,-1).join(", ") + " or " + why[why.length-1];
+    $("hiddenNote").textContent = hiddenPending
+      ? hiddenPending+" more game"+(hiddenPending===1?"":"s")+" hidden, we don\u2019t have "+what+" for "+(hiddenPending===1?"it":"them")+" yet."
+      : "";
+  }
 
   $("list").innerHTML = list.length ? shown.map(g=>{
     const spine = g.cat?CATS[g.cat]:"#55685c";
