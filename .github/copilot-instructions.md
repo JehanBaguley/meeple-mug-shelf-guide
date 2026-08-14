@@ -73,6 +73,24 @@ If you cannot do those, say the change is unverified. That is a useful thing to 
 - If the live sheet fetch fails at build time, keep the previous catalogue. Never publish
   an empty or partial one.
 
+## Layers added since the sections above were written
+
+- **`config.js` is the template layer.** The site and the build both read it; the object
+  inside is strict JSON. An **empty string is a deliberate "none"** (`"sheetCsvUrl": ""`
+  means no sheet overlay, `"bggUser": ""` means no collection). The code checks
+  `!== undefined`, not truthiness; do not "simplify" those checks to `||` or an empty
+  config value silently falls back to Meeple & Mug's identity, sheet included.
+- **`tests/` is the regression suite and CI runs it** (`.github/workflows/tests.yml`) on
+  any push touching `index.html`, `config.js` or `tests/`. Run the suite locally against
+  the exact bytes you intend to deploy before pushing. tests/README.md maps what each
+  harness guards.
+- **`sw.js` is the service worker.** Navigations, `config.js` and `data/` are
+  network-first, so deploys land on the next load with no version dance; only fonts and
+  icons are cache-first. Bump `VERSION` only if you need to force old caches out.
+- **The build publishes `data/gaps.json` and `data/gaps.csv`.** The café's sheet
+  IMPORTDATAs the CSV and its conditional-format rules key off the quoted `"name|field"`
+  line shape. Changing that format silently breaks the amber flags in the sheet.
+
 ## When you are unsure
 
 Say so and stop. A half-applied change to a live catalogue is worse than no change.
