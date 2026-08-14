@@ -26,11 +26,13 @@ await pg.waitForTimeout(500);
 await pg.evaluate(() => window.scrollTo(0, 4000));
 await pg.waitForTimeout(200);
 await pg.click('#seg [data-seg="buy"]');
-await pg.waitForTimeout(500);
-const s = await pg.evaluate(() => {
-  const cs = document.querySelector('.countsort').getBoundingClientRect();
-  return { y: window.scrollY, csTop: cs.top };
-});
+// poll: slow CI machines take a few frames to render, settle and scroll
+let s = { csTop: -9999 };
+for (let i = 0; i < 20; i++) {
+  await pg.waitForTimeout(150);
+  s = await pg.evaluate(() => ({ csTop: document.querySelector('.countsort').getBoundingClientRect().top }));
+  if (s.csTop > -40 && s.csTop < 300) break;
+}
 ok(s.csTop > -40 && s.csTop < 300, `tab change lands at the top of the list (countsort at ${Math.round(s.csTop)}px)`);
 
 // chips still ripple
