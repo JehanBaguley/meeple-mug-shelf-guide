@@ -1,0 +1,33 @@
+name: Browser tests
+# The regression suite that has gated every deploy. Runs on anything that could
+# change behaviour; skipped for data-only nightly commits to save minutes.
+on:
+  push:
+    paths: ["index.html", "config.js", "tests/**", ".github/workflows/tests.yml"]
+  pull_request:
+    paths: ["index.html", "config.js", "tests/**"]
+  workflow_dispatch: {}
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Install Playwright
+        run: |
+          npm init -y > /dev/null
+          npm i playwright@latest > /dev/null
+          npx playwright install --with-deps chromium
+      - name: Serve the site
+        run: |
+          python3 -m http.server 8899 --bind 127.0.0.1 &
+          sleep 1
+      - name: Run the suite
+        run: |
+          set -e
+          for f in tests/chk*.mjs; do
+            echo "== $f =="
+            node "$f"
+          done
