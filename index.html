@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" type="image/png" href="icon.png" />
+<script src="config.js"></script>
 <link rel="apple-touch-icon" href="icon.png" />
 <meta name="theme-color" content="#22352c" />
 <title>Meeple &amp; Mug · Shelf Guide</title>
@@ -443,6 +444,36 @@
   <h1>Meeple &amp; Mug <span>Shelf Guide</span></h1>
   <p class="sub">Every game we’ve got. Play one here, or take a new copy home.</p>
 </header>
+<script>
+/* Instance branding. The HTML above carries this repo's own cafe as defaults;
+   a fork edits config.js and never touches this file. Runs inline right after
+   the header parses so a fork's name never flashes the default. */
+(function(){
+  var C = window.SHELF_CONFIG || {};
+  function txt(sel, s){ var el = document.querySelector(sel); if(el && s) el.textContent = s; }
+  if (C.name) {
+    document.title = C.name + " \u00b7 " + (C.guideName || "Shelf Guide");
+    var h1 = document.querySelector("header h1");
+    if (h1) {
+      h1.textContent = C.name + " ";
+      var sp = document.createElement("span");
+      sp.textContent = C.guideName || "Shelf Guide";
+      h1.appendChild(sp);
+    }
+  }
+  txt("header .kicker", C.kicker);
+  txt("header .sub", C.tagline);
+  var cols = C.colors || {};
+  for (var k in cols) document.documentElement.style.setProperty("--" + k, cols[k]);
+  document.addEventListener("DOMContentLoaded", function(){
+    var fn = document.querySelector(".fname a");
+    if (fn && C.name) fn.textContent = C.name;
+    if (fn && C.siteUrl) fn.href = C.siteUrl;
+    if (C.contactUrl) document.querySelectorAll('footer a[href="https://www.meepleandmug.com.au/contact"]')
+      .forEach(function(a){ a.href = C.contactUrl; });
+  });
+})();
+</script>
 
 <main class="wrap">
   <div class="mtop">
@@ -583,18 +614,19 @@
 <script>
 // ————— Config: paste the café's published Google Sheet CSV URL here —————
 // Sheet → File → Share → Publish to web → the "data" tab as CSV. Leave blank to use built-in demo data.
-const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1PuwiRbEurcLIG8YOUGzk6aBT5XMR9b9sVRWdrKw1pSQ/gviz/tq?tqx=out:csv&headers=1&sheet=data";
+const __CFG = window.SHELF_CONFIG || {};
+const SHEET_CSV_URL = __CFG.sheetCsvUrl !== undefined ? __CFG.sheetCsvUrl : "https://docs.google.com/spreadsheets/d/1PuwiRbEurcLIG8YOUGzk6aBT5XMR9b9sVRWdrKw1pSQ/gviz/tq?tqx=out:csv&headers=1&sheet=data"; // empty string = deliberately no sheet
 
 // "I want this" actions. Set ONE of these:
 // Google Form prefill template (Form > Get pre-filled link, swap answers for {game} and {type}):
 // e.g. "https://docs.google.com/forms/d/e/FORM_ID/viewform?usp=pp_url&entry.1111={game}&entry.2222={type}"
-const CONTACT_URL = "https://www.meepleandmug.com.au/contact";
+const CONTACT_URL = __CFG.contactUrl !== undefined ? __CFG.contactUrl : "https://www.meepleandmug.com.au/contact"; // empty string = use the email fallback
 const REQUEST_URL_TEMPLATE = CONTACT_URL; // Buy/Request open the café's contact page
-const CAFE_EMAIL = "admin@meepleandmug.com.au"; // fallback if the contact page is ever blanked above
+const CAFE_EMAIL = __CFG.contactEmail !== undefined ? __CFG.contactEmail : "admin@meepleandmug.com.au"; // fallback if the contact page is ever blanked above
 function requestUrl(g, type){
   if(REQUEST_URL_TEMPLATE) return REQUEST_URL_TEMPLATE.replace("{game}", encodeURIComponent(g.name)).replace("{type}", type);
   const subj = encodeURIComponent((type==="buy" ? "Hold a copy of " : "Special order request: ") + g.name);
-  const body = encodeURIComponent("Hi Meeple & Mug, " + (type==="buy"
+  const body = encodeURIComponent("Hi " + (__CFG.name || "there") + ", " + (type==="buy"
     ? "could you hold a copy of " + g.name + (g.priceTxt ? " (" + g.priceTxt + ")" : "") + " for me to pick up?"
     : "could you order in a copy of " + g.name + " for me to buy?") + " Cheers!");
   return "mailto:" + CAFE_EMAIL + "?subject=" + subj + "&body=" + body;
