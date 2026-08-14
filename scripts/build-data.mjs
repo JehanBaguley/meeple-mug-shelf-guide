@@ -7,9 +7,15 @@
 
 import { writeFileSync, mkdirSync, readFileSync, existsSync } from "node:fs";
 
-const BGG_USER = "meepleandmug";
+// config.js is the fork-editable identity file; the object inside is strict JSON.
+let __cfg = {};
+try {
+  const __t = readFileSync("config.js", "utf8");
+  __cfg = JSON.parse(__t.slice(__t.indexOf("{"), __t.lastIndexOf("}") + 1));
+} catch { /* no config.js is fine; env vars and defaults carry it */ }
+const BGG_USER = process.env.BGG_USER || (__cfg.bggUser !== undefined ? __cfg.bggUser : "meepleandmug"); // empty string = no BGG collection
 const COLLECTION_URL = `https://boardgamegeek.com/xmlapi2/collection?username=${BGG_USER}&stats=1&own=1`;
-const SHEET_CSV_URL = process.env.SHEET_CSV_URL || "";
+const SHEET_CSV_URL = process.env.SHEET_CSV_URL || __cfg.sheetCsvUrl || ""; // build always needs SOME sheet; empty just skips the overlay merge
 // BGG application token, injected by the workflow. Empty string = no auth header sent.
 const BGG_TOKEN = process.env.BGG_TOKEN || "";
 // BGG queues collection requests: 202 means "come back shortly". 401/403/404 means
@@ -18,7 +24,7 @@ async function fetchCollection() {
   for (let attempt = 1; attempt <= 8; attempt++) {
   const res = await fetch(COLLECTION_URL, {
   headers: {
-    "User-Agent": "meeple-mug-catalogue/1.0",
+    "User-Agent": "shelf-guide/1.0",
     // only send the auth header when the token exists, same trick as fetch-bgg-cats.mjs
     ...(BGG_TOKEN ? { Authorization: `Bearer ${BGG_TOKEN}` } : {}),
   },
