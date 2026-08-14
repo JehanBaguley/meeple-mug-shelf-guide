@@ -25,7 +25,7 @@
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--cream);font-family:'Bricolage Grotesque',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   /* Avoid horizontal scrolling on small screens */
-  html,body{max-width:100%;overflow-x:clip}
+  html,body{max-width:100%;overflow-x:clip;overflow-anchor:none}
   /* Scrolling to the bottom of the filter sheet used to start scrolling the list
      underneath it, which loses your place in a 320 game list. */
   .side,.panel{overscroll-behavior:contain}
@@ -1483,13 +1483,16 @@ document.addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(
   requestAnimationFrame(() => {        // the 326-card rebuild waits one frame
     render();
     // the whole list just changed underneath you: go to the top of it deliberately,
-    // instead of letting the shorter page clamp the scroll to somewhere random
-    const cs=document.querySelector(".countsort");
-    if(cs){
+    // instead of letting the shorter page clamp the scroll to somewhere random.
+    // Measured a frame later so the post-render layout (and any browser clamp)
+    // has settled before we read positions; slow machines need the beat.
+    requestAnimationFrame(() => {
+      const cs=document.querySelector(".countsort");
+      if(!cs) return;
       const barH=(parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--mtoph"))||0);
       const y=cs.getBoundingClientRect().top+window.scrollY-barH-8;
       if(window.scrollY>Math.max(0,y)) window.scrollTo({top:Math.max(0,y),behavior:"auto"});
-    }
+    });
   })}});
 // shadow appears only once a sticky bar is actually pinned (its top hits 0), not at rest
 function stickShadows(){
