@@ -66,8 +66,8 @@ yours wins.
 | play_style | co-op / teams / competitive. Derived from BGG's mechanics when blank. |
 | expansion | yes. Renders as a pill beside the title, never as a genre chip. |
 
-Columns that exist but nothing reads: `status`, `notes`, `rules_link`, `price_text`,
-`rec_list`, `rec_note`. Safe to delete. Harmless to leave.
+Those fifteen columns are the whole contract. (Legacy columns such as `status` and
+`rec_list` were retired in the August 2026 clean-up; a dated backup tab keeps the old data.)
 
 ## Genre chips
 
