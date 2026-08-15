@@ -21,6 +21,7 @@ const BGG_TOKEN = process.env.BGG_TOKEN || "";
 // BGG queues collection requests: 202 means "come back shortly". 401/403/404 means
 // the account doesn't exist or BGG is blocking — treat as "no BGG source", not a failure.
 async function fetchCollection() {
+  if (!BGG_USER) { console.log("No BGG username configured, skipping the collection fetch"); return null; }
   for (let attempt = 1; attempt <= 8; attempt++) {
   const res = await fetch(COLLECTION_URL, {
   headers: {
