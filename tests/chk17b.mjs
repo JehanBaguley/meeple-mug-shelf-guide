@@ -3,7 +3,7 @@ import { chromium } from 'playwright';
 const __B = process.env.BASE_URL || 'http://127.0.0.1:8899/';
 
 const b = await chromium.launch({ executablePath: process.env.PW_EXECUTABLE || undefined });
-const U = 'http://127.0.0.1:8899/index.html';
+const U = __B + 'index.html';
 const p = await b.newPage({ viewport: { width: 1400, height: 900 } });
 const errs = []; p.on('pageerror', e => errs.push(e.message));
 await p.goto(U, { waitUntil: 'domcontentloaded' });
