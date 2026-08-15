@@ -21,7 +21,15 @@ ok(m.touch, 'apple-touch-icon linked');
 const sw = await pg.evaluate(async () => {
   if (!('serviceWorker' in navigator)) return 'unsupported';
   const reg = await navigator.serviceWorker.ready;
-  return reg.active ? reg.active.state : 'none';
+  const w = reg.active;
+  if (!w) return 'none';
+  if (w.state === 'activated') return 'activated';
+  return await new Promise((res) => {
+    const done = setTimeout(() => res(w.state), 8000);
+    w.addEventListener('statechange', () => {
+      if (w.state === 'activated') { clearTimeout(done); res('activated'); }
+    });
+  });
 });
 ok(sw === 'activated', `service worker activated (${sw})`);
 
