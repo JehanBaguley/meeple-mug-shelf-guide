@@ -10,7 +10,10 @@ const VERSION = "sg-v1";
 self.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(VERSION).then((c) =>
-      c.addAll(["./", "config.js", "manifest.webmanifest", "icon-192.png", "icon-512.png"])
+      Promise.all(
+        ["./", "config.js", "manifest.webmanifest", "icon-192.png", "icon-512.png"]
+          .map((u) => c.add(u).catch(() => {}))
+      )
     ).then(() => self.skipWaiting())
   );
 });
