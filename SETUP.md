@@ -32,6 +32,11 @@ Then File → Share → **Anyone with the link: Viewer**, and note your sheet id
 
 ## 3. Edit config.js
 
+**The short way:** open [the setup wizard](https://jehanbaguley.github.io/meeple-mug-shelf-guide/setup.html),
+fill in the form, pick your colours, and copy the two blocks it gives you into
+`config.js` and the `<meta>` lines of `index.html`. It runs entirely in your
+browser and sends nothing anywhere. The rest of this step explains what it writes.
+
 The only file you need to touch. Every field is explained in its comments:
 your name, the small line above the title, the tagline, contact link, your
 sheet's CSV feed (swap your sheet id into the URL pattern already there), and
