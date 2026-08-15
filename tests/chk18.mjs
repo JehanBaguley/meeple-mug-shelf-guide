@@ -5,7 +5,7 @@ const __B = process.env.BASE_URL || 'http://127.0.0.1:8899/';
 const b = await chromium.launch({ executablePath: process.env.PW_EXECUTABLE || undefined });
 const out = {}, errs = [];
 const IG = /ERR_TUNNEL|ERR_NAME|ERR_CONNECTION|fonts\.g|gviz|docs\.google|powered-by-bgg/;
-const U = 'http://127.0.0.1:8899/index.html';
+const U = __B + 'index.html';
 const p = await b.newPage({ viewport: { width: 1400, height: 800 } });
 p.on('pageerror', e => errs.push('PAGEERROR ' + e.message));
 p.on('console', m => { if (m.type()==='error' && !IG.test(m.text())) errs.push('CONSOLE ' + m.text()); });
