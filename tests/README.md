@@ -1,7 +1,7 @@
 # The regression suite
 
-Eight Playwright harnesses that gate every behavioural change. CI runs them on any
-push touching index.html, config.js or tests/ (see `.github/workflows/tests.yml`);
+Nine Playwright harnesses that gate every behavioural change. CI runs them on any
+push touching index.html, config.js, setup.html or tests/ (see `.github/workflows/tests.yml`);
 data-only nightly commits skip them.
 
 | File | Guards |
@@ -14,6 +14,7 @@ data-only nightly commits skip them.
 | chk28 | the ghost-tab fix: pill correctness through every hide/reveal path |
 | chk29 | motion honesty: instant snaps vs tap glides, ripple hygiene, tab-change scroll |
 | chk30-pwa | manifest + service worker registration, offline reload still renders the shelf |
+| chk31-setup | the setup wizard emits parseable config.js and never a fork's wrong sheet |
 
 Run locally:
 
