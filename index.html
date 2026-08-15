@@ -711,7 +711,10 @@ const TAG_ALIAS = {"word game":"word","card":"card game","children's game":"kids
 
 // A genre only earns a chip once enough games share it. Below this the tag is still
 // stored, so search and the URL still work, it just does not clutter the card.
-const TAG_MIN = 5;
+function tagMin(){
+  const n = (DATA.games || []).length;
+  return Math.max(2, Math.min(5, Math.round(n / 40)));
+}
 // Shown however few games carry them: these are sought, not stumbled upon.
 const TAG_KEEP = new Set(["legacy","storytelling","traitor","campaign","solo"]);
 let TAG_OK = null;
@@ -719,7 +722,8 @@ let TAG_REACH = null;   // per-genre count of what is reachable under the other 
 function refreshTagOk(){
   const c = {};
   DATA.games.forEach(g => (g.tags||[]).forEach(t => c[t] = (c[t]||0) + 1));
-  TAG_OK = new Set(Object.keys(c).filter(t => c[t] >= TAG_MIN || TAG_KEEP.has(t)));
+  const MIN = tagMin();
+  TAG_OK = new Set(Object.keys(c).filter(t => c[t] >= MIN || TAG_KEEP.has(t)));
 }
 // tokens the sheet contains that are not genres: "cooperative" is already the
 // Play style control, "two player" is the Players slider, "expansion" is a
@@ -774,11 +778,12 @@ function buildTagRow(){
   lastTagSig = "";
   const total = {};
   DATA.games.forEach(g => (g.tags||[]).forEach(t => total[t] = (total[t]||0) + 1));
-  TAG_OK = new Set(Object.keys(total).filter(t => total[t] >= TAG_MIN || TAG_KEEP.has(t)));
+  const MIN = tagMin();
+  TAG_OK = new Set(Object.keys(total).filter(t => total[t] >= MIN || TAG_KEEP.has(t)));
   // Membership is decided by the whole catalogue so chips do not appear and vanish as
   // you filter, but the number on each chip is what you would actually get.
   const counts = TAG_REACH || total;
-  const all = Object.keys(total).filter(t => total[t] >= TAG_MIN || TAG_KEEP.has(t))
+  const all = Object.keys(total).filter(t => total[t] >= MIN || TAG_KEEP.has(t))
     .sort((a,b) => (counts[b]||0)-(counts[a]||0) || total[b]-total[a] || a.localeCompare(b));
   const sel = Object.keys(state.tags).filter(k => state.tags[k]);
   const CAP = 8;
