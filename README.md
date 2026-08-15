@@ -5,6 +5,11 @@ play right now in under thirty seconds, without reading the back of every box.
 
 Live: https://jehanbaguley.github.io/meeple-mug-shelf-guide/
 
+Want one of your own? This repo is the cafe's instance. The reusable template is at
+[shelf-guide-template](https://github.com/JehanBaguley/shelf-guide-template), which has
+a demo shelf and a [setup page](https://jehanbaguley.github.io/shelf-guide-template/setup.html)
+that writes your config for you.
+
 Single-file vanilla JS, no build step, no framework, no dependencies. GitHub Pages serves
 `index.html` as-is.
 
