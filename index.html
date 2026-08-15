@@ -1446,7 +1446,7 @@ async function boot(){
   showSkeletons();
   try{
     const r = await fetch("data/games.json",{cache:"no-store"});
-    if(r.ok){ const j = await r.json(); if(j.games?.length) DATA = j; }
+    if(r.ok){ const j = await r.json(); if(j.games?.length){ DATA = j; if(!Array.isArray(DATA.picks)) DATA.picks = []; } }
     else {
       const n = $("feedNote"); if(n){ n.hidden = false; n.textContent = "Couldn't load the shelf; check your connection and refresh."; }
     }
