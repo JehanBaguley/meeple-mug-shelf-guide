@@ -7,7 +7,7 @@ const ok = (c, m) => { console.log((c ? 'PASS' : 'FAIL') + ' ' + m); if (!c) fai
 const br = await chromium.launch({ executablePath: process.env.PW_EXECUTABLE || undefined });
 const ctx = await br.newContext({ viewport: { width: 390, height: 780 } });
 const pg = await ctx.newPage();
-await pg.goto(__B, { waitUntil: 'networkidle' });
+await pg.goto(__B, { waitUntil: 'domcontentloaded' });
 await pg.waitForSelector('.gcard');
 
 const m = await pg.evaluate(() => ({
@@ -27,8 +27,12 @@ ok(sw === 'activated', `service worker activated (${sw})`);
 
 // give the install precache a beat, then reload once ONLINE so the SW controls the page
 await pg.waitForTimeout(800);
-await pg.reload({ waitUntil: 'networkidle' });
+await pg.reload({ waitUntil: 'domcontentloaded' });
 await pg.waitForSelector('.gcard');
+const online = await pg.evaluate(() => ({
+  cards: document.querySelectorAll('.gcard').length,
+  title: document.title,
+}));
 
 // now go offline and reload: the shelf should still be there
 await ctx.setOffline(true);
@@ -38,8 +42,9 @@ const off = await pg.evaluate(() => ({
   cards: document.querySelectorAll('.gcard').length,
   title: document.title,
 }));
-ok(off.cards > 20, `offline reload still renders the shelf (${off.cards} cards)`);
-ok(/Shelf Guide/.test(off.title), 'offline page is the real app');
+ok(off.cards > 0 && off.cards === online.cards,
+   `offline reload renders the same shelf (${off.cards} of ${online.cards} cards)`);
+ok(off.title === online.title && !!off.title, 'offline page is the real app');
 await ctx.setOffline(false);
 
 await br.close();
