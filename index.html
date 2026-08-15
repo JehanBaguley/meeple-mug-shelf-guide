@@ -1112,7 +1112,7 @@ function render(){
   requestAnimationFrame(() => placeSegPill(false));
   document.querySelectorAll("[data-seg]").forEach(b=>b.setAttribute("aria-pressed", state.seg===b.dataset.seg));
   document.querySelectorAll("#picksRow [data-pick]").forEach(b=>{const v=b.dataset.pick===""?null:+b.dataset.pick;const on=state.pick===v;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on);});
-  $("segDesc").textContent = {all:"Every game we\u2019ve got.",play:"On the shelf right now.",buy:"Buy a copy to take home."}[state.seg];
+  $("segDesc").textContent = {all:"The whole shelf.",play:"On the shelf right now.",buy:"Buy a copy to take home."}[state.seg];
   slideList();
   paints.forEach(p=>p());
   $("seatOut").textContent = (state.minSeats===1&&state.maxSeats===10) ? "any number"
