@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Set up your own Shelf Guide</title>
+<meta name="description" content="Fill in a form, copy one file, and your own browsable game catalogue is running." />
+<link rel="icon" href="icon.png" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+  /* The wizard's own chrome uses the Meeple palette. The PREVIEW below uses
+     whatever the visitor picks, via --p-* variables, so the two never fight. */
+  :root{
+    --bg:#123a24;--bg-deep:#0c2a19;--card:#f4ead2;--card-edge:#dccdaa;
+    --amber:#d8d848;--ink:#2b2419;--ink-soft:#6b6150;--cream:#ece5d3;
+    --muted:#9dc0a8;--line:rgba(236,229,211,.16);--timber:#c9a06b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--cream);
+    font-family:'Bricolage Grotesque',system-ui,sans-serif;-webkit-font-smoothing:antialiased;
+    line-height:1.5}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  a{color:var(--amber)}
+
+  header{max-width:1240px;margin:0 auto;padding:40px 24px 8px}
+  .kicker{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.08;margin:0 0 10px;font-weight:800;letter-spacing:-.02em}
+  h1 em{font-style:normal;color:var(--amber)}
+  .lede{margin:0;max-width:60ch;color:var(--cream);opacity:.85;font-size:17px}
+
+  .wrap{max-width:1240px;margin:0 auto;padding:24px;display:grid;gap:28px;
+    grid-template-columns:minmax(0,1fr)}
+  @media(min-width:1000px){
+    .wrap{grid-template-columns:minmax(0,1fr) 480px;align-items:start}
+    .rightcol{position:sticky;top:24px}
+  }
+
+  fieldset{border:1px solid var(--line);border-radius:14px;padding:20px;margin:0 0 20px;
+    background:rgba(0,0,0,.14)}
+  legend{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--amber);padding:0 8px}
+  .field{margin:0 0 16px}
+  .field:last-child{margin-bottom:0}
+  label{display:block;font-weight:600;font-size:14px;margin:0 0 4px}
+  .hint{font-size:12.5px;color:var(--muted);margin:0 0 6px;line-height:1.45}
+  input[type=text]{width:100%;background:var(--bg-deep);color:var(--cream);
+    border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:14px;
+    font-family:inherit}
+  input[type=text]:focus{outline:2px solid var(--amber);outline-offset:1px;border-color:transparent}
+  input::placeholder{color:var(--muted);opacity:.55}
+
+  .swatches{display:flex;flex-wrap:wrap;gap:10px}
+  .sw{display:flex;align-items:center;gap:8px;background:var(--bg-deep);
+    border:1px solid var(--line);border-radius:10px;padding:7px 10px}
+  .sw input[type=color]{width:30px;height:30px;padding:0;border:none;border-radius:6px;
+    background:none;cursor:pointer}
+  .sw span{font-size:12px;font-family:'IBM Plex Mono',monospace;color:var(--muted)}
+
+  .presets{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+  .preset{border:1px solid var(--line);background:transparent;color:var(--cream);
+    border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;
+    display:flex;align-items:center;gap:8px}
+  .preset:hover{border-color:var(--amber)}
+  .preset[aria-pressed=true]{background:var(--amber);color:var(--ink);border-color:var(--amber)}
+  .dot{width:11px;height:11px;border-radius:50%;display:inline-block;border:1px solid rgba(0,0,0,.25)}
+
+  /* ---- Live preview: everything below uses --p-* so it themes independently ---- */
+  .previewbox{border:1px solid var(--line);border-radius:14px;overflow:hidden;
+    background:var(--p-bg);color:var(--p-cream)}
+  .pvhead{padding:20px}
+  .pvkicker{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--p-muted);margin:0 0 7px;word-break:break-word}
+  .pvtitle{font-size:26px;line-height:1.1;font-weight:800;margin:0 0 7px;letter-spacing:-.02em;
+    word-break:break-word}
+  .pvtitle b{color:var(--p-amber);font-weight:800}
+  .pvsub{margin:0;font-size:12.5px;opacity:.82;word-break:break-word}
+  .pvbar{display:flex;gap:7px;padding:0 20px 16px}
+  .pvtab{font-size:11px;font-weight:600;border-radius:999px;padding:6px 13px;
+    border:1px solid var(--p-line);color:var(--p-cream)}
+  .pvtab.on{background:var(--p-amber);color:var(--p-ink);border-color:var(--p-amber)}
+  .pvcards{padding:0 20px 20px;display:grid;gap:11px}
+  .pvcard{background:var(--p-card);color:var(--p-ink);border-radius:11px;padding:13px 15px;
+    border-left:4px solid var(--p-timber)}
+  .pvcard h4{margin:0 0 5px;font-size:15px;font-weight:800}
+  .pvmeta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--p-inksoft);margin:0 0 7px}
+  .pvchips{display:flex;gap:5px;flex-wrap:wrap;margin:0 0 8px}
+  .pvchip{font-size:9.5px;font-weight:600;background:rgba(0,0,0,.06);border-radius:999px;
+    padding:2px 8px;color:var(--p-ink)}
+  .pvfoot{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .pvavail{font-size:10px;font-weight:600;background:rgba(0,0,0,.06);border-radius:999px;padding:3px 9px}
+  .pvlink{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;
+    color:#7a4d12;border-bottom:1.5px solid var(--p-timber)}
+  .pvcredit{padding:12px 20px;border-top:1px solid var(--p-line);font-size:10.5px;
+    color:var(--p-muted);font-family:'IBM Plex Mono',monospace}
+
+  .outhead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 8px}
+  .outhead h3{margin:0;font-size:15px}
+  .btn{background:var(--amber);color:var(--ink);border:none;border-radius:999px;
+    padding:9px 18px;font-weight:700;font-size:13px}
+  .btn:hover{filter:brightness(1.06)}
+  .btn.ghost{background:transparent;color:var(--cream);border:1px solid var(--line)}
+  pre{background:var(--bg-deep);border:1px solid var(--line);border-radius:12px;
+    padding:16px;overflow:auto;font-family:'IBM Plex Mono',monospace;font-size:12px;
+    line-height:1.6;margin:0;max-height:420px;white-space:pre;color:var(--cream)}
+  .warn{border:1px solid var(--timber);border-radius:10px;padding:10px 13px;margin:0 0 14px;
+    font-size:13px;color:var(--cream);background:rgba(201,160,107,.1)}
+  .warn strong{color:var(--timber)}
+
+  ol.steps{padding-left:20px;margin:0}
+  ol.steps li{margin:0 0 12px;font-size:14.5px}
+  ol.steps code{font-family:'IBM Plex Mono',monospace;font-size:12.5px;
+    background:var(--bg-deep);padding:2px 6px;border-radius:5px;border:1px solid var(--line)}
+  footer{max-width:1240px;margin:0 auto;padding:12px 24px 56px;color:var(--muted);font-size:12.5px}
+  .sronly{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+    clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  @media(prefers-reduced-motion:no-preference){
+    .btn,.preset{transition:filter .15s ease,background .15s ease,border-color .15s ease}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="kicker">Shelf Guide &middot; setup</p>
+  <h1>Make it <em>your</em> shelf.</h1>
+  <p class="lede">Fill this in and copy the result into <span class="mono">config.js</span>. That one file
+  is the whole customisation: your name, your colours, your sheet. Nothing here is sent anywhere,
+  it all runs in your browser.</p>
+</header>
+
+<div class="wrap">
+  <div class="leftcol">
+    <form id="form" autocomplete="off">
+      <fieldset>
+        <legend>Who the shelf belongs to</legend>
+        <div class="field">
+          <label for="f-name">Name</label>
+          <p class="hint">The caf&eacute;, club, or person. Shows large at the top and in the footer.</p>
+          <input type="text" id="f-name" value="Meeple &amp; Mug" placeholder="The Dice Tower Caf&eacute;" />
+        </div>
+        <div class="field">
+          <label for="f-guide">What the catalogue calls itself</label>
+          <p class="hint">Sits after the name, in the accent colour. "Shelf Guide", "Game Library", "The List".</p>
+          <input type="text" id="f-guide" value="Shelf Guide" placeholder="Shelf Guide" />
+        </div>
+        <div class="field">
+          <label for="f-kicker">Small line above the title</label>
+          <p class="hint">Usually an address. Leave blank for none.</p>
+          <input type="text" id="f-kicker" value="63 Hardgrave Rd &middot; West End &middot; Brisbane" placeholder="12 Example St &middot; Your Suburb" />
+        </div>
+        <div class="field">
+          <label for="f-tagline">Tagline</label>
+          <p class="hint">One line under the title. Say what someone can actually do here.</p>
+          <input type="text" id="f-tagline" value="Every game we&rsquo;ve got. Play one here, or take a new copy home." placeholder="Every game on our shelves, sorted by what you feel like." />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Where the data comes from</legend>
+        <div class="field">
+          <label for="f-sheet">Your Google Sheet</label>
+          <p class="hint">Paste the normal sheet link from your address bar. It must have a tab named
+          <span class="mono">data</span>, and be shared as "anyone with the link can view".
+          Leave blank for a static list with no sheet.</p>
+          <input type="text" id="f-sheet" value="https://docs.google.com/spreadsheets/d/1PuwiRbEurcLIG8YOUGzk6aBT5XMR9b9sVRWdrKw1pSQ/edit" placeholder="https://docs.google.com/spreadsheets/d/&hellip;" />
+          <p class="hint" id="sheetnote" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="f-bgg">BoardGameGeek username</label>
+          <p class="hint">Whose collection seeds the nightly stat fetch. Leave blank if you don't have one.</p>
+          <input type="text" id="f-bgg" value="meepleandmug" placeholder="yourbggname" />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Links</legend>
+        <div class="field">
+          <label for="f-site">Your main website</label>
+          <p class="hint">Where the name in the footer links to.</p>
+          <input type="text" id="f-site" value="https://www.meepleandmug.com.au" placeholder="https://example.com" />
+        </div>
+        <div class="field">
+          <label for="f-contact">Where "Buy a copy" should send people</label>
+          <p class="hint">A contact page, an online shop, or a booking form.</p>
+          <input type="text" id="f-contact" value="https://www.meepleandmug.com.au/contact" placeholder="https://example.com/contact" />
+        </div>
+        <div class="field">
+          <label for="f-email">Contact email</label>
+          <p class="hint">Used only if the link above is blank. Opens a pre-filled email instead.</p>
+          <input type="text" id="f-email" value="admin@meepleandmug.com.au" placeholder="hello@example.com" />
+        </div>
+        <div class="field">
+          <label for="f-url">Where this site will live</label>
+          <p class="hint">Your GitHub Pages address. Only used for social link previews.</p>
+          <input type="text" id="f-url" value="https://jehanbaguley.github.io/meeple-mug-shelf-guide/" placeholder="https://yourname.github.io/your-repo/" />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Colours</legend>
+        <p class="hint" style="margin-top:0">Start from a preset, then adjust. The preview updates as you go.</p>
+        <div class="presets" id="presets" role="group" aria-label="Colour presets"></div>
+        <div class="swatches" id="swatches"></div>
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="rightcol">
+    <h2 class="sronly">Live preview</h2>
+    <div class="previewbox" id="preview">
+      <div class="pvhead">
+        <p class="pvkicker" id="pv-kicker">63 Hardgrave Rd &middot; West End &middot; Brisbane</p>
+        <p class="pvtitle"><span id="pv-name">Meeple &amp; Mug</span> <b id="pv-guide">Shelf Guide</b></p>
+        <p class="pvsub" id="pv-tagline">Every game we&rsquo;ve got.</p>
+      </div>
+      <div class="pvbar">
+        <span class="pvtab on">Everything</span>
+        <span class="pvtab">Play here</span>
+        <span class="pvtab">Take home</span>
+      </div>
+      <div class="pvcards">
+        <div class="pvcard">
+          <h4>Wingspan</h4>
+          <p class="pvmeta">&#9733; 8.1 &middot; 1&ndash;5p &middot; 60m &middot; ages 10+ &middot; medium to learn</p>
+          <div class="pvchips"><span class="pvchip">Animals</span><span class="pvchip">Card Game</span><span class="pvchip">Engine Building</span></div>
+          <div class="pvfoot"><span class="pvavail">On the shelf</span><span class="pvlink">Buy a copy</span></div>
+        </div>
+        <div class="pvcard">
+          <h4>Azul</h4>
+          <p class="pvmeta">&#9733; 7.7 &middot; 2&ndash;4p &middot; 45m &middot; ages 8+ &middot; easy to learn</p>
+          <div class="pvchips"><span class="pvchip">Abstract</span><span class="pvchip">Family</span></div>
+          <div class="pvfoot"><span class="pvavail">On the shelf</span><span class="pvlink">Request a copy</span></div>
+        </div>
+      </div>
+      <p class="pvcredit">Ratings from BoardGameGeek members.</p>
+    </div>
+
+    <div style="margin-top:24px">
+      <div class="outhead">
+        <h3>Your config.js</h3>
+        <button type="button" class="btn" id="copyConfig">Copy</button>
+      </div>
+      <pre id="out" class="mono"></pre>
+    </div>
+
+    <div style="margin-top:24px">
+      <div class="outhead">
+        <h3>Your meta tags</h3>
+        <button type="button" class="btn ghost" id="copyMeta">Copy</button>
+      </div>
+      <p class="hint">Social crawlers don't run JavaScript, so these few lines are the one thing
+      config.js can't set for you. Paste over the matching lines near the top of
+      <span class="mono">index.html</span>.</p>
+      <pre id="outmeta" class="mono"></pre>
+    </div>
+  </div>
+</div>
+
+<div class="wrap" style="padding-top:0">
+  <div>
+    <fieldset>
+      <legend>What to do with it</legend>
+      <div class="warn"><strong>Before you start:</strong> click <em>Use this template</em> on the
+      GitHub repo to get your own copy. Everything below happens in your copy, not the original.</div>
+      <ol class="steps">
+        <li>Open <code>config.js</code> in your repo, delete everything in it, paste the block above. Commit.</li>
+        <li>Paste the meta tags over the matching <code>&lt;meta&gt;</code> lines in <code>index.html</code>. Commit.</li>
+        <li>Replace <code>icon.png</code> with your own square logo (it becomes the favicon and the app icon).</li>
+        <li>Settings &rarr; Pages &rarr; deploy from <code>main</code>, root. Your site is now live.</li>
+        <li>Settings &rarr; Secrets and variables &rarr; Actions &rarr; add a <strong>variable</strong> named
+        <code>SHEET_CSV_URL</code>, with the CSV link shown in your config above.</li>
+        <li>Actions &rarr; "Sync catalogue data" &rarr; Run workflow. From then on it runs itself nightly.</li>
+        <li>Print a QR code pointing at your site. That is the entire deployment.</li>
+      </ol>
+    </fieldset>
+  </div>
+</div>
+
+<footer>
+  Built for <a href="https://github.com/JehanBaguley/meeple-mug-shelf-guide">the Shelf Guide template</a>.
+  Game data from <a href="https://boardgamegeek.com">BoardGameGeek</a> &mdash; if you show their data publicly,
+  keep the credit line in your footer. Their API is non-commercial by default.
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  // The twelve theme variables the site actually reads. We only expose the six
+  // that change a design's character; the rest are derived so nobody has to pick
+  // twelve colours to get a decent result.
+  var PRESETS = {
+    "Forest (default)": {bg:"#123a24", card:"#f4ead2", amber:"#d8d848", ink:"#2b2419", timber:"#c9a06b", cream:"#ece5d3"},
+    "Navy & gold":      {bg:"#101f38", card:"#f3efe4", amber:"#e0b23c", ink:"#1e2333", timber:"#b9945c", cream:"#eae7de"},
+    "Charcoal & coral": {bg:"#1e1e21", card:"#f5f0ea", amber:"#ef6f5c", ink:"#26221f", timber:"#c99476", cream:"#ece7e1"},
+    "Plum & blush":     {bg:"#2c1a33", card:"#f7ecef", amber:"#e58fb0", ink:"#2e2029", timber:"#c08fa4", cream:"#eee2e7"}
+  };
+  var KEYS = [
+    ["bg",     "Background"],
+    ["card",   "Card"],
+    ["amber",  "Accent"],
+    ["ink",    "Card text"],
+    ["timber", "Card edge"],
+    ["cream",  "Page text"]
+  ];
+
+  var $ = function(id){ return document.getElementById(id); };
+  var state = Object.assign({}, PRESETS["Forest (default)"]);
+  var activePreset = "Forest (default)";
+
+  // --- colour helpers -------------------------------------------------------
+  function hexToRgb(h){
+    h = String(h).replace("#","");
+    if (h.length === 3) h = h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+    var n = parseInt(h, 16);
+    return {r:(n>>16)&255, g:(n>>8)&255, b:n&255};
+  }
+  function toHex(r,g,b){
+    var f = function(v){ v = Math.max(0, Math.min(255, Math.round(v))).toString(16); return v.length<2 ? "0"+v : v; };
+    return "#"+f(r)+f(g)+f(b);
+  }
+  // mix toward black or white - used to derive the shades nobody should have to pick
+  function shade(hex, amt){
+    var c = hexToRgb(hex), t = amt < 0 ? 0 : 255, p = Math.abs(amt);
+    return toHex(c.r+(t-c.r)*p, c.g+(t-c.g)*p, c.b+(t-c.b)*p);
+  }
+  function mix(a, b, p){
+    var x = hexToRgb(a), y = hexToRgb(b);
+    return toHex(x.r+(y.r-x.r)*p, x.g+(y.g-x.g)*p, x.b+(y.b-x.b)*p);
+  }
+  function derived(s){
+    return {
+      "bg": s.bg,
+      "bg-deep": shade(s.bg, -0.28),
+      "card": s.card,
+      "card-edge": shade(s.card, -0.14),
+      "timber": s.timber,
+      "timber-light": shade(s.timber, 0.22),
+      "red": "#c8452e",
+      "amber": s.amber,
+      "ink": s.ink,
+      "ink-soft": mix(s.ink, s.card, 0.42),
+      "cream": s.cream,
+      "muted": mix(s.cream, s.bg, 0.52)
+    };
+  }
+
+  // --- google sheet url -> gviz csv feed ------------------------------------
+  function sheetCsv(raw){
+    raw = (raw || "").trim();
+    if (!raw) return "";
+    var m = raw.match(/\/spreadsheets\/d\/([a-zA-Z0-9-_]+)/);
+    var id = m ? m[1] : (/^[a-zA-Z0-9-_]{20,}$/.test(raw) ? raw : "");
+    if (!id) return null; // signals "we didn't understand that"
+    return "https://docs.google.com/spreadsheets/d/" + id +
+           "/gviz/tq?tqx=out:csv&headers=1&sheet=data";
+  }
+
+  function val(id){ return $(id).value.trim(); }
+  function esc(s){ return String(s).replace(/\\/g, "\\\\").replace(/"/g, '\\"'); }
+
+  // --- build the outputs ----------------------------------------------------
+  function buildConfig(){
+    var csv = sheetCsv(val("f-sheet"));
+    var colors = {};
+    var base = PRESETS["Forest (default)"];
+    var d = derived(state), dBase = derived(base);
+    // only write the keys that actually differ from the shipped theme
+    Object.keys(d).forEach(function(k){
+      if (d[k].toLowerCase() !== dBase[k].toLowerCase()) colors[k] = d[k];
+    });
+
+    var lines = [];
+    lines.push("// Shelf Guide - instance configuration.");
+    lines.push("// -------------------------------------");
+    lines.push("// The ONLY file a new shelf needs to edit. Keep the object below as strict");
+    lines.push("// JSON (double quotes, no comments inside it, no trailing commas): the");
+    lines.push("// nightly build script reads this same file.");
+    lines.push("//");
+    lines.push("// An empty string means \"deliberately none\" - an empty sheetCsvUrl skips the");
+    lines.push("// live sheet overlay entirely, rather than falling back to someone else's.");
+    lines.push("window.SHELF_CONFIG =");
+    lines.push("{");
+    lines.push('  "name": "' + esc(val("f-name")) + '",');
+    lines.push('  "guideName": "' + esc(val("f-guide")) + '",');
+    lines.push('  "kicker": "' + esc(val("f-kicker")) + '",');
+    lines.push('  "tagline": "' + esc(val("f-tagline")) + '",');
+    lines.push('  "siteUrl": "' + esc(val("f-site")) + '",');
+    lines.push('  "contactUrl": "' + esc(val("f-contact")) + '",');
+    lines.push('  "contactEmail": "' + esc(val("f-email")) + '",');
+    lines.push('  "sheetCsvUrl": "' + esc(csv === null ? "" : csv) + '",');
+    lines.push('  "bggUser": "' + esc(val("f-bgg")) + '",');
+
+    var ck = Object.keys(colors);
+    if (!ck.length) {
+      lines.push('  "colors": {}');
+    } else {
+      lines.push('  "colors": {');
+      ck.forEach(function(k, i){
+        lines.push('    "' + k + '": "' + colors[k] + '"' + (i === ck.length - 1 ? "" : ","));
+      });
+      lines.push("  }");
+    }
+    lines.push("};");
+    return lines.join("\n");
+  }
+
+  function buildMeta(){
+    var name = val("f-name"), guide = val("f-guide");
+    var title = (name + " " + guide).trim();
+    var desc = val("f-tagline") || ("Every game at " + name + ", browsable in thirty seconds.");
+    var url = val("f-url");
+    var L = [];
+    L.push('<title>' + title + '</title>');
+    L.push('<meta name="description" content="' + desc + '" />');
+    L.push('<meta property="og:title" content="' + title + '" />');
+    L.push('<meta property="og:description" content="' + desc + '" />');
+    L.push('<meta property="og:type" content="website" />');
+    if (url) L.push('<meta property="og:url" content="' + url + '" />');
+    L.push('<meta name="twitter:card" content="summary" />');
+    return L.join("\n");
+  }
+
+  // --- preview --------------------------------------------------------------
+  function paint(){
+    var d = derived(state), pv = $("preview");
+    pv.style.setProperty("--p-bg", d["bg"]);
+    pv.style.setProperty("--p-card", d["card"]);
+    pv.style.setProperty("--p-amber", d["amber"]);
+    pv.style.setProperty("--p-ink", d["ink"]);
+    pv.style.setProperty("--p-inksoft", d["ink-soft"]);
+    pv.style.setProperty("--p-cream", d["cream"]);
+    pv.style.setProperty("--p-muted", d["muted"]);
+    pv.style.setProperty("--p-timber", d["timber"]);
+    pv.style.setProperty("--p-line", "rgba(255,255,255,.14)");
+  }
+
+  function render(){
+    $("pv-kicker").textContent = val("f-kicker");
+    $("pv-kicker").style.display = val("f-kicker") ? "" : "none";
+    $("pv-name").textContent = val("f-name") || "Your shelf";
+    $("pv-guide").textContent = val("f-guide");
+    $("pv-tagline").textContent = val("f-tagline");
+    $("pv-tagline").style.display = val("f-tagline") ? "" : "none";
+
+    var raw = val("f-sheet"), csv = sheetCsv(raw), note = $("sheetnote");
+    if (!raw) note.textContent = "No sheet: the site will show whatever is already in data/games.json.";
+    else if (csv === null) note.textContent = "That doesn't look like a Google Sheets link - check it and paste again.";
+    else note.textContent = "Reading the tab named data. This exact URL is what goes in SHEET_CSV_URL too.";
+
+    paint();
+    $("out").textContent = buildConfig();
+    $("outmeta").textContent = buildMeta();
+  }
+
+  // --- wire up --------------------------------------------------------------
+  var presetWrap = $("presets");
+  Object.keys(PRESETS).forEach(function(nm){
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "preset"; b.setAttribute("aria-pressed", nm === activePreset);
+    var dot = document.createElement("span");
+    dot.className = "dot"; dot.style.background = PRESETS[nm].amber;
+    b.appendChild(dot);
+    b.appendChild(document.createTextNode(nm));
+    b.addEventListener("click", function(){
+      activePreset = nm;
+      state = Object.assign({}, PRESETS[nm]);
+      Array.prototype.forEach.call(presetWrap.children, function(x){
+        x.setAttribute("aria-pressed", x.textContent === nm);
+      });
+      KEYS.forEach(function(k){ $("c-" + k[0]).value = state[k[0]]; });
+      render();
+    });
+    presetWrap.appendChild(b);
+  });
+
+  var swWrap = $("swatches");
+  KEYS.forEach(function(k){
+    var wrap = document.createElement("label");
+    wrap.className = "sw";
+    var inp = document.createElement("input");
+    inp.type = "color"; inp.id = "c-" + k[0]; inp.value = state[k[0]];
+    inp.setAttribute("aria-label", k[1] + " colour");
+    inp.addEventListener("input", function(){
+      state[k[0]] = inp.value;
+      Array.prototype.forEach.call(presetWrap.children, function(x){ x.setAttribute("aria-pressed", "false"); });
+      render();
+    });
+    var txt = document.createElement("span");
+    txt.textContent = k[1];
+    wrap.appendChild(inp); wrap.appendChild(txt);
+    swWrap.appendChild(wrap);
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll("#form input[type=text]"), function(el){
+    el.addEventListener("input", render);
+  });
+
+  function copyFrom(elId, btn){
+    var text = $(elId).textContent, done = function(){
+      var old = btn.textContent; btn.textContent = "Copied";
+      setTimeout(function(){ btn.textContent = old; }, 1400);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function(){ fallback(text, done); });
+    } else fallback(text, done);
+  }
+  function fallback(text, done){
+    var ta = document.createElement("textarea");
+    ta.value = text; ta.setAttribute("readonly", "");
+    ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); done(); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+  $("copyConfig").addEventListener("click", function(){ copyFrom("out", this); });
+  $("copyMeta").addEventListener("click", function(){ copyFrom("outmeta", this); });
+
+  render();
+})();
+</script>
+</body>
+</html>
