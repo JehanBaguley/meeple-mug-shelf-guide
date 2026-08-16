@@ -443,17 +443,24 @@
 </head>
 <body>
 <header class="wrap">
-  <div class="kicker mono">63 Hardgrave Rd · West End · Brisbane</div>
-  <h1>Meeple &amp; Mug <span>Shelf Guide</span></h1>
-  <p class="sub">Every game we’ve got. Play one here, or take a new copy home.</p>
+  <div class="kicker mono">Set kicker in config.js</div>
+  <h1>Your Shelf <span>Shelf Guide</span></h1>
+  <p class="sub">Set tagline in config.js</p>
 </header>
 <script>
-/* Instance branding. The HTML above carries this repo's own cafe as defaults;
-   a fork edits config.js and never touches this file. Runs inline right after
-   the header parses so a fork's name never flashes the default. */
+/* Instance branding. config.js is the ONLY identity surface: the markup above
+   carries neutral placeholders, never a real venue's details, so a fork that
+   leaves a field blank cannot publish somebody else's name, address or contact.
+   Runs inline right after the header parses so the placeholder never flashes. */
 (function(){
   var C = window.SHELF_CONFIG || {};
-  function txt(sel, s){ var el = document.querySelector(sel); if(el && s) el.textContent = s; }
+  function unlink(a){ if(a && a.parentNode) a.parentNode.replaceChild(document.createTextNode(a.textContent), a); }
+  function txt(sel, s){
+    var el = document.querySelector(sel); if(!el) return;
+    if (s === undefined) return;      // not configured at all: keep the placeholder
+    el.textContent = s;
+    el.hidden = !s;                   // explicitly blank means "none", as elsewhere
+  }
   if (C.name) {
     document.title = C.name + " \u00b7 " + (C.guideName || "Shelf Guide");
     var h1 = document.querySelector("header h1");
@@ -471,9 +478,14 @@
   document.addEventListener("DOMContentLoaded", function(){
     var fn = document.querySelector(".fname a");
     if (fn && C.name) fn.textContent = C.name;
-    if (fn && C.siteUrl) fn.href = C.siteUrl;
-    if (C.contactUrl) document.querySelectorAll('footer a[href="https://www.meepleandmug.com.au/contact"]')
-      .forEach(function(a){ a.href = C.contactUrl; });
+    if (fn) {
+      if (C.siteUrl) fn.href = C.siteUrl;
+      else unlink(fn);                 // no site configured: plain text, not a dead link
+    }
+    var contact = C.contactUrl || (C.contactEmail ? "mailto:" + C.contactEmail : "");
+    document.querySelectorAll("footer a[data-contact]").forEach(function(a){
+      if (contact) a.href = contact; else unlink(a);
+    });
   });
 })();
 </script>
@@ -596,9 +608,9 @@
 
   <footer>
     <div class="footmain">
-    <p class="fname"><a href="https://www.meepleandmug.com.au" target="_blank" rel="noopener">Meeple &amp; Mug</a></p>
+    <p class="fname"><a href="" target="_blank" rel="noopener">Your Shelf</a></p>
     <p class="fhome">Hours, bookings and how to find us are on our main site.</p>
-    <p>Staff keep this list current. If a game is not on the shelf it is probably out on a table, so ask at the counter. To buy or order a copy, use our <a href="https://www.meepleandmug.com.au/contact" target="_blank" rel="noopener">contact page</a>; nothing is paid for here.</p>
+    <p>Staff keep this list current. If a game is not on the shelf it is probably out on a table, so ask at the counter. To buy or order a copy, use our <a data-contact href="" target="_blank" rel="noopener">contact page</a>; nothing is paid for here.</p>
   </div>
     <div class="footside">
     <p class="note">
@@ -619,16 +631,17 @@
 // ————— Config: paste the café's published Google Sheet CSV URL here —————
 // Sheet → File → Share → Publish to web → the "data" tab as CSV. Leave blank to use built-in demo data.
 const __CFG = window.SHELF_CONFIG || {};
-const SHEET_CSV_URL = __CFG.sheetCsvUrl !== undefined ? __CFG.sheetCsvUrl : "https://docs.google.com/spreadsheets/d/1PuwiRbEurcLIG8YOUGzk6aBT5XMR9b9sVRWdrKw1pSQ/gviz/tq?tqx=out:csv&headers=1&sheet=data"; // empty string = deliberately no sheet
+const SHEET_CSV_URL = __CFG.sheetCsvUrl !== undefined ? __CFG.sheetCsvUrl : ""; // empty string = deliberately no sheet
 
 // "I want this" actions. Set ONE of these:
 // Google Form prefill template (Form > Get pre-filled link, swap answers for {game} and {type}):
 // e.g. "https://docs.google.com/forms/d/e/FORM_ID/viewform?usp=pp_url&entry.1111={game}&entry.2222={type}"
-const CONTACT_URL = __CFG.contactUrl !== undefined ? __CFG.contactUrl : "https://www.meepleandmug.com.au/contact"; // empty string = use the email fallback
-const REQUEST_URL_TEMPLATE = CONTACT_URL; // Buy/Request open the café's contact page
-const CAFE_EMAIL = __CFG.contactEmail !== undefined ? __CFG.contactEmail : "admin@meepleandmug.com.au"; // fallback if the contact page is ever blanked above
+const CONTACT_URL = __CFG.contactUrl !== undefined ? __CFG.contactUrl : ""; // empty string = use the email fallback
+const REQUEST_URL_TEMPLATE = CONTACT_URL; // Buy/Request open the venue's contact page
+const CAFE_EMAIL = __CFG.contactEmail !== undefined ? __CFG.contactEmail : ""; // fallback if the contact page is ever blanked above
 function requestUrl(g, type){
   if(REQUEST_URL_TEMPLATE) return REQUEST_URL_TEMPLATE.replace("{game}", encodeURIComponent(g.name)).replace("{type}", type);
+  if(!CAFE_EMAIL) return "";   // nothing configured: the card simply offers no link
   const subj = encodeURIComponent((type==="buy" ? "Hold a copy of " : "Special order request: ") + g.name);
   const body = encodeURIComponent("Hi " + (__CFG.name || "there") + ", " + (type==="buy"
     ? "could you hold a copy of " + g.name + (g.priceTxt ? " (" + g.priceTxt + ")" : "") + " for me to pick up?"
@@ -1328,7 +1341,8 @@ function render(){
     const pickNote = (state.pick!==null && DATA.picks[state.pick].games[g.name]) ? '<p class="picknote">'+esc(DATA.picks[state.pick].games[g.name])+'</p>' : (g.pickNote?'<p class="picknote">'+esc(g.pickNote)+'</p>':"");
     const plays = g.playsLike?'<p class="blurb">'+esc(g.playsLike)+'</p>':"";
     const links = '<div class="glinks"><a href="'+safeUrl(bggUrl(g))+'" target="_blank" rel="noopener noreferrer">BGG \u2197</a>'+
-      (g.forSale ? '<a href="'+safeUrl(requestUrl(g,"buy"))+'" target="_blank" rel="noopener noreferrer">Buy a copy</a>' : (g.playable ? '<a href="'+safeUrl(requestUrl(g,"order"))+'" target="_blank" rel="noopener noreferrer">Request a copy</a>' : ""))+'</div>';
+      (function(){ const h = g.forSale ? requestUrl(g,"buy") : (g.playable ? requestUrl(g,"order") : "");
+        return h ? '<a href="'+safeUrl(h)+'" target="_blank" rel="noopener noreferrer">'+(g.forSale?"Buy a copy":"Request a copy")+'</a>' : ""; })()+'</div>';
     return '<article class="gcard"><div class="spine" style="background:'+spine+'"></div><div class="gbody">'+
       '<div class="gname"><h3>'+esc(g.name)+'</h3>'+badges+'</div>'+stats+genres+plays+pickNote+
       '<div class="gfoot">'+actions+links+'</div>'+
