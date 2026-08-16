@@ -4,8 +4,8 @@ This repo is Meeple & Mug's live catalogue, not the template. It carries the caf
 games, branding and nightly sync, so forking it would mean deleting all of that before
 you could start.
 
-**The template lives here instead:**
-https://github.com/JehanBaguley/shelf-guide-template
+**Pickmark, the reusable template, lives here instead:**
+https://github.com/JehanBaguley/pickmark
 
 Same code, but with a small demo shelf, a setup page that writes your config file for
 you, and instructions written for a fresh start. Click **Use this template** there.
