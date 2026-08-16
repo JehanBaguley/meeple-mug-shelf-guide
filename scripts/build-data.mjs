@@ -1,4 +1,4 @@
-// Nightly data build for the Meeple & Mug catalogue.
+// Nightly data build: the sheet plus BoardGameGeek into data/games.json.
 // Sources, in order of preference:
 //   1. The café's Google Sheet (the master list staff edit) via SHEET_CSV_URL
 //   2. The café's BGG collection (adds community ratings/weights) — optional,
@@ -13,7 +13,7 @@ try {
   const __t = readFileSync("config.js", "utf8");
   __cfg = JSON.parse(__t.slice(__t.indexOf("{"), __t.lastIndexOf("}") + 1));
 } catch { /* no config.js is fine; env vars and defaults carry it */ }
-const BGG_USER = process.env.BGG_USER || (__cfg.bggUser !== undefined ? __cfg.bggUser : "meepleandmug"); // empty string = no BGG collection
+const BGG_USER = process.env.BGG_USER || (__cfg.bggUser !== undefined ? __cfg.bggUser : ""); // empty string = no BGG collection
 const COLLECTION_URL = `https://boardgamegeek.com/xmlapi2/collection?username=${BGG_USER}&stats=1&own=1`;
 const SHEET_CSV_URL = process.env.SHEET_CSV_URL || __cfg.sheetCsvUrl || ""; // build always needs SOME sheet; empty just skips the overlay merge
 // BGG application token, injected by the workflow. Empty string = no auth header sent.
