@@ -62,9 +62,9 @@ function parseCollection(xml) {
 }
 
 function parseCsv(text) {
-  const rows = []; let row = [], cell = "", q = false;
+  const rows = []; let row = [], cell = "", q = false, qq = false;
   for (const ch of text) {
-    if (q) { if (ch === '"') q = false; else cell += ch; }
+    if (q) { if (ch === '"') { if (qq) { cell += '"'; qq = false; } else qq = true; } else { if (qq) { q = false; qq = false; if (ch === ",") { row.push(cell); cell = ""; continue; } if (ch === "\n") { row.push(cell); rows.push(row); row = []; cell = ""; continue; } } cell += ch; } }
     else if (ch === '"') q = true;
     else if (ch === ",") { row.push(cell); cell = ""; }
     else if (ch === "\n") { row.push(cell); rows.push(row); row = []; cell = ""; }
@@ -124,7 +124,7 @@ async function main() {
       const byId = new Map();                       // bggId -> collection entries, in order
       for (const g of games) if (g.bggId != null) { if (!byId.has(g.bggId)) byId.set(g.bggId, []); byId.get(g.bggId).push(g); }
       const claimed = new Set();                    // so two sheet rows can't claim one entry
-      const lists = {};
+      const lists = Object.create(null);   // null proto: a pick list named __proto__ must not collide
       for (const r of rows) {
         const val = (k) => (idx(k) > -1 ? (r[idx(k)] || "").trim() : "");
         const name = val("name"); if (!name) continue;
