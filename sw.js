@@ -5,13 +5,14 @@
      next load, with the cached copy as the offline fallback
    - fonts and everything else cache as they arrive, served cache-first after that
    Bump VERSION to force old caches out. */
-const VERSION = "sg-v1";
+const VERSION = "sg-v2";   // v2: self-hosted fonts joined the precache
 
 self.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(VERSION).then((c) =>
       Promise.all(
-        ["./", "config.js", "manifest.webmanifest", "icon-192.png", "icon-512.png"]
+        ["./", "config.js", "manifest.webmanifest", "icon-192.png", "icon-512.png",
+         "fonts/bricolage-latin.woff2", "fonts/plexmono-400-latin.woff2"]
           .map((u) => c.add(u).catch(() => {}))
       )
     ).then(() => self.skipWaiting())
