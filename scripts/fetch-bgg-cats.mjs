@@ -15,7 +15,7 @@ const SHEET_CSV_URL = process.env.SHEET_CSV_URL || "";
 // application token, sent as a normal bearer header. No token = 401 on everything.
 const BGG_TOKEN = process.env.BGG_TOKEN || "";
 const UA = {
-  "User-Agent": "meeple-mug-catalogue/1.0",
+  "User-Agent": "pickmark/1.0",
   ...(BGG_TOKEN ? { Authorization: `Bearer ${BGG_TOKEN}` } : {}),
 };
 const CHUNK = 20;      // BGG's /thing accepts a comma-separated id list
