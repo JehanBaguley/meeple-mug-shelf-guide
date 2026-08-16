@@ -5,6 +5,10 @@ play right now in under thirty seconds, without reading the back of every box.
 
 Live: https://jehanbaguley.github.io/meeple-mug-shelf-guide/
 
+**If something goes wrong and Jehan isn't around: [CONTINUITY.md](CONTINUITY.md).** Written
+for the café, in plain English, covering what breaks first, what to check, how to hand it to
+someone technical, and how to go back to a printed list without losing anything.
+
 Want one of your own? This repo is the cafe's instance. The reusable template is
 [Pickmark](https://github.com/JehanBaguley/pickmark), which has
 a demo shelf and a [setup page](https://jehanbaguley.github.io/pickmark/setup.html)
@@ -78,8 +82,11 @@ Those fifteen columns are the whole contract. (Legacy columns such as `status` a
 
 BGG's category vocabulary and the café's are folded together through `TAG_ALIAS` in
 `index.html`, so "Party Game" and "Party" don't both appear on one card. A genre only earns
-a chip once **five or more games** share it (`TAG_MIN`); below that the tag is still stored
-and searchable, it just doesn't clutter the card. Cards show up to four chips.
+a chip once enough games share it. The threshold is `tagMin()`, which scales with the size of
+the shelf: one game per forty, clamped between two and five. At 326 games that resolves to
+five, the original number. It scales so that a fork with thirty games still gets useful
+chips instead of none. Below the threshold the tag is still stored and searchable, it just
+doesn't clutter the card. Cards show up to four chips.
 
 Chip colour signals a family, not an identity. Eleven families, because nobody can tell
 forty-eight hues apart but "amber is loud, blue is think-y, green is everyone on the same
