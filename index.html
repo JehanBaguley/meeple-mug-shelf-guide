@@ -847,7 +847,7 @@ function buildActiveChips(){
   Object.keys(state.tags).filter(k=>state.tags[k]).forEach(t => chips.push(['tag:'+t, state.tags[t]===-1 ? "No "+tagLabel(t).toLowerCase()+" games" : tagLabel(t)]));
   box.hidden = chips.length===0;
   box.innerHTML = chips.map(([k,label]) =>
-    '<button class="achip'+(k.startsWith('tag:')&&state.tags[k.slice(4)]===-1?' ex':'')+'" data-clear="'+k+'">'+label+'<span class="x" aria-hidden="true">\u00d7</span></button>').join("")
+    '<button class="achip'+(k.startsWith('tag:')&&state.tags[k.slice(4)]===-1?' ex':'')+'" data-clear="'+esc(k)+'">'+esc(label)+'<span class="x" aria-hidden="true">\u00d7</span></button>').join("")
     + (chips.length ? '<button class="achip clearall" data-clear="all">Clear all</button>' : "");
 }
 function clearFilter(key){
@@ -922,9 +922,9 @@ function parseTimeTxt(s){
 
 // ————— Optional live overlay from the café's sheet —————
 function parseCsv(text){
-  const rows=[]; let row=[],cell="",q=false;
+  const rows=[]; let row=[],cell="",q=false,qq=false;
   for(const ch of text){
-    if(q){ if(ch==='"'){q=false} else cell+=ch }
+    if(q){ if(ch==='"'){ if(qq){cell+='"';qq=false} else qq=true } else { if(qq){q=false;qq=false; if(ch===","){row.push(cell);cell="";continue} if(ch==="\n"){row.push(cell);rows.push(row);row=[];cell="";continue} } cell+=ch } }
     else if(ch==='"'){q=true}
     else if(ch===","){row.push(cell);cell=""}
     else if(ch==="\n"){row.push(cell);rows.push(row);row=[];cell=""}
@@ -945,7 +945,7 @@ async function applySheet(){
     const idx = k => head2.indexOf(k);
     DBG.missingHeaders = ["name","players","time","age","category","playable","for_sale"].filter(k => idx(k)===-1);
     const byName = Object.fromEntries(DATA.games.map(g=>[norm(g.name),g]));
-    const lists = {};
+    const lists = Object.create(null);   // null proto: a pick list named __proto__ must not collide
     for(const r of rows){
       const name = r[idx("name")]; if(!name) continue;
       DBG.rows++;
@@ -1008,7 +1008,7 @@ function buildPicks(){
   // would hide the filter you are currently looking at.
   const showAll = state.showAllPicks || order.length <= CAP;
   const shown = showAll ? order : order.filter((i,n)=>n<CAP || state.pick===i);
-  const chip = (label,val,count,pinned)=>'<button class="pickchip'+(state.pick===val?" on":"")+(pinned?" pin":"")+'" data-pick="'+(val===null?"":val)+'" aria-pressed="'+(state.pick===val)+'">'+(pinned?'<span class="pinstar">\u2605</span>':"")+label+(count!=null?'<small>'+count+'</small>':"")+'</button>';
+  const chip = (label,val,count,pinned)=>'<button class="pickchip'+(state.pick===val?" on":"")+(pinned?" pin":"")+'" data-pick="'+(val===null?"":val)+'" aria-pressed="'+(state.pick===val)+'">'+(pinned?'<span class="pinstar">\u2605</span>':"")+esc(label)+(count!=null?'<small>'+count+'</small>':"")+'</button>';
   // "All games" first, then each list as its own chip (name shown verbatim so themed lists read naturally)
   row.innerHTML = chip("All games",null,DATA.games.length,false)
     + shown.map(i=>{const p=DATA.picks[i];return chip(p.list,i,Object.keys(p.games).length,isPinnedPick(p.list));}).join("")
