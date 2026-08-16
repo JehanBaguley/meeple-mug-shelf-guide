@@ -237,7 +237,8 @@
   .picknote{font-style:italic;color:#5a4a2c}
   .blurb{color:var(--ink-soft);font-style:italic}
   .glinks{display:flex;gap:16px;margin-top:8px}
-  .glinks a{font-size:12px;color:var(--link);font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--timber);font-family:'IBM Plex Mono',monospace;padding:4px 0;display:inline-block}
+  /* 5px not 4px: at 4 the tap target is 23px high, one under WCAG 2.2 SC 2.5.8. */
+  .glinks a{font-size:12px;color:var(--link);font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--timber);font-family:'IBM Plex Mono',monospace;padding:5px 0;display:inline-block;min-height:24px}
   .empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}
   footer{margin:44px 0 60px;padding-top:26px;border-top:1px solid var(--line);
     font-size:12.5px;color:#b9d3c2;line-height:1.65}
@@ -1351,7 +1352,9 @@ function render(){
       '<div class="gname"><h3>'+esc(g.name)+'</h3>'+badges+'</div>'+stats+genres+plays+pickNote+
       '<div class="gfoot">'+actions+links+'</div>'+
       '</div></article>';
-  }).join("") : '<div class="empty">'+(state.seg==="buy" && !DATA.games.some(g=>g.forSale)
+  }).join("") : '<div class="empty">'+(!DATA.games.length
+    ? "Nothing on the shelf yet. Whoever looks after this list hasn\u2019t added anything."
+    : state.seg==="buy" && !DATA.games.some(g=>g.forSale)
     ? "Nothing\u2019s listed for sale right now. Everything here is still on the shelf to play in the caf\u00e9."
     : anyCount ? 'No game is all of those at once. <button class="morebtn" id="emptyAny">Try any of them instead ('+anyCount+' games)</button>'
     : state.query.trim() ? 'Nothing called \u201c'+esc(state.query.trim())+'\u201d. Check the spelling, or '+'<button class="morebtn" id="emptyReset">clear all</button>'
@@ -1469,7 +1472,10 @@ async function boot(){
   showSkeletons();
   try{
     const r = await fetch("data/games.json",{cache:"no-store"});
-    if(r.ok){ const j = await r.json(); if(j.games?.length){ DATA = j; if(!Array.isArray(DATA.picks)) DATA.picks = []; } }
+    // A payload with a build stamp and a games array came from a real build, so trust it
+    // even when it is empty: a venue with nothing on the shelf must show nothing, not the
+    // built-in demo. Malformed or unreachable still falls back to the last good data.
+    if(r.ok){ const j = await r.json(); if(j && j.built && Array.isArray(j.games)){ DATA = j; if(!Array.isArray(DATA.picks)) DATA.picks = []; } }
     else {
       const n = $("feedNote"); if(n){ n.hidden = false; n.textContent = "Couldn't load the shelf; check your connection and refresh."; }
     }
