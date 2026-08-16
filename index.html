@@ -22,8 +22,12 @@
   <meta name="twitter:image" content="https://meepleandmug.com.au/icon.png" />
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;600&display=swap');
-  :root{--bg:#123a24;--bg-deep:#0c2a19;--card:#f4ead2;--card-edge:#dccdaa;--timber:#c9a06b;--timber-light:#dcb98a;
-    --red:#c8452e;--amber:#d8d848;--ink:#2b2419;--ink-soft:#6b6150;--cream:#ece5d3;--muted:#9dc0a8;--line:rgba(236,229,211,.16)}
+  /* Pickmark base theme. Brand hexes: Roasted Sesame #3d3632, Rice Paper #f5f0e8,
+     Toasted Wheat #d4b896, Vermillion Ink #d94f3b. The rest are derived shades.
+     A venue overrides any of these in config.js; nothing here is anyone's identity. */
+  :root{--bg:#3d3632;--bg-deep:#2c2724;--card:#f5f0e8;--card-edge:#d3cec8;--timber:#d4b896;--timber-light:#ddc8ad;
+    --red:#d94f3b;--amber:#d4b896;--ink:#3d3632;--ink-soft:#6d6661;--cream:#f5f0e8;--muted:#a8a29c;
+    --link:#5f5344;--ok:#4c8f5d;--warn:#d08430;--line:rgba(245,240,232,.16)}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--cream);font-family:'Bricolage Grotesque',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   /* Avoid horizontal scrolling on small screens */
@@ -213,11 +217,11 @@
   .state.sale{background:#f0e3c2;color:#7a5c1e;border-color:#d9c69a}
   .dot.saledot{background:#b8862e}
   .tdot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:5px;vertical-align:0}
-  .dot{width:8px;height:8px;border-radius:50%;background:#4c8f5d}
-  .dot.out{background:#d08430}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+  .dot.out{background:var(--warn)}
   .cta{display:inline-flex;align-items:center;padding:9px 14px;border-radius:9px;font-size:12.5px;font-weight:800;text-decoration:none;min-height:38px}
   .cta.buy{background:var(--amber);color:var(--ink);border:1px solid var(--amber)}
-  .cta.req{background:transparent;color:#7a4d12;border:1.5px solid var(--timber)}
+  .cta.req{background:transparent;color:var(--link);border:1.5px solid var(--timber)}
   .stats{font-size:12.5px;display:flex;flex-wrap:wrap;gap:3px 7px;margin-top:9px;align-items:baseline;color:#463d2c}
   .stats .sep{opacity:.38}
   /* genre chips: replace the old trailing category text, colour-dot per genre */
@@ -233,7 +237,7 @@
   .picknote{font-style:italic;color:#5a4a2c}
   .blurb{color:var(--ink-soft);font-style:italic}
   .glinks{display:flex;gap:16px;margin-top:8px}
-  .glinks a{font-size:12px;color:#7a4d12;font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--timber);font-family:'IBM Plex Mono',monospace;padding:4px 0;display:inline-block}
+  .glinks a{font-size:12px;color:var(--link);font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--timber);font-family:'IBM Plex Mono',monospace;padding:4px 0;display:inline-block}
   .empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}
   footer{margin:44px 0 60px;padding-top:26px;border-top:1px solid var(--line);
     font-size:12.5px;color:#b9d3c2;line-height:1.65}
