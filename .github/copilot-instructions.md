@@ -1,4 +1,4 @@
-# Working on the Meeple & Mug Shelf Guide
+# Working on this shelf guide
 
 Read this before changing anything. It exists because a long agent session once
 broke the live site by making a series of individually reasonable-looking changes,
@@ -79,7 +79,10 @@ If you cannot do those, say the change is unverified. That is a useful thing to 
   inside is strict JSON. An **empty string is a deliberate "none"** (`"sheetCsvUrl": ""`
   means no sheet overlay, `"bggUser": ""` means no collection). The code checks
   `!== undefined`, not truthiness; do not "simplify" those checks to `||` or an empty
-  config value silently falls back to Meeple & Mug's identity, sheet included.
+  config value silently falls back to a default. Defaults in the markup and the
+  scripts are deliberately neutral placeholders: **no real venue's name, address,
+  sheet, email or BGG collection may ever appear as a fallback**, because a fork
+  that leaves a field blank would publish it as their own. tests/chk32 enforces this.
 - **`tests/` is the regression suite and CI runs it** (`.github/workflows/tests.yml`) on
   any push touching `index.html`, `config.js` or `tests/`. Run the suite locally against
   the exact bytes you intend to deploy before pushing. tests/README.md maps what each
