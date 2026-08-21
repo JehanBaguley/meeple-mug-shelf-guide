@@ -94,6 +94,42 @@ If you cannot do those, say the change is unverified. That is a useful thing to 
   IMPORTDATAs the CSV and its conditional-format rules key off the quoted `"name|field"`
   line shape. Changing that format silently breaks the amber flags in the sheet.
 
+## What diverges between an instance and the template
+
+Pickmark is the core, an instance is a brand tier consuming it. `sw.js`,
+`scripts/build-data.mjs` and `scripts/fetch-bgg-cats.mjs` are byte-identical across both and
+**must stay that way**. `index.html` is identical except for the two regions below.
+
+Anything syncing a change from the template into an instance, human or agent, may overwrite
+everything except these four. Verify this list against a real diff before trusting it; the
+last version of it was written from memory and was wrong in two places.
+
+| # | Region | Where | Why it differs |
+|---|---|---|---|
+| 1 | The whole file | `config.js` | The venue's identity and theme. This is the only place a venue's name, address, contact, sheet, collection or colours may live. |
+| 2 | The head identity block | `index.html`, `<meta name="theme-color">` through the `twitter:*` tags | Social crawlers do not run JavaScript, so title, description, `og:*` and `twitter:*` cannot be config-driven. |
+| 3 | The first-paint snapshot | `index.html`, the `const EMBED = ` line | The shelf the page renders before `data/games.json` loads. An instance must not ship somebody else's inventory here. |
+| 4 | App shell identity | `manifest.webmanifest` | Read by the browser and the OS **before any JavaScript runs**, so it cannot be config-driven at all. |
+
+### The constraint on regions 2 and 4
+
+The theme colour is written in three places: `config.colors.bg` (or the `:root` default when
+config sets no colours), the `theme-color` meta tag, and `manifest.theme_color`.
+**They must agree.** They drifted once, `#22352c` in the meta against `#123a24` in the
+manifest, which gave a browser address bar that disagreed with the installed app icon.
+
+Do not try to fix this by driving the meta tag from `config.js`. It exists so the browser can
+colour its chrome **before first paint**; setting it from script trades a working pre-runtime
+signal for a flash of default chrome on the page a customer scans into at a table.
+
+The general form, and the part worth taking elsewhere: **decoupling identity into config
+stops at the runtime boundary.** Manifests, meta tags and anything a crawler or an operating
+system reads before your code runs cannot be tokenised at runtime. That surface needs a
+different mechanism: a build step, or a written constraint plus an automated check. This file
+is the constraint. `tests/chk32-template-clean.mjs` is the check, and it lives in the template.
+An instance that has not copied that harness across has this document and nothing else, so if
+you change a theme colour in an instance, change all three by hand and check them.
+
 ## When you are unsure
 
 Say so and stop. A half-applied change to a live catalogue is worse than no change.
