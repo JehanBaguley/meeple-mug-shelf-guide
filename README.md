@@ -115,13 +115,13 @@ this repo. Read it before touching the build.
 | `data/bgg.json` | committed ratings map, keyed by name |
 | `data/gaps.json` | nightly list of games BGG can't fill |
 | `data/gaps.csv` | same list as CSV; the sheet IMPORTDATAs it and conditional formatting paints the amber flags from it |
+| `.github/workflows/sync-data.yml` | the nightly, 3am AEST |
 
-The sheet side of that last row is the one piece of this system that does not live in the
-repo, because it is a spreadsheet formula and two conditional formatting rules rather than
+The sheet side of the `gaps.csv` row is the one piece of this system that does not live in
+the repo, because it is a spreadsheet formula and two conditional formatting rules rather than
 code. If it is ever lost, the rebuild is step 6 of
 [Pickmark's SETUP.md](https://github.com/JehanBaguley/pickmark/blob/main/SETUP.md), and the
 `"name|field"` line shape it depends on is recorded in `.github/copilot-instructions.md`.
-| `.github/workflows/sync-data.yml` | the nightly, 3am AEST |
 
 ## Config
 
