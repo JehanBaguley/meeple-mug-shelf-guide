@@ -57,6 +57,9 @@ for the handful of games BGG genuinely has nothing for; those are the only blank
 filling by hand, and typing a number clears the flag instantly. Nobody maintains the
 colours; leave the little `gaps` tab alone, it feeds them.
 
+If the colours ever stop working, they are a `gaps!A1` formula plus two conditional
+formatting rules, and the ten-minute rebuild is written up in `SETUP.md`.
+
 ## Staff picks
 
 Put your name in **pick_by** and a line in **pick_note**. It shows on the card as "Sam's
