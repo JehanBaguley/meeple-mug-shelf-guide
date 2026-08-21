@@ -1,5 +1,5 @@
 {
- "built": "2026-08-20T17:18:47.315Z",
+ "built": "2026-08-21T17:19:10.954Z",
  "games": [
   {
    "bggId": 3377,
@@ -1766,9 +1766,7 @@
    "price": 100,
    "priceTxt": "~$100",
    "playsLike": "Wingspan crossed with Lords of Waterdeep",
-   "bggUrl": "https://boardgamegeek.com/boardgame/199792",
-   "pickBy": "Ollie",
-   "pickNote": "Table wow factor every time"
+   "bggUrl": "https://boardgamegeek.com/boardgame/199792"
   },
   {
    "bggId": 172225,
@@ -4872,9 +4870,7 @@
    "price": 55,
    "priceTxt": "~$55",
    "playsLike": "The Crew condensed to two seats",
-   "bggUrl": "https://boardgamegeek.com/boardgame/373106",
-   "pickBy": "Ollie",
-   "pickNote": "Perfect date-night co-op"
+   "bggUrl": "https://boardgamegeek.com/boardgame/373106"
   },
   {
    "bggId": 309630,
@@ -7251,14 +7247,6 @@
     "Unlock!: Heroic Adventures": "Replayable co-op puzzles",
     "Unlock!: Timeless Adventures": "Replayable co-op puzzles",
     "Unlock!: Epic Adventures": "Replayable co-op puzzles"
-   }
-  },
-  {
-   "list": "Ollie",
-   "note": "",
-   "games": {
-    "Everdell": "Table wow factor every time",
-    "Sky Team": "Perfect date-night co-op"
    }
   }
  ]
