@@ -1,5 +1,5 @@
 {
- "built": "2026-09-03T19:29:37.907Z",
+ "built": "2026-09-04T14:50:00.894Z",
  "games": [
   {
    "bggId": 3377,
@@ -20,7 +20,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "20 Questions is the popular panel game in which the panel ask up to 20 Questions to guess the Person, Place or Thing."
+   "playsLike": "Taboo's quieter guessing cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/3377"
   },
   {
    "bggId": 371947,
@@ -41,7 +42,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The circus has come to town!"
+   "playsLike": "a compact touring euro in the Concordia spirit",
+   "bggUrl": "https://boardgamegeek.com/boardgame/371947"
   },
   {
    "bggId": 86073,
@@ -62,11 +64,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Tapple's shout-it-fast sibling",
+   "bggUrl": "https://boardgamegeek.com/boardgame/86073"
   },
   {
    "bggId": 253618,
-   "name": "5-Minute Marvel",
+   "name": "5 Minute Marvel",
    "players": [
     2,
     5
@@ -83,7 +86,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The Marvel version of the chaotically fast-paced cooperative card game 5-Minute Dungeon that lets a group of Marvel heroes battle past Marvel bosses all in less than 5 minutes!"
+   "playsLike": "5-Minute Dungeon wearing Avengers suits",
+   "bggUrl": "https://boardgamegeek.com/boardgame/253618"
   },
   {
    "bggId": 68448,
@@ -99,12 +103,13 @@
    "age": "10+",
    "catText": "Ancient, Card Game, City Building, Civilization, Economic",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "cards",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "You are the leader of one of the 7 great cities of the Ancient World."
+   "price": 80,
+   "priceTxt": "~$80",
+   "playsLike": "Sushi Go grown up, the benchmark drafting game",
+   "bggUrl": "https://boardgamegeek.com/boardgame/68448"
   },
   {
    "bggId": 173346,
@@ -125,31 +130,11 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In many ways 7 Wonders Duel resembles its parent game 7 Wonders."
+   "playsLike": "7 Wonders rebuilt for two",
+   "bggUrl": "https://boardgamegeek.com/boardgame/173346"
   },
   {
-   "bggId": 175121,
-   "name": "Adventure Time Card Wars: Ice King vs. Marceline",
-   "players": [
-    2,
-    2
-   ],
-   "mins": 30,
-   "time": "30m",
-   "bgg": 6.6,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
-  },
-  {
-   "bggId": 323709,
+   "bggId": 388721,
    "name": "Aethermon",
    "players": [
     2,
@@ -164,10 +149,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": "coop",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Join Rika, Haru, BEB0 and Followoof, four lost souls who have come together to explore the World of Aethermon!"
+   "playsLike": "Pokémon battling grown into a board game",
+   "bggUrl": "https://boardgamegeek.com/boardgame/388721/aethermon-collect"
   },
   {
    "bggId": 31260,
@@ -188,7 +174,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Agricola, you're a farmer in a wooden shack with your spouse and little else."
+   "playsLike": "the classic farming euro, Caverna's stricter parent",
+   "bggUrl": "https://boardgamegeek.com/boardgame/31260"
   },
   {
    "bggId": 161970,
@@ -204,12 +191,15 @@
    "age": "12+",
    "catText": "Deduction, Fantasy, Puzzle",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "deduct",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "In Alchemists, two to four budding alchemists compete to discover the secrets of their mystical art."
+   "price": 90,
+   "priceTxt": "~$90",
+   "playsLike": "Sherlock Holmes deduction inside Lords of Waterdeep worker placement",
+   "bggUrl": "https://boardgamegeek.com/boardgame/161970",
+   "pickBy": "Jehan",
+   "pickNote": "Deduction masterpiece, big teach"
   },
   {
    "bggId": 67877,
@@ -230,7 +220,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Anomia plays off the fact that our minds are positively brimming with all sorts of random information: things to eat, pop songs, websites, etc..."
+   "playsLike": "snap with categories, Ghost Blitz energy",
+   "bggUrl": "https://boardgamegeek.com/boardgame/67877"
   },
   {
    "bggId": 140934,
@@ -251,7 +242,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Arboretum is a strategy card game for 2-4 players, aged 10 and up, that combines set collection, tile-laying and hand management while playing in about 25 minutes."
+   "playsLike": "Lost Cities' beautiful, brutal cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/140934"
   },
   {
    "bggId": 359871,
@@ -266,13 +258,14 @@
    "weight": 3.45,
    "age": "14+",
    "catText": "Science Fiction, Space Exploration, Wargame, Campaign",
-   "playable": true,
-   "forSale": false,
+   "playable": false,
+   "forSale": true,
    "cat": "adventure",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Arcs is a sharp, tactical space opera game set in a dark yet silly universe."
+   "price": 80,
+   "priceTxt": "$80–110",
+   "playsLike": "Root and Oath, condensed into 90 minutes",
+   "bggUrl": "https://boardgamegeek.com/boardgame/359871/arcs"
   },
   {
    "bggId": 342942,
@@ -293,7 +286,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Ark Nova, you will plan and design a modern, scientifically managed zoo."
+   "playsLike": "Terraforming Mars with zoos",
+   "bggUrl": "https://boardgamegeek.com/boardgame/342942"
   },
   {
    "bggId": 260316,
@@ -314,7 +308,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Dominion-style deck building about collecting art",
+   "bggUrl": "https://boardgamegeek.com/boardgame/260316"
   },
   {
    "bggId": 154778,
@@ -335,7 +330,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Welcome to AssassinCon, the annual convention where assassins meet to show off tools and skills and decide who is the best in the world!"
+   "playsLike": "Ultimate Werewolf loose at a convention",
+   "bggUrl": "https://boardgamegeek.com/boardgame/154778"
   },
   {
    "bggId": 65200,
@@ -353,14 +349,15 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": "team",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Asteroyds is a racing and pre-program game similar to RoboRally but with enough significant differences to make it stand out as its own design."
+   "playsLike": "RoboRally-style programming at speed",
+   "bggUrl": "https://boardgamegeek.com/boardgame/65200"
   },
   {
    "bggId": 188866,
-   "name": "Awkward Guests: The Walton Case",
+   "name": "Awkward Guests - The Mr Walton Case",
    "players": [
     1,
     8
@@ -377,7 +374,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Cluedo grown into a real deduction engine",
+   "bggUrl": "https://boardgamegeek.com/boardgame/188866"
   },
   {
    "bggId": 230802,
@@ -393,12 +391,13 @@
    "age": "8+",
    "catText": "Abstract Strategy, Renaissance",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "abstract",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "price": 65,
+   "priceTxt": "~$65",
+   "playsLike": "Cascadia's abstract cousin, pattern-drafting tiles",
+   "bggUrl": "https://boardgamegeek.com/boardgame/230802/azul"
   },
   {
    "bggId": 2397,
@@ -419,7 +418,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Backgammon is a classic abstract strategy game dating back thousands of years."
+   "playsLike": "the original roll-and-move duel, five thousand years running",
+   "bggUrl": "https://boardgamegeek.com/boardgame/2397"
   },
   {
    "bggId": 163,
@@ -440,7 +440,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "A clever repackaging of the parlor game Dictionary, Balderdash contains several cards with real words nobody has heard of."
+   "playsLike": "bluff the definition, Fibbage before phones",
+   "bggUrl": "https://boardgamegeek.com/boardgame/163"
   },
   {
    "bggId": 143741,
@@ -461,11 +462,12 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "BANG! condensed into dice",
+   "bggUrl": "https://boardgamegeek.com/boardgame/143741"
   },
   {
    "bggId": 193614,
-   "name": "BANG! The Dice Game: Old Saloon",
+   "name": "BANG! Old Saloon expansion",
    "exp": true,
    "players": [
     3,
@@ -480,10 +482,11 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": "team",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "extra characters and cards for BANG!",
+   "bggUrl": "https://boardgamegeek.com/boardgameexpansion/193614"
   },
   {
    "bggId": 383607,
@@ -504,11 +507,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "It's the mid-19th century."
+   "playsLike": "Brass Birmingham's Spanish cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/383607"
   },
   {
    "bggId": 228660,
-   "name": "Betrayal at Baldur&#039;s Gate",
+   "name": "Betrayal at Baldur's Gate",
    "players": [
     3,
     6
@@ -522,10 +526,11 @@
    "playable": true,
    "forSale": false,
    "cat": "adventure",
-   "mode": "team",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Description from the publisher: The shadow of Bhaal has come over Baldur's Gate, summoning monsters and other horrors from the darkness!"
+   "playsLike": "Betrayal at House on the Hill gone D&D",
+   "bggUrl": "https://boardgamegeek.com/boardgame/228660"
   },
   {
    "bggId": 10547,
@@ -541,12 +546,13 @@
    "age": "12+",
    "catText": "Adventure, Exploration, Horror, Storytelling, Traitor",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "adventure",
-   "mode": "team",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "mode": "coop",
+   "price": 80,
+   "priceTxt": "~$80",
+   "playsLike": "Dead of Winter's haunted-house little sibling",
+   "bggUrl": "https://boardgamegeek.com/boardgame/10547"
   },
   {
    "bggId": 317985,
@@ -567,7 +573,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "a tech-tree race, Through the Ages distilled",
+   "bggUrl": "https://boardgamegeek.com/boardgame/317985"
   },
   {
    "bggId": 297123,
@@ -588,7 +595,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Bigger is Better The Game Where Size Matters This is the game of measurement..."
+   "playsLike": "party silliness in the Cards Against Humanity vein",
+   "bggUrl": "https://boardgamegeek.com/boardgame/297123"
   },
   {
    "bggId": 323612,
@@ -609,11 +617,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Everdell's mystical, heavier cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/323612"
   },
   {
    "bggId": 265316,
-   "name": "Black Mirror: NOSEDIVE",
+   "name": "Black Mirror Nose Dive",
    "players": [
     3,
     6
@@ -630,7 +639,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "The Game of Life scored by social ratings",
+   "bggUrl": "https://boardgamegeek.com/boardgame/265316"
   },
   {
    "bggId": 379300,
@@ -648,10 +658,11 @@
    "playable": true,
    "forSale": false,
    "cat": "party",
-   "mode": "coop",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Jenga meets Pictionary with blocks",
+   "bggUrl": "https://boardgamegeek.com/boardgame/379300"
   },
   {
    "bggId": 2453,
@@ -672,7 +683,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Blokus (officially pronounced \"Block us\") is an abstract strategy game with transparent, Tetris-shaped, colored pieces that players are trying to play onto the board."
+   "playsLike": "Tetris as an area-control duel",
+   "bggUrl": "https://boardgamegeek.com/boardgame/2453"
   },
   {
    "bggId": 240980,
@@ -693,10 +705,11 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In the sleepy town of Ravenswood Bluff, a demon walks amongst you."
+   "playsLike": "Werewolf perfected. Death doesn't end your game",
+   "bggUrl": "https://boardgamegeek.com/boardgame/240980"
   },
   {
-   "bggId": 351605,
+   "bggId": 11,
    "name": "Bohnanza: 25th Anniversary Edition",
    "players": [
     2,
@@ -714,7 +727,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Bohnanza is the first in the Bohnanza family of games and has been published in several different editions, including a 2023 version with flowers."
+   "playsLike": "the bean-trading classic, Catan's haggling with no board",
+   "bggUrl": "https://boardgamegeek.com/boardgame/11"
   },
   {
    "bggId": 355433,
@@ -730,16 +744,17 @@
    "age": "10+",
    "catText": "Abstract Strategy, Animals",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "abstract",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "A deceptively cute, deceivingly challenging abstract strategy game for two players."
+   "price": 60,
+   "priceTxt": "~$60",
+   "playsLike": "tic-tac-toe with cat physics",
+   "bggUrl": "https://boardgamegeek.com/boardgame/355433"
   },
   {
    "bggId": 224517,
-   "name": "Brass: Birmingham",
+   "name": "Brass Birmingham",
    "players": [
     2,
     4
@@ -756,7 +771,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Brass: Birmingham is an economic strategy game sequel to Martin Wallace's 2007 masterpiece, Brass."
+   "playsLike": "the canal-era economic classic, Concordia with teeth",
+   "bggUrl": "https://boardgamegeek.com/boardgame/224517"
   },
   {
    "bggId": 139898,
@@ -777,7 +793,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "It's a time of regrowth in the old urban center, and the hippest and best beer crafters have gathered both hops and hopes in building the best brewery in the city."
+   "playsLike": "Viticulture with beer",
+   "bggUrl": "https://boardgamegeek.com/boardgame/139898"
   },
   {
    "bggId": 281248,
@@ -798,7 +815,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Cape May, players traverse the city streets as entrepreneurs, developing property while building wealth over four seasons to earn prestige."
+   "playsLike": "a gentle seaside euro, Viticulture's beach holiday",
+   "bggUrl": "https://boardgamegeek.com/boardgame/281248"
   },
   {
    "bggId": 269789,
@@ -819,7 +837,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "a route-and-trade euro in the Concordia family",
+   "bggUrl": "https://boardgamegeek.com/boardgame/269789"
   },
   {
    "bggId": 822,
@@ -835,12 +854,13 @@
    "age": "7+",
    "catText": "Medieval, Territory Building",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": null,
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Carcassonne is a tile placement game in which the players draw and place a tile with a piece of southern French landscape represented on it."
+   "price": 60,
+   "priceTxt": "~$60",
+   "playsLike": "Dorfromantik's competitive ancestor",
+   "bggUrl": "https://boardgamegeek.com/boardgame/822"
   },
   {
    "bggId": 50381,
@@ -861,7 +881,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "A party game for horrible people."
+   "playsLike": "Apples to Apples gone feral",
+   "bggUrl": "https://boardgamegeek.com/boardgame/50381"
   },
   {
    "bggId": 310873,
@@ -882,7 +903,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Carnegie was inspired by the life of Andrew Carnegie who was born in Scotland in 1835."
+   "playsLike": "Brass Birmingham's American industrialist rival",
+   "bggUrl": "https://boardgamegeek.com/boardgame/310873"
   },
   {
    "bggId": 401216,
@@ -903,7 +925,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The kingdom is shattered, its towns are divided, and its people are distrusting."
+   "playsLike": "Knizia's galloping cousin of Through the Desert",
+   "bggUrl": "https://boardgamegeek.com/boardgame/401216"
   },
   {
    "bggId": 401217,
@@ -924,7 +947,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The kingdom is reuniting, but the work of El Cascadero and his ministers has only begun."
+   "playsLike": "Cascadero's lighter little sibling",
+   "bggUrl": "https://boardgamegeek.com/boardgame/401217"
   },
   {
    "bggId": 359502,
@@ -945,7 +969,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Explore a dark, enchanting world and battle your opponents in this 2-4 player turn-based competitive strategic board game."
+   "playsLike": "Munchkin-style take-that with shadow monsters",
+   "bggUrl": "https://boardgamegeek.com/boardgame/359502"
   },
   {
    "bggId": 416851,
@@ -966,11 +991,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Castle Combo is a tableau-building game that combines simplicity with deep, engaging gameplay, offering highly satisfying experiences."
+   "playsLike": "a 3x3 combo puzzle at Splendor pace",
+   "bggUrl": "https://boardgamegeek.com/boardgame/416851"
   },
   {
    "bggId": 227072,
-   "name": "The Chameleon",
+   "name": "Chameleon Game",
    "players": [
     3,
     8
@@ -984,10 +1010,11 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": "team",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "A bluffing deduction game for everyone."
+   "playsLike": "Spyfall in reverse. Find the faker",
+   "bggUrl": "https://boardgamegeek.com/boardgame/227072"
   },
   {
    "bggId": 172287,
@@ -1008,7 +1035,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Lords of Waterdeep with dice-battled monsters",
+   "bggUrl": "https://boardgamegeek.com/boardgame/172287"
   },
   {
    "bggId": 171,
@@ -1017,8 +1045,8 @@
     2,
     2
    ],
-   "mins": null,
-   "time": null,
+   "mins": 60,
+   "time": "30–60m",
    "bgg": 7.2,
    "weight": 3.64,
    "age": "6+",
@@ -1029,11 +1057,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Chess is a two-player, abstract strategy board game that represents medieval warfare on an 8x8 board with alternating light and dark squares."
+   "playsLike": "the abstract strategy benchmark",
+   "bggUrl": "https://boardgamegeek.com/boardgame/171"
   },
   {
    "bggId": 405696,
-   "name": "Chucky",
+   "name": "Chucky (Child's Play)",
    "players": [
     2,
     4
@@ -1050,11 +1079,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Chucky wants to be your friend, but being Chucky's friend sometimes comes with...challenges."
+   "playsLike": "slasher-movie horror in the Betrayal spirit",
+   "bggUrl": "https://boardgamegeek.com/boardgame/405696"
   },
   {
    "bggId": 201808,
-   "name": "Clank!: A Deck-Building Adventure",
+   "name": "Clank",
    "players": [
     2,
     4
@@ -1071,7 +1101,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Burgle your way to adventure in the deck-building board game Clank!"
+   "playsLike": "Dominion goes dungeon-delving with push-your-luck",
+   "bggUrl": "https://boardgamegeek.com/boardgame/201808"
   },
   {
    "bggId": 254417,
@@ -1092,11 +1123,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Are you in the market for some revolutionary diet pills?"
+   "playsLike": "Balderdash for the internet age",
+   "bggUrl": "https://boardgamegeek.com/boardgame/254417"
   },
   {
    "bggId": 198328,
-   "name": "Clue: Game of Thrones",
+   "name": "Cluedo Game of Thrones",
    "players": [
     2,
     6
@@ -1113,28 +1145,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Description from the publisher: High treachery and betrayal are behind the two mysteries to solve in Clue: Game of Thrones."
-  },
-  {
-   "bggId": 3269,
-   "name": "Clue: The Card Game",
-   "players": [
-    3,
-    5
-   ],
-   "mins": 45,
-   "time": "45m",
-   "bgg": 5.8,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "classic Cluedo in Westeros",
+   "bggUrl": "https://boardgamegeek.com/boardgame/198328"
   },
   {
    "bggId": 178900,
@@ -1150,16 +1162,17 @@
    "age": "10+",
    "catText": "Card Game, Deduction, Party Game, Spies / Secret Agents, Word Game",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "cards",
    "mode": "team",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Two rival spymasters know the secret identities of 25 agents."
+   "price": 35,
+   "priceTxt": "~$35",
+   "playsLike": "the party-deduction benchmark. Just One is its co-op cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/178900"
   },
   {
    "bggId": 198773,
-   "name": "Codenames: Pictures",
+   "name": "Codenames Pictures",
    "players": [
     2,
     8
@@ -1176,7 +1189,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "What are these strange symbols on the map?"
+   "playsLike": "Codenames with pictures",
+   "bggUrl": "https://boardgamegeek.com/boardgame/198773"
   },
   {
    "bggId": 325022,
@@ -1197,7 +1211,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Thousands of coffee farmers all over the world support their families by using small stretches of hillside land for their coffee plantations."
+   "playsLike": "Brass-weight cooperative-competitive coffee farming",
+   "bggUrl": "https://boardgamegeek.com/boardgame/325022"
   },
   {
    "bggId": 400870,
@@ -1218,11 +1233,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Colour Crazy is a mind-bending game of brilliant colours."
+   "playsLike": "Uno at speed, and the colour word never matches the ink",
+   "bggUrl": "https://boardgamegeek.com/boardgame/400870"
   },
   {
    "bggId": 247314,
-   "name": "Concept Kids: Animals",
+   "name": "Concept Kids",
    "players": [
     2,
     12
@@ -1239,7 +1255,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Concept Kids Animals is a cooperative version of the game Concept, adapted for children who don't yet know how to read."
+   "playsLike": "Concept simplified for little players",
+   "bggUrl": "https://boardgamegeek.com/boardgame/247314"
   },
   {
    "bggId": 124361,
@@ -1255,33 +1272,35 @@
    "age": "13+",
    "catText": "Ancient, Economic, Nautical",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "strategy",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Two thousand years ago, the Roman Empire ruled the lands around the Mediterranean Sea."
+   "price": 95,
+   "priceTxt": "~$95",
+   "playsLike": "a gentler Brass Birmingham, trade routes without the crunch",
+   "bggUrl": "https://boardgamegeek.com/boardgame/124361"
   },
   {
-   "bggId": 313010,
-   "name": "Cosmic Encounter: 42nd Anniversary Edition",
+   "bggId": 39463,
+   "name": "Cosmic Encounter 42nd Anniversary Edition",
    "players": [
     3,
     5
    ],
    "mins": 120,
    "time": "120m",
-   "bgg": 8.1,
-   "weight": null,
-   "age": null,
-   "catText": null,
+   "bgg": 7.5,
+   "weight": 2.58,
+   "age": "12+",
+   "catText": "Bluffing, Negotiation, Science Fiction, Space Exploration",
    "playable": true,
    "forSale": false,
-   "cat": null,
-   "mode": null,
+   "cat": "deduct",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Coup's chaos scaled to a galaxy of shifting alliances",
+   "bggUrl": "https://boardgamegeek.com/boardgame/39463"
   },
   {
    "bggId": 131357,
@@ -1302,11 +1321,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "You are head of a family in an Italian city-state, a city run by a weak and corrupt court."
+   "playsLike": "Love Letter with lying",
+   "bggUrl": "https://boardgamegeek.com/boardgame/131357"
   },
   {
    "bggId": 148943,
-   "name": "Coup: Rebellion G54",
+   "name": "Coup Rebellion",
    "players": [
     3,
     6
@@ -1323,11 +1343,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Coup: Rebellion G54 (G54), the last player with influence in the game wins, with influence being represented by face-down character cards in your playing area."
+   "playsLike": "Coup with a rotating role menu",
+   "bggUrl": "https://boardgamegeek.com/boardgame/148943"
   },
   {
    "bggId": 148931,
-   "name": "Coup: Reformation",
+   "name": "Coup Reformation",
    "exp": true,
    "players": [
     2,
@@ -1342,10 +1363,11 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": "team",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Coup: Reformation, is an expansion for the original version of Coup: City State from La Mame Games."
+   "playsLike": "Coup with religious factions to hide behind",
+   "bggUrl": "https://boardgamegeek.com/boardgameexpansion/148931"
   },
   {
    "bggId": 891,
@@ -1366,7 +1388,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Cranium bills itself as the \"whole-brain\" game."
+   "playsLike": "Pictionary, charades and trivia in one box",
+   "bggUrl": "https://boardgamegeek.com/boardgame/891"
   },
   {
    "bggId": 393429,
@@ -1387,7 +1410,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "It's Restaurant Week in Bistro Bay!"
+   "playsLike": "a cute cooking draft, Sushi Go grown into a dinner service",
+   "bggUrl": "https://boardgamegeek.com/boardgame/393429"
   },
   {
    "bggId": 166532,
@@ -1408,32 +1432,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Cubo is a fast-paced dice rolling game played in six rounds with all players rolling their dice simultaneously."
-  },
-  {
-   "bggId": 167086,
-   "name": "Damn You Autocorrect: The Board Game",
-   "players": [
-    2,
-    6
-   ],
-   "mins": null,
-   "time": null,
-   "bgg": 1,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Yahtzee in a 3x3 grid. Reroll everything or nothing",
+   "bggUrl": "https://boardgamegeek.com/boardgame/166532"
   },
   {
    "bggId": 150376,
-   "name": "Dead of Winter: A Crossroads Game",
+   "name": "Dead of Winter",
    "players": [
     2,
     5
@@ -1450,7 +1454,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Betrayal's zombie-colony big sibling with traitors",
+   "bggUrl": "https://boardgamegeek.com/boardgame/150376"
   },
   {
    "bggId": 367379,
@@ -1466,12 +1471,15 @@
    "age": "14+",
    "catText": "City Building, Deduction, Fantasy, Medieval, Religious",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "strategy",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Deal with the Devil is a deeply thematic competitive Eurogame set in a fantasy medieval era."
+   "price": 100,
+   "priceTxt": "~$100",
+   "playsLike": "Sheriff of Nottingham bluffing fused with a heavy euro",
+   "bggUrl": "https://boardgamegeek.com/boardgame/367379",
+   "pickBy": "Jehan",
+   "pickNote": "Hidden roles inside a heavy euro"
   },
   {
    "bggId": 221194,
@@ -1492,7 +1500,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Jurassic Park as a Lords of Waterdeep-style euro",
+   "bggUrl": "https://boardgamegeek.com/boardgame/221194"
   },
   {
    "bggId": 353938,
@@ -1513,7 +1522,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Dirty Laundry is a sabotage shedding game."
+   "playsLike": "Cards Against Humanity pointed at your friends",
+   "bggUrl": "https://boardgamegeek.com/boardgame/353938/dirty-laundry"
   },
   {
    "bggId": 39856,
@@ -1529,12 +1539,13 @@
    "age": "8+",
    "catText": "Card Game, Humor, Party Game, Storytelling",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "cards",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "price": 55,
+   "priceTxt": "~$55",
+   "playsLike": "Mysterium's picture-poetry sibling",
+   "bggUrl": "https://boardgamegeek.com/boardgame/39856"
   },
   {
    "bggId": 36218,
@@ -1555,11 +1566,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "\"You are a monarch, like your parents before you, a ruler of a small pleasant kingdom of rivers and evergreens."
+   "playsLike": "the original deck-builder, Clank! without the dungeon",
+   "bggUrl": "https://boardgamegeek.com/boardgame/36218"
   },
   {
    "bggId": 40834,
-   "name": "Dominion: Intrigue",
+   "name": "Dominion Intrigue",
    "players": [
     2,
     6
@@ -1576,11 +1588,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Dominion: Intrigue (as with Dominion), each player starts with an identical, very small deck of cards."
+   "playsLike": "Dominion with sharper elbows",
+   "bggUrl": "https://boardgamegeek.com/boardgame/40834"
   },
   {
    "bggId": 395364,
-   "name": "Dorfromantik: The Duel",
+   "name": "Dorfromantik - The Duel",
    "players": [
     2,
     2
@@ -1597,11 +1610,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "After the great success of Dorfromantik: The Board Game, the next part of the Dorfromantik world is no longer about working together, but about friendly competition."
+   "playsLike": "Dorfromantik head-to-head",
+   "bggUrl": "https://boardgamegeek.com/boardgame/395364"
   },
   {
    "bggId": 246701,
-   "name": "DOS",
+   "name": "Dos",
    "players": [
     2,
     4
@@ -1618,7 +1632,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "DOS is the follow up to the classic card game UNO."
+   "playsLike": "Uno's number-matching sequel",
+   "bggUrl": "https://boardgamegeek.com/boardgame/246701"
   },
   {
    "bggId": 329714,
@@ -1639,11 +1654,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "No longer do you anxiously await the arrival of the wicked - for they have just arrived!"
+   "playsLike": "a hidden-value auction in the Sheriff of Nottingham spirit",
+   "bggUrl": "https://boardgamegeek.com/boardgame/329714"
   },
   {
    "bggId": 367820,
-   "name": "Dungeons &amp; Dragons: The Yawning Portal",
+   "name": "The Yawning Portal",
    "players": [
     1,
     4
@@ -1660,7 +1676,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The Yawning Portal is an iconic inn that attracts fascinating adventurers with two things in common: They're famished, and they have unique tastes in food."
+   "playsLike": "Kingdomino-weight drafting set in D&D's famous tavern",
+   "bggUrl": "https://boardgamegeek.com/boardgame/367820"
   },
   {
    "bggId": 340396,
@@ -1681,11 +1698,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Durian Dash is a strategy card-based game where players will need to visit different plantations to collect their favourite durians to become the King of the King of Fruits."
+   "playsLike": "family set-scrambling in the Sushi Go vein",
+   "bggUrl": "https://boardgamegeek.com/boardgame/340396"
   },
   {
    "bggId": 164167,
-   "name": "Eldritch Horror: Mountains of Madness",
+   "name": "Eldritch Horror Mountains of Madness",
    "exp": true,
    "players": [
     1,
@@ -1703,7 +1721,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Explore the farthest reaches of Antarctica in Mountains of Madness, the second expansion for Eldritch Horror."
+   "playsLike": "the Antarctic expansion for Eldritch Horror",
+   "bggUrl": "https://boardgamegeek.com/boardgameexpansion/164167"
   },
   {
    "bggId": 175621,
@@ -1724,7 +1743,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Epic is a fantasy card game by White Wizard Games which aims to recreate the TCG-style experience from a single box, with no additional purchases required."
+   "playsLike": "Magic: The Gathering compressed into one deck",
+   "bggUrl": "https://boardgamegeek.com/boardgame/175621"
   },
   {
    "bggId": 199792,
@@ -1740,12 +1760,13 @@
    "age": "10+",
    "catText": "Animals, Card Game, City Building, Fantasy, Solo",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "cards",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "price": 100,
+   "priceTxt": "~$100",
+   "playsLike": "Wingspan crossed with Lords of Waterdeep",
+   "bggUrl": "https://boardgamegeek.com/boardgame/199792"
   },
   {
    "bggId": 172225,
@@ -1766,11 +1787,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Exploding Kittens is a kitty-powered version of Russian Roulette."
+   "playsLike": "Uno crossed with Russian roulette",
+   "bggUrl": "https://boardgamegeek.com/boardgame/172225"
   },
   {
    "bggId": 253679,
-   "name": "Festo!",
+   "name": "Festo",
    "players": [
     2,
     5
@@ -1787,7 +1809,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "light family strategy in the Kingdomino weight class",
+   "bggUrl": "https://boardgamegeek.com/boardgame/253679"
   },
   {
    "bggId": 359959,
@@ -1805,35 +1828,15 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": "comp",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Fight the Blight is a competitive card game for 2-6 players."
-  },
-  {
-   "bggId": 436126,
-   "name": "Finspan",
-   "players": [
-    1,
-    5
-   ],
-   "mins": 60,
-   "time": "60m",
-   "bgg": 7.7,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "a co-op in the Pandemic mould",
+   "bggUrl": "https://boardgamegeek.com/boardgame/359959"
   },
   {
    "bggId": 342927,
-   "name": "Fire &amp; Stone",
+   "name": "Fire & Stone",
    "players": [
     2,
     4
@@ -1850,7 +1853,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Fire & Stone, players lead their tribe through the Stone Age."
+   "playsLike": "a light civ-builder. Catan meets Stone Age",
+   "bggUrl": "https://boardgamegeek.com/boardgame/342927"
   },
   {
    "bggId": 226605,
@@ -1871,7 +1875,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "While manning your fire tower you notice smoke in the distance and pull out your radio to report a blaze growing somewhere in the forest."
+   "playsLike": "competitive Forbidden Island. Push the fire at each other",
+   "bggUrl": "https://boardgamegeek.com/boardgame/226605"
   },
   {
    "bggId": 175324,
@@ -1889,10 +1894,11 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": "coop",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Fog of Love is a game for two players."
+   "playsLike": "a two-player rom-com. Roleplay meets hidden agendas",
+   "bggUrl": "https://boardgamegeek.com/boardgame/175324"
   },
   {
    "bggId": 136063,
@@ -1908,12 +1914,13 @@
    "age": "10+",
    "catText": "Adventure, Fantasy, Science Fiction, Solo",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "adventure",
    "mode": "coop",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Gear up for a thrilling adventure to recover a legendary flying machine buried deep in the ruins of an ancient desert city."
+   "price": 48,
+   "priceTxt": "~$48",
+   "playsLike": "Forbidden Island, one step up",
+   "bggUrl": "https://boardgamegeek.com/boardgame/136063"
   },
   {
    "bggId": 65244,
@@ -1929,12 +1936,13 @@
    "age": "10+",
    "catText": "Adventure, Fantasy, Science Fiction, Solo",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "adventure",
    "mode": "coop",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Forbidden Island is a visually stunning cooperative board game."
+   "price": 40,
+   "priceTxt": "~$40",
+   "playsLike": "Pandemic, junior edition",
+   "bggUrl": "https://boardgamegeek.com/boardgame/65244"
   },
   {
    "bggId": 380226,
@@ -1950,12 +1958,13 @@
    "age": "10+",
    "catText": "Adventure, Fantasy, Science Fiction, Solo",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "adventure",
    "mode": "coop",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "In Forbidden Jungle, your team has crash-landed on a mysterious jungle planet, and you need to work together to survive."
+   "price": 52,
+   "priceTxt": "~$52",
+   "playsLike": "Forbidden Desert, another step up",
+   "bggUrl": "https://boardgamegeek.com/boardgame/380226"
   },
   {
    "bggId": 302723,
@@ -1976,7 +1985,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Forgotten Waters is a Crossroads Game set in a world of fantastical pirate adventure."
+   "playsLike": "Betrayal-style pirate storybook, fully co-op",
+   "bggUrl": "https://boardgamegeek.com/boardgame/302723"
   },
   {
    "bggId": 214032,
@@ -1997,7 +2007,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Gloomhaven's city-building spinoff, closer to Lords of Waterdeep",
+   "bggUrl": "https://boardgamegeek.com/boardgame/214032"
   },
   {
    "bggId": 296043,
@@ -2018,28 +2029,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Long ago, in a beautiful Eastern kingdom, a queen and her people pleased their Gods by building a mystical pagoda."
-  },
-  {
-   "bggId": 370597,
-   "name": "Fugitive (Second Edition)",
-   "players": [
-    2,
-    2
-   ],
-   "mins": 20,
-   "time": "20m",
-   "bgg": 7.3,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Tokaido's puzzly pagoda cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/296043"
   },
   {
    "bggId": 258308,
@@ -2060,11 +2051,12 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Fuji, you play as a group of adventurers on their way to Japan s most famous volcano, Mount Fuji."
+   "playsLike": "co-op dice communication like The Mind, harder",
+   "bggUrl": "https://boardgamegeek.com/boardgame/258308"
   },
   {
    "bggId": 220308,
-   "name": "Gaia Project",
+   "name": "Gaia Project - A Terra Mystica Game",
    "players": [
     1,
     4
@@ -2081,7 +2073,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Gaia Project is a new game in the line of Terra Mystica."
+   "playsLike": "Terra Mystica in space, the heavy euro summit",
+   "bggUrl": "https://boardgamegeek.com/boardgame/220308"
   },
   {
    "bggId": 31481,
@@ -2099,10 +2092,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": "team",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In a galaxy far, far away..."
+   "playsLike": "Ubongo-style speed building strapped to a space disaster",
+   "bggUrl": "https://boardgamegeek.com/boardgame/31481"
   },
   {
    "bggId": 436363,
@@ -2123,11 +2117,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Birds as it is colloquially known, is an Australian bird-themed board game with elements of strategy, sabotage and luck."
+   "playsLike": "Top Trumps for Australian birds. A spinner picks the stat",
+   "bggUrl": "https://boardgamegeek.com/boardgame/436363"
   },
   {
    "bggId": 28609,
-   "name": "The Game of Life: Twists &amp; Turns",
+   "name": "Game of Life: Twists and Turns",
    "players": [
     2,
     4
@@ -2144,11 +2139,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In the new version, the winner is not the person with the most money, but the one who earns the most \"life points\" - a mix of wealth and life experiences, he says."
+   "playsLike": "The Game of Life with a debit card",
+   "bggUrl": "https://boardgamegeek.com/boardgame/28609"
   },
   {
    "bggId": 103343,
-   "name": "A Game of Thrones: The Board Game (Second Edition)",
+   "name": "A Game of Thrones 2nd Edition",
    "players": [
     3,
     6
@@ -2165,7 +2161,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Game description from the publisher: King Robert Baratheon is dead, and the lands of Westeros brace for battle."
+   "playsLike": "Diplomacy in Westeros",
+   "bggUrl": "https://boardgamegeek.com/boardgame/103343"
   },
   {
    "bggId": 155693,
@@ -2186,7 +2183,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Game description from the publisher: Game of Thrones: Westeros Intrigue is a fast-paced game of cards and intrigue at court, created by renowned game designer Reiner Knizia."
+   "playsLike": "Uno-weight card shedding with Lannister spite",
+   "bggUrl": "https://boardgamegeek.com/boardgame/155693"
   },
   {
    "bggId": 411567,
@@ -2207,7 +2205,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Round up your gang and get ready to pull off a series of bank heists using the power of poker!"
+   "playsLike": "co-op Texas hold'em, poker as a team puzzle",
+   "bggUrl": "https://boardgamegeek.com/boardgame/411567"
   },
   {
    "bggId": 93,
@@ -2228,7 +2227,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In this award-winning game, players take on the roles of Grandes in medieval Spain."
+   "playsLike": "the area-majority benchmark Rising Sun descends from",
+   "bggUrl": "https://boardgamegeek.com/boardgame/93"
   },
   {
    "bggId": 292375,
@@ -2246,31 +2246,11 @@
    "playable": true,
    "forSale": false,
    "cat": "strategy",
-   "mode": "coop",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
-  },
-  {
-   "bggId": 349733,
-   "name": "The Great Wall: Stretch Goals",
-   "players": [
-    1,
-    5
-   ],
-   "mins": 180,
-   "time": "180m",
-   "bgg": 8.1,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Tzolkin's crunch pointed at a Mongol invasion",
+   "bggUrl": "https://boardgamegeek.com/boardgame/292375"
   },
   {
    "bggId": 193738,
@@ -2291,10 +2271,11 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "America in the 19th century: You are a rancher and repeatedly herd your cattle from Texas to Kansas City, where you send them off by train."
+   "playsLike": "cattle-drive strategy. Concordia meets Clank!",
+   "bggUrl": "https://boardgamegeek.com/boardgame/193738"
   },
   {
-   "bggId": 4282,
+   "bggId": 151247,
    "name": "Greed",
    "players": [
     2,
@@ -2312,7 +2293,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In the card game Greed, crime lords (the players) try to earn more money than anyone else through clever use of their cards."
+   "playsLike": "a card tableau race from Dominion's designer",
+   "bggUrl": "https://boardgamegeek.com/boardgame/151247"
   },
   {
    "bggId": 269144,
@@ -2333,7 +2315,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Hadara carries you off into the world of cultures and countries of this earth."
+   "playsLike": "7 Wonders' streamlined civilisation cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/269144"
   },
   {
    "bggId": 98778,
@@ -2354,7 +2337,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "The Mind's older logical sibling, co-op with hidden hands",
+   "bggUrl": "https://boardgamegeek.com/boardgame/98778"
   },
   {
    "bggId": 414317,
@@ -2375,7 +2359,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Harmonies, build landscapes by placing colored tokens and create habitats for your animals."
+   "playsLike": "Cascadia with landscapes you build upward",
+   "bggUrl": "https://boardgamegeek.com/boardgame/414317"
   },
   {
    "bggId": 365749,
@@ -2396,7 +2381,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "A mouth-watering party game that lets you compete to cook some of the most iconic hawker dishes in Singapore."
+   "playsLike": "street-food stall economics at Machi Koro weight",
+   "bggUrl": "https://boardgamegeek.com/boardgame/365749"
   },
   {
    "bggId": 9921,
@@ -2417,7 +2403,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Players move their men around the board while trying to capture the other player's men."
+   "playsLike": "Frustration by another name, Pop-o-Matic Ludo",
+   "bggUrl": "https://boardgamegeek.com/boardgame/9921"
   },
   {
    "bggId": 366013,
@@ -2438,7 +2425,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Formula 1 as a hand-management race, Flamme Rouge's big brother",
+   "bggUrl": "https://boardgamegeek.com/boardgame/366013"
   },
   {
    "bggId": 11155,
@@ -2447,8 +2435,8 @@
     2,
     6
    ],
-   "mins": null,
-   "time": null,
+   "mins": 45,
+   "time": "45m",
    "bgg": 4.7,
    "weight": 1,
    "age": "16+",
@@ -2459,7 +2447,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The board represents a lavatory system."
+   "playsLike": "an '80s comedy relic, Cards Against Humanity's rude uncle",
+   "bggUrl": "https://boardgamegeek.com/boardgame/11155"
   },
   {
    "bggId": 302520,
@@ -2475,12 +2464,13 @@
    "age": "8+",
    "catText": "Deduction, Party Game",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "deduct",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "What hue do you think of when we say \"apple\"?"
+   "price": 50,
+   "priceTxt": "~$50",
+   "playsLike": "Wavelength with colours",
+   "bggUrl": "https://boardgamegeek.com/boardgame/302520"
   },
   {
    "bggId": 154203,
@@ -2501,11 +2491,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Settlers from four major powers of the world have discovered new lands, with new resources and opportunities."
+   "playsLike": "Catan energy in a card tableau engine",
+   "bggUrl": "https://boardgamegeek.com/boardgame/154203"
   },
   {
    "bggId": 304285,
-   "name": "Infinity Gauntlet: A Love Letter Game",
+   "name": "Love Letter - Infinity Gauntlet Edition",
    "players": [
     2,
     6
@@ -2519,10 +2510,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": "team",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The Mad Titan Thanos seeks the Infinity Stones to bend the universe to his indomitable will, but courageous heroes are assembling to stand in his path to ultimate power."
+   "playsLike": "Love Letter with Thanos. One deck, big bluffs",
+   "bggUrl": "https://boardgamegeek.com/boardgame/304285"
   },
   {
    "bggId": 281259,
@@ -2543,7 +2535,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The Isle of Cats is a competitive, medium-weight, card-drafting, polyomino cat-placement board game."
+   "playsLike": "Patchwork scaled up to a boatload of cats",
+   "bggUrl": "https://boardgamegeek.com/boardgame/281259"
   },
   {
    "bggId": 148949,
@@ -2564,7 +2557,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "There's hustle and bustle at Istanbul's grand bazaar as merchants and their assistants rush through the narrow alleys in their attempt to be more successful than their competitors."
+   "playsLike": "a bazaar logistics race, Splendor with legs",
+   "bggUrl": "https://boardgamegeek.com/boardgame/148949"
   },
   {
    "bggId": 54043,
@@ -2585,28 +2579,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
-  },
-  {
-   "bggId": 364641,
-   "name": "Joan of Arc: Orléans Draw &amp; Write",
-   "players": [
-    1,
-    5
-   ],
-   "mins": 45,
-   "time": "45m",
-   "bgg": 7.2,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "the two-player trading classic, Splendor for two",
+   "bggUrl": "https://boardgamegeek.com/boardgame/54043"
   },
   {
    "bggId": 8098,
@@ -2627,7 +2601,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Jungle Speed, you must rely on your keen sense of observation and quick reflexes."
+   "playsLike": "Ghost Blitz's totem-grabbing rival",
+   "bggUrl": "https://boardgamegeek.com/boardgame/8098"
   },
   {
    "bggId": 254640,
@@ -2643,12 +2618,13 @@
    "age": "8+",
    "catText": "Deduction, Party Game, Word Game",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "deduct",
-   "mode": "coop",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Just One is a co-operative party game in which you all play together to get the best score!"
+   "mode": "comp",
+   "price": 45,
+   "priceTxt": "~$45",
+   "playsLike": "Codenames' co-op cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/254640"
   },
   {
    "bggId": 320390,
@@ -2661,7 +2637,7 @@
    "time": "15m",
    "bgg": 6.7,
    "weight": 1.19,
-   "age": null,
+   "age": "6+",
    "catText": "Action / Dexterity, Animals, Fighting",
    "playable": true,
    "forSale": false,
@@ -2669,7 +2645,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Spring time in Japan means the return of the rhinoceros beetles - \"Kabutomushi\", which is Japanese for \"helmet bug\" - and their athletic contests of dominance."
+   "playsLike": "a coin-pusher duel, sumo with beetles",
+   "bggUrl": "https://boardgamegeek.com/boardgame/320390"
   },
   {
    "bggId": 107635,
@@ -2690,11 +2667,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "a market-building family euro in the Istanbul spirit",
+   "bggUrl": "https://boardgamegeek.com/boardgame/107635"
   },
   {
    "bggId": 232318,
-   "name": "Kami-sama",
+   "name": "Kami-Sama",
    "players": [
     2,
     4
@@ -2711,7 +2689,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "duelling spirits area control in the El Grande family",
+   "bggUrl": "https://boardgamegeek.com/boardgame/232318"
   },
   {
    "bggId": 222219,
@@ -2732,11 +2711,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "June 2471, and kerosene - KERO - is scarce."
+   "playsLike": "a two-player push-your-luck race, Quacks for two",
+   "bggUrl": "https://boardgamegeek.com/boardgame/222219"
   },
   {
    "bggId": 272533,
-   "name": "Kingdom Rush: Rift in Time",
+   "name": "Kingdom Rush - Rift in Time",
    "players": [
     1,
     4
@@ -2753,7 +2733,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Welcome to Kingdom Rush: Rift in Time, where you and your allies must work together to fend off the furious onslaught of the mysterious Time Mage."
+   "playsLike": "tower defence as a co-op polyomino puzzle",
+   "bggUrl": "https://boardgamegeek.com/boardgame/272533"
   },
   {
    "bggId": 204583,
@@ -2774,7 +2755,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Kingdomino is a tile-laying game in which players take the role of monarchs expanding their kingdoms by claiming and arranging lands."
+   "playsLike": "Carcassonne simplified into a 5x5 kingdom",
+   "bggUrl": "https://boardgamegeek.com/boardgame/204583"
   },
   {
    "bggId": 240909,
@@ -2796,7 +2778,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The giants have come to Kingdomino!"
+   "playsLike": "Kingdomino with giants trampling your kingdom",
+   "bggUrl": "https://boardgamegeek.com/boardgameexpansion/240909"
   },
   {
    "bggId": 254686,
@@ -2817,7 +2800,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "A dimensional gate has just opened, and monsters are surging over our world."
+   "playsLike": "a survival card game in the Dead of Winter shadow",
+   "bggUrl": "https://boardgamegeek.com/boardgame/254686"
   },
   {
    "bggId": 200785,
@@ -2838,7 +2822,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "an invention race with 7 Wonders workshop energy",
+   "bggUrl": "https://boardgamegeek.com/boardgame/200785"
   },
   {
    "bggId": 337638,
@@ -2859,7 +2844,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "A chameleon's life isn't easy-constantly adapting to new environments and hiding from predators like snakes!"
+   "playsLike": "a family adventure in the Game of Life spirit",
+   "bggUrl": "https://boardgamegeek.com/boardgame/337638"
   },
   {
    "bggId": 335869,
@@ -2880,11 +2866,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Scrabble tiles turned into a two-player deduction duel",
+   "bggUrl": "https://boardgamegeek.com/boardgame/335869"
   },
   {
    "bggId": 64204,
-   "name": "The Logo Board Game",
+   "name": "Logo Board Game",
    "players": [
     2,
     6
@@ -2901,7 +2888,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The game's theme is based on answering questions relating to popular advertising logos and brands."
+   "playsLike": "Trivial Pursuit for brand logos",
+   "bggUrl": "https://boardgamegeek.com/boardgame/64204"
   },
   {
    "bggId": 110327,
@@ -2922,7 +2910,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Waterdeep, the City of Splendors - the most resplendent jewel in the Forgotten Realms, and a den of political intrigue and shady back-alley dealings."
+   "playsLike": "the friendly face of worker placement, D&D's Viticulture",
+   "bggUrl": "https://boardgamegeek.com/boardgame/110327"
   },
   {
    "bggId": 312484,
@@ -2943,28 +2932,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "On an uninhabited island in uncharted seas, explorers have found traces of a great civilization."
-  },
-  {
-   "bggId": 339905,
-   "name": "Love Letter: Princess Princess Ever After",
-   "players": [
-    2,
-    6
-   ],
-   "mins": 20,
-   "time": "20m",
-   "bgg": 7.3,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "deck-building meets worker placement. Clank! goes archaeology",
+   "bggUrl": "https://boardgamegeek.com/boardgame/312484"
   },
   {
    "bggId": 118247,
@@ -2985,7 +2954,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Your challenge in Lucky Numbers is to fill your grid first, but you never know which tiles you'll have to work with!"
+   "playsLike": "a breezy number-grid race, bingo with actual decisions",
+   "bggUrl": "https://boardgamegeek.com/boardgame/118247"
   },
   {
    "bggId": 143884,
@@ -3006,7 +2976,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Welcome to the city of Machi Koro."
+   "playsLike": "dice-rolling city building, Catan's little cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/143884"
   },
   {
    "bggId": 340364,
@@ -3027,7 +2998,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Your favorite lovably quirky city is back at it again!"
+   "playsLike": "Machi Koro rebalanced by a decade of plays",
+   "bggUrl": "https://boardgamegeek.com/boardgame/340364"
   },
   {
    "bggId": 4035,
@@ -3048,7 +3020,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "It's the hilarious headline card game!"
+   "playsLike": "headline-building word play, tabloid Bananagrams",
+   "bggUrl": "https://boardgamegeek.com/boardgame/4035"
   },
   {
    "bggId": 83330,
@@ -3066,10 +3039,11 @@
    "playable": true,
    "forSale": false,
    "cat": "adventure",
-   "mode": "team",
+   "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Description from the publisher: Horrific monsters and spectral presences lurk in manors, crypts, schools, monasteries, and derelict buildings near Arkham, Massachusetts."
+   "playsLike": "Betrayal's app-driven Lovecraft big brother",
+   "bggUrl": "https://boardgamegeek.com/boardgame/83330"
   },
   {
    "bggId": 276025,
@@ -3090,7 +3064,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Maracaibo, a strategy game for 1-4 players by Alexander Pfister, is set in the Caribbean during the 17th century."
+   "playsLike": "Great Western Trail's Caribbean rival",
+   "bggUrl": "https://boardgamegeek.com/boardgame/276025"
   },
   {
    "bggId": 298047,
@@ -3111,11 +3086,12 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Marvel United, you take the role of iconic Marvel Heroes cooperating to stop the master plan of a powerful Villain controlled by the game."
+   "playsLike": "a co-op comic strip, Pandemic-lite with heroes",
+   "bggUrl": "https://boardgamegeek.com/boardgame/298047"
   },
   {
    "bggId": 302336,
-   "name": "Marvel Villainous: Infinite Power",
+   "name": "Marvel Villainous Infinite Power",
    "players": [
     2,
     4
@@ -3132,7 +3108,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Dominate the Marvel universe as an iconic comic book villain!"
+   "playsLike": "play the villain. Root-style asymmetry, lighter",
+   "bggUrl": "https://boardgamegeek.com/boardgame/302336"
   },
   {
    "bggId": 139030,
@@ -3153,7 +3130,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Who are you in Mascarade?"
+   "playsLike": "Coup at thirteen players with swapped identities",
+   "bggUrl": "https://boardgamegeek.com/boardgame/139030"
   },
   {
    "bggId": 193214,
@@ -3174,7 +3152,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "acrobatic stacking, Block Party under a big top",
+   "bggUrl": "https://boardgamegeek.com/boardgame/193214"
   },
   {
    "bggId": 244992,
@@ -3195,7 +3174,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The Mind is more than just a game."
+   "playsLike": "wordless co-op counting, Hanabi's telepathic cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/244992"
   },
   {
    "bggId": 214123,
@@ -3216,7 +3196,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Moa takes its inspiration from the events surrounding the settlement of New Zealand, recasting them with anthropomorphized birds and mammals."
+   "playsLike": "bird-powered area control in the El Grande family",
+   "bggUrl": "https://boardgamegeek.com/boardgame/214123"
   },
   {
    "bggId": 238393,
@@ -3234,10 +3215,11 @@
    "playable": true,
    "forSale": false,
    "cat": "adventure",
-   "mode": "team",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Wage war against opponents on a hexagonal board."
+   "playsLike": "Neuroshima Hex with fantasy armies",
+   "bggUrl": "https://boardgamegeek.com/boardgame/238393"
   },
   {
    "bggId": 327797,
@@ -3258,11 +3240,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Monopoly as a quick blind auction",
+   "bggUrl": "https://boardgamegeek.com/boardgame/327797"
   },
   {
    "bggId": 40398,
-   "name": "Monopoly Deal Card Game",
+   "name": "Monopoly - Deal Card Game",
    "players": [
     2,
     5
@@ -3279,28 +3262,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "(from the box): The fast-paced, addictive card game where your luck can change in the play of a card!"
-  },
-  {
-   "bggId": 36611,
-   "name": "Monopoly: The Portable Property Trading Game",
-   "players": [
-    2,
-    6
-   ],
-   "mins": 120,
-   "time": "120m",
-   "bgg": 4.4,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Monopoly compressed into fifteen card-game minutes",
+   "bggUrl": "https://boardgamegeek.com/boardgame/40398"
   },
   {
    "bggId": 1927,
@@ -3321,7 +3284,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Publisher's DescriptionGo down in the dungeon."
+   "playsLike": "dungeon take-that, Exploding Kittens-era humour with levels",
+   "bggUrl": "https://boardgamegeek.com/boardgame/1927"
   },
   {
    "bggId": 189848,
@@ -3342,7 +3306,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Description from the publisher: Munchkin Marvel fuses the classic card game fun of monster-slaying and role-playing with the most iconic characters from the Marvel universe."
+   "playsLike": "Munchkin in the Marvel universe",
+   "bggUrl": "https://boardgamegeek.com/boardgame/189848"
   },
   {
    "bggId": 156786,
@@ -3363,7 +3328,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Munchkin Panic is a semi-cooperative board game that blends the all-for-one gameplay of Castle Panic and the all-for-me gameplay of Munchkin."
+   "playsLike": "Munchkin crossed with Castle Panic",
+   "bggUrl": "https://boardgamegeek.com/boardgame/156786"
   },
   {
    "bggId": 202478,
@@ -3384,7 +3350,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Bananagrams is a Scrabble-like game without the board that's much like Pick Two!, but without the letter values."
+   "playsLike": "Bananagrams with training wheels",
+   "bggUrl": "https://boardgamegeek.com/boardgame/202478"
   },
   {
    "bggId": 267314,
@@ -3405,7 +3372,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Castle Panic for pre-schoolers",
+   "bggUrl": "https://boardgamegeek.com/boardgame/267314"
   },
   {
    "bggId": 191004,
@@ -3426,7 +3394,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Travel to the past with Jonon and Jada, two stone age children, to rediscover how the first humans settled the world around them."
+   "playsLike": "Stone Age shrunk for little gatherers",
+   "bggUrl": "https://boardgamegeek.com/boardgame/191004"
   },
   {
    "bggId": 181304,
@@ -3447,7 +3416,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Dixit turned into a ghost-story deduction co-op",
+   "bggUrl": "https://boardgamegeek.com/boardgame/181304"
   },
   {
    "bggId": 195421,
@@ -3468,7 +3438,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Four wanderers search for the Last Ruin, a city that legends say contains an artifact that will grant the greatest desires of the heart."
+   "playsLike": "storybook adventure euro, Above and Below's sequel",
+   "bggUrl": "https://boardgamegeek.com/boardgame/195421"
   },
   {
    "bggId": 255692,
@@ -3489,7 +3460,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Puerto Rico in space, from the Race for the Galaxy line",
+   "bggUrl": "https://boardgamegeek.com/boardgame/255692"
   },
   {
    "bggId": 300877,
@@ -3510,7 +3482,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Puzzling and animal breeding: Designer Uwe Rosenberg is at his best!"
+   "playsLike": "Patchwork-style polyomino zoo building",
+   "bggUrl": "https://boardgamegeek.com/boardgame/300877"
   },
   {
    "bggId": 12942,
@@ -3531,7 +3504,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "the simplest push-your-luck bidding ever",
+   "bggUrl": "https://boardgamegeek.com/boardgame/12942"
   },
   {
    "bggId": 194879,
@@ -3549,10 +3523,11 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": "team",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "hidden-movement cat and mouse, Fugitive at party size",
+   "bggUrl": "https://boardgamegeek.com/boardgame/194879"
   },
   {
    "bggId": 314745,
@@ -3573,7 +3548,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Far to the south of The Last Ruin lies a cliffside village called The Monument."
+   "playsLike": "Near and Far's sequel, storybook village rebuilding",
+   "bggUrl": "https://boardgamegeek.com/boardgame/314745"
   },
   {
    "bggId": 396790,
@@ -3594,11 +3570,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "When Elsa von Fr hlingsfeld presented her invention to King Frederik Augustus II of Saxony, people thought it was trickery."
+   "playsLike": "Brass Birmingham with atomic reactors",
+   "bggUrl": "https://boardgamegeek.com/boardgame/396790"
   },
   {
    "bggId": 291572,
-   "name": "Oath",
+   "name": "Oath - Chronicles of Empire and Exile",
    "players": [
     1,
     6
@@ -3615,11 +3592,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Oath, one to six players guide the course of history in an ancient land."
+   "playsLike": "Root's designer building empires that remember your last game",
+   "bggUrl": "https://boardgamegeek.com/boardgame/291572"
   },
   {
    "bggId": 192074,
-   "name": "Odin&#039;s Ravens (Second Edition)",
+   "name": "Odin's Ravens (Second Edition)",
    "players": [
     2,
     2
@@ -3636,11 +3614,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Every morning Odin sends his ravens, Huginn and Muninn, across the entire world to bring back news of what life is like on Earth."
+   "playsLike": "a two-player race across Norway. Jaipur pace, raven theme",
+   "bggUrl": "https://boardgamegeek.com/boardgame/192074"
   },
   {
    "bggId": 313463,
-   "name": "OK Boomer!",
+   "name": "Ok Boomer",
    "players": [
     2,
     8
@@ -3657,28 +3636,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Test your knowledge about your rival generation's pop culture trivia in OK Boomer!"
-  },
-  {
-   "bggId": 286927,
-   "name": "One Night Ultimate Super Heroes",
-   "players": [
-    3,
-    10
-   ],
-   "mins": 10,
-   "time": "10m",
-   "bgg": 6.7,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "generation-war trivia, Trivial Pursuit with a smirk",
+   "bggUrl": "https://boardgamegeek.com/boardgame/313463"
   },
   {
    "bggId": 147949,
@@ -3696,20 +3655,21 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": "comp",
+   "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "No moderator, no elimination, ten-minute games."
+   "playsLike": "Werewolf compressed into ten minutes, no eliminations",
+   "bggUrl": "https://boardgamegeek.com/boardgame/147949"
   },
   {
    "bggId": 7803,
-   "name": "ONO 99",
+   "name": "Ono 99",
    "players": [
     2,
     8
    ],
-   "mins": null,
-   "time": null,
+   "mins": 20,
+   "time": "20m",
    "bgg": 5.7,
    "weight": 1.16,
    "age": "7+",
@@ -3720,11 +3680,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Another in the line of Uno styled and themed games."
+   "playsLike": "Uno's press-your-luck counting cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/7803"
   },
   {
    "bggId": 164928,
-   "name": "Orléans",
+   "name": "Orleans",
    "players": [
     2,
     5
@@ -3741,7 +3702,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "During the medieval goings-on around Orl ans, you must assemble a following of farmers, merchants, knights, monks, etc."
+   "playsLike": "bag-building, Dominion drawn from a cloth bag",
+   "bggUrl": "https://boardgamegeek.com/boardgame/164928"
   },
   {
    "bggId": 266810,
@@ -3762,7 +3724,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Paladins of the West Kingdom is set at a turbulent time of West Francia's story, circa 900 AD."
+   "playsLike": "a heavier Lords of Waterdeep with faith and force",
+   "bggUrl": "https://boardgamegeek.com/boardgame/266810"
   },
   {
    "bggId": 15318,
@@ -3783,7 +3746,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Who will build the most magnificent palace?"
+   "playsLike": "a Knizia auction of palace floors, Ra energy",
+   "bggUrl": "https://boardgamegeek.com/boardgame/15318"
   },
   {
    "bggId": 300531,
@@ -3804,7 +3768,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Paleo is a co-operative adventure game set in the stone age, a game in which players try to keep the human beings in their care alive while completing missions."
+   "playsLike": "a stone-age co-op, Pandemic set in prehistory",
+   "bggUrl": "https://boardgamegeek.com/boardgame/300531"
   },
   {
    "bggId": 30549,
@@ -3825,7 +3790,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Pandemic, several virulent diseases have broken out simultaneously all over the world!"
+   "playsLike": "THE co-op gateway. Cure the world together",
+   "bggUrl": "https://boardgamegeek.com/boardgame/30549"
   },
   {
    "bggId": 141572,
@@ -3843,10 +3809,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": "coop",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "You are a paperback author trying to finish novels for your editor."
+   "playsLike": "Scrabble as a deck-builder",
+   "bggUrl": "https://boardgamegeek.com/boardgame/141572"
   },
   {
    "bggId": 312804,
@@ -3867,7 +3834,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Pendulum, each player is a powerful, unique noble vying to succeed the Timeless King as the true ruler of D nya."
+   "playsLike": "a real-time euro, Tzolkin with sand timers",
+   "bggUrl": "https://boardgamegeek.com/boardgame/312804"
   },
   {
    "bggId": 1258,
@@ -3888,7 +3856,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "A rummy-type card game where players compete to be the first to finish completing all ten phases."
+   "playsLike": "rummy with a ten-step ladder, Uno's structured cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/1258"
   },
   {
    "bggId": 6424,
@@ -3909,7 +3878,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Long, thin sticks are scattered on the table in a heap."
+   "playsLike": "the steady-hands classic, Jenga's tabletop ancestor",
+   "bggUrl": "https://boardgamegeek.com/boardgame/6424"
   },
   {
    "bggId": 2281,
@@ -3930,7 +3900,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Pictionary is a fast-paced party game of sketching and guessing, often compared to Charades, but with drawings instead of physical acting."
+   "playsLike": "the original draw-and-guess, Telestrations' ancestor",
+   "bggUrl": "https://boardgamegeek.com/boardgame/2281"
   },
   {
    "bggId": 98229,
@@ -3951,7 +3922,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Pictionary where everyone draws and guesses at once",
+   "bggUrl": "https://boardgamegeek.com/boardgame/98229"
   },
   {
    "bggId": 436471,
@@ -3964,7 +3936,7 @@
    "time": "25m",
    "bgg": 0,
    "weight": null,
-   "age": null,
+   "age": "14+",
    "catText": "Card Game, Pirates",
    "playable": true,
    "forSale": false,
@@ -3972,7 +3944,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Each player wants to have the most swagger, but your plans will break down as your crew will be stolen, killed, or might just be unhelpful."
+   "playsLike": "build the swaggeriest pirate crew while everyone steals from yours",
+   "bggUrl": "https://boardgamegeek.com/boardgame/436471"
   },
   {
    "bggId": 252929,
@@ -3993,11 +3966,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The spark of life is about to jump from your hands to spread out in the world."
+   "playsLike": "a magnetic 3D Kingdomino. Build a world in your hands",
+   "bggUrl": "https://boardgamegeek.com/boardgame/252929"
   },
   {
    "bggId": 60579,
-   "name": "Poo: The Card Game",
+   "name": "Poo",
    "players": [
     2,
     8
@@ -4014,7 +3988,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "From the Catalyst Game Labs Website: It's been a tough day in the monkey cage and something in the food tonight wasn't quite right."
+   "playsLike": "monkey mayhem, Exploding Kittens' cheekier cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/60579"
   },
   {
    "bggId": 35173,
@@ -4035,7 +4010,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Pop the Pig is an international preschool classic that is adored by millions of children-it's the #2 best-selling new kids game of the last five years."
+   "playsLike": "Buckaroo-style kids' press-your-luck",
+   "bggUrl": "https://boardgamegeek.com/boardgame/35173"
   },
   {
    "bggId": 327371,
@@ -4056,7 +4032,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In the deck, there are 5 cards for the psycho killer and cards for the weapons he uses to attack you."
+   "playsLike": "horror-comedy take-that in the Exploding Kittens vein",
+   "bggUrl": "https://boardgamegeek.com/boardgame/327371"
   },
   {
    "bggId": 3076,
@@ -4077,28 +4054,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Puerto Rico, players assume the roles of colonial governors on the island of Puerto Rico."
-  },
-  {
-   "bggId": 244521,
-   "name": "Quacks",
-   "players": [
-    2,
-    4
-   ],
-   "mins": 45,
-   "time": "45m",
-   "bgg": 7.8,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "the role-picking classic New Frontiers descends from",
+   "bggUrl": "https://boardgamegeek.com/boardgame/3076"
   },
   {
    "bggId": 113517,
@@ -4119,7 +4076,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "From Publisher Website: Quadefy is a fast playing new strategy game played in three dimensions."
+   "playsLike": "a two-player wooden abstract, stacking and capturing",
+   "bggUrl": "https://boardgamegeek.com/boardgame/113517"
   },
   {
    "bggId": 217372,
@@ -4140,11 +4098,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In The Quest for El Dorado, players take the roles of expedition leaders who have embarked on a search for the legendary land of gold in the dense jungles of South America."
+   "playsLike": "deck-building as a race, Dominion strapped to a jungle sprint",
+   "bggUrl": "https://boardgamegeek.com/boardgame/217372"
   },
   {
    "bggId": 227224,
-   "name": "The Red Cathedral",
+   "name": "Red Cathedral",
    "players": [
     1,
     4
@@ -4161,7 +4120,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Autumn is not the best time to climb up on a scaffold in Moscow, but it is still far better than doing so in the winter."
+   "playsLike": "an Istanbul-weight euro with a dice market",
+   "bggUrl": "https://boardgamegeek.com/boardgame/227224"
   },
   {
    "bggId": 24310,
@@ -4182,7 +4142,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Red Dragon Inn, you and your friends are a party of heroic, fantasy adventurers."
+   "playsLike": "drink your mates under a fantasy table, Munchkin's pub crawl",
+   "bggUrl": "https://boardgamegeek.com/boardgame/24310"
   },
   {
    "bggId": 329465,
@@ -4198,12 +4159,13 @@
    "age": "14+",
    "catText": "Card Game, Novel-based, Science Fiction, Solo",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "cards",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Enter the futuristic universe of Red Rising, based on the book series by Pierce Brown featuring a dystopian society divided into fourteen castes."
+   "price": 55,
+   "priceTxt": "~$55",
+   "playsLike": "Fantasy Realms in the Red Rising universe",
+   "bggUrl": "https://boardgamegeek.com/boardgame/329465"
   },
   {
    "bggId": 41114,
@@ -4224,11 +4186,12 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Werewolf without eliminations. The missions decide",
+   "bggUrl": "https://boardgamegeek.com/boardgame/41114"
   },
   {
    "bggId": 128882,
-   "name": "The Resistance: Avalon",
+   "name": "Avalon",
    "players": [
     5,
     10
@@ -4245,7 +4208,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The Resistance: Avalon pits the forces of Good and Evil in a battle to control the future of civilization."
+   "playsLike": "The Resistance with Merlin, the social-deduction standard",
+   "bggUrl": "https://boardgamegeek.com/boardgame/128882"
   },
   {
    "bggId": 132531,
@@ -4261,12 +4225,13 @@
    "age": "13+",
    "catText": "Civilization, Dice, Economic, Science Fiction, Space Exploration",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "strategy",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Game description from the publisher: Roll for the Galaxy is a dice game of building space empires for 2-5 players."
+   "price": 95,
+   "priceTxt": "~$95",
+   "playsLike": "Race for the Galaxy rebuilt with dice",
+   "bggUrl": "https://boardgamegeek.com/boardgame/132531"
   },
   {
    "bggId": 169426,
@@ -4282,12 +4247,13 @@
    "age": "10+",
    "catText": "Dice, Fantasy, Medieval",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "cards",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Mighty heroes don't just appear out of thin air -- you must create them!"
+   "price": 75,
+   "priceTxt": "~$75",
+   "playsLike": "Sagrada wearing a character-sheet skin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/169426"
   },
   {
    "bggId": 237182,
@@ -4308,32 +4274,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
-  },
-  {
-   "bggId": 330149,
-   "name": "Root: The Marauder Expansion",
-   "players": [
-    2,
-    6
-   ],
-   "mins": 90,
-   "time": "90m",
-   "bgg": 8.8,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "asymmetric woodland warfare. Every faction plays a different game",
+   "bggUrl": "https://boardgamegeek.com/boardgame/237182"
   },
   {
    "bggId": 283609,
-   "name": "Rubik&#039;s Cage",
+   "name": "Rubiks Cage",
    "players": [
     2,
     4
@@ -4350,11 +4296,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The Mind-Bending, Mind-Turning Challenge!"
+   "playsLike": "Connect 4 inside a Rubik's twist",
+   "bggUrl": "https://boardgamegeek.com/boardgame/283609"
   },
   {
    "bggId": 811,
-   "name": "Rummikub",
+   "name": "Rummikub Original",
    "players": [
     2,
     4
@@ -4371,7 +4318,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Rummikub is similar to several central European card games which are played with two decks of playing cards, including Machiavelli and Vatikan."
+   "playsLike": "gin rummy with tiles, the classic set-shuffler",
+   "bggUrl": "https://boardgamegeek.com/boardgame/811"
   },
   {
    "bggId": 368028,
@@ -4392,11 +4340,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "RUN is a quick, tense, hidden movement game of cat-and-mouse."
+   "playsLike": "Fugitive's bigger sibling. One runs, one flies the helicopter",
+   "bggUrl": "https://boardgamegeek.com/boardgame/368028"
   },
   {
    "bggId": 415085,
-   "name": "RuneScape Kingdoms: King Black Dragon Expansion",
+   "name": "RuneScape Kingdoms: King Black Dragon",
    "exp": true,
    "players": [
     1,
@@ -4411,10 +4360,11 @@
    "playable": true,
    "forSale": false,
    "cat": "adventure",
-   "mode": "coop",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "RuneScape Kingdoms: King Black Dragon Expansion enhances your RuneScape Kingdoms experiences with a new skill, campaign, area and boss."
+   "playsLike": "a boss-fight expansion for RuneScape Kingdoms",
+   "bggUrl": "https://boardgamegeek.com/boardgameexpansion/415085"
   },
   {
    "bggId": 361503,
@@ -4435,7 +4385,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Grab your capes and party hats, 'cause we're going to Gielinor!"
+   "playsLike": "RuneScape as a co-op quest crawl, Jaws of the Lion for MMO fans",
+   "bggUrl": "https://boardgamegeek.com/boardgame/361503"
   },
   {
    "bggId": 252854,
@@ -4456,7 +4407,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Sabotage is a game of team stealth tactics."
+   "playsLike": "Captain Sonar's sneaky cousin, 2v2 hidden movement",
+   "bggUrl": "https://boardgamegeek.com/boardgame/252854"
   },
   {
    "bggId": 9220,
@@ -4474,10 +4426,11 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": "comp",
+   "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Players take on the role of dwarves."
+   "playsLike": "hidden-traitor tunnel digging, Werewolf with pickaxes",
+   "bggUrl": "https://boardgamegeek.com/boardgame/9220"
   },
   {
    "bggId": 315043,
@@ -4498,7 +4451,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "You're part of an internationally renowned group of billy goat criminal masterminds, and you've just pulled off your greatest caper yet."
+   "playsLike": "a quick framing job, Coup energy with goats",
+   "bggUrl": "https://boardgamegeek.com/boardgame/315043"
   },
   {
    "bggId": 291453,
@@ -4519,7 +4473,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "trick-taking meets hand Tetris. You can't rearrange your cards",
+   "bggUrl": "https://boardgamegeek.com/boardgame/291453"
   },
   {
    "bggId": 320,
@@ -4540,28 +4495,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In this classic word game, players use their seven drawn letter-tiles to form words on the gameboard."
-  },
-  {
-   "bggId": 12463,
-   "name": "Sea Battle",
-   "players": [
-    2,
-    4
-   ],
-   "mins": null,
-   "time": null,
-   "bgg": 4.6,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "the word-building institution",
+   "bggUrl": "https://boardgamegeek.com/boardgame/320"
   },
   {
    "bggId": 188834,
@@ -4582,7 +4517,8 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Secret Hitler is a dramatic game of political intrigue and betrayal set in 1930s Germany."
+   "playsLike": "Avalon's political sibling, hidden roles in parliament",
+   "bggUrl": "https://boardgamegeek.com/boardgame/188834"
   },
   {
    "bggId": 200847,
@@ -4600,35 +4536,15 @@
    "playable": true,
    "forSale": false,
    "cat": "deduct",
-   "mode": "team",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
-  },
-  {
-   "bggId": 376663,
-   "name": "Selfish: Marvel Edition",
-   "players": [
-    2,
-    4
-   ],
-   "mins": 20,
-   "time": "20m",
-   "bgg": 5.7,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Mascarade's spy-era cousin. Your team keeps changing",
+   "bggUrl": "https://boardgamegeek.com/boardgame/200847"
   },
   {
    "bggId": 288583,
-   "name": "Selfish: Zombie Edition",
+   "name": "Selfish: Zombies",
    "players": [
     2,
     5
@@ -4645,7 +4561,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "You and your friends are survivors of a devastating zombie apocalypse, but for how long?!"
+   "playsLike": "Selfish's undead sibling, same backstabbing race",
+   "bggUrl": "https://boardgamegeek.com/boardgame/288583"
   },
   {
    "bggId": 2375,
@@ -4663,35 +4580,15 @@
    "playable": true,
    "forSale": false,
    "cat": "abstract",
-   "mode": "team",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Sequence is a board and card game."
-  },
-  {
-   "bggId": 152959,
-   "name": "The Settlers of Catan",
-   "players": [
-    3,
-    6
-   ],
-   "mins": 75,
-   "time": "75m",
-   "bgg": 7,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Connect Five with cards, the family classic",
+   "bggUrl": "https://boardgamegeek.com/boardgame/2375"
   },
   {
    "bggId": 146791,
-   "name": "Shadows of Brimstone: City of the Ancients",
+   "name": "Shadows of Brimstone City of Ancients",
    "players": [
     1,
     4
@@ -4708,11 +4605,12 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Shadows of Brimstone: City of the Ancients is a fast-paced, fully cooperative, dungeon-crawl board game set in the Old West, with a heavy dose of unspeakable horror!"
+   "playsLike": "a Wild-West Lovecraft dungeon crawl, Gloomhaven's pulpier cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/146791"
   },
   {
    "bggId": 157969,
-   "name": "Sheriff of Nottingham",
+   "name": "The Sherriff of Nottingham",
    "players": [
     3,
     5
@@ -4729,11 +4627,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Prince John is coming to Nottingham!"
+   "playsLike": "Skull with contraband. Bluff your bag past the sheriff",
+   "bggUrl": "https://boardgamegeek.com/boardgame/157969"
   },
   {
    "bggId": 2511,
-   "name": "Sherlock Holmes Consulting Detective: The Thames Murders &amp; Other Cases",
+   "name": "Sherlock Holmes Consulting Detective",
    "players": [
     1,
     8
@@ -4750,7 +4649,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Have you ever had the desire to walk the streets of Victorian London with Sherlock Holmes in search of Professor Moriarty?"
+   "playsLike": "Awkward Guests' grandparent, pure casebook deduction",
+   "bggUrl": "https://boardgamegeek.com/boardgame/2511"
   },
   {
    "bggId": 196379,
@@ -4771,11 +4671,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Shit Happens is as funny and surprising and crazy as REAL LIFE."
+   "playsLike": "rank the misfortunes, Cards Against Humanity's ranking cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/196379"
   },
   {
    "bggId": 239828,
-   "name": "Shuffle Operation",
+   "name": "Operation Shuffle",
    "players": [
     2,
     4
@@ -4792,11 +4693,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "What kind of Surgeon will you be?"
+   "playsLike": "Operation dealt out as a card game",
+   "bggUrl": "https://boardgamegeek.com/boardgame/239828"
   },
   {
    "bggId": 9851,
-   "name": "Shut the Box",
+   "name": "Shut The Box",
    "players": [
     2,
     4
@@ -4813,7 +4715,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Shut the Box, players match rolls of the dice to numbers on the game."
+   "playsLike": "the pub dice classic, Yahtzee's tiny ancestor",
+   "bggUrl": "https://boardgamegeek.com/boardgame/9851"
   },
   {
    "bggId": 202426,
@@ -4834,7 +4737,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Sidereal Confluence: Trading and Negotiation in the Elysian Quadrant is a singularly unique trading and negotiation game for 4-9 players."
+   "playsLike": "Catan's trading dialled to eleven, one giant simultaneous negotiation",
+   "bggUrl": "https://boardgamegeek.com/boardgame/202426"
   },
   {
    "bggId": 256443,
@@ -4855,7 +4759,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Sideshow Swap is an original, deduction-style party game based on cunning and chance."
+   "playsLike": "Love Letter at the circus. Swap your act blind and hope",
+   "bggUrl": "https://boardgamegeek.com/boardgame/256443"
   },
   {
    "bggId": 267030,
@@ -4876,7 +4781,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The Singaporean Dream is a humorous card game that lets you steal, sabo and pay your way to be the perfect Singaporean."
+   "playsLike": "Singapore's satirical take on the Selfish formula",
+   "bggUrl": "https://boardgamegeek.com/boardgame/267030"
   },
   {
    "bggId": 1269,
@@ -4897,7 +4803,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Each player is dealt a stockpile of 30 cards."
+   "playsLike": "Uno's sequencing sibling",
+   "bggUrl": "https://boardgamegeek.com/boardgame/1269"
   },
   {
    "bggId": 232595,
@@ -4918,7 +4825,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "THE GREAT RETURN ​Over generations and generations the ancient woodland of B re prospered and grew."
+   "playsLike": "a one-vs-one Root, leaping foxes versus a stone guardian",
+   "bggUrl": "https://boardgamegeek.com/boardgame/232595"
   },
   {
    "bggId": 92415,
@@ -4939,7 +4847,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "the purest bluff ever printed, poker distilled to four coasters",
+   "bggUrl": "https://boardgamegeek.com/boardgame/92415"
   },
   {
    "bggId": 373106,
@@ -4955,16 +4864,17 @@
    "age": "10+",
    "catText": "Aviation / Flight, Dice, Campaign",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "cards",
    "mode": "coop",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Sky Team is a co-operative game, exclusively for two players, in which you play a pilot and co-pilot at the controls of an airliner."
+   "price": 55,
+   "priceTxt": "~$55",
+   "playsLike": "The Crew condensed to two seats",
+   "bggUrl": "https://boardgamegeek.com/boardgame/373106"
   },
   {
    "bggId": 309630,
-   "name": "Small World of Warcraft",
+   "name": "Small World - Warcraft",
    "players": [
     2,
     5
@@ -4978,10 +4888,11 @@
    "playable": true,
    "forSale": false,
    "cat": "adventure",
-   "mode": "team",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Small World of Warcraft, players vie for conquest and control of a world that is simply too small to accommodate everybody."
+   "playsLike": "Small World wearing Warcraft races",
+   "bggUrl": "https://boardgamegeek.com/boardgame/309630"
   },
   {
    "bggId": 122522,
@@ -5002,7 +4913,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "faction mash-up brawls, pirate-dinosaurs versus zombie-wizards",
+   "bggUrl": "https://boardgamegeek.com/boardgame/122522"
   },
   {
    "bggId": 359893,
@@ -5023,7 +4935,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Sounds Fishy isn't about always knowing the right answer - it's about being able to spot the fake ones."
+   "playsLike": "Balderdash flipped. Spot the true answer among liars",
+   "bggUrl": "https://boardgamegeek.com/boardgame/359893"
   },
   {
    "bggId": 162886,
@@ -5044,7 +4957,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In the most distant reaches of the world, magic still exists, embodied by spirits of the land, of the sky, and of every natural thing."
+   "playsLike": "the anti-Catan, heavy co-op spirits repelling colonists",
+   "bggUrl": "https://boardgamegeek.com/boardgame/162886"
   },
   {
    "bggId": 148228,
@@ -5060,37 +4974,17 @@
    "age": "10+",
    "catText": "Card Game, Economic, Renaissance",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "cards",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Splendor is a game of chip-collecting and card development."
-  },
-  {
-   "bggId": 220653,
-   "name": "Splendor: Cities of Splendor",
-   "players": [
-    2,
-    4
-   ],
-   "mins": 30,
-   "time": "30m",
-   "bgg": 7.3,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "price": 62,
+   "priceTxt": "~$62",
+   "playsLike": "Century: Golem Edition's engine-building twin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/148228"
   },
   {
    "bggId": 429885,
-   "name": "Stabbin&#039; in the Cabin",
+   "name": "Stabber in the Cabin",
    "players": [
     5,
     10
@@ -5107,7 +5001,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Stabbin' in the Cabin is a hidden-role deduction game in the style of a cabin in the woods style slasher film."
+   "playsLike": "ten-minute cabin Werewolf",
+   "bggUrl": "https://boardgamegeek.com/boardgame/429885"
   },
   {
    "bggId": 279720,
@@ -5128,7 +5023,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The city was once a small and sleepy town, but the affordable properties have attracted artists, startup companies, and families."
+   "playsLike": "The Isle of Cats' designer doing city streets",
+   "bggUrl": "https://boardgamegeek.com/boardgame/279720"
   },
   {
    "bggId": 123260,
@@ -5149,7 +5045,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Plan, build, and develop a small town into a major metropolis."
+   "playsLike": "SimCity as a tile-laying engine",
+   "bggUrl": "https://boardgamegeek.com/boardgame/123260"
   },
   {
    "bggId": 58281,
@@ -5170,11 +5067,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "GAME SYSTEM This entry is to allow for discussion/rating of the game system as a whole."
+   "playsLike": "a card-driven battle duel. Magic meets chess",
+   "bggUrl": "https://boardgamegeek.com/boardgame/58281"
   },
   {
    "bggId": 133473,
-   "name": "Sushi Go!",
+   "name": "Sushi Go",
    "players": [
     2,
     5
@@ -5191,7 +5089,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In the super-fast sushi card game Sushi Go!, you are eating at a sushi restaurant and trying to grab the best combination of sushi dishes as they whiz by."
+   "playsLike": "7 Wonders shrunk to a sushi train",
+   "bggUrl": "https://boardgamegeek.com/boardgame/133473"
   },
   {
    "bggId": 311211,
@@ -5212,11 +5111,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In the adult party game, The Sweet and Spicy Truth, each player takes a turn being asked a Sweet, Medium, or Spicy question."
+   "playsLike": "adults only. Your mates bet on how you'll answer",
+   "bggUrl": "https://boardgamegeek.com/boardgame/311211"
   },
   {
    "bggId": 146508,
-   "name": "T.I.M.E Stories",
+   "name": "TIME Stories",
    "players": [
     2,
     4
@@ -5233,7 +5133,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The T.I.M.E Agency protects humanity by preventing temporal faults and paradoxes from threatening the fabric of our universe."
+   "playsLike": "Sherlock-style deduction inside a time loop you replay",
+   "bggUrl": "https://boardgamegeek.com/boardgame/146508"
   },
   {
    "bggId": 189686,
@@ -5255,7 +5156,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Description from the publisher: Enter the Valley of the Kings and unravel a pharaoh's secret."
+   "playsLike": "an Ancient-Egypt case for T.I.M.E Stories",
+   "bggUrl": "https://boardgamegeek.com/boardgameexpansion/189686"
   },
   {
    "bggId": 1111,
@@ -5276,11 +5178,12 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In the party game Taboo, you're trying to give clues to your teammates so that they'll guess a particular word, but you can't say just anything you like."
+   "playsLike": "Codenames' loud ancestor, forbidden-word guessing",
+   "bggUrl": "https://boardgamegeek.com/boardgame/1111"
   },
   {
    "bggId": 253664,
-   "name": "Taco Cat Goat Cheese Pizza",
+   "name": "Taco Cat Cheese Pizza",
    "players": [
     2,
     8
@@ -5297,11 +5200,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Taco Cat Goat Cheese Pizza is filled to the brim with hand-slapping mayhem!"
+   "playsLike": "Jungle Speed's shouty card cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/253664"
   },
   {
    "bggId": 360366,
-   "name": "Tainted Grail: Kings of Ruin",
+   "name": "Tainted Grail - Kings of Ruin",
    "players": [
     1,
     4
@@ -5315,31 +5219,11 @@
    "playable": true,
    "forSale": false,
    "cat": "adventure",
-   "mode": "coop",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Kings of Ruin is a new stand-alone story campaign from the team behind the acclaimed Tainted Grail board game, set in the same universe."
-  },
-  {
-   "bggId": 264220,
-   "name": "Tainted Grail: The Fall of Avalon",
-   "players": [
-    1,
-    4
-   ],
-   "mins": 120,
-   "time": "120m",
-   "bgg": 8,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "a grim Arthurian story crawl. Gloomhaven meets a novel",
+   "bggUrl": "https://boardgamegeek.com/boardgame/360366"
   },
   {
    "bggId": 252153,
@@ -5360,7 +5244,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The Tang dynasty was considered the first golden age of the classical and now iconic Chinese gardens."
+   "playsLike": "a zen garden builder, Tokaido's landscaping cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/252153"
   },
   {
    "bggId": 210418,
@@ -5378,10 +5263,11 @@
    "playable": true,
    "forSale": false,
    "cat": "cards",
-   "mode": "coop",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Run the best fantasy tavern in the village!"
+   "playsLike": "run a fantasy pub, Machi Koro behind the bar",
+   "bggUrl": "https://boardgamegeek.com/boardgame/210418"
   },
   {
    "bggId": 120677,
@@ -5402,7 +5288,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "the heavy terraforming classic Gaia Project grew from",
+   "bggUrl": "https://boardgamegeek.com/boardgame/120677"
   },
   {
    "bggId": 167791,
@@ -5423,7 +5310,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In the 2400s, mankind begins to terraform the planet Mars."
+   "playsLike": "the engine-builder about greening Mars, Ark Nova's space rival",
+   "bggUrl": "https://boardgamegeek.com/boardgame/167791"
   },
   {
    "bggId": 9209,
@@ -5439,12 +5327,13 @@
    "age": "8+",
    "catText": "Trains",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": null,
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "With elegantly simple gameplay, Ticket to Ride can be learned in under 15 minutes."
+   "price": 75,
+   "priceTxt": "~$75",
+   "playsLike": "Carcassonne on rails, the other gateway classic",
+   "bggUrl": "https://boardgamegeek.com/boardgame/9209"
   },
   {
    "bggId": 14996,
@@ -5465,7 +5354,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Ticket to Ride: Europe takes you on a new train adventure across Europe."
+   "playsLike": "the train-route gateway classic, Europe edition",
+   "bggUrl": "https://boardgamegeek.com/boardgame/14996"
   },
   {
    "bggId": 123540,
@@ -5486,7 +5376,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Tokaido, each player is a traveler crossing the \"East sea road\", one of the most magnificent roads of Japan."
+   "playsLike": "a serene stroll across Japan, Ticket to Ride's zen cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/123540"
   },
   {
    "bggId": 4040,
@@ -5507,11 +5398,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Triominos is a game similar to Dominoes, in that players are laying tiles that match up to other tiles in the play area, with the goal to get points and be rid of tiles."
+   "playsLike": "dominoes gone triangular",
+   "bggUrl": "https://boardgamegeek.com/boardgame/4040"
   },
   {
    "bggId": 269963,
-   "name": "Trivial Pursuit: Horror Movie Edition",
+   "name": "Trivial Pursuit - Horror",
    "players": [
     2,
     99
@@ -5525,20 +5417,21 @@
    "playable": true,
    "forSale": false,
    "cat": "dark",
-   "mode": "team",
+   "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Perfect for thrill seekers and know-it-alls alike, TRIVIAL PURSUIT: Horror Movie Edition is a must-have for any game collection."
+   "playsLike": "Trivial Pursuit for horror tragics",
+   "bggUrl": "https://boardgamegeek.com/boardgame/269963"
   },
   {
    "bggId": 253204,
-   "name": "Trivial Pursuit: Supernatural",
+   "name": "Trivial Pursuit - Supernatural",
    "players": [
     2,
     99
    ],
-   "mins": null,
-   "time": null,
+   "mins": 60,
+   "time": "30–60m",
    "bgg": 7.2,
    "weight": null,
    "age": "12+",
@@ -5549,11 +5442,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Supernatural fans test their knowledge of the TV Series with TRIVIAL PURSUIT: Supernatural."
+   "playsLike": "Trivial Pursuit for Winchester devotees",
+   "bggUrl": "https://boardgamegeek.com/boardgame/253204"
   },
   {
    "bggId": 295687,
-   "name": "Trust Me, I&#039;m a Doctor",
+   "name": "Trust me I'm a Doctor",
    "players": [
     3,
     8
@@ -5570,11 +5464,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Trust Me I'm a Doctor is a hilarious card game that lets you become an old time doctor, treating serious medieval maladies with some VERY questionable cures."
+   "playsLike": "pitch quack cures, Balderdash with a stethoscope",
+   "bggUrl": "https://boardgamegeek.com/boardgame/295687"
   },
   {
    "bggId": 315733,
-   "name": "Trust Me, I&#039;m a Superhero",
+   "name": "Trust Me, I'm a Superhero",
    "players": [
     3,
     8
@@ -5591,7 +5486,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": null
+   "playsLike": "pitch your hero to a judge, Superfight in capes",
+   "bggUrl": "https://boardgamegeek.com/boardgame/315733"
   },
   {
    "bggId": 134352,
@@ -5612,11 +5508,12 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "In Two Rooms and a Boom - a social deduction/hidden role party game for six or more players - there are two teams: the Red Team and the Blue Team."
+   "playsLike": "Werewolf split across two rooms, whole-venue deduction",
+   "bggUrl": "https://boardgamegeek.com/boardgame/134352"
   },
   {
    "bggId": 31999,
-   "name": "TZAAR",
+   "name": "Tzaar",
    "players": [
     2,
     2
@@ -5633,11 +5530,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "TZAAR is a game about making choices."
+   "playsLike": "chess-weight abstract from the GIPF project",
+   "bggUrl": "https://boardgamegeek.com/boardgame/31999"
   },
   {
    "bggId": 126163,
-   "name": "Tzolk&#039;in: The Mayan Calendar",
+   "name": "Tzolkin: The Mayan Calendar",
    "players": [
     2,
     4
@@ -5654,28 +5552,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Tzolkin: The Mayan Calendar presents a new game mechanism: dynamic worker placement."
-  },
-  {
-   "bggId": 152242,
-   "name": "Ultimate Werewolf: Deluxe Edition",
-   "players": [
-    5,
-    75
-   ],
-   "mins": 30,
-   "time": "30m",
-   "bgg": 7,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "worker placement on literal turning gears, Orleans' crunchier cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/126163"
   },
   {
    "bggId": 366495,
@@ -5696,7 +5574,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The RAF faces the Luftwaffe in this two-player deck-building game of aerial WWII combat."
+   "playsLike": "Undaunted's dogfighting chapter, deck-built WWII duels",
+   "bggUrl": "https://boardgamegeek.com/boardgame/366495"
   },
   {
    "bggId": 268864,
@@ -5717,7 +5596,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "June, 1944: Through the D-Day landings, the Allies have seized a foothold on the beaches of Normandy."
+   "playsLike": "a deck-built WWII skirmish. Memoir '44 meets Dominion",
+   "bggUrl": "https://boardgamegeek.com/boardgame/268864"
   },
   {
    "bggId": 179172,
@@ -5738,7 +5618,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Build the city's greatest theme park, whatever it takes!"
+   "playsLike": "build a theme park, sabotage your rivals. Machi Koro with malice",
+   "bggUrl": "https://boardgamegeek.com/boardgame/179172"
   },
   {
    "bggId": 294612,
@@ -5754,16 +5635,19 @@
    "age": "10+",
    "catText": "Card Game, Exploration, Fantasy, Horror, Puzzle, Real-time, Spies / Secret Agents, Campaign",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "cards",
    "mode": "coop",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "price": 50,
+   "priceTxt": "~$50",
+   "playsLike": "three app-driven escape rooms, the series at its most cinematic",
+   "bggUrl": "https://boardgamegeek.com/boardgame/294612",
+   "pickBy": "Jehan",
+   "pickNote": "Replayable co-op puzzles"
   },
   {
    "bggId": 2223,
-   "name": "UNO",
+   "name": "Uno",
    "players": [
     2,
     10
@@ -5780,11 +5664,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Players race to empty their hands and catch opposing players with cards left in theirs, which score points."
+   "playsLike": "the colour-matching classic, Crazy Eights perfected",
+   "bggUrl": "https://boardgamegeek.com/boardgame/2223"
   },
   {
    "bggId": 271460,
-   "name": "UNO Flip!",
+   "name": "Uno - Flip",
    "players": [
     2,
     10
@@ -5801,11 +5686,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "UNO gets a brand new twist in the new UNO Flip!"
+   "playsLike": "Uno with a dark side. Flip the whole deck",
+   "bggUrl": "https://boardgamegeek.com/boardgame/271460"
   },
   {
    "bggId": 352997,
-   "name": "UNO: All Wild!",
+   "name": "Uno All Wild",
    "players": [
     2,
     10
@@ -5822,11 +5708,12 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "UNO All Wild plays just like traditional UNO except every card is wild."
+   "playsLike": "Uno where every card is wild",
+   "bggUrl": "https://boardgamegeek.com/boardgame/352997"
   },
   {
    "bggId": 399088,
-   "name": "UNO: Show &#039;Em No Mercy",
+   "name": "Uno Show em No Mercy",
    "players": [
     2,
     6
@@ -5843,7 +5730,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "UNO Show 'Em No Mercy is a brutal, ruthless version of the classic UNO card game."
+   "playsLike": "Uno's brutal no-mercy variant",
+   "bggUrl": "https://boardgamegeek.com/boardgame/399088"
   },
   {
    "bggId": 1515,
@@ -5864,28 +5752,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Players take turns forming words on either an 8x8 (original and Winning Moves \"new classic\" versions) or a 10x10 (most later versions) grid."
-  },
-  {
-   "bggId": 183394,
-   "name": "Viticulture Essential Edition",
-   "players": [
-    1,
-    6
-   ],
-   "mins": 90,
-   "time": "90m",
-   "bgg": 8,
-   "weight": null,
-   "age": null,
-   "catText": null,
-   "playable": true,
-   "forSale": false,
-   "cat": null,
-   "mode": null,
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "playsLike": "Scrabble in 3D. Stack letters, change words",
+   "bggUrl": "https://boardgamegeek.com/boardgame/1515"
   },
   {
    "bggId": 262543,
@@ -5901,12 +5769,15 @@
    "age": "14+",
    "catText": "Party Game",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "party",
-   "mode": "team",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "Wavelength is a social guessing game in which two teams compete to read each other's minds."
+   "mode": "comp",
+   "price": 60,
+   "priceTxt": "~$60",
+   "playsLike": "Hues and Cues for concepts instead of colours",
+   "bggUrl": "https://boardgamegeek.com/boardgame/262543",
+   "pickBy": "Jehan",
+   "pickNote": "Best big-group conversation game"
   },
   {
    "bggId": 427584,
@@ -5922,16 +5793,17 @@
    "age": "15+",
    "catText": "Adventure, American West, Dice, Exploration, Travel",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "adventure",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": null
+   "price": 60,
+   "priceTxt": "~$60?",
+   "playsLike": "pioneers heading west, Oregon Trail with combat and betrayal",
+   "bggUrl": "https://boardgamegeek.com/boardgame/427584"
   },
   {
    "bggId": 25821,
-   "name": "The Werewolves of Miller&#039;s Hollow",
+   "name": "Werewolves of Millers Hollow",
    "players": [
     8,
     18
@@ -5948,11 +5820,12 @@
    "mode": "team",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Werewolves of Miller's Hollow is a game that takes place in a small village which is haunted by werewolves."
+   "playsLike": "classic village Werewolf, moderator and all",
+   "bggUrl": "https://boardgamegeek.com/boardgame/25821"
   },
   {
    "bggId": 342443,
-   "name": "What Next?",
+   "name": "What Next",
    "players": [
     1,
     4
@@ -5969,7 +5842,8 @@
    "mode": "coop",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Introducing What Next, the brand new 'Pick-Your-Path' adventure game where you never know what's waiting around the corner."
+   "playsLike": "a co-op choose-your-path adventure with dexterity minigames",
+   "bggUrl": "https://boardgamegeek.com/boardgame/342443"
   },
   {
    "bggId": 266192,
@@ -5990,7 +5864,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Wingspan is a competitive, medium-weight, card-driven, engine-building board game from Stonemaier Games."
+   "playsLike": "Everdell's feathered rival, the engine-builder that made birds cool",
+   "bggUrl": "https://boardgamegeek.com/boardgame/266192"
   },
   {
    "bggId": 1465,
@@ -6011,7 +5886,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "The trick-taking game Wizard uses a sixty-card deck that consists of the traditional 52-card deck (1-13 in four suits) along with four Wizards (high) and four Jesters (low)."
+   "playsLike": "trick-taking with exact bids, 500's sharper cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/1465"
   },
   {
    "bggId": 410201,
@@ -6027,16 +5903,17 @@
    "age": "14+",
    "catText": "Animals, Card Game, Fantasy, Solo",
    "playable": true,
-   "forSale": false,
+   "forSale": true,
    "cat": "cards",
    "mode": "comp",
-   "price": null,
-   "priceTxt": null,
-   "playsLike": "You are an amateur dracologist in the world of Wyrmspan, a place where dragons of all shapes, sizes, and colors roam the skies."
+   "price": 110,
+   "priceTxt": "~$110",
+   "playsLike": "Wingspan with dragons, a notch crunchier",
+   "bggUrl": "https://boardgamegeek.com/boardgame/410201"
   },
   {
    "bggId": 234828,
-   "name": "Xi&#039;an: Terracotta Army",
+   "name": "Xi'an",
    "players": [
     2,
     4
@@ -6053,7 +5930,8 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "246 BCE: The future first emperor of China, Ying Zheng, orders the construction of the Terracotta Army."
+   "playsLike": "a terracotta-army euro, dice placement in ancient China",
+   "bggUrl": "https://boardgamegeek.com/boardgame/234828"
   },
   {
    "bggId": 363991,
@@ -6074,8 +5952,1302 @@
    "mode": "comp",
    "price": null,
    "priceTxt": null,
-   "playsLike": "Yum Cha is a cute little card game based on everyone's favourite Chinese brunch, also known as Dim Sum."
+   "playsLike": "matching dim sum sets. Mahjong, but breezier",
+   "bggUrl": "https://boardgamegeek.com/boardgame/363991"
+  },
+  {
+   "name": "A&A: Pacific 1940",
+   "bggId": 55829,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 360,
+   "time": "360m",
+   "age": "12+",
+   "catText": "Economic, Wargame, World War II",
+   "bgg": 7.5,
+   "weight": 3.55,
+   "playable": false,
+   "forSale": true,
+   "cat": "strategy",
+   "mode": "team",
+   "price": 140,
+   "priceTxt": "~$140",
+   "playsLike": "Axis & Allies 1942, deeper and longer",
+   "bggUrl": "https://boardgamegeek.com/boardgame/55829/axis-and-allies-pacific-1940"
+  },
+  {
+   "name": "Adventure Time: Card Wars",
+   "bggId": 144728,
+   "players": [
+    2,
+    2
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "10+",
+   "catText": "Card Game, Humor, Movies / TV / Radio theme",
+   "bgg": 6.1,
+   "weight": 1.72,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Magic: The Gathering lite, in cartoon form",
+   "bggUrl": "https://boardgamegeek.com/boardgame/144728"
+  },
+  {
+   "name": "Aquaduck",
+   "bggId": 434415,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 120,
+   "time": "120m",
+   "age": "10+",
+   "catText": "Card Game, City Building, Civilization, Puzzle",
+   "bgg": 9.5,
+   "weight": 3,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "City-states vie to be the heart of the Roman Eggpublic in this 3D city-builder.",
+   "bggUrl": "https://boardgamegeek.com/boardgame/434415/aqueducks"
+  },
+  {
+   "name": "Arcs: The Blighted Reach",
+   "bggId": 363757,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 120,
+   "time": "60–120m",
+   "age": "14+",
+   "catText": "Negotiation, Science Fiction, Campaign",
+   "bgg": 8.9,
+   "weight": 4.55,
+   "playable": false,
+   "forSale": true,
+   "cat": "deduct",
+   "mode": "comp",
+   "price": 140,
+   "priceTxt": "~$140",
+   "playsLike": "Oath, a competitive campaign epic",
+   "exp": true,
+   "bggUrl": "https://boardgamegeek.com/boardgame/363757/arcs-the-blighted-reach-expansion",
+   "pickBy": "Jehan",
+   "pickNote": ""
+  },
+  {
+   "name": "AutoCorrect",
+   "bggId": 452407,
+   "players": [
+    2,
+    99
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": "12+",
+   "catText": "Puzzle, Word Game",
+   "bgg": 4,
+   "weight": null,
+   "playable": true,
+   "forSale": false,
+   "cat": "abstract",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Cards Against Humanity's texting cousin",
+   "bggUrl": "https://boardgamegeek.com/boardgame/452407"
+  },
+  {
+   "name": "Axis & Allies (1942)",
+   "bggId": 41863,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 240,
+   "time": "240m",
+   "age": "12+",
+   "catText": "Economic, Wargame, World War II",
+   "bgg": 6.9,
+   "weight": 3.16,
+   "playable": false,
+   "forSale": true,
+   "cat": "strategy",
+   "mode": "team",
+   "price": 90,
+   "priceTxt": "~$90",
+   "playsLike": "Risk, grown up",
+   "bggUrl": "https://boardgamegeek.com/boardgame/41863"
+  },
+  {
+   "name": "BANG! The Card Game",
+   "bggId": 3955,
+   "players": [
+    4,
+    7
+   ],
+   "mins": 40,
+   "time": "40m",
+   "age": "8+",
+   "catText": "American West, Bluffing, Card Game, Deduction, Fighting",
+   "bgg": 6.5,
+   "weight": 1.63,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": "team",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "spaghetti-western Werewolf with bullets",
+   "bggUrl": "https://boardgamegeek.com/boardgame/3955"
+  },
+  {
+   "name": "Cascadia",
+   "bggId": 295947,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 45,
+   "time": "45m",
+   "age": "10+",
+   "catText": "Animals, Environmental, Solo",
+   "bgg": 7.9,
+   "weight": 1.84,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 65,
+   "priceTxt": "~$65",
+   "playsLike": "Azul-adjacent tile drafting with wildlife",
+   "bggUrl": "https://boardgamegeek.com/boardgame/295947/cascadia"
+  },
+  {
+   "name": "Catan Settlers of America",
+   "bggId": 67239,
+   "players": [
+    3,
+    4
+   ],
+   "mins": 120,
+   "time": "120m",
+   "age": "12+",
+   "catText": "Civilization, Exploration, Negotiation, Trains",
+   "bgg": 6.8,
+   "weight": 2.69,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Catan goes west with trains and wagons",
+   "bggUrl": "https://boardgamegeek.com/boardgame/67239"
+  },
+  {
+   "name": "Catan The Settlers",
+   "bggId": 13,
+   "players": [
+    3,
+    4
+   ],
+   "mins": 120,
+   "time": "120m",
+   "age": "10+",
+   "catText": "Economic, Negotiation",
+   "bgg": 7.1,
+   "weight": 2.28,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "the trading-and-building gateway classic",
+   "bggUrl": "https://boardgamegeek.com/boardgame/13"
+  },
+  {
+   "name": "CDMC 3000",
+   "bggId": 25695,
+   "players": [
+    1,
+    3
+   ],
+   "mins": 15,
+   "time": "15m",
+   "age": "10+",
+   "catText": "Action / Dexterity, Real-time",
+   "bgg": 6.2,
+   "weight": 1.09,
+   "playable": true,
+   "forSale": false,
+   "cat": "party",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "party dexterity in the Jungle Speed vein",
+   "bggUrl": "https://boardgamegeek.com/boardgame/25695"
+  },
+  {
+   "name": "Citadels",
+   "bggId": 478,
+   "players": [
+    2,
+    8
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "10+",
+   "catText": "Bluffing, Card Game, City Building, Deduction, Fantasy, Medieval",
+   "bgg": 7.1,
+   "weight": 2.05,
+   "playable": false,
+   "forSale": true,
+   "cat": "deduct",
+   "mode": "comp",
+   "price": 40,
+   "priceTxt": "~$40",
+   "playsLike": "Coup and Love Letter energy that seats eight",
+   "bggUrl": "https://boardgamegeek.com/boardgame/478"
+  },
+  {
+   "name": "Clue card game",
+   "bggId": 88922,
+   "players": [
+    3,
+    4
+   ],
+   "mins": 15,
+   "time": "15m",
+   "age": "8+",
+   "catText": "Card Game, Deduction, Murder / Mystery",
+   "bgg": 5.9,
+   "weight": 1.26,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Cluedo distilled to cards",
+   "bggUrl": "https://boardgamegeek.com/boardgame/88922"
+  },
+  {
+   "name": "Cluedo SFX",
+   "bggId": 8069,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "8+",
+   "catText": "Bluffing, Deduction, Electronic, Murder / Mystery",
+   "bgg": 6.3,
+   "weight": 1.82,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Cluedo with sound effects and app-era twists",
+   "bggUrl": "https://boardgamegeek.com/boardgame/8069"
+  },
+  {
+   "name": "Cosmic Encounter",
+   "bggId": 39463,
+   "players": [
+    3,
+    5
+   ],
+   "mins": 120,
+   "time": "120m",
+   "age": "12+",
+   "catText": "Bluffing, Negotiation, Science Fiction, Space Exploration",
+   "bgg": 7.5,
+   "weight": 2.58,
+   "playable": true,
+   "forSale": true,
+   "cat": "deduct",
+   "mode": "comp",
+   "price": 95,
+   "priceTxt": "~$95",
+   "playsLike": "Coup's chaos scaled to a galaxy of shifting alliances",
+   "bggUrl": "https://boardgamegeek.com/boardgame/39463",
+   "pickBy": "Jehan",
+   "pickNote": "The rules are lies"
+  },
+  {
+   "name": "Cubitos",
+   "bggId": 298069,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "10+",
+   "catText": "Dice, Racing",
+   "bgg": 7.4,
+   "weight": 2.17,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Quacks of Quedlinburg on a racetrack",
+   "bggUrl": "https://boardgamegeek.com/boardgame/298069"
+  },
+  {
+   "name": "Diplomacy",
+   "bggId": 483,
+   "players": [
+    2,
+    7
+   ],
+   "mins": 360,
+   "time": "360m",
+   "age": "12+",
+   "catText": "Bluffing, Negotiation, Political, Post-Napoleonic, Wargame",
+   "bgg": 7,
+   "weight": 3.32,
+   "playable": false,
+   "forSale": true,
+   "cat": "deduct",
+   "mode": "comp",
+   "price": 70,
+   "priceTxt": "~$70",
+   "playsLike": "Risk without dice, pure negotiation",
+   "bggUrl": "https://boardgamegeek.com/boardgame/483"
+  },
+  {
+   "name": "Dorfromantik",
+   "bggId": 370591,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "8+",
+   "catText": "Environmental, Puzzle, Territory Building, Video Game Theme, Campaign",
+   "bgg": 7.6,
+   "weight": 1.64,
+   "playable": false,
+   "forSale": true,
+   "cat": "abstract",
+   "mode": "coop",
+   "price": 65,
+   "priceTxt": "~$65",
+   "playsLike": "co-op Carcassonne, straight from the video game",
+   "bggUrl": "https://boardgamegeek.com/boardgame/370591/dorfromantik-the-board-game",
+   "pickBy": "Jehan",
+   "pickNote": "Cosiest co-op going"
+  },
+  {
+   "name": "Everdell Duo",
+   "bggId": 425005,
+   "players": [
+    1,
+    2
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "10+",
+   "catText": "Animals, Card Game, City Building, Fantasy, Campaign, Solo",
+   "bgg": 7.6,
+   "weight": 2.72,
+   "playable": false,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "comp",
+   "price": 52,
+   "priceTxt": "~$52",
+   "playsLike": "Everdell distilled for two",
+   "bggUrl": "https://boardgamegeek.com/boardgame/425005"
+  },
+  {
+   "name": "Everdell: Silverfrost",
+   "bggId": 436821,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 120,
+   "time": "120m",
+   "age": "10+",
+   "catText": "Animals, Card Game, City Building, Fantasy",
+   "bgg": 8.1,
+   "weight": 3.2,
+   "playable": false,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "comp",
+   "price": 90,
+   "priceTxt": "$90 ess / $150+ coll",
+   "playsLike": "Everdell, refined",
+   "bggUrl": "https://boardgamegeek.com/boardgame/436821",
+   "pickBy": "Jehan",
+   "pickNote": "Prettiest engine on the shelf"
+  },
+  {
+   "name": "EXIT: The Abandoned Cabin",
+   "bggId": 203420,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 120,
+   "time": "120m",
+   "age": "12+",
+   "catText": "Deduction, Puzzle, Real-time, Solo",
+   "bgg": 7.4,
+   "weight": 2.54,
+   "playable": false,
+   "forSale": true,
+   "cat": "deduct",
+   "mode": "coop",
+   "price": 25,
+   "priceTxt": "$25–30 ea",
+   "playsLike": "the one to start on, an escape room in a box",
+   "bggUrl": "https://boardgamegeek.com/boardgame/203420/exit-the-game-the-abandoned-cabin",
+   "pickBy": "Jehan",
+   "pickNote": "Escape room night in a box"
+  },
+  {
+   "name": "Flip City",
+   "bggId": 168679,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 50,
+   "time": "50m",
+   "age": "8+",
+   "catText": "Card Game, City Building",
+   "bgg": 6.3,
+   "weight": 1.74,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Dominion micro-sized with push-your-luck",
+   "bggUrl": "https://boardgamegeek.com/boardgame/168679"
+  },
+  {
+   "name": "Fugitive",
+   "bggId": 197443,
+   "players": [
+    2,
+    2
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": "10+",
+   "catText": "Bluffing, Card Game, Deduction, Number, Spies / Secret Agents",
+   "bgg": 7.1,
+   "weight": 1.64,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "a two-player chase, Sherlock deduction at speed",
+   "bggUrl": "https://boardgamegeek.com/boardgame/197443"
+  },
+  {
+   "name": "Ghost Blitz",
+   "bggId": 83195,
+   "players": [
+    2,
+    8
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": "8+",
+   "catText": "Action / Dexterity, Card Game, Children's Game, Real-time",
+   "bgg": 6.7,
+   "weight": 1.13,
+   "playable": false,
+   "forSale": true,
+   "cat": "party",
+   "mode": "comp",
+   "price": 30,
+   "priceTxt": "~$30",
+   "playsLike": "Jungle Speed reflexes with a logic twist",
+   "bggUrl": "https://boardgamegeek.com/boardgame/83195"
+  },
+  {
+   "name": "Gloomhaven Jaws of the Lion",
+   "bggId": 291457,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 120,
+   "time": "120m",
+   "age": "14+",
+   "catText": "Adventure, Exploration, Fantasy, Fighting, Miniatures, Campaign, Legacy, Solo",
+   "bgg": 8.4,
+   "weight": 3.64,
+   "playable": true,
+   "forSale": false,
+   "cat": "adventure",
+   "mode": "coop",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "the campaign dungeon-crawl benchmark, starter size",
+   "bggUrl": "https://boardgamegeek.com/boardgame/291457"
+  },
+  {
+   "name": "Joan of Arc",
+   "bggId": 64,
+   "players": [
+    3,
+    6
+   ],
+   "mins": 150,
+   "time": "150m",
+   "age": "10+",
+   "catText": "Card Game, Medieval, Political, Wargame",
+   "bgg": 6.3,
+   "weight": 2.54,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "miniatures-heavy historical battles, War of the Ring scale",
+   "bggUrl": "https://boardgamegeek.com/boardgame/64"
+  },
+  {
+   "name": "Lightning Train",
+   "bggId": 445673,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 120,
+   "time": "120m",
+   "age": "13+",
+   "catText": "Trains",
+   "bgg": 7.2,
+   "weight": 3,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 95,
+   "priceTxt": "~$95",
+   "playsLike": "Ticket to Ride crossed with Clank! deck-building",
+   "bggUrl": "https://boardgamegeek.com/boardgame/445673"
+  },
+  {
+   "name": "Love Letter - Princess Ever After",
+   "bggId": 129622,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": "10+",
+   "catText": "Card Game, Deduction, Renaissance",
+   "bgg": 7.2,
+   "weight": 1.18,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "classic Love Letter, storybook edition",
+   "bggUrl": "https://boardgamegeek.com/boardgame/129622"
+  },
+  {
+   "name": "Monopoly - Classic",
+   "bggId": 1406,
+   "players": [
+    2,
+    8
+   ],
+   "mins": 180,
+   "time": "180m",
+   "age": "8+",
+   "catText": "Economic",
+   "bgg": 4.4,
+   "weight": 1.62,
+   "playable": true,
+   "forSale": false,
+   "cat": "strategy",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "the original property-trading family institution",
+   "bggUrl": "https://boardgamegeek.com/boardgame/1406"
+  },
+  {
+   "name": "One Night Ultimate Superheroes",
+   "bggId": 255293,
+   "players": [
+    3,
+    10
+   ],
+   "mins": 10,
+   "time": "10m",
+   "age": "8+",
+   "catText": "Bluffing, Card Game, Deduction, Horror, Party Game, Traitor",
+   "bgg": 6.8,
+   "weight": 1.5,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": "team",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "One Night Werewolf in capes",
+   "bggUrl": "https://boardgamegeek.com/boardgame/255293"
+  },
+  {
+   "name": "Playdoh Shuffle",
+   "bggId": 179589,
+   "players": [
+    2,
+    6
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": "4+",
+   "catText": "Card Game, Children's Game, Storytelling",
+   "bgg": 5,
+   "weight": 1,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Snap for little kids. Say why your card matches",
+   "bggUrl": "https://boardgamegeek.com/boardgame/179589"
+  },
+  {
+   "name": "Quacks of Quedlinburg",
+   "bggId": 409496,
+   "players": [
+    2,
+    2
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "10+",
+   "catText": "Medieval",
+   "bgg": 7.5,
+   "weight": 2.27,
+   "playable": true,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 70,
+   "priceTxt": "~$70",
+   "playsLike": "Diamant-style push-your-luck inside a bag builder",
+   "bggUrl": "https://boardgamegeek.com/boardgame/409496"
+  },
+  {
+   "name": "Qwirkle",
+   "bggId": 25669,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 45,
+   "time": "45m",
+   "age": "6+",
+   "catText": null,
+   "bgg": 6.8,
+   "weight": 1.58,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 45,
+   "priceTxt": "~$45",
+   "playsLike": "Scrabble crossed with dominoes",
+   "bggUrl": "https://boardgamegeek.com/boardgame/25669"
+  },
+  {
+   "name": "Ra",
+   "bggId": 12,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "12+",
+   "catText": "Ancient, Mythology",
+   "bgg": 7.7,
+   "weight": 2.3,
+   "playable": false,
+   "forSale": true,
+   "cat": null,
+   "mode": "comp",
+   "price": 80,
+   "priceTxt": "~$80",
+   "playsLike": "Modern Art's auction sibling, peak Knizia",
+   "bggUrl": "https://boardgamegeek.com/boardgame/12"
+  },
+  {
+   "name": "Res Arcana",
+   "bggId": 262712,
+   "players": [
+    2,
+    4
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "12+",
+   "catText": "Card Game, Fantasy",
+   "bgg": 7.6,
+   "weight": 2.66,
+   "playable": false,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "comp",
+   "price": 60,
+   "priceTxt": "~$60",
+   "playsLike": "Splendor with teeth, from the Race for the Galaxy designer",
+   "bggUrl": "https://boardgamegeek.com/boardgame/262712"
+  },
+  {
+   "name": "Rick and Morty - Total Rickall",
+   "bggId": 194232,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "15+",
+   "catText": "Card Game, Deduction, Humor, Movies / TV / Radio theme, Traitor",
+   "bgg": 6.1,
+   "weight": 1.51,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": "coop",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "One Night Werewolf with fake family members",
+   "bggUrl": "https://boardgamegeek.com/boardgame/194232"
+  },
+  {
+   "name": "Rising Sun",
+   "bggId": 205896,
+   "players": [
+    3,
+    5
+   ],
+   "mins": 120,
+   "time": "120m",
+   "age": "14+",
+   "catText": "Bluffing, Fantasy, Mythology, Negotiation, Wargame",
+   "bgg": 7.8,
+   "weight": 3.3,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Blood Rage's honour-bound Japanese sibling",
+   "bggUrl": "https://boardgamegeek.com/boardgame/205896"
+  },
+  {
+   "name": "Selfish",
+   "bggId": 265912,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 20,
+   "time": "20m",
+   "age": "7+",
+   "catText": "Card Game, Humor, Science Fiction",
+   "bgg": 6.2,
+   "weight": 1.1,
+   "playable": true,
+   "forSale": false,
+   "cat": "cards",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "a backstabbing race for oxygen, Exploding Kittens meanness",
+   "bggUrl": "https://boardgamegeek.com/boardgame/265912"
+  },
+  {
+   "name": "SETI",
+   "bggId": 418059,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 160,
+   "time": "160m",
+   "age": "14+",
+   "catText": "Science Fiction, Space Exploration, Solo",
+   "bgg": 8.4,
+   "weight": 3.83,
+   "playable": false,
+   "forSale": true,
+   "cat": "adventure",
+   "mode": "comp",
+   "price": 105,
+   "priceTxt": "$105–140",
+   "playsLike": "Terraforming Mars meets Ark Nova",
+   "bggUrl": "https://boardgamegeek.com/boardgame/418059",
+   "pickBy": "Jehan",
+   "pickNote": "Terraforming Mars fans start here"
+  },
+  {
+   "name": "Settlers of Catan Expansion 5-6 Player",
+   "bggId": 2807,
+   "players": [
+    5,
+    6
+   ],
+   "mins": 120,
+   "time": "120m",
+   "age": "10+",
+   "catText": "Negotiation",
+   "bgg": 7,
+   "weight": 2.31,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": "comp",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "Catan stretched to five and six players",
+   "exp": true,
+   "bggUrl": "https://boardgamegeek.com/boardgameexpansion/2807"
+  },
+  {
+   "name": "Space Base",
+   "bggId": 242302,
+   "players": [
+    2,
+    5
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "14+",
+   "catText": "Dice, Science Fiction, Space Exploration",
+   "bgg": 7.5,
+   "weight": 2.13,
+   "playable": false,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "comp",
+   "price": 80,
+   "priceTxt": "~$80",
+   "playsLike": "Machi Koro, grown up",
+   "bggUrl": "https://boardgamegeek.com/boardgame/242302"
+  },
+  {
+   "name": "Tapple",
+   "bggId": 129556,
+   "players": [
+    2,
+    10
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "8+",
+   "catText": "Card Game, Electronic, Party Game, Real-time, Word Game",
+   "bgg": 6.4,
+   "weight": 1.02,
+   "playable": false,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "comp",
+   "price": 32,
+   "priceTxt": "~$32",
+   "playsLike": "Scattergories at speed",
+   "bggUrl": "https://boardgamegeek.com/boardgame/129556"
+  },
+  {
+   "name": "Terra Mystica (Big Box)",
+   "bggId": 356238,
+   "players": [
+    1,
+    5
+   ],
+   "mins": 150,
+   "time": "150m",
+   "age": "14+",
+   "catText": "Civilization, Economic, Fantasy, Territory Building",
+   "bgg": 8.7,
+   "weight": 4.32,
+   "playable": true,
+   "forSale": true,
+   "cat": "strategy",
+   "mode": "comp",
+   "price": 180,
+   "priceTxt": "$180+",
+   "playsLike": "Gaia Project's fantasy parent",
+   "bggUrl": "https://boardgamegeek.com/boardgame/356238/terra-mystica-big-box"
+  },
+  {
+   "name": "Ultimate Werewolf",
+   "bggId": 152241,
+   "players": [
+    5,
+    30
+   ],
+   "mins": 90,
+   "time": "90m",
+   "age": "13+",
+   "catText": "Bluffing, Card Game, Deduction, Fantasy, Horror, Murder / Mystery, Negotiation, Party Game, Storytelling, Traitor",
+   "bgg": 6.5,
+   "weight": 1.15,
+   "playable": true,
+   "forSale": false,
+   "cat": "deduct",
+   "mode": "team",
+   "price": null,
+   "priceTxt": null,
+   "playsLike": "the big-group social deduction original",
+   "bggUrl": "https://boardgamegeek.com/boardgame/152241"
+  },
+  {
+   "name": "Unlock!: Escape Adventures",
+   "bggId": 213460,
+   "players": [
+    2,
+    6
+   ],
+   "mins": 75,
+   "time": "75m",
+   "age": "10+",
+   "catText": "Card Game, Puzzle, Campaign, Storytelling",
+   "bgg": 7.3,
+   "weight": 2.12,
+   "playable": true,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "coop",
+   "price": 50,
+   "priceTxt": "~$50",
+   "playsLike": "the original trilogy. EXIT with an app, nothing gets destroyed",
+   "bggUrl": "https://boardgamegeek.com/boardgame/213460",
+   "pickBy": "Jehan",
+   "pickNote": "Replayable co-op puzzles"
+  },
+  {
+   "name": "Viticulture",
+   "bggId": 128621,
+   "players": [
+    2,
+    6
+   ],
+   "mins": 90,
+   "time": "90m",
+   "age": "13+",
+   "catText": "Economic, Farming",
+   "bgg": 7.5,
+   "weight": 2.95,
+   "playable": true,
+   "forSale": true,
+   "cat": "strategy",
+   "mode": "comp",
+   "price": 95,
+   "priceTxt": "~$95",
+   "playsLike": "Lords of Waterdeep charm with Agricola-lite farming",
+   "bggUrl": "https://boardgamegeek.com/boardgame/128621"
+  },
+  {
+   "name": "Wandering Towers",
+   "bggId": 355483,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 30,
+   "time": "30m",
+   "age": "8+",
+   "catText": "Fantasy, Memory, Solo",
+   "bgg": 7.3,
+   "weight": 1.6,
+   "playable": false,
+   "forSale": true,
+   "cat": "adventure",
+   "mode": "comp",
+   "price": 60,
+   "priceTxt": "~$60",
+   "playsLike": "Labyrinth with memory and stacking chaos",
+   "bggUrl": "https://boardgamegeek.com/boardgame/355483"
+  },
+  {
+   "name": "EXIT: The Secret Lab",
+   "bggId": 203417,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 150,
+   "time": "150m",
+   "age": "12+",
+   "catText": "Deduction, Puzzle, Real-time, Solo",
+   "bgg": 7,
+   "weight": 2.52,
+   "playable": false,
+   "forSale": true,
+   "cat": "deduct",
+   "mode": "coop",
+   "price": 25,
+   "priceTxt": "$25–30 ea",
+   "playsLike": "escape room in a box, chemistry flavoured",
+   "bggUrl": "https://boardgamegeek.com/boardgame/203417/exit-the-game-the-secret-lab",
+   "pickBy": "Jehan",
+   "pickNote": "Escape room night in a box"
+  },
+  {
+   "name": "EXIT: Dead Man on the Orient Express",
+   "bggId": 226522,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 120,
+   "time": "120m",
+   "age": "12+",
+   "catText": "Deduction, Murder / Mystery, Puzzle, Real-time",
+   "bgg": 7.5,
+   "weight": 2.64,
+   "playable": false,
+   "forSale": true,
+   "cat": "deduct",
+   "mode": "coop",
+   "price": 25,
+   "priceTxt": "$25–30 ea",
+   "playsLike": "escape room in a box, Christie by way of a train",
+   "bggUrl": "https://boardgamegeek.com/boardgame/226522/exit-the-game-dead-man-on-the-orient-express",
+   "pickBy": "Jehan",
+   "pickNote": "Escape room night in a box"
+  },
+  {
+   "name": "EXIT: The Sinister Mansion",
+   "bggId": 226520,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 90,
+   "time": "90m",
+   "age": "12+",
+   "catText": "Deduction, Horror",
+   "bgg": 7.2,
+   "weight": 2.47,
+   "playable": false,
+   "forSale": true,
+   "cat": "deduct",
+   "mode": "coop",
+   "price": 25,
+   "priceTxt": "$25–30 ea",
+   "playsLike": "escape room in a box, haunted house flavoured",
+   "bggUrl": "https://boardgamegeek.com/boardgame/226520/exit-the-game-the-sinister-mansion",
+   "pickBy": "Jehan",
+   "pickNote": "Escape room night in a box"
+  },
+  {
+   "name": "EXIT: The Pharaoh's Tomb",
+   "bggId": 203416,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 90,
+   "time": "90m",
+   "age": "12+",
+   "catText": "Ancient, Deduction, Puzzle, Real-time, Solo",
+   "bgg": 7.1,
+   "weight": 2.73,
+   "playable": false,
+   "forSale": true,
+   "cat": "deduct",
+   "mode": "coop",
+   "price": 25,
+   "priceTxt": "$25–30 ea",
+   "playsLike": "escape room in a box, tomb raiding flavoured",
+   "bggUrl": "https://boardgamegeek.com/boardgame/203416/exit-the-game-the-pharaohs-tomb",
+   "pickBy": "Jehan",
+   "pickNote": "Escape room night in a box"
+  },
+  {
+   "name": "EXIT: The Sunken Treasure",
+   "bggId": 226518,
+   "players": [
+    1,
+    4
+   ],
+   "mins": 90,
+   "time": "90m",
+   "age": "10+",
+   "catText": "Deduction, Puzzle, Real-time",
+   "bgg": 7,
+   "weight": 1.81,
+   "playable": false,
+   "forSale": true,
+   "cat": "deduct",
+   "mode": "coop",
+   "price": 25,
+   "priceTxt": "$25–30 ea",
+   "playsLike": "escape room in a box, the gentle one to start on",
+   "bggUrl": "https://boardgamegeek.com/boardgame/226518/exit-the-game-the-sunken-treasure",
+   "pickBy": "Jehan",
+   "pickNote": "Escape room night in a box"
+  },
+  {
+   "name": "Unlock!: Mystery Adventures",
+   "bggId": 228867,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 75,
+   "time": "75m",
+   "age": "10+",
+   "catText": "Card Game, Exploration, Horror, Novel-based, Puzzle, Real-time, Storytelling",
+   "bgg": 7.3,
+   "weight": 2.1,
+   "playable": true,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "coop",
+   "price": 50,
+   "priceTxt": "~$50",
+   "playsLike": "three app-driven escape rooms: haunted house, Nautilus, pirate gold",
+   "bggUrl": "https://boardgamegeek.com/boardgame/228867",
+   "pickBy": "Jehan",
+   "pickNote": "Replayable co-op puzzles"
+  },
+  {
+   "name": "Unlock!: Secret Adventures",
+   "bggId": 239307,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "10+",
+   "catText": "American West, Card Game, Exploration, Fantasy, Novel-based, Puzzle, Real-time, Trains, Storytelling",
+   "bgg": 7.5,
+   "weight": 2.13,
+   "playable": true,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "coop",
+   "price": 50,
+   "priceTxt": "~$50",
+   "playsLike": "three app-driven escape rooms, a western train heist among them",
+   "bggUrl": "https://boardgamegeek.com/boardgame/239307",
+   "pickBy": "Jehan",
+   "pickNote": "Replayable co-op puzzles"
+  },
+  {
+   "name": "Unlock!: Heroic Adventures",
+   "bggId": 266121,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 60,
+   "time": "60m",
+   "age": "10+",
+   "catText": "Card Game, Exploration, Fantasy, Novel-based, Puzzle, Real-time, Storytelling",
+   "bgg": 7.6,
+   "weight": 2.25,
+   "playable": true,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "coop",
+   "price": 50,
+   "priceTxt": "~$50",
+   "playsLike": "three app-driven escape rooms: Sherlock, Wonderland, retro arcade",
+   "bggUrl": "https://boardgamegeek.com/boardgame/266121",
+   "pickBy": "Jehan",
+   "pickNote": "Replayable co-op puzzles"
+  },
+  {
+   "name": "Unlock!: Timeless Adventures",
+   "bggId": 279613,
+   "players": [
+    1,
+    6
+   ],
+   "mins": 90,
+   "time": "90m",
+   "age": "10+",
+   "catText": "Card Game, Exploration, Novel-based, Puzzle, Real-time, Storytelling",
+   "bgg": 7.7,
+   "weight": 2.07,
+   "playable": true,
+   "forSale": true,
+   "cat": "cards",
+   "mode": "coop",
+   "price": 50,
+   "priceTxt": "~$50",
+   "playsLike": "three app-driven escape rooms hopping through history",
+   "bggUrl": "https://boardgamegeek.com/boardgame/279613",
+   "pickBy": "Jehan",
+   "pickNote": "Replayable co-op puzzles"
   }
  ],
- "picks": []
+ "picks": [
+  {
+   "list": "Jehan",
+   "note": "",
+   "games": {
+    "Alchemists": "Deduction masterpiece, big teach",
+    "Arcs: The Blighted Reach": "",
+    "Cosmic Encounter": "The rules are lies",
+    "Deal with the Devil": "Hidden roles inside a heavy euro",
+    "Dorfromantik": "Cosiest co-op going",
+    "Everdell: Silverfrost": "Prettiest engine on the shelf",
+    "EXIT: The Abandoned Cabin": "Escape room night in a box",
+    "SETI": "Terraforming Mars fans start here",
+    "Unlock!: Escape Adventures": "Replayable co-op puzzles",
+    "Wavelength": "Best big-group conversation game",
+    "EXIT: The Secret Lab": "Escape room night in a box",
+    "EXIT: Dead Man on the Orient Express": "Escape room night in a box",
+    "EXIT: The Sinister Mansion": "Escape room night in a box",
+    "EXIT: The Pharaoh's Tomb": "Escape room night in a box",
+    "EXIT: The Sunken Treasure": "Escape room night in a box",
+    "Unlock!: Mystery Adventures": "Replayable co-op puzzles",
+    "Unlock!: Secret Adventures": "Replayable co-op puzzles",
+    "Unlock!: Heroic Adventures": "Replayable co-op puzzles",
+    "Unlock!: Timeless Adventures": "Replayable co-op puzzles",
+    "Unlock!: Epic Adventures": "Replayable co-op puzzles"
+   }
+  }
+ ]
 }
