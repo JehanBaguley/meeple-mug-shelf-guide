@@ -117,8 +117,14 @@ async function main() {
 
   if (SHEET_CSV_URL) {
     try {
-      const rows = parseCsv(await (await fetch(SHEET_CSV_URL)).text());
-      const head = rows.shift().map(h => h.toLowerCase().trim().replace(/[^a-z0-9]+/g, "_"));
+      const res = await fetch(SHEET_CSV_URL);
+      // fetch() does not throw on 4xx. A sheet that has lost "anyone with the link can
+      // view" answers 401 with a sign-in page, and that page parses as perfectly valid
+      // CSV containing none of the columns we want, so the check has to be explicit.
+      if (!res.ok) throw new Error(`the CSV feed answered ${res.status}. 401 or 403 means the sheet is no longer readable by "anyone with the link"`);
+      const rows = parseCsv(await res.text());
+      const head = (rows.shift() || []).map(h => h.toLowerCase().trim().replace(/[^a-z0-9]+/g, "_"));
+      if (!head.includes("name")) throw new Error(`the CSV feed has no "name" column (got: ${head.join(", ") || "nothing"}), so it is not the sheet`);
       const idx = (k) => head.indexOf(k);
       const byName = Object.fromEntries(games.map(g => [norm(g.name), g]));
       const byId = new Map();                       // bggId -> collection entries, in order
@@ -157,10 +163,21 @@ async function main() {
       picks = Object.values(lists);
       console.log(`Sheet overlay applied: ${sheetRows} rows, ${picks.length} pick lists`);
     } catch (e) {
-      console.warn("Sheet overlay unavailable:", e);
-      // Leave `games` as-is (may be from BGG) and continue — don't let a
-      // failing sheet fetch abort the entire nightly build.
-      sheetRows = 0; picks = [];
+      // The sheet is the shelf. If it cannot be read there is nothing to publish, and
+      // quietly shipping the BGG collection instead swaps a venue's stock list for
+      // somebody's personal collection, with no prices and no staff picks. That is
+      // worse than a stale page, and it is silent. Fail loudly, change nothing.
+      console.error("Could not read the sheet:", e.message || e);
+      console.error("The sheet is the shelf, so there is nothing safe to publish. data/games.json left untouched.");
+      process.exit(1);
+    }
+    // A sheet that reads cleanly but yields no rows is a real state for a brand new
+    // shelf. It is only dangerous next to a BGG collection, which would otherwise
+    // become the entire catalogue by default.
+    if (sheetRows === 0 && games.length) {
+      console.error(`The sheet returned no rows, but the BGG collection returned ${games.length} items.`);
+      console.error("Publishing those would pass a personal collection off as the shelf. Refusing.");
+      process.exit(1);
     }
   }
 

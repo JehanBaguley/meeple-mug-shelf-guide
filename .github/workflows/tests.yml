@@ -3,9 +3,9 @@ name: Browser tests
 # change behaviour; skipped for data-only nightly commits to save minutes.
 on:
   push:
-    paths: ["index.html", "config.js", "tests/**", ".github/workflows/tests.yml"]
+    paths: ["index.html", "config.js", "scripts/**", "tests/**", ".github/workflows/tests.yml"]
   pull_request:
-    paths: ["index.html", "config.js", "tests/**"]
+    paths: ["index.html", "config.js", "scripts/**", "tests/**"]
   workflow_dispatch: {}
 jobs:
   playwright:
