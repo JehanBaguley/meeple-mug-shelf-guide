@@ -283,7 +283,12 @@ async function main() {
 
   for (const g of games) delete g.__setRating;
 
-  if (!games.length) { console.log("No data from either source, leaving games.json untouched"); return; }
+  if (!games.length) {
+    // The state of every fresh fork until somebody points config.js at their sheet.
+    console.log("Neither a sheet nor a BGG collection returned anything, so there is nothing to build.");
+    console.log("If this shelf is new, set sheetCsvUrl in config.js. SETUP.md walks through it.");
+    return;
+  }
 
   // A shelf guide with no player counts is worse than a slightly stale one. If a source
   // went down mid-build we would otherwise publish a catalogue with every filter broken,

@@ -21,6 +21,15 @@ jobs:
         run: |
           git config user.name "catalogue-bot"
           git config user.email "actions@github.com"
-          git add data/games.json data/gaps.json data/gaps.csv
-          git diff --cached --quiet || git commit -m "Nightly data sync"
+          # A fork with no sheet configured yet writes none of these files, which is the
+          # normal state of a fresh install, not a failure. Adding a path that does not
+          # exist is a fatal git error, so add only what the build actually produced.
+          for f in data/games.json data/gaps.json data/gaps.csv; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
+          if git diff --cached --quiet; then
+            echo "Nothing changed tonight. On a fresh fork this means no sheet is configured yet: see SETUP.md."
+            exit 0
+          fi
+          git commit -m "Nightly data sync"
           git push
