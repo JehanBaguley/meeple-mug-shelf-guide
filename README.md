@@ -119,8 +119,9 @@ this repo. Read it before touching the build.
 
 The sheet side of the `gaps.csv` row is the one piece of this system that does not live in
 the repo, because it is a spreadsheet formula and two conditional formatting rules rather than
-code. If it is ever lost, the rebuild is step 6 of
-[Pickmark's SETUP.md](https://github.com/JehanBaguley/pickmark/blob/main/SETUP.md), and the
+code. If it is ever lost, the rebuild is the
+[amber flags section of Pickmark's SETUP.md](https://github.com/JehanBaguley/pickmark/blob/main/SETUP.md#7-amber-flags-in-the-sheet-optional-ten-minutes)
+(linked by name rather than by step number, because the numbers move), and the
 `"name|field"` line shape it depends on is recorded in `.github/copilot-instructions.md`.
 
 ## Config

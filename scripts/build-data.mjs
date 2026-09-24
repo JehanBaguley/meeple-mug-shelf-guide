@@ -361,6 +361,12 @@ async function main() {
       ...(g.mins ? [] : ["time"]),
       ...(g.age ? [] : ["age"]),
       ...(g.bgg == null ? ["rating"] : []),
+      // A game marked for sale with no price is either a half-finished row or the
+      // spreadsheet feed quietly eating the value. Google's gviz endpoint infers one
+      // type per column, so a price column holding both 65 and ~$80 returns the
+      // numbers and drops the text, with no error anywhere. Either way the fix is the
+      // same, and it belongs in front of whoever edits the sheet rather than in a log.
+      ...(g.forSale && g.price == null ? ["price"] : []),
     ] }))
     .filter(g => g.missing.length);
   writeFileSync("data/gaps.json", JSON.stringify({ built: new Date().toISOString(), gaps }, null, 1));

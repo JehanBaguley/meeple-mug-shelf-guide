@@ -1,0 +1,20 @@
+name: Check my setup
+# Run this from the Actions tab whenever something is not working and you cannot tell
+# why. It reads the same things the nightly build reads, in the same order, and says in
+# plain words what it found. It changes nothing.
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Check my setup
+        env:
+          SHEET_CSV_URL: ${{ vars.SHEET_CSV_URL }}
+          BGG_TOKEN: ${{ secrets.BGG_TOKEN }}
+        run: node scripts/check-setup.mjs
