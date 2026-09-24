@@ -125,6 +125,18 @@ async function main() {
       const rows = parseCsv(await res.text());
       const head = (rows.shift() || []).map(h => h.toLowerCase().trim().replace(/[^a-z0-9]+/g, "_"));
       if (!head.includes("name")) throw new Error(`the CSV feed has no "name" column (got: ${head.join(", ") || "nothing"}), so it is not the sheet`);
+      // A brand new shelf might only have name and bgg_link, which is a perfectly good
+      // state, so a missing column reports rather than fails. What must never pass
+      // quietly is a column that used to be there going away: that is the guardrail's
+      // job further down, because only the previous build knows what used to exist.
+      const WANTED = { playable: ["playable"], for_sale: ["for_sale"], price: ["price"], blurb: ["blurb"], "staff picks": ["pick_by", "badge_by", "rec_list"] };
+      const absent = Object.entries(WANTED).filter(([, alts]) => !alts.some(a => head.includes(a))).map(([k]) => k);
+      if (absent.length) console.warn(`Sheet has no column for: ${absent.join(", ")}. Normal on a new shelf, worth a look on an established one.`);
+      const KNOWN = new Set(["name", "bgg_link", "playable", "for_sale", "price", "price_text", "blurb", "status",
+        "pick_by", "pick_note", "badge_by", "badge_note", "rec_list", "rec_note",
+        "rating", "play_style", "expansion", "players", "age", "time", "category"]);
+      const odd = head.filter(h => h && !KNOWN.has(h));
+      if (odd.length) console.warn(`Sheet columns the build does not read: ${odd.join(", ")}. Check for a typo if one of them was meant to do something.`);
       const idx = (k) => head.indexOf(k);
       const byName = Object.fromEntries(games.map(g => [norm(g.name), g]));
       const byId = new Map();                       // bggId -> collection entries, in order
@@ -294,9 +306,11 @@ async function main() {
   // went down mid-build we would otherwise publish a catalogue with every filter broken,
   // so compare coverage against what is already live and refuse to make it much worse.
   if (existsSync("data/games.json")) {
-    const prev = JSON.parse(readFileSync("data/games.json", "utf8")).games || [];
+    const prevDoc = JSON.parse(readFileSync("data/games.json", "utf8"));
+    const prev = prevDoc.games || [], prevPicks = prevDoc.picks || [];
     if (prev.length) {
       const cov = (list, f) => list.filter(f).length;
+      // Coverage: how complete the metadata is. A source going down shows up here.
       const checks = [
         ["games",   g => true],
         ["players", g => g.players],
@@ -304,14 +318,33 @@ async function main() {
         ["rating",  g => g.bgg != null],
         ["age",     g => g.age],
       ];
+      // Provenance: whether this is still the venue's shelf. In August 2026 the build
+      // published a BGG collection instead of the sheet and every coverage number above
+      // went UP, because BGG's metadata is more complete than anything typed by hand.
+      // Only fields a human has to type can tell the two apart.
+      const human = [
+        ["for sale", g => g.forSale],
+        ["priced",   g => g.price != null],
+      ];
       const lost = [];
       for (const [name, f] of checks) {
         const was = cov(prev, f), now = cov(games, f);
         if (was >= 20 && now < was * 0.8) lost.push(`${name}: ${was} -> ${now}`);
       }
+      for (const [name, f] of human) {
+        const was = cov(prev, f), now = cov(games, f);
+        // No size threshold on the zero cliff. Some to none is the entire signal, and a
+        // shelf with three games for sale is exactly as broken as one with sixty.
+        if (was > 0 && now === 0) lost.push(`${name}: ${was} to none, and only a person can type those`);
+        else if (was >= 20 && now < was * 0.8) lost.push(`${name}: ${was} -> ${now}`);
+      }
+      const picked = (ls) => ls.reduce((n, l) => n + Object.keys(l.games || {}).length, 0);
+      const wasPicked = picked(prevPicks), nowPicked = picked(picks);
+      if (wasPicked > 0 && nowPicked === 0) lost.push(`staff picks: ${wasPicked} to none`);
       if (lost.length) {
-        console.error("REFUSING to publish, coverage collapsed: " + lost.join("; "));
-        console.error("Leaving data/games.json as it was. Check the BGG token and the sheet.");
+        console.error("REFUSING to publish. The catalogue lost things only a person could have put there:");
+        for (const l of lost) console.error("  " + l);
+        console.error("Leaving data/games.json as it was. Check the sheet is still readable and still has its columns.");
         process.exit(1);
       }
     }

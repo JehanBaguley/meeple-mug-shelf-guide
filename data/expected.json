@@ -1,0 +1,10 @@
+{
+  "_note": "What the canary expects to find on the LIVE site. Widen a range when the shelf genuinely changes size. Never widen one to turn a red canary green: that is the alarm working.",
+  "_baseline": "326 games, 1 pick list, 20 picked games, 60 for sale with a price, 0 gap flags, as at 24 Sep 2026",
+  "maxAgeHours": 36,
+  "games": { "min": 300, "max": 420 },
+  "minPickLists": 1,
+  "minPickedGames": 10,
+  "minForSale": 20,
+  "maxGapLines": 400
+}

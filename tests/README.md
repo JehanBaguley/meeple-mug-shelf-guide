@@ -1,8 +1,8 @@
 # The regression suite
 
-Ten harnesses that gate every behavioural change. CI runs them on any push touching
+Eleven harnesses that gate every behavioural change. CI runs them on any push touching
 index.html, config.js, scripts/ or tests/ (see `.github/workflows/tests.yml`); data-only
-nightly commits skip them. All but chk34 drive a real browser.
+nightly commits skip them. All but chk34 and chk35 drive a real browser.
 
 | File | Guards |
 |---|---|
@@ -16,6 +16,7 @@ nightly commits skip them. All but chk34 drive a real browser.
 | chk30-pwa | manifest + service worker registration, offline reload still renders the shelf |
 | chk33-injection | a hostile sheet cell cannot run script in a customer's browser |
 | chk34-sheet-authority | the build refuses to publish anything but the sheet, and says so loudly |
+| chk35-canary | the live site still serves this venue's catalogue, and is not stale |
 
 Run locally:
 
@@ -28,9 +29,17 @@ Env knobs: `BASE_URL` (default `http://127.0.0.1:8899/`) and `PW_EXECUTABLE`
 (default lets Playwright find its own browser; point it at a system Chromium if
 you have one).
 
-House rule these encode: nothing is "done" until a browser has proven it. chk34 is
-the one exception: it exercises the nightly build, not the page, so it needs no browser
-and no server. It spins up a stub sheet server and asserts the build dies rather than
-publishing a catalogue that did not come from the sheet.
+House rule these encode: nothing is "done" until a browser has proven it, and a check
+that cannot fail against the unfixed code is decoration.
+
+Two of them need no browser. chk34 exercises the nightly build: it stands up a stub
+sheet server and asserts the build dies rather than publishing a catalogue that did not
+come from the sheet, then that it refuses a catalogue which has quietly lost every
+price, for-sale flag or staff pick. chk35 is the canary, and it is the only check that
+looks outward: by default it runs its own audit rules against fixtures, offline and
+deterministic, so a pull request is never red because a live site happened to be stale.
+With `CANARY_LIVE=1` it fetches the real Pages site instead, which is what the scheduled
+`canary.yml` workflow does an hour after the nightly. That is the only check that would
+have caught the August 2026 fault, because every other one was green throughout it.
 Anchored deploys are md5-gated against locally tested bytes; these are the tests
 that produce those bytes.

@@ -1,0 +1,65 @@
+name: Canary
+# Every other workflow here proves the code does what the code says. This one asks a
+# different question: is what the public can see right now still this venue's catalogue?
+#
+# That is not the same question, and only this one would have caught the August 2026
+# fault, where the nightly published somebody's BoardGameGeek collection instead of the
+# cafe's shelf for eleven nights while every CI run stayed green.
+on:
+  schedule:
+    - cron: "0 19 * * *"   # 5am AEST, two hours behind the nightly sync at 3am
+  workflow_dispatch: {}
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read       # reading a public website needs nothing more than the checkout
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Audit the live catalogue
+        env:
+          CANARY_LIVE: "1"
+          # Only used to decide whether freshness applies. A shelf with no sheet is not
+          # meant to be changing, so it must not go red for a stale build date.
+          SHEET_CSV_URL: ${{ vars.SHEET_CSV_URL }}
+        run: node tests/chk35-canary.mjs
+
+  keepalive:
+    # GitHub disables scheduled workflows after 60 days of repository inactivity, and
+    # since Sep 2026 the nightly only commits when the catalogue actually changed. So a
+    # venue whose shelf is stable for two months would have its schedule switched off,
+    # silently, and the site would freeze with nothing red anywhere to say so.
+    #
+    # Runs even when the audit fails: a broken catalogue is exactly when you least want
+    # the repo to go quiet and lose its schedule as well.
+    needs: audit
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Touch the repo if it has been quiet
+        run: |
+          last=$(git log -1 --format=%ct)
+          days=$(( ( $(date +%s) - last ) / 86400 ))
+          echo "Last commit was $days days ago."
+          if [ "$days" -lt 45 ]; then
+            echo "Nothing to do, the 60-day clock is nowhere near."
+            exit 0
+          fi
+          mkdir -p data
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > data/heartbeat.txt
+          git config user.name "catalogue-bot"
+          git config user.email "actions@github.com"
+          git add data/heartbeat.txt
+          # Same guard the nightly uses. If the stamp happens to be identical there is
+          # nothing to commit, and "nothing to commit" must not read as a failed job.
+          if git diff --cached --quiet; then
+            echo "Heartbeat unchanged, nothing to push."
+            exit 0
+          fi
+          git commit -m "chore: heartbeat, so GitHub does not disable the nightly for inactivity"
+          git push

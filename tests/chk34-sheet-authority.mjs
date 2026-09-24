@@ -81,5 +81,58 @@ for (const [label, status, body] of CASES) {
   ok(out.picks.length === 1 && out.picks[0].list === 'Jehan', 'the staff pick survived');
 }
 
+// ————— The provenance guardrail —————
+// A sheet can read perfectly and still stop being the venue's shelf. Only fields a
+// person has to type can tell the difference, so losing all of them must stop the build
+// even on a shelf far too small for the percentage-based coverage checks to apply.
+{
+  const PREV = JSON.stringify({
+    built: '2026-01-01T00:00:00.000Z',
+    games: [
+      { name: 'Cascadia', bggId: 295947, forSale: true,  price: 65,   playable: true },
+      { name: 'Wingspan', bggId: 266192, forSale: true,  price: 89,   playable: true },
+      { name: 'Azul',     bggId: 230802, forSale: false, price: null, playable: true },
+    ],
+    picks: [{ list: 'Jehan', note: '', games: { Cascadia: 'Cosy' } }],
+  }, null, 1);
+
+  const HEAD = 'name,bgg_link,playable,for_sale,price,blurb,pick_by,pick_note\n';
+  const row = (n, id, sale, price, pick) =>
+    `${n},https://boardgamegeek.com/boardgame/${id}/x,y,${sale},${price},A blurb,${pick},\n`;
+  const sheet = (sale, price, pick) => HEAD
+    + row('Cascadia', 295947, sale, price, pick)
+    + row('Wingspan', 266192, sale, price === '' ? '' : '89', '')
+    + row('Azul', 230802, 'n', '', '');
+
+  // Three games is deliberately under the 20-row threshold the coverage checks use, so
+  // anything that fires here fired on the zero cliff and not on a percentage.
+  const CASES = [
+    ['every for-sale flag and price gone', sheet('n', '', 'Jehan'), false],
+    ['every staff pick gone',              sheet('y', '65', ''),    false],
+    ['a normal night, nothing lost',       sheet('y', '65', 'Jehan'), true],
+  ];
+
+  for (const [label, csv, shouldPass] of CASES) {
+    const dir = mkdtempSync(join(tmpdir(), 'shelf-'));
+    mkdirSync(join(dir, 'scripts'), { recursive: true });
+    mkdirSync(join(dir, 'data'), { recursive: true });
+    cpSync('scripts/build-data.mjs', join(dir, 'scripts/build-data.mjs'));
+    writeFileSync(join(dir, 'data/games.json'), PREV);
+    const srv = createServer((_, res) => { res.writeHead(200, { 'Content-Type': 'text/csv' }); res.end(csv); });
+    await new Promise(r => srv.listen(0, '127.0.0.1', r));
+    const r = await run(dir, { SHEET_CSV_URL: `http://127.0.0.1:${srv.address().port}/s.csv`, BGG_USER: '', BGG_TOKEN: '' });
+    srv.close();
+    const untouched = readFileSync(join(dir, 'data/games.json'), 'utf8') === PREV;
+    if (shouldPass) {
+      ok(r.status === 0, `${label}: build succeeds (exit ${r.status})`);
+      ok(!untouched, `${label}: games.json was rewritten`);
+    } else {
+      ok(r.status !== 0, `${label}: build refuses (exit ${r.status})`);
+      ok(untouched, `${label}: games.json untouched`);
+      ok(/only a person could have put there/.test(r.stderr), `${label}: names the reason`);
+    }
+  }
+}
+
 console.log(fails ? `\n${fails} FAILED` : '\nall good');
 process.exit(fails ? 1 : 0);
